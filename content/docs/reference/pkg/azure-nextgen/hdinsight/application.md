@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.hdinsight.Application resource w
 
 The HDInsight cluster application
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -6201,6 +6200,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The name of the subnet.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:hdinsight/v20180601preview:Application hue /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.HDInsight/clusters/cluster1/applications/hue 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

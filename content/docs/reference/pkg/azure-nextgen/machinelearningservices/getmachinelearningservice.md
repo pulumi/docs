@@ -4576,7 +4576,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The Model version assigned by Model Management Service.{{% /md %}}</dd>
 </dl>
@@ -4771,7 +4771,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The Model version assigned by Model Management Service.{{% /md %}}</dd>
 </dl>
@@ -5161,7 +5161,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The Model version assigned by Model Management Service.{{% /md %}}</dd>
 </dl>

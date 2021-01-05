@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.security.SecurityContact resourc
 
 Contact details and configurations for notifications coming from Azure Security Center.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -817,6 +816,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:security/v20200101preview:SecurityContact default /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/providers/Microsoft.Security/securityContacts/default 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

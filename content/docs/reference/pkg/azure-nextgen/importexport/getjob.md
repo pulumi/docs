@@ -468,7 +468,7 @@ The following output properties are available:
 <a href="#drivecount_csharp" style="color: inherit; text-decoration: inherit;">Drive<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -510,7 +510,7 @@ The following output properties are available:
 <a href="#drivecount_go" style="color: inherit; text-decoration: inherit;">Drive<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -594,7 +594,7 @@ The following output properties are available:
 <a href="#drive_count_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -634,7 +634,7 @@ The following output properties are available:
 <a href="#bytessucceeded_csharp" style="color: inherit; text-decoration: inherit;">Bytes<wbr>Succeeded</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Bytes successfully transferred for the drive.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -748,7 +748,7 @@ The following output properties are available:
 <a href="#bytessucceeded_go" style="color: inherit; text-decoration: inherit;">Bytes<wbr>Succeeded</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Bytes successfully transferred for the drive.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -976,7 +976,7 @@ The following output properties are available:
 <a href="#bytes_succeeded_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>succeeded</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Bytes successfully transferred for the drive.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2193,7 +2193,7 @@ The following output properties are available:
 <a href="#drivecount_csharp" style="color: inherit; text-decoration: inherit;">Drive<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2235,7 +2235,7 @@ The following output properties are available:
 <a href="#drivecount_go" style="color: inherit; text-decoration: inherit;">Drive<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2319,7 +2319,7 @@ The following output properties are available:
 <a href="#drive_count_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
     <dt class="property-required"

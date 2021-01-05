@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.dbforpostgresql.ServerKey resour
 A PostgreSQL Server key.
 Latest API Version: 2020-01-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -743,6 +742,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>AzureKeyVault</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:dbforpostgresql/latest:ServerKey omeVault_someKey_01234567890123456789012345678901 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.DBforPostgreSQL/servers/testserver/keys/someVault_someKey_01234567890123456789012345678901 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

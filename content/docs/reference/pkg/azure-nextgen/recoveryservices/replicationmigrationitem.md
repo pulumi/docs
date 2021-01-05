@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ReplicationMigr
 Migration item.
 Latest API Version: 2018-07-10.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -4259,7 +4258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacityinbytes_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4355,7 +4354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacityinbytes_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4547,7 +4546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_in_bytes_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4633,6 +4632,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The disk type.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:recoveryservices/latest:ReplicationMigrationItem virtualmachine1 /Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.RecoveryServices/vaults/migrationvault/replicationFabrics/vmwarefabric1/replicationProtectionContainers/vmwareContainer1/replicationMigrationItems/virtualmachine1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

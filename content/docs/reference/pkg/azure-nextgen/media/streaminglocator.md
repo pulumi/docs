@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.media.StreamingLocator resource 
 A Streaming Locator resource
 Latest API Version: 2020-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1767,6 +1766,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}TrackSelections is a track property condition list which can specify track(s){{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:media/latest:StreamingLocator UserCreatedSecureStreamingLocatorWithUserDefinedContentKeys /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Media/mediaservices/contosomedia/streamingLocators/UserCreatedSecureStreamingLocatorWithUserDefinedContentKeys 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

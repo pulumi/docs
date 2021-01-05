@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.synapse.PrivateLinkHub resource 
 
 A privateLinkHub
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1047,6 +1046,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The private link service connection status.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:synapse/v20190601preview:PrivateLinkHub privateLinkHub1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.Synapse/privateLinkHubs/privateLinkHub1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

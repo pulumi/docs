@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#nodecount_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of nodes with this node configuration assigned{{% /md %}}</dd>
     <dt class="property-"
@@ -347,7 +347,7 @@ The following output properties are available:
 <a href="#nodecount_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of nodes with this node configuration assigned{{% /md %}}</dd>
     <dt class="property-"
@@ -521,7 +521,7 @@ The following output properties are available:
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of nodes with this node configuration assigned{{% /md %}}</dd>
     <dt class="property-"

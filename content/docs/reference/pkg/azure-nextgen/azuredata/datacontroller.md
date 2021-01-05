@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.azuredata.DataController resourc
 
 Data controller resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1280,6 +1279,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:azuredata/v20200908preview:DataController testdataController /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/dataControllers/testdataController 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.storagesync.ServerEndpoint resou
 Server Endpoint object.
 Latest API Version: 2020-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1333,7 +1332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cachehitbytes_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Hit<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Count of bytes that were served from the local server{{% /md %}}</dd>
     <dt class="property-required"
@@ -1351,7 +1350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cachemissbytes_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Miss<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Count of bytes that were served from the cloud{{% /md %}}</dd>
     <dt class="property-required"
@@ -1375,7 +1374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cachehitbytes_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Hit<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Count of bytes that were served from the local server{{% /md %}}</dd>
     <dt class="property-required"
@@ -1393,7 +1392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cachemissbytes_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Miss<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Count of bytes that were served from the cloud{{% /md %}}</dd>
     <dt class="property-required"
@@ -1459,7 +1458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cache_hit_bytes_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>hit_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Count of bytes that were served from the local server{{% /md %}}</dd>
     <dt class="property-required"
@@ -1477,7 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cache_miss_bytes_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>miss_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Count of bytes that were served from the cloud{{% /md %}}</dd>
     <dt class="property-required"
@@ -1619,7 +1618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalfilecount_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>File<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Last cloud tiering result (HResult){{% /md %}}</dd>
 </dl>
@@ -1652,7 +1651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalfilecount_go" style="color: inherit; text-decoration: inherit;">Total<wbr>File<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Last cloud tiering result (HResult){{% /md %}}</dd>
 </dl>
@@ -1718,7 +1717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_file_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>file_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Last cloud tiering result (HResult){{% /md %}}</dd>
 </dl>
@@ -1735,7 +1734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cachedsizebytes_csharp" style="color: inherit; text-decoration: inherit;">Cached<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Cached content size on the server{{% /md %}}</dd>
     <dt class="property-required"
@@ -1753,7 +1752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spacesavingsbytes_csharp" style="color: inherit; text-decoration: inherit;">Space<wbr>Savings<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Count of bytes saved on the server{{% /md %}}</dd>
     <dt class="property-required"
@@ -1771,7 +1770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalsizecloudbytes_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Size<wbr>Cloud<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Total size of content in the azure file share{{% /md %}}</dd>
     <dt class="property-required"
@@ -1780,7 +1779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumesizebytes_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Volume size{{% /md %}}</dd>
 </dl>
@@ -1795,7 +1794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cachedsizebytes_go" style="color: inherit; text-decoration: inherit;">Cached<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Cached content size on the server{{% /md %}}</dd>
     <dt class="property-required"
@@ -1813,7 +1812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spacesavingsbytes_go" style="color: inherit; text-decoration: inherit;">Space<wbr>Savings<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Count of bytes saved on the server{{% /md %}}</dd>
     <dt class="property-required"
@@ -1831,7 +1830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalsizecloudbytes_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Size<wbr>Cloud<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Total size of content in the azure file share{{% /md %}}</dd>
     <dt class="property-required"
@@ -1840,7 +1839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumesizebytes_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Volume size{{% /md %}}</dd>
 </dl>
@@ -1915,7 +1914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cached_size_bytes_python" style="color: inherit; text-decoration: inherit;">cached_<wbr>size_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Cached content size on the server{{% /md %}}</dd>
     <dt class="property-required"
@@ -1933,7 +1932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#space_savings_bytes_python" style="color: inherit; text-decoration: inherit;">space_<wbr>savings_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Count of bytes saved on the server{{% /md %}}</dd>
     <dt class="property-required"
@@ -1951,7 +1950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_size_cloud_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>size_<wbr>cloud_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Total size of content in the azure file share{{% /md %}}</dd>
     <dt class="property-required"
@@ -1960,7 +1959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_size_bytes_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Volume size{{% /md %}}</dd>
 </dl>
@@ -2158,7 +2157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filecount_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Count of files with this error{{% /md %}}</dd>
 </dl>
@@ -2182,7 +2181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filecount_go" style="color: inherit; text-decoration: inherit;">File<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Count of files with this error{{% /md %}}</dd>
 </dl>
@@ -2230,7 +2229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_count_python" style="color: inherit; text-decoration: inherit;">file_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Count of files with this error{{% /md %}}</dd>
 </dl>
@@ -2331,7 +2330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#downloadedbytes_csharp" style="color: inherit; text-decoration: inherit;">Downloaded<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Running count of bytes downloaded{{% /md %}}</dd>
     <dt class="property-required"
@@ -2364,7 +2363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#downloadedbytes_go" style="color: inherit; text-decoration: inherit;">Downloaded<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Running count of bytes downloaded{{% /md %}}</dd>
     <dt class="property-required"
@@ -2430,7 +2429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#downloaded_bytes_python" style="color: inherit; text-decoration: inherit;">downloaded_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Running count of bytes downloaded{{% /md %}}</dd>
     <dt class="property-required"
@@ -2860,7 +2859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistentcount_csharp" style="color: inherit; text-decoration: inherit;">Persistent<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Count of persistent files not syncing with the specified error code{{% /md %}}</dd>
     <dt class="property-required"
@@ -2869,7 +2868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transientcount_csharp" style="color: inherit; text-decoration: inherit;">Transient<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Count of transient files not syncing with the specified error code{{% /md %}}</dd>
 </dl>
@@ -2893,7 +2892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistentcount_go" style="color: inherit; text-decoration: inherit;">Persistent<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Count of persistent files not syncing with the specified error code{{% /md %}}</dd>
     <dt class="property-required"
@@ -2902,7 +2901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transientcount_go" style="color: inherit; text-decoration: inherit;">Transient<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Count of transient files not syncing with the specified error code{{% /md %}}</dd>
 </dl>
@@ -2959,7 +2958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistent_count_python" style="color: inherit; text-decoration: inherit;">persistent_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Count of persistent files not syncing with the specified error code{{% /md %}}</dd>
     <dt class="property-required"
@@ -2968,7 +2967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transient_count_python" style="color: inherit; text-decoration: inherit;">transient_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Count of transient files not syncing with the specified error code{{% /md %}}</dd>
 </dl>
@@ -2985,7 +2984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Count of occurences of the error{{% /md %}}</dd>
     <dt class="property-required"
@@ -3009,7 +3008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Count of occurences of the error{{% /md %}}</dd>
     <dt class="property-required"
@@ -3057,7 +3056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Count of occurences of the error{{% /md %}}</dd>
     <dt class="property-required"
@@ -3101,7 +3100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalrecallerrorscount_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Recall<wbr>Errors<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Total count of recall errors.{{% /md %}}</dd>
 </dl>
@@ -3134,7 +3133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalrecallerrorscount_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Recall<wbr>Errors<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Total count of recall errors.{{% /md %}}</dd>
 </dl>
@@ -3200,7 +3199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_recall_errors_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>recall_<wbr>errors_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Total count of recall errors.{{% /md %}}</dd>
 </dl>
@@ -3217,7 +3216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appliedbytes_csharp" style="color: inherit; text-decoration: inherit;">Applied<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Applied bytes{{% /md %}}</dd>
     <dt class="property-required"
@@ -3226,7 +3225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applieditemcount_csharp" style="color: inherit; text-decoration: inherit;">Applied<wbr>Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Applied item count.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3235,7 +3234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peritemerrorcount_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Item<wbr>Error<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Per item error count{{% /md %}}</dd>
     <dt class="property-required"
@@ -3262,7 +3261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalbytes_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Total bytes (if available){{% /md %}}</dd>
     <dt class="property-required"
@@ -3271,7 +3270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalitemcount_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Total item count (if available){{% /md %}}</dd>
 </dl>
@@ -3286,7 +3285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appliedbytes_go" style="color: inherit; text-decoration: inherit;">Applied<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Applied bytes{{% /md %}}</dd>
     <dt class="property-required"
@@ -3295,7 +3294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applieditemcount_go" style="color: inherit; text-decoration: inherit;">Applied<wbr>Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Applied item count.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3304,7 +3303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peritemerrorcount_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Item<wbr>Error<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Per item error count{{% /md %}}</dd>
     <dt class="property-required"
@@ -3331,7 +3330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalbytes_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Total bytes (if available){{% /md %}}</dd>
     <dt class="property-required"
@@ -3340,7 +3339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalitemcount_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Total item count (if available){{% /md %}}</dd>
 </dl>
@@ -3424,7 +3423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applied_bytes_python" style="color: inherit; text-decoration: inherit;">applied_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Applied bytes{{% /md %}}</dd>
     <dt class="property-required"
@@ -3433,7 +3432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applied_item_count_python" style="color: inherit; text-decoration: inherit;">applied_<wbr>item_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Applied item count.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3442,7 +3441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#per_item_error_count_python" style="color: inherit; text-decoration: inherit;">per_<wbr>item_<wbr>error_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Per item error count{{% /md %}}</dd>
     <dt class="property-required"
@@ -3469,7 +3468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Total bytes (if available){{% /md %}}</dd>
     <dt class="property-required"
@@ -3478,7 +3477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_item_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>item_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Total item count (if available){{% /md %}}</dd>
 </dl>
@@ -3513,7 +3512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastsyncperitemerrorcount_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Sync<wbr>Per<wbr>Item<wbr>Error<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Last sync per item error count.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3549,7 +3548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistentfilesnotsyncingcount_csharp" style="color: inherit; text-decoration: inherit;">Persistent<wbr>Files<wbr>Not<wbr>Syncing<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Count of persistent files not syncing.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3558,7 +3557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transientfilesnotsyncingcount_csharp" style="color: inherit; text-decoration: inherit;">Transient<wbr>Files<wbr>Not<wbr>Syncing<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Count of transient files not syncing.{{% /md %}}</dd>
 </dl>
@@ -3591,7 +3590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastsyncperitemerrorcount_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Sync<wbr>Per<wbr>Item<wbr>Error<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Last sync per item error count.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3627,7 +3626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistentfilesnotsyncingcount_go" style="color: inherit; text-decoration: inherit;">Persistent<wbr>Files<wbr>Not<wbr>Syncing<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Count of persistent files not syncing.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3636,7 +3635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transientfilesnotsyncingcount_go" style="color: inherit; text-decoration: inherit;">Transient<wbr>Files<wbr>Not<wbr>Syncing<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Count of transient files not syncing.{{% /md %}}</dd>
 </dl>
@@ -3747,7 +3746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_sync_per_item_error_count_python" style="color: inherit; text-decoration: inherit;">last_<wbr>sync_<wbr>per_<wbr>item_<wbr>error_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Last sync per item error count.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3783,7 +3782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistent_files_not_syncing_count_python" style="color: inherit; text-decoration: inherit;">persistent_<wbr>files_<wbr>not_<wbr>syncing_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Count of persistent files not syncing.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3792,7 +3791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transient_files_not_syncing_count_python" style="color: inherit; text-decoration: inherit;">transient_<wbr>files_<wbr>not_<wbr>syncing_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Count of transient files not syncing.{{% /md %}}</dd>
 </dl>
@@ -3881,7 +3880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalpersistentfilesnotsyncingcount_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Persistent<wbr>Files<wbr>Not<wbr>Syncing<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Total count of persistent files not syncing (combined upload + download).{{% /md %}}</dd>
     <dt class="property-required"
@@ -3995,7 +3994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalpersistentfilesnotsyncingcount_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Persistent<wbr>Files<wbr>Not<wbr>Syncing<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Total count of persistent files not syncing (combined upload + download).{{% /md %}}</dd>
     <dt class="property-required"
@@ -4223,7 +4222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_persistent_files_not_syncing_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>persistent_<wbr>files_<wbr>not_<wbr>syncing_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Total count of persistent files not syncing (combined upload + download).{{% /md %}}</dd>
     <dt class="property-required"
@@ -4255,6 +4254,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Upload Status{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:storagesync/latest:ServerEndpoint SampleServerEndpoint_1 /subscriptions/52b8da2f-61e0-4a1f-8dde-336911f367fb/resourceGroups/SampleResourceGroup_1/providers/Microsoft.StorageSync/storageSyncServices/SampleStorageSyncService_1/syncGroups/SampleSyncGroup_1/serverEndpoints/SampleServerEndpoint_1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -341,7 +341,7 @@ The following output properties are available:
 <a href="#virtualapplianceasn_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Appliance<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}VirtualAppliance ASN.{{% /md %}}</dd>
     <dt class="property-"
@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#virtualapplianceasn_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Appliance<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}VirtualAppliance ASN.{{% /md %}}</dd>
     <dt class="property-"
@@ -845,7 +845,7 @@ The following output properties are available:
 <a href="#virtual_appliance_asn_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>appliance_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}VirtualAppliance ASN.{{% /md %}}</dd>
     <dt class="property-"

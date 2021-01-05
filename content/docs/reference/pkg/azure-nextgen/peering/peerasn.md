@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.peering.PeerAsn resource with ex
 The essential information related to the peer's ASN.
 Latest API Version: 2020-10-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1133,6 +1132,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Failed</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:peering/latest:PeerAsn peerAsnName /subscriptions/subId/providers/Microsoft.Peering/peerAsns/peerAsnName 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

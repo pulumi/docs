@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.databoxedge.Role resource with e
 Compute role.
 Latest API Version: 2019-08-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -619,6 +618,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Cognitive</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:databoxedge/latest:Role IoTRole1 /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/roles/IoTRole1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

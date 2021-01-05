@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.sql.SyncMember resource with exa
 
 An Azure SQL Database sync member.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -29,7 +28,7 @@ class MyStack : Stack
     {
         var syncMember = new AzureNextGen.Sql.V20200801Preview.SyncMember("syncMember", new AzureNextGen.Sql.V20200801Preview.SyncMemberArgs
         {
-            DatabaseName = "syncgroupcrud-7421",
+            DatabaseName = "syncgroupcrud-4328",
             DatabaseType = "AzureSqlDatabase",
             ResourceGroupName = "syncgroupcrud-65440",
             ServerName = "syncgroupcrud-8475",
@@ -61,7 +60,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := sql.NewSyncMember(ctx, "syncMember", &sql.SyncMemberArgs{
-			DatabaseName:                      pulumi.String("syncgroupcrud-7421"),
+			DatabaseName:                      pulumi.String("syncgroupcrud-4328"),
 			DatabaseType:                      pulumi.String("AzureSqlDatabase"),
 			ResourceGroupName:                 pulumi.String("syncgroupcrud-65440"),
 			ServerName:                        pulumi.String("syncgroupcrud-8475"),
@@ -90,7 +89,7 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 sync_member = azure_nextgen.sql.v20200801preview.SyncMember("syncMember",
-    database_name="syncgroupcrud-7421",
+    database_name="syncgroupcrud-4328",
     database_type="AzureSqlDatabase",
     resource_group_name="syncgroupcrud-65440",
     server_name="syncgroupcrud-8475",
@@ -112,7 +111,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const syncMember = new azure_nextgen.sql.v20200801preview.SyncMember("syncMember", {
-    databaseName: "syncgroupcrud-7421",
+    databaseName: "syncgroupcrud-4328",
     databaseType: "AzureSqlDatabase",
     resourceGroupName: "syncgroupcrud-65440",
     serverName: "syncgroupcrud-8475",
@@ -1215,6 +1214,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>SqlServerDatabase</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:sql/v20200801preview:SyncMember syncmembercrud-4879 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328/syncGroups/syncgroupcrud-3187/syncMembers/syncmembercrud-4879 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

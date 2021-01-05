@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.securityinsights.ProductSetting 
 
 The Setting.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -726,6 +725,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Ueba</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:securityinsights/v20190101preview:ProductSetting EyesOn /subscriptions/bd794837-4d29-4647-9105-6339bfdb4e6a/resourceGroups/mms-eus/providers/Microsoft.OperationalInsights/workspaces/avdvirInt/providers/Microsoft.SecurityInsights/settings/EyesOn 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

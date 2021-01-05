@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.compute.VirtualMachineScaleSetVM
 Describes a VMSS VM Extension.
 Latest API Version: 2020-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1824,6 +1823,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:compute/latest:VirtualMachineScaleSetVMExtension myVMExtension /subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachineScaleSets/myvmScaleSet/virtualMachines/0/extensions/myVMExtension 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

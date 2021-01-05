@@ -553,7 +553,7 @@ The following output properties are available:
 <a href="#expirationtime_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Timestamp when this token will be expired.{{% /md %}}</dd>
     <dt class="property-required"
@@ -595,7 +595,7 @@ The following output properties are available:
 <a href="#expirationtime_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Timestamp when this token will be expired.{{% /md %}}</dd>
     <dt class="property-required"
@@ -679,7 +679,7 @@ The following output properties are available:
 <a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Timestamp when this token will be expired.{{% /md %}}</dd>
     <dt class="property-required"

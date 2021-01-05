@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.storage.Table resource with exam
 Properties of the table, including Id, resource name, resource type.
 Latest API Version: 2019-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -555,6 +554,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:storage/latest:Table table6185 /subscriptions/{subscription-id}/resourceGroups/res3376/providers/Microsoft.Storage/storageAccounts/sto328/tableServices/default/tables/table6185 
+```
 
 
 

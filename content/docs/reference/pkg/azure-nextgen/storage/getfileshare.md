@@ -314,7 +314,7 @@ The following output properties are available:
 <a href="#shareusagebytes_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Usage<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The approximate size of the data stored on the share. Note that this value may not include all recently created or recently resized files.{{% /md %}}</dd>
     <dt class="property-"
@@ -473,7 +473,7 @@ The following output properties are available:
 <a href="#shareusagebytes_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Usage<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The approximate size of the data stored on the share. Note that this value may not include all recently created or recently resized files.{{% /md %}}</dd>
     <dt class="property-"
@@ -791,7 +791,7 @@ The following output properties are available:
 <a href="#share_usage_bytes_python" style="color: inherit; text-decoration: inherit;">share_<wbr>usage_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The approximate size of the data stored on the share. Note that this value may not include all recently created or recently resized files.{{% /md %}}</dd>
     <dt class="property-"

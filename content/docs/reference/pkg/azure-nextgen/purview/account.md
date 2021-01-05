@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.purview.Account resource with ex
 
 Account resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2435,6 +2434,16 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
     <dd>SystemAssigned</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:purview/v20201201preview:Account account1 /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/SampleResourceGroup/providers/Microsoft.Purview/accounts/account1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.authorization.PolicyExemption re
 
 The policy exemption.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1126,6 +1125,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:authorization/v20200701preview:PolicyExemption DemoExpensiveVM /subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/resourceGroups/demoCluster/providers/Microsoft.Authorization/policyExemptions/DemoExpensiveVM 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

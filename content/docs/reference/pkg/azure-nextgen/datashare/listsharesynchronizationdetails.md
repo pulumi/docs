@@ -772,7 +772,7 @@ The following output properties are available:
 <a href="#filesread_csharp" style="color: inherit; text-decoration: inherit;">Files<wbr>Read</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The number of files read from the source data set{{% /md %}}</dd>
     <dt class="property-required"
@@ -781,7 +781,7 @@ The following output properties are available:
 <a href="#fileswritten_csharp" style="color: inherit; text-decoration: inherit;">Files<wbr>Written</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The number of files written into the sink data set{{% /md %}}</dd>
     <dt class="property-required"
@@ -808,7 +808,7 @@ The following output properties are available:
 <a href="#rowscopied_csharp" style="color: inherit; text-decoration: inherit;">Rows<wbr>Copied</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The number of files copied into the sink data set{{% /md %}}</dd>
     <dt class="property-required"
@@ -817,7 +817,7 @@ The following output properties are available:
 <a href="#rowsread_csharp" style="color: inherit; text-decoration: inherit;">Rows<wbr>Read</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The number of rows read from the source data set.{{% /md %}}</dd>
     <dt class="property-required"
@@ -826,7 +826,7 @@ The following output properties are available:
 <a href="#sizeread_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>Read</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The size of the data read from the source data set in bytes{{% /md %}}</dd>
     <dt class="property-required"
@@ -835,7 +835,7 @@ The following output properties are available:
 <a href="#sizewritten_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>Written</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The size of the data written into the sink data set in bytes{{% /md %}}</dd>
     <dt class="property-required"
@@ -862,7 +862,7 @@ The following output properties are available:
 <a href="#vcore_csharp" style="color: inherit; text-decoration: inherit;">VCore</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The vCore units consumed for the data set synchronization{{% /md %}}</dd>
 </dl>
@@ -913,7 +913,7 @@ The following output properties are available:
 <a href="#filesread_go" style="color: inherit; text-decoration: inherit;">Files<wbr>Read</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The number of files read from the source data set{{% /md %}}</dd>
     <dt class="property-required"
@@ -922,7 +922,7 @@ The following output properties are available:
 <a href="#fileswritten_go" style="color: inherit; text-decoration: inherit;">Files<wbr>Written</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The number of files written into the sink data set{{% /md %}}</dd>
     <dt class="property-required"
@@ -949,7 +949,7 @@ The following output properties are available:
 <a href="#rowscopied_go" style="color: inherit; text-decoration: inherit;">Rows<wbr>Copied</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The number of files copied into the sink data set{{% /md %}}</dd>
     <dt class="property-required"
@@ -958,7 +958,7 @@ The following output properties are available:
 <a href="#rowsread_go" style="color: inherit; text-decoration: inherit;">Rows<wbr>Read</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The number of rows read from the source data set.{{% /md %}}</dd>
     <dt class="property-required"
@@ -967,7 +967,7 @@ The following output properties are available:
 <a href="#sizeread_go" style="color: inherit; text-decoration: inherit;">Size<wbr>Read</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The size of the data read from the source data set in bytes{{% /md %}}</dd>
     <dt class="property-required"
@@ -976,7 +976,7 @@ The following output properties are available:
 <a href="#sizewritten_go" style="color: inherit; text-decoration: inherit;">Size<wbr>Written</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The size of the data written into the sink data set in bytes{{% /md %}}</dd>
     <dt class="property-required"
@@ -1003,7 +1003,7 @@ The following output properties are available:
 <a href="#vcore_go" style="color: inherit; text-decoration: inherit;">VCore</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The vCore units consumed for the data set synchronization{{% /md %}}</dd>
 </dl>
@@ -1195,7 +1195,7 @@ The following output properties are available:
 <a href="#files_read_python" style="color: inherit; text-decoration: inherit;">files_<wbr>read</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of files read from the source data set{{% /md %}}</dd>
     <dt class="property-required"
@@ -1204,7 +1204,7 @@ The following output properties are available:
 <a href="#files_written_python" style="color: inherit; text-decoration: inherit;">files_<wbr>written</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of files written into the sink data set{{% /md %}}</dd>
     <dt class="property-required"
@@ -1231,7 +1231,7 @@ The following output properties are available:
 <a href="#rows_copied_python" style="color: inherit; text-decoration: inherit;">rows_<wbr>copied</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of files copied into the sink data set{{% /md %}}</dd>
     <dt class="property-required"
@@ -1240,7 +1240,7 @@ The following output properties are available:
 <a href="#rows_read_python" style="color: inherit; text-decoration: inherit;">rows_<wbr>read</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of rows read from the source data set.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1249,7 +1249,7 @@ The following output properties are available:
 <a href="#size_read_python" style="color: inherit; text-decoration: inherit;">size_<wbr>read</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The size of the data read from the source data set in bytes{{% /md %}}</dd>
     <dt class="property-required"
@@ -1258,7 +1258,7 @@ The following output properties are available:
 <a href="#size_written_python" style="color: inherit; text-decoration: inherit;">size_<wbr>written</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The size of the data written into the sink data set in bytes{{% /md %}}</dd>
     <dt class="property-required"
@@ -1285,7 +1285,7 @@ The following output properties are available:
 <a href="#v_core_python" style="color: inherit; text-decoration: inherit;">v_<wbr>core</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The vCore units consumed for the data set synchronization{{% /md %}}</dd>
 </dl>

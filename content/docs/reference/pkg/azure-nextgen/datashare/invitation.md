@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.datashare.Invitation resource wi
 A Invitation data transfer object.
 Latest API Version: 2019-11-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -931,6 +930,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:datashare/latest:Invitation Invitation1 /subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1/shares/Share1/invitations/Invitation1 
+```
 
 
 

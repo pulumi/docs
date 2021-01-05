@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.sql.Database resource with examp
 Represents a database.
 Latest API Version: 2014-04-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2266,7 +2265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containmentstate_csharp" style="color: inherit; text-decoration: inherit;">Containment<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The containment state of the database.{{% /md %}}</dd>
     <dt class="property-"
@@ -2416,7 +2415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containmentstate_go" style="color: inherit; text-decoration: inherit;">Containment<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The containment state of the database.{{% /md %}}</dd>
     <dt class="property-"
@@ -2716,7 +2715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containment_state_python" style="color: inherit; text-decoration: inherit;">containment_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The containment state of the database.{{% /md %}}</dd>
     <dt class="property-"
@@ -5590,6 +5589,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The status of the database transparent data encryption.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:sql/latest:Database testdb /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-4799/providers/Microsoft.Sql/servers/sqlcrudtest-6440/databases/testdb 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.insights.DataCollectionRule reso
 
 Definition of ARM tracked top level resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -4647,6 +4646,16 @@ A stream indicates what schema will be used for this data and usually what table
     <dd>{{% md %}}A list of Windows Event Log queries in XPATH format.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:insights/v20191101preview:DataCollectionRule myCollectionRule /subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.Insights/dataCollectionRules/myCollectionRule 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

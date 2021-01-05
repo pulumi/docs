@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.dbformariadb.Configuration resou
 Represents a Configuration.
 Latest API Version: 2018-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -779,6 +778,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:dbformariadb/latest:Configuration event_scheduler /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.DBforMariaDB/servers/testserver/configurations/event_scheduler 
+```
 
 
 

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.FirewallPolicyRuleGroup 
 Rule Group resource.
 Latest API Version: 2020-04-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1581,7 +1580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ruleconditions_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Rule<wbr>Condition<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Nat<wbr>Rule<wbr>Condition<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Condition<wbr>Args&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}Collection of rule conditions used by a rule.{{% /md %}}</dd>
 </dl>
@@ -1913,7 +1912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ruleconditions_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Nat<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}Collection of rule conditions used by a rule.{{% /md %}}</dd>
 </dl>
@@ -4154,6 +4153,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:FirewallPolicyRuleGroup firewallPolicy /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/firewallPolicy 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

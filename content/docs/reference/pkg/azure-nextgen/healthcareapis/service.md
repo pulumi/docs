@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.healthcareapis.Service resource 
 The description of the service.
 Latest API Version: 2020-03-30.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3765,6 +3764,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Type of identity being specified, currently SystemAssigned and None are allowed.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:healthcareapis/latest:Service service2 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.HealthcareApis/services/service2 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

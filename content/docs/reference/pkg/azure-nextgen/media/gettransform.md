@@ -2041,7 +2041,7 @@ The following output properties are available:
 <a href="#codecs_csharp" style="color: inherit; text-decoration: inherit;">Codecs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Audio<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Copy<wbr>Audio<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Copy<wbr>Video<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Video<wbr>Response<wbr>Args&gt;&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}The list of codecs to be used when encoding the input video.{{% /md %}}</dd>
     <dt class="property-required"

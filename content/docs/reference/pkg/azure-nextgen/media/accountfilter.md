@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.media.AccountFilter resource wit
 An Account Filter.
 Latest API Version: 2020-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -119,12 +118,12 @@ func main() {
 				Bitrate: pulumi.Int(128000),
 			},
 			PresentationTimeRange: &media.PresentationTimeRangeArgs{
-				EndTimestamp:               pulumi.Int(170000000),
+				EndTimestamp:               pulumi.Float64(170000000),
 				ForceEndTimestamp:          pulumi.Bool(false),
-				LiveBackoffDuration:        pulumi.Int(0),
-				PresentationWindowDuration: pulumi.Int(9.223372036854776e+18),
-				StartTimestamp:             pulumi.Int(0),
-				Timescale:                  pulumi.Int(10000000),
+				LiveBackoffDuration:        pulumi.Float64(0),
+				PresentationWindowDuration: pulumi.Float64(9.223372036854776e+18),
+				StartTimestamp:             pulumi.Float64(0),
+				Timescale:                  pulumi.Float64(10000000),
 			},
 			ResourceGroupName: pulumi.String("contoso"),
 			Tracks: media.FilterTrackSelectionArray{
@@ -1501,7 +1500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtimestamp_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The absolute end time boundary.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1519,7 +1518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#livebackoffduration_csharp" style="color: inherit; text-decoration: inherit;">Live<wbr>Backoff<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The relative to end right edge.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1528,7 +1527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#presentationwindowduration_csharp" style="color: inherit; text-decoration: inherit;">Presentation<wbr>Window<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The relative to end sliding window.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1537,7 +1536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttimestamp_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The absolute start time boundary.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1546,7 +1545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timescale_csharp" style="color: inherit; text-decoration: inherit;">Timescale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The time scale of time stamps.{{% /md %}}</dd>
 </dl>
@@ -1561,7 +1560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtimestamp_go" style="color: inherit; text-decoration: inherit;">End<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The absolute end time boundary.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1579,7 +1578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#livebackoffduration_go" style="color: inherit; text-decoration: inherit;">Live<wbr>Backoff<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The relative to end right edge.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1588,7 +1587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#presentationwindowduration_go" style="color: inherit; text-decoration: inherit;">Presentation<wbr>Window<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The relative to end sliding window.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1597,7 +1596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttimestamp_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The absolute start time boundary.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1606,7 +1605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timescale_go" style="color: inherit; text-decoration: inherit;">Timescale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The time scale of time stamps.{{% /md %}}</dd>
 </dl>
@@ -1681,7 +1680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_timestamp_python" style="color: inherit; text-decoration: inherit;">end_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The absolute end time boundary.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1699,7 +1698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#live_backoff_duration_python" style="color: inherit; text-decoration: inherit;">live_<wbr>backoff_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The relative to end right edge.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1708,7 +1707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#presentation_window_duration_python" style="color: inherit; text-decoration: inherit;">presentation_<wbr>window_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The relative to end sliding window.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1717,7 +1716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_timestamp_python" style="color: inherit; text-decoration: inherit;">start_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The absolute start time boundary.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1726,7 +1725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timescale_python" style="color: inherit; text-decoration: inherit;">timescale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The time scale of time stamps.{{% /md %}}</dd>
 </dl>
@@ -1743,7 +1742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtimestamp_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The absolute end time boundary.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1761,7 +1760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#livebackoffduration_csharp" style="color: inherit; text-decoration: inherit;">Live<wbr>Backoff<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The relative to end right edge.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1770,7 +1769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#presentationwindowduration_csharp" style="color: inherit; text-decoration: inherit;">Presentation<wbr>Window<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The relative to end sliding window.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1779,7 +1778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttimestamp_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The absolute start time boundary.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1788,7 +1787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timescale_csharp" style="color: inherit; text-decoration: inherit;">Timescale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The time scale of time stamps.{{% /md %}}</dd>
 </dl>
@@ -1803,7 +1802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtimestamp_go" style="color: inherit; text-decoration: inherit;">End<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The absolute end time boundary.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1821,7 +1820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#livebackoffduration_go" style="color: inherit; text-decoration: inherit;">Live<wbr>Backoff<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The relative to end right edge.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1830,7 +1829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#presentationwindowduration_go" style="color: inherit; text-decoration: inherit;">Presentation<wbr>Window<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The relative to end sliding window.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1839,7 +1838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttimestamp_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The absolute start time boundary.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1848,7 +1847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timescale_go" style="color: inherit; text-decoration: inherit;">Timescale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The time scale of time stamps.{{% /md %}}</dd>
 </dl>
@@ -1923,7 +1922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_timestamp_python" style="color: inherit; text-decoration: inherit;">end_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The absolute end time boundary.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1941,7 +1940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#live_backoff_duration_python" style="color: inherit; text-decoration: inherit;">live_<wbr>backoff_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The relative to end right edge.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1950,7 +1949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#presentation_window_duration_python" style="color: inherit; text-decoration: inherit;">presentation_<wbr>window_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The relative to end sliding window.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1959,7 +1958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_timestamp_python" style="color: inherit; text-decoration: inherit;">start_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The absolute start time boundary.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1968,11 +1967,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timescale_python" style="color: inherit; text-decoration: inherit;">timescale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The time scale of time stamps.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:media/latest:AccountFilter newAccountFilter /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Media/mediaservices/contosomedia/accountFilters/newAccountFilter 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

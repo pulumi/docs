@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.keyvault.PrivateEndpointConnecti
 Private endpoint connection resource.
 Latest API Version: 2019-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1142,6 +1141,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Indicates whether the connection has been approved, rejected or removed by the key vault owner.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:keyvault/latest:PrivateEndpointConnection sample-pec /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/sample-group/providers/Microsoft.KeyVault/vaults/sample-vault/privateEndpointConnections/sample-pec 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

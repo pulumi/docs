@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.P2sVpnGateway resource w
 P2SVpnGateway Resource.
 Latest API Version: 2020-07-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2770,7 +2769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalegressbytestransferred_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Egress<wbr>Bytes<wbr>Transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Total of the Egress Bytes Transferred in this connection.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2779,7 +2778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalingressbytestransferred_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Ingress<wbr>Bytes<wbr>Transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Total of the Ingress Bytes Transferred in this P2S Vpn connection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2812,7 +2811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalegressbytestransferred_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Egress<wbr>Bytes<wbr>Transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Total of the Egress Bytes Transferred in this connection.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2821,7 +2820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalingressbytestransferred_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Ingress<wbr>Bytes<wbr>Transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Total of the Ingress Bytes Transferred in this P2S Vpn connection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2896,7 +2895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_egress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">total_<wbr>egress_<wbr>bytes_<wbr>transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Total of the Egress Bytes Transferred in this connection.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2905,7 +2904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_ingress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">total_<wbr>ingress_<wbr>bytes_<wbr>transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Total of the Ingress Bytes Transferred in this P2S Vpn connection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2928,6 +2927,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The total of p2s vpn clients connected at this time to this P2SVpnGateway.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:P2sVpnGateway p2sVpnGateway1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/P2SvpnGateways/p2sVpnGateway1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

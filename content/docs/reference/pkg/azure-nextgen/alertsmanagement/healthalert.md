@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.alertsmanagement.HealthAlert res
 
 The health alert resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -111,10 +110,10 @@ func main() {
 					&alertsmanagement.VmGuestHealthAlertCriterionArgs{
 						HealthStates: alertsmanagement.HealthStateArray{
 							&alertsmanagement.HealthStateArgs{
-								Severity: pulumi.Int(2),
+								Severity: pulumi.Float64(2),
 							},
 							&alertsmanagement.HealthStateArgs{
-								Severity: pulumi.Int(3),
+								Severity: pulumi.Float64(3),
 							},
 						},
 						MonitorNames: pulumi.StringArray{
@@ -1276,7 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd>
 </dl>
@@ -1300,7 +1299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd>
 </dl>
@@ -1348,7 +1347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd>
 </dl>
@@ -1412,7 +1411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd>
 </dl>
@@ -1436,7 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd>
 </dl>
@@ -1484,7 +1483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd>
 </dl>
@@ -1757,6 +1756,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Names of health monitor type on which to define alert{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:alertsmanagement/v20200804preview:HealthAlert myresource1 /subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourceGroups/gigtest/providers/providers/Microsoft.AlertsManagement/resourceHealthAlerts/highcpu 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

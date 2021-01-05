@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.policyinsights.RemediationAtSubs
 The remediation definition.
 Latest API Version: 2019-07-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1182,6 +1181,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>ReEvaluateCompliance{{% md %}}Re-evaluate the compliance state of resources and then remediate the resources found to be non-compliant.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:policyinsights/latest:RemediationAtSubscription storageRemediation /subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.policyinsights/remediations/storageRemediation 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

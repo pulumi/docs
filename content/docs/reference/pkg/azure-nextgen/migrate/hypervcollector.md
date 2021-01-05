@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.migrate.HyperVCollector resource
 
 Latest API Version: 2019-10-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1599,6 +1598,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The ARM id of the discovery service site.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:migrate/latest:HyperVCollector migrateprojectce73collector /subscriptions/8c3c936a-c09b-4de3-830b-3f5f244d72e9/resourceGroups/contosoithyperv/providers/Microsoft.Migrate/assessmentprojects/migrateprojectce73project/hypervcollectors/migrateprojectce73collector 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

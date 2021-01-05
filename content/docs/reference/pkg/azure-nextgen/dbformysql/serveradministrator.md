@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.dbformysql.ServerAdministrator r
 Represents a and external administrator to be created.
 Latest API Version: 2017-12-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -711,6 +710,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>ActiveDirectory</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:dbformysql/latest:ServerAdministrator activeDirectory /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.DBforMySQL/servers/mysqltestsvc4/administrators/activeDirectory 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

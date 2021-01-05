@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.confluent.Organization resource 
 
 Organization resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1823,6 +1822,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Updating</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:confluent/v20200301preview:Organization myOrganization /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Confluent/organizations/myOrganization 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -3659,7 +3659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availablecapacity_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Available capacity (# of machines, bytes of storage etc...){{% /md %}}</dd>
     <dt class="property-optional"
@@ -3714,7 +3714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalcapacity_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Total capacity (# of machines, bytes of storage etc...){{% /md %}}</dd>
     <dt class="property-optional"
@@ -3759,7 +3759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availablecapacity_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Available capacity (# of machines, bytes of storage etc...){{% /md %}}</dd>
     <dt class="property-optional"
@@ -3814,7 +3814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalcapacity_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Total capacity (# of machines, bytes of storage etc...){{% /md %}}</dd>
     <dt class="property-optional"
@@ -3959,7 +3959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#available_capacity_python" style="color: inherit; text-decoration: inherit;">available_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Available capacity (# of machines, bytes of storage etc...){{% /md %}}</dd>
     <dt class="property-optional"
@@ -4014,7 +4014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_capacity_python" style="color: inherit; text-decoration: inherit;">total_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Total capacity (# of machines, bytes of storage etc...){{% /md %}}</dd>
     <dt class="property-optional"
@@ -4061,7 +4061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availablecapacity_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Available capacity (# of machines, bytes of storage etc...){{% /md %}}</dd>
     <dt class="property-optional"
@@ -4116,7 +4116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalcapacity_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Total capacity (# of machines, bytes of storage etc...){{% /md %}}</dd>
     <dt class="property-optional"
@@ -4161,7 +4161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availablecapacity_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Available capacity (# of machines, bytes of storage etc...){{% /md %}}</dd>
     <dt class="property-optional"
@@ -4216,7 +4216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalcapacity_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Total capacity (# of machines, bytes of storage etc...){{% /md %}}</dd>
     <dt class="property-optional"
@@ -4361,7 +4361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#available_capacity_python" style="color: inherit; text-decoration: inherit;">available_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Available capacity (# of machines, bytes of storage etc...){{% /md %}}</dd>
     <dt class="property-optional"
@@ -4416,7 +4416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_capacity_python" style="color: inherit; text-decoration: inherit;">total_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Total capacity (# of machines, bytes of storage etc...){{% /md %}}</dd>
     <dt class="property-optional"

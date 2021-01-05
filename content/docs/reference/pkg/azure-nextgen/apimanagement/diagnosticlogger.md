@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.DiagnosticLogger r
 Logger details.
 Latest API Version: 2018-01-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -743,6 +742,16 @@ Instrumentation key for applicationInsights logger.{{% /md %}}</dd>
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:apimanagement/latest:DiagnosticLogger applicationinsights /subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/diagnostics/default/loggers/applicationinsights 
+```
 
 
 

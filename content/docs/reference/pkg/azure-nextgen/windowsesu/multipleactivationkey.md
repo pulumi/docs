@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.windowsesu.MultipleActivationKey
 
 MAK key details.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -988,6 +987,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>PremiumAssurance</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:windowsesu/v20190916preview:MultipleActivationKey server08-key-2019 /subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testgr1/providers/Microsoft.WindowsESU/multipleActivationKeys/server08-key-2019 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.media.ContentKeyPolicy resource 
 A Content Key Policy resource.
 Latest API Version: 2020-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1317,7 +1316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rentalduration_csharp" style="color: inherit; text-decoration: inherit;">Rental<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The rental duration. Must be greater than or equal to 0.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1377,7 +1376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rentalduration_go" style="color: inherit; text-decoration: inherit;">Rental<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The rental duration. Must be greater than or equal to 0.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1497,7 +1496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rental_duration_python" style="color: inherit; text-decoration: inherit;">rental_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The rental duration. Must be greater than or equal to 0.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1559,7 +1558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rentalduration_csharp" style="color: inherit; text-decoration: inherit;">Rental<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The rental duration. Must be greater than or equal to 0.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1619,7 +1618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rentalduration_go" style="color: inherit; text-decoration: inherit;">Rental<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The rental duration. Must be greater than or equal to 0.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1739,7 +1738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rental_duration_python" style="color: inherit; text-decoration: inherit;">rental_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The rental duration. Must be greater than or equal to 0.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1765,7 +1764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playbackdurationseconds_csharp" style="color: inherit; text-decoration: inherit;">Playback<wbr>Duration<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Playback duration{{% /md %}}</dd>
     <dt class="property-required"
@@ -1774,7 +1773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagedurationseconds_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Duration<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Storage duration{{% /md %}}</dd>
 </dl>
@@ -1789,7 +1788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playbackdurationseconds_go" style="color: inherit; text-decoration: inherit;">Playback<wbr>Duration<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Playback duration{{% /md %}}</dd>
     <dt class="property-required"
@@ -1798,7 +1797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagedurationseconds_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Duration<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Storage duration{{% /md %}}</dd>
 </dl>
@@ -1837,7 +1836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playback_duration_seconds_python" style="color: inherit; text-decoration: inherit;">playback_<wbr>duration_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Playback duration{{% /md %}}</dd>
     <dt class="property-required"
@@ -1846,7 +1845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_duration_seconds_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>duration_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Storage duration{{% /md %}}</dd>
 </dl>
@@ -1863,7 +1862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playbackdurationseconds_csharp" style="color: inherit; text-decoration: inherit;">Playback<wbr>Duration<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Playback duration{{% /md %}}</dd>
     <dt class="property-required"
@@ -1872,7 +1871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagedurationseconds_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Duration<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Storage duration{{% /md %}}</dd>
 </dl>
@@ -1887,7 +1886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playbackdurationseconds_go" style="color: inherit; text-decoration: inherit;">Playback<wbr>Duration<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Playback duration{{% /md %}}</dd>
     <dt class="property-required"
@@ -1896,7 +1895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagedurationseconds_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Duration<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Storage duration{{% /md %}}</dd>
 </dl>
@@ -1935,7 +1934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playback_duration_seconds_python" style="color: inherit; text-decoration: inherit;">playback_<wbr>duration_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Playback duration{{% /md %}}</dd>
     <dt class="property-required"
@@ -1944,7 +1943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_duration_seconds_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>duration_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Storage duration{{% /md %}}</dd>
 </dl>
@@ -5459,7 +5458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alternateverificationkeys_csharp" style="color: inherit; text-decoration: inherit;">Alternate<wbr>Verification<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Args&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}A list of alternative verification keys.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5737,7 +5736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alternateverificationkeys_csharp" style="color: inherit; text-decoration: inherit;">Alternate<wbr>Verification<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response<wbr>Args&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}A list of alternative verification keys.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6319,6 +6318,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET){{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:media/latest:ContentKeyPolicy PolicyCreatedWithMultipleOptions /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Media/mediaservices/contosomedia/contentKeyPolicies/PolicyCreatedWithMultipleOptions 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

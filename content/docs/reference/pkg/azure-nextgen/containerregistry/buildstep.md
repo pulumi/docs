@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.containerregistry.BuildStep reso
 
 Build step resource properties
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1398,6 +1397,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The value of this property indicates whether the image cache is enabled or not.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:containerregistry/v20180201preview:BuildStep myStep /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/buildTasks/myBuildTask/steps/myStep 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

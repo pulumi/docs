@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.machinelearningexperimentation.P
 
 An object that represents a machine learning project.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -979,6 +978,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:machinelearningexperimentation/v20170501preview:Project teamAccountcrud5678 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.MachineLearningExperimentation/accounts/testaccount/workspaces/testworkspace/projects/testProject 
+```
 
 
 

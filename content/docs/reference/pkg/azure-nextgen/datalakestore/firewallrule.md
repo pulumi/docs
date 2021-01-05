@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.datalakestore.FirewallRule resou
 Data Lake Store firewall rule information.
 Latest API Version: 2016-11-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -635,6 +634,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:datalakestore/latest:FirewallRule test_rule 34adfa4f-cedf-4dc0-ba29-b6d1a69ab345 
+```
 
 
 

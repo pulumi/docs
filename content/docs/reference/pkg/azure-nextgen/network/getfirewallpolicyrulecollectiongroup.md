@@ -1007,7 +1007,7 @@ The following output properties are available:
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Rule<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Nat<wbr>Rule<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Response<wbr>Args&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}List of rules included in a rule collection.{{% /md %}}</dd>
 </dl>
@@ -1249,7 +1249,7 @@ The following output properties are available:
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Rule<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Nat<wbr>Rule<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Response<wbr>Args&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}List of rules included in a rule collection.{{% /md %}}</dd>
 </dl>

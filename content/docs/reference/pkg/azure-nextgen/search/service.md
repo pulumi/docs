@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.search.Service resource with exa
 Describes an Azure Cognitive Search service and its current state.
 Latest API Version: 2020-08-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3127,6 +3126,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The SKU of the search service. Valid values include: 'free': Shared service. 'basic': Dedicated service with up to 3 replicas. 'standard': Dedicated service with up to 12 partitions and 12 replicas. 'standard2': Similar to standard, but with more capacity per search unit. 'standard3': The largest Standard offering with up to 12 partitions and 12 replicas (or up to 3 partitions with more indexes if you also set the hostingMode property to 'highDensity'). 'storage_optimized_l1': Supports 1TB per partition, up to 12 partitions. 'storage_optimized_l2': Supports 2TB per partition, up to 12 partitions.'{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:search/latest:Service mysearchservice /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Search/searchServices/mysearchservice 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.logic.IntegrationServiceEnvironm
 The integration service environment.
 Latest API Version: 2019-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3353,6 +3352,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Suspended</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:logic/latest:IntegrationServiceEnvironment testIntegrationServiceEnvironment /subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Logic/integrationServiceEnvironments/testIntegrationServiceEnvironment 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

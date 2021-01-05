@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.storsimple.BackupScheduleGroup r
 The Backup Schedule Group
 Latest API Version: 2016-10-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -909,6 +908,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The second.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:storsimple/latest:BackupScheduleGroup BackupSchGroupForSDKTest /subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/hsdk-4xy4fi2ivg/backupScheduleGroups/BackupSchGroupForSDKTest 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

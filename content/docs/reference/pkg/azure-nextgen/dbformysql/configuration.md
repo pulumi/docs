@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.dbformysql.Configuration resourc
 Represents a Configuration.
 Latest API Version: 2017-12-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -779,6 +778,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:dbformysql/latest:Configuration event_scheduler /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.DBforMySQL/servers/testserver/configurations/event_scheduler 
+```
 
 
 

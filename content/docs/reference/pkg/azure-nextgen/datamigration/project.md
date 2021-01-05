@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.datamigration.Project resource w
 A project resource
 Latest API Version: 2018-04-19.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2837,6 +2836,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>SqlOnPrem</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:datamigration/latest:Project DmsSdkProject /subscriptions/fc04246f-04c5-437e-ac5e-206a19e7193f/resourceGroups/DmsSdkRg/providers/Microsoft.DataMigration/services/DmsSdkService/projects/DmsSdkProject 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

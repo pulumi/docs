@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.avs.WorkloadNetworkDnsZone resou
 
 NSX DNS Zone
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -70,7 +69,7 @@ func main() {
 			Domain:            []interface{}{},
 			PrivateCloudName:  pulumi.String("cloud1"),
 			ResourceGroupName: pulumi.String("group1"),
-			Revision:          pulumi.Int(1),
+			Revision:          pulumi.Float64(1),
 			SourceIp:          pulumi.String("8.8.8.8"),
 		})
 		if err != nil {
@@ -137,7 +136,7 @@ const workloadNetworkDnsZone = new azure_nextgen.avs.v20200717preview.WorkloadNe
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WorkloadNetworkDnsZone</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_server_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dns_services</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">dns_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">private_cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revision</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">source_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WorkloadNetworkDnsZone</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_server_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dns_services</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">dns_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">private_cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revision</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">source_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -359,7 +358,7 @@ The WorkloadNetworkDnsZone resource accepts the following [input]({{< relref "/d
 <a href="#dnsservices_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of DNS Services using the DNS zone.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -377,7 +376,7 @@ The WorkloadNetworkDnsZone resource accepts the following [input]({{< relref "/d
 <a href="#revision_csharp" style="color: inherit; text-decoration: inherit;">Revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}NSX revision number.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -446,7 +445,7 @@ The WorkloadNetworkDnsZone resource accepts the following [input]({{< relref "/d
 <a href="#dnsservices_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of DNS Services using the DNS zone.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -464,7 +463,7 @@ The WorkloadNetworkDnsZone resource accepts the following [input]({{< relref "/d
 <a href="#revision_go" style="color: inherit; text-decoration: inherit;">Revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}NSX revision number.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -620,7 +619,7 @@ The WorkloadNetworkDnsZone resource accepts the following [input]({{< relref "/d
 <a href="#dns_services_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of DNS Services using the DNS zone.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -638,7 +637,7 @@ The WorkloadNetworkDnsZone resource accepts the following [input]({{< relref "/d
 <a href="#revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}NSX revision number.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -831,6 +830,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:avs/v20200717preview:WorkloadNetworkDnsZone dnsZone1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/workloadNetworks/default/dnsZones/dnsZone1 
+```
 
 
 

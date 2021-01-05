@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.hanaonazure.ProviderInstance res
 
 A provider instance associated with a SAP monitor.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -674,6 +673,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:hanaonazure/v20200207preview:ProviderInstance myProviderInstance /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.HanaOnAzure/sapMonitors/mySapMonitor/providerInstances/myProviderInstance 
+```
 
 
 

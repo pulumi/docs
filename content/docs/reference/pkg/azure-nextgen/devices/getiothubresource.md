@@ -800,7 +800,7 @@ The following output properties are available:
 <a href="#retentiontimeindays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Time<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages{{% /md %}}</dd>
 </dl>
@@ -851,7 +851,7 @@ The following output properties are available:
 <a href="#retentiontimeindays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Time<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages{{% /md %}}</dd>
 </dl>
@@ -953,7 +953,7 @@ The following output properties are available:
 <a href="#retention_time_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>time_<wbr>in_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages{{% /md %}}</dd>
 </dl>
@@ -2089,7 +2089,7 @@ The following output properties are available:
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.{{% /md %}}</dd>
 </dl>
@@ -2122,7 +2122,7 @@ The following output properties are available:
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.{{% /md %}}</dd>
 </dl>
@@ -2188,7 +2188,7 @@ The following output properties are available:
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.{{% /md %}}</dd>
 </dl>

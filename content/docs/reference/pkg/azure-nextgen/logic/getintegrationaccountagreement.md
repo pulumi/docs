@@ -4897,7 +4897,7 @@ The following output properties are available:
 <a href="#groupcontrolnumberlowerbound_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4906,7 +4906,7 @@ The following output properties are available:
 <a href="#groupcontrolnumberupperbound_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4915,7 +4915,7 @@ The following output properties are available:
 <a href="#interchangecontrolnumberlowerbound_csharp" style="color: inherit; text-decoration: inherit;">Interchange<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The interchange control number lower bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4924,7 +4924,7 @@ The following output properties are available:
 <a href="#interchangecontrolnumberupperbound_csharp" style="color: inherit; text-decoration: inherit;">Interchange<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The interchange control number upper bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4978,7 +4978,7 @@ The following output properties are available:
 <a href="#transactionsetcontrolnumberlowerbound_csharp" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4987,7 +4987,7 @@ The following output properties are available:
 <a href="#transactionsetcontrolnumberupperbound_csharp" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5272,7 +5272,7 @@ The following output properties are available:
 <a href="#groupcontrolnumberlowerbound_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5281,7 +5281,7 @@ The following output properties are available:
 <a href="#groupcontrolnumberupperbound_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5290,7 +5290,7 @@ The following output properties are available:
 <a href="#interchangecontrolnumberlowerbound_go" style="color: inherit; text-decoration: inherit;">Interchange<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The interchange control number lower bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5299,7 +5299,7 @@ The following output properties are available:
 <a href="#interchangecontrolnumberupperbound_go" style="color: inherit; text-decoration: inherit;">Interchange<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The interchange control number upper bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5353,7 +5353,7 @@ The following output properties are available:
 <a href="#transactionsetcontrolnumberlowerbound_go" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5362,7 +5362,7 @@ The following output properties are available:
 <a href="#transactionsetcontrolnumberupperbound_go" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6022,7 +6022,7 @@ The following output properties are available:
 <a href="#group_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">group_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -6031,7 +6031,7 @@ The following output properties are available:
 <a href="#group_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">group_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -6040,7 +6040,7 @@ The following output properties are available:
 <a href="#interchange_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The interchange control number lower bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -6049,7 +6049,7 @@ The following output properties are available:
 <a href="#interchange_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The interchange control number upper bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -6103,7 +6103,7 @@ The following output properties are available:
 <a href="#transaction_set_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -6112,7 +6112,7 @@ The following output properties are available:
 <a href="#transaction_set_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd>
     <dt class="property-optional"

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.netapp.Pool resource with exampl
 Capacity pool resource
 Latest API Version: 2020-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -65,7 +64,7 @@ func main() {
 			QosType:           pulumi.String("Auto"),
 			ResourceGroupName: pulumi.String("myRG"),
 			ServiceLevel:      pulumi.String("Premium"),
-			Size:              pulumi.Int(4398046511104),
+			Size:              pulumi.Float64(4398046511104),
 		})
 		if err != nil {
 			return err
@@ -129,7 +128,7 @@ const pool = new azure_nextgen.netapp.latest.Pool("pool", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Pool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">qos_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, QosType]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[Union[str, ServiceLevel]]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Pool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">qos_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, QosType]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[Union[str, ServiceLevel]]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -351,7 +350,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -429,7 +428,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -585,7 +584,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -985,6 +984,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Ultra{{% md %}}Ultra service level{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:netapp/latest:Pool account1/pool1 /subscriptions/D633CC2E-722B-4AE1-B636-BBD9E4C60ED9/resourceGroups/myRG/providers/Microsoft.NetApp/netAppAccounts/account1/capacityPools/pool1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

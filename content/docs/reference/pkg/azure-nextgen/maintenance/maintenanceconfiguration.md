@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.maintenance.MaintenanceConfigura
 Maintenance configuration record type
 Latest API Version: 2020-04-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -763,6 +762,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>InResource</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:maintenance/latest:MaintenanceConfiguration configuration1 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourcegroups/examplerg/providers/Microsoft.Maintenance/maintenanceConfigurations/configuration1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

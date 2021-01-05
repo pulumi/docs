@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.servicefabricmesh.Application re
 
 This type describes an application resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -8796,6 +8795,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The flag indicating whether the volume is read only. Default is 'false'.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:servicefabricmesh/v20180901preview:Application sampleApplication /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/applications/sampleApplication 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

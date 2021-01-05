@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.operationalinsights.Incident res
 Represents an incident in Azure Security Insights.
 Latest API Version: 2020-01-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2176,6 +2175,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Closed{{% md %}}A non-active incident{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:operationalinsights/latest:Incident 73e01a99-5cd7-4139-a149-9f2736ff2ab5 /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/incidents/73e01a99-5cd7-4139-a149-9f2736ff2ab5 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

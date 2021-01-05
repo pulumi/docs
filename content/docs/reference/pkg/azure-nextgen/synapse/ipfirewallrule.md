@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.synapse.IpFirewallRule resource 
 
 IP firewall rule
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -670,6 +669,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:synapse/v20190601preview:IpFirewallRule ExampleIpFirewallRule /subscriptions/01234567-89ab-4def-0123-456789abcdef/resourceGroups/ExampleResourceGroup/providers/Microsoft.Synapse/workspaces/ExampleWorkspace/firewallRules/ExampleIpFirewallRule 
+```
 
 
 

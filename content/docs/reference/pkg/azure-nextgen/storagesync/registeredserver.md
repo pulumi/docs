@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.storagesync.RegisteredServer res
 Registered Server resource.
 Latest API Version: 2020-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1367,6 +1366,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:storagesync/latest:RegisteredServer ankushb-prod3.redmond.corp.microsoft.com /subscriptions/52b8da2f-61e0-4a1f-8dde-336911f367fb/resourceGroups/SampleResourceGroup_1/providers/Microsoft.StorageSync/storageSyncServices/SampleStorageSyncService_1/registeredServers/530a0384-50ac-456d-8240-9d6621404151 
+```
 
 
 

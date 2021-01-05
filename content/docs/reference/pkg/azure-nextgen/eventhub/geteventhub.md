@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#messageretentionindays_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Retention<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of days to retain the events for this Event Hub, value should be 1 to 7 days{{% /md %}}</dd>
     <dt class="property-"
@@ -269,7 +269,7 @@ The following output properties are available:
 <a href="#partitioncount_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.{{% /md %}}</dd>
     <dt class="property-"
@@ -356,7 +356,7 @@ The following output properties are available:
 <a href="#messageretentionindays_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Retention<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of days to retain the events for this Event Hub, value should be 1 to 7 days{{% /md %}}</dd>
     <dt class="property-"
@@ -365,7 +365,7 @@ The following output properties are available:
 <a href="#partitioncount_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.{{% /md %}}</dd>
     <dt class="property-"
@@ -548,7 +548,7 @@ The following output properties are available:
 <a href="#message_retention_in_days_python" style="color: inherit; text-decoration: inherit;">message_<wbr>retention_<wbr>in_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of days to retain the events for this Event Hub, value should be 1 to 7 days{{% /md %}}</dd>
     <dt class="property-"
@@ -557,7 +557,7 @@ The following output properties are available:
 <a href="#partition_count_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.{{% /md %}}</dd>
     <dt class="property-"

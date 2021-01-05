@@ -305,7 +305,7 @@ The following output properties are available:
 <a href="#retentioncount_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The number of backups to be retained.{{% /md %}}</dd>
     <dt class="property-"
@@ -401,7 +401,7 @@ The following output properties are available:
 <a href="#retentioncount_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The number of backups to be retained.{{% /md %}}</dd>
     <dt class="property-"
@@ -593,7 +593,7 @@ The following output properties are available:
 <a href="#retention_count_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of backups to be retained.{{% /md %}}</dd>
     <dt class="property-"

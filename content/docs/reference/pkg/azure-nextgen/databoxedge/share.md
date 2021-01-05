@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.databoxedge.Share resource with 
 Represents a share on the  Data Box Edge/Gateway device.
 Latest API Version: 2019-08-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2432,6 +2431,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}User ID (already existing in the device).{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:databoxedge/latest:Share smbshare /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/shares/smbshare 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

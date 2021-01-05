@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.insights.ComponentCurrentBilling
 An Application Insights component billing features
 Latest API Version: 2015-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -967,6 +966,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:insights/latest:ComponentCurrentBillingFeature myresource1 <Azure resource ID> 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

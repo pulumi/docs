@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ProtectionInten
 Base class for backup ProtectionIntent.
 Latest API Version: 2017-07-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1788,6 +1787,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>ProtectionFailed</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:recoveryservices/latest:ProtectionIntent vm;iaasvmcontainerv2;chamsrgtest;chamscandel /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.RecoveryServices/vaults/myVault/backupFabrics/Azure/backupProtectionIntent/vm;iaasvmcontainerv2;chamsrgtest;chamscandel 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

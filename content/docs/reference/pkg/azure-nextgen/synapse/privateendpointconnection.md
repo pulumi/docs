@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.synapse.PrivateEndpointConnectio
 
 A private endpoint connection
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -979,6 +978,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The private link service connection status.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:synapse/v20190601preview:PrivateEndpointConnection sql /subscriptions/01234567-89ab-4def-0123-456789abcdef/resourceGroups/ExampleResourceGroup/providers/Microsoft.Synapse/workspaces/ExampleWorkspace/privateEndpointConnections/ExamplePrivateEndpointConnection 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.insights.AutoscaleSetting resour
 The autoscale setting resource.
 Latest API Version: 2015-04-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -5368,6 +5367,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}the service address to receive the notification.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:insights/latest:AutoscaleSetting MySetting /subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/microsoft.insights/autoscalesettings/MySetting 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.servicefabricmesh.Secret resourc
 
 This type describes a secret resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -944,6 +943,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}User readable description of the secret.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:servicefabricmesh/v20180901preview:Secret dbConnectionString /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/secrets/dbConnectionString 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

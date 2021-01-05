@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.compute.Disk resource with examp
 Disk resource.
 Latest API Version: 2020-06-30.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -800,7 +799,7 @@ func main() {
 		_, err := compute.NewDisk(ctx, "disk", &compute.DiskArgs{
 			CreationData: &compute.CreationDataArgs{
 				CreateOption:    pulumi.String("Upload"),
-				UploadSizeBytes: pulumi.Int(10737418752),
+				UploadSizeBytes: pulumi.Float64(10737418752),
 			},
 			DiskName:          pulumi.String("myDisk"),
 			Location:          pulumi.String("West US"),
@@ -1085,7 +1084,7 @@ const disk = new azure_nextgen.compute.latest.Disk("disk", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Disk</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_data</span><span class="p">:</span> <span class="nx">Optional[CreationDataArgs]</span> = None<span class="p">, </span><span class="nx">disk_access_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_iops_read_only</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">disk_iops_read_write</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">disk_m_bps_read_only</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">disk_m_bps_read_write</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">disk_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionArgs]</span> = None<span class="p">, </span><span class="nx">encryption_settings_collection</span><span class="p">:</span> <span class="nx">Optional[EncryptionSettingsCollectionArgs]</span> = None<span class="p">, </span><span class="nx">hyper_v_generation</span><span class="p">:</span> <span class="nx">Optional[Union[str, HyperVGeneration]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_shares</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">network_access_policy</span><span class="p">:</span> <span class="nx">Optional[Union[str, NetworkAccessPolicy]]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[OperatingSystemTypes]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[DiskSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Disk</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_data</span><span class="p">:</span> <span class="nx">Optional[CreationDataArgs]</span> = None<span class="p">, </span><span class="nx">disk_access_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_iops_read_only</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">disk_iops_read_write</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">disk_m_bps_read_only</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">disk_m_bps_read_write</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">disk_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionArgs]</span> = None<span class="p">, </span><span class="nx">encryption_settings_collection</span><span class="p">:</span> <span class="nx">Optional[EncryptionSettingsCollectionArgs]</span> = None<span class="p">, </span><span class="nx">hyper_v_generation</span><span class="p">:</span> <span class="nx">Optional[Union[str, HyperVGeneration]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_shares</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">network_access_policy</span><span class="p">:</span> <span class="nx">Optional[Union[str, NetworkAccessPolicy]]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[OperatingSystemTypes]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[DiskSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1307,7 +1306,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#diskiopsreadonly_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>IOPSRead<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The total number of IOPS that will be allowed across all VMs mounting the shared disk as ReadOnly. One operation can transfer between 4k and 256k bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1316,7 +1315,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#diskiopsreadwrite_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>IOPSRead<wbr>Write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The number of IOPS allowed for this disk; only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1325,7 +1324,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#diskmbpsreadonly_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>MBps<wbr>Read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The total throughput (MBps) that will be allowed across all VMs mounting the shared disk as ReadOnly. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1334,7 +1333,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#diskmbpsreadwrite_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>MBps<wbr>Read<wbr>Write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The bandwidth allowed for this disk; only settable for UltraSSD disks. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1493,7 +1492,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#diskiopsreadonly_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>IOPSRead<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The total number of IOPS that will be allowed across all VMs mounting the shared disk as ReadOnly. One operation can transfer between 4k and 256k bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1502,7 +1501,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#diskiopsreadwrite_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>IOPSRead<wbr>Write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The number of IOPS allowed for this disk; only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1511,7 +1510,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#diskmbpsreadonly_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>MBps<wbr>Read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The total throughput (MBps) that will be allowed across all VMs mounting the shared disk as ReadOnly. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1520,7 +1519,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#diskmbpsreadwrite_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>MBps<wbr>Read<wbr>Write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The bandwidth allowed for this disk; only settable for UltraSSD disks. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1865,7 +1864,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#disk_iops_read_only_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>iops_<wbr>read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The total number of IOPS that will be allowed across all VMs mounting the shared disk as ReadOnly. One operation can transfer between 4k and 256k bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1874,7 +1873,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#disk_iops_read_write_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>iops_<wbr>read_<wbr>write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of IOPS allowed for this disk; only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1883,7 +1882,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#disk_m_bps_read_only_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>m_<wbr>bps_<wbr>read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The total throughput (MBps) that will be allowed across all VMs mounting the shared disk as ReadOnly. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1892,7 +1891,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#disk_m_bps_read_write_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>m_<wbr>bps_<wbr>read_<wbr>write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The bandwidth allowed for this disk; only settable for UltraSSD disks. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2013,7 +2012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksizebytes_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The size of the disk in bytes. This field is read only.{{% /md %}}</dd>
     <dt class="property-"
@@ -2118,7 +2117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksizebytes_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The size of the disk in bytes. This field is read only.{{% /md %}}</dd>
     <dt class="property-"
@@ -2328,7 +2327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_bytes_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The size of the disk in bytes. This field is read only.{{% /md %}}</dd>
     <dt class="property-"
@@ -2508,7 +2507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uploadsizebytes_csharp" style="color: inherit; text-decoration: inherit;">Upload<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd>
 </dl>
@@ -2586,7 +2585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uploadsizebytes_go" style="color: inherit; text-decoration: inherit;">Upload<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd>
 </dl>
@@ -2742,7 +2741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upload_size_bytes_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>size_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd>
 </dl>
@@ -2831,7 +2830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uploadsizebytes_csharp" style="color: inherit; text-decoration: inherit;">Upload<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd>
 </dl>
@@ -2918,7 +2917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uploadsizebytes_go" style="color: inherit; text-decoration: inherit;">Upload<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd>
 </dl>
@@ -3092,7 +3091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upload_size_bytes_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>size_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd>
 </dl>
@@ -4991,6 +4990,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Resource Id{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:compute/latest:Disk myDisk <Azure resource ID> 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

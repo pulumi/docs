@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.cognitiveservices.PrivateEndpoin
 The Private Endpoint Connection resource.
 Latest API Version: 2017-04-18.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1239,6 +1238,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:cognitiveservices/latest:PrivateEndpointConnection {privateEndpointConnectionName} /subscriptions/{subscription-id}/resourceGroups/res7231/providers/Microsoft.CognitiveServices/accounts/sto288/privateEndpointConnections/{privateEndpointConnectionName} 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

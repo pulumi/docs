@@ -232,7 +232,7 @@ The following output properties are available:
 <a href="#egressbytestransferred_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Bytes<wbr>Transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The egress bytes per second.{{% /md %}}</dd>
     <dt class="property-required"
@@ -241,7 +241,7 @@ The following output properties are available:
 <a href="#egresspacketstransferred_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Packets<wbr>Transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The egress packets per second.{{% /md %}}</dd>
     <dt class="property-required"
@@ -250,7 +250,7 @@ The following output properties are available:
 <a href="#ingressbytestransferred_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Bytes<wbr>Transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The ingress bytes per second.{{% /md %}}</dd>
     <dt class="property-required"
@@ -259,7 +259,7 @@ The following output properties are available:
 <a href="#ingresspacketstransferred_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Packets<wbr>Transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The ingress packets per second.{{% /md %}}</dd>
     <dt class="property-required"
@@ -268,7 +268,7 @@ The following output properties are available:
 <a href="#maxbandwidth_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The max band width.{{% /md %}}</dd>
     <dt class="property-required"
@@ -277,7 +277,7 @@ The following output properties are available:
 <a href="#maxpacketspersecond_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Packets<wbr>Per<wbr>Second</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The max packets transferred per second.{{% /md %}}</dd>
     <dt class="property-required"
@@ -304,7 +304,7 @@ The following output properties are available:
 <a href="#vpnconnectionduration_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Connection<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The duration time of a connected vpn client.{{% /md %}}</dd>
     <dt class="property-required"
@@ -346,7 +346,7 @@ The following output properties are available:
 <a href="#egressbytestransferred_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Bytes<wbr>Transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The egress bytes per second.{{% /md %}}</dd>
     <dt class="property-required"
@@ -355,7 +355,7 @@ The following output properties are available:
 <a href="#egresspacketstransferred_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Packets<wbr>Transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The egress packets per second.{{% /md %}}</dd>
     <dt class="property-required"
@@ -364,7 +364,7 @@ The following output properties are available:
 <a href="#ingressbytestransferred_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Bytes<wbr>Transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The ingress bytes per second.{{% /md %}}</dd>
     <dt class="property-required"
@@ -373,7 +373,7 @@ The following output properties are available:
 <a href="#ingresspacketstransferred_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Packets<wbr>Transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The ingress packets per second.{{% /md %}}</dd>
     <dt class="property-required"
@@ -382,7 +382,7 @@ The following output properties are available:
 <a href="#maxbandwidth_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The max band width.{{% /md %}}</dd>
     <dt class="property-required"
@@ -391,7 +391,7 @@ The following output properties are available:
 <a href="#maxpacketspersecond_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Packets<wbr>Per<wbr>Second</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The max packets transferred per second.{{% /md %}}</dd>
     <dt class="property-required"
@@ -418,7 +418,7 @@ The following output properties are available:
 <a href="#vpnconnectionduration_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Connection<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The duration time of a connected vpn client.{{% /md %}}</dd>
     <dt class="property-required"
@@ -574,7 +574,7 @@ The following output properties are available:
 <a href="#egress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>bytes_<wbr>transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The egress bytes per second.{{% /md %}}</dd>
     <dt class="property-required"
@@ -583,7 +583,7 @@ The following output properties are available:
 <a href="#egress_packets_transferred_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>packets_<wbr>transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The egress packets per second.{{% /md %}}</dd>
     <dt class="property-required"
@@ -592,7 +592,7 @@ The following output properties are available:
 <a href="#ingress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>bytes_<wbr>transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The ingress bytes per second.{{% /md %}}</dd>
     <dt class="property-required"
@@ -601,7 +601,7 @@ The following output properties are available:
 <a href="#ingress_packets_transferred_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>packets_<wbr>transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The ingress packets per second.{{% /md %}}</dd>
     <dt class="property-required"
@@ -610,7 +610,7 @@ The following output properties are available:
 <a href="#max_bandwidth_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The max band width.{{% /md %}}</dd>
     <dt class="property-required"
@@ -619,7 +619,7 @@ The following output properties are available:
 <a href="#max_packets_per_second_python" style="color: inherit; text-decoration: inherit;">max_<wbr>packets_<wbr>per_<wbr>second</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The max packets transferred per second.{{% /md %}}</dd>
     <dt class="property-required"
@@ -646,7 +646,7 @@ The following output properties are available:
 <a href="#vpn_connection_duration_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>connection_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The duration time of a connected vpn client.{{% /md %}}</dd>
     <dt class="property-required"

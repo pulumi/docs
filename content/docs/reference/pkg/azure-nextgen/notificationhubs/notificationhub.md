@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.notificationhubs.NotificationHub
 Description of a NotificationHub Resource.
 Latest API Version: 2017-04-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3773,6 +3772,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The Windows Live endpoint.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:notificationhubs/latest:NotificationHub nh-sdk-hub /subscriptions/29cfa613-cbbc-4512-b1d6-1b3a92c7fa40/resourceGroups/sdkresourceGroup/providers/Microsoft.NotificationHubs/namespaces/nh-sdk-ns/notificationHubs/nh-sdk-hub 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

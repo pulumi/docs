@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.virtualmachineimages.VirtualMach
 Image template is an ARM resource managed by Microsoft.VirtualMachineImages provider
 Latest API Version: 2020-02-14.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -792,7 +791,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
 <a href="#distribute_csharp" style="color: inherit; text-decoration: inherit;">Distribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Distributor<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Distributor<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Vhd<wbr>Distributor<wbr>Args&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}The distribution targets where the image output needs to go to.{{% /md %}}</dd>
     <dt class="property-required"
@@ -855,7 +854,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
 <a href="#customize_csharp" style="color: inherit; text-decoration: inherit;">Customize</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Image<wbr>Template<wbr>File<wbr>Customizer<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Power<wbr>Shell<wbr>Customizer<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Restart<wbr>Customizer<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Shell<wbr>Customizer<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Windows<wbr>Update<wbr>Customizer<wbr>Args&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the properties used to describe the customization steps of the image, like Image source etc{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6353,6 +6352,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Resource id of a pre-existing subnet.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:virtualmachineimages/latest:VirtualMachineImageTemplate myImageTemplate /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.VirtualMachineImages/imageTemplates/myImageTemplate 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

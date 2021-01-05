@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.logic.IntegrationAccountAssembly
 The assembly definition.
 Latest API Version: 2019-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1683,7 +1682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentsize_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The content size.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1734,7 +1733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentsize_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The content size.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1836,7 +1835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_size_python" style="color: inherit; text-decoration: inherit;">content_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The content size.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1889,7 +1888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentsize_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The content size.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1940,7 +1939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentsize_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The content size.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2042,7 +2041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_size_python" style="color: inherit; text-decoration: inherit;">content_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The content size.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2074,6 +2073,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The content link URI.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:logic/latest:IntegrationAccountAssembly testAssembly /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testResourceGroup/providers/Microsoft.Logic/integrationAccounts/testIntegrationAccount/assemblies/testAssembly 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

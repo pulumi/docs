@@ -773,7 +773,7 @@ The following output properties are available:
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd>
 </dl>
@@ -797,7 +797,7 @@ The following output properties are available:
 <a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd>
 </dl>
@@ -845,7 +845,7 @@ The following output properties are available:
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd>
 </dl>

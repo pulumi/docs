@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ReplicationReco
 Provider details.
 Latest API Version: 2018-07-10.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3122,6 +3121,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The agent version.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:recoveryservices/latest:ReplicationRecoveryServicesProvider vmwareprovider1 /Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.RecoveryServices/vaults/migrationvault/replicationFabrics/vmwarefabric1/replicationRecoveryServicesProviders/vmwareprovider1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

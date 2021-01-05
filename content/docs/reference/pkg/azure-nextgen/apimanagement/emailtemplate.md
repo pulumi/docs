@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.EmailTemplate reso
 Email Template details.
 Latest API Version: 2019-12-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1051,6 +1050,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Template parameter title.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:apimanagement/latest:EmailTemplate NewIssueNotificationMessage /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/templates/NewIssueNotificationMessage 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

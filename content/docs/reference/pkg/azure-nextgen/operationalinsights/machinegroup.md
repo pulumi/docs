@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.operationalinsights.MachineGroup
 
 A user-defined logical grouping of machines.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1108,6 +1107,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Resource type qualifier.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:operationalinsights/v20151101preview:MachineGroup ccfbf4bf-dc08-4371-9e9b-00a8d875d45a /subscriptions/63BE4E24-FDF0-4E9C-9342-6A5D5A359722/resourceGroups/rg-sm/providers/Microsoft.OperationalInsights/workspaces/D6F79F14-E563-469B-84B5-9286D2803B2F/machineGroups/ccfbf4bf-dc08-4371-9e9b-00a8d875d45a 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

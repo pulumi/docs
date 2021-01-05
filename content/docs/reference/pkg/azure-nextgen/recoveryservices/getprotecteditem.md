@@ -6266,7 +6266,7 @@ The following output properties are available:
 <a href="#protecteditemid_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Data Plane Service ID of the protected item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6443,7 +6443,7 @@ The following output properties are available:
 <a href="#protecteditemid_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Data Plane Service ID of the protected item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6797,7 +6797,7 @@ The following output properties are available:
 <a href="#protected_item_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Data Plane Service ID of the protected item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7142,7 +7142,7 @@ The following output properties are available:
 <a href="#deferreddeletesynctimeinutc_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Sync<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Sync time for deferred deletion in UTC{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7328,7 +7328,7 @@ The following output properties are available:
 <a href="#deferreddeletesynctimeinutc_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Sync<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Sync time for deferred deletion in UTC{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7700,7 +7700,7 @@ The following output properties are available:
 <a href="#deferred_delete_sync_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>sync_<wbr>time_<wbr>in_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Sync time for deferred deletion in UTC{{% /md %}}</dd>
     <dt class="property-optional"

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.datashare.Share resource with ex
 A share data transfer object.
 Latest API Version: 2019-11-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -863,6 +862,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>InPlace</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:datashare/latest:Share Share1 /subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1/shares/Share1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

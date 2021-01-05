@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.NetworkExperimentProfile
 Defines an Network Experiment Profile and lists of Experiments
 Latest API Version: 2019-11-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -747,6 +746,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Disabled</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:NetworkExperimentProfile MyProfile /subscriptions/subid/resourceGroups/MyResourceGroup/providers/Microsoft.Network/NetworkExperimentProfiles/MyProfile 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

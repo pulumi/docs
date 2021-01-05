@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.keyvault.Secret resource with ex
 Resource information with extended details.
 Latest API Version: 2019-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1362,6 +1361,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The value of the secret. NOTE: 'value' will never be returned from the service, as APIs using this model are is intended for internal use in ARM deployments. Users should use the data-plane REST service for interaction with vault secrets.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:keyvault/latest:Secret secret-name /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/sample-group/providers/Microsoft.KeyVault/vaults/sample-vault/secrets/secret-name 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

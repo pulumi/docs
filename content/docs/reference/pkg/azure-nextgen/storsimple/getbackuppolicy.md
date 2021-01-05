@@ -287,7 +287,7 @@ The following output properties are available:
 <a href="#schedulescount_csharp" style="color: inherit; text-decoration: inherit;">Schedules<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The count of schedules the backup policy contains.{{% /md %}}</dd>
     <dt class="property-"
@@ -392,7 +392,7 @@ The following output properties are available:
 <a href="#schedulescount_go" style="color: inherit; text-decoration: inherit;">Schedules<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The count of schedules the backup policy contains.{{% /md %}}</dd>
     <dt class="property-"
@@ -602,7 +602,7 @@ The following output properties are available:
 <a href="#schedules_count_python" style="color: inherit; text-decoration: inherit;">schedules_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The count of schedules the backup policy contains.{{% /md %}}</dd>
     <dt class="property-"

@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.aadiam.PrivateLinkForAzureAd res
 
 PrivateLink Policy configuration object.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -927,6 +926,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:aadiam/v20200301preview:privateLinkForAzureAd myOrgPrivateLinkPolicy <Azure resource ID> 
+```
 
 
 

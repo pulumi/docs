@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.kusto.AttachedDatabaseConfigurat
 Class representing an attached database configuration.
 Latest API Version: 2020-09-18.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -839,6 +838,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>None</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:kusto/latest:AttachedDatabaseConfiguration KustoClusterRPTest4/attachedDatabaseConfigurations1 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterRPTest4/attachedDatabaseConfigurations/attachedDatabaseConfigurations1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

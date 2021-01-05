@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.eventhub.DisasterRecoveryConfig 
 Single item in List or Get Alias(Disaster Recovery configuration) operation
 Latest API Version: 2017-04-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -523,7 +522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pendingreplicationoperationscount_csharp" style="color: inherit; text-decoration: inherit;">Pending<wbr>Replication<wbr>Operations<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of entities pending to be replicated.{{% /md %}}</dd>
     <dt class="property-"
@@ -583,7 +582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pendingreplicationoperationscount_go" style="color: inherit; text-decoration: inherit;">Pending<wbr>Replication<wbr>Operations<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of entities pending to be replicated.{{% /md %}}</dd>
     <dt class="property-"
@@ -703,7 +702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pending_replication_operations_count_python" style="color: inherit; text-decoration: inherit;">pending_<wbr>replication_<wbr>operations_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of entities pending to be replicated.{{% /md %}}</dd>
     <dt class="property-"
@@ -739,6 +738,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:eventhub/latest:DisasterRecoveryConfig sdk-DisasterRecovery-3814 /subscriptions/exampleResourceGroup/resourceGroups/exampleResourceGroup/providers/Microsoft.EventHub/namespaces/sdk-Namespace-8859/disasterRecoveryConfig/sdk-DisasterRecovery-3814 
+```
 
 
 

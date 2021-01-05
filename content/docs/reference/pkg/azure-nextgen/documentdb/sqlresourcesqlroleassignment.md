@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.SqlResourceSqlRoleAss
 
 An Azure Cosmos DB Role Assignment
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -674,6 +673,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:documentdb/v20200601preview:SqlResourceSqlRoleAssignment myRoleAssignmentId /subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/sqlRoleAssignments/myRoleAssignmentId 
+```
 
 
 

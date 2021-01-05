@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.machinelearningservices.MachineL
 Machine Learning compute object wrapped into ARM resource envelope.
 Latest API Version: 2020-08-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -11815,6 +11814,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>LowPriority</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:machinelearningservices/latest:MachineLearningCompute compute123 /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testrg123/providers/Microsoft.MachineLearningServices/workspaces/workspaces123/computes/compute123 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.automation.SourceControl resourc
 
 Definition of the source control.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1183,6 +1182,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Oauth</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:automation/v20170515preview:SourceControl sampleSourceControl /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/sampleAccount9/sourcecontrols/sampleSourceControl 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

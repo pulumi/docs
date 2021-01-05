@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.VirtualHub resource with
 VirtualHub Resource.
 Latest API Version: 2020-07-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -147,7 +146,7 @@ const virtualHub = new azure_nextgen.network.latest.VirtualHub("virtualHub", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualHub</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_branch_to_branch_traffic</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">azure_firewall</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">express_route_gateway</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">p2_s_vpn_gateway</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_table</span><span class="p">:</span> <span class="nx">Optional[VirtualHubRouteTableArgs]</span> = None<span class="p">, </span><span class="nx">security_partner_provider</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">security_provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_hub_route_table_v2s</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualHubRouteTableV2Args]]</span> = None<span class="p">, </span><span class="nx">virtual_router_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">virtual_router_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">virtual_wan</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">vpn_gateway</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualHub</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_branch_to_branch_traffic</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">azure_firewall</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">express_route_gateway</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">p2_s_vpn_gateway</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_table</span><span class="p">:</span> <span class="nx">Optional[VirtualHubRouteTableArgs]</span> = None<span class="p">, </span><span class="nx">security_partner_provider</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">security_provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_hub_route_table_v2s</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualHubRouteTableV2Args]]</span> = None<span class="p">, </span><span class="nx">virtual_router_asn</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">virtual_router_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">virtual_wan</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">vpn_gateway</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -459,7 +458,7 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#virtualrouterasn_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Router<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}VirtualRouter ASN.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -636,7 +635,7 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#virtualrouterasn_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Router<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}VirtualRouter ASN.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -990,7 +989,7 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#virtual_router_asn_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>router_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}VirtualRouter ASN.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2547,6 +2546,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}NextHops ip address.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:VirtualHub virtualHub2 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub2 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

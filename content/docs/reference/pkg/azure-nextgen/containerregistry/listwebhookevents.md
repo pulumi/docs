@@ -1538,7 +1538,7 @@ The following output properties are available:
 <a href="#length_csharp" style="color: inherit; text-decoration: inherit;">Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The number of bytes of the content. Same as Size field.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1574,7 +1574,7 @@ The following output properties are available:
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The number of bytes of the content. Same as Length field.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1625,7 +1625,7 @@ The following output properties are available:
 <a href="#length_go" style="color: inherit; text-decoration: inherit;">Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The number of bytes of the content. Same as Size field.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1661,7 +1661,7 @@ The following output properties are available:
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The number of bytes of the content. Same as Length field.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1799,7 +1799,7 @@ The following output properties are available:
 <a href="#length_python" style="color: inherit; text-decoration: inherit;">length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of bytes of the content. Same as Size field.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1835,7 +1835,7 @@ The following output properties are available:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of bytes of the content. Same as Length field.{{% /md %}}</dd>
     <dt class="property-optional"

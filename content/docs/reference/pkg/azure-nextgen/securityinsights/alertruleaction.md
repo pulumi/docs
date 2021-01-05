@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.securityinsights.AlertRuleAction
 
 Action for alert rule.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -792,6 +791,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:securityinsights/v20190101preview:AlertRuleAction 912bec42-cb66-4c03-ac63-1761b6898c3e /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/73e01a99-5cd7-4139-a149-9f2736ff2ab5/actions/912bec42-cb66-4c03-ac63-1761b6898c3e 
+```
 
 
 

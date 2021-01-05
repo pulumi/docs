@@ -24,7 +24,7 @@ meta_desc: "Explore the ListCustomApiWsdlInterfaces function of the web module, 
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_custom_api_wsdl_interfaces(</span><span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">import_method</span><span class="p">:</span> <span class="nx">Optional[Union[str, WsdlImportMethod]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[WsdlServiceArgs]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListCustomApiWsdlInterfacesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_custom_api_wsdl_interfaces(</span><span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">import_method</span><span class="p">:</span> <span class="nx">Optional[Union[str, WsdlImportMethod]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[WsdlServiceArgs]</span> = None<span class="p">, </span><span class="nx">subscription_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListCustomApiWsdlInterfacesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -86,6 +86,15 @@ The following arguments are supported:
     <dd>{{% md %}}The service with name and endpoint names{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="subscriptionid_csharp">
+<a href="#subscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subscription Id{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
 </span>
@@ -135,6 +144,15 @@ The following arguments are supported:
         <span class="property-type"><a href="#wsdlservice">Wsdl<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}The service with name and endpoint names{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subscriptionid_go">
+<a href="#subscriptionid_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subscription Id{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="url_go">
@@ -188,6 +206,15 @@ The following arguments are supported:
     <dd>{{% md %}}The service with name and endpoint names{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="subscriptionid_nodejs">
+<a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subscription Id{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
@@ -237,6 +264,15 @@ The following arguments are supported:
         <span class="property-type"><a href="#wsdlservice">Wsdl<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The service with name and endpoint names{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subscription_id_python">
+<a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Subscription Id{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="url_python">

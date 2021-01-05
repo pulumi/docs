@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.P2sVpnServerConfiguratio
 P2SVpnServerConfiguration Resource.
 Latest API Version: 2019-07-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3832,6 +3831,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>OpenVPN</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:P2sVpnServerConfiguration p2sVpnServerConfiguration1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWans/virtualWan1/p2sVpnServerConfigurations//p2sVpnServerConfiguration1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

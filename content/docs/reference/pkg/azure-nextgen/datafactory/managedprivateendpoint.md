@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.datafactory.ManagedPrivateEndpoi
 Managed private endpoint resource type.
 Latest API Version: 2018-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1204,6 +1203,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The ARM resource ID of the resource to which the managed private endpoint is created{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:datafactory/latest:ManagedPrivateEndpoint exampleManagedPrivateEndpointName /subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.DataFactory/factories/exampleFactoryName/managedVirtualNetworks/exampleManagedVirtualNetworkName/managedPrivateEndpoints/exampleManagedPrivateEndpointName 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

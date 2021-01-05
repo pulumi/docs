@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.logic.IntegrationAccountAgreemen
 The integration account agreement.
 Latest API Version: 2019-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -9977,7 +9976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupcontrolnumberlowerbound_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -9986,7 +9985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupcontrolnumberupperbound_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -9995,7 +9994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchangecontrolnumberlowerbound_csharp" style="color: inherit; text-decoration: inherit;">Interchange<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The interchange control number lower bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -10004,7 +10003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchangecontrolnumberupperbound_csharp" style="color: inherit; text-decoration: inherit;">Interchange<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The interchange control number upper bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -10058,7 +10057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transactionsetcontrolnumberlowerbound_csharp" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -10067,7 +10066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transactionsetcontrolnumberupperbound_csharp" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10352,7 +10351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupcontrolnumberlowerbound_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -10361,7 +10360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupcontrolnumberupperbound_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -10370,7 +10369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchangecontrolnumberlowerbound_go" style="color: inherit; text-decoration: inherit;">Interchange<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The interchange control number lower bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -10379,7 +10378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchangecontrolnumberupperbound_go" style="color: inherit; text-decoration: inherit;">Interchange<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The interchange control number upper bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -10433,7 +10432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transactionsetcontrolnumberlowerbound_go" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -10442,7 +10441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transactionsetcontrolnumberupperbound_go" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11102,7 +11101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">group_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -11111,7 +11110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">group_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -11120,7 +11119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchange_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The interchange control number lower bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -11129,7 +11128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchange_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The interchange control number upper bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -11183,7 +11182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transaction_set_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -11192,7 +11191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transaction_set_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11479,7 +11478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupcontrolnumberlowerbound_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -11488,7 +11487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupcontrolnumberupperbound_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -11497,7 +11496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchangecontrolnumberlowerbound_csharp" style="color: inherit; text-decoration: inherit;">Interchange<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The interchange control number lower bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -11506,7 +11505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchangecontrolnumberupperbound_csharp" style="color: inherit; text-decoration: inherit;">Interchange<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The interchange control number upper bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -11560,7 +11559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transactionsetcontrolnumberlowerbound_csharp" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -11569,7 +11568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transactionsetcontrolnumberupperbound_csharp" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11854,7 +11853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupcontrolnumberlowerbound_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -11863,7 +11862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupcontrolnumberupperbound_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -11872,7 +11871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchangecontrolnumberlowerbound_go" style="color: inherit; text-decoration: inherit;">Interchange<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The interchange control number lower bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -11881,7 +11880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchangecontrolnumberupperbound_go" style="color: inherit; text-decoration: inherit;">Interchange<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The interchange control number upper bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -11935,7 +11934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transactionsetcontrolnumberlowerbound_go" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -11944,7 +11943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transactionsetcontrolnumberupperbound_go" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12604,7 +12603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">group_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -12613,7 +12612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">group_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -12622,7 +12621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchange_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The interchange control number lower bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -12631,7 +12630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchange_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The interchange control number upper bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -12685,7 +12684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transaction_set_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd>
     <dt class="property-required"
@@ -12694,7 +12693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transaction_set_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -27106,6 +27105,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The value indicating whether to Whether to validate XSD types.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:logic/latest:IntegrationAccountAgreement <IntegrationAccountAgreementName> /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testResourceGroup/providers/Microsoft.Logic/integrationAccounts/IntegrationAccount4533/agreements/<IntegrationAccountAgreementName> 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

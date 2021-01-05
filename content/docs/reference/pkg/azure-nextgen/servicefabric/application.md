@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.servicefabric.Application resour
 The application resource.
 Latest API Version: 2020-03-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -102,16 +101,16 @@ func main() {
 		_, err := servicefabric.NewApplication(ctx, "application", &servicefabric.ApplicationArgs{
 			ApplicationName: pulumi.String("myApp"),
 			ClusterName:     pulumi.String("myCluster"),
-			MaximumNodes:    pulumi.Int(3),
+			MaximumNodes:    pulumi.Float64(3),
 			Metrics: servicefabric.ApplicationMetricDescriptionArray{
 				&servicefabric.ApplicationMetricDescriptionArgs{
-					MaximumCapacity:          pulumi.Int(3),
+					MaximumCapacity:          pulumi.Float64(3),
 					Name:                     pulumi.String("metric1"),
-					ReservationCapacity:      pulumi.Int(1),
-					TotalApplicationCapacity: pulumi.Int(5),
+					ReservationCapacity:      pulumi.Float64(1),
+					TotalApplicationCapacity: pulumi.Float64(5),
 				},
 			},
-			MinimumNodes: pulumi.Int(1),
+			MinimumNodes: pulumi.Float64(1),
 			Parameters: pulumi.StringMap{
 				"param1": pulumi.String("value1"),
 			},
@@ -363,7 +362,7 @@ const application = new azure_nextgen.servicefabric.latest.Application("applicat
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Application</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationUserAssignedIdentityArgs]]</span> = None<span class="p">, </span><span class="nx">maximum_nodes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">metrics</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationMetricDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">minimum_nodes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">remove_application_capacity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[ApplicationUpgradePolicyArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Application</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationUserAssignedIdentityArgs]]</span> = None<span class="p">, </span><span class="nx">maximum_nodes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">metrics</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationMetricDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">minimum_nodes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">remove_application_capacity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[ApplicationUpgradePolicyArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -594,7 +593,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#maximumnodes_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. By default, the value of this property is zero and it means that the services can be placed on any node.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -612,7 +611,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#minimumnodes_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The minimum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. If this property is set to zero, no capacity will be reserved. The value of this property cannot be more than the value of the MaximumNodes property.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -735,7 +734,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#maximumnodes_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. By default, the value of this property is zero and it means that the services can be placed on any node.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -753,7 +752,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#minimumnodes_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The minimum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. If this property is set to zero, no capacity will be reserved. The value of this property cannot be more than the value of the MaximumNodes property.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1017,7 +1016,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#maximum_nodes_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. By default, the value of this property is zero and it means that the services can be placed on any node.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1035,7 +1034,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#minimum_nodes_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The minimum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. If this property is set to zero, no capacity will be reserved. The value of this property cannot be more than the value of the MaximumNodes property.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1327,7 +1326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maximumcapacity_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The maximum node capacity for Service Fabric application.
 This is the maximum Load for an instance of this application on a single node. Even if the capacity of node is greater than this value, Service Fabric will limit the total load of services within the application on each node to this value.
@@ -1350,7 +1349,7 @@ When updating existing application with application capacity, the product of Max
 <a href="#reservationcapacity_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The node reservation capacity for Service Fabric application.
 This is the amount of load which is reserved on nodes which have instances of this application.
@@ -1364,7 +1363,7 @@ When setting application capacity or when updating application capacity; this va
 <a href="#totalapplicationcapacity_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Application<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The total metric capacity for Service Fabric application.
 This is the total metric capacity for this application in the cluster. Service Fabric will try to limit the sum of loads of services within the application to this value.
@@ -1382,7 +1381,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#maximumcapacity_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The maximum node capacity for Service Fabric application.
 This is the maximum Load for an instance of this application on a single node. Even if the capacity of node is greater than this value, Service Fabric will limit the total load of services within the application on each node to this value.
@@ -1405,7 +1404,7 @@ When updating existing application with application capacity, the product of Max
 <a href="#reservationcapacity_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The node reservation capacity for Service Fabric application.
 This is the amount of load which is reserved on nodes which have instances of this application.
@@ -1419,7 +1418,7 @@ When setting application capacity or when updating application capacity; this va
 <a href="#totalapplicationcapacity_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Application<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The total metric capacity for Service Fabric application.
 This is the total metric capacity for this application in the cluster. Service Fabric will try to limit the sum of loads of services within the application to this value.
@@ -1492,7 +1491,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#maximum_capacity_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum node capacity for Service Fabric application.
 This is the maximum Load for an instance of this application on a single node. Even if the capacity of node is greater than this value, Service Fabric will limit the total load of services within the application on each node to this value.
@@ -1515,7 +1514,7 @@ When updating existing application with application capacity, the product of Max
 <a href="#reservation_capacity_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The node reservation capacity for Service Fabric application.
 This is the amount of load which is reserved on nodes which have instances of this application.
@@ -1529,7 +1528,7 @@ When setting application capacity or when updating application capacity; this va
 <a href="#total_application_capacity_python" style="color: inherit; text-decoration: inherit;">total_<wbr>application_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The total metric capacity for Service Fabric application.
 This is the total metric capacity for this application in the cluster. Service Fabric will try to limit the sum of loads of services within the application to this value.
@@ -1549,7 +1548,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#maximumcapacity_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The maximum node capacity for Service Fabric application.
 This is the maximum Load for an instance of this application on a single node. Even if the capacity of node is greater than this value, Service Fabric will limit the total load of services within the application on each node to this value.
@@ -1572,7 +1571,7 @@ When updating existing application with application capacity, the product of Max
 <a href="#reservationcapacity_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The node reservation capacity for Service Fabric application.
 This is the amount of load which is reserved on nodes which have instances of this application.
@@ -1586,7 +1585,7 @@ When setting application capacity or when updating application capacity; this va
 <a href="#totalapplicationcapacity_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Application<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The total metric capacity for Service Fabric application.
 This is the total metric capacity for this application in the cluster. Service Fabric will try to limit the sum of loads of services within the application to this value.
@@ -1604,7 +1603,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#maximumcapacity_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The maximum node capacity for Service Fabric application.
 This is the maximum Load for an instance of this application on a single node. Even if the capacity of node is greater than this value, Service Fabric will limit the total load of services within the application on each node to this value.
@@ -1627,7 +1626,7 @@ When updating existing application with application capacity, the product of Max
 <a href="#reservationcapacity_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The node reservation capacity for Service Fabric application.
 This is the amount of load which is reserved on nodes which have instances of this application.
@@ -1641,7 +1640,7 @@ When setting application capacity or when updating application capacity; this va
 <a href="#totalapplicationcapacity_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Application<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The total metric capacity for Service Fabric application.
 This is the total metric capacity for this application in the cluster. Service Fabric will try to limit the sum of loads of services within the application to this value.
@@ -1714,7 +1713,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#maximum_capacity_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum node capacity for Service Fabric application.
 This is the maximum Load for an instance of this application on a single node. Even if the capacity of node is greater than this value, Service Fabric will limit the total load of services within the application on each node to this value.
@@ -1737,7 +1736,7 @@ When updating existing application with application capacity, the product of Max
 <a href="#reservation_capacity_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The node reservation capacity for Service Fabric application.
 This is the amount of load which is reserved on nodes which have instances of this application.
@@ -1751,7 +1750,7 @@ When setting application capacity or when updating application capacity; this va
 <a href="#total_application_capacity_python" style="color: inherit; text-decoration: inherit;">total_<wbr>application_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The total metric capacity for Service Fabric application.
 This is the total metric capacity for this application in the cluster. Service Fabric will try to limit the sum of loads of services within the application to this value.
@@ -4051,6 +4050,16 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:servicefabric/latest:Application myCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applications/myApp 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

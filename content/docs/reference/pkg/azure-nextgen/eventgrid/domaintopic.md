@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.eventgrid.DomainTopic resource w
 Domain Topic.
 Latest API Version: 2020-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -591,6 +590,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:eventgrid/latest:DomainTopic exampledomaintopic1 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/domains/exampledomain1/topics/exampledomaintopic1 
+```
 
 
 

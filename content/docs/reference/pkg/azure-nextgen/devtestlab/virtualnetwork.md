@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.devtestlab.VirtualNetwork resour
 A virtual network.
 Latest API Version: 2018-09-15.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2156,6 +2155,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Allow</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:devtestlab/latest:VirtualNetwork {virtualnetwork-name} /subscriptions/{subscription-id}/resourcegroups/myResourceGroup/providers/microsoft.devtestlab/labs/{devtestlab-name}/virtualnetworks/{virtualnetwork-name} 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

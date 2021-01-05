@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.databox.Job resource with exampl
 Job Resource.
 Latest API Version: 2020-11-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3311,7 +3310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bytesprocessed_csharp" style="color: inherit; text-decoration: inherit;">Bytes<wbr>Processed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}To indicate bytes transferred.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3329,7 +3328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#directorieserroredout_csharp" style="color: inherit; text-decoration: inherit;">Directories<wbr>Errored<wbr>Out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}To indicate directories errored out in the job.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3338,7 +3337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileserroredout_csharp" style="color: inherit; text-decoration: inherit;">Files<wbr>Errored<wbr>Out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of files which could not be copied{{% /md %}}</dd>
     <dt class="property-required"
@@ -3347,7 +3346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filesprocessed_csharp" style="color: inherit; text-decoration: inherit;">Files<wbr>Processed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of files processed{{% /md %}}</dd>
     <dt class="property-required"
@@ -3356,7 +3355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#invaliddirectoriesprocessed_csharp" style="color: inherit; text-decoration: inherit;">Invalid<wbr>Directories<wbr>Processed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}To indicate directories renamed{{% /md %}}</dd>
     <dt class="property-required"
@@ -3365,7 +3364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#invalidfilebytesuploaded_csharp" style="color: inherit; text-decoration: inherit;">Invalid<wbr>File<wbr>Bytes<wbr>Uploaded</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Total amount of data not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd>
     <dt class="property-required"
@@ -3374,7 +3373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#invalidfilesprocessed_csharp" style="color: inherit; text-decoration: inherit;">Invalid<wbr>Files<wbr>Processed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of files not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd>
     <dt class="property-required"
@@ -3393,7 +3392,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#renamedcontainercount_csharp" style="color: inherit; text-decoration: inherit;">Renamed<wbr>Container<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of folders not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd>
     <dt class="property-required"
@@ -3411,7 +3410,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#totalbytestoprocess_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Bytes<wbr>To<wbr>Process</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Total amount of data to be processed by the job.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3420,7 +3419,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#totalfilestoprocess_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Files<wbr>To<wbr>Process</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Total files to process{{% /md %}}</dd>
     <dt class="property-required"
@@ -3453,7 +3452,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#bytesprocessed_go" style="color: inherit; text-decoration: inherit;">Bytes<wbr>Processed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}To indicate bytes transferred.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3471,7 +3470,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#directorieserroredout_go" style="color: inherit; text-decoration: inherit;">Directories<wbr>Errored<wbr>Out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}To indicate directories errored out in the job.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3480,7 +3479,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#fileserroredout_go" style="color: inherit; text-decoration: inherit;">Files<wbr>Errored<wbr>Out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of files which could not be copied{{% /md %}}</dd>
     <dt class="property-required"
@@ -3489,7 +3488,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#filesprocessed_go" style="color: inherit; text-decoration: inherit;">Files<wbr>Processed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of files processed{{% /md %}}</dd>
     <dt class="property-required"
@@ -3498,7 +3497,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#invaliddirectoriesprocessed_go" style="color: inherit; text-decoration: inherit;">Invalid<wbr>Directories<wbr>Processed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}To indicate directories renamed{{% /md %}}</dd>
     <dt class="property-required"
@@ -3507,7 +3506,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#invalidfilebytesuploaded_go" style="color: inherit; text-decoration: inherit;">Invalid<wbr>File<wbr>Bytes<wbr>Uploaded</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Total amount of data not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd>
     <dt class="property-required"
@@ -3516,7 +3515,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#invalidfilesprocessed_go" style="color: inherit; text-decoration: inherit;">Invalid<wbr>Files<wbr>Processed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of files not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd>
     <dt class="property-required"
@@ -3535,7 +3534,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#renamedcontainercount_go" style="color: inherit; text-decoration: inherit;">Renamed<wbr>Container<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of folders not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd>
     <dt class="property-required"
@@ -3553,7 +3552,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#totalbytestoprocess_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Bytes<wbr>To<wbr>Process</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Total amount of data to be processed by the job.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3562,7 +3561,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#totalfilestoprocess_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Files<wbr>To<wbr>Process</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Total files to process{{% /md %}}</dd>
     <dt class="property-required"
@@ -3737,7 +3736,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#bytes_processed_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>processed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}To indicate bytes transferred.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3755,7 +3754,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#directories_errored_out_python" style="color: inherit; text-decoration: inherit;">directories_<wbr>errored_<wbr>out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}To indicate directories errored out in the job.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3764,7 +3763,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#files_errored_out_python" style="color: inherit; text-decoration: inherit;">files_<wbr>errored_<wbr>out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of files which could not be copied{{% /md %}}</dd>
     <dt class="property-required"
@@ -3773,7 +3772,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#files_processed_python" style="color: inherit; text-decoration: inherit;">files_<wbr>processed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of files processed{{% /md %}}</dd>
     <dt class="property-required"
@@ -3782,7 +3781,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#invalid_directories_processed_python" style="color: inherit; text-decoration: inherit;">invalid_<wbr>directories_<wbr>processed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}To indicate directories renamed{{% /md %}}</dd>
     <dt class="property-required"
@@ -3791,7 +3790,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#invalid_file_bytes_uploaded_python" style="color: inherit; text-decoration: inherit;">invalid_<wbr>file_<wbr>bytes_<wbr>uploaded</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Total amount of data not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd>
     <dt class="property-required"
@@ -3800,7 +3799,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#invalid_files_processed_python" style="color: inherit; text-decoration: inherit;">invalid_<wbr>files_<wbr>processed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of files not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd>
     <dt class="property-required"
@@ -3819,7 +3818,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#renamed_container_count_python" style="color: inherit; text-decoration: inherit;">renamed_<wbr>container_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of folders not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd>
     <dt class="property-required"
@@ -3837,7 +3836,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#total_bytes_to_process_python" style="color: inherit; text-decoration: inherit;">total_<wbr>bytes_<wbr>to_<wbr>process</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Total amount of data to be processed by the job.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3846,7 +3845,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#total_files_to_process_python" style="color: inherit; text-decoration: inherit;">total_<wbr>files_<wbr>to_<wbr>process</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Total files to process{{% /md %}}</dd>
     <dt class="property-required"
@@ -4178,7 +4177,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#bytescopied_csharp" style="color: inherit; text-decoration: inherit;">Bytes<wbr>Copied</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Bytes copied during the copy of disk.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4220,7 +4219,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#bytescopied_go" style="color: inherit; text-decoration: inherit;">Bytes<wbr>Copied</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Bytes copied during the copy of disk.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4304,7 +4303,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#bytes_copied_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>copied</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Bytes copied during the copy of disk.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4378,6 +4377,15 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyencryptionkey_csharp">
+<a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyencryptionkey">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Key<wbr>Encryption<wbr>Key<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="passkey_csharp">
@@ -4458,6 +4466,15 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="keyencryptionkey_go">
+<a href="#keyencryptionkey_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyencryptionkey">Key<wbr>Encryption<wbr>Key</a></span>
+    </dt>
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="passkey_go">
 <a href="#passkey_go" style="color: inherit; text-decoration: inherit;">Passkey</a>
 </span>
@@ -4534,6 +4551,15 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyencryptionkey_nodejs">
+<a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyencryptionkey">Key<wbr>Encryption<wbr>Key</a></span>
+    </dt>
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="passkey_nodejs">
@@ -4614,6 +4640,15 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="key_encryption_key_python">
+<a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyencryptionkey">Key<wbr>Encryption<wbr>Key<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="passkey_python">
 <a href="#passkey_python" style="color: inherit; text-decoration: inherit;">passkey</a>
 </span>
@@ -4680,7 +4715,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#copylogdetails_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Log<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}List of copy log details.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4719,15 +4754,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type"><a href="#jobstagesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Job<wbr>Stages<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="keyencryptionkey_csharp">
-<a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkeyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="returnpackage_csharp">
@@ -4773,6 +4799,15 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyencryptionkey_csharp">
+<a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyencryptionkeyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="passkey_csharp">
@@ -4880,15 +4915,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="keyencryptionkey_go">
-<a href="#keyencryptionkey_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="returnpackage_go">
 <a href="#returnpackage_go" style="color: inherit; text-decoration: inherit;">Return<wbr>Package</a>
 </span>
@@ -4932,6 +4958,15 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyencryptionkey_go">
+<a href="#keyencryptionkey_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="passkey_go">
@@ -5039,15 +5074,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="keyencryptionkey_nodejs">
-<a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="returnpackage_nodejs">
 <a href="#returnpackage_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Package</a>
 </span>
@@ -5091,6 +5117,15 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyencryptionkey_nodejs">
+<a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="passkey_nodejs">
@@ -5198,15 +5233,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="key_encryption_key_python">
-<a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="return_package_python">
 <a href="#return_package_python" style="color: inherit; text-decoration: inherit;">return_<wbr>package</a>
 </span>
@@ -5250,6 +5276,15 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_encryption_key_python">
+<a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="passkey_python">
@@ -5475,6 +5510,15 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="keyencryptionkey_csharp">
+<a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyencryptionkey">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Key<wbr>Encryption<wbr>Key<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="preferences_csharp">
 <a href="#preferences_csharp" style="color: inherit; text-decoration: inherit;">Preferences</a>
 </span>
@@ -5542,6 +5586,15 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyencryptionkey_go">
+<a href="#keyencryptionkey_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyencryptionkey">Key<wbr>Encryption<wbr>Key</a></span>
+    </dt>
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="preferences_go">
@@ -5613,6 +5666,15 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="keyencryptionkey_nodejs">
+<a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyencryptionkey">Key<wbr>Encryption<wbr>Key</a></span>
+    </dt>
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="preferences_nodejs">
 <a href="#preferences_nodejs" style="color: inherit; text-decoration: inherit;">preferences</a>
 </span>
@@ -5682,6 +5744,15 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="key_encryption_key_python">
+<a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyencryptionkey">Key<wbr>Encryption<wbr>Key<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="preferences_python">
 <a href="#preferences_python" style="color: inherit; text-decoration: inherit;">preferences</a>
 </span>
@@ -5730,7 +5801,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#copylogdetails_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Log<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}List of copy log details.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5760,15 +5831,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type"><a href="#jobstagesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Job<wbr>Stages<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="keyencryptionkey_csharp">
-<a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkeyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="returnpackage_csharp">
@@ -5823,6 +5885,15 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyencryptionkey_csharp">
+<a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyencryptionkeyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="preferences_csharp">
@@ -5903,15 +5974,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="keyencryptionkey_go">
-<a href="#keyencryptionkey_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="returnpackage_go">
 <a href="#returnpackage_go" style="color: inherit; text-decoration: inherit;">Return<wbr>Package</a>
 </span>
@@ -5964,6 +6026,15 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyencryptionkey_go">
+<a href="#keyencryptionkey_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="preferences_go">
@@ -6044,15 +6115,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="keyencryptionkey_nodejs">
-<a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="returnpackage_nodejs">
 <a href="#returnpackage_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Package</a>
 </span>
@@ -6105,6 +6167,15 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyencryptionkey_nodejs">
+<a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="preferences_nodejs">
@@ -6185,15 +6256,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="key_encryption_key_python">
-<a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="return_package_python">
 <a href="#return_package_python" style="color: inherit; text-decoration: inherit;">return_<wbr>package</a>
 </span>
@@ -6246,6 +6308,15 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_encryption_key_python">
+<a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="preferences_python">
@@ -6319,6 +6390,15 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="keyencryptionkey_csharp">
+<a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyencryptionkey">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Key<wbr>Encryption<wbr>Key<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="preferences_csharp">
 <a href="#preferences_csharp" style="color: inherit; text-decoration: inherit;">Preferences</a>
 </span>
@@ -6386,6 +6466,15 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyencryptionkey_go">
+<a href="#keyencryptionkey_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyencryptionkey">Key<wbr>Encryption<wbr>Key</a></span>
+    </dt>
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="preferences_go">
@@ -6457,6 +6546,15 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="keyencryptionkey_nodejs">
+<a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyencryptionkey">Key<wbr>Encryption<wbr>Key</a></span>
+    </dt>
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="preferences_nodejs">
 <a href="#preferences_nodejs" style="color: inherit; text-decoration: inherit;">preferences</a>
 </span>
@@ -6526,6 +6624,15 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="key_encryption_key_python">
+<a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyencryptionkey">Key<wbr>Encryption<wbr>Key<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="preferences_python">
 <a href="#preferences_python" style="color: inherit; text-decoration: inherit;">preferences</a>
 </span>
@@ -6574,7 +6681,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 <a href="#copylogdetails_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Log<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}List of copy log details.{{% /md %}}</dd>
     <dt class="property-required"
@@ -6604,15 +6711,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type"><a href="#jobstagesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Job<wbr>Stages<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="keyencryptionkey_csharp">
-<a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkeyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="returnpackage_csharp">
@@ -6667,6 +6765,15 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyencryptionkey_csharp">
+<a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyencryptionkeyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="preferences_csharp">
@@ -6747,15 +6854,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="keyencryptionkey_go">
-<a href="#keyencryptionkey_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="returnpackage_go">
 <a href="#returnpackage_go" style="color: inherit; text-decoration: inherit;">Return<wbr>Package</a>
 </span>
@@ -6808,6 +6906,15 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyencryptionkey_go">
+<a href="#keyencryptionkey_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="preferences_go">
@@ -6888,15 +6995,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="keyencryptionkey_nodejs">
-<a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="returnpackage_nodejs">
 <a href="#returnpackage_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Package</a>
 </span>
@@ -6949,6 +7047,15 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyencryptionkey_nodejs">
+<a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="preferences_nodejs">
@@ -7029,15 +7136,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="key_encryption_key_python">
-<a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="return_package_python">
 <a href="#return_package_python" style="color: inherit; text-decoration: inherit;">return_<wbr>package</a>
 </span>
@@ -7090,6 +7188,15 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_encryption_key_python">
+<a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="preferences_python">
@@ -7899,6 +8006,104 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
+<h4 id="identityproperties">Identity<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Managed service identity type.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassigned_csharp">
+<a href="#userassigned_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userassignedproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}User assigned identity properties.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Managed service identity type.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassigned_go">
+<a href="#userassigned_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userassignedproperties">User<wbr>Assigned<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}User assigned identity properties.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Managed service identity type.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassigned_nodejs">
+<a href="#userassigned_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userassignedproperties">User<wbr>Assigned<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}User assigned identity properties.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Managed service identity type.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_python">
+<a href="#user_assigned_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userassignedproperties">User<wbr>Assigned<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}User assigned identity properties.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="identitypropertiesresponse">Identity<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
@@ -8362,6 +8567,214 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time for the job stage in UTC ISO 8601 format.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="kektype">Kek<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Microsoft<wbr>Managed</dt>
+    <dd>MicrosoftManaged{{% md %}}Key encryption key is managed by Microsoft.{{% /md %}}</dd>
+    <dt>Customer<wbr>Managed</dt>
+    <dd>CustomerManaged{{% md %}}Key encryption key is managed by the Customer.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Kek<wbr>Type<wbr>Microsoft<wbr>Managed</dt>
+    <dd>MicrosoftManaged{{% md %}}Key encryption key is managed by Microsoft.{{% /md %}}</dd>
+    <dt>Kek<wbr>Type<wbr>Customer<wbr>Managed</dt>
+    <dd>CustomerManaged{{% md %}}Key encryption key is managed by the Customer.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Microsoft<wbr>Managed</dt>
+    <dd>MicrosoftManaged{{% md %}}Key encryption key is managed by Microsoft.{{% /md %}}</dd>
+    <dt>Customer<wbr>Managed</dt>
+    <dd>CustomerManaged{{% md %}}Key encryption key is managed by the Customer.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>MICROSOFT_MANAGED</dt>
+    <dd>MicrosoftManaged{{% md %}}Key encryption key is managed by Microsoft.{{% /md %}}</dd>
+    <dt>CUSTOMER_MANAGED</dt>
+    <dd>CustomerManaged{{% md %}}Key encryption key is managed by the Customer.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="keyencryptionkey">Key<wbr>Encryption<wbr>Key</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="kektype_csharp">
+<a href="#kektype_csharp" style="color: inherit; text-decoration: inherit;">Kek<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#kektype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Kek<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of encryption key used for key encryption.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="identityproperties_csharp">
+<a href="#identityproperties_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identityproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Identity<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Managed identity properties used for key encryption.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kekurl_csharp">
+<a href="#kekurl_csharp" style="color: inherit; text-decoration: inherit;">Kek<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Key encryption key. It is required in case of Customer managed KekType.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kekvaultresourceid_csharp">
+<a href="#kekvaultresourceid_csharp" style="color: inherit; text-decoration: inherit;">Kek<wbr>Vault<wbr>Resource<wbr>ID</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Kek vault resource id. It is required in case of Customer managed KekType.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="kektype_go">
+<a href="#kektype_go" style="color: inherit; text-decoration: inherit;">Kek<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#kektype">Kek<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of encryption key used for key encryption.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="identityproperties_go">
+<a href="#identityproperties_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}Managed identity properties used for key encryption.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kekurl_go">
+<a href="#kekurl_go" style="color: inherit; text-decoration: inherit;">Kek<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Key encryption key. It is required in case of Customer managed KekType.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kekvaultresourceid_go">
+<a href="#kekvaultresourceid_go" style="color: inherit; text-decoration: inherit;">Kek<wbr>Vault<wbr>Resource<wbr>ID</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Kek vault resource id. It is required in case of Customer managed KekType.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="kektype_nodejs">
+<a href="#kektype_nodejs" style="color: inherit; text-decoration: inherit;">kek<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#kektype">Kek<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of encryption key used for key encryption.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="identityproperties_nodejs">
+<a href="#identityproperties_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}Managed identity properties used for key encryption.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kekurl_nodejs">
+<a href="#kekurl_nodejs" style="color: inherit; text-decoration: inherit;">kek<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Key encryption key. It is required in case of Customer managed KekType.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kekvaultresourceid_nodejs">
+<a href="#kekvaultresourceid_nodejs" style="color: inherit; text-decoration: inherit;">kek<wbr>Vault<wbr>Resource<wbr>ID</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Kek vault resource id. It is required in case of Customer managed KekType.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="kek_type_python">
+<a href="#kek_type_python" style="color: inherit; text-decoration: inherit;">kek_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#kektype">Kek<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of encryption key used for key encryption.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="identity_properties_python">
+<a href="#identity_properties_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Managed identity properties used for key encryption.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kek_url_python">
+<a href="#kek_url_python" style="color: inherit; text-decoration: inherit;">kek_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Key encryption key. It is required in case of Customer managed KekType.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kek_vault_resource_id_python">
+<a href="#kek_vault_resource_id_python" style="color: inherit; text-decoration: inherit;">kek_<wbr>vault_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Kek vault resource id. It is required in case of Customer managed KekType.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -12519,6 +12932,68 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
+<h4 id="userassignedproperties">User<wbr>Assigned<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_csharp">
+<a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Arm resource id for user assigned identity to be used to fetch MSI token.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_go">
+<a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Arm resource id for user assigned identity to be used to fetch MSI token.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_nodejs">
+<a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Arm resource id for user assigned identity to be used to fetch MSI token.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_id_python">
+<a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Arm resource id for user assigned identity to be used to fetch MSI token.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="userassignedpropertiesresponse">User<wbr>Assigned<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
@@ -12580,6 +13055,16 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dd>{{% md %}}Arm resource id for user assigned identity to be used to fetch MSI token.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:databox/latest:Job SdkJob5337 /subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/SdkRg7552/providers/Microsoft.DataBox/jobs/SdkJob5337 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

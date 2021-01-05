@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.storagesync.StorageSyncService r
 Storage Sync Service object.
 Latest API Version: 2020-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1333,6 +1332,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:storagesync/latest:StorageSyncService SampleStorageSyncService_1 /subscriptions/3a048283-338f-4002-a9dd-a50fdadcb392/resourceGroups/SampleResourceGroup_1/providers/Microsoft.StorageSync/storageSyncServices/SampleStorageSyncService_1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

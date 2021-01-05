@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.security.Assessment resource wit
 Security assessment on a resource
 Latest API Version: 2020-01-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3258,6 +3257,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>High</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:security/latest:Assessment 8bb8be0a-6010-4789-812f-e4d661c4ed0e /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Compute/virtualMachineScaleSets/vmss1/providers/Microsoft.Security/assessments/8bb8be0a-6010-4789-812f-e4d661c4ed0e 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

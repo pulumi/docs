@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.ApiSchema resource
 Schema Contract details.
 Latest API Version: 2019-12-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1035,6 +1034,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:apimanagement/latest:ApiSchema ec12520d-9d48-4e7b-8f39-698ca2ac63f1 /subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/59d6bb8f1f7fab13dc67ec9b/schemas/ec12520d-9d48-4e7b-8f39-698ca2ac63f1 
+```
 
 
 

@@ -14,7 +14,6 @@ The cluster resource
 
 Latest API Version: 2020-03-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -7973,6 +7972,16 @@ The check is performed after every upgrade domain upgrade completion to make sur
     <dd>{{% md %}}The collection of parameters in the section.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:servicefabric/latest:Cluster myCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

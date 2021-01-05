@@ -886,7 +886,7 @@ The following output properties are available:
 <a href="#contentsize_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The content size.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -937,7 +937,7 @@ The following output properties are available:
 <a href="#contentsize_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The content size.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1039,7 +1039,7 @@ The following output properties are available:
 <a href="#content_size_python" style="color: inherit; text-decoration: inherit;">content_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The content size.{{% /md %}}</dd>
     <dt class="property-optional"

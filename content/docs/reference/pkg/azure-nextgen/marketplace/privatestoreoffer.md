@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.marketplace.PrivateStoreOffer re
 The privateStore offer data structure.
 Latest API Version: 2020-01-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1239,6 +1238,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Plan accessibility{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:marketplace/latest:PrivateStoreOffer marketplacetestthirdparty.md-test-third-party-2 /providers/Microsoft.Marketplace/privateStores/a0e28e55-90c4-41d8-8e34-bb7ef7775406/offers/marketplacetestthirdparty.md-test-third-party-2 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

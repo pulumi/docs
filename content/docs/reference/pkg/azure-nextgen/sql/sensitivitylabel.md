@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.sql.SensitivityLabel resource wi
 
 A sensitivity label.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1054,6 +1053,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Critical</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:sql/v20200801preview:SensitivityLabel current /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myRG/providers/Microsoft.Sql/servers/myServer/databases/myDatabase/schemas/dbo/tables/myTable/columns/myColumn/sensitivityLabels/current 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

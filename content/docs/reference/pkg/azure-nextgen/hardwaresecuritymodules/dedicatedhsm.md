@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.hardwaresecuritymodules.Dedicate
 
 Resource information with extended details.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1454,6 +1453,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}SKU of the dedicated HSM{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:hardwaresecuritymodules/v20181031preview:DedicatedHsm hsm1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/hsm-group/providers/Microsoft.HardwareSecurityModules/dedicatedHSMs/hsm1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

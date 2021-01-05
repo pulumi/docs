@@ -242,7 +242,7 @@ The following output properties are available:
 <a href="#sizeinbytes_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Size of the topic, in bytes.{{% /md %}}</dd>
     <dt class="property-"
@@ -419,7 +419,7 @@ The following output properties are available:
 <a href="#sizeinbytes_go" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Size of the topic, in bytes.{{% /md %}}</dd>
     <dt class="property-"
@@ -773,7 +773,7 @@ The following output properties are available:
 <a href="#size_in_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Size of the topic, in bytes.{{% /md %}}</dd>
     <dt class="property-"
@@ -918,7 +918,7 @@ The following output properties are available:
 <a href="#activemessagecount_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Message<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of active messages in the queue, topic, or subscription.{{% /md %}}</dd>
     <dt class="property-required"
@@ -927,7 +927,7 @@ The following output properties are available:
 <a href="#deadlettermessagecount_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Message<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of messages that are dead lettered.{{% /md %}}</dd>
     <dt class="property-required"
@@ -936,7 +936,7 @@ The following output properties are available:
 <a href="#scheduledmessagecount_csharp" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Message<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of scheduled messages.{{% /md %}}</dd>
     <dt class="property-required"
@@ -945,7 +945,7 @@ The following output properties are available:
 <a href="#transferdeadlettermessagecount_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Dead<wbr>Letter<wbr>Message<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of messages transferred into dead letters.{{% /md %}}</dd>
     <dt class="property-required"
@@ -954,7 +954,7 @@ The following output properties are available:
 <a href="#transfermessagecount_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Message<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of messages transferred to another queue, topic, or subscription.{{% /md %}}</dd>
 </dl>
@@ -969,7 +969,7 @@ The following output properties are available:
 <a href="#activemessagecount_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Message<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of active messages in the queue, topic, or subscription.{{% /md %}}</dd>
     <dt class="property-required"
@@ -978,7 +978,7 @@ The following output properties are available:
 <a href="#deadlettermessagecount_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Message<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of messages that are dead lettered.{{% /md %}}</dd>
     <dt class="property-required"
@@ -987,7 +987,7 @@ The following output properties are available:
 <a href="#scheduledmessagecount_go" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Message<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of scheduled messages.{{% /md %}}</dd>
     <dt class="property-required"
@@ -996,7 +996,7 @@ The following output properties are available:
 <a href="#transferdeadlettermessagecount_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Dead<wbr>Letter<wbr>Message<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of messages transferred into dead letters.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1005,7 +1005,7 @@ The following output properties are available:
 <a href="#transfermessagecount_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Message<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of messages transferred to another queue, topic, or subscription.{{% /md %}}</dd>
 </dl>
@@ -1071,7 +1071,7 @@ The following output properties are available:
 <a href="#active_message_count_python" style="color: inherit; text-decoration: inherit;">active_<wbr>message_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of active messages in the queue, topic, or subscription.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1080,7 +1080,7 @@ The following output properties are available:
 <a href="#dead_letter_message_count_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>message_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of messages that are dead lettered.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1089,7 +1089,7 @@ The following output properties are available:
 <a href="#scheduled_message_count_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>message_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of scheduled messages.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1098,7 +1098,7 @@ The following output properties are available:
 <a href="#transfer_dead_letter_message_count_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>dead_<wbr>letter_<wbr>message_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of messages transferred into dead letters.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1107,7 +1107,7 @@ The following output properties are available:
 <a href="#transfer_message_count_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>message_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of messages transferred to another queue, topic, or subscription.{{% /md %}}</dd>
 </dl>

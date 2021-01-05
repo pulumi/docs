@@ -3120,7 +3120,7 @@ The following output properties are available:
 <a href="#capacityinbytes_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3216,7 +3216,7 @@ The following output properties are available:
 <a href="#capacityinbytes_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3408,7 +3408,7 @@ The following output properties are available:
 <a href="#capacity_in_bytes_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
     <dt class="property-required"

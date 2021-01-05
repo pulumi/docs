@@ -341,7 +341,7 @@ The following output properties are available:
 <a href="#outputsnaptime_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Snap<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The initial timestamp that the live output will start at, any content before this value will not be archived.{{% /md %}}</dd>
 </dl>
@@ -464,7 +464,7 @@ The following output properties are available:
 <a href="#outputsnaptime_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Snap<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The initial timestamp that the live output will start at, any content before this value will not be archived.{{% /md %}}</dd>
 </dl>
@@ -710,7 +710,7 @@ The following output properties are available:
 <a href="#output_snap_time_python" style="color: inherit; text-decoration: inherit;">output_<wbr>snap_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The initial timestamp that the live output will start at, any content before this value will not be archived.{{% /md %}}</dd>
 </dl>

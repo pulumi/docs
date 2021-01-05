@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.peering.RegisteredPrefix resourc
 The customer's prefix that is registered by the peering service provider.
 Latest API Version: 2020-10-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -739,6 +738,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:peering/latest:RegisteredPrefix registeredPrefixName /subscriptions/subId/resourceGroups/rgName/providers/Microsoft.Peering/peerings/peeringName/registeredPrefixes/registeredPrefixName 
+```
 
 
 

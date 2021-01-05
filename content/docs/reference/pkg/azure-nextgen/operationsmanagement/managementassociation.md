@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.operationsmanagement.ManagementA
 
 The container for solution.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -853,6 +852,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The applicationId of the appliance for this association.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:operationsmanagement/v20151101preview:ManagementAssociation managementAssociation1 /subscriptions/subid/resourcegroups/rg1/providers/Microsoft.OperationalInsights/workspaces/ws1/Microsoft.OperationsManagement/ManagementAssociations/managementAssociation1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

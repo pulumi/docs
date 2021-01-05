@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.migrate.Solution resource with e
 
 Solution REST Resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1781,6 +1780,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Gets or sets the tool being used in the solution.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:migrate/v20180901preview:Solution dbsolution /subscriptions/75dd7e42-4fd1-4512-af04-83ad9864335b/resourceGroups/myResourceGroup/providers/Microsoft.Migrate/MigrateProjects/project01/Solutions/dbsolution 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.dbforpostgresql.VirtualNetworkRu
 A virtual network rule.
 Latest API Version: 2017-12-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -671,6 +670,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:dbforpostgresql/latest:VirtualNetworkRule vnet-firewall-rule /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.DBforPostgreSQL/servers/vnet-test-svr/virtualNetworkRules/vnet-firewall-rule 
+```
 
 
 

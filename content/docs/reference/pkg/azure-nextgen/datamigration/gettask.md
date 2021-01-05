@@ -1729,7 +1729,7 @@ The following output properties are available:
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Agent<wbr>Job<wbr>Level<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Login<wbr>Level<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Task<wbr>Level<wbr>Response<wbr>Args&gt;&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3175,7 +3175,7 @@ The following output properties are available:
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Agent<wbr>Job<wbr>Level<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Login<wbr>Level<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Task<wbr>Level<wbr>Response<wbr>Args&gt;&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -6284,7 +6284,7 @@ The following output properties are available:
 <a href="#itemscompletedcount_csharp" style="color: inherit; text-decoration: inherit;">Items<wbr>Completed<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of successfully completed items{{% /md %}}</dd>
     <dt class="property-required"
@@ -6293,7 +6293,7 @@ The following output properties are available:
 <a href="#itemscount_csharp" style="color: inherit; text-decoration: inherit;">Items<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of items{{% /md %}}</dd>
     <dt class="property-required"
@@ -6371,7 +6371,7 @@ The following output properties are available:
 <a href="#itemscompletedcount_go" style="color: inherit; text-decoration: inherit;">Items<wbr>Completed<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of successfully completed items{{% /md %}}</dd>
     <dt class="property-required"
@@ -6380,7 +6380,7 @@ The following output properties are available:
 <a href="#itemscount_go" style="color: inherit; text-decoration: inherit;">Items<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of items{{% /md %}}</dd>
     <dt class="property-required"
@@ -6545,7 +6545,7 @@ The following output properties are available:
 <a href="#items_completed_count_python" style="color: inherit; text-decoration: inherit;">items_<wbr>completed_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of successfully completed items{{% /md %}}</dd>
     <dt class="property-required"
@@ -6554,7 +6554,7 @@ The following output properties are available:
 <a href="#items_count_python" style="color: inherit; text-decoration: inherit;">items_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of items{{% /md %}}</dd>
     <dt class="property-required"
@@ -7241,7 +7241,7 @@ The following output properties are available:
 <a href="#itemscompletedcount_csharp" style="color: inherit; text-decoration: inherit;">Items<wbr>Completed<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of successfully completed items{{% /md %}}</dd>
     <dt class="property-required"
@@ -7250,7 +7250,7 @@ The following output properties are available:
 <a href="#itemscount_csharp" style="color: inherit; text-decoration: inherit;">Items<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of items{{% /md %}}</dd>
     <dt class="property-required"
@@ -7337,7 +7337,7 @@ The following output properties are available:
 <a href="#itemscompletedcount_go" style="color: inherit; text-decoration: inherit;">Items<wbr>Completed<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of successfully completed items{{% /md %}}</dd>
     <dt class="property-required"
@@ -7346,7 +7346,7 @@ The following output properties are available:
 <a href="#itemscount_go" style="color: inherit; text-decoration: inherit;">Items<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of items{{% /md %}}</dd>
     <dt class="property-required"
@@ -7529,7 +7529,7 @@ The following output properties are available:
 <a href="#items_completed_count_python" style="color: inherit; text-decoration: inherit;">items_<wbr>completed_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of successfully completed items{{% /md %}}</dd>
     <dt class="property-required"
@@ -7538,7 +7538,7 @@ The following output properties are available:
 <a href="#items_count_python" style="color: inherit; text-decoration: inherit;">items_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of items{{% /md %}}</dd>
     <dt class="property-required"
@@ -7735,7 +7735,7 @@ The following output properties are available:
 <a href="#executioncount_csharp" style="color: inherit; text-decoration: inherit;">Execution<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}No. of query executions{{% /md %}}</dd>
     <dt class="property-required"
@@ -7795,7 +7795,7 @@ The following output properties are available:
 <a href="#executioncount_go" style="color: inherit; text-decoration: inherit;">Execution<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}No. of query executions{{% /md %}}</dd>
     <dt class="property-required"
@@ -7915,7 +7915,7 @@ The following output properties are available:
 <a href="#execution_count_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}No. of query executions{{% /md %}}</dd>
     <dt class="property-required"
@@ -10507,7 +10507,7 @@ The following output properties are available:
 <a href="#appliedchanges_csharp" style="color: inherit; text-decoration: inherit;">Applied<wbr>Changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of applied changes{{% /md %}}</dd>
     <dt class="property-required"
@@ -10516,7 +10516,7 @@ The following output properties are available:
 <a href="#cdcdeletecounter_csharp" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Delete<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of cdc deletes{{% /md %}}</dd>
     <dt class="property-required"
@@ -10525,7 +10525,7 @@ The following output properties are available:
 <a href="#cdcinsertcounter_csharp" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Insert<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of cdc inserts{{% /md %}}</dd>
     <dt class="property-required"
@@ -10534,7 +10534,7 @@ The following output properties are available:
 <a href="#cdcupdatecounter_csharp" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Update<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of cdc updates{{% /md %}}</dd>
     <dt class="property-required"
@@ -10561,7 +10561,7 @@ The following output properties are available:
 <a href="#fullloadcompletedtables_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Completed<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of tables completed in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -10570,7 +10570,7 @@ The following output properties are available:
 <a href="#fullloaderroredtables_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Errored<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of tables errored in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -10579,7 +10579,7 @@ The following output properties are available:
 <a href="#fullloadloadingtables_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Loading<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of tables loading in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -10588,7 +10588,7 @@ The following output properties are available:
 <a href="#fullloadqueuedtables_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Queued<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of tables queued in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -10606,7 +10606,7 @@ The following output properties are available:
 <a href="#incomingchanges_csharp" style="color: inherit; text-decoration: inherit;">Incoming<wbr>Changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of incoming changes{{% /md %}}</dd>
     <dt class="property-required"
@@ -10624,7 +10624,7 @@ The following output properties are available:
 <a href="#latency_csharp" style="color: inherit; text-decoration: inherit;">Latency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}CDC apply latency{{% /md %}}</dd>
     <dt class="property-required"
@@ -10657,7 +10657,7 @@ The following output properties are available:
 <a href="#appliedchanges_go" style="color: inherit; text-decoration: inherit;">Applied<wbr>Changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of applied changes{{% /md %}}</dd>
     <dt class="property-required"
@@ -10666,7 +10666,7 @@ The following output properties are available:
 <a href="#cdcdeletecounter_go" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Delete<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of cdc deletes{{% /md %}}</dd>
     <dt class="property-required"
@@ -10675,7 +10675,7 @@ The following output properties are available:
 <a href="#cdcinsertcounter_go" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Insert<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of cdc inserts{{% /md %}}</dd>
     <dt class="property-required"
@@ -10684,7 +10684,7 @@ The following output properties are available:
 <a href="#cdcupdatecounter_go" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Update<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of cdc updates{{% /md %}}</dd>
     <dt class="property-required"
@@ -10711,7 +10711,7 @@ The following output properties are available:
 <a href="#fullloadcompletedtables_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Completed<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of tables completed in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -10720,7 +10720,7 @@ The following output properties are available:
 <a href="#fullloaderroredtables_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Errored<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of tables errored in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -10729,7 +10729,7 @@ The following output properties are available:
 <a href="#fullloadloadingtables_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Loading<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of tables loading in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -10738,7 +10738,7 @@ The following output properties are available:
 <a href="#fullloadqueuedtables_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Queued<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of tables queued in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -10756,7 +10756,7 @@ The following output properties are available:
 <a href="#incomingchanges_go" style="color: inherit; text-decoration: inherit;">Incoming<wbr>Changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of incoming changes{{% /md %}}</dd>
     <dt class="property-required"
@@ -10774,7 +10774,7 @@ The following output properties are available:
 <a href="#latency_go" style="color: inherit; text-decoration: inherit;">Latency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}CDC apply latency{{% /md %}}</dd>
     <dt class="property-required"
@@ -10957,7 +10957,7 @@ The following output properties are available:
 <a href="#applied_changes_python" style="color: inherit; text-decoration: inherit;">applied_<wbr>changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of applied changes{{% /md %}}</dd>
     <dt class="property-required"
@@ -10966,7 +10966,7 @@ The following output properties are available:
 <a href="#cdc_delete_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>delete_<wbr>counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of cdc deletes{{% /md %}}</dd>
     <dt class="property-required"
@@ -10975,7 +10975,7 @@ The following output properties are available:
 <a href="#cdc_insert_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>insert_<wbr>counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of cdc inserts{{% /md %}}</dd>
     <dt class="property-required"
@@ -10984,7 +10984,7 @@ The following output properties are available:
 <a href="#cdc_update_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>update_<wbr>counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of cdc updates{{% /md %}}</dd>
     <dt class="property-required"
@@ -11011,7 +11011,7 @@ The following output properties are available:
 <a href="#full_load_completed_tables_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>completed_<wbr>tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of tables completed in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -11020,7 +11020,7 @@ The following output properties are available:
 <a href="#full_load_errored_tables_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>errored_<wbr>tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of tables errored in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -11029,7 +11029,7 @@ The following output properties are available:
 <a href="#full_load_loading_tables_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>loading_<wbr>tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of tables loading in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -11038,7 +11038,7 @@ The following output properties are available:
 <a href="#full_load_queued_tables_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>queued_<wbr>tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of tables queued in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -11056,7 +11056,7 @@ The following output properties are available:
 <a href="#incoming_changes_python" style="color: inherit; text-decoration: inherit;">incoming_<wbr>changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of incoming changes{{% /md %}}</dd>
     <dt class="property-required"
@@ -11074,7 +11074,7 @@ The following output properties are available:
 <a href="#latency_python" style="color: inherit; text-decoration: inherit;">latency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}CDC apply latency{{% /md %}}</dd>
     <dt class="property-required"
@@ -11527,7 +11527,7 @@ The following output properties are available:
 <a href="#dataerrorscounter_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Errors<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of data errors occurred{{% /md %}}</dd>
     <dt class="property-required"
@@ -11572,7 +11572,7 @@ The following output properties are available:
 <a href="#fullloadtotalrows_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Total<wbr>Rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of rows applied in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -11617,7 +11617,7 @@ The following output properties are available:
 <a href="#totalchangesapplied_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Changes<wbr>Applied</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Total number of applied changes{{% /md %}}</dd>
 </dl>
@@ -11659,7 +11659,7 @@ The following output properties are available:
 <a href="#dataerrorscounter_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Errors<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of data errors occurred{{% /md %}}</dd>
     <dt class="property-required"
@@ -11704,7 +11704,7 @@ The following output properties are available:
 <a href="#fullloadtotalrows_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Total<wbr>Rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of rows applied in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -11749,7 +11749,7 @@ The following output properties are available:
 <a href="#totalchangesapplied_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Changes<wbr>Applied</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Total number of applied changes{{% /md %}}</dd>
 </dl>
@@ -11923,7 +11923,7 @@ The following output properties are available:
 <a href="#data_errors_counter_python" style="color: inherit; text-decoration: inherit;">data_<wbr>errors_<wbr>counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of data errors occurred{{% /md %}}</dd>
     <dt class="property-required"
@@ -11968,7 +11968,7 @@ The following output properties are available:
 <a href="#full_load_total_rows_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>total_<wbr>rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of rows applied in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -12013,7 +12013,7 @@ The following output properties are available:
 <a href="#total_changes_applied_python" style="color: inherit; text-decoration: inherit;">total_<wbr>changes_<wbr>applied</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Total number of applied changes{{% /md %}}</dd>
 </dl>
@@ -12053,7 +12053,7 @@ The following output properties are available:
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Error<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Error<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response<wbr>Args&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -12735,7 +12735,7 @@ The following output properties are available:
 <a href="#appliedchanges_csharp" style="color: inherit; text-decoration: inherit;">Applied<wbr>Changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of applied changes{{% /md %}}</dd>
     <dt class="property-required"
@@ -12744,7 +12744,7 @@ The following output properties are available:
 <a href="#cdcdeletecounter_csharp" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Delete<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of cdc deletes{{% /md %}}</dd>
     <dt class="property-required"
@@ -12753,7 +12753,7 @@ The following output properties are available:
 <a href="#cdcinsertcounter_csharp" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Insert<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of cdc inserts{{% /md %}}</dd>
     <dt class="property-required"
@@ -12762,7 +12762,7 @@ The following output properties are available:
 <a href="#cdcupdatecounter_csharp" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Update<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of cdc updates{{% /md %}}</dd>
     <dt class="property-required"
@@ -12789,7 +12789,7 @@ The following output properties are available:
 <a href="#fullloadcompletedtables_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Completed<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of tables completed in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -12798,7 +12798,7 @@ The following output properties are available:
 <a href="#fullloaderroredtables_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Errored<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of tables errored in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -12807,7 +12807,7 @@ The following output properties are available:
 <a href="#fullloadloadingtables_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Loading<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of tables loading in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -12816,7 +12816,7 @@ The following output properties are available:
 <a href="#fullloadqueuedtables_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Queued<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of tables queued in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -12834,7 +12834,7 @@ The following output properties are available:
 <a href="#incomingchanges_csharp" style="color: inherit; text-decoration: inherit;">Incoming<wbr>Changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of incoming changes{{% /md %}}</dd>
     <dt class="property-required"
@@ -12852,7 +12852,7 @@ The following output properties are available:
 <a href="#latency_csharp" style="color: inherit; text-decoration: inherit;">Latency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}CDC apply latency{{% /md %}}</dd>
     <dt class="property-required"
@@ -12885,7 +12885,7 @@ The following output properties are available:
 <a href="#appliedchanges_go" style="color: inherit; text-decoration: inherit;">Applied<wbr>Changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of applied changes{{% /md %}}</dd>
     <dt class="property-required"
@@ -12894,7 +12894,7 @@ The following output properties are available:
 <a href="#cdcdeletecounter_go" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Delete<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of cdc deletes{{% /md %}}</dd>
     <dt class="property-required"
@@ -12903,7 +12903,7 @@ The following output properties are available:
 <a href="#cdcinsertcounter_go" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Insert<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of cdc inserts{{% /md %}}</dd>
     <dt class="property-required"
@@ -12912,7 +12912,7 @@ The following output properties are available:
 <a href="#cdcupdatecounter_go" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Update<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of cdc updates{{% /md %}}</dd>
     <dt class="property-required"
@@ -12939,7 +12939,7 @@ The following output properties are available:
 <a href="#fullloadcompletedtables_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Completed<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of tables completed in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -12948,7 +12948,7 @@ The following output properties are available:
 <a href="#fullloaderroredtables_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Errored<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of tables errored in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -12957,7 +12957,7 @@ The following output properties are available:
 <a href="#fullloadloadingtables_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Loading<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of tables loading in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -12966,7 +12966,7 @@ The following output properties are available:
 <a href="#fullloadqueuedtables_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Queued<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of tables queued in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -12984,7 +12984,7 @@ The following output properties are available:
 <a href="#incomingchanges_go" style="color: inherit; text-decoration: inherit;">Incoming<wbr>Changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of incoming changes{{% /md %}}</dd>
     <dt class="property-required"
@@ -13002,7 +13002,7 @@ The following output properties are available:
 <a href="#latency_go" style="color: inherit; text-decoration: inherit;">Latency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}CDC apply latency{{% /md %}}</dd>
     <dt class="property-required"
@@ -13185,7 +13185,7 @@ The following output properties are available:
 <a href="#applied_changes_python" style="color: inherit; text-decoration: inherit;">applied_<wbr>changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of applied changes{{% /md %}}</dd>
     <dt class="property-required"
@@ -13194,7 +13194,7 @@ The following output properties are available:
 <a href="#cdc_delete_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>delete_<wbr>counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of cdc deletes{{% /md %}}</dd>
     <dt class="property-required"
@@ -13203,7 +13203,7 @@ The following output properties are available:
 <a href="#cdc_insert_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>insert_<wbr>counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of cdc inserts{{% /md %}}</dd>
     <dt class="property-required"
@@ -13212,7 +13212,7 @@ The following output properties are available:
 <a href="#cdc_update_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>update_<wbr>counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of cdc updates{{% /md %}}</dd>
     <dt class="property-required"
@@ -13239,7 +13239,7 @@ The following output properties are available:
 <a href="#full_load_completed_tables_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>completed_<wbr>tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of tables completed in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -13248,7 +13248,7 @@ The following output properties are available:
 <a href="#full_load_errored_tables_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>errored_<wbr>tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of tables errored in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -13257,7 +13257,7 @@ The following output properties are available:
 <a href="#full_load_loading_tables_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>loading_<wbr>tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of tables loading in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -13266,7 +13266,7 @@ The following output properties are available:
 <a href="#full_load_queued_tables_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>queued_<wbr>tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of tables queued in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -13284,7 +13284,7 @@ The following output properties are available:
 <a href="#incoming_changes_python" style="color: inherit; text-decoration: inherit;">incoming_<wbr>changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of incoming changes{{% /md %}}</dd>
     <dt class="property-required"
@@ -13302,7 +13302,7 @@ The following output properties are available:
 <a href="#latency_python" style="color: inherit; text-decoration: inherit;">latency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}CDC apply latency{{% /md %}}</dd>
     <dt class="property-required"
@@ -13728,7 +13728,7 @@ The following output properties are available:
 <a href="#cdcdeletecounter_csharp" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Delete<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of applied deletes{{% /md %}}</dd>
     <dt class="property-required"
@@ -13737,7 +13737,7 @@ The following output properties are available:
 <a href="#cdcinsertcounter_csharp" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Insert<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of applied inserts{{% /md %}}</dd>
     <dt class="property-required"
@@ -13746,7 +13746,7 @@ The following output properties are available:
 <a href="#cdcupdatecounter_csharp" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Update<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of applied updates{{% /md %}}</dd>
     <dt class="property-required"
@@ -13755,7 +13755,7 @@ The following output properties are available:
 <a href="#dataerrorscounter_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Errors<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of data errors occurred{{% /md %}}</dd>
     <dt class="property-required"
@@ -13800,7 +13800,7 @@ The following output properties are available:
 <a href="#fullloadtotalrows_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Total<wbr>Rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of rows applied in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -13845,7 +13845,7 @@ The following output properties are available:
 <a href="#totalchangesapplied_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Changes<wbr>Applied</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Total number of applied changes{{% /md %}}</dd>
 </dl>
@@ -13860,7 +13860,7 @@ The following output properties are available:
 <a href="#cdcdeletecounter_go" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Delete<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of applied deletes{{% /md %}}</dd>
     <dt class="property-required"
@@ -13869,7 +13869,7 @@ The following output properties are available:
 <a href="#cdcinsertcounter_go" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Insert<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of applied inserts{{% /md %}}</dd>
     <dt class="property-required"
@@ -13878,7 +13878,7 @@ The following output properties are available:
 <a href="#cdcupdatecounter_go" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Update<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of applied updates{{% /md %}}</dd>
     <dt class="property-required"
@@ -13887,7 +13887,7 @@ The following output properties are available:
 <a href="#dataerrorscounter_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Errors<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of data errors occurred{{% /md %}}</dd>
     <dt class="property-required"
@@ -13932,7 +13932,7 @@ The following output properties are available:
 <a href="#fullloadtotalrows_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Total<wbr>Rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of rows applied in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -13977,7 +13977,7 @@ The following output properties are available:
 <a href="#totalchangesapplied_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Changes<wbr>Applied</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Total number of applied changes{{% /md %}}</dd>
 </dl>
@@ -14124,7 +14124,7 @@ The following output properties are available:
 <a href="#cdc_delete_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>delete_<wbr>counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of applied deletes{{% /md %}}</dd>
     <dt class="property-required"
@@ -14133,7 +14133,7 @@ The following output properties are available:
 <a href="#cdc_insert_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>insert_<wbr>counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of applied inserts{{% /md %}}</dd>
     <dt class="property-required"
@@ -14142,7 +14142,7 @@ The following output properties are available:
 <a href="#cdc_update_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>update_<wbr>counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of applied updates{{% /md %}}</dd>
     <dt class="property-required"
@@ -14151,7 +14151,7 @@ The following output properties are available:
 <a href="#data_errors_counter_python" style="color: inherit; text-decoration: inherit;">data_<wbr>errors_<wbr>counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of data errors occurred{{% /md %}}</dd>
     <dt class="property-required"
@@ -14196,7 +14196,7 @@ The following output properties are available:
 <a href="#full_load_total_rows_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>total_<wbr>rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of rows applied in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -14241,7 +14241,7 @@ The following output properties are available:
 <a href="#total_changes_applied_python" style="color: inherit; text-decoration: inherit;">total_<wbr>changes_<wbr>applied</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Total number of applied changes{{% /md %}}</dd>
 </dl>
@@ -14281,7 +14281,7 @@ The following output properties are available:
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Error<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Error<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response<wbr>Args&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -15282,7 +15282,7 @@ The following output properties are available:
 <a href="#appliedchanges_csharp" style="color: inherit; text-decoration: inherit;">Applied<wbr>Changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of applied changes{{% /md %}}</dd>
     <dt class="property-required"
@@ -15291,7 +15291,7 @@ The following output properties are available:
 <a href="#cdcdeletecounter_csharp" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Delete<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of cdc deletes{{% /md %}}</dd>
     <dt class="property-required"
@@ -15300,7 +15300,7 @@ The following output properties are available:
 <a href="#cdcinsertcounter_csharp" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Insert<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of cdc inserts{{% /md %}}</dd>
     <dt class="property-required"
@@ -15309,7 +15309,7 @@ The following output properties are available:
 <a href="#cdcupdatecounter_csharp" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Update<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of cdc updates{{% /md %}}</dd>
     <dt class="property-required"
@@ -15336,7 +15336,7 @@ The following output properties are available:
 <a href="#fullloadcompletedtables_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Completed<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of tables completed in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -15345,7 +15345,7 @@ The following output properties are available:
 <a href="#fullloaderroredtables_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Errored<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of tables errored in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -15354,7 +15354,7 @@ The following output properties are available:
 <a href="#fullloadloadingtables_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Loading<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of tables loading in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -15363,7 +15363,7 @@ The following output properties are available:
 <a href="#fullloadqueuedtables_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Queued<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of tables queued in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -15381,7 +15381,7 @@ The following output properties are available:
 <a href="#incomingchanges_csharp" style="color: inherit; text-decoration: inherit;">Incoming<wbr>Changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of incoming changes{{% /md %}}</dd>
     <dt class="property-required"
@@ -15399,7 +15399,7 @@ The following output properties are available:
 <a href="#latency_csharp" style="color: inherit; text-decoration: inherit;">Latency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}CDC apply latency{{% /md %}}</dd>
     <dt class="property-required"
@@ -15432,7 +15432,7 @@ The following output properties are available:
 <a href="#appliedchanges_go" style="color: inherit; text-decoration: inherit;">Applied<wbr>Changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of applied changes{{% /md %}}</dd>
     <dt class="property-required"
@@ -15441,7 +15441,7 @@ The following output properties are available:
 <a href="#cdcdeletecounter_go" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Delete<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of cdc deletes{{% /md %}}</dd>
     <dt class="property-required"
@@ -15450,7 +15450,7 @@ The following output properties are available:
 <a href="#cdcinsertcounter_go" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Insert<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of cdc inserts{{% /md %}}</dd>
     <dt class="property-required"
@@ -15459,7 +15459,7 @@ The following output properties are available:
 <a href="#cdcupdatecounter_go" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Update<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of cdc updates{{% /md %}}</dd>
     <dt class="property-required"
@@ -15486,7 +15486,7 @@ The following output properties are available:
 <a href="#fullloadcompletedtables_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Completed<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of tables completed in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -15495,7 +15495,7 @@ The following output properties are available:
 <a href="#fullloaderroredtables_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Errored<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of tables errored in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -15504,7 +15504,7 @@ The following output properties are available:
 <a href="#fullloadloadingtables_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Loading<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of tables loading in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -15513,7 +15513,7 @@ The following output properties are available:
 <a href="#fullloadqueuedtables_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Queued<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of tables queued in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -15531,7 +15531,7 @@ The following output properties are available:
 <a href="#incomingchanges_go" style="color: inherit; text-decoration: inherit;">Incoming<wbr>Changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of incoming changes{{% /md %}}</dd>
     <dt class="property-required"
@@ -15549,7 +15549,7 @@ The following output properties are available:
 <a href="#latency_go" style="color: inherit; text-decoration: inherit;">Latency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}CDC apply latency{{% /md %}}</dd>
     <dt class="property-required"
@@ -15732,7 +15732,7 @@ The following output properties are available:
 <a href="#applied_changes_python" style="color: inherit; text-decoration: inherit;">applied_<wbr>changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of applied changes{{% /md %}}</dd>
     <dt class="property-required"
@@ -15741,7 +15741,7 @@ The following output properties are available:
 <a href="#cdc_delete_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>delete_<wbr>counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of cdc deletes{{% /md %}}</dd>
     <dt class="property-required"
@@ -15750,7 +15750,7 @@ The following output properties are available:
 <a href="#cdc_insert_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>insert_<wbr>counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of cdc inserts{{% /md %}}</dd>
     <dt class="property-required"
@@ -15759,7 +15759,7 @@ The following output properties are available:
 <a href="#cdc_update_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>update_<wbr>counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of cdc updates{{% /md %}}</dd>
     <dt class="property-required"
@@ -15786,7 +15786,7 @@ The following output properties are available:
 <a href="#full_load_completed_tables_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>completed_<wbr>tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of tables completed in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -15795,7 +15795,7 @@ The following output properties are available:
 <a href="#full_load_errored_tables_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>errored_<wbr>tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of tables errored in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -15804,7 +15804,7 @@ The following output properties are available:
 <a href="#full_load_loading_tables_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>loading_<wbr>tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of tables loading in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -15813,7 +15813,7 @@ The following output properties are available:
 <a href="#full_load_queued_tables_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>queued_<wbr>tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of tables queued in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -15831,7 +15831,7 @@ The following output properties are available:
 <a href="#incoming_changes_python" style="color: inherit; text-decoration: inherit;">incoming_<wbr>changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of incoming changes{{% /md %}}</dd>
     <dt class="property-required"
@@ -15849,7 +15849,7 @@ The following output properties are available:
 <a href="#latency_python" style="color: inherit; text-decoration: inherit;">latency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}CDC apply latency{{% /md %}}</dd>
     <dt class="property-required"
@@ -16311,7 +16311,7 @@ The following output properties are available:
 <a href="#cdcdeletecounter_csharp" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Delete<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of applied deletes{{% /md %}}</dd>
     <dt class="property-required"
@@ -16320,7 +16320,7 @@ The following output properties are available:
 <a href="#cdcinsertcounter_csharp" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Insert<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of applied inserts{{% /md %}}</dd>
     <dt class="property-required"
@@ -16329,7 +16329,7 @@ The following output properties are available:
 <a href="#cdcupdatecounter_csharp" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Update<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of applied updates{{% /md %}}</dd>
     <dt class="property-required"
@@ -16338,7 +16338,7 @@ The following output properties are available:
 <a href="#dataerrorscounter_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Errors<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of data errors occurred{{% /md %}}</dd>
     <dt class="property-required"
@@ -16383,7 +16383,7 @@ The following output properties are available:
 <a href="#fullloadtotalrows_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Total<wbr>Rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of rows applied in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -16428,7 +16428,7 @@ The following output properties are available:
 <a href="#totalchangesapplied_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Changes<wbr>Applied</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Total number of applied changes{{% /md %}}</dd>
 </dl>
@@ -16443,7 +16443,7 @@ The following output properties are available:
 <a href="#cdcdeletecounter_go" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Delete<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of applied deletes{{% /md %}}</dd>
     <dt class="property-required"
@@ -16452,7 +16452,7 @@ The following output properties are available:
 <a href="#cdcinsertcounter_go" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Insert<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of applied inserts{{% /md %}}</dd>
     <dt class="property-required"
@@ -16461,7 +16461,7 @@ The following output properties are available:
 <a href="#cdcupdatecounter_go" style="color: inherit; text-decoration: inherit;">Cdc<wbr>Update<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of applied updates{{% /md %}}</dd>
     <dt class="property-required"
@@ -16470,7 +16470,7 @@ The following output properties are available:
 <a href="#dataerrorscounter_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Errors<wbr>Counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of data errors occurred{{% /md %}}</dd>
     <dt class="property-required"
@@ -16515,7 +16515,7 @@ The following output properties are available:
 <a href="#fullloadtotalrows_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>Total<wbr>Rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of rows applied in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -16560,7 +16560,7 @@ The following output properties are available:
 <a href="#totalchangesapplied_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Changes<wbr>Applied</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Total number of applied changes{{% /md %}}</dd>
 </dl>
@@ -16707,7 +16707,7 @@ The following output properties are available:
 <a href="#cdc_delete_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>delete_<wbr>counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of applied deletes{{% /md %}}</dd>
     <dt class="property-required"
@@ -16716,7 +16716,7 @@ The following output properties are available:
 <a href="#cdc_insert_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>insert_<wbr>counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of applied inserts{{% /md %}}</dd>
     <dt class="property-required"
@@ -16725,7 +16725,7 @@ The following output properties are available:
 <a href="#cdc_update_counter_python" style="color: inherit; text-decoration: inherit;">cdc_<wbr>update_<wbr>counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of applied updates{{% /md %}}</dd>
     <dt class="property-required"
@@ -16734,7 +16734,7 @@ The following output properties are available:
 <a href="#data_errors_counter_python" style="color: inherit; text-decoration: inherit;">data_<wbr>errors_<wbr>counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of data errors occurred{{% /md %}}</dd>
     <dt class="property-required"
@@ -16779,7 +16779,7 @@ The following output properties are available:
 <a href="#full_load_total_rows_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>total_<wbr>rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of rows applied in full load{{% /md %}}</dd>
     <dt class="property-required"
@@ -16824,7 +16824,7 @@ The following output properties are available:
 <a href="#total_changes_applied_python" style="color: inherit; text-decoration: inherit;">total_<wbr>changes_<wbr>applied</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Total number of applied changes{{% /md %}}</dd>
 </dl>
@@ -16864,7 +16864,7 @@ The following output properties are available:
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Error<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Error<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response<wbr>Args&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -17258,7 +17258,7 @@ The following output properties are available:
 <a href="#errorcount_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of database/object errors.{{% /md %}}</dd>
     <dt class="property-required"
@@ -17303,7 +17303,7 @@ The following output properties are available:
 <a href="#numberofobjects_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Objects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of objects{{% /md %}}</dd>
     <dt class="property-required"
@@ -17312,7 +17312,7 @@ The following output properties are available:
 <a href="#numberofobjectscompleted_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Objects<wbr>Completed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of successfully completed objects{{% /md %}}</dd>
     <dt class="property-required"
@@ -17399,7 +17399,7 @@ The following output properties are available:
 <a href="#errorcount_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of database/object errors.{{% /md %}}</dd>
     <dt class="property-required"
@@ -17444,7 +17444,7 @@ The following output properties are available:
 <a href="#numberofobjects_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Objects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of objects{{% /md %}}</dd>
     <dt class="property-required"
@@ -17453,7 +17453,7 @@ The following output properties are available:
 <a href="#numberofobjectscompleted_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Objects<wbr>Completed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of successfully completed objects{{% /md %}}</dd>
     <dt class="property-required"
@@ -17681,7 +17681,7 @@ The following output properties are available:
 <a href="#error_count_python" style="color: inherit; text-decoration: inherit;">error_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of database/object errors.{{% /md %}}</dd>
     <dt class="property-required"
@@ -17726,7 +17726,7 @@ The following output properties are available:
 <a href="#number_of_objects_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>objects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of objects{{% /md %}}</dd>
     <dt class="property-required"
@@ -17735,7 +17735,7 @@ The following output properties are available:
 <a href="#number_of_objects_completed_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>objects_<wbr>completed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of successfully completed objects{{% /md %}}</dd>
     <dt class="property-required"
@@ -18323,7 +18323,7 @@ The following output properties are available:
 <a href="#durationinseconds_csharp" style="color: inherit; text-decoration: inherit;">Duration<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Duration of task execution in seconds.{{% /md %}}</dd>
     <dt class="property-required"
@@ -18464,7 +18464,7 @@ The following output properties are available:
 <a href="#durationinseconds_go" style="color: inherit; text-decoration: inherit;">Duration<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Duration of task execution in seconds.{{% /md %}}</dd>
     <dt class="property-required"
@@ -18746,7 +18746,7 @@ The following output properties are available:
 <a href="#duration_in_seconds_python" style="color: inherit; text-decoration: inherit;">duration_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Duration of task execution in seconds.{{% /md %}}</dd>
     <dt class="property-required"
@@ -18903,7 +18903,7 @@ The following output properties are available:
 <a href="#itemscompletedcount_csharp" style="color: inherit; text-decoration: inherit;">Items<wbr>Completed<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of successfully completed items{{% /md %}}</dd>
     <dt class="property-required"
@@ -18912,7 +18912,7 @@ The following output properties are available:
 <a href="#itemscount_csharp" style="color: inherit; text-decoration: inherit;">Items<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of items{{% /md %}}</dd>
     <dt class="property-required"
@@ -18999,7 +18999,7 @@ The following output properties are available:
 <a href="#itemscompletedcount_go" style="color: inherit; text-decoration: inherit;">Items<wbr>Completed<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of successfully completed items{{% /md %}}</dd>
     <dt class="property-required"
@@ -19008,7 +19008,7 @@ The following output properties are available:
 <a href="#itemscount_go" style="color: inherit; text-decoration: inherit;">Items<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of items{{% /md %}}</dd>
     <dt class="property-required"
@@ -19191,7 +19191,7 @@ The following output properties are available:
 <a href="#items_completed_count_python" style="color: inherit; text-decoration: inherit;">items_<wbr>completed_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of successfully completed items{{% /md %}}</dd>
     <dt class="property-required"
@@ -19200,7 +19200,7 @@ The following output properties are available:
 <a href="#items_count_python" style="color: inherit; text-decoration: inherit;">items_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of items{{% /md %}}</dd>
     <dt class="property-required"
@@ -19460,7 +19460,7 @@ The following output properties are available:
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Validation<wbr>Result<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Error<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Validation<wbr>Result<wbr>Response<wbr>Args&gt;&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -21122,7 +21122,7 @@ The following output properties are available:
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Error<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response<wbr>Args&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -23355,7 +23355,7 @@ The following output properties are available:
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Agent<wbr>Job<wbr>Level<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Error<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Login<wbr>Level<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Migration<wbr>Level<wbr>Response<wbr>Args&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd>
     <dt class="property-required"
@@ -25306,7 +25306,7 @@ The following output properties are available:
 <a href="#statementsinbatch_csharp" style="color: inherit; text-decoration: inherit;">Statements<wbr>In<wbr>Batch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Total no. of statements in the batch{{% /md %}}</dd>
     <dt class="property-required"
@@ -25348,7 +25348,7 @@ The following output properties are available:
 <a href="#statementsinbatch_go" style="color: inherit; text-decoration: inherit;">Statements<wbr>In<wbr>Batch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Total no. of statements in the batch{{% /md %}}</dd>
     <dt class="property-required"
@@ -25432,7 +25432,7 @@ The following output properties are available:
 <a href="#statements_in_batch_python" style="color: inherit; text-decoration: inherit;">statements_<wbr>in_<wbr>batch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Total no. of statements in the batch{{% /md %}}</dd>
     <dt class="property-required"
@@ -25728,7 +25728,7 @@ The following output properties are available:
 <a href="#sourcedatabaseobjectcount_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Database<wbr>Object<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, int&gt;</span>
+        <span class="property-type">Dictionary&lt;string, double&gt;</span>
     </dt>
     <dd>{{% md %}}Count of source database objects{{% /md %}}</dd>
     <dt class="property-optional"
@@ -25737,7 +25737,7 @@ The following output properties are available:
 <a href="#targetdatabaseobjectcount_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Database<wbr>Object<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, int&gt;</span>
+        <span class="property-type">Dictionary&lt;string, double&gt;</span>
     </dt>
     <dd>{{% md %}}Count of target database objects{{% /md %}}</dd>
 </dl>
@@ -25770,7 +25770,7 @@ The following output properties are available:
 <a href="#sourcedatabaseobjectcount_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Database<wbr>Object<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]int</span>
+        <span class="property-type">map[string]float64</span>
     </dt>
     <dd>{{% md %}}Count of source database objects{{% /md %}}</dd>
     <dt class="property-optional"
@@ -25779,7 +25779,7 @@ The following output properties are available:
 <a href="#targetdatabaseobjectcount_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Database<wbr>Object<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]int</span>
+        <span class="property-type">map[string]float64</span>
     </dt>
     <dd>{{% md %}}Count of target database objects{{% /md %}}</dd>
 </dl>
@@ -25854,7 +25854,7 @@ The following output properties are available:
 <a href="#source_database_object_count_python" style="color: inherit; text-decoration: inherit;">source_<wbr>database_<wbr>object_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, int]</span>
+        <span class="property-type">Mapping[str, float]</span>
     </dt>
     <dd>{{% md %}}Count of source database objects{{% /md %}}</dd>
     <dt class="property-optional"
@@ -25863,7 +25863,7 @@ The following output properties are available:
 <a href="#target_database_object_count_python" style="color: inherit; text-decoration: inherit;">target_<wbr>database_<wbr>object_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, int]</span>
+        <span class="property-type">Mapping[str, float]</span>
     </dt>
     <dd>{{% md %}}Count of target database objects{{% /md %}}</dd>
 </dl>
@@ -28726,7 +28726,7 @@ The following output properties are available:
 <a href="#waitcount_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Total no. of waits{{% /md %}}</dd>
     <dt class="property-required"
@@ -28759,7 +28759,7 @@ The following output properties are available:
 <a href="#waitcount_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Total no. of waits{{% /md %}}</dd>
     <dt class="property-required"
@@ -28825,7 +28825,7 @@ The following output properties are available:
 <a href="#wait_count_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Total no. of waits{{% /md %}}</dd>
     <dt class="property-required"

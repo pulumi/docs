@@ -384,7 +384,7 @@ The following output properties are available:
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Outputs.<wbr>Activity<wbr>Timeline<wbr>Item<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Outputs.<wbr>Bookmark<wbr>Timeline<wbr>Item<wbr>Response, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security<wbr>Insights.<wbr>Outputs.<wbr>Security<wbr>Alert<wbr>Timeline<wbr>Item<wbr>Response&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}The timeline result values.{{% /md %}}</dd>
 </dl>

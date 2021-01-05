@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.synapse.SqlPoolsV3 resource with
 
 A sql pool resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1356,6 +1355,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The type of identity that last modified the resource: <User|Application|ManagedIdentity|Key>{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:synapse/v20200401preview:SqlPoolsV3 8b5cfcb4-b074-4130-8060-803771147fc7 /subscriptions/f028e7fd-444a-41a2-a52d-fe8098b4770a/resourceGroups/rg_c76505cf-a02e-4fdf-8368-be830115f1dc/providers/Microsoft.Synapse/workspaces/srv_3a830420-3bdd-4ccc-a95a-9a2ac3cd0a19/sqlPools/8b5cfcb4-b074-4130-8060-803771147fc7 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

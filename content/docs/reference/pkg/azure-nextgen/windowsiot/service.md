@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.windowsiot.Service resource with
 The description of the Windows IoT Device Service.
 Latest API Version: 2019-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -62,7 +61,7 @@ func main() {
 			BillingDomainName: pulumi.String("a.b.c"),
 			DeviceName:        pulumi.String("service4445"),
 			Notes:             pulumi.String("blah"),
-			Quantity:          pulumi.Int(1000000),
+			Quantity:          pulumi.Float64(1000000),
 			ResourceGroupName: pulumi.String("res9101"),
 		})
 		if err != nil {
@@ -125,7 +124,7 @@ const service = new azure_nextgen.windowsiot.latest.Service("service", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">billing_domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">quantity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">billing_domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">quantity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -347,7 +346,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#quantity_csharp" style="color: inherit; text-decoration: inherit;">Quantity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Windows IoT Device Service device allocation,{{% /md %}}</dd>
 </dl>
@@ -407,7 +406,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#quantity_go" style="color: inherit; text-decoration: inherit;">Quantity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Windows IoT Device Service device allocation,{{% /md %}}</dd>
 </dl>
@@ -527,7 +526,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#quantity_python" style="color: inherit; text-decoration: inherit;">quantity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Windows IoT Device Service device allocation,{{% /md %}}</dd>
 </dl>
@@ -819,6 +818,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:windowsiot/latest:Service myresource1 <Azure resource ID> 
+```
 
 
 

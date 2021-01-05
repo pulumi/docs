@@ -265,6 +265,15 @@ The following output properties are available:
     <dd>{{% md %}}The firewall settings for the AS server.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="managedmode_csharp">
+<a href="#managedmode_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The managed mode of the server (0 = not managed, 1 = managed).{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="querypoolconnectionmode_csharp">
 <a href="#querypoolconnectionmode_csharp" style="color: inherit; text-decoration: inherit;">Querypool<wbr>Connection<wbr>Mode</a>
 </span>
@@ -395,6 +404,15 @@ The following output properties are available:
         <span class="property-type"><a href="#ipv4firewallsettingsresponse">IPv4Firewall<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The firewall settings for the AS server.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="managedmode_go">
+<a href="#managedmode_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The managed mode of the server (0 = not managed, 1 = managed).{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="querypoolconnectionmode_go">
@@ -529,6 +547,15 @@ The following output properties are available:
     <dd>{{% md %}}The firewall settings for the AS server.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="managedmode_nodejs">
+<a href="#managedmode_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The managed mode of the server (0 = not managed, 1 = managed).{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="querypoolconnectionmode_nodejs">
 <a href="#querypoolconnectionmode_nodejs" style="color: inherit; text-decoration: inherit;">querypool<wbr>Connection<wbr>Mode</a>
 </span>
@@ -659,6 +686,15 @@ The following output properties are available:
         <span class="property-type"><a href="#ipv4firewallsettingsresponse">IPv4Firewall<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The firewall settings for the AS server.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="managed_mode_python">
+<a href="#managed_mode_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The managed mode of the server (0 = not managed, 1 = managed).{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="querypool_connection_mode_python">

@@ -170,7 +170,7 @@ The following output properties are available:
 <a href="#disksizebytes_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The size of the disk in bytes. This field is read only.{{% /md %}}</dd>
     <dt class="property-"
@@ -287,7 +287,7 @@ The following output properties are available:
 <a href="#diskiopsreadonly_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>IOPSRead<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The total number of IOPS that will be allowed across all VMs mounting the shared disk as ReadOnly. One operation can transfer between 4k and 256k bytes.{{% /md %}}</dd>
     <dt class="property-"
@@ -296,7 +296,7 @@ The following output properties are available:
 <a href="#diskiopsreadwrite_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>IOPSRead<wbr>Write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The number of IOPS allowed for this disk; only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.{{% /md %}}</dd>
     <dt class="property-"
@@ -305,7 +305,7 @@ The following output properties are available:
 <a href="#diskmbpsreadonly_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>MBps<wbr>Read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The total throughput (MBps) that will be allowed across all VMs mounting the shared disk as ReadOnly. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.{{% /md %}}</dd>
     <dt class="property-"
@@ -314,7 +314,7 @@ The following output properties are available:
 <a href="#diskmbpsreadwrite_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>MBps<wbr>Read<wbr>Write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The bandwidth allowed for this disk; only settable for UltraSSD disks. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.{{% /md %}}</dd>
     <dt class="property-"
@@ -437,7 +437,7 @@ The following output properties are available:
 <a href="#disksizebytes_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The size of the disk in bytes. This field is read only.{{% /md %}}</dd>
     <dt class="property-"
@@ -554,7 +554,7 @@ The following output properties are available:
 <a href="#diskiopsreadonly_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>IOPSRead<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The total number of IOPS that will be allowed across all VMs mounting the shared disk as ReadOnly. One operation can transfer between 4k and 256k bytes.{{% /md %}}</dd>
     <dt class="property-"
@@ -563,7 +563,7 @@ The following output properties are available:
 <a href="#diskiopsreadwrite_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>IOPSRead<wbr>Write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The number of IOPS allowed for this disk; only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.{{% /md %}}</dd>
     <dt class="property-"
@@ -572,7 +572,7 @@ The following output properties are available:
 <a href="#diskmbpsreadonly_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>MBps<wbr>Read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The total throughput (MBps) that will be allowed across all VMs mounting the shared disk as ReadOnly. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.{{% /md %}}</dd>
     <dt class="property-"
@@ -581,7 +581,7 @@ The following output properties are available:
 <a href="#diskmbpsreadwrite_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>MBps<wbr>Read<wbr>Write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The bandwidth allowed for this disk; only settable for UltraSSD disks. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.{{% /md %}}</dd>
     <dt class="property-"
@@ -971,7 +971,7 @@ The following output properties are available:
 <a href="#disk_size_bytes_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The size of the disk in bytes. This field is read only.{{% /md %}}</dd>
     <dt class="property-"
@@ -1088,7 +1088,7 @@ The following output properties are available:
 <a href="#disk_iops_read_only_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>iops_<wbr>read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The total number of IOPS that will be allowed across all VMs mounting the shared disk as ReadOnly. One operation can transfer between 4k and 256k bytes.{{% /md %}}</dd>
     <dt class="property-"
@@ -1097,7 +1097,7 @@ The following output properties are available:
 <a href="#disk_iops_read_write_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>iops_<wbr>read_<wbr>write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of IOPS allowed for this disk; only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.{{% /md %}}</dd>
     <dt class="property-"
@@ -1106,7 +1106,7 @@ The following output properties are available:
 <a href="#disk_m_bps_read_only_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>m_<wbr>bps_<wbr>read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The total throughput (MBps) that will be allowed across all VMs mounting the shared disk as ReadOnly. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.{{% /md %}}</dd>
     <dt class="property-"
@@ -1115,7 +1115,7 @@ The following output properties are available:
 <a href="#disk_m_bps_read_write_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>m_<wbr>bps_<wbr>read_<wbr>write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The bandwidth allowed for this disk; only settable for UltraSSD disks. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.{{% /md %}}</dd>
     <dt class="property-"
@@ -1314,7 +1314,7 @@ The following output properties are available:
 <a href="#uploadsizebytes_csharp" style="color: inherit; text-decoration: inherit;">Upload<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd>
 </dl>
@@ -1401,7 +1401,7 @@ The following output properties are available:
 <a href="#uploadsizebytes_go" style="color: inherit; text-decoration: inherit;">Upload<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd>
 </dl>
@@ -1575,7 +1575,7 @@ The following output properties are available:
 <a href="#upload_size_bytes_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>size_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd>
 </dl>

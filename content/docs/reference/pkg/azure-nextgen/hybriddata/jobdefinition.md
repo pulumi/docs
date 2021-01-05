@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.hybriddata.JobDefinition resourc
 Job Definition.
 Latest API Version: 2019-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1836,6 +1835,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Required</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:hybriddata/latest:JobDefinition jobdeffromtestcode1 /subscriptions/6e0219f5-327a-4365-904f-05eed4227ad7/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.HybridData/dataManagers/TestAzureSDKOperations/dataServices/DataTransformation/jobDefinitions/jobdeffromtestcode1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

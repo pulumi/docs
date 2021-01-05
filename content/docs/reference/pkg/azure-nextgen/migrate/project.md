@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.migrate.Project resource with ex
 Azure Migrate Project.
 Latest API Version: 2019-10-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1360,6 +1359,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Inactive</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:migrate/latest:Project abGoyalProject2 /subscriptions/6393a73f-8d55-47ef-b6dd-179b3e0c7910/resourceGroups/abgoyal-westeurope/providers/Microsoft.Migrate/assessmentprojects/abGoyalProject2 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

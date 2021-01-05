@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.cognitiveservices.Account resour
 Cognitive Services Account is an Azure resource representing the provisioned account, its type, location and SKU.
 Latest API Version: 2017-04-18.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -5327,6 +5326,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Gets the state of virtual network rule.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:cognitiveservices/latest:Account testCreate1 /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.CognitiveServices/accounts/testCreate1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

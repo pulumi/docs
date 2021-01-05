@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.servicefabricmesh.SecretValue re
 
 This type describes a value of a secret resource. The name of this resource is the version identifier corresponding to this secret value.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -702,6 +701,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:servicefabricmesh/v20180901preview:SecretValue v1 /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/secrets/dbConnectionString/values/v1 
+```
 
 
 

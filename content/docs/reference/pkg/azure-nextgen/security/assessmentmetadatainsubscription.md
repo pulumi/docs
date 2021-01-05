@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.security.AssessmentMetadataInSub
 Security assessment metadata
 Latest API Version: 2020-01-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1579,6 +1578,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>High</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:security/latest:AssessmentMetadataInSubscription ca039e75-a276-4175-aebc-bcd41e4b14b7 /providers/Microsoft.Security/assessmentMetadata/ca039e75-a276-4175-aebc-bcd41e4b14b7 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

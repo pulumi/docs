@@ -58,7 +58,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Cache. Length of name must be not greater than 80 and chars must be in list of [-0-9a-zA-Z_] char class.{{% /md %}}</dd>
+    <dd>{{% md %}}Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
@@ -76,7 +76,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Storage Target. Length of name must be not greater than 80 and chars must be in list of [-0-9a-zA-Z_] char class.{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the Storage Target. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -91,7 +91,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Cache. Length of name must be not greater than 80 and chars must be in list of [-0-9a-zA-Z_] char class.{{% /md %}}</dd>
+    <dd>{{% md %}}Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
@@ -109,7 +109,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Storage Target. Length of name must be not greater than 80 and chars must be in list of [-0-9a-zA-Z_] char class.{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the Storage Target. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -124,7 +124,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Cache. Length of name must be not greater than 80 and chars must be in list of [-0-9a-zA-Z_] char class.{{% /md %}}</dd>
+    <dd>{{% md %}}Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
@@ -142,7 +142,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Storage Target. Length of name must be not greater than 80 and chars must be in list of [-0-9a-zA-Z_] char class.{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the Storage Target. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -157,7 +157,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of Cache. Length of name must be not greater than 80 and chars must be in list of [-0-9a-zA-Z_] char class.{{% /md %}}</dd>
+    <dd>{{% md %}}Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
@@ -175,7 +175,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Storage Target. Length of name must be not greater than 80 and chars must be in list of [-0-9a-zA-Z_] char class.{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the Storage Target. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -702,6 +702,15 @@ The following output properties are available:
     <dd>{{% md %}}Namespace path on a Cache for a Storage Target.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="nfsaccesspolicy_csharp">
+<a href="#nfsaccesspolicy_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Access<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the access policy applied to this junction.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="nfsexport_csharp">
 <a href="#nfsexport_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Export</a>
 </span>
@@ -733,6 +742,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Namespace path on a Cache for a Storage Target.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nfsaccesspolicy_go">
+<a href="#nfsaccesspolicy_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Access<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the access policy applied to this junction.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="nfsexport_go">
@@ -768,6 +786,15 @@ The following output properties are available:
     <dd>{{% md %}}Namespace path on a Cache for a Storage Target.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="nfsaccesspolicy_nodejs">
+<a href="#nfsaccesspolicy_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Access<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the access policy applied to this junction.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="nfsexport_nodejs">
 <a href="#nfsexport_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Export</a>
 </span>
@@ -799,6 +826,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Namespace path on a Cache for a Storage Target.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nfs_access_policy_python">
+<a href="#nfs_access_policy_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>access_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the access policy applied to this junction.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="nfs_export_python">
@@ -847,7 +883,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifies the primary usage model to be used for this Storage Target. Get choices from .../usageModels{{% /md %}}</dd>
+    <dd>{{% md %}}Identifies the usage model to be used for this Storage Target. Get choices from .../usageModels{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -871,7 +907,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifies the primary usage model to be used for this Storage Target. Get choices from .../usageModels{{% /md %}}</dd>
+    <dd>{{% md %}}Identifies the usage model to be used for this Storage Target. Get choices from .../usageModels{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -895,7 +931,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifies the primary usage model to be used for this Storage Target. Get choices from .../usageModels{{% /md %}}</dd>
+    <dd>{{% md %}}Identifies the usage model to be used for this Storage Target. Get choices from .../usageModels{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -919,7 +955,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Identifies the primary usage model to be used for this Storage Target. Get choices from .../usageModels{{% /md %}}</dd>
+    <dd>{{% md %}}Identifies the usage model to be used for this Storage Target. Get choices from .../usageModels{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

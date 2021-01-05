@@ -213,7 +213,7 @@ The following output properties are available:
 <a href="#primaryprofileinstancecount_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Profile<wbr>Instance<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Instance count of the primary profile.{{% /md %}}</dd>
     <dt class="property-"
@@ -264,7 +264,7 @@ The following output properties are available:
 <a href="#primaryprofileinstancecount_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Profile<wbr>Instance<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Instance count of the primary profile.{{% /md %}}</dd>
     <dt class="property-"
@@ -366,7 +366,7 @@ The following output properties are available:
 <a href="#primary_profile_instance_count_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>profile_<wbr>instance_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Instance count of the primary profile.{{% /md %}}</dd>
     <dt class="property-"
@@ -735,7 +735,7 @@ The following output properties are available:
 <a href="#totalnegatives_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Negatives</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Total negatives in the distribution.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -744,7 +744,7 @@ The following output properties are available:
 <a href="#totalpositives_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Positives</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Total positive in the distribution.{{% /md %}}</dd>
 </dl>
@@ -768,7 +768,7 @@ The following output properties are available:
 <a href="#totalnegatives_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Negatives</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Total negatives in the distribution.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -777,7 +777,7 @@ The following output properties are available:
 <a href="#totalpositives_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Positives</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Total positive in the distribution.{{% /md %}}</dd>
 </dl>
@@ -834,7 +834,7 @@ The following output properties are available:
 <a href="#total_negatives_python" style="color: inherit; text-decoration: inherit;">total_<wbr>negatives</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Total negatives in the distribution.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -843,7 +843,7 @@ The following output properties are available:
 <a href="#total_positives_python" style="color: inherit; text-decoration: inherit;">total_<wbr>positives</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Total positive in the distribution.{{% /md %}}</dd>
 </dl>
@@ -865,7 +865,7 @@ The following output properties are available:
 <a href="#negatives_csharp" style="color: inherit; text-decoration: inherit;">Negatives</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of negatives.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -874,7 +874,7 @@ The following output properties are available:
 <a href="#negativesabovethreshold_csharp" style="color: inherit; text-decoration: inherit;">Negatives<wbr>Above<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of negatives above threshold.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -883,7 +883,7 @@ The following output properties are available:
 <a href="#positives_csharp" style="color: inherit; text-decoration: inherit;">Positives</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of positives.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -892,7 +892,7 @@ The following output properties are available:
 <a href="#positivesabovethreshold_csharp" style="color: inherit; text-decoration: inherit;">Positives<wbr>Above<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of positives above threshold.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -916,7 +916,7 @@ The following output properties are available:
 <a href="#negatives_go" style="color: inherit; text-decoration: inherit;">Negatives</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of negatives.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -925,7 +925,7 @@ The following output properties are available:
 <a href="#negativesabovethreshold_go" style="color: inherit; text-decoration: inherit;">Negatives<wbr>Above<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of negatives above threshold.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -934,7 +934,7 @@ The following output properties are available:
 <a href="#positives_go" style="color: inherit; text-decoration: inherit;">Positives</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of positives.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -943,7 +943,7 @@ The following output properties are available:
 <a href="#positivesabovethreshold_go" style="color: inherit; text-decoration: inherit;">Positives<wbr>Above<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of positives above threshold.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1018,7 +1018,7 @@ The following output properties are available:
 <a href="#negatives_python" style="color: inherit; text-decoration: inherit;">negatives</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of negatives.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1027,7 +1027,7 @@ The following output properties are available:
 <a href="#negatives_above_threshold_python" style="color: inherit; text-decoration: inherit;">negatives_<wbr>above_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of negatives above threshold.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1036,7 +1036,7 @@ The following output properties are available:
 <a href="#positives_python" style="color: inherit; text-decoration: inherit;">positives</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of positives.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1045,7 +1045,7 @@ The following output properties are available:
 <a href="#positives_above_threshold_python" style="color: inherit; text-decoration: inherit;">positives_<wbr>above_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of positives above threshold.{{% /md %}}</dd>
     <dt class="property-optional"

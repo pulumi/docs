@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.kusto.Database resource with exa
 Class representing a Kusto database.
 Latest API Version: 2020-09-18.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -675,6 +674,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>ReadOnlyFollowing</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:kusto/latest:Database KustoClusterRPTest4/KustoDatabase8 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterRPTest4/Databases/KustoDatabase8 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

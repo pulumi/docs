@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.storage.ObjectReplicationPolicy 
 The replication policy between two storage accounts. Multiple rules can be defined in one policy.
 Latest API Version: 2019-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1812,6 +1811,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Rule Id is auto-generated for each new rule on destination account. It is required for put policy on source account.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:storage/latest:ObjectReplicationPolicy 2a20bb73-5717-4635-985a-5d4cf777438f /subscriptions/{subscription-id}/resourceGroups/res7687/providers/Microsoft.Storage/storageAccounts/src1122/objectReplicationPolicies/2a20bb73-5717-4635-985a-5d4cf777438f 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

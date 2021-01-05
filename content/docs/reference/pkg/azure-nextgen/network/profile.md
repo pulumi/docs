@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.Profile resource with ex
 Class representing a Traffic Manager profile.
 Latest API Version: 2018-04-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -70,12 +69,12 @@ func main() {
 		_, err := network.NewProfile(ctx, "profile", &network.ProfileArgs{
 			DnsConfig: &network.DnsConfigArgs{
 				RelativeName: pulumi.String("azsmnet6386"),
-				Ttl:          pulumi.Int(35),
+				Ttl:          pulumi.Float64(35),
 			},
 			Location: pulumi.String("global"),
 			MonitorConfig: &network.MonitorConfigArgs{
 				Path:     pulumi.String("/testpath.aspx"),
-				Port:     pulumi.Int(80),
+				Port:     pulumi.Float64(80),
 				Protocol: pulumi.String("HTTP"),
 			},
 			ProfileName:          pulumi.String("azsmnet6386"),
@@ -248,7 +247,7 @@ func main() {
 		_, err := network.NewProfile(ctx, "profile", &network.ProfileArgs{
 			DnsConfig: &network.DnsConfigArgs{
 				RelativeName: pulumi.String("azuresdkfornetautoresttrafficmanager6192"),
-				Ttl:          pulumi.Int(35),
+				Ttl:          pulumi.Float64(35),
 			},
 			Endpoints: network.EndpointArray{
 				&network.EndpointArgs{
@@ -287,12 +286,12 @@ func main() {
 						Min: pulumi.Int(400),
 					},
 				},
-				IntervalInSeconds:         pulumi.Int(10),
+				IntervalInSeconds:         pulumi.Float64(10),
 				Path:                      pulumi.String("/testpath.aspx"),
-				Port:                      pulumi.Int(80),
+				Port:                      pulumi.Float64(80),
 				Protocol:                  pulumi.String("HTTP"),
-				TimeoutInSeconds:          pulumi.Int(5),
-				ToleratedNumberOfFailures: pulumi.Int(2),
+				TimeoutInSeconds:          pulumi.Float64(5),
+				ToleratedNumberOfFailures: pulumi.Float64(2),
 			},
 			ProfileName:                 pulumi.String("azuresdkfornetautoresttrafficmanager6192"),
 			ProfileStatus:               pulumi.String("Enabled"),
@@ -500,7 +499,7 @@ func main() {
 		_, err := network.NewProfile(ctx, "profile", &network.ProfileArgs{
 			DnsConfig: &network.DnsConfigArgs{
 				RelativeName: pulumi.String("azuresdkfornetautoresttrafficmanager6192"),
-				Ttl:          pulumi.Int(35),
+				Ttl:          pulumi.Float64(35),
 			},
 			Endpoints: network.EndpointArray{
 				&network.EndpointArgs{
@@ -513,12 +512,12 @@ func main() {
 			},
 			Location: pulumi.String("global"),
 			MonitorConfig: &network.MonitorConfigArgs{
-				IntervalInSeconds:         pulumi.Int(10),
+				IntervalInSeconds:         pulumi.Float64(10),
 				Path:                      pulumi.String("/testpath.aspx"),
-				Port:                      pulumi.Int(80),
+				Port:                      pulumi.Float64(80),
 				Protocol:                  pulumi.String("HTTP"),
-				TimeoutInSeconds:          pulumi.Int(5),
-				ToleratedNumberOfFailures: pulumi.Int(2),
+				TimeoutInSeconds:          pulumi.Float64(5),
+				ToleratedNumberOfFailures: pulumi.Float64(2),
 			},
 			ProfileName:          pulumi.String("azuresdkfornetautoresttrafficmanager6192"),
 			ProfileStatus:        pulumi.String("Enabled"),
@@ -621,7 +620,7 @@ const profile = new azure_nextgen.network.latest.Profile("profile", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[DnsConfigArgs]</span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointArgs]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_return</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">monitor_config</span><span class="p">:</span> <span class="nx">Optional[MonitorConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_status</span><span class="p">:</span> <span class="nx">Optional[Union[str, ProfileStatus]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">traffic_routing_method</span><span class="p">:</span> <span class="nx">Optional[Union[str, TrafficRoutingMethod]]</span> = None<span class="p">, </span><span class="nx">traffic_view_enrollment_status</span><span class="p">:</span> <span class="nx">Optional[Union[str, TrafficViewEnrollmentStatus]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[DnsConfigArgs]</span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointArgs]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_return</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">monitor_config</span><span class="p">:</span> <span class="nx">Optional[MonitorConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_status</span><span class="p">:</span> <span class="nx">Optional[Union[str, ProfileStatus]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">traffic_routing_method</span><span class="p">:</span> <span class="nx">Optional[Union[str, TrafficRoutingMethod]]</span> = None<span class="p">, </span><span class="nx">traffic_view_enrollment_status</span><span class="p">:</span> <span class="nx">Optional[Union[str, TrafficViewEnrollmentStatus]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -852,7 +851,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#maxreturn_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Return</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Maximum number of endpoints to be returned for MultiValue routing type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -984,7 +983,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#maxreturn_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Return</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Maximum number of endpoints to be returned for MultiValue routing type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1248,7 +1247,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#max_return_python" style="color: inherit; text-decoration: inherit;">max_<wbr>return</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Maximum number of endpoints to be returned for MultiValue routing type.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1414,7 +1413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.{{% /md %}}</dd>
 </dl>
@@ -1438,7 +1437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.{{% /md %}}</dd>
 </dl>
@@ -1486,7 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.{{% /md %}}</dd>
 </dl>
@@ -1521,7 +1520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.{{% /md %}}</dd>
 </dl>
@@ -1554,7 +1553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.{{% /md %}}</dd>
 </dl>
@@ -1620,7 +1619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.{{% /md %}}</dd>
 </dl>
@@ -1691,7 +1690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minchildendpoints_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Child<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1709,7 +1708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1754,7 +1753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd>
 </dl>
@@ -1823,7 +1822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minchildendpoints_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Child<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1841,7 +1840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1886,7 +1885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd>
 </dl>
@@ -2087,7 +2086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_child_endpoints_python" style="color: inherit; text-decoration: inherit;">min_<wbr>child_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2105,7 +2104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2150,7 +2149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd>
 </dl>
@@ -2755,7 +2754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minchildendpoints_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Child<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2773,7 +2772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2818,7 +2817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd>
 </dl>
@@ -2887,7 +2886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minchildendpoints_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Child<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2905,7 +2904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2950,7 +2949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd>
 </dl>
@@ -3151,7 +3150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_child_endpoints_python" style="color: inherit; text-decoration: inherit;">min_<wbr>child_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3169,7 +3168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3214,7 +3213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd>
 </dl>
@@ -3287,7 +3286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#intervalinseconds_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3305,7 +3304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The TCP port used to probe for endpoint health.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3332,7 +3331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeoutinseconds_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3341,7 +3340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#toleratednumberoffailures_csharp" style="color: inherit; text-decoration: inherit;">Tolerated<wbr>Number<wbr>Of<wbr>Failures</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.{{% /md %}}</dd>
 </dl>
@@ -3374,7 +3373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#intervalinseconds_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3392,7 +3391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The TCP port used to probe for endpoint health.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3419,7 +3418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeoutinseconds_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3428,7 +3427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#toleratednumberoffailures_go" style="color: inherit; text-decoration: inherit;">Tolerated<wbr>Number<wbr>Of<wbr>Failures</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.{{% /md %}}</dd>
 </dl>
@@ -3548,7 +3547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3566,7 +3565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The TCP port used to probe for endpoint health.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3593,7 +3592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeout_in_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3602,7 +3601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tolerated_number_of_failures_python" style="color: inherit; text-decoration: inherit;">tolerated_<wbr>number_<wbr>of_<wbr>failures</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.{{% /md %}}</dd>
 </dl>
@@ -3833,7 +3832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#intervalinseconds_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3851,7 +3850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The TCP port used to probe for endpoint health.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3878,7 +3877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeoutinseconds_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3887,7 +3886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#toleratednumberoffailures_csharp" style="color: inherit; text-decoration: inherit;">Tolerated<wbr>Number<wbr>Of<wbr>Failures</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.{{% /md %}}</dd>
 </dl>
@@ -3920,7 +3919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#intervalinseconds_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3938,7 +3937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The TCP port used to probe for endpoint health.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3965,7 +3964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeoutinseconds_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3974,7 +3973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#toleratednumberoffailures_go" style="color: inherit; text-decoration: inherit;">Tolerated<wbr>Number<wbr>Of<wbr>Failures</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.{{% /md %}}</dd>
 </dl>
@@ -4094,7 +4093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4112,7 +4111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The TCP port used to probe for endpoint health.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4139,7 +4138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeout_in_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4148,7 +4147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tolerated_number_of_failures_python" style="color: inherit; text-decoration: inherit;">tolerated_<wbr>number_<wbr>of_<wbr>failures</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.{{% /md %}}</dd>
 </dl>
@@ -4603,6 +4602,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Disabled</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:Profile azuresdkfornetautoresttrafficmanager6192 /subscriptions/{subscription-id}/resourceGroups/azuresdkfornetautoresttrafficmanager2583/providers/Microsoft.Network/trafficManagerProfiles/azuresdkfornetautoresttrafficmanager6192 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

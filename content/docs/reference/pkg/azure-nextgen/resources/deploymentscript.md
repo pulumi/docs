@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.resources.DeploymentScript resou
 
 Deployment script object.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1749,6 +1748,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Azure Active Directory principal ID associated with this identity.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:resources/v20191001preview:DeploymentScript myresource1 <Azure resource ID> 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

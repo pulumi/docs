@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.datamigration.File resource with
 
 A file resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -840,7 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}File size.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -891,7 +890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}File size.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -993,7 +992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}File size.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1025,6 +1024,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}File content type. This property can be modified to reflect the file content type.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:datamigration/v20180715preview:File x114d023d8 /subscriptions/fc04246f-04c5-437e-ac5e-206a19e7193f/resourceGroups/DmsSdkRg/providers/Microsoft.DataMigration/services/DmsSdkService/projects/DmsSdkProject/files/x114d023d8 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.synapse.BigDataPool resource wit
 
 A Big Data pool
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2116,6 +2115,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>MemoryOptimized</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:synapse/v20190601preview:BigDataPool ExamplePool /subscriptions/01234567-89ab-4def-0123-456789abcdef/resourceGroups/ExampleResourceGroup/providers/Microsoft.Synapse/workspaces/ExampleWorkspace/bigDataPools/ExamplePool 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

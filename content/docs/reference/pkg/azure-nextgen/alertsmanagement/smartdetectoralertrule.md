@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.alertsmanagement.SmartDetectorAl
 The alert rule information
 Latest API Version: 2019-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -186,7 +185,7 @@ const smartDetectorAlertRule = new azure_nextgen.alertsmanagement.latest.SmartDe
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SmartDetectorAlertRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action_groups</span><span class="p">:</span> <span class="nx">Optional[ActionGroupsInformationArgs]</span> = None<span class="p">, </span><span class="nx">alert_rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">detector</span><span class="p">:</span> <span class="nx">Optional[DetectorArgs]</span> = None<span class="p">, </span><span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[Union[str, Severity]]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[Union[str, AlertRuleState]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">throttling</span><span class="p">:</span> <span class="nx">Optional[ThrottlingInformationArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SmartDetectorAlertRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action_groups</span><span class="p">:</span> <span class="nx">Optional[ActionGroupsInformationArgs]</span> = None<span class="p">, </span><span class="nx">alert_rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">detector</span><span class="p">:</span> <span class="nx">Optional[DetectorArgs]</span> = None<span class="p">, </span><span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[Union[str, Severity]]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[Union[str, AlertRuleState]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">throttling</span><span class="p">:</span> <span class="nx">Optional[ThrottlingInformationArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -453,7 +452,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -567,7 +566,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -681,7 +680,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -795,7 +794,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1934,6 +1933,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The required duration (in ISO8601 format) to wait before notifying on the alert rule again. The time granularity must be in minutes and minimum value is 0 minutes{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:alertsmanagement/latest:SmartDetectorAlertRule MyAlertRule /subscriptions/b368ca2f-e298-46b7-b0ab-012281956afa/resourceGroups/MyAlertRules/providers/microsoft.alertsManagement/smartDetectorAlertRules/MyAlertRule 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

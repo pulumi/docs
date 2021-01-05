@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.managednetwork.ManagedNetwork re
 
 The Managed Network resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2325,6 +2324,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:managednetwork/v20190601preview:ManagedNetwork myManagedNetwork /subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

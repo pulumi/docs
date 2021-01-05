@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.timeseriesinsights.EventSource r
 An environment receives data from one or more event sources. Each event source has associated connection info that allows the Time Series Insights ingress pipeline to connect to and pull data from the event source
 Latest API Version: 2020-05-15.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -941,6 +940,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The event property that will be contain the offset information to calculate the local timestamp. When the LocalTimestampFormat is Iana, the property name will contain the name of the column which contains IANA Timezone Name (eg: Americas/Los Angeles). When LocalTimestampFormat is Timespan, it contains the name of property which contains values representing the offset (eg: P1D or 1.00:00:00){{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:timeseriesinsights/latest:EventSource es1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.TimeSeriesInsights/Environments/env1/eventSources/es1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -2952,7 +2952,7 @@ The following output properties are available:
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Specifies the number of virtual machines in the scale set.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2985,7 +2985,7 @@ The following output properties are available:
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Specifies the number of virtual machines in the scale set.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3051,7 +3051,7 @@ The following output properties are available:
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Specifies the number of virtual machines in the scale set.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3870,7 +3870,7 @@ The following output properties are available:
 <a href="#diskiopsreadwrite_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>IOPSRead<wbr>Write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Specifies the Read-Write IOPS for the managed disk. Should be used only when StorageAccountType is UltraSSD_LRS. If not specified, a default value would be assigned based on diskSizeGB.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3879,7 +3879,7 @@ The following output properties are available:
 <a href="#diskmbpsreadwrite_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>MBps<wbr>Read<wbr>Write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Specifies the bandwidth in MB per second for the managed disk. Should be used only when StorageAccountType is UltraSSD_LRS. If not specified, a default value would be assigned based on diskSizeGB.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3957,7 +3957,7 @@ The following output properties are available:
 <a href="#diskiopsreadwrite_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>IOPSRead<wbr>Write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Specifies the Read-Write IOPS for the managed disk. Should be used only when StorageAccountType is UltraSSD_LRS. If not specified, a default value would be assigned based on diskSizeGB.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3966,7 +3966,7 @@ The following output properties are available:
 <a href="#diskmbpsreadwrite_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>MBps<wbr>Read<wbr>Write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Specifies the bandwidth in MB per second for the managed disk. Should be used only when StorageAccountType is UltraSSD_LRS. If not specified, a default value would be assigned based on diskSizeGB.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4131,7 +4131,7 @@ The following output properties are available:
 <a href="#disk_iops_read_write_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>iops_<wbr>read_<wbr>write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Specifies the Read-Write IOPS for the managed disk. Should be used only when StorageAccountType is UltraSSD_LRS. If not specified, a default value would be assigned based on diskSizeGB.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4140,7 +4140,7 @@ The following output properties are available:
 <a href="#disk_m_bps_read_write_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>m_<wbr>bps_<wbr>read_<wbr>write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Specifies the bandwidth in MB per second for the managed disk. Should be used only when StorageAccountType is UltraSSD_LRS. If not specified, a default value would be assigned based on diskSizeGB.{{% /md %}}</dd>
     <dt class="property-optional"

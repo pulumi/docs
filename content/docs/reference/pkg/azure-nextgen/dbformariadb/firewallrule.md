@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.dbformariadb.FirewallRule resour
 Represents a server firewall rule.
 Latest API Version: 2018-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -635,6 +634,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:dbformariadb/latest:FirewallRule rule1 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.DBforMariaDB/servers/testserver/firewallRules/rule1 
+```
 
 
 

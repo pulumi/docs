@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.Policy resource with exa
 Defines web application firewall policy.
 Latest API Version: 2020-04-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -4285,6 +4284,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>HtmlEntityDecode</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:Policy Policy1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/FrontDoorWebApplicationFirewallPolicies/Policy1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

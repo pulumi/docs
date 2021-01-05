@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.servicefabricmesh.Gateway resour
 
 This type describes a gateway resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3512,6 +3511,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies the port at which the service endpoint below needs to be exposed.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:servicefabricmesh/v20180901preview:Gateway sampleGateway /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/gateways/sampleGateway 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

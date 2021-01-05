@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#revision_csharp" style="color: inherit; text-decoration: inherit;">Revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}NSX revision number.{{% /md %}}</dd>
 </dl>
@@ -338,7 +338,7 @@ The following output properties are available:
 <a href="#revision_go" style="color: inherit; text-decoration: inherit;">Revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}NSX revision number.{{% /md %}}</dd>
 </dl>
@@ -494,7 +494,7 @@ The following output properties are available:
 <a href="#revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}NSX revision number.{{% /md %}}</dd>
 </dl>

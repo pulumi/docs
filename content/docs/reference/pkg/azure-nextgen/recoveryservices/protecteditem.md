@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ProtectedItem r
 Base class for backup items.
 Latest API Version: 2020-10-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -11780,7 +11779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemid_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Data Plane Service ID of the protected item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11957,7 +11956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemid_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Data Plane Service ID of the protected item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12311,7 +12310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Data Plane Service ID of the protected item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12490,7 +12489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemid_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Data Plane Service ID of the protected item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -12667,7 +12666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemid_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Data Plane Service ID of the protected item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13021,7 +13020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Data Plane Service ID of the protected item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13387,7 +13386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletesynctimeinutc_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Sync<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Sync time for deferred deletion in UTC{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13573,7 +13572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletesynctimeinutc_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Sync<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Sync time for deferred deletion in UTC{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13945,7 +13944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_sync_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>sync_<wbr>time_<wbr>in_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Sync time for deferred deletion in UTC{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14401,7 +14400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletesynctimeinutc_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Sync<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Sync time for deferred deletion in UTC{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14587,7 +14586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletesynctimeinutc_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Sync<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Sync time for deferred deletion in UTC{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14959,7 +14958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_sync_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>sync_<wbr>time_<wbr>in_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Sync time for deferred deletion in UTC{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15532,6 +15531,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Invalid</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:recoveryservices/latest:ProtectedItem VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/PythonSDKBackupTestRg/providers/Microsoft.RecoveryServices/vaults/PySDKBackupTestRsVault/backupFabrics/Azure/protectionContainers/IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1/protectedItems/VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

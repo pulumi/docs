@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.insights.MyWorkbook resource wit
 An Application Insights private workbook definition.
 Latest API Version: 2020-10-20.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1299,6 +1298,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:insights/latest:MyWorkbook deadb33f-8bee-4d3b-a059-9be8dac93960 /subscriptions/00000000-0000-0000-0000-00000000/resourceGroups/my-resource-group/providers/Microsoft.Insights/myworkbooks/deadb33f-8bee-4d3b-a059-9be8dac93960 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

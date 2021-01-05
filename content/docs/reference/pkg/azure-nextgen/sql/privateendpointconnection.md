@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.sql.PrivateEndpointConnection re
 
 A private endpoint connection
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1095,6 +1094,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Disconnected</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:sql/v20200801preview:PrivateEndpointConnection private-endpoint-connection-name /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/test-svr/privateEndpointConnections/private-endpoint-connection-name 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

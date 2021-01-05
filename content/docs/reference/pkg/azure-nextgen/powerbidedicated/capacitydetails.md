@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.powerbidedicated.CapacityDetails
 Represents an instance of a Dedicated Capacity resource.
 Latest API Version: 2017-10-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1147,6 +1146,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>PBIE_Azure</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:powerbidedicated/latest:CapacityDetails azsdktest /subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.PowerBIDedicated/servers/azsdktest 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

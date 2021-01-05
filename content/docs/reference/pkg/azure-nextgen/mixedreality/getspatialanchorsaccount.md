@@ -211,6 +211,15 @@ The following output properties are available:
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Mixed<wbr>Reality.<wbr>Outputs.<wbr>Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The identity associated with this account{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -278,6 +287,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identityresponse">Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The identity associated with this account{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_go">
@@ -349,6 +367,15 @@ The following output properties are available:
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identityresponse">Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The identity associated with this account{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -418,6 +445,15 @@ The following output properties are available:
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identityresponse">Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The identity associated with this account{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -425,6 +461,151 @@ The following output properties are available:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+
+
+
+## Supporting Types
+
+
+<h4 id="identityresponse">Identity<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

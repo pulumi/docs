@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.containerregistry.Replication re
 An object that represents a replication for a container registry.
 Latest API Version: 2019-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -856,6 +855,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The timestamp when the status was changed to the current value.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:containerregistry/latest:Replication myReplication /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/replications/myReplication 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

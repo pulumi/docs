@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.servicefabricmesh.Network resour
 
 This type describes a network resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -872,6 +871,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}User readable description of the network.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:servicefabricmesh/v20180901preview:Network sampleNetwork /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/networks/sampleNetwork 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

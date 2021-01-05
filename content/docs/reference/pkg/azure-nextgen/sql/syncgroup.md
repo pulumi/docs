@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.sql.SyncGroup resource with exam
 
 An Azure SQL Database sync group.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2305,6 +2304,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Quoted name of sync group schema table.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:sql/v20200801preview:SyncGroup syncgroupcrud-3187 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328/syncGroups/syncgroupcrud-3187 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

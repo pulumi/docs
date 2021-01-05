@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.storsimple.BackupSchedule resour
 The backup schedule.
 Latest API Version: 2017-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -139,7 +138,7 @@ const backupSchedule = new azure_nextgen.storsimple.latest.BackupSchedule("backu
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BackupSchedule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backup_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_schedule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_type</span><span class="p">:</span> <span class="nx">Optional[BackupType]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Kind]</span> = None<span class="p">, </span><span class="nx">manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">schedule_recurrence</span><span class="p">:</span> <span class="nx">Optional[ScheduleRecurrenceArgs]</span> = None<span class="p">, </span><span class="nx">schedule_status</span><span class="p">:</span> <span class="nx">Optional[ScheduleStatus]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BackupSchedule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backup_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_schedule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_type</span><span class="p">:</span> <span class="nx">Optional[BackupType]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Kind]</span> = None<span class="p">, </span><span class="nx">manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">schedule_recurrence</span><span class="p">:</span> <span class="nx">Optional[ScheduleRecurrenceArgs]</span> = None<span class="p">, </span><span class="nx">schedule_status</span><span class="p">:</span> <span class="nx">Optional[ScheduleStatus]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -370,7 +369,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#retentioncount_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The number of backups to be retained.{{% /md %}}</dd>
     <dt class="property-required"
@@ -475,7 +474,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#retentioncount_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The number of backups to be retained.{{% /md %}}</dd>
     <dt class="property-required"
@@ -685,7 +684,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#retention_count_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of backups to be retained.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1417,6 +1416,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Disabled</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:storsimple/latest:BackupSchedule schedule2 /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/devices/Device05ForSDKTest/backupPolicies/BkUpPolicy01ForSDKTest/schedules/schedule2 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

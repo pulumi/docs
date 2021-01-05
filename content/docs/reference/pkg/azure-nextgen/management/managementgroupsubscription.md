@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.management.ManagementGroupSubscr
 The details of subscription under management group.
 Latest API Version: 2020-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -102,7 +101,7 @@ const managementGroupSubscription = new azure_nextgen.management.latest.Manageme
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagementGroupSubscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagementGroupSubscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subscription_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -282,6 +281,15 @@ The ManagementGroupSubscription resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Management Group ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subscriptionid_csharp">
+<a href="#subscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subscription ID.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -297,6 +305,15 @@ The ManagementGroupSubscription resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Management Group ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subscriptionid_go">
+<a href="#subscriptionid_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subscription ID.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -312,6 +329,15 @@ The ManagementGroupSubscription resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Management Group ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subscriptionid_nodejs">
+<a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subscription ID.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -327,6 +353,15 @@ The ManagementGroupSubscription resource accepts the following [input]({{< relre
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Management Group ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subscription_id_python">
+<a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Subscription ID.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -684,6 +719,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The fully qualified ID for the parent management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:management/latest:ManagementGroupSubscription 728bcbe4-8d56-4510-86c2-4921b8beefbc  /providers/Microsoft.Management/managementGroups/Group/subscriptions/728bcbe4-8d56-4510-86c2-4921b8beefbc 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

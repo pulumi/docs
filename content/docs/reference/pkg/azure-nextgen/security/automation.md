@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.security.Automation resource wit
 
 The security automation resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -645,7 +644,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Automation<wbr>Action<wbr>Event<wbr>Hub<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Automation<wbr>Action<wbr>Logic<wbr>App<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Automation<wbr>Action<wbr>Workspace<wbr>Args&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2609,6 +2608,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>SecureScores</dd>
     <dt>Secure<wbr>Score<wbr>Controls</dt>
     <dd>SecureScoreControls</dd>
+    <dt>Regulatory<wbr>Compliance<wbr>Assessment</dt>
+    <dd>RegulatoryComplianceAssessment</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2624,6 +2625,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>SecureScores</dd>
     <dt>Event<wbr>Source<wbr>Secure<wbr>Score<wbr>Controls</dt>
     <dd>SecureScoreControls</dd>
+    <dt>Event<wbr>Source<wbr>Regulatory<wbr>Compliance<wbr>Assessment</dt>
+    <dd>RegulatoryComplianceAssessment</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2639,6 +2642,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>SecureScores</dd>
     <dt>Secure<wbr>Score<wbr>Controls</dt>
     <dd>SecureScoreControls</dd>
+    <dt>Regulatory<wbr>Compliance<wbr>Assessment</dt>
+    <dd>RegulatoryComplianceAssessment</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2654,6 +2659,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>SecureScores</dd>
     <dt>SECURE_SCORE_CONTROLS</dt>
     <dd>SecureScoreControls</dd>
+    <dt>REGULATORY_COMPLIANCE_ASSESSMENT</dt>
+    <dd>RegulatoryComplianceAssessment</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2804,6 +2811,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Boolean</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:security/v20190101preview:Automation exampleAutomation /subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/exampleResourceGroup/providers/Microsoft.Security/SecurityAutomations/exampleAutomation 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

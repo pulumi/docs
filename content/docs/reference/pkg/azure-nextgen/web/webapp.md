@@ -13479,7 +13479,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#maxdisksizeinmb_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Disk<wbr>Size<wbr>In<wbr>Mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Maximum allowed disk size usage in MB.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13488,7 +13488,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#maxmemoryinmb_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Memory<wbr>In<wbr>Mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Maximum allowed memory usage in MB.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13512,7 +13512,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#maxdisksizeinmb_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Disk<wbr>Size<wbr>In<wbr>Mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Maximum allowed disk size usage in MB.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13521,7 +13521,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#maxmemoryinmb_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Memory<wbr>In<wbr>Mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Maximum allowed memory usage in MB.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13578,7 +13578,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#max_disk_size_in_mb_python" style="color: inherit; text-decoration: inherit;">max_<wbr>disk_<wbr>size_<wbr>in_<wbr>mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Maximum allowed disk size usage in MB.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13587,7 +13587,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#max_memory_in_mb_python" style="color: inherit; text-decoration: inherit;">max_<wbr>memory_<wbr>in_<wbr>mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Maximum allowed memory usage in MB.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13613,7 +13613,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#maxdisksizeinmb_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Disk<wbr>Size<wbr>In<wbr>Mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Maximum allowed disk size usage in MB.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13622,7 +13622,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#maxmemoryinmb_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Memory<wbr>In<wbr>Mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Maximum allowed memory usage in MB.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13646,7 +13646,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#maxdisksizeinmb_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Disk<wbr>Size<wbr>In<wbr>Mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Maximum allowed disk size usage in MB.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13655,7 +13655,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#maxmemoryinmb_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Memory<wbr>In<wbr>Mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Maximum allowed memory usage in MB.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13712,7 +13712,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#max_disk_size_in_mb_python" style="color: inherit; text-decoration: inherit;">max_<wbr>disk_<wbr>size_<wbr>in_<wbr>mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Maximum allowed disk size usage in MB.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13721,7 +13721,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 <a href="#max_memory_in_mb_python" style="color: inherit; text-decoration: inherit;">max_<wbr>memory_<wbr>in_<wbr>mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Maximum allowed memory usage in MB.{{% /md %}}</dd>
     <dt class="property-optional"

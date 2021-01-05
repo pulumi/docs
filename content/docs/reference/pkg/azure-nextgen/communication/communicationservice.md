@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.communication.CommunicationServi
 
 A class representing a CommunicationService resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -810,6 +809,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:communication/v20200820preview:CommunicationService MyCommunicationResource /subscriptions/12345/resourceGroups/MyResourceGroup/providers/Microsoft.Communication/CommunicationServices/MyCommunicationResource 
+```
 
 
 

@@ -12,11 +12,105 @@ meta_desc: "Documentation for the azure-nextgen.securityinsights.DataConnector r
 
 Data connector.
 
-
 {{% examples %}}
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+### Creates or updates a Dynamics365 data connector.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataConnector = new AzureNextGen.SecurityInsights.V20190101Preview.DataConnector("dataConnector", new AzureNextGen.SecurityInsights.V20190101Preview.DataConnectorArgs
+        {
+            DataConnectorId = "c2541efb-c9a6-47fe-9501-87d1017d1512",
+            Etag = "\"0300bf09-0000-0000-0000-5c37296e0000\"",
+            Kind = "Dynamics365",
+            OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
+            ResourceGroupName = "myRg",
+            WorkspaceName = "myWorkspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	securityinsights "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights/v20190101preview"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := securityinsights.NewDataConnector(ctx, "dataConnector", &securityinsights.DataConnectorArgs{
+			DataConnectorId:                     pulumi.String("c2541efb-c9a6-47fe-9501-87d1017d1512"),
+			Etag:                                pulumi.String("\"0300bf09-0000-0000-0000-5c37296e0000\""),
+			Kind:                                pulumi.String("Dynamics365"),
+			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalInsights"),
+			ResourceGroupName:                   pulumi.String("myRg"),
+			WorkspaceName:                       pulumi.String("myWorkspace"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+data_connector = azure_nextgen.securityinsights.v20190101preview.DataConnector("dataConnector",
+    data_connector_id="c2541efb-c9a6-47fe-9501-87d1017d1512",
+    etag="\"0300bf09-0000-0000-0000-5c37296e0000\"",
+    kind="Dynamics365",
+    operational_insights_resource_provider="Microsoft.OperationalInsights",
+    resource_group_name="myRg",
+    workspace_name="myWorkspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const dataConnector = new azure_nextgen.securityinsights.v20190101preview.DataConnector("dataConnector", {
+    dataConnectorId: "c2541efb-c9a6-47fe-9501-87d1017d1512",
+    etag: "\"0300bf09-0000-0000-0000-5c37296e0000\"",
+    kind: "Dynamics365",
+    operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
+    resourceGroupName: "myRg",
+    workspaceName: "myWorkspace",
+});
+
+```
+
+{{% /example %}}
+
 ### Creates or updates an Office365 data connector.
 {{% example csharp %}}
 ```csharp
@@ -705,6 +799,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>AzureAdvancedThreatProtection</dd>
     <dt>Microsoft<wbr>Defender<wbr>Advanced<wbr>Threat<wbr>Protection</dt>
     <dd>MicrosoftDefenderAdvancedThreatProtection</dd>
+    <dt>Dynamics365</dt>
+    <dd>Dynamics365</dd>
 </dl>
 {{% /choosable %}}
 
@@ -730,6 +826,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>AzureAdvancedThreatProtection</dd>
     <dt>Data<wbr>Connector<wbr>Kind<wbr>Microsoft<wbr>Defender<wbr>Advanced<wbr>Threat<wbr>Protection</dt>
     <dd>MicrosoftDefenderAdvancedThreatProtection</dd>
+    <dt>Data<wbr>Connector<wbr>Kind<wbr>Dynamics365</dt>
+    <dd>Dynamics365</dd>
 </dl>
 {{% /choosable %}}
 
@@ -755,6 +853,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>AzureAdvancedThreatProtection</dd>
     <dt>Microsoft<wbr>Defender<wbr>Advanced<wbr>Threat<wbr>Protection</dt>
     <dd>MicrosoftDefenderAdvancedThreatProtection</dd>
+    <dt>Dynamics365</dt>
+    <dd>Dynamics365</dd>
 </dl>
 {{% /choosable %}}
 
@@ -780,8 +880,20 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>AzureAdvancedThreatProtection</dd>
     <dt>MICROSOFT_DEFENDER_ADVANCED_THREAT_PROTECTION</dt>
     <dd>MicrosoftDefenderAdvancedThreatProtection</dd>
+    <dt>DYNAMICS365</dt>
+    <dd>Dynamics365</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:securityinsights/v20190101preview:DataConnector 73e01a99-5cd7-4139-a149-9f2736ff2ab5 /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/dataConnectors/73e01a99-5cd7-4139-a149-9f2736ff2ab5 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

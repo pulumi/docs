@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.customerinsights.Connector resou
 The connector resource format.
 Latest API Version: 2017-04-26.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1029,6 +1028,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Outbound</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:customerinsights/latest:Connector sdkTestHub/testConnector /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/sdkTestHub/connectors/testConnector 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

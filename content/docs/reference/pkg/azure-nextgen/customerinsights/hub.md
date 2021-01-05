@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.customerinsights.Hub resource wi
 Hub resource.
 Latest API Version: 2017-04-26.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1066,6 +1065,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The sku name.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:customerinsights/latest:Hub testHub2839 /subscriptions/subid/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/testHub2839 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

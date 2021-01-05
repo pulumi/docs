@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.offazure.Site resource with exam
 Site REST Resource.
 Latest API Version: 2020-07-07.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1871,6 +1870,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:offazure/latest:Site appliance1e39site /subscriptions/4bd2aa0f-2bd2-4d67-91a8-5a4533d58600/resourceGroups/pajindTest/providers/Microsoft.OffAzure/VMwareSites/appliance1e39site 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

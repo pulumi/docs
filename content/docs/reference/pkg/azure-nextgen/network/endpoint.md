@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.Endpoint resource with e
 Class representing a Traffic Manager endpoint.
 Latest API Version: 2018-04-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -557,7 +556,7 @@ const endpoint = new azure_nextgen.network.latest.Endpoint("endpoint", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointPropertiesCustomHeadersArgs]]</span> = None<span class="p">, </span><span class="nx">endpoint_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_monitor_status</span><span class="p">:</span> <span class="nx">Optional[Union[str, EndpointMonitorStatus]]</span> = None<span class="p">, </span><span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_status</span><span class="p">:</span> <span class="nx">Optional[Union[str, EndpointStatus]]</span> = None<span class="p">, </span><span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">geo_mapping</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_child_endpoints</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointPropertiesSubnetsArgs]]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">weight</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointPropertiesCustomHeadersArgs]]</span> = None<span class="p">, </span><span class="nx">endpoint_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_monitor_status</span><span class="p">:</span> <span class="nx">Optional[Union[str, EndpointMonitorStatus]]</span> = None<span class="p">, </span><span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_status</span><span class="p">:</span> <span class="nx">Optional[Union[str, EndpointStatus]]</span> = None<span class="p">, </span><span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">geo_mapping</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_child_endpoints</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointPropertiesSubnetsArgs]]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">weight</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -824,7 +823,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#minchildendpoints_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Child<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -842,7 +841,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -887,7 +886,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd>
 </dl>
@@ -992,7 +991,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#minchildendpoints_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Child<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1010,7 +1009,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1055,7 +1054,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd>
 </dl>
@@ -1328,7 +1327,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#min_child_endpoints_python" style="color: inherit; text-decoration: inherit;">min_<wbr>child_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1346,7 +1345,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1391,7 +1390,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd>
 </dl>
@@ -2045,6 +2044,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Disabled</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:Endpoint My external endpoint /subscriptions/{subscription-id}/resourceGroups/azuresdkfornetautoresttrafficmanager2191/providers/Microsoft.Network/trafficManagerProfiles/azuresdkfornetautoresttrafficmanager8224/externalEndpoints/My external endpoint 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

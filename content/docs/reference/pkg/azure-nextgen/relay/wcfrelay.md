@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.relay.WCFRelay resource with exa
 Description of the WCF relay resource.
 Latest API Version: 2017-04-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -899,6 +898,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Http</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:relay/latest:WCFRelay example-Relay-Wcf-1194 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Relay/namespaces/example-RelayNamespace-9953/WcfRelays/example-Relay-Wcf-1194 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.azurestack.Registration resource
 Registration information.
 Latest API Version: 2017-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -811,6 +810,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>global</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:azurestack/latest:Registration testregistration /subscriptions/dd8597b4-8739-4467-8b10-f8679f62bfbf/resourceGroups/azurestack/providers/Microsoft.AzureStack/registrations/testregistration 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

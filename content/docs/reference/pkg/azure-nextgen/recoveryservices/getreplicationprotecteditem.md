@@ -522,7 +522,7 @@ The following output properties are available:
 <a href="#diskcapacityinbytes_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -717,7 +717,7 @@ The following output properties are available:
 <a href="#diskcapacityinbytes_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1107,7 +1107,7 @@ The following output properties are available:
 <a href="#disk_capacity_in_bytes_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>capacity_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1309,7 +1309,7 @@ The following output properties are available:
 <a href="#diskcapacityinbytes_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1549,7 +1549,7 @@ The following output properties are available:
 <a href="#diskcapacityinbytes_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2029,7 +2029,7 @@ The following output properties are available:
 <a href="#disk_capacity_in_bytes_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>capacity_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2519,7 +2519,7 @@ The following output properties are available:
 <a href="#rpoinseconds_csharp" style="color: inherit; text-decoration: inherit;">Rpo<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The last RPO value in seconds.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2894,7 +2894,7 @@ The following output properties are available:
 <a href="#rpoinseconds_go" style="color: inherit; text-decoration: inherit;">Rpo<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The last RPO value in seconds.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3644,7 +3644,7 @@ The following output properties are available:
 <a href="#rpo_in_seconds_python" style="color: inherit; text-decoration: inherit;">rpo_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The last RPO value in seconds.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4411,7 +4411,7 @@ The following output properties are available:
 <a href="#maxsizemb_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size<wbr>MB</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The hard disk max size in MB.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4453,7 +4453,7 @@ The following output properties are available:
 <a href="#maxsizemb_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Size<wbr>MB</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The hard disk max size in MB.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4537,7 +4537,7 @@ The following output properties are available:
 <a href="#max_size_mb_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size_<wbr>mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The hard disk max size in MB.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5283,7 +5283,7 @@ The following output properties are available:
 <a href="#rpoinseconds_csharp" style="color: inherit; text-decoration: inherit;">Rpo<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Last RPO value.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5523,7 +5523,7 @@ The following output properties are available:
 <a href="#rpoinseconds_go" style="color: inherit; text-decoration: inherit;">Rpo<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Last RPO value.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6003,7 +6003,7 @@ The following output properties are available:
 <a href="#rpo_in_seconds_python" style="color: inherit; text-decoration: inherit;">rpo_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Last RPO value.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7426,7 +7426,7 @@ The following output properties are available:
 <a href="#diskcapacityinbytes_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7462,7 +7462,7 @@ The following output properties are available:
 <a href="#filesystemcapacityinbytes_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The disk file system capacity in bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7507,7 +7507,7 @@ The following output properties are available:
 <a href="#resyncdurationinseconds_csharp" style="color: inherit; text-decoration: inherit;">Resync<wbr>Duration<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The resync duration in seconds.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7534,7 +7534,7 @@ The following output properties are available:
 <a href="#rpoinseconds_csharp" style="color: inherit; text-decoration: inherit;">Rpo<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The RPO in seconds.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7567,7 +7567,7 @@ The following output properties are available:
 <a href="#diskcapacityinbytes_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7603,7 +7603,7 @@ The following output properties are available:
 <a href="#filesystemcapacityinbytes_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The disk file system capacity in bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7648,7 +7648,7 @@ The following output properties are available:
 <a href="#resyncdurationinseconds_go" style="color: inherit; text-decoration: inherit;">Resync<wbr>Duration<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The resync duration in seconds.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7675,7 +7675,7 @@ The following output properties are available:
 <a href="#rpoinseconds_go" style="color: inherit; text-decoration: inherit;">Rpo<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The RPO in seconds.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7849,7 +7849,7 @@ The following output properties are available:
 <a href="#disk_capacity_in_bytes_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>capacity_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7885,7 +7885,7 @@ The following output properties are available:
 <a href="#file_system_capacity_in_bytes_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>capacity_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The disk file system capacity in bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7930,7 +7930,7 @@ The following output properties are available:
 <a href="#resync_duration_in_seconds_python" style="color: inherit; text-decoration: inherit;">resync_<wbr>duration_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The resync duration in seconds.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7957,7 +7957,7 @@ The following output properties are available:
 <a href="#rpo_in_seconds_python" style="color: inherit; text-decoration: inherit;">rpo_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The RPO in seconds.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8321,7 +8321,7 @@ The following output properties are available:
 <a href="#rpoinseconds_csharp" style="color: inherit; text-decoration: inherit;">Rpo<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The RPO in seconds.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8813,7 +8813,7 @@ The following output properties are available:
 <a href="#rpoinseconds_go" style="color: inherit; text-decoration: inherit;">Rpo<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The RPO in seconds.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9797,7 +9797,7 @@ The following output properties are available:
 <a href="#rpo_in_seconds_python" style="color: inherit; text-decoration: inherit;">rpo_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The RPO in seconds.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9972,7 +9972,7 @@ The following output properties are available:
 <a href="#diskcapacityinbytes_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10008,7 +10008,7 @@ The following output properties are available:
 <a href="#filesystemcapacityinbytes_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The file system capacity in bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10053,7 +10053,7 @@ The following output properties are available:
 <a href="#resyncdurationinseconds_csharp" style="color: inherit; text-decoration: inherit;">Resync<wbr>Duration<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The resync duration in seconds.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10080,7 +10080,7 @@ The following output properties are available:
 <a href="#rpoinseconds_csharp" style="color: inherit; text-decoration: inherit;">Rpo<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The RPO in seconds.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10113,7 +10113,7 @@ The following output properties are available:
 <a href="#diskcapacityinbytes_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10149,7 +10149,7 @@ The following output properties are available:
 <a href="#filesystemcapacityinbytes_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The file system capacity in bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10194,7 +10194,7 @@ The following output properties are available:
 <a href="#resyncdurationinseconds_go" style="color: inherit; text-decoration: inherit;">Resync<wbr>Duration<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The resync duration in seconds.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10221,7 +10221,7 @@ The following output properties are available:
 <a href="#rpoinseconds_go" style="color: inherit; text-decoration: inherit;">Rpo<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The RPO in seconds.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10395,7 +10395,7 @@ The following output properties are available:
 <a href="#disk_capacity_in_bytes_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>capacity_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10431,7 +10431,7 @@ The following output properties are available:
 <a href="#file_system_capacity_in_bytes_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>capacity_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The file system capacity in bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10476,7 +10476,7 @@ The following output properties are available:
 <a href="#resync_duration_in_seconds_python" style="color: inherit; text-decoration: inherit;">resync_<wbr>duration_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The resync duration in seconds.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10503,7 +10503,7 @@ The following output properties are available:
 <a href="#rpo_in_seconds_python" style="color: inherit; text-decoration: inherit;">rpo_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The RPO in seconds.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -11891,7 +11891,7 @@ The following output properties are available:
 <a href="#capacityinbytes_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
     <dt class="property-required"
@@ -11978,7 +11978,7 @@ The following output properties are available:
 <a href="#capacityinbytes_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
     <dt class="property-required"
@@ -12152,7 +12152,7 @@ The following output properties are available:
 <a href="#capacity_in_bytes_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
     <dt class="property-required"
@@ -12309,7 +12309,7 @@ The following output properties are available:
 <a href="#initialreplicationprocessedbytes_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Replication<wbr>Processed<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The initial replication processed bytes. This includes sum of total bytes transferred and matched bytes on all selected disks in source VM.{{% /md %}}</dd>
     <dt class="property-required"
@@ -12327,7 +12327,7 @@ The following output properties are available:
 <a href="#initialreplicationtransferredbytes_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Replication<wbr>Transferred<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The initial replication transferred bytes from source VM to azure for all selected disks on source VM.{{% /md %}}</dd>
     <dt class="property-required"
@@ -12408,7 +12408,7 @@ The following output properties are available:
 <a href="#lastrpoinseconds_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Rpo<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The last recovery point objective value.{{% /md %}}</dd>
     <dt class="property-required"
@@ -12489,7 +12489,7 @@ The following output properties are available:
 <a href="#resyncprocessedbytes_csharp" style="color: inherit; text-decoration: inherit;">Resync<wbr>Processed<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The resync processed bytes. This includes sum of total bytes transferred and matched bytes on all selected disks in source VM.{{% /md %}}</dd>
     <dt class="property-required"
@@ -12525,7 +12525,7 @@ The following output properties are available:
 <a href="#resynctransferredbytes_csharp" style="color: inherit; text-decoration: inherit;">Resync<wbr>Transferred<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The resync transferred bytes from source VM to azure for all selected disks on source VM.{{% /md %}}</dd>
     <dt class="property-required"
@@ -12711,7 +12711,7 @@ The following output properties are available:
 <a href="#initialreplicationprocessedbytes_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Replication<wbr>Processed<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The initial replication processed bytes. This includes sum of total bytes transferred and matched bytes on all selected disks in source VM.{{% /md %}}</dd>
     <dt class="property-required"
@@ -12729,7 +12729,7 @@ The following output properties are available:
 <a href="#initialreplicationtransferredbytes_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Replication<wbr>Transferred<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The initial replication transferred bytes from source VM to azure for all selected disks on source VM.{{% /md %}}</dd>
     <dt class="property-required"
@@ -12810,7 +12810,7 @@ The following output properties are available:
 <a href="#lastrpoinseconds_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Rpo<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The last recovery point objective value.{{% /md %}}</dd>
     <dt class="property-required"
@@ -12891,7 +12891,7 @@ The following output properties are available:
 <a href="#resyncprocessedbytes_go" style="color: inherit; text-decoration: inherit;">Resync<wbr>Processed<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The resync processed bytes. This includes sum of total bytes transferred and matched bytes on all selected disks in source VM.{{% /md %}}</dd>
     <dt class="property-required"
@@ -12927,7 +12927,7 @@ The following output properties are available:
 <a href="#resynctransferredbytes_go" style="color: inherit; text-decoration: inherit;">Resync<wbr>Transferred<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The resync transferred bytes from source VM to azure for all selected disks on source VM.{{% /md %}}</dd>
     <dt class="property-required"
@@ -13515,7 +13515,7 @@ The following output properties are available:
 <a href="#initial_replication_processed_bytes_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>replication_<wbr>processed_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The initial replication processed bytes. This includes sum of total bytes transferred and matched bytes on all selected disks in source VM.{{% /md %}}</dd>
     <dt class="property-required"
@@ -13533,7 +13533,7 @@ The following output properties are available:
 <a href="#initial_replication_transferred_bytes_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>replication_<wbr>transferred_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The initial replication transferred bytes from source VM to azure for all selected disks on source VM.{{% /md %}}</dd>
     <dt class="property-required"
@@ -13614,7 +13614,7 @@ The following output properties are available:
 <a href="#last_rpo_in_seconds_python" style="color: inherit; text-decoration: inherit;">last_<wbr>rpo_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The last recovery point objective value.{{% /md %}}</dd>
     <dt class="property-required"
@@ -13695,7 +13695,7 @@ The following output properties are available:
 <a href="#resync_processed_bytes_python" style="color: inherit; text-decoration: inherit;">resync_<wbr>processed_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The resync processed bytes. This includes sum of total bytes transferred and matched bytes on all selected disks in source VM.{{% /md %}}</dd>
     <dt class="property-required"
@@ -13731,7 +13731,7 @@ The following output properties are available:
 <a href="#resync_transferred_bytes_python" style="color: inherit; text-decoration: inherit;">resync_<wbr>transferred_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The resync transferred bytes from source VM to azure for all selected disks on source VM.{{% /md %}}</dd>
     <dt class="property-required"
@@ -14104,7 +14104,7 @@ The following output properties are available:
 <a href="#rpoinseconds_csharp" style="color: inherit; text-decoration: inherit;">Rpo<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The RPO in seconds.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14443,7 +14443,7 @@ The following output properties are available:
 <a href="#rpoinseconds_go" style="color: inherit; text-decoration: inherit;">Rpo<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The RPO in seconds.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -15121,7 +15121,7 @@ The following output properties are available:
 <a href="#rpo_in_seconds_python" style="color: inherit; text-decoration: inherit;">rpo_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The RPO in seconds.{{% /md %}}</dd>
     <dt class="property-optional"

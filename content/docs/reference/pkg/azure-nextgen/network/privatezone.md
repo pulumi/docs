@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.PrivateZone resource wit
 Describes a Private DNS zone.
 Latest API Version: 2020-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -532,7 +531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxnumberofrecordsets_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Number<wbr>Of<wbr>Record<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The maximum number of record sets that can be created in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
     <dt class="property-"
@@ -541,7 +540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxnumberofvirtualnetworklinks_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The maximum number of virtual networks that can be linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
     <dt class="property-"
@@ -550,7 +549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxnumberofvirtualnetworklinkswithregistration_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links<wbr>With<wbr>Registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The maximum number of virtual networks that can be linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
     <dt class="property-"
@@ -568,7 +567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numberofrecordsets_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Record<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The current number of record sets in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
     <dt class="property-"
@@ -577,7 +576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numberofvirtualnetworklinks_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The current number of virtual networks that are linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
     <dt class="property-"
@@ -586,7 +585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numberofvirtualnetworklinkswithregistration_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links<wbr>With<wbr>Registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The current number of virtual networks that are linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
     <dt class="property-"
@@ -637,7 +636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxnumberofrecordsets_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Number<wbr>Of<wbr>Record<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The maximum number of record sets that can be created in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
     <dt class="property-"
@@ -646,7 +645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxnumberofvirtualnetworklinks_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The maximum number of virtual networks that can be linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
     <dt class="property-"
@@ -655,7 +654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxnumberofvirtualnetworklinkswithregistration_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links<wbr>With<wbr>Registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The maximum number of virtual networks that can be linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
     <dt class="property-"
@@ -673,7 +672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numberofrecordsets_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Record<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The current number of record sets in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
     <dt class="property-"
@@ -682,7 +681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numberofvirtualnetworklinks_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The current number of virtual networks that are linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
     <dt class="property-"
@@ -691,7 +690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numberofvirtualnetworklinkswithregistration_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links<wbr>With<wbr>Registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The current number of virtual networks that are linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
     <dt class="property-"
@@ -847,7 +846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_number_of_record_sets_python" style="color: inherit; text-decoration: inherit;">max_<wbr>number_<wbr>of_<wbr>record_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum number of record sets that can be created in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
     <dt class="property-"
@@ -856,7 +855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_number_of_virtual_network_links_python" style="color: inherit; text-decoration: inherit;">max_<wbr>number_<wbr>of_<wbr>virtual_<wbr>network_<wbr>links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum number of virtual networks that can be linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
     <dt class="property-"
@@ -865,7 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_number_of_virtual_network_links_with_registration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>number_<wbr>of_<wbr>virtual_<wbr>network_<wbr>links_<wbr>with_<wbr>registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum number of virtual networks that can be linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
     <dt class="property-"
@@ -883,7 +882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_of_record_sets_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>record_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The current number of record sets in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
     <dt class="property-"
@@ -892,7 +891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_of_virtual_network_links_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>virtual_<wbr>network_<wbr>links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The current number of virtual networks that are linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
     <dt class="property-"
@@ -901,7 +900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_of_virtual_network_links_with_registration_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>virtual_<wbr>network_<wbr>links_<wbr>with_<wbr>registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The current number of virtual networks that are linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
     <dt class="property-"
@@ -928,6 +927,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:PrivateZone privatezone1.com /subscriptions/subscriptionId/resourceGroups/resourceGroup1/providers/Microsoft.Network/privateDnsZones/privatezone1.com 
+```
 
 
 

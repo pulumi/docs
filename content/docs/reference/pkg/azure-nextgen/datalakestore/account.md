@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.datalakestore.Account resource w
 Data Lake Store account information.
 Latest API Version: 2016-11-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3247,6 +3246,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The resource type.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:datalakestore/latest:Account contosoadla 34adfa4f-cedf-4dc0-ba29-b6d1a69ab345 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

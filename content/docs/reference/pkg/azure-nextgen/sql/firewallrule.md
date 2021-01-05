@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.sql.FirewallRule resource with e
 Represents a server firewall rule.
 Latest API Version: 2014-04-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -798,6 +797,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:sql/latest:FirewallRule firewallrulecrudtest-3927 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/firewallrulecrudtest-12/providers/Microsoft.Sql/servers/firewallrulecrudtest-6285/firewallRules/firewallrulecrudtest-3927 
+```
 
 
 

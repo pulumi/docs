@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.dbforpostgresql.Server resource 
 Represents a server.
 Latest API Version: 2017-12-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -4534,6 +4533,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Max storage allowed for a server.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:dbforpostgresql/latest:Server targetserver /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.DBforPostgreSQL/servers/targetserver 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

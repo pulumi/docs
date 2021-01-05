@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.insights.GuestDiagnosticsSetting
 
 Virtual machine guest diagnostics settings resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2552,6 +2551,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:insights/v20180601preview:guestDiagnosticsSetting SampleDiagSetting /subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-ResourceGroup/providers/microsoft.insights/guestDiagnosticSettings/SampleDiagSetting 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

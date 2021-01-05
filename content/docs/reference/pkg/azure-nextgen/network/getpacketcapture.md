@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#bytestocaptureperpacket_csharp" style="color: inherit; text-decoration: inherit;">Bytes<wbr>To<wbr>Capture<wbr>Per<wbr>Packet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of bytes captured per packet, the remaining bytes are truncated.{{% /md %}}</dd>
     <dt class="property-"
@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#totalbytespersession_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Bytes<wbr>Per<wbr>Session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Maximum size of the capture output.{{% /md %}}</dd>
 </dl>
@@ -347,7 +347,7 @@ The following output properties are available:
 <a href="#bytestocaptureperpacket_go" style="color: inherit; text-decoration: inherit;">Bytes<wbr>To<wbr>Capture<wbr>Per<wbr>Packet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of bytes captured per packet, the remaining bytes are truncated.{{% /md %}}</dd>
     <dt class="property-"
@@ -374,7 +374,7 @@ The following output properties are available:
 <a href="#totalbytespersession_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Bytes<wbr>Per<wbr>Session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Maximum size of the capture output.{{% /md %}}</dd>
 </dl>
@@ -539,7 +539,7 @@ The following output properties are available:
 <a href="#bytes_to_capture_per_packet_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>to_<wbr>capture_<wbr>per_<wbr>packet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of bytes captured per packet, the remaining bytes are truncated.{{% /md %}}</dd>
     <dt class="property-"
@@ -566,7 +566,7 @@ The following output properties are available:
 <a href="#total_bytes_per_session_python" style="color: inherit; text-decoration: inherit;">total_<wbr>bytes_<wbr>per_<wbr>session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Maximum size of the capture output.{{% /md %}}</dd>
 </dl>

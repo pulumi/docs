@@ -484,7 +484,7 @@ The following output properties are available:
 <a href="#contentlength_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The file of the size.{{% /md %}}</dd>
     <dt class="property-required"
@@ -535,7 +535,7 @@ The following output properties are available:
 <a href="#contentlength_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The file of the size.{{% /md %}}</dd>
     <dt class="property-required"
@@ -637,7 +637,7 @@ The following output properties are available:
 <a href="#content_length_python" style="color: inherit; text-decoration: inherit;">content_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The file of the size.{{% /md %}}</dd>
     <dt class="property-required"

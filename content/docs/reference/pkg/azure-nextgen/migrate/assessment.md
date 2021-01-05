@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.migrate.Assessment resource with
 An assessment created for a group in the Migration project.
 Latest API Version: 2019-10-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -4258,6 +4257,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Number of hours per day for VM uptime.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:migrate/latest:Assessment assessment_5_14_2019_16_48_47 /subscriptions/6393a73f-8d55-47ef-b6dd-179b3e0c7910/resourceGroups/abgoyal-westeurope/providers/Microsoft.Migrate/assessmentprojects/abgoyalWEselfhostb72bproject/groups/Group2/assessments/assessment_5_14_2019_16_48_47 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

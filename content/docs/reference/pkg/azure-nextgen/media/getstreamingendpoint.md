@@ -368,7 +368,7 @@ The following output properties are available:
 <a href="#maxcacheage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Cache<wbr>Age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Max cache age{{% /md %}}</dd>
     <dt class="property-"
@@ -563,7 +563,7 @@ The following output properties are available:
 <a href="#maxcacheage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Cache<wbr>Age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Max cache age{{% /md %}}</dd>
     <dt class="property-"
@@ -953,7 +953,7 @@ The following output properties are available:
 <a href="#max_cache_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>cache_<wbr>age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Max cache age{{% /md %}}</dd>
     <dt class="property-"

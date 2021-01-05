@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.storage.ManagementPolicy resourc
 The Get Storage Account ManagementPolicies operation response.
 Latest API Version: 2019-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3014,6 +3013,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}This is the filter tag value field used for tag based filtering, it can have 0 - 256 characters{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:storage/latest:ManagementPolicy DefaultManagementPolicy /subscriptions/{subscription-id}/resourceGroups/res7231/providers/Microsoft.Storage/storageAccounts/sto288/managementPolicies/default 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

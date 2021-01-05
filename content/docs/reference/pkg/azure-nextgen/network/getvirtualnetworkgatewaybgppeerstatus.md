@@ -268,7 +268,7 @@ The following output properties are available:
 <a href="#asn_csharp" style="color: inherit; text-decoration: inherit;">Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The autonomous system number of the remote BGP peer.{{% /md %}}</dd>
     <dt class="property-required"
@@ -295,7 +295,7 @@ The following output properties are available:
 <a href="#messagesreceived_csharp" style="color: inherit; text-decoration: inherit;">Messages<wbr>Received</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The number of BGP messages received.{{% /md %}}</dd>
     <dt class="property-required"
@@ -304,7 +304,7 @@ The following output properties are available:
 <a href="#messagessent_csharp" style="color: inherit; text-decoration: inherit;">Messages<wbr>Sent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The number of BGP messages sent.{{% /md %}}</dd>
     <dt class="property-required"
@@ -322,7 +322,7 @@ The following output properties are available:
 <a href="#routesreceived_csharp" style="color: inherit; text-decoration: inherit;">Routes<wbr>Received</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The number of routes learned from this peer.{{% /md %}}</dd>
     <dt class="property-required"
@@ -346,7 +346,7 @@ The following output properties are available:
 <a href="#asn_go" style="color: inherit; text-decoration: inherit;">Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The autonomous system number of the remote BGP peer.{{% /md %}}</dd>
     <dt class="property-required"
@@ -373,7 +373,7 @@ The following output properties are available:
 <a href="#messagesreceived_go" style="color: inherit; text-decoration: inherit;">Messages<wbr>Received</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The number of BGP messages received.{{% /md %}}</dd>
     <dt class="property-required"
@@ -382,7 +382,7 @@ The following output properties are available:
 <a href="#messagessent_go" style="color: inherit; text-decoration: inherit;">Messages<wbr>Sent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The number of BGP messages sent.{{% /md %}}</dd>
     <dt class="property-required"
@@ -400,7 +400,7 @@ The following output properties are available:
 <a href="#routesreceived_go" style="color: inherit; text-decoration: inherit;">Routes<wbr>Received</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The number of routes learned from this peer.{{% /md %}}</dd>
     <dt class="property-required"
@@ -502,7 +502,7 @@ The following output properties are available:
 <a href="#asn_python" style="color: inherit; text-decoration: inherit;">asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The autonomous system number of the remote BGP peer.{{% /md %}}</dd>
     <dt class="property-required"
@@ -529,7 +529,7 @@ The following output properties are available:
 <a href="#messages_received_python" style="color: inherit; text-decoration: inherit;">messages_<wbr>received</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of BGP messages received.{{% /md %}}</dd>
     <dt class="property-required"
@@ -538,7 +538,7 @@ The following output properties are available:
 <a href="#messages_sent_python" style="color: inherit; text-decoration: inherit;">messages_<wbr>sent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of BGP messages sent.{{% /md %}}</dd>
     <dt class="property-required"
@@ -556,7 +556,7 @@ The following output properties are available:
 <a href="#routes_received_python" style="color: inherit; text-decoration: inherit;">routes_<wbr>received</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of routes learned from this peer.{{% /md %}}</dd>
     <dt class="property-required"

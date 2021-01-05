@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.PrivateEndpoint
 Private Endpoint Connection Response Properties
 Latest API Version: 2020-10-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1516,6 +1515,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Pending</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:recoveryservices/latest:PrivateEndpointConnection gaallatestpe1.3592346090307038890.backup.5704c932-249a-490b-a142-1396838cd3b /subscriptions/04cf684a-d41f-4550-9f70-7708a3a2283b/resourceGroups/gaallaRG/providers/Microsoft.RecoveryServicesBVTD2/vaults/gaallavaultbvtd2msi/privateEndpointConnections/gaallatestpe3.3592346090307038890.backup.5704c932-249a-490b-a142-1396838cd3b 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

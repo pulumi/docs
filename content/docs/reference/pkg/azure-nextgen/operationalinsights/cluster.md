@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.operationalinsights.Cluster reso
 The top level Log Analytics cluster resource container.
 Latest API Version: 2020-10-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -68,7 +67,7 @@ func main() {
 			Location:          pulumi.String("australiasoutheast"),
 			ResourceGroupName: pulumi.String("oiautorest6685"),
 			Sku: &operationalinsights.ClusterSkuArgs{
-				Capacity: pulumi.Int(1000),
+				Capacity: pulumi.Float64(1000),
 				Name:     pulumi.String("CapacityReservation"),
 			},
 			Tags: pulumi.StringMap{
@@ -1288,7 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxcapacity_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Maximum CapacityReservation value in GB.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1297,7 +1296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mincapacity_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Minimum CapacityReservation value in GB.{{% /md %}}</dd>
 </dl>
@@ -1321,7 +1320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxcapacity_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Maximum CapacityReservation value in GB.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1330,7 +1329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mincapacity_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Minimum CapacityReservation value in GB.{{% /md %}}</dd>
 </dl>
@@ -1387,7 +1386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_capacity_python" style="color: inherit; text-decoration: inherit;">max_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Maximum CapacityReservation value in GB.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1396,7 +1395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_capacity_python" style="color: inherit; text-decoration: inherit;">min_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Minimum CapacityReservation value in GB.{{% /md %}}</dd>
 </dl>
@@ -1413,7 +1412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The capacity value{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1437,7 +1436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The capacity value{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1485,7 +1484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The capacity value{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1541,7 +1540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The capacity value{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1565,7 +1564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The capacity value{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1613,7 +1612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The capacity value{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2379,6 +2378,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:operationalinsights/latest:Cluster oiautorest6685 /subscriptions/594038b5-1093-476e-a366-482775671c11/resourcegroups/oiautorest6685/providers/microsoft.operationalinsights/clusters/oiautorest6685 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

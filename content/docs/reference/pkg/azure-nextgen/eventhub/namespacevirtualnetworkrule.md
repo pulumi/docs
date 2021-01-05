@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.eventhub.NamespaceVirtualNetwork
 
 Single item in a List or Get VirtualNetworkRules operation
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -594,6 +593,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:eventhub/v20180101preview:NamespaceVirtualNetworkRule sdk-VirtualNetworkRules-9191 /subscriptions/Subscription/resourceGroups/ResourceGroup/providers/Microsoft.EventHub/namespaces/sdk-Namespace-6019/virtualnetworkrules/sdk-VirtualNetworkRules-9191 
+```
 
 
 

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.authorization.RoleDefinition res
 Role definition.
 Latest API Version: 2015-07-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -897,6 +896,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Denied actions.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:authorization/latest:RoleDefinition roleDefinitionId /subscriptions/subID/providers/Microsoft.Authorization/roleDefinitions/roleDefinitionId 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

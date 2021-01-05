@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.insights.PrivateLinkScope resour
 
 An Azure Monitor PrivateLinkScope definition.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1202,6 +1201,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The private link service connection status.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:insights/v20191017preview:PrivateLinkScope my-privatelinkscope /subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4919/resourceGroups/my-resource-group/providers/microsoft.insights/privateLinkScopes/my-privatelinkscope 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.ExpressRouteCrossConnect
 Peering in an ExpressRoute Cross Connection resource.
 Latest API Version: 2020-07-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -69,7 +68,7 @@ func main() {
 				PrimaryPeerAddressPrefix:   pulumi.String("3FFE:FFFF:0:CD30::/126"),
 				SecondaryPeerAddressPrefix: pulumi.String("3FFE:FFFF:0:CD30::4/126"),
 			},
-			PeerASN:                    pulumi.Int(200),
+			PeerASN:                    pulumi.Float64(200),
 			PeeringName:                pulumi.String("AzurePrivatePeering"),
 			PrimaryPeerAddressPrefix:   pulumi.String("192.168.16.252/30"),
 			ResourceGroupName:          pulumi.String("CrossConnection-SiliconValley"),
@@ -146,7 +145,7 @@ const expressRouteCrossConnectionPeering = new azure_nextgen.network.latest.Expr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ExpressRouteCrossConnectionPeering</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cross_connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_manager_etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6_peering_config</span><span class="p">:</span> <span class="nx">Optional[Ipv6ExpressRouteCircuitPeeringConfigArgs]</span> = None<span class="p">, </span><span class="nx">microsoft_peering_config</span><span class="p">:</span> <span class="nx">Optional[ExpressRouteCircuitPeeringConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">peering_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, ExpressRoutePeeringType]]</span> = None<span class="p">, </span><span class="nx">primary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[Union[str, ExpressRoutePeeringState]]</span> = None<span class="p">, </span><span class="nx">vlan_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ExpressRouteCrossConnectionPeering</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cross_connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_manager_etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6_peering_config</span><span class="p">:</span> <span class="nx">Optional[Ipv6ExpressRouteCircuitPeeringConfigArgs]</span> = None<span class="p">, </span><span class="nx">microsoft_peering_config</span><span class="p">:</span> <span class="nx">Optional[ExpressRouteCircuitPeeringConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_asn</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">peering_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, ExpressRoutePeeringType]]</span> = None<span class="p">, </span><span class="nx">primary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[Union[str, ExpressRoutePeeringState]]</span> = None<span class="p">, </span><span class="nx">vlan_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -395,7 +394,7 @@ The ExpressRouteCrossConnectionPeering resource accepts the following [input]({{
 <a href="#peerasn_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>ASN</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The peer ASN.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -536,7 +535,7 @@ The ExpressRouteCrossConnectionPeering resource accepts the following [input]({{
 <a href="#peerasn_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>ASN</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The peer ASN.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -818,7 +817,7 @@ The ExpressRouteCrossConnectionPeering resource accepts the following [input]({{
 <a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The peer ASN.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2276,6 +2275,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:ExpressRouteCrossConnectionPeering AzurePrivatePeering /subscriptions/subid/resourceGroups/CrossConnection-Boydton1DC/providers/Microsoft.Network/expressRouteCrossConnections/<circuitServiceKey>/peerings/AzurePrivatePeering 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

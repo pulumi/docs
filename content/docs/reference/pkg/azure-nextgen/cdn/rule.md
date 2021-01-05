@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.cdn.Rule resource with examples,
 Friendly Rules name mapping to the any Rules or secret related information.
 Latest API Version: 2020-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -339,7 +338,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Action<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Response<wbr>Header<wbr>Action<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Origin<wbr>Group<wbr>Override<wbr>Action<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Url<wbr>Redirect<wbr>Action<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Url<wbr>Rewrite<wbr>Action<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Url<wbr>Signing<wbr>Action<wbr>Args&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}A list of actions that are executed when all the conditions of a rule are satisfied.{{% /md %}}</dd>
     <dt class="property-required"
@@ -393,7 +392,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Cookies<wbr>Condition<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Is<wbr>Device<wbr>Condition<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Post<wbr>Args<wbr>Condition<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition<wbr>Args&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}A list of conditions that must be matched for the actions to be executed{{% /md %}}</dd>
     <dt class="property-optional"
@@ -13754,6 +13753,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Parameter name{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:cdn/latest:Rule rule1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/ruleSets/ruleSet1/rules/rule1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

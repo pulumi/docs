@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.cdn.RuleSet resource with exampl
 Friendly RuleSet name mapping to the any RuleSet or secret related information.
 Latest API Version: 2020-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -911,6 +910,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:cdn/latest:RuleSet ruleSet1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/rulesets/ruleSet1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

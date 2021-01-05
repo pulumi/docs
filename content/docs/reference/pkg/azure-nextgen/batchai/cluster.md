@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.batchai.Cluster resource with ex
 Information about a Cluster.
 Latest API Version: 2018-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -7030,6 +7029,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>lowpriority</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:batchai/latest:Cluster demo_cluster /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspace/clusters/demo_cluster 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>
