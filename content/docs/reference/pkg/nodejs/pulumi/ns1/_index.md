@@ -3,7 +3,7 @@ title: "Package @pulumi/ns1"
 title_tag: "Package @pulumi/ns1 | Node.js SDK"
 linktitle: "@pulumi/ns1"
 meta_desc: "Explore members of the @pulumi/ns1 package."
-git_sha: "f700182e721fb90693cea33bbc83b2f0e92a6972"
+git_sha: "1890d7153b3ec0587cfa0426a08b88b95d971636"
 block_external_search_index: true
 ---
 
@@ -101,14 +101,14 @@ import * as ns1 from "@pulumi/ns1";
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="APIKey" data-link-title="APIKey">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L7">
         Resource <strong>APIKey</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>APIKey</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="APIKey-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L161"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L161"> <b>constructor</b></a>
 </h4>
 
 
@@ -122,7 +122,7 @@ Create a APIKey resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="APIKey-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -133,14 +133,14 @@ Get an existing APIKey resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="APIKey-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="APIKey-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -151,7 +151,7 @@ Returns true if the given object is an instance of APIKey.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="APIKey-accountManageAccountSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L38">property <b>accountManageAccountSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L38">property <b>accountManageAccountSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountManageAccountSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -159,7 +159,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Whether the apikey can modify account settings.
 
 <h4 class="pdoc-member-header" id="APIKey-accountManageApikeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L42">property <b>accountManageApikeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L42">property <b>accountManageApikeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountManageApikeys: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -167,7 +167,7 @@ Whether the apikey can modify account settings.
 Whether the apikey can modify account apikeys.
 
 <h4 class="pdoc-member-header" id="APIKey-accountManagePaymentMethods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L46">property <b>accountManagePaymentMethods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L46">property <b>accountManagePaymentMethods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountManagePaymentMethods: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -175,7 +175,7 @@ Whether the apikey can modify account apikeys.
 Whether the apikey can modify account payment methods.
 
 <h4 class="pdoc-member-header" id="APIKey-accountManagePlan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L52">property <b>accountManagePlan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L52">property <b>accountManagePlan</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -187,7 +187,7 @@ obsolete, should no longer be used
 Whether the apikey can modify the account plan.
 
 <h4 class="pdoc-member-header" id="APIKey-accountManageTeams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L56">property <b>accountManageTeams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L56">property <b>accountManageTeams</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountManageTeams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -195,7 +195,7 @@ Whether the apikey can modify the account plan.
 Whether the apikey can modify other teams in the account.
 
 <h4 class="pdoc-member-header" id="APIKey-accountManageUsers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L60">property <b>accountManageUsers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L60">property <b>accountManageUsers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountManageUsers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -203,7 +203,7 @@ Whether the apikey can modify other teams in the account.
 Whether the apikey can modify account users.
 
 <h4 class="pdoc-member-header" id="APIKey-accountViewActivityLog">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L64">property <b>accountViewActivityLog</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L64">property <b>accountViewActivityLog</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountViewActivityLog: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -211,7 +211,7 @@ Whether the apikey can modify account users.
 Whether the apikey can view activity logs.
 
 <h4 class="pdoc-member-header" id="APIKey-accountViewInvoices">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L68">property <b>accountViewInvoices</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L68">property <b>accountViewInvoices</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountViewInvoices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -219,7 +219,7 @@ Whether the apikey can view activity logs.
 Whether the apikey can view invoices.
 
 <h4 class="pdoc-member-header" id="APIKey-dataManageDatafeeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L72">property <b>dataManageDatafeeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L72">property <b>dataManageDatafeeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataManageDatafeeds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -227,7 +227,7 @@ Whether the apikey can view invoices.
 Whether the apikey can modify data feeds.
 
 <h4 class="pdoc-member-header" id="APIKey-dataManageDatasources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L76">property <b>dataManageDatasources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L76">property <b>dataManageDatasources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataManageDatasources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -235,7 +235,7 @@ Whether the apikey can modify data feeds.
 Whether the apikey can modify data sources.
 
 <h4 class="pdoc-member-header" id="APIKey-dataPushToDatafeeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L80">property <b>dataPushToDatafeeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L80">property <b>dataPushToDatafeeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataPushToDatafeeds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -243,7 +243,7 @@ Whether the apikey can modify data sources.
 Whether the apikey can publish to data feeds.
 
 <h4 class="pdoc-member-header" id="APIKey-dhcpManageDhcp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L85">property <b>dhcpManageDhcp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L85">property <b>dhcpManageDhcp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dhcpManageDhcp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -252,7 +252,7 @@ Whether the apikey can manage DHCP.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="APIKey-dhcpViewDhcp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L90">property <b>dhcpViewDhcp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L90">property <b>dhcpViewDhcp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dhcpViewDhcp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -261,7 +261,7 @@ Whether the apikey can view DHCP.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="APIKey-dnsManageZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L94">property <b>dnsManageZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L94">property <b>dnsManageZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsManageZones: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -269,7 +269,7 @@ Only relevant for the DDI product.
 Whether the apikey can modify the accounts zones.
 
 <h4 class="pdoc-member-header" id="APIKey-dnsViewZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L98">property <b>dnsViewZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L98">property <b>dnsViewZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsViewZones: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -277,7 +277,7 @@ Whether the apikey can modify the accounts zones.
 Whether the apikey can view the accounts zones.
 
 <h4 class="pdoc-member-header" id="APIKey-dnsZonesAllowByDefault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L102">property <b>dnsZonesAllowByDefault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L102">property <b>dnsZonesAllowByDefault</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsZonesAllowByDefault: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -285,7 +285,7 @@ Whether the apikey can view the accounts zones.
 If true, enable the `dnsZonesAllow` list, otherwise enable the `dnsZonesDeny` list.
 
 <h4 class="pdoc-member-header" id="APIKey-dnsZonesAllows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L106">property <b>dnsZonesAllows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L106">property <b>dnsZonesAllows</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsZonesAllows: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -293,7 +293,7 @@ If true, enable the `dnsZonesAllow` list, otherwise enable the `dnsZonesDeny` li
 List of zones that the apikey may access.
 
 <h4 class="pdoc-member-header" id="APIKey-dnsZonesDenies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L110">property <b>dnsZonesDenies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L110">property <b>dnsZonesDenies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsZonesDenies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -301,7 +301,7 @@ List of zones that the apikey may access.
 List of zones that the apikey may not access.
 
 <h4 class="pdoc-member-header" id="APIKey-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -310,7 +310,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="APIKey-ipWhitelistStrict">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L114">property <b>ipWhitelistStrict</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L114">property <b>ipWhitelistStrict</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipWhitelistStrict: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -318,7 +318,7 @@ deployments and may be missing (undefined) during planning phases.
 Sets exclusivity on this IP whitelist.
 
 <h4 class="pdoc-member-header" id="APIKey-ipWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L118">property <b>ipWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L118">property <b>ipWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipWhitelists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -326,7 +326,7 @@ Sets exclusivity on this IP whitelist.
 The IP addresses to whitelist for this key.
 
 <h4 class="pdoc-member-header" id="APIKey-ipamManageIpam">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L123">property <b>ipamManageIpam</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L123">property <b>ipamManageIpam</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipamManageIpam: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -335,7 +335,7 @@ Whether the apikey can manage IPAM.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="APIKey-ipamViewIpam">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L128">property <b>ipamViewIpam</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L128">property <b>ipamViewIpam</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipamViewIpam: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -344,7 +344,7 @@ Whether the apikey can view IPAM.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="APIKey-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L132">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L132">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -352,7 +352,7 @@ Only relevant for the DDI product.
 The apikeys authentication token.
 
 <h4 class="pdoc-member-header" id="APIKey-monitoringManageJobs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L136">property <b>monitoringManageJobs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L136">property <b>monitoringManageJobs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>monitoringManageJobs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -360,7 +360,7 @@ The apikeys authentication token.
 Whether the apikey can modify monitoring jobs.
 
 <h4 class="pdoc-member-header" id="APIKey-monitoringManageLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L140">property <b>monitoringManageLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L140">property <b>monitoringManageLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>monitoringManageLists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -368,7 +368,7 @@ Whether the apikey can modify monitoring jobs.
 Whether the apikey can modify notification lists.
 
 <h4 class="pdoc-member-header" id="APIKey-monitoringViewJobs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L144">property <b>monitoringViewJobs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L144">property <b>monitoringViewJobs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>monitoringViewJobs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -376,7 +376,7 @@ Whether the apikey can modify notification lists.
 Whether the apikey can view monitoring jobs.
 
 <h4 class="pdoc-member-header" id="APIKey-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L148">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L148">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -384,7 +384,7 @@ Whether the apikey can view monitoring jobs.
 The free form name of the apikey.
 
 <h4 class="pdoc-member-header" id="APIKey-securityManageActiveDirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L153">property <b>securityManageActiveDirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L153">property <b>securityManageActiveDirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityManageActiveDirectory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -393,7 +393,7 @@ Whether the apikey can manage global active directory.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="APIKey-securityManageGlobal2fa">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L157">property <b>securityManageGlobal2fa</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L157">property <b>securityManageGlobal2fa</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityManageGlobal2fa: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -401,7 +401,7 @@ Only relevant for the DDI product.
 Whether the apikey can manage global two factor authentication.
 
 <h4 class="pdoc-member-header" id="APIKey-teams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L161">property <b>teams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L161">property <b>teams</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>teams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -409,7 +409,7 @@ Whether the apikey can manage global two factor authentication.
 The teams that the apikey belongs to.
 
 <h4 class="pdoc-member-header" id="APIKey-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -418,7 +418,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DataFeed" data-link-title="DataFeed">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataFeed.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataFeed.ts#L36">
         Resource <strong>DataFeed</strong>
     </a>
 </h3>
@@ -454,7 +454,7 @@ const useastFeed = new ns1.DataFeed("useast_feed", {
 [Datafeed Api Doc](https://ns1.com/api#data-feeds)
 
 <h4 class="pdoc-member-header" id="DataFeed-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataFeed.ts#L76"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataFeed.ts#L76"> <b>constructor</b></a>
 </h4>
 
 
@@ -468,7 +468,7 @@ Create a DataFeed resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DataFeed-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataFeed.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataFeed.ts#L46">method <b>get</b></a>
 </h4>
 
 
@@ -479,14 +479,14 @@ Get an existing DataFeed resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DataFeed-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataFeed.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataFeed.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DataFeed-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataFeed.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataFeed.ts#L57">method <b>isInstance</b></a>
 </h4>
 
 
@@ -497,7 +497,7 @@ Returns true if the given object is an instance of DataFeed.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DataFeed-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataFeed.ts#L68">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataFeed.ts#L68">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>config: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -506,7 +506,7 @@ The feeds configuration matching the specification in
 `feedConfig` from /data/sourcetypes.
 
 <h4 class="pdoc-member-header" id="DataFeed-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataFeed.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataFeed.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -515,7 +515,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DataFeed-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataFeed.ts#L72">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataFeed.ts#L72">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -523,7 +523,7 @@ deployments and may be missing (undefined) during planning phases.
 The free form name of the data feed.
 
 <h4 class="pdoc-member-header" id="DataFeed-sourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataFeed.ts#L76">property <b>sourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataFeed.ts#L76">property <b>sourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -531,7 +531,7 @@ The free form name of the data feed.
 The data source id that this feed is connected to.
 
 <h4 class="pdoc-member-header" id="DataFeed-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataFeed.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataFeed.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -540,7 +540,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DataSource" data-link-title="DataSource">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataSource.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataSource.ts#L24">
         Resource <strong>DataSource</strong>
     </a>
 </h3>
@@ -564,7 +564,7 @@ const example = new ns1.DataSource("example", {
 [Datasource Api Doc](https://ns1.com/api#data-sources)
 
 <h4 class="pdoc-member-header" id="DataSource-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataSource.ts#L64"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataSource.ts#L64"> <b>constructor</b></a>
 </h4>
 
 
@@ -578,7 +578,7 @@ Create a DataSource resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DataSource-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataSource.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataSource.ts#L34">method <b>get</b></a>
 </h4>
 
 
@@ -589,14 +589,14 @@ Get an existing DataSource resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DataSource-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataSource.ts#L24">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataSource.ts#L24">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DataSource-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataSource.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataSource.ts#L45">method <b>isInstance</b></a>
 </h4>
 
 
@@ -607,7 +607,7 @@ Returns true if the given object is an instance of DataSource.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DataSource-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataSource.ts#L56">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataSource.ts#L56">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>config: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -616,7 +616,7 @@ The data source configuration, determined by its type,
 matching the specification in `config` from /data/sourcetypes.
 
 <h4 class="pdoc-member-header" id="DataSource-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataSource.ts#L24">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataSource.ts#L24">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -625,7 +625,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DataSource-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataSource.ts#L60">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataSource.ts#L60">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -633,7 +633,7 @@ deployments and may be missing (undefined) during planning phases.
 The free form name of the data source.
 
 <h4 class="pdoc-member-header" id="DataSource-sourcetype">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataSource.ts#L64">property <b>sourcetype</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataSource.ts#L64">property <b>sourcetype</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourcetype: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -641,7 +641,7 @@ The free form name of the data source.
 The data sources type, listed in API endpoint https://api.nsone.net/v1/data/sourcetypes.
 
 <h4 class="pdoc-member-header" id="DataSource-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataSource.ts#L24">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataSource.ts#L24">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -650,7 +650,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="MonitoringJob" data-link-title="MonitoringJob">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L47">
         Resource <strong>MonitoringJob</strong>
     </a>
 </h3>
@@ -696,7 +696,7 @@ const uswestMonitor = new ns1.MonitoringJob("uswest_monitor", {
 [MonitoringJob Api Doc](https://ns1.com/api#monitoring-jobs)
 
 <h4 class="pdoc-member-header" id="MonitoringJob-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L134"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L133"> <b>constructor</b></a>
 </h4>
 
 
@@ -710,7 +710,7 @@ Create a MonitoringJob resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="MonitoringJob-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L58">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L57">method <b>get</b></a>
 </h4>
 
 
@@ -721,14 +721,14 @@ Get an existing MonitoringJob resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="MonitoringJob-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L48">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L47">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="MonitoringJob-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L69">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L68">method <b>isInstance</b></a>
 </h4>
 
 
@@ -739,7 +739,7 @@ Returns true if the given object is an instance of MonitoringJob.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="MonitoringJob-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L79">property <b>active</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L78">property <b>active</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>active: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -747,7 +747,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Indicates if the job is active or temporarily disabled.
 
 <h4 class="pdoc-member-header" id="MonitoringJob-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L83">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L82">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>config: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -755,7 +755,7 @@ Indicates if the job is active or temporarily disabled.
 A configuration dictionary with keys and values depending on the job_type. Configuration details for each jobType are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
 
 <h4 class="pdoc-member-header" id="MonitoringJob-frequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L87">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L86">property <b>frequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>frequency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -763,7 +763,7 @@ A configuration dictionary with keys and values depending on the job_type. Confi
 The frequency, in seconds, at which to run the monitoring job in each region.
 
 <h4 class="pdoc-member-header" id="MonitoringJob-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L48">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L47">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -772,7 +772,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="MonitoringJob-jobType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L91">property <b>jobType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L90">property <b>jobType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>jobType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -780,7 +780,7 @@ deployments and may be missing (undefined) during planning phases.
 The type of monitoring job to be run. Refer to the NS1 API documentation (https://ns1.com/api#monitoring-jobs) for supported values which include ping, tcp, dns, http.
 
 <h4 class="pdoc-member-header" id="MonitoringJob-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L95">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L94">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -788,7 +788,7 @@ The type of monitoring job to be run. Refer to the NS1 API documentation (https:
 The free-form display name for the monitoring job.
 
 <h4 class="pdoc-member-header" id="MonitoringJob-notes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L99">property <b>notes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L98">property <b>notes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -796,7 +796,7 @@ The free-form display name for the monitoring job.
 Freeform notes to be included in any notifications about this job.
 
 <h4 class="pdoc-member-header" id="MonitoringJob-notifyDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L103">property <b>notifyDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L102">property <b>notifyDelay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notifyDelay: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -804,7 +804,7 @@ Freeform notes to be included in any notifications about this job.
 The time in seconds after a failure to wait before sending a notification.
 
 <h4 class="pdoc-member-header" id="MonitoringJob-notifyFailback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L107">property <b>notifyFailback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L106">property <b>notifyFailback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notifyFailback: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -812,12 +812,12 @@ The time in seconds after a failure to wait before sending a notification.
 If true, a notification is sent when a job returns to an "up" state.
 
 <h4 class="pdoc-member-header" id="MonitoringJob-notifyList">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L108">property <b>notifyList</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L107">property <b>notifyList</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notifyList: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MonitoringJob-notifyRegional">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L112">property <b>notifyRegional</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L111">property <b>notifyRegional</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notifyRegional: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -825,7 +825,7 @@ If true, a notification is sent when a job returns to an "up" state.
 If true, notifications are sent for any regional failure (and failback if desired), in addition to global state notifications.
 
 <h4 class="pdoc-member-header" id="MonitoringJob-notifyRepeat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L116">property <b>notifyRepeat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L115">property <b>notifyRepeat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notifyRepeat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -833,7 +833,7 @@ If true, notifications are sent for any regional failure (and failback if desire
 The time in seconds between repeat notifications of a failed job.
 
 <h4 class="pdoc-member-header" id="MonitoringJob-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L121">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L120">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -842,7 +842,7 @@ The policy for determining the monitor's global status
 based on the status of the job in all regions. See NS1 API docs for supported values.
 
 <h4 class="pdoc-member-header" id="MonitoringJob-rapidRecheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L125">property <b>rapidRecheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L124">property <b>rapidRecheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rapidRecheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -850,7 +850,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
 If true, on any apparent state change, the job is quickly re-run after one second to confirm the state change before notification.
 
 <h4 class="pdoc-member-header" id="MonitoringJob-regions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L130">property <b>regions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L129">property <b>regions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>regions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -859,7 +859,7 @@ The list of region codes in which to run the monitoring
 job. See NS1 API docs for supported values.
 
 <h4 class="pdoc-member-header" id="MonitoringJob-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L134">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L133">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/ns1/types/output/#MonitoringJobRule'>MonitoringJobRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -867,7 +867,7 @@ job. See NS1 API docs for supported values.
 A list of rules for determining failure conditions. Each rule acts on one of the outputs from the monitoring job. You must specify key (the output key); comparison (a comparison to perform on the the output); and value (the value to compare to). For example, {"key":"rtt", "comparison":"<", "value":100} is a rule requiring the rtt from a job to be under 100ms, or the job will be marked failed. Available output keys, comparators, and value types are are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
 
 <h4 class="pdoc-member-header" id="MonitoringJob-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L48">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L47">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -876,7 +876,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="NotifyList" data-link-title="NotifyList">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/notifyList.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/notifyList.ts#L38">
         Resource <strong>NotifyList</strong>
     </a>
 </h3>
@@ -913,7 +913,7 @@ const nl = new ns1.NotifyList("nl", {
 [NotifyList Api Doc](https://ns1.com/api#notification-lists)
 
 <h4 class="pdoc-member-header" id="NotifyList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/notifyList.ts#L74"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/notifyList.ts#L73"> <b>constructor</b></a>
 </h4>
 
 
@@ -927,7 +927,7 @@ Create a NotifyList resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="NotifyList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/notifyList.ts#L49">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/notifyList.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -938,14 +938,14 @@ Get an existing NotifyList resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="NotifyList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/notifyList.ts#L39">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/notifyList.ts#L38">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="NotifyList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/notifyList.ts#L60">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/notifyList.ts#L59">method <b>isInstance</b></a>
 </h4>
 
 
@@ -956,7 +956,7 @@ Returns true if the given object is an instance of NotifyList.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="NotifyList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/notifyList.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/notifyList.ts#L38">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -965,7 +965,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="NotifyList-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/notifyList.ts#L70">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/notifyList.ts#L69">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -973,7 +973,7 @@ deployments and may be missing (undefined) during planning phases.
 The free-form display name for the notify list.
 
 <h4 class="pdoc-member-header" id="NotifyList-notifications">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/notifyList.ts#L74">property <b>notifications</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/notifyList.ts#L73">property <b>notifications</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notifications: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/ns1/types/output/#NotifyListNotification'>NotifyListNotification</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -981,7 +981,7 @@ The free-form display name for the notify list.
 A list of notifiers. All notifiers in a notification list will receive notifications whenever an event is send to the list (e.g., when a monitoring job fails). Notifiers are documented below.
 
 <h4 class="pdoc-member-header" id="NotifyList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/notifyList.ts#L39">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/notifyList.ts#L38">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -990,7 +990,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Provider" data-link-title="Provider">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/provider.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/provider.ts#L13">
         Resource <strong>Provider</strong>
     </a>
 </h3>
@@ -1003,7 +1003,7 @@ construction to achieve fine-grained programmatic control over provider settings
 [documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
 <h4 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
 </h4>
 
 
@@ -1017,14 +1017,14 @@ Create a Provider resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1035,14 +1035,14 @@ Returns true if the given object is an instance of Provider.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Provider-register">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>static </span>register(provider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1051,7 +1051,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1060,7 +1060,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Record" data-link-title="Record">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L27">
         Resource <strong>Record</strong>
     </a>
 </h3>
@@ -1073,8 +1073,20 @@ Provides a NS1 Record resource. This can be used to create, modify, and delete r
 
 [Record Api Doc](https://ns1.com/api#records)
 
+#### Import
+
+```sh
+ $ pulumi import ns1:index/record:Record <name> <zone>/<domain>/<type>`
+```
+
+ So for the example above
+
+```sh
+ $ pulumi import ns1:index/record:Record www terraform.example.io/www.terraform.example.io/CNAME`
+```
+
 <h4 class="pdoc-member-header" id="Record-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L95"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L106"> <b>constructor</b></a>
 </h4>
 
 
@@ -1088,7 +1100,7 @@ Create a Record resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Record-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L37">method <b>get</b></a>
 </h4>
 
 
@@ -1099,14 +1111,14 @@ Get an existing Record resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Record-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L27">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Record-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L48">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1117,7 +1129,7 @@ Returns true if the given object is an instance of Record.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Record-answers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L48">property <b>answers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L59">property <b>answers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>answers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/ns1/types/output/#RecordAnswer'>RecordAnswer</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1126,7 +1138,7 @@ One or more NS1 answers for the records' specified type.
 Answers are documented below.
 
 <h4 class="pdoc-member-header" id="Record-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L53">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L64">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1135,7 +1147,7 @@ The records' domain. Cannot have leading or trailing
 dots - see the example above and `FQDN formatting` below.
 
 <h4 class="pdoc-member-header" id="Record-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L58">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L69">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/ns1/types/output/#RecordFilter'>RecordFilter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1144,7 +1156,7 @@ One or more NS1 filters for the record(order matters).
 Filters are documented below.
 
 <h4 class="pdoc-member-header" id="Record-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L27">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1153,7 +1165,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Record-link">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L63">property <b>link</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L74">property <b>link</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>link: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1162,12 +1174,12 @@ The target record to link to. This means this record is a
 'linked' record, and it inherits all properties from its target.
 
 <h4 class="pdoc-member-header" id="Record-meta">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L64">property <b>meta</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L75">property <b>meta</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>meta: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Record-regions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L71">property <b>regions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L82">property <b>regions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>regions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/ns1/types/output/#RecordRegion'>RecordRegion</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1178,7 +1190,7 @@ but remain `regions` here for legacy reasons. Regions are
 documented below. Please note the ordering requirement!
 
 <h4 class="pdoc-member-header" id="Record-shortAnswers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L75">property <b>shortAnswers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L86">property <b>shortAnswers</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1187,7 +1199,7 @@ short_answers will be deprecated in a future release. It is suggested to migrate
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>shortAnswers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Record-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L79">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L90">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1195,7 +1207,7 @@ short_answers will be deprecated in a future release. It is suggested to migrate
 The records' time to live (in seconds).
 
 <h4 class="pdoc-member-header" id="Record-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L83">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L94">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1203,7 +1215,7 @@ The records' time to live (in seconds).
 The records' RR type.
 
 <h4 class="pdoc-member-header" id="Record-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L27">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1212,7 +1224,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Record-useClientSubnet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L90">property <b>useClientSubnet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L101">property <b>useClientSubnet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>useClientSubnet: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1223,7 +1235,7 @@ available(in filter chain).
 is documented below.
 
 <h4 class="pdoc-member-header" id="Record-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L95">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L106">property <b>zone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>zone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1232,7 +1244,7 @@ The zone the record belongs to. Cannot have leading or
 trailing dots (".") - see the example above and `FQDN formatting` below.
 
 <h3 class="pdoc-module-header" id="Team" data-link-title="Team">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L54">
         Resource <strong>Team</strong>
     </a>
 </h3>
@@ -1285,7 +1297,7 @@ const example2 = new ns1.Team("example2", {
 [Team Api Docs](https://ns1.com/api#team)
 
 <h4 class="pdoc-member-header" id="Team-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L197"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L196"> <b>constructor</b></a>
 </h4>
 
 
@@ -1299,7 +1311,7 @@ Create a Team resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Team-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L65">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L64">method <b>get</b></a>
 </h4>
 
 
@@ -1310,14 +1322,14 @@ Get an existing Team resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Team-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L55">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L54">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Team-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L76">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L75">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1328,7 +1340,7 @@ Returns true if the given object is an instance of Team.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Team-accountManageAccountSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L86">property <b>accountManageAccountSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L85">property <b>accountManageAccountSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountManageAccountSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1336,7 +1348,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Whether the team can modify account settings.
 
 <h4 class="pdoc-member-header" id="Team-accountManageApikeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L90">property <b>accountManageApikeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L89">property <b>accountManageApikeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountManageApikeys: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1344,7 +1356,7 @@ Whether the team can modify account settings.
 Whether the team can modify account apikeys.
 
 <h4 class="pdoc-member-header" id="Team-accountManagePaymentMethods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L94">property <b>accountManagePaymentMethods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L93">property <b>accountManagePaymentMethods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountManagePaymentMethods: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1352,7 +1364,7 @@ Whether the team can modify account apikeys.
 Whether the team can modify account payment methods.
 
 <h4 class="pdoc-member-header" id="Team-accountManagePlan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L100">property <b>accountManagePlan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L99">property <b>accountManagePlan</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1364,7 +1376,7 @@ obsolete, should no longer be used
 Whether the team can modify the account plan.
 
 <h4 class="pdoc-member-header" id="Team-accountManageTeams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L104">property <b>accountManageTeams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L103">property <b>accountManageTeams</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountManageTeams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1372,7 +1384,7 @@ Whether the team can modify the account plan.
 Whether the team can modify other teams in the account.
 
 <h4 class="pdoc-member-header" id="Team-accountManageUsers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L108">property <b>accountManageUsers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L107">property <b>accountManageUsers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountManageUsers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1380,7 +1392,7 @@ Whether the team can modify other teams in the account.
 Whether the team can modify account users.
 
 <h4 class="pdoc-member-header" id="Team-accountViewActivityLog">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L112">property <b>accountViewActivityLog</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L111">property <b>accountViewActivityLog</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountViewActivityLog: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1388,7 +1400,7 @@ Whether the team can modify account users.
 Whether the team can view activity logs.
 
 <h4 class="pdoc-member-header" id="Team-accountViewInvoices">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L116">property <b>accountViewInvoices</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L115">property <b>accountViewInvoices</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountViewInvoices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1396,7 +1408,7 @@ Whether the team can view activity logs.
 Whether the team can view invoices.
 
 <h4 class="pdoc-member-header" id="Team-dataManageDatafeeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L120">property <b>dataManageDatafeeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L119">property <b>dataManageDatafeeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataManageDatafeeds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1404,7 +1416,7 @@ Whether the team can view invoices.
 Whether the team can modify data feeds.
 
 <h4 class="pdoc-member-header" id="Team-dataManageDatasources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L124">property <b>dataManageDatasources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L123">property <b>dataManageDatasources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataManageDatasources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1412,7 +1424,7 @@ Whether the team can modify data feeds.
 Whether the team can modify data sources.
 
 <h4 class="pdoc-member-header" id="Team-dataPushToDatafeeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L128">property <b>dataPushToDatafeeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L127">property <b>dataPushToDatafeeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataPushToDatafeeds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1420,7 +1432,7 @@ Whether the team can modify data sources.
 Whether the team can publish to data feeds.
 
 <h4 class="pdoc-member-header" id="Team-dhcpManageDhcp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L133">property <b>dhcpManageDhcp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L132">property <b>dhcpManageDhcp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dhcpManageDhcp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1429,7 +1441,7 @@ Whether the team can manage DHCP.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="Team-dhcpViewDhcp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L138">property <b>dhcpViewDhcp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L137">property <b>dhcpViewDhcp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dhcpViewDhcp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1438,7 +1450,7 @@ Whether the team can view DHCP.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="Team-dnsManageZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L142">property <b>dnsManageZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L141">property <b>dnsManageZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsManageZones: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1446,7 +1458,7 @@ Only relevant for the DDI product.
 Whether the team can modify the accounts zones.
 
 <h4 class="pdoc-member-header" id="Team-dnsViewZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L146">property <b>dnsViewZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L145">property <b>dnsViewZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsViewZones: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1454,7 +1466,7 @@ Whether the team can modify the accounts zones.
 Whether the team can view the accounts zones.
 
 <h4 class="pdoc-member-header" id="Team-dnsZonesAllowByDefault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L150">property <b>dnsZonesAllowByDefault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L149">property <b>dnsZonesAllowByDefault</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsZonesAllowByDefault: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1462,7 +1474,7 @@ Whether the team can view the accounts zones.
 If true, enable the `dnsZonesAllow` list, otherwise enable the `dnsZonesDeny` list.
 
 <h4 class="pdoc-member-header" id="Team-dnsZonesAllows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L154">property <b>dnsZonesAllows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L153">property <b>dnsZonesAllows</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsZonesAllows: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1470,7 +1482,7 @@ If true, enable the `dnsZonesAllow` list, otherwise enable the `dnsZonesDeny` li
 List of zones that the team may access.
 
 <h4 class="pdoc-member-header" id="Team-dnsZonesDenies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L158">property <b>dnsZonesDenies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L157">property <b>dnsZonesDenies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsZonesDenies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1478,7 +1490,7 @@ List of zones that the team may access.
 List of zones that the team may not access.
 
 <h4 class="pdoc-member-header" id="Team-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L55">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L54">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1487,7 +1499,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Team-ipWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L162">property <b>ipWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L161">property <b>ipWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipWhitelists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/ns1/types/output/#TeamIpWhitelist'>TeamIpWhitelist</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1495,7 +1507,7 @@ deployments and may be missing (undefined) during planning phases.
 The IP addresses to whitelist for this key.
 
 <h4 class="pdoc-member-header" id="Team-ipamManageIpam">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L167">property <b>ipamManageIpam</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L166">property <b>ipamManageIpam</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipamManageIpam: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1504,7 +1516,7 @@ Whether the team can manage IPAM.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="Team-ipamViewIpam">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L172">property <b>ipamViewIpam</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L171">property <b>ipamViewIpam</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipamViewIpam: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1513,7 +1525,7 @@ Whether the team can view IPAM.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="Team-monitoringManageJobs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L176">property <b>monitoringManageJobs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L175">property <b>monitoringManageJobs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>monitoringManageJobs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1521,7 +1533,7 @@ Only relevant for the DDI product.
 Whether the team can modify monitoring jobs.
 
 <h4 class="pdoc-member-header" id="Team-monitoringManageLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L180">property <b>monitoringManageLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L179">property <b>monitoringManageLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>monitoringManageLists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1529,7 +1541,7 @@ Whether the team can modify monitoring jobs.
 Whether the team can modify notification lists.
 
 <h4 class="pdoc-member-header" id="Team-monitoringViewJobs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L184">property <b>monitoringViewJobs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L183">property <b>monitoringViewJobs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>monitoringViewJobs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1537,7 +1549,7 @@ Whether the team can modify notification lists.
 Whether the team can view monitoring jobs.
 
 <h4 class="pdoc-member-header" id="Team-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L188">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L187">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1545,7 +1557,7 @@ Whether the team can view monitoring jobs.
 The free form name of the team.
 
 <h4 class="pdoc-member-header" id="Team-securityManageActiveDirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L193">property <b>securityManageActiveDirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L192">property <b>securityManageActiveDirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityManageActiveDirectory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1554,7 +1566,7 @@ Whether the team can manage global active directory.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="Team-securityManageGlobal2fa">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L197">property <b>securityManageGlobal2fa</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L196">property <b>securityManageGlobal2fa</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityManageGlobal2fa: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1562,7 +1574,7 @@ Only relevant for the DDI product.
 Whether the team can manage global two factor authentication.
 
 <h4 class="pdoc-member-header" id="Team-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L55">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L54">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1571,14 +1583,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="User" data-link-title="User">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L7">
         Resource <strong>User</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>User</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="User-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L165"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L165"> <b>constructor</b></a>
 </h4>
 
 
@@ -1592,7 +1604,7 @@ Create a User resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="User-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -1603,14 +1615,14 @@ Get an existing User resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="User-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="User-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1621,7 +1633,7 @@ Returns true if the given object is an instance of User.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="User-accountManageAccountSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L38">property <b>accountManageAccountSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L38">property <b>accountManageAccountSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountManageAccountSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1629,7 +1641,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Whether the user can modify account settings.
 
 <h4 class="pdoc-member-header" id="User-accountManageApikeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L42">property <b>accountManageApikeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L42">property <b>accountManageApikeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountManageApikeys: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1637,7 +1649,7 @@ Whether the user can modify account settings.
 Whether the user can modify account apikeys.
 
 <h4 class="pdoc-member-header" id="User-accountManagePaymentMethods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L46">property <b>accountManagePaymentMethods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L46">property <b>accountManagePaymentMethods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountManagePaymentMethods: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1645,7 +1657,7 @@ Whether the user can modify account apikeys.
 Whether the user can modify account payment methods.
 
 <h4 class="pdoc-member-header" id="User-accountManagePlan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L52">property <b>accountManagePlan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L52">property <b>accountManagePlan</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1657,7 +1669,7 @@ obsolete, should no longer be used
 **Deprecated** Whether the user can modify the account plan.
 
 <h4 class="pdoc-member-header" id="User-accountManageTeams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L56">property <b>accountManageTeams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L56">property <b>accountManageTeams</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountManageTeams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1665,7 +1677,7 @@ obsolete, should no longer be used
 Whether the user can modify other teams in the account.
 
 <h4 class="pdoc-member-header" id="User-accountManageUsers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L60">property <b>accountManageUsers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L60">property <b>accountManageUsers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountManageUsers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1673,7 +1685,7 @@ Whether the user can modify other teams in the account.
 Whether the user can modify account users.
 
 <h4 class="pdoc-member-header" id="User-accountViewActivityLog">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L64">property <b>accountViewActivityLog</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L64">property <b>accountViewActivityLog</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountViewActivityLog: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1681,7 +1693,7 @@ Whether the user can modify account users.
 Whether the user can view activity logs.
 
 <h4 class="pdoc-member-header" id="User-accountViewInvoices">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L68">property <b>accountViewInvoices</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L68">property <b>accountViewInvoices</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountViewInvoices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1689,7 +1701,7 @@ Whether the user can view activity logs.
 Whether the user can view invoices.
 
 <h4 class="pdoc-member-header" id="User-dataManageDatafeeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L72">property <b>dataManageDatafeeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L72">property <b>dataManageDatafeeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataManageDatafeeds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1697,7 +1709,7 @@ Whether the user can view invoices.
 Whether the user can modify data feeds.
 
 <h4 class="pdoc-member-header" id="User-dataManageDatasources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L76">property <b>dataManageDatasources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L76">property <b>dataManageDatasources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataManageDatasources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1705,7 +1717,7 @@ Whether the user can modify data feeds.
 Whether the user can modify data sources.
 
 <h4 class="pdoc-member-header" id="User-dataPushToDatafeeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L80">property <b>dataPushToDatafeeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L80">property <b>dataPushToDatafeeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataPushToDatafeeds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1713,7 +1725,7 @@ Whether the user can modify data sources.
 Whether the user can publish to data feeds.
 
 <h4 class="pdoc-member-header" id="User-dhcpManageDhcp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L85">property <b>dhcpManageDhcp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L85">property <b>dhcpManageDhcp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dhcpManageDhcp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1722,7 +1734,7 @@ Whether the user can manage DHCP.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="User-dhcpViewDhcp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L90">property <b>dhcpViewDhcp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L90">property <b>dhcpViewDhcp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dhcpViewDhcp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1731,7 +1743,7 @@ Whether the user can view DHCP.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="User-dnsManageZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L94">property <b>dnsManageZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L94">property <b>dnsManageZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsManageZones: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1739,7 +1751,7 @@ Only relevant for the DDI product.
 Whether the user can modify the accounts zones.
 
 <h4 class="pdoc-member-header" id="User-dnsViewZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L98">property <b>dnsViewZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L98">property <b>dnsViewZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsViewZones: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1747,7 +1759,7 @@ Whether the user can modify the accounts zones.
 Whether the user can view the accounts zones.
 
 <h4 class="pdoc-member-header" id="User-dnsZonesAllowByDefault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L102">property <b>dnsZonesAllowByDefault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L102">property <b>dnsZonesAllowByDefault</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsZonesAllowByDefault: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1755,7 +1767,7 @@ Whether the user can view the accounts zones.
 If true, enable the `dnsZonesAllow` list, otherwise enable the `dnsZonesDeny` list.
 
 <h4 class="pdoc-member-header" id="User-dnsZonesAllows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L106">property <b>dnsZonesAllows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L106">property <b>dnsZonesAllows</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsZonesAllows: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1763,7 +1775,7 @@ If true, enable the `dnsZonesAllow` list, otherwise enable the `dnsZonesDeny` li
 List of zones that the user may access.
 
 <h4 class="pdoc-member-header" id="User-dnsZonesDenies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L110">property <b>dnsZonesDenies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L110">property <b>dnsZonesDenies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsZonesDenies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1771,7 +1783,7 @@ List of zones that the user may access.
 List of zones that the user may not access.
 
 <h4 class="pdoc-member-header" id="User-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L114">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L114">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1779,7 +1791,7 @@ List of zones that the user may not access.
 The email address of the user.
 
 <h4 class="pdoc-member-header" id="User-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1788,7 +1800,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="User-ipWhitelistStrict">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L118">property <b>ipWhitelistStrict</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L118">property <b>ipWhitelistStrict</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipWhitelistStrict: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1796,7 +1808,7 @@ deployments and may be missing (undefined) during planning phases.
 Sets exclusivity on this IP whitelist.
 
 <h4 class="pdoc-member-header" id="User-ipWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L122">property <b>ipWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L122">property <b>ipWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipWhitelists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1804,7 +1816,7 @@ Sets exclusivity on this IP whitelist.
 The IP addresses to whitelist for this key.
 
 <h4 class="pdoc-member-header" id="User-ipamManageIpam">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L127">property <b>ipamManageIpam</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L127">property <b>ipamManageIpam</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipamManageIpam: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1813,12 +1825,12 @@ Whether the user can manage IPAM.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="User-ipamViewIpam">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L128">property <b>ipamViewIpam</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L128">property <b>ipamViewIpam</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipamViewIpam: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="User-monitoringManageJobs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L132">property <b>monitoringManageJobs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L132">property <b>monitoringManageJobs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>monitoringManageJobs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1826,7 +1838,7 @@ Only relevant for the DDI product.
 Whether the user can modify monitoring jobs.
 
 <h4 class="pdoc-member-header" id="User-monitoringManageLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L136">property <b>monitoringManageLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L136">property <b>monitoringManageLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>monitoringManageLists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1834,7 +1846,7 @@ Whether the user can modify monitoring jobs.
 Whether the user can modify notification lists.
 
 <h4 class="pdoc-member-header" id="User-monitoringViewJobs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L140">property <b>monitoringViewJobs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L140">property <b>monitoringViewJobs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>monitoringViewJobs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1842,7 +1854,7 @@ Whether the user can modify notification lists.
 Whether the user can view monitoring jobs.
 
 <h4 class="pdoc-member-header" id="User-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L144">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L144">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1850,7 +1862,7 @@ Whether the user can view monitoring jobs.
 The free form name of the user.
 
 <h4 class="pdoc-member-header" id="User-notify">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L148">property <b>notify</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L148">property <b>notify</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notify: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1858,7 +1870,7 @@ The free form name of the user.
 Whether or not to notify the user of specified events. Only `billing` is available currently.
 
 <h4 class="pdoc-member-header" id="User-securityManageActiveDirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L153">property <b>securityManageActiveDirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L153">property <b>securityManageActiveDirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityManageActiveDirectory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1867,7 +1879,7 @@ Whether the user can manage global active directory.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="User-securityManageGlobal2fa">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L157">property <b>securityManageGlobal2fa</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L157">property <b>securityManageGlobal2fa</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityManageGlobal2fa: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1875,7 +1887,7 @@ Only relevant for the DDI product.
 Whether the user can manage global two factor authentication.
 
 <h4 class="pdoc-member-header" id="User-teams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L161">property <b>teams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L161">property <b>teams</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>teams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1883,7 +1895,7 @@ Whether the user can manage global two factor authentication.
 The teams that the user belongs to.
 
 <h4 class="pdoc-member-header" id="User-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1892,7 +1904,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="User-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L165">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L165">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1900,14 +1912,27 @@ deployments.
 The users login name.
 
 <h3 class="pdoc-module-header" id="Zone" data-link-title="Zone">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L21">
         Resource <strong>Zone</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Zone</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+#### Import
+
+```sh
+ $ pulumi import ns1:index/zone:Zone <name> <zone>`
+```
+
+ So for the example above
+
+```sh
+ $ pulumi import ns1:index/zone:Zone example terraform.example.io`
+```
+
 <h4 class="pdoc-member-header" id="Zone-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L105"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L117"> <b>constructor</b></a>
 </h4>
 
 
@@ -1921,7 +1946,7 @@ Create a Zone resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Zone-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L31">method <b>get</b></a>
 </h4>
 
 
@@ -1932,14 +1957,14 @@ Get an existing Zone resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Zone-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L21">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Zone-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L42">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1950,7 +1975,7 @@ Returns true if the given object is an instance of Zone.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Zone-additionalPrimaries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L41">property <b>additionalPrimaries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L53">property <b>additionalPrimaries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>additionalPrimaries: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1959,12 +1984,12 @@ List of additional IPv4 addresses for the primary
 zone. Conflicts with `secondaries`.
 
 <h4 class="pdoc-member-header" id="Zone-autogenerateNsRecord">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L42">property <b>autogenerateNsRecord</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L54">property <b>autogenerateNsRecord</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autogenerateNsRecord: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Zone-dnsServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L46">property <b>dnsServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L58">property <b>dnsServers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsServers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1972,7 +1997,7 @@ zone. Conflicts with `secondaries`.
 (Computed) Authoritative Name Servers.
 
 <h4 class="pdoc-member-header" id="Zone-dnssec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L52">property <b>dnssec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L64">property <b>dnssec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnssec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1982,7 +2007,7 @@ Note that DNSSEC must be enabled on the account by support for this to be set
 to `true`.
 
 <h4 class="pdoc-member-header" id="Zone-expiry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L57">property <b>expiry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L69">property <b>expiry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>expiry: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1991,7 +2016,7 @@ The SOA Expiry. Conflicts with `primary` and
 `additionalPrimaries` (default must be accepted).
 
 <h4 class="pdoc-member-header" id="Zone-hostmaster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L61">property <b>hostmaster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L73">property <b>hostmaster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hostmaster: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1999,7 +2024,7 @@ The SOA Expiry. Conflicts with `primary` and
 (Computed) The SOA Hostmaster.
 
 <h4 class="pdoc-member-header" id="Zone-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L21">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2008,7 +2033,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Zone-link">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L65">property <b>link</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L77">property <b>link</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>link: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2016,7 +2041,7 @@ deployments and may be missing (undefined) during planning phases.
 The target zone(domain name) to link to.
 
 <h4 class="pdoc-member-header" id="Zone-networks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L71">property <b>networks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L83">property <b>networks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[]&gt;;</code></pre>
@@ -2026,7 +2051,7 @@ should be made available. Default is network 0, the primary NSONE Global
 Network. Normally, you should not have to worry about this.
 
 <h4 class="pdoc-member-header" id="Zone-nxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L76">property <b>nxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L88">property <b>nxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nxTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2035,7 +2060,7 @@ The SOA NX TTL. Conflicts with `primary` and
 `additionalPrimaries` (default must be accepted).
 
 <h4 class="pdoc-member-header" id="Zone-primary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L81">property <b>primary</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L93">property <b>primary</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>primary: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2044,7 +2069,7 @@ The primary zones' IPv4 address. This makes the zone a
 secondary. Conflicts with `secondaries`.
 
 <h4 class="pdoc-member-header" id="Zone-refresh">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L86">property <b>refresh</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L98">property <b>refresh</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>refresh: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2053,7 +2078,7 @@ The SOA Refresh. Conflicts with `primary` and
 `additionalPrimaries` (default must be accepted).
 
 <h4 class="pdoc-member-header" id="Zone-retry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L91">property <b>retry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L103">property <b>retry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retry: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2062,7 +2087,7 @@ The SOA Retry. Conflicts with `primary` and
 `additionalPrimaries` (default must be accepted).
 
 <h4 class="pdoc-member-header" id="Zone-secondaries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L97">property <b>secondaries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L109">property <b>secondaries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secondaries: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/ns1/types/output/#ZoneSecondary'>ZoneSecondary</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2072,7 +2097,7 @@ primary. Conflicts with `primary` and `additionalPrimaries`.
 Secondaries is documented below.
 
 <h4 class="pdoc-member-header" id="Zone-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L101">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L113">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2080,7 +2105,7 @@ Secondaries is documented below.
 The SOA TTL.
 
 <h4 class="pdoc-member-header" id="Zone-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L21">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2089,7 +2114,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Zone-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L105">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L117">property <b>zone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>zone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2099,7 +2124,7 @@ The domain name of the zone.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getDNSSec" data-link-title="getDNSSec">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getDNSSec.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getDNSSec.ts#L27">
         Function <strong>getDNSSec</strong>
     </a>
 </h3>
@@ -2127,7 +2152,7 @@ const exampleDNSSec = exampleZone.zone.apply(zone => ns1.getDNSSec({
 ```
 
 <h3 class="pdoc-module-header" id="getRecord" data-link-title="getRecord">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getRecord.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getRecord.ts#L27">
         Function <strong>getRecord</strong>
     </a>
 </h3>
@@ -2155,7 +2180,7 @@ const example = pulumi.output(ns1.getRecord({
 ```
 
 <h3 class="pdoc-module-header" id="getZone" data-link-title="getZone">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getZone.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getZone.ts#L25">
         Function <strong>getZone</strong>
     </a>
 </h3>
@@ -2183,7 +2208,7 @@ const example = pulumi.output(ns1.getZone({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="APIKeyArgs" data-link-title="APIKeyArgs">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L385">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L385">
         interface <strong>APIKeyArgs</strong>
     </a>
 </h3>
@@ -2193,7 +2218,7 @@ const example = pulumi.output(ns1.getZone({
 The set of arguments for constructing a APIKey resource.
 
 <h4 class="pdoc-member-header" id="APIKeyArgs-accountManageAccountSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L389">property <b>accountManageAccountSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L389">property <b>accountManageAccountSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountManageAccountSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2201,7 +2226,7 @@ The set of arguments for constructing a APIKey resource.
 Whether the apikey can modify account settings.
 
 <h4 class="pdoc-member-header" id="APIKeyArgs-accountManageApikeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L393">property <b>accountManageApikeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L393">property <b>accountManageApikeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountManageApikeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2209,7 +2234,7 @@ Whether the apikey can modify account settings.
 Whether the apikey can modify account apikeys.
 
 <h4 class="pdoc-member-header" id="APIKeyArgs-accountManagePaymentMethods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L397">property <b>accountManagePaymentMethods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L397">property <b>accountManagePaymentMethods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountManagePaymentMethods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2217,7 +2242,7 @@ Whether the apikey can modify account apikeys.
 Whether the apikey can modify account payment methods.
 
 <h4 class="pdoc-member-header" id="APIKeyArgs-accountManagePlan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L403">property <b>accountManagePlan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L403">property <b>accountManagePlan</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2229,7 +2254,7 @@ obsolete, should no longer be used
 Whether the apikey can modify the account plan.
 
 <h4 class="pdoc-member-header" id="APIKeyArgs-accountManageTeams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L407">property <b>accountManageTeams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L407">property <b>accountManageTeams</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountManageTeams?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2237,7 +2262,7 @@ Whether the apikey can modify the account plan.
 Whether the apikey can modify other teams in the account.
 
 <h4 class="pdoc-member-header" id="APIKeyArgs-accountManageUsers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L411">property <b>accountManageUsers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L411">property <b>accountManageUsers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountManageUsers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2245,7 +2270,7 @@ Whether the apikey can modify other teams in the account.
 Whether the apikey can modify account users.
 
 <h4 class="pdoc-member-header" id="APIKeyArgs-accountViewActivityLog">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L415">property <b>accountViewActivityLog</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L415">property <b>accountViewActivityLog</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountViewActivityLog?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2253,7 +2278,7 @@ Whether the apikey can modify account users.
 Whether the apikey can view activity logs.
 
 <h4 class="pdoc-member-header" id="APIKeyArgs-accountViewInvoices">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L419">property <b>accountViewInvoices</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L419">property <b>accountViewInvoices</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountViewInvoices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2261,7 +2286,7 @@ Whether the apikey can view activity logs.
 Whether the apikey can view invoices.
 
 <h4 class="pdoc-member-header" id="APIKeyArgs-dataManageDatafeeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L423">property <b>dataManageDatafeeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L423">property <b>dataManageDatafeeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataManageDatafeeds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2269,7 +2294,7 @@ Whether the apikey can view invoices.
 Whether the apikey can modify data feeds.
 
 <h4 class="pdoc-member-header" id="APIKeyArgs-dataManageDatasources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L427">property <b>dataManageDatasources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L427">property <b>dataManageDatasources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataManageDatasources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2277,7 +2302,7 @@ Whether the apikey can modify data feeds.
 Whether the apikey can modify data sources.
 
 <h4 class="pdoc-member-header" id="APIKeyArgs-dataPushToDatafeeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L431">property <b>dataPushToDatafeeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L431">property <b>dataPushToDatafeeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataPushToDatafeeds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2285,7 +2310,7 @@ Whether the apikey can modify data sources.
 Whether the apikey can publish to data feeds.
 
 <h4 class="pdoc-member-header" id="APIKeyArgs-dhcpManageDhcp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L436">property <b>dhcpManageDhcp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L436">property <b>dhcpManageDhcp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dhcpManageDhcp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2294,7 +2319,7 @@ Whether the apikey can manage DHCP.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="APIKeyArgs-dhcpViewDhcp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L441">property <b>dhcpViewDhcp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L441">property <b>dhcpViewDhcp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dhcpViewDhcp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2303,7 +2328,7 @@ Whether the apikey can view DHCP.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="APIKeyArgs-dnsManageZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L445">property <b>dnsManageZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L445">property <b>dnsManageZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsManageZones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2311,7 +2336,7 @@ Only relevant for the DDI product.
 Whether the apikey can modify the accounts zones.
 
 <h4 class="pdoc-member-header" id="APIKeyArgs-dnsViewZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L449">property <b>dnsViewZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L449">property <b>dnsViewZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsViewZones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2319,7 +2344,7 @@ Whether the apikey can modify the accounts zones.
 Whether the apikey can view the accounts zones.
 
 <h4 class="pdoc-member-header" id="APIKeyArgs-dnsZonesAllowByDefault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L453">property <b>dnsZonesAllowByDefault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L453">property <b>dnsZonesAllowByDefault</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsZonesAllowByDefault?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2327,7 +2352,7 @@ Whether the apikey can view the accounts zones.
 If true, enable the `dnsZonesAllow` list, otherwise enable the `dnsZonesDeny` list.
 
 <h4 class="pdoc-member-header" id="APIKeyArgs-dnsZonesAllows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L457">property <b>dnsZonesAllows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L457">property <b>dnsZonesAllows</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsZonesAllows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2335,7 +2360,7 @@ If true, enable the `dnsZonesAllow` list, otherwise enable the `dnsZonesDeny` li
 List of zones that the apikey may access.
 
 <h4 class="pdoc-member-header" id="APIKeyArgs-dnsZonesDenies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L461">property <b>dnsZonesDenies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L461">property <b>dnsZonesDenies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsZonesDenies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2343,7 +2368,7 @@ List of zones that the apikey may access.
 List of zones that the apikey may not access.
 
 <h4 class="pdoc-member-header" id="APIKeyArgs-ipWhitelistStrict">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L465">property <b>ipWhitelistStrict</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L465">property <b>ipWhitelistStrict</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipWhitelistStrict?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2351,7 +2376,7 @@ List of zones that the apikey may not access.
 Sets exclusivity on this IP whitelist.
 
 <h4 class="pdoc-member-header" id="APIKeyArgs-ipWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L469">property <b>ipWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L469">property <b>ipWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipWhitelists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2359,7 +2384,7 @@ Sets exclusivity on this IP whitelist.
 The IP addresses to whitelist for this key.
 
 <h4 class="pdoc-member-header" id="APIKeyArgs-ipamManageIpam">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L474">property <b>ipamManageIpam</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L474">property <b>ipamManageIpam</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipamManageIpam?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2368,7 +2393,7 @@ Whether the apikey can manage IPAM.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="APIKeyArgs-ipamViewIpam">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L479">property <b>ipamViewIpam</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L479">property <b>ipamViewIpam</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipamViewIpam?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2377,7 +2402,7 @@ Whether the apikey can view IPAM.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="APIKeyArgs-monitoringManageJobs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L483">property <b>monitoringManageJobs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L483">property <b>monitoringManageJobs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringManageJobs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2385,7 +2410,7 @@ Only relevant for the DDI product.
 Whether the apikey can modify monitoring jobs.
 
 <h4 class="pdoc-member-header" id="APIKeyArgs-monitoringManageLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L487">property <b>monitoringManageLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L487">property <b>monitoringManageLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringManageLists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2393,7 +2418,7 @@ Whether the apikey can modify monitoring jobs.
 Whether the apikey can modify notification lists.
 
 <h4 class="pdoc-member-header" id="APIKeyArgs-monitoringViewJobs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L491">property <b>monitoringViewJobs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L491">property <b>monitoringViewJobs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringViewJobs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2401,7 +2426,7 @@ Whether the apikey can modify notification lists.
 Whether the apikey can view monitoring jobs.
 
 <h4 class="pdoc-member-header" id="APIKeyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L495">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L495">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2409,7 +2434,7 @@ Whether the apikey can view monitoring jobs.
 The free form name of the apikey.
 
 <h4 class="pdoc-member-header" id="APIKeyArgs-securityManageActiveDirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L500">property <b>securityManageActiveDirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L500">property <b>securityManageActiveDirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityManageActiveDirectory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2418,7 +2443,7 @@ Whether the apikey can manage global active directory.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="APIKeyArgs-securityManageGlobal2fa">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L504">property <b>securityManageGlobal2fa</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L504">property <b>securityManageGlobal2fa</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityManageGlobal2fa?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2426,7 +2451,7 @@ Only relevant for the DDI product.
 Whether the apikey can manage global two factor authentication.
 
 <h4 class="pdoc-member-header" id="APIKeyArgs-teams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L508">property <b>teams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L508">property <b>teams</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>teams?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2434,7 +2459,7 @@ Whether the apikey can manage global two factor authentication.
 The teams that the apikey belongs to.
 
 <h3 class="pdoc-module-header" id="APIKeyState" data-link-title="APIKeyState">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L252">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L252">
         interface <strong>APIKeyState</strong>
     </a>
 </h3>
@@ -2444,7 +2469,7 @@ The teams that the apikey belongs to.
 Input properties used for looking up and filtering APIKey resources.
 
 <h4 class="pdoc-member-header" id="APIKeyState-accountManageAccountSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L256">property <b>accountManageAccountSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L256">property <b>accountManageAccountSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountManageAccountSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2452,7 +2477,7 @@ Input properties used for looking up and filtering APIKey resources.
 Whether the apikey can modify account settings.
 
 <h4 class="pdoc-member-header" id="APIKeyState-accountManageApikeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L260">property <b>accountManageApikeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L260">property <b>accountManageApikeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountManageApikeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2460,7 +2485,7 @@ Whether the apikey can modify account settings.
 Whether the apikey can modify account apikeys.
 
 <h4 class="pdoc-member-header" id="APIKeyState-accountManagePaymentMethods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L264">property <b>accountManagePaymentMethods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L264">property <b>accountManagePaymentMethods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountManagePaymentMethods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2468,7 +2493,7 @@ Whether the apikey can modify account apikeys.
 Whether the apikey can modify account payment methods.
 
 <h4 class="pdoc-member-header" id="APIKeyState-accountManagePlan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L270">property <b>accountManagePlan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L270">property <b>accountManagePlan</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2480,7 +2505,7 @@ obsolete, should no longer be used
 Whether the apikey can modify the account plan.
 
 <h4 class="pdoc-member-header" id="APIKeyState-accountManageTeams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L274">property <b>accountManageTeams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L274">property <b>accountManageTeams</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountManageTeams?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2488,7 +2513,7 @@ Whether the apikey can modify the account plan.
 Whether the apikey can modify other teams in the account.
 
 <h4 class="pdoc-member-header" id="APIKeyState-accountManageUsers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L278">property <b>accountManageUsers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L278">property <b>accountManageUsers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountManageUsers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2496,7 +2521,7 @@ Whether the apikey can modify other teams in the account.
 Whether the apikey can modify account users.
 
 <h4 class="pdoc-member-header" id="APIKeyState-accountViewActivityLog">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L282">property <b>accountViewActivityLog</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L282">property <b>accountViewActivityLog</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountViewActivityLog?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2504,7 +2529,7 @@ Whether the apikey can modify account users.
 Whether the apikey can view activity logs.
 
 <h4 class="pdoc-member-header" id="APIKeyState-accountViewInvoices">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L286">property <b>accountViewInvoices</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L286">property <b>accountViewInvoices</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountViewInvoices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2512,7 +2537,7 @@ Whether the apikey can view activity logs.
 Whether the apikey can view invoices.
 
 <h4 class="pdoc-member-header" id="APIKeyState-dataManageDatafeeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L290">property <b>dataManageDatafeeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L290">property <b>dataManageDatafeeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataManageDatafeeds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2520,7 +2545,7 @@ Whether the apikey can view invoices.
 Whether the apikey can modify data feeds.
 
 <h4 class="pdoc-member-header" id="APIKeyState-dataManageDatasources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L294">property <b>dataManageDatasources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L294">property <b>dataManageDatasources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataManageDatasources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2528,7 +2553,7 @@ Whether the apikey can modify data feeds.
 Whether the apikey can modify data sources.
 
 <h4 class="pdoc-member-header" id="APIKeyState-dataPushToDatafeeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L298">property <b>dataPushToDatafeeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L298">property <b>dataPushToDatafeeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataPushToDatafeeds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2536,7 +2561,7 @@ Whether the apikey can modify data sources.
 Whether the apikey can publish to data feeds.
 
 <h4 class="pdoc-member-header" id="APIKeyState-dhcpManageDhcp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L303">property <b>dhcpManageDhcp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L303">property <b>dhcpManageDhcp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dhcpManageDhcp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2545,7 +2570,7 @@ Whether the apikey can manage DHCP.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="APIKeyState-dhcpViewDhcp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L308">property <b>dhcpViewDhcp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L308">property <b>dhcpViewDhcp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dhcpViewDhcp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2554,7 +2579,7 @@ Whether the apikey can view DHCP.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="APIKeyState-dnsManageZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L312">property <b>dnsManageZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L312">property <b>dnsManageZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsManageZones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2562,7 +2587,7 @@ Only relevant for the DDI product.
 Whether the apikey can modify the accounts zones.
 
 <h4 class="pdoc-member-header" id="APIKeyState-dnsViewZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L316">property <b>dnsViewZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L316">property <b>dnsViewZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsViewZones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2570,7 +2595,7 @@ Whether the apikey can modify the accounts zones.
 Whether the apikey can view the accounts zones.
 
 <h4 class="pdoc-member-header" id="APIKeyState-dnsZonesAllowByDefault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L320">property <b>dnsZonesAllowByDefault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L320">property <b>dnsZonesAllowByDefault</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsZonesAllowByDefault?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2578,7 +2603,7 @@ Whether the apikey can view the accounts zones.
 If true, enable the `dnsZonesAllow` list, otherwise enable the `dnsZonesDeny` list.
 
 <h4 class="pdoc-member-header" id="APIKeyState-dnsZonesAllows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L324">property <b>dnsZonesAllows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L324">property <b>dnsZonesAllows</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsZonesAllows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2586,7 +2611,7 @@ If true, enable the `dnsZonesAllow` list, otherwise enable the `dnsZonesDeny` li
 List of zones that the apikey may access.
 
 <h4 class="pdoc-member-header" id="APIKeyState-dnsZonesDenies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L328">property <b>dnsZonesDenies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L328">property <b>dnsZonesDenies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsZonesDenies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2594,7 +2619,7 @@ List of zones that the apikey may access.
 List of zones that the apikey may not access.
 
 <h4 class="pdoc-member-header" id="APIKeyState-ipWhitelistStrict">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L332">property <b>ipWhitelistStrict</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L332">property <b>ipWhitelistStrict</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipWhitelistStrict?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2602,7 +2627,7 @@ List of zones that the apikey may not access.
 Sets exclusivity on this IP whitelist.
 
 <h4 class="pdoc-member-header" id="APIKeyState-ipWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L336">property <b>ipWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L336">property <b>ipWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipWhitelists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2610,7 +2635,7 @@ Sets exclusivity on this IP whitelist.
 The IP addresses to whitelist for this key.
 
 <h4 class="pdoc-member-header" id="APIKeyState-ipamManageIpam">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L341">property <b>ipamManageIpam</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L341">property <b>ipamManageIpam</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipamManageIpam?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2619,7 +2644,7 @@ Whether the apikey can manage IPAM.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="APIKeyState-ipamViewIpam">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L346">property <b>ipamViewIpam</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L346">property <b>ipamViewIpam</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipamViewIpam?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2628,7 +2653,7 @@ Whether the apikey can view IPAM.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="APIKeyState-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L350">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L350">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2636,7 +2661,7 @@ Only relevant for the DDI product.
 The apikeys authentication token.
 
 <h4 class="pdoc-member-header" id="APIKeyState-monitoringManageJobs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L354">property <b>monitoringManageJobs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L354">property <b>monitoringManageJobs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringManageJobs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2644,7 +2669,7 @@ The apikeys authentication token.
 Whether the apikey can modify monitoring jobs.
 
 <h4 class="pdoc-member-header" id="APIKeyState-monitoringManageLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L358">property <b>monitoringManageLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L358">property <b>monitoringManageLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringManageLists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2652,7 +2677,7 @@ Whether the apikey can modify monitoring jobs.
 Whether the apikey can modify notification lists.
 
 <h4 class="pdoc-member-header" id="APIKeyState-monitoringViewJobs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L362">property <b>monitoringViewJobs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L362">property <b>monitoringViewJobs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringViewJobs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2660,7 +2685,7 @@ Whether the apikey can modify notification lists.
 Whether the apikey can view monitoring jobs.
 
 <h4 class="pdoc-member-header" id="APIKeyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L366">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L366">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2668,7 +2693,7 @@ Whether the apikey can view monitoring jobs.
 The free form name of the apikey.
 
 <h4 class="pdoc-member-header" id="APIKeyState-securityManageActiveDirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L371">property <b>securityManageActiveDirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L371">property <b>securityManageActiveDirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityManageActiveDirectory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2677,7 +2702,7 @@ Whether the apikey can manage global active directory.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="APIKeyState-securityManageGlobal2fa">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L375">property <b>securityManageGlobal2fa</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L375">property <b>securityManageGlobal2fa</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityManageGlobal2fa?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2685,7 +2710,7 @@ Only relevant for the DDI product.
 Whether the apikey can manage global two factor authentication.
 
 <h4 class="pdoc-member-header" id="APIKeyState-teams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/apikey.ts#L379">property <b>teams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/apikey.ts#L379">property <b>teams</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>teams?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2693,7 +2718,7 @@ Whether the apikey can manage global two factor authentication.
 The teams that the apikey belongs to.
 
 <h3 class="pdoc-module-header" id="DataFeedArgs" data-link-title="DataFeedArgs">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataFeed.ts#L135">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataFeed.ts#L135">
         interface <strong>DataFeedArgs</strong>
     </a>
 </h3>
@@ -2703,7 +2728,7 @@ The teams that the apikey belongs to.
 The set of arguments for constructing a DataFeed resource.
 
 <h4 class="pdoc-member-header" id="DataFeedArgs-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataFeed.ts#L140">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataFeed.ts#L140">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>config?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2712,7 +2737,7 @@ The feeds configuration matching the specification in
 `feedConfig` from /data/sourcetypes.
 
 <h4 class="pdoc-member-header" id="DataFeedArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataFeed.ts#L144">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataFeed.ts#L144">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2720,7 +2745,7 @@ The feeds configuration matching the specification in
 The free form name of the data feed.
 
 <h4 class="pdoc-member-header" id="DataFeedArgs-sourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataFeed.ts#L148">property <b>sourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataFeed.ts#L148">property <b>sourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2728,7 +2753,7 @@ The free form name of the data feed.
 The data source id that this feed is connected to.
 
 <h3 class="pdoc-module-header" id="DataFeedState" data-link-title="DataFeedState">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataFeed.ts#L116">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataFeed.ts#L116">
         interface <strong>DataFeedState</strong>
     </a>
 </h3>
@@ -2738,7 +2763,7 @@ The data source id that this feed is connected to.
 Input properties used for looking up and filtering DataFeed resources.
 
 <h4 class="pdoc-member-header" id="DataFeedState-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataFeed.ts#L121">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataFeed.ts#L121">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>config?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2747,7 +2772,7 @@ The feeds configuration matching the specification in
 `feedConfig` from /data/sourcetypes.
 
 <h4 class="pdoc-member-header" id="DataFeedState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataFeed.ts#L125">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataFeed.ts#L125">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2755,7 +2780,7 @@ The feeds configuration matching the specification in
 The free form name of the data feed.
 
 <h4 class="pdoc-member-header" id="DataFeedState-sourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataFeed.ts#L129">property <b>sourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataFeed.ts#L129">property <b>sourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2763,7 +2788,7 @@ The free form name of the data feed.
 The data source id that this feed is connected to.
 
 <h3 class="pdoc-module-header" id="DataSourceArgs" data-link-title="DataSourceArgs">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataSource.ts#L123">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataSource.ts#L123">
         interface <strong>DataSourceArgs</strong>
     </a>
 </h3>
@@ -2773,7 +2798,7 @@ The data source id that this feed is connected to.
 The set of arguments for constructing a DataSource resource.
 
 <h4 class="pdoc-member-header" id="DataSourceArgs-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataSource.ts#L128">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataSource.ts#L128">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>config?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2782,7 +2807,7 @@ The data source configuration, determined by its type,
 matching the specification in `config` from /data/sourcetypes.
 
 <h4 class="pdoc-member-header" id="DataSourceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataSource.ts#L132">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataSource.ts#L132">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2790,7 +2815,7 @@ matching the specification in `config` from /data/sourcetypes.
 The free form name of the data source.
 
 <h4 class="pdoc-member-header" id="DataSourceArgs-sourcetype">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataSource.ts#L136">property <b>sourcetype</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataSource.ts#L136">property <b>sourcetype</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourcetype: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2798,7 +2823,7 @@ The free form name of the data source.
 The data sources type, listed in API endpoint https://api.nsone.net/v1/data/sourcetypes.
 
 <h3 class="pdoc-module-header" id="DataSourceState" data-link-title="DataSourceState">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataSource.ts#L104">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataSource.ts#L104">
         interface <strong>DataSourceState</strong>
     </a>
 </h3>
@@ -2808,7 +2833,7 @@ The data sources type, listed in API endpoint https://api.nsone.net/v1/data/sour
 Input properties used for looking up and filtering DataSource resources.
 
 <h4 class="pdoc-member-header" id="DataSourceState-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataSource.ts#L109">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataSource.ts#L109">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>config?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2817,7 +2842,7 @@ The data source configuration, determined by its type,
 matching the specification in `config` from /data/sourcetypes.
 
 <h4 class="pdoc-member-header" id="DataSourceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataSource.ts#L113">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataSource.ts#L113">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2825,7 +2850,7 @@ matching the specification in `config` from /data/sourcetypes.
 The free form name of the data source.
 
 <h4 class="pdoc-member-header" id="DataSourceState-sourcetype">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/dataSource.ts#L117">property <b>sourcetype</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/dataSource.ts#L117">property <b>sourcetype</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourcetype?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2833,7 +2858,7 @@ The free form name of the data source.
 The data sources type, listed in API endpoint https://api.nsone.net/v1/data/sourcetypes.
 
 <h3 class="pdoc-module-header" id="GetDNSSecArgs" data-link-title="GetDNSSecArgs">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getDNSSec.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getDNSSec.ts#L43">
         interface <strong>GetDNSSecArgs</strong>
     </a>
 </h3>
@@ -2843,7 +2868,7 @@ The data sources type, listed in API endpoint https://api.nsone.net/v1/data/sour
 A collection of arguments for invoking getDNSSec.
 
 <h4 class="pdoc-member-header" id="GetDNSSecArgs-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getDNSSec.ts#L48">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getDNSSec.ts#L47">property <b>zone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2851,7 +2876,7 @@ A collection of arguments for invoking getDNSSec.
 The name of the zone to get DNSSEC details for.
 
 <h3 class="pdoc-module-header" id="GetDNSSecResult" data-link-title="GetDNSSecResult">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getDNSSec.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getDNSSec.ts#L53">
         interface <strong>GetDNSSecResult</strong>
     </a>
 </h3>
@@ -2861,7 +2886,7 @@ The name of the zone to get DNSSEC details for.
 A collection of values returned by getDNSSec.
 
 <h4 class="pdoc-member-header" id="GetDNSSecResult-delegation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getDNSSec.ts#L59">property <b>delegation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getDNSSec.ts#L58">property <b>delegation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>delegation: <a href='/docs/reference/pkg/nodejs/pulumi/ns1/types/output/#GetDNSSecDelegation'>GetDNSSecDelegation</a>;</code></pre>
@@ -2870,7 +2895,7 @@ A collection of values returned by getDNSSec.
 below.
 
 <h4 class="pdoc-member-header" id="GetDNSSecResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getDNSSec.ts#L63">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getDNSSec.ts#L62">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2878,7 +2903,7 @@ below.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDNSSecResult-keys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getDNSSec.ts#L67">property <b>keys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getDNSSec.ts#L66">property <b>keys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keys: <a href='/docs/reference/pkg/nodejs/pulumi/ns1/types/output/#GetDNSSecKeys'>GetDNSSecKeys</a>;</code></pre>
@@ -2886,12 +2911,12 @@ The provider-assigned unique ID for this managed resource.
 (Computed) - Keys field is documented below.
 
 <h4 class="pdoc-member-header" id="GetDNSSecResult-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getDNSSec.ts#L68">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getDNSSec.ts#L67">property <b>zone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="getEnv" data-link-title="getEnv">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/utilities.ts#L5">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/utilities.ts#L5">
         function <strong>getEnv</strong>
     </a>
 </h3>
@@ -2900,7 +2925,7 @@ The provider-assigned unique ID for this managed resource.
 <pre class="highlight"><code><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvBoolean" data-link-title="getEnvBoolean">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/utilities.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/utilities.ts#L15">
         function <strong>getEnvBoolean</strong>
     </a>
 </h3>
@@ -2909,7 +2934,7 @@ The provider-assigned unique ID for this managed resource.
 <pre class="highlight"><code><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvNumber" data-link-title="getEnvNumber">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/utilities.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/utilities.ts#L30">
         function <strong>getEnvNumber</strong>
     </a>
 </h3>
@@ -2918,7 +2943,7 @@ The provider-assigned unique ID for this managed resource.
 <pre class="highlight"><code><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="GetRecordArgs" data-link-title="GetRecordArgs">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getRecord.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getRecord.ts#L45">
         interface <strong>GetRecordArgs</strong>
     </a>
 </h3>
@@ -2928,7 +2953,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getRecord.
 
 <h4 class="pdoc-member-header" id="GetRecordArgs-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getRecord.ts#L50">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getRecord.ts#L49">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2936,7 +2961,7 @@ A collection of arguments for invoking getRecord.
 The records' domain.
 
 <h4 class="pdoc-member-header" id="GetRecordArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getRecord.ts#L54">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getRecord.ts#L53">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2944,7 +2969,7 @@ The records' domain.
 The records' RR type.
 
 <h4 class="pdoc-member-header" id="GetRecordArgs-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getRecord.ts#L58">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getRecord.ts#L57">property <b>zone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2952,7 +2977,7 @@ The records' RR type.
 The zone the record belongs to.
 
 <h3 class="pdoc-module-header" id="GetRecordResult" data-link-title="GetRecordResult">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getRecord.ts#L64">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getRecord.ts#L63">
         interface <strong>GetRecordResult</strong>
     </a>
 </h3>
@@ -2962,7 +2987,7 @@ The zone the record belongs to.
 A collection of values returned by getRecord.
 
 <h4 class="pdoc-member-header" id="GetRecordResult-answers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getRecord.ts#L68">property <b>answers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getRecord.ts#L67">property <b>answers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>answers: <a href='/docs/reference/pkg/nodejs/pulumi/ns1/types/output/#GetRecordAnswer'>GetRecordAnswer</a>[];</code></pre>
@@ -2970,12 +2995,12 @@ A collection of values returned by getRecord.
 List of NS1 answers.
 
 <h4 class="pdoc-member-header" id="GetRecordResult-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getRecord.ts#L69">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getRecord.ts#L68">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRecordResult-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getRecord.ts#L73">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getRecord.ts#L72">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/ns1/types/output/#GetRecordFilter'>GetRecordFilter</a>[];</code></pre>
@@ -2983,7 +3008,7 @@ List of NS1 answers.
 List of NS1 filters.
 
 <h4 class="pdoc-member-header" id="GetRecordResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getRecord.ts#L77">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getRecord.ts#L76">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2991,7 +3016,7 @@ List of NS1 filters.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetRecordResult-link">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getRecord.ts#L81">property <b>link</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getRecord.ts#L80">property <b>link</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>link: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2999,7 +3024,7 @@ The provider-assigned unique ID for this managed resource.
 The target record this links to.
 
 <h4 class="pdoc-member-header" id="GetRecordResult-meta">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getRecord.ts#L85">property <b>meta</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getRecord.ts#L84">property <b>meta</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>meta: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -3007,7 +3032,7 @@ The target record this links to.
 Map of metadata
 
 <h4 class="pdoc-member-header" id="GetRecordResult-regions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getRecord.ts#L89">property <b>regions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getRecord.ts#L88">property <b>regions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regions: <a href='/docs/reference/pkg/nodejs/pulumi/ns1/types/output/#GetRecordRegion'>GetRecordRegion</a>[];</code></pre>
@@ -3015,12 +3040,12 @@ Map of metadata
 List of regions.
 
 <h4 class="pdoc-member-header" id="GetRecordResult-shortAnswers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getRecord.ts#L90">property <b>shortAnswers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getRecord.ts#L89">property <b>shortAnswers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shortAnswers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetRecordResult-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getRecord.ts#L94">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getRecord.ts#L93">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -3028,12 +3053,12 @@ List of regions.
 The records' time to live (in seconds).
 
 <h4 class="pdoc-member-header" id="GetRecordResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getRecord.ts#L95">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getRecord.ts#L94">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRecordResult-useClientSubnet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getRecord.ts#L99">property <b>useClientSubnet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getRecord.ts#L98">property <b>useClientSubnet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useClientSubnet: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -3041,12 +3066,12 @@ The records' time to live (in seconds).
 Whether to use EDNS client subnet data when available (in filter chain).
 
 <h4 class="pdoc-member-header" id="GetRecordResult-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getRecord.ts#L100">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getRecord.ts#L99">property <b>zone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="getVersion" data-link-title="getVersion">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/utilities.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/utilities.ts#L41">
         function <strong>getVersion</strong>
     </a>
 </h3>
@@ -3055,7 +3080,7 @@ Whether to use EDNS client subnet data when available (in filter chain).
 <pre class="highlight"><code><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="GetZoneArgs" data-link-title="GetZoneArgs">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getZone.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getZone.ts#L42">
         interface <strong>GetZoneArgs</strong>
     </a>
 </h3>
@@ -3065,7 +3090,7 @@ Whether to use EDNS client subnet data when available (in filter chain).
 A collection of arguments for invoking getZone.
 
 <h4 class="pdoc-member-header" id="GetZoneArgs-additionalPrimaries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getZone.ts#L48">property <b>additionalPrimaries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getZone.ts#L47">property <b>additionalPrimaries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalPrimaries?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3074,7 +3099,7 @@ List of additional IPv4 addresses for the primary
 zone.
 
 <h4 class="pdoc-member-header" id="GetZoneArgs-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getZone.ts#L52">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getZone.ts#L51">property <b>zone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3082,7 +3107,7 @@ zone.
 The domain name of the zone.
 
 <h3 class="pdoc-module-header" id="GetZoneResult" data-link-title="GetZoneResult">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getZone.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getZone.ts#L57">
         interface <strong>GetZoneResult</strong>
     </a>
 </h3>
@@ -3092,7 +3117,7 @@ The domain name of the zone.
 A collection of values returned by getZone.
 
 <h4 class="pdoc-member-header" id="GetZoneResult-additionalPrimaries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getZone.ts#L63">property <b>additionalPrimaries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getZone.ts#L62">property <b>additionalPrimaries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalPrimaries?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3101,7 +3126,7 @@ List of additional IPv4 addresses for the primary
 zone.
 
 <h4 class="pdoc-member-header" id="GetZoneResult-dnsServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getZone.ts#L67">property <b>dnsServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getZone.ts#L66">property <b>dnsServers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsServers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3109,7 +3134,7 @@ zone.
 Authoritative Name Servers.
 
 <h4 class="pdoc-member-header" id="GetZoneResult-dnssec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getZone.ts#L71">property <b>dnssec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getZone.ts#L70">property <b>dnssec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnssec: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -3117,7 +3142,7 @@ Authoritative Name Servers.
 Whether or not DNSSEC is enabled for the zone.
 
 <h4 class="pdoc-member-header" id="GetZoneResult-expiry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getZone.ts#L75">property <b>expiry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getZone.ts#L74">property <b>expiry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expiry: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -3125,7 +3150,7 @@ Whether or not DNSSEC is enabled for the zone.
 The SOA Expiry.
 
 <h4 class="pdoc-member-header" id="GetZoneResult-hostmaster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getZone.ts#L79">property <b>hostmaster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getZone.ts#L78">property <b>hostmaster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostmaster: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3133,7 +3158,7 @@ The SOA Expiry.
 The SOA Hostmaster.
 
 <h4 class="pdoc-member-header" id="GetZoneResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getZone.ts#L83">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getZone.ts#L82">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3141,7 +3166,7 @@ The SOA Hostmaster.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetZoneResult-link">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getZone.ts#L87">property <b>link</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getZone.ts#L86">property <b>link</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>link: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3149,7 +3174,7 @@ The provider-assigned unique ID for this managed resource.
 The linked target zone.
 
 <h4 class="pdoc-member-header" id="GetZoneResult-networks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getZone.ts#L92">property <b>networks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getZone.ts#L91">property <b>networks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networks: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[];</code></pre>
@@ -3158,7 +3183,7 @@ List of network IDs (`int`) for which the zone should be made
 available. Default is network 0, the primary NSONE Global Network.
 
 <h4 class="pdoc-member-header" id="GetZoneResult-nxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getZone.ts#L96">property <b>nxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getZone.ts#L95">property <b>nxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nxTtl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -3166,7 +3191,7 @@ available. Default is network 0, the primary NSONE Global Network.
 The SOA NX TTL.
 
 <h4 class="pdoc-member-header" id="GetZoneResult-primary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getZone.ts#L100">property <b>primary</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getZone.ts#L99">property <b>primary</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primary: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3174,7 +3199,7 @@ The SOA NX TTL.
 The primary zones' IPv4 address.
 
 <h4 class="pdoc-member-header" id="GetZoneResult-refresh">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getZone.ts#L104">property <b>refresh</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getZone.ts#L103">property <b>refresh</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>refresh: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -3182,7 +3207,7 @@ The primary zones' IPv4 address.
 The SOA Refresh.
 
 <h4 class="pdoc-member-header" id="GetZoneResult-retry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getZone.ts#L108">property <b>retry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getZone.ts#L107">property <b>retry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retry: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -3190,7 +3215,7 @@ The SOA Refresh.
 The SOA Retry.
 
 <h4 class="pdoc-member-header" id="GetZoneResult-secondaries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getZone.ts#L113">property <b>secondaries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getZone.ts#L112">property <b>secondaries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondaries: <a href='/docs/reference/pkg/nodejs/pulumi/ns1/types/output/#GetZoneSecondary'>GetZoneSecondary</a>[];</code></pre>
@@ -3199,7 +3224,7 @@ List of secondary servers. Secondaries is
 documented below.
 
 <h4 class="pdoc-member-header" id="GetZoneResult-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getZone.ts#L117">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getZone.ts#L116">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -3207,12 +3232,12 @@ documented below.
 The SOA TTL.
 
 <h4 class="pdoc-member-header" id="GetZoneResult-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/getZone.ts#L118">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/getZone.ts#L117">property <b>zone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="MonitoringJobArgs" data-link-title="MonitoringJobArgs">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L272">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L271">
         interface <strong>MonitoringJobArgs</strong>
     </a>
 </h3>
@@ -3222,7 +3247,7 @@ The SOA TTL.
 The set of arguments for constructing a MonitoringJob resource.
 
 <h4 class="pdoc-member-header" id="MonitoringJobArgs-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L276">property <b>active</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L275">property <b>active</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>active?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3230,7 +3255,7 @@ The set of arguments for constructing a MonitoringJob resource.
 Indicates if the job is active or temporarily disabled.
 
 <h4 class="pdoc-member-header" id="MonitoringJobArgs-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L280">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L279">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>config: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -3238,7 +3263,7 @@ Indicates if the job is active or temporarily disabled.
 A configuration dictionary with keys and values depending on the job_type. Configuration details for each jobType are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
 
 <h4 class="pdoc-member-header" id="MonitoringJobArgs-frequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L284">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L283">property <b>frequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3246,7 +3271,7 @@ A configuration dictionary with keys and values depending on the job_type. Confi
 The frequency, in seconds, at which to run the monitoring job in each region.
 
 <h4 class="pdoc-member-header" id="MonitoringJobArgs-jobType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L288">property <b>jobType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L287">property <b>jobType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jobType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3254,7 +3279,7 @@ The frequency, in seconds, at which to run the monitoring job in each region.
 The type of monitoring job to be run. Refer to the NS1 API documentation (https://ns1.com/api#monitoring-jobs) for supported values which include ping, tcp, dns, http.
 
 <h4 class="pdoc-member-header" id="MonitoringJobArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L292">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L291">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3262,7 +3287,7 @@ The type of monitoring job to be run. Refer to the NS1 API documentation (https:
 The free-form display name for the monitoring job.
 
 <h4 class="pdoc-member-header" id="MonitoringJobArgs-notes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L296">property <b>notes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L295">property <b>notes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3270,7 +3295,7 @@ The free-form display name for the monitoring job.
 Freeform notes to be included in any notifications about this job.
 
 <h4 class="pdoc-member-header" id="MonitoringJobArgs-notifyDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L300">property <b>notifyDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L299">property <b>notifyDelay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notifyDelay?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3278,7 +3303,7 @@ Freeform notes to be included in any notifications about this job.
 The time in seconds after a failure to wait before sending a notification.
 
 <h4 class="pdoc-member-header" id="MonitoringJobArgs-notifyFailback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L304">property <b>notifyFailback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L303">property <b>notifyFailback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notifyFailback?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3286,12 +3311,12 @@ The time in seconds after a failure to wait before sending a notification.
 If true, a notification is sent when a job returns to an "up" state.
 
 <h4 class="pdoc-member-header" id="MonitoringJobArgs-notifyList">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L305">property <b>notifyList</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L304">property <b>notifyList</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notifyList?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MonitoringJobArgs-notifyRegional">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L309">property <b>notifyRegional</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L308">property <b>notifyRegional</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notifyRegional?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3299,7 +3324,7 @@ If true, a notification is sent when a job returns to an "up" state.
 If true, notifications are sent for any regional failure (and failback if desired), in addition to global state notifications.
 
 <h4 class="pdoc-member-header" id="MonitoringJobArgs-notifyRepeat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L313">property <b>notifyRepeat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L312">property <b>notifyRepeat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notifyRepeat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3307,7 +3332,7 @@ If true, notifications are sent for any regional failure (and failback if desire
 The time in seconds between repeat notifications of a failed job.
 
 <h4 class="pdoc-member-header" id="MonitoringJobArgs-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L318">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L317">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3316,7 +3341,7 @@ The policy for determining the monitor's global status
 based on the status of the job in all regions. See NS1 API docs for supported values.
 
 <h4 class="pdoc-member-header" id="MonitoringJobArgs-rapidRecheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L322">property <b>rapidRecheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L321">property <b>rapidRecheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rapidRecheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3324,7 +3349,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
 If true, on any apparent state change, the job is quickly re-run after one second to confirm the state change before notification.
 
 <h4 class="pdoc-member-header" id="MonitoringJobArgs-regions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L327">property <b>regions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L326">property <b>regions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3333,7 +3358,7 @@ The list of region codes in which to run the monitoring
 job. See NS1 API docs for supported values.
 
 <h4 class="pdoc-member-header" id="MonitoringJobArgs-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L331">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L330">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/ns1/types/input/#MonitoringJobRule'>MonitoringJobRule</a>&gt;[]&gt;;</code></pre>
@@ -3341,7 +3366,7 @@ job. See NS1 API docs for supported values.
 A list of rules for determining failure conditions. Each rule acts on one of the outputs from the monitoring job. You must specify key (the output key); comparison (a comparison to perform on the the output); and value (the value to compare to). For example, {"key":"rtt", "comparison":"<", "value":100} is a rule requiring the rtt from a job to be under 100ms, or the job will be marked failed. Available output keys, comparators, and value types are are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
 
 <h3 class="pdoc-module-header" id="MonitoringJobState" data-link-title="MonitoringJobState">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L207">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L206">
         interface <strong>MonitoringJobState</strong>
     </a>
 </h3>
@@ -3351,7 +3376,7 @@ A list of rules for determining failure conditions. Each rule acts on one of the
 Input properties used for looking up and filtering MonitoringJob resources.
 
 <h4 class="pdoc-member-header" id="MonitoringJobState-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L211">property <b>active</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L210">property <b>active</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>active?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3359,7 +3384,7 @@ Input properties used for looking up and filtering MonitoringJob resources.
 Indicates if the job is active or temporarily disabled.
 
 <h4 class="pdoc-member-header" id="MonitoringJobState-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L215">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L214">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>config?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -3367,7 +3392,7 @@ Indicates if the job is active or temporarily disabled.
 A configuration dictionary with keys and values depending on the job_type. Configuration details for each jobType are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
 
 <h4 class="pdoc-member-header" id="MonitoringJobState-frequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L219">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L218">property <b>frequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3375,7 +3400,7 @@ A configuration dictionary with keys and values depending on the job_type. Confi
 The frequency, in seconds, at which to run the monitoring job in each region.
 
 <h4 class="pdoc-member-header" id="MonitoringJobState-jobType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L223">property <b>jobType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L222">property <b>jobType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jobType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3383,7 +3408,7 @@ The frequency, in seconds, at which to run the monitoring job in each region.
 The type of monitoring job to be run. Refer to the NS1 API documentation (https://ns1.com/api#monitoring-jobs) for supported values which include ping, tcp, dns, http.
 
 <h4 class="pdoc-member-header" id="MonitoringJobState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L227">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L226">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3391,7 +3416,7 @@ The type of monitoring job to be run. Refer to the NS1 API documentation (https:
 The free-form display name for the monitoring job.
 
 <h4 class="pdoc-member-header" id="MonitoringJobState-notes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L231">property <b>notes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L230">property <b>notes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3399,7 +3424,7 @@ The free-form display name for the monitoring job.
 Freeform notes to be included in any notifications about this job.
 
 <h4 class="pdoc-member-header" id="MonitoringJobState-notifyDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L235">property <b>notifyDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L234">property <b>notifyDelay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notifyDelay?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3407,7 +3432,7 @@ Freeform notes to be included in any notifications about this job.
 The time in seconds after a failure to wait before sending a notification.
 
 <h4 class="pdoc-member-header" id="MonitoringJobState-notifyFailback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L239">property <b>notifyFailback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L238">property <b>notifyFailback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notifyFailback?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3415,12 +3440,12 @@ The time in seconds after a failure to wait before sending a notification.
 If true, a notification is sent when a job returns to an "up" state.
 
 <h4 class="pdoc-member-header" id="MonitoringJobState-notifyList">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L240">property <b>notifyList</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L239">property <b>notifyList</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notifyList?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MonitoringJobState-notifyRegional">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L244">property <b>notifyRegional</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L243">property <b>notifyRegional</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notifyRegional?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3428,7 +3453,7 @@ If true, a notification is sent when a job returns to an "up" state.
 If true, notifications are sent for any regional failure (and failback if desired), in addition to global state notifications.
 
 <h4 class="pdoc-member-header" id="MonitoringJobState-notifyRepeat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L248">property <b>notifyRepeat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L247">property <b>notifyRepeat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notifyRepeat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3436,7 +3461,7 @@ If true, notifications are sent for any regional failure (and failback if desire
 The time in seconds between repeat notifications of a failed job.
 
 <h4 class="pdoc-member-header" id="MonitoringJobState-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L253">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L252">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3445,7 +3470,7 @@ The policy for determining the monitor's global status
 based on the status of the job in all regions. See NS1 API docs for supported values.
 
 <h4 class="pdoc-member-header" id="MonitoringJobState-rapidRecheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L257">property <b>rapidRecheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L256">property <b>rapidRecheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rapidRecheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3453,7 +3478,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
 If true, on any apparent state change, the job is quickly re-run after one second to confirm the state change before notification.
 
 <h4 class="pdoc-member-header" id="MonitoringJobState-regions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L262">property <b>regions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L261">property <b>regions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3462,7 +3487,7 @@ The list of region codes in which to run the monitoring
 job. See NS1 API docs for supported values.
 
 <h4 class="pdoc-member-header" id="MonitoringJobState-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/monitoringJob.ts#L266">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/monitoringJob.ts#L265">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/ns1/types/input/#MonitoringJobRule'>MonitoringJobRule</a>&gt;[]&gt;;</code></pre>
@@ -3470,7 +3495,7 @@ job. See NS1 API docs for supported values.
 A list of rules for determining failure conditions. Each rule acts on one of the outputs from the monitoring job. You must specify key (the output key); comparison (a comparison to perform on the the output); and value (the value to compare to). For example, {"key":"rtt", "comparison":"<", "value":100} is a rule requiring the rtt from a job to be under 100ms, or the job will be marked failed. Available output keys, comparators, and value types are are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
 
 <h3 class="pdoc-module-header" id="NotifyListArgs" data-link-title="NotifyListArgs">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/notifyList.ts#L123">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/notifyList.ts#L122">
         interface <strong>NotifyListArgs</strong>
     </a>
 </h3>
@@ -3480,7 +3505,7 @@ A list of rules for determining failure conditions. Each rule acts on one of the
 The set of arguments for constructing a NotifyList resource.
 
 <h4 class="pdoc-member-header" id="NotifyListArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/notifyList.ts#L127">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/notifyList.ts#L126">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3488,7 +3513,7 @@ The set of arguments for constructing a NotifyList resource.
 The free-form display name for the notify list.
 
 <h4 class="pdoc-member-header" id="NotifyListArgs-notifications">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/notifyList.ts#L131">property <b>notifications</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/notifyList.ts#L130">property <b>notifications</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notifications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/ns1/types/input/#NotifyListNotification'>NotifyListNotification</a>&gt;[]&gt;;</code></pre>
@@ -3496,7 +3521,7 @@ The free-form display name for the notify list.
 A list of notifiers. All notifiers in a notification list will receive notifications whenever an event is send to the list (e.g., when a monitoring job fails). Notifiers are documented below.
 
 <h3 class="pdoc-module-header" id="NotifyListState" data-link-title="NotifyListState">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/notifyList.ts#L109">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/notifyList.ts#L108">
         interface <strong>NotifyListState</strong>
     </a>
 </h3>
@@ -3506,7 +3531,7 @@ A list of notifiers. All notifiers in a notification list will receive notificat
 Input properties used for looking up and filtering NotifyList resources.
 
 <h4 class="pdoc-member-header" id="NotifyListState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/notifyList.ts#L113">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/notifyList.ts#L112">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3514,7 +3539,7 @@ Input properties used for looking up and filtering NotifyList resources.
 The free-form display name for the notify list.
 
 <h4 class="pdoc-member-header" id="NotifyListState-notifications">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/notifyList.ts#L117">property <b>notifications</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/notifyList.ts#L116">property <b>notifications</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notifications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/ns1/types/input/#NotifyListNotification'>NotifyListNotification</a>&gt;[]&gt;;</code></pre>
@@ -3522,7 +3547,7 @@ The free-form display name for the notify list.
 A list of notifiers. All notifiers in a notification list will receive notifications whenever an event is send to the list (e.g., when a monitoring job fails). Notifiers are documented below.
 
 <h3 class="pdoc-module-header" id="ProviderArgs" data-link-title="ProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/provider.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/provider.ts#L59">
         interface <strong>ProviderArgs</strong>
     </a>
 </h3>
@@ -3532,7 +3557,7 @@ A list of notifiers. All notifiers in a notification list will receive notificat
 The set of arguments for constructing a Provider resource.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-apikey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/provider.ts#L63">property <b>apikey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/provider.ts#L63">property <b>apikey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apikey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3540,27 +3565,27 @@ The set of arguments for constructing a Provider resource.
 The ns1 API key, this is required
 
 <h4 class="pdoc-member-header" id="ProviderArgs-enableDdi">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/provider.ts#L64">property <b>enableDdi</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/provider.ts#L64">property <b>enableDdi</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDdi?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/provider.ts#L65">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/provider.ts#L65">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-ignoreSsl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/provider.ts#L66">property <b>ignoreSsl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/provider.ts#L66">property <b>ignoreSsl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ignoreSsl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-rateLimitParallelism">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/provider.ts#L67">property <b>rateLimitParallelism</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/provider.ts#L67">property <b>rateLimitParallelism</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rateLimitParallelism?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="RecordArgs" data-link-title="RecordArgs">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L215">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L226">
         interface <strong>RecordArgs</strong>
     </a>
 </h3>
@@ -3570,7 +3595,7 @@ The ns1 API key, this is required
 The set of arguments for constructing a Record resource.
 
 <h4 class="pdoc-member-header" id="RecordArgs-answers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L220">property <b>answers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L231">property <b>answers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>answers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/ns1/types/input/#RecordAnswer'>RecordAnswer</a>&gt;[]&gt;;</code></pre>
@@ -3579,7 +3604,7 @@ One or more NS1 answers for the records' specified type.
 Answers are documented below.
 
 <h4 class="pdoc-member-header" id="RecordArgs-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L225">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L236">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3588,7 +3613,7 @@ The records' domain. Cannot have leading or trailing
 dots - see the example above and `FQDN formatting` below.
 
 <h4 class="pdoc-member-header" id="RecordArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L230">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L241">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/ns1/types/input/#RecordFilter'>RecordFilter</a>&gt;[]&gt;;</code></pre>
@@ -3597,7 +3622,7 @@ One or more NS1 filters for the record(order matters).
 Filters are documented below.
 
 <h4 class="pdoc-member-header" id="RecordArgs-link">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L235">property <b>link</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L246">property <b>link</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>link?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3606,12 +3631,12 @@ The target record to link to. This means this record is a
 'linked' record, and it inherits all properties from its target.
 
 <h4 class="pdoc-member-header" id="RecordArgs-meta">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L236">property <b>meta</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L247">property <b>meta</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>meta?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RecordArgs-regions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L243">property <b>regions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L254">property <b>regions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/ns1/types/input/#RecordRegion'>RecordRegion</a>&gt;[]&gt;;</code></pre>
@@ -3622,7 +3647,7 @@ but remain `regions` here for legacy reasons. Regions are
 documented below. Please note the ordering requirement!
 
 <h4 class="pdoc-member-header" id="RecordArgs-shortAnswers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L247">property <b>shortAnswers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L258">property <b>shortAnswers</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -3631,7 +3656,7 @@ short_answers will be deprecated in a future release. It is suggested to migrate
 </div>
 <pre class="highlight"><code><span class='kd'></span>shortAnswers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RecordArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L251">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L262">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3639,7 +3664,7 @@ short_answers will be deprecated in a future release. It is suggested to migrate
 The records' time to live (in seconds).
 
 <h4 class="pdoc-member-header" id="RecordArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L255">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L266">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3647,7 +3672,7 @@ The records' time to live (in seconds).
 The records' RR type.
 
 <h4 class="pdoc-member-header" id="RecordArgs-useClientSubnet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L262">property <b>useClientSubnet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L273">property <b>useClientSubnet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useClientSubnet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3658,7 +3683,7 @@ available(in filter chain).
 is documented below.
 
 <h4 class="pdoc-member-header" id="RecordArgs-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L267">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L278">property <b>zone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3667,7 +3692,7 @@ The zone the record belongs to. Cannot have leading or
 trailing dots (".") - see the example above and `FQDN formatting` below.
 
 <h3 class="pdoc-module-header" id="RecordState" data-link-title="RecordState">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L157">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L168">
         interface <strong>RecordState</strong>
     </a>
 </h3>
@@ -3677,7 +3702,7 @@ trailing dots (".") - see the example above and `FQDN formatting` below.
 Input properties used for looking up and filtering Record resources.
 
 <h4 class="pdoc-member-header" id="RecordState-answers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L162">property <b>answers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L173">property <b>answers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>answers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/ns1/types/input/#RecordAnswer'>RecordAnswer</a>&gt;[]&gt;;</code></pre>
@@ -3686,7 +3711,7 @@ One or more NS1 answers for the records' specified type.
 Answers are documented below.
 
 <h4 class="pdoc-member-header" id="RecordState-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L167">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L178">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3695,7 +3720,7 @@ The records' domain. Cannot have leading or trailing
 dots - see the example above and `FQDN formatting` below.
 
 <h4 class="pdoc-member-header" id="RecordState-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L172">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L183">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/ns1/types/input/#RecordFilter'>RecordFilter</a>&gt;[]&gt;;</code></pre>
@@ -3704,7 +3729,7 @@ One or more NS1 filters for the record(order matters).
 Filters are documented below.
 
 <h4 class="pdoc-member-header" id="RecordState-link">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L177">property <b>link</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L188">property <b>link</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>link?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3713,12 +3738,12 @@ The target record to link to. This means this record is a
 'linked' record, and it inherits all properties from its target.
 
 <h4 class="pdoc-member-header" id="RecordState-meta">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L178">property <b>meta</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L189">property <b>meta</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>meta?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RecordState-regions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L185">property <b>regions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L196">property <b>regions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/ns1/types/input/#RecordRegion'>RecordRegion</a>&gt;[]&gt;;</code></pre>
@@ -3729,7 +3754,7 @@ but remain `regions` here for legacy reasons. Regions are
 documented below. Please note the ordering requirement!
 
 <h4 class="pdoc-member-header" id="RecordState-shortAnswers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L189">property <b>shortAnswers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L200">property <b>shortAnswers</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -3738,7 +3763,7 @@ short_answers will be deprecated in a future release. It is suggested to migrate
 </div>
 <pre class="highlight"><code><span class='kd'></span>shortAnswers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RecordState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L193">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L204">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3746,7 +3771,7 @@ short_answers will be deprecated in a future release. It is suggested to migrate
 The records' time to live (in seconds).
 
 <h4 class="pdoc-member-header" id="RecordState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L197">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L208">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3754,7 +3779,7 @@ The records' time to live (in seconds).
 The records' RR type.
 
 <h4 class="pdoc-member-header" id="RecordState-useClientSubnet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L204">property <b>useClientSubnet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L215">property <b>useClientSubnet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useClientSubnet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3765,7 +3790,7 @@ available(in filter chain).
 is documented below.
 
 <h4 class="pdoc-member-header" id="RecordState-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/record.ts#L209">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/record.ts#L220">property <b>zone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3774,7 +3799,7 @@ The zone the record belongs to. Cannot have leading or
 trailing dots (".") - see the example above and `FQDN formatting` below.
 
 <h3 class="pdoc-module-header" id="TeamArgs" data-link-title="TeamArgs">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L403">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L402">
         interface <strong>TeamArgs</strong>
     </a>
 </h3>
@@ -3784,7 +3809,7 @@ trailing dots (".") - see the example above and `FQDN formatting` below.
 The set of arguments for constructing a Team resource.
 
 <h4 class="pdoc-member-header" id="TeamArgs-accountManageAccountSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L407">property <b>accountManageAccountSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L406">property <b>accountManageAccountSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountManageAccountSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3792,7 +3817,7 @@ The set of arguments for constructing a Team resource.
 Whether the team can modify account settings.
 
 <h4 class="pdoc-member-header" id="TeamArgs-accountManageApikeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L411">property <b>accountManageApikeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L410">property <b>accountManageApikeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountManageApikeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3800,7 +3825,7 @@ Whether the team can modify account settings.
 Whether the team can modify account apikeys.
 
 <h4 class="pdoc-member-header" id="TeamArgs-accountManagePaymentMethods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L415">property <b>accountManagePaymentMethods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L414">property <b>accountManagePaymentMethods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountManagePaymentMethods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3808,7 +3833,7 @@ Whether the team can modify account apikeys.
 Whether the team can modify account payment methods.
 
 <h4 class="pdoc-member-header" id="TeamArgs-accountManagePlan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L421">property <b>accountManagePlan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L420">property <b>accountManagePlan</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -3820,7 +3845,7 @@ obsolete, should no longer be used
 Whether the team can modify the account plan.
 
 <h4 class="pdoc-member-header" id="TeamArgs-accountManageTeams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L425">property <b>accountManageTeams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L424">property <b>accountManageTeams</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountManageTeams?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3828,7 +3853,7 @@ Whether the team can modify the account plan.
 Whether the team can modify other teams in the account.
 
 <h4 class="pdoc-member-header" id="TeamArgs-accountManageUsers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L429">property <b>accountManageUsers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L428">property <b>accountManageUsers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountManageUsers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3836,7 +3861,7 @@ Whether the team can modify other teams in the account.
 Whether the team can modify account users.
 
 <h4 class="pdoc-member-header" id="TeamArgs-accountViewActivityLog">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L433">property <b>accountViewActivityLog</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L432">property <b>accountViewActivityLog</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountViewActivityLog?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3844,7 +3869,7 @@ Whether the team can modify account users.
 Whether the team can view activity logs.
 
 <h4 class="pdoc-member-header" id="TeamArgs-accountViewInvoices">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L437">property <b>accountViewInvoices</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L436">property <b>accountViewInvoices</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountViewInvoices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3852,7 +3877,7 @@ Whether the team can view activity logs.
 Whether the team can view invoices.
 
 <h4 class="pdoc-member-header" id="TeamArgs-dataManageDatafeeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L441">property <b>dataManageDatafeeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L440">property <b>dataManageDatafeeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataManageDatafeeds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3860,7 +3885,7 @@ Whether the team can view invoices.
 Whether the team can modify data feeds.
 
 <h4 class="pdoc-member-header" id="TeamArgs-dataManageDatasources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L445">property <b>dataManageDatasources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L444">property <b>dataManageDatasources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataManageDatasources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3868,7 +3893,7 @@ Whether the team can modify data feeds.
 Whether the team can modify data sources.
 
 <h4 class="pdoc-member-header" id="TeamArgs-dataPushToDatafeeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L449">property <b>dataPushToDatafeeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L448">property <b>dataPushToDatafeeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataPushToDatafeeds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3876,7 +3901,7 @@ Whether the team can modify data sources.
 Whether the team can publish to data feeds.
 
 <h4 class="pdoc-member-header" id="TeamArgs-dhcpManageDhcp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L454">property <b>dhcpManageDhcp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L453">property <b>dhcpManageDhcp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dhcpManageDhcp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3885,7 +3910,7 @@ Whether the team can manage DHCP.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="TeamArgs-dhcpViewDhcp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L459">property <b>dhcpViewDhcp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L458">property <b>dhcpViewDhcp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dhcpViewDhcp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3894,7 +3919,7 @@ Whether the team can view DHCP.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="TeamArgs-dnsManageZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L463">property <b>dnsManageZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L462">property <b>dnsManageZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsManageZones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3902,7 +3927,7 @@ Only relevant for the DDI product.
 Whether the team can modify the accounts zones.
 
 <h4 class="pdoc-member-header" id="TeamArgs-dnsViewZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L467">property <b>dnsViewZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L466">property <b>dnsViewZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsViewZones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3910,7 +3935,7 @@ Whether the team can modify the accounts zones.
 Whether the team can view the accounts zones.
 
 <h4 class="pdoc-member-header" id="TeamArgs-dnsZonesAllowByDefault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L471">property <b>dnsZonesAllowByDefault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L470">property <b>dnsZonesAllowByDefault</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsZonesAllowByDefault?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3918,7 +3943,7 @@ Whether the team can view the accounts zones.
 If true, enable the `dnsZonesAllow` list, otherwise enable the `dnsZonesDeny` list.
 
 <h4 class="pdoc-member-header" id="TeamArgs-dnsZonesAllows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L475">property <b>dnsZonesAllows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L474">property <b>dnsZonesAllows</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsZonesAllows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3926,7 +3951,7 @@ If true, enable the `dnsZonesAllow` list, otherwise enable the `dnsZonesDeny` li
 List of zones that the team may access.
 
 <h4 class="pdoc-member-header" id="TeamArgs-dnsZonesDenies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L479">property <b>dnsZonesDenies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L478">property <b>dnsZonesDenies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsZonesDenies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3934,7 +3959,7 @@ List of zones that the team may access.
 List of zones that the team may not access.
 
 <h4 class="pdoc-member-header" id="TeamArgs-ipWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L483">property <b>ipWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L482">property <b>ipWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipWhitelists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/ns1/types/input/#TeamIpWhitelist'>TeamIpWhitelist</a>&gt;[]&gt;;</code></pre>
@@ -3942,7 +3967,7 @@ List of zones that the team may not access.
 The IP addresses to whitelist for this key.
 
 <h4 class="pdoc-member-header" id="TeamArgs-ipamManageIpam">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L488">property <b>ipamManageIpam</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L487">property <b>ipamManageIpam</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipamManageIpam?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3951,7 +3976,7 @@ Whether the team can manage IPAM.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="TeamArgs-ipamViewIpam">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L493">property <b>ipamViewIpam</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L492">property <b>ipamViewIpam</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipamViewIpam?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3960,7 +3985,7 @@ Whether the team can view IPAM.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="TeamArgs-monitoringManageJobs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L497">property <b>monitoringManageJobs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L496">property <b>monitoringManageJobs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringManageJobs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3968,7 +3993,7 @@ Only relevant for the DDI product.
 Whether the team can modify monitoring jobs.
 
 <h4 class="pdoc-member-header" id="TeamArgs-monitoringManageLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L501">property <b>monitoringManageLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L500">property <b>monitoringManageLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringManageLists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3976,7 +4001,7 @@ Whether the team can modify monitoring jobs.
 Whether the team can modify notification lists.
 
 <h4 class="pdoc-member-header" id="TeamArgs-monitoringViewJobs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L505">property <b>monitoringViewJobs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L504">property <b>monitoringViewJobs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringViewJobs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3984,7 +4009,7 @@ Whether the team can modify notification lists.
 Whether the team can view monitoring jobs.
 
 <h4 class="pdoc-member-header" id="TeamArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L509">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L508">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3992,7 +4017,7 @@ Whether the team can view monitoring jobs.
 The free form name of the team.
 
 <h4 class="pdoc-member-header" id="TeamArgs-securityManageActiveDirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L514">property <b>securityManageActiveDirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L513">property <b>securityManageActiveDirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityManageActiveDirectory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4001,7 +4026,7 @@ Whether the team can manage global active directory.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="TeamArgs-securityManageGlobal2fa">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L518">property <b>securityManageGlobal2fa</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L517">property <b>securityManageGlobal2fa</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityManageGlobal2fa?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4009,7 +4034,7 @@ Only relevant for the DDI product.
 Whether the team can manage global two factor authentication.
 
 <h3 class="pdoc-module-header" id="TeamState" data-link-title="TeamState">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L282">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L281">
         interface <strong>TeamState</strong>
     </a>
 </h3>
@@ -4019,7 +4044,7 @@ Whether the team can manage global two factor authentication.
 Input properties used for looking up and filtering Team resources.
 
 <h4 class="pdoc-member-header" id="TeamState-accountManageAccountSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L286">property <b>accountManageAccountSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L285">property <b>accountManageAccountSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountManageAccountSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4027,7 +4052,7 @@ Input properties used for looking up and filtering Team resources.
 Whether the team can modify account settings.
 
 <h4 class="pdoc-member-header" id="TeamState-accountManageApikeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L290">property <b>accountManageApikeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L289">property <b>accountManageApikeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountManageApikeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4035,7 +4060,7 @@ Whether the team can modify account settings.
 Whether the team can modify account apikeys.
 
 <h4 class="pdoc-member-header" id="TeamState-accountManagePaymentMethods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L294">property <b>accountManagePaymentMethods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L293">property <b>accountManagePaymentMethods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountManagePaymentMethods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4043,7 +4068,7 @@ Whether the team can modify account apikeys.
 Whether the team can modify account payment methods.
 
 <h4 class="pdoc-member-header" id="TeamState-accountManagePlan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L300">property <b>accountManagePlan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L299">property <b>accountManagePlan</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -4055,7 +4080,7 @@ obsolete, should no longer be used
 Whether the team can modify the account plan.
 
 <h4 class="pdoc-member-header" id="TeamState-accountManageTeams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L304">property <b>accountManageTeams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L303">property <b>accountManageTeams</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountManageTeams?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4063,7 +4088,7 @@ Whether the team can modify the account plan.
 Whether the team can modify other teams in the account.
 
 <h4 class="pdoc-member-header" id="TeamState-accountManageUsers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L308">property <b>accountManageUsers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L307">property <b>accountManageUsers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountManageUsers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4071,7 +4096,7 @@ Whether the team can modify other teams in the account.
 Whether the team can modify account users.
 
 <h4 class="pdoc-member-header" id="TeamState-accountViewActivityLog">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L312">property <b>accountViewActivityLog</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L311">property <b>accountViewActivityLog</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountViewActivityLog?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4079,7 +4104,7 @@ Whether the team can modify account users.
 Whether the team can view activity logs.
 
 <h4 class="pdoc-member-header" id="TeamState-accountViewInvoices">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L316">property <b>accountViewInvoices</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L315">property <b>accountViewInvoices</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountViewInvoices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4087,7 +4112,7 @@ Whether the team can view activity logs.
 Whether the team can view invoices.
 
 <h4 class="pdoc-member-header" id="TeamState-dataManageDatafeeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L320">property <b>dataManageDatafeeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L319">property <b>dataManageDatafeeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataManageDatafeeds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4095,7 +4120,7 @@ Whether the team can view invoices.
 Whether the team can modify data feeds.
 
 <h4 class="pdoc-member-header" id="TeamState-dataManageDatasources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L324">property <b>dataManageDatasources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L323">property <b>dataManageDatasources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataManageDatasources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4103,7 +4128,7 @@ Whether the team can modify data feeds.
 Whether the team can modify data sources.
 
 <h4 class="pdoc-member-header" id="TeamState-dataPushToDatafeeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L328">property <b>dataPushToDatafeeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L327">property <b>dataPushToDatafeeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataPushToDatafeeds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4111,7 +4136,7 @@ Whether the team can modify data sources.
 Whether the team can publish to data feeds.
 
 <h4 class="pdoc-member-header" id="TeamState-dhcpManageDhcp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L333">property <b>dhcpManageDhcp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L332">property <b>dhcpManageDhcp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dhcpManageDhcp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4120,7 +4145,7 @@ Whether the team can manage DHCP.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="TeamState-dhcpViewDhcp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L338">property <b>dhcpViewDhcp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L337">property <b>dhcpViewDhcp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dhcpViewDhcp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4129,7 +4154,7 @@ Whether the team can view DHCP.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="TeamState-dnsManageZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L342">property <b>dnsManageZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L341">property <b>dnsManageZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsManageZones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4137,7 +4162,7 @@ Only relevant for the DDI product.
 Whether the team can modify the accounts zones.
 
 <h4 class="pdoc-member-header" id="TeamState-dnsViewZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L346">property <b>dnsViewZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L345">property <b>dnsViewZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsViewZones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4145,7 +4170,7 @@ Whether the team can modify the accounts zones.
 Whether the team can view the accounts zones.
 
 <h4 class="pdoc-member-header" id="TeamState-dnsZonesAllowByDefault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L350">property <b>dnsZonesAllowByDefault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L349">property <b>dnsZonesAllowByDefault</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsZonesAllowByDefault?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4153,7 +4178,7 @@ Whether the team can view the accounts zones.
 If true, enable the `dnsZonesAllow` list, otherwise enable the `dnsZonesDeny` list.
 
 <h4 class="pdoc-member-header" id="TeamState-dnsZonesAllows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L354">property <b>dnsZonesAllows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L353">property <b>dnsZonesAllows</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsZonesAllows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4161,7 +4186,7 @@ If true, enable the `dnsZonesAllow` list, otherwise enable the `dnsZonesDeny` li
 List of zones that the team may access.
 
 <h4 class="pdoc-member-header" id="TeamState-dnsZonesDenies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L358">property <b>dnsZonesDenies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L357">property <b>dnsZonesDenies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsZonesDenies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4169,7 +4194,7 @@ List of zones that the team may access.
 List of zones that the team may not access.
 
 <h4 class="pdoc-member-header" id="TeamState-ipWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L362">property <b>ipWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L361">property <b>ipWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipWhitelists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/ns1/types/input/#TeamIpWhitelist'>TeamIpWhitelist</a>&gt;[]&gt;;</code></pre>
@@ -4177,7 +4202,7 @@ List of zones that the team may not access.
 The IP addresses to whitelist for this key.
 
 <h4 class="pdoc-member-header" id="TeamState-ipamManageIpam">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L367">property <b>ipamManageIpam</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L366">property <b>ipamManageIpam</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipamManageIpam?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4186,7 +4211,7 @@ Whether the team can manage IPAM.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="TeamState-ipamViewIpam">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L372">property <b>ipamViewIpam</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L371">property <b>ipamViewIpam</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipamViewIpam?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4195,7 +4220,7 @@ Whether the team can view IPAM.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="TeamState-monitoringManageJobs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L376">property <b>monitoringManageJobs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L375">property <b>monitoringManageJobs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringManageJobs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4203,7 +4228,7 @@ Only relevant for the DDI product.
 Whether the team can modify monitoring jobs.
 
 <h4 class="pdoc-member-header" id="TeamState-monitoringManageLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L380">property <b>monitoringManageLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L379">property <b>monitoringManageLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringManageLists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4211,7 +4236,7 @@ Whether the team can modify monitoring jobs.
 Whether the team can modify notification lists.
 
 <h4 class="pdoc-member-header" id="TeamState-monitoringViewJobs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L384">property <b>monitoringViewJobs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L383">property <b>monitoringViewJobs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringViewJobs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4219,7 +4244,7 @@ Whether the team can modify notification lists.
 Whether the team can view monitoring jobs.
 
 <h4 class="pdoc-member-header" id="TeamState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L388">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L387">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4227,7 +4252,7 @@ Whether the team can view monitoring jobs.
 The free form name of the team.
 
 <h4 class="pdoc-member-header" id="TeamState-securityManageActiveDirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L393">property <b>securityManageActiveDirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L392">property <b>securityManageActiveDirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityManageActiveDirectory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4236,7 +4261,7 @@ Whether the team can manage global active directory.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="TeamState-securityManageGlobal2fa">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/team.ts#L397">property <b>securityManageGlobal2fa</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/team.ts#L396">property <b>securityManageGlobal2fa</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityManageGlobal2fa?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4244,7 +4269,7 @@ Only relevant for the DDI product.
 Whether the team can manage global two factor authentication.
 
 <h3 class="pdoc-module-header" id="UserArgs" data-link-title="UserArgs">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L403">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L403">
         interface <strong>UserArgs</strong>
     </a>
 </h3>
@@ -4254,7 +4279,7 @@ Whether the team can manage global two factor authentication.
 The set of arguments for constructing a User resource.
 
 <h4 class="pdoc-member-header" id="UserArgs-accountManageAccountSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L407">property <b>accountManageAccountSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L407">property <b>accountManageAccountSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountManageAccountSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4262,7 +4287,7 @@ The set of arguments for constructing a User resource.
 Whether the user can modify account settings.
 
 <h4 class="pdoc-member-header" id="UserArgs-accountManageApikeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L411">property <b>accountManageApikeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L411">property <b>accountManageApikeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountManageApikeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4270,7 +4295,7 @@ Whether the user can modify account settings.
 Whether the user can modify account apikeys.
 
 <h4 class="pdoc-member-header" id="UserArgs-accountManagePaymentMethods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L415">property <b>accountManagePaymentMethods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L415">property <b>accountManagePaymentMethods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountManagePaymentMethods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4278,7 +4303,7 @@ Whether the user can modify account apikeys.
 Whether the user can modify account payment methods.
 
 <h4 class="pdoc-member-header" id="UserArgs-accountManagePlan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L421">property <b>accountManagePlan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L421">property <b>accountManagePlan</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -4290,7 +4315,7 @@ obsolete, should no longer be used
 **Deprecated** Whether the user can modify the account plan.
 
 <h4 class="pdoc-member-header" id="UserArgs-accountManageTeams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L425">property <b>accountManageTeams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L425">property <b>accountManageTeams</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountManageTeams?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4298,7 +4323,7 @@ obsolete, should no longer be used
 Whether the user can modify other teams in the account.
 
 <h4 class="pdoc-member-header" id="UserArgs-accountManageUsers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L429">property <b>accountManageUsers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L429">property <b>accountManageUsers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountManageUsers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4306,7 +4331,7 @@ Whether the user can modify other teams in the account.
 Whether the user can modify account users.
 
 <h4 class="pdoc-member-header" id="UserArgs-accountViewActivityLog">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L433">property <b>accountViewActivityLog</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L433">property <b>accountViewActivityLog</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountViewActivityLog?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4314,7 +4339,7 @@ Whether the user can modify account users.
 Whether the user can view activity logs.
 
 <h4 class="pdoc-member-header" id="UserArgs-accountViewInvoices">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L437">property <b>accountViewInvoices</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L437">property <b>accountViewInvoices</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountViewInvoices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4322,7 +4347,7 @@ Whether the user can view activity logs.
 Whether the user can view invoices.
 
 <h4 class="pdoc-member-header" id="UserArgs-dataManageDatafeeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L441">property <b>dataManageDatafeeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L441">property <b>dataManageDatafeeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataManageDatafeeds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4330,7 +4355,7 @@ Whether the user can view invoices.
 Whether the user can modify data feeds.
 
 <h4 class="pdoc-member-header" id="UserArgs-dataManageDatasources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L445">property <b>dataManageDatasources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L445">property <b>dataManageDatasources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataManageDatasources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4338,7 +4363,7 @@ Whether the user can modify data feeds.
 Whether the user can modify data sources.
 
 <h4 class="pdoc-member-header" id="UserArgs-dataPushToDatafeeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L449">property <b>dataPushToDatafeeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L449">property <b>dataPushToDatafeeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataPushToDatafeeds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4346,7 +4371,7 @@ Whether the user can modify data sources.
 Whether the user can publish to data feeds.
 
 <h4 class="pdoc-member-header" id="UserArgs-dhcpManageDhcp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L454">property <b>dhcpManageDhcp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L454">property <b>dhcpManageDhcp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dhcpManageDhcp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4355,7 +4380,7 @@ Whether the user can manage DHCP.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="UserArgs-dhcpViewDhcp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L459">property <b>dhcpViewDhcp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L459">property <b>dhcpViewDhcp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dhcpViewDhcp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4364,7 +4389,7 @@ Whether the user can view DHCP.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="UserArgs-dnsManageZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L463">property <b>dnsManageZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L463">property <b>dnsManageZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsManageZones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4372,7 +4397,7 @@ Only relevant for the DDI product.
 Whether the user can modify the accounts zones.
 
 <h4 class="pdoc-member-header" id="UserArgs-dnsViewZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L467">property <b>dnsViewZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L467">property <b>dnsViewZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsViewZones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4380,7 +4405,7 @@ Whether the user can modify the accounts zones.
 Whether the user can view the accounts zones.
 
 <h4 class="pdoc-member-header" id="UserArgs-dnsZonesAllowByDefault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L471">property <b>dnsZonesAllowByDefault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L471">property <b>dnsZonesAllowByDefault</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsZonesAllowByDefault?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4388,7 +4413,7 @@ Whether the user can view the accounts zones.
 If true, enable the `dnsZonesAllow` list, otherwise enable the `dnsZonesDeny` list.
 
 <h4 class="pdoc-member-header" id="UserArgs-dnsZonesAllows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L475">property <b>dnsZonesAllows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L475">property <b>dnsZonesAllows</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsZonesAllows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4396,7 +4421,7 @@ If true, enable the `dnsZonesAllow` list, otherwise enable the `dnsZonesDeny` li
 List of zones that the user may access.
 
 <h4 class="pdoc-member-header" id="UserArgs-dnsZonesDenies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L479">property <b>dnsZonesDenies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L479">property <b>dnsZonesDenies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsZonesDenies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4404,7 +4429,7 @@ List of zones that the user may access.
 List of zones that the user may not access.
 
 <h4 class="pdoc-member-header" id="UserArgs-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L483">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L483">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4412,7 +4437,7 @@ List of zones that the user may not access.
 The email address of the user.
 
 <h4 class="pdoc-member-header" id="UserArgs-ipWhitelistStrict">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L487">property <b>ipWhitelistStrict</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L487">property <b>ipWhitelistStrict</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipWhitelistStrict?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4420,7 +4445,7 @@ The email address of the user.
 Sets exclusivity on this IP whitelist.
 
 <h4 class="pdoc-member-header" id="UserArgs-ipWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L491">property <b>ipWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L491">property <b>ipWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipWhitelists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4428,7 +4453,7 @@ Sets exclusivity on this IP whitelist.
 The IP addresses to whitelist for this key.
 
 <h4 class="pdoc-member-header" id="UserArgs-ipamManageIpam">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L496">property <b>ipamManageIpam</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L496">property <b>ipamManageIpam</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipamManageIpam?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4437,12 +4462,12 @@ Whether the user can manage IPAM.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="UserArgs-ipamViewIpam">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L497">property <b>ipamViewIpam</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L497">property <b>ipamViewIpam</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipamViewIpam?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="UserArgs-monitoringManageJobs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L501">property <b>monitoringManageJobs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L501">property <b>monitoringManageJobs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringManageJobs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4450,7 +4475,7 @@ Only relevant for the DDI product.
 Whether the user can modify monitoring jobs.
 
 <h4 class="pdoc-member-header" id="UserArgs-monitoringManageLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L505">property <b>monitoringManageLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L505">property <b>monitoringManageLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringManageLists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4458,7 +4483,7 @@ Whether the user can modify monitoring jobs.
 Whether the user can modify notification lists.
 
 <h4 class="pdoc-member-header" id="UserArgs-monitoringViewJobs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L509">property <b>monitoringViewJobs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L509">property <b>monitoringViewJobs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringViewJobs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4466,7 +4491,7 @@ Whether the user can modify notification lists.
 Whether the user can view monitoring jobs.
 
 <h4 class="pdoc-member-header" id="UserArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L513">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L513">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4474,7 +4499,7 @@ Whether the user can view monitoring jobs.
 The free form name of the user.
 
 <h4 class="pdoc-member-header" id="UserArgs-notify">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L517">property <b>notify</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L517">property <b>notify</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notify?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -4482,7 +4507,7 @@ The free form name of the user.
 Whether or not to notify the user of specified events. Only `billing` is available currently.
 
 <h4 class="pdoc-member-header" id="UserArgs-securityManageActiveDirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L522">property <b>securityManageActiveDirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L522">property <b>securityManageActiveDirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityManageActiveDirectory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4491,7 +4516,7 @@ Whether the user can manage global active directory.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="UserArgs-securityManageGlobal2fa">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L526">property <b>securityManageGlobal2fa</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L526">property <b>securityManageGlobal2fa</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityManageGlobal2fa?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4499,7 +4524,7 @@ Only relevant for the DDI product.
 Whether the user can manage global two factor authentication.
 
 <h4 class="pdoc-member-header" id="UserArgs-teams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L530">property <b>teams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L530">property <b>teams</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>teams?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4507,7 +4532,7 @@ Whether the user can manage global two factor authentication.
 The teams that the user belongs to.
 
 <h4 class="pdoc-member-header" id="UserArgs-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L534">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L534">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4515,7 +4540,7 @@ The teams that the user belongs to.
 The users login name.
 
 <h3 class="pdoc-module-header" id="UserState" data-link-title="UserState">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L266">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L266">
         interface <strong>UserState</strong>
     </a>
 </h3>
@@ -4525,7 +4550,7 @@ The users login name.
 Input properties used for looking up and filtering User resources.
 
 <h4 class="pdoc-member-header" id="UserState-accountManageAccountSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L270">property <b>accountManageAccountSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L270">property <b>accountManageAccountSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountManageAccountSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4533,7 +4558,7 @@ Input properties used for looking up and filtering User resources.
 Whether the user can modify account settings.
 
 <h4 class="pdoc-member-header" id="UserState-accountManageApikeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L274">property <b>accountManageApikeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L274">property <b>accountManageApikeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountManageApikeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4541,7 +4566,7 @@ Whether the user can modify account settings.
 Whether the user can modify account apikeys.
 
 <h4 class="pdoc-member-header" id="UserState-accountManagePaymentMethods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L278">property <b>accountManagePaymentMethods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L278">property <b>accountManagePaymentMethods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountManagePaymentMethods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4549,7 +4574,7 @@ Whether the user can modify account apikeys.
 Whether the user can modify account payment methods.
 
 <h4 class="pdoc-member-header" id="UserState-accountManagePlan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L284">property <b>accountManagePlan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L284">property <b>accountManagePlan</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -4561,7 +4586,7 @@ obsolete, should no longer be used
 **Deprecated** Whether the user can modify the account plan.
 
 <h4 class="pdoc-member-header" id="UserState-accountManageTeams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L288">property <b>accountManageTeams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L288">property <b>accountManageTeams</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountManageTeams?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4569,7 +4594,7 @@ obsolete, should no longer be used
 Whether the user can modify other teams in the account.
 
 <h4 class="pdoc-member-header" id="UserState-accountManageUsers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L292">property <b>accountManageUsers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L292">property <b>accountManageUsers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountManageUsers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4577,7 +4602,7 @@ Whether the user can modify other teams in the account.
 Whether the user can modify account users.
 
 <h4 class="pdoc-member-header" id="UserState-accountViewActivityLog">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L296">property <b>accountViewActivityLog</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L296">property <b>accountViewActivityLog</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountViewActivityLog?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4585,7 +4610,7 @@ Whether the user can modify account users.
 Whether the user can view activity logs.
 
 <h4 class="pdoc-member-header" id="UserState-accountViewInvoices">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L300">property <b>accountViewInvoices</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L300">property <b>accountViewInvoices</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountViewInvoices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4593,7 +4618,7 @@ Whether the user can view activity logs.
 Whether the user can view invoices.
 
 <h4 class="pdoc-member-header" id="UserState-dataManageDatafeeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L304">property <b>dataManageDatafeeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L304">property <b>dataManageDatafeeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataManageDatafeeds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4601,7 +4626,7 @@ Whether the user can view invoices.
 Whether the user can modify data feeds.
 
 <h4 class="pdoc-member-header" id="UserState-dataManageDatasources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L308">property <b>dataManageDatasources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L308">property <b>dataManageDatasources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataManageDatasources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4609,7 +4634,7 @@ Whether the user can modify data feeds.
 Whether the user can modify data sources.
 
 <h4 class="pdoc-member-header" id="UserState-dataPushToDatafeeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L312">property <b>dataPushToDatafeeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L312">property <b>dataPushToDatafeeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataPushToDatafeeds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4617,7 +4642,7 @@ Whether the user can modify data sources.
 Whether the user can publish to data feeds.
 
 <h4 class="pdoc-member-header" id="UserState-dhcpManageDhcp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L317">property <b>dhcpManageDhcp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L317">property <b>dhcpManageDhcp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dhcpManageDhcp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4626,7 +4651,7 @@ Whether the user can manage DHCP.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="UserState-dhcpViewDhcp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L322">property <b>dhcpViewDhcp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L322">property <b>dhcpViewDhcp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dhcpViewDhcp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4635,7 +4660,7 @@ Whether the user can view DHCP.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="UserState-dnsManageZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L326">property <b>dnsManageZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L326">property <b>dnsManageZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsManageZones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4643,7 +4668,7 @@ Only relevant for the DDI product.
 Whether the user can modify the accounts zones.
 
 <h4 class="pdoc-member-header" id="UserState-dnsViewZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L330">property <b>dnsViewZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L330">property <b>dnsViewZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsViewZones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4651,7 +4676,7 @@ Whether the user can modify the accounts zones.
 Whether the user can view the accounts zones.
 
 <h4 class="pdoc-member-header" id="UserState-dnsZonesAllowByDefault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L334">property <b>dnsZonesAllowByDefault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L334">property <b>dnsZonesAllowByDefault</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsZonesAllowByDefault?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4659,7 +4684,7 @@ Whether the user can view the accounts zones.
 If true, enable the `dnsZonesAllow` list, otherwise enable the `dnsZonesDeny` list.
 
 <h4 class="pdoc-member-header" id="UserState-dnsZonesAllows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L338">property <b>dnsZonesAllows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L338">property <b>dnsZonesAllows</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsZonesAllows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4667,7 +4692,7 @@ If true, enable the `dnsZonesAllow` list, otherwise enable the `dnsZonesDeny` li
 List of zones that the user may access.
 
 <h4 class="pdoc-member-header" id="UserState-dnsZonesDenies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L342">property <b>dnsZonesDenies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L342">property <b>dnsZonesDenies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsZonesDenies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4675,7 +4700,7 @@ List of zones that the user may access.
 List of zones that the user may not access.
 
 <h4 class="pdoc-member-header" id="UserState-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L346">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L346">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4683,7 +4708,7 @@ List of zones that the user may not access.
 The email address of the user.
 
 <h4 class="pdoc-member-header" id="UserState-ipWhitelistStrict">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L350">property <b>ipWhitelistStrict</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L350">property <b>ipWhitelistStrict</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipWhitelistStrict?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4691,7 +4716,7 @@ The email address of the user.
 Sets exclusivity on this IP whitelist.
 
 <h4 class="pdoc-member-header" id="UserState-ipWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L354">property <b>ipWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L354">property <b>ipWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipWhitelists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4699,7 +4724,7 @@ Sets exclusivity on this IP whitelist.
 The IP addresses to whitelist for this key.
 
 <h4 class="pdoc-member-header" id="UserState-ipamManageIpam">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L359">property <b>ipamManageIpam</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L359">property <b>ipamManageIpam</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipamManageIpam?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4708,12 +4733,12 @@ Whether the user can manage IPAM.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="UserState-ipamViewIpam">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L360">property <b>ipamViewIpam</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L360">property <b>ipamViewIpam</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipamViewIpam?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="UserState-monitoringManageJobs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L364">property <b>monitoringManageJobs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L364">property <b>monitoringManageJobs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringManageJobs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4721,7 +4746,7 @@ Only relevant for the DDI product.
 Whether the user can modify monitoring jobs.
 
 <h4 class="pdoc-member-header" id="UserState-monitoringManageLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L368">property <b>monitoringManageLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L368">property <b>monitoringManageLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringManageLists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4729,7 +4754,7 @@ Whether the user can modify monitoring jobs.
 Whether the user can modify notification lists.
 
 <h4 class="pdoc-member-header" id="UserState-monitoringViewJobs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L372">property <b>monitoringViewJobs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L372">property <b>monitoringViewJobs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringViewJobs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4737,7 +4762,7 @@ Whether the user can modify notification lists.
 Whether the user can view monitoring jobs.
 
 <h4 class="pdoc-member-header" id="UserState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L376">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L376">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4745,7 +4770,7 @@ Whether the user can view monitoring jobs.
 The free form name of the user.
 
 <h4 class="pdoc-member-header" id="UserState-notify">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L380">property <b>notify</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L380">property <b>notify</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notify?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -4753,7 +4778,7 @@ The free form name of the user.
 Whether or not to notify the user of specified events. Only `billing` is available currently.
 
 <h4 class="pdoc-member-header" id="UserState-securityManageActiveDirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L385">property <b>securityManageActiveDirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L385">property <b>securityManageActiveDirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityManageActiveDirectory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4762,7 +4787,7 @@ Whether the user can manage global active directory.
 Only relevant for the DDI product.
 
 <h4 class="pdoc-member-header" id="UserState-securityManageGlobal2fa">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L389">property <b>securityManageGlobal2fa</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L389">property <b>securityManageGlobal2fa</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityManageGlobal2fa?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4770,7 +4795,7 @@ Only relevant for the DDI product.
 Whether the user can manage global two factor authentication.
 
 <h4 class="pdoc-member-header" id="UserState-teams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L393">property <b>teams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L393">property <b>teams</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>teams?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4778,7 +4803,7 @@ Whether the user can manage global two factor authentication.
 The teams that the user belongs to.
 
 <h4 class="pdoc-member-header" id="UserState-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/user.ts#L397">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/user.ts#L397">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4786,7 +4811,7 @@ The teams that the user belongs to.
 The users login name.
 
 <h3 class="pdoc-module-header" id="ZoneArgs" data-link-title="ZoneArgs">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L244">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L256">
         interface <strong>ZoneArgs</strong>
     </a>
 </h3>
@@ -4796,7 +4821,7 @@ The users login name.
 The set of arguments for constructing a Zone resource.
 
 <h4 class="pdoc-member-header" id="ZoneArgs-additionalPrimaries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L249">property <b>additionalPrimaries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L261">property <b>additionalPrimaries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalPrimaries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4805,12 +4830,12 @@ List of additional IPv4 addresses for the primary
 zone. Conflicts with `secondaries`.
 
 <h4 class="pdoc-member-header" id="ZoneArgs-autogenerateNsRecord">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L250">property <b>autogenerateNsRecord</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L262">property <b>autogenerateNsRecord</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autogenerateNsRecord?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ZoneArgs-dnssec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L256">property <b>dnssec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L268">property <b>dnssec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnssec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4820,7 +4845,7 @@ Note that DNSSEC must be enabled on the account by support for this to be set
 to `true`.
 
 <h4 class="pdoc-member-header" id="ZoneArgs-expiry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L261">property <b>expiry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L273">property <b>expiry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expiry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4829,7 +4854,7 @@ The SOA Expiry. Conflicts with `primary` and
 `additionalPrimaries` (default must be accepted).
 
 <h4 class="pdoc-member-header" id="ZoneArgs-link">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L265">property <b>link</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L277">property <b>link</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>link?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4837,7 +4862,7 @@ The SOA Expiry. Conflicts with `primary` and
 The target zone(domain name) to link to.
 
 <h4 class="pdoc-member-header" id="ZoneArgs-networks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L271">property <b>networks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L283">property <b>networks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
@@ -4847,7 +4872,7 @@ should be made available. Default is network 0, the primary NSONE Global
 Network. Normally, you should not have to worry about this.
 
 <h4 class="pdoc-member-header" id="ZoneArgs-nxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L276">property <b>nxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L288">property <b>nxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4856,7 +4881,7 @@ The SOA NX TTL. Conflicts with `primary` and
 `additionalPrimaries` (default must be accepted).
 
 <h4 class="pdoc-member-header" id="ZoneArgs-primary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L281">property <b>primary</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L293">property <b>primary</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primary?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4865,7 +4890,7 @@ The primary zones' IPv4 address. This makes the zone a
 secondary. Conflicts with `secondaries`.
 
 <h4 class="pdoc-member-header" id="ZoneArgs-refresh">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L286">property <b>refresh</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L298">property <b>refresh</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>refresh?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4874,7 +4899,7 @@ The SOA Refresh. Conflicts with `primary` and
 `additionalPrimaries` (default must be accepted).
 
 <h4 class="pdoc-member-header" id="ZoneArgs-retry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L291">property <b>retry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L303">property <b>retry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4883,7 +4908,7 @@ The SOA Retry. Conflicts with `primary` and
 `additionalPrimaries` (default must be accepted).
 
 <h4 class="pdoc-member-header" id="ZoneArgs-secondaries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L297">property <b>secondaries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L309">property <b>secondaries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondaries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/ns1/types/input/#ZoneSecondary'>ZoneSecondary</a>&gt;[]&gt;;</code></pre>
@@ -4893,7 +4918,7 @@ primary. Conflicts with `primary` and `additionalPrimaries`.
 Secondaries is documented below.
 
 <h4 class="pdoc-member-header" id="ZoneArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L301">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L313">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4901,7 +4926,7 @@ Secondaries is documented below.
 The SOA TTL.
 
 <h4 class="pdoc-member-header" id="ZoneArgs-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L305">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L317">property <b>zone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4909,7 +4934,7 @@ The SOA TTL.
 The domain name of the zone.
 
 <h3 class="pdoc-module-header" id="ZoneState" data-link-title="ZoneState">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L169">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L181">
         interface <strong>ZoneState</strong>
     </a>
 </h3>
@@ -4919,7 +4944,7 @@ The domain name of the zone.
 Input properties used for looking up and filtering Zone resources.
 
 <h4 class="pdoc-member-header" id="ZoneState-additionalPrimaries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L174">property <b>additionalPrimaries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L186">property <b>additionalPrimaries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalPrimaries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4928,12 +4953,12 @@ List of additional IPv4 addresses for the primary
 zone. Conflicts with `secondaries`.
 
 <h4 class="pdoc-member-header" id="ZoneState-autogenerateNsRecord">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L175">property <b>autogenerateNsRecord</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L187">property <b>autogenerateNsRecord</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autogenerateNsRecord?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ZoneState-dnsServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L179">property <b>dnsServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L191">property <b>dnsServers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsServers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4941,7 +4966,7 @@ zone. Conflicts with `secondaries`.
 (Computed) Authoritative Name Servers.
 
 <h4 class="pdoc-member-header" id="ZoneState-dnssec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L185">property <b>dnssec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L197">property <b>dnssec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnssec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4951,7 +4976,7 @@ Note that DNSSEC must be enabled on the account by support for this to be set
 to `true`.
 
 <h4 class="pdoc-member-header" id="ZoneState-expiry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L190">property <b>expiry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L202">property <b>expiry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expiry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4960,7 +4985,7 @@ The SOA Expiry. Conflicts with `primary` and
 `additionalPrimaries` (default must be accepted).
 
 <h4 class="pdoc-member-header" id="ZoneState-hostmaster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L194">property <b>hostmaster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L206">property <b>hostmaster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostmaster?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4968,7 +4993,7 @@ The SOA Expiry. Conflicts with `primary` and
 (Computed) The SOA Hostmaster.
 
 <h4 class="pdoc-member-header" id="ZoneState-link">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L198">property <b>link</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L210">property <b>link</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>link?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4976,7 +5001,7 @@ The SOA Expiry. Conflicts with `primary` and
 The target zone(domain name) to link to.
 
 <h4 class="pdoc-member-header" id="ZoneState-networks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L204">property <b>networks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L216">property <b>networks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
@@ -4986,7 +5011,7 @@ should be made available. Default is network 0, the primary NSONE Global
 Network. Normally, you should not have to worry about this.
 
 <h4 class="pdoc-member-header" id="ZoneState-nxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L209">property <b>nxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L221">property <b>nxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4995,7 +5020,7 @@ The SOA NX TTL. Conflicts with `primary` and
 `additionalPrimaries` (default must be accepted).
 
 <h4 class="pdoc-member-header" id="ZoneState-primary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L214">property <b>primary</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L226">property <b>primary</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primary?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5004,7 +5029,7 @@ The primary zones' IPv4 address. This makes the zone a
 secondary. Conflicts with `secondaries`.
 
 <h4 class="pdoc-member-header" id="ZoneState-refresh">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L219">property <b>refresh</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L231">property <b>refresh</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>refresh?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5013,7 +5038,7 @@ The SOA Refresh. Conflicts with `primary` and
 `additionalPrimaries` (default must be accepted).
 
 <h4 class="pdoc-member-header" id="ZoneState-retry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L224">property <b>retry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L236">property <b>retry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5022,7 +5047,7 @@ The SOA Retry. Conflicts with `primary` and
 `additionalPrimaries` (default must be accepted).
 
 <h4 class="pdoc-member-header" id="ZoneState-secondaries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L230">property <b>secondaries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L242">property <b>secondaries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondaries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/ns1/types/input/#ZoneSecondary'>ZoneSecondary</a>&gt;[]&gt;;</code></pre>
@@ -5032,7 +5057,7 @@ primary. Conflicts with `primary` and `additionalPrimaries`.
 Secondaries is documented below.
 
 <h4 class="pdoc-member-header" id="ZoneState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L234">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L246">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5040,7 +5065,7 @@ Secondaries is documented below.
 The SOA TTL.
 
 <h4 class="pdoc-member-header" id="ZoneState-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/f700182e721fb90693cea33bbc83b2f0e92a6972/sdk/nodejs/zone.ts#L238">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1890d7153b3ec0587cfa0426a08b88b95d971636/sdk/nodejs/zone.ts#L250">property <b>zone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
