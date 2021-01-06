@@ -26,6 +26,10 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="n">example</span> <span class="o">=</span> <span class="n">pagerduty</span><span class="o">.</span><span class="n">Addon</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://intranet.example.com/status&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Add-ons can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import pagerduty:index/addon:Addon example P3DH5M6
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -161,6 +165,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">point_of_contact</span><span class="o">=</span><span class="s2">&quot;PagerDuty Admin&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Services can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import pagerduty:index/businessService:BusinessService main PLBP09X
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -268,6 +276,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="p">)],</span>
     <span class="p">)],</span>
     <span class="n">teams</span><span class="o">=</span><span class="p">[</span><span class="n">example_team</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Escalation policies can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import pagerduty:index/escalationPolicy:EscalationPolicy main PLBP09X
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -473,6 +485,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">opts</span><span class="o">=</span><span class="n">ResourceOptions</span><span class="p">(</span><span class="n">depends_on</span><span class="o">=</span><span class="p">[</span><span class="n">pagerduty_event_rule</span><span class="p">[</span><span class="s2">&quot;two&quot;</span><span class="p">]]))</span>
 </pre></div>
 </div>
+<p>Event rules can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import pagerduty:index/eventRule:EventRule main 19acac92-027a-4ea0-b06c-bbf516519601
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -606,6 +622,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">endpoint_url</span><span class="o">=</span><span class="s2">&quot;https://generic_webhook_url/XXXXXX/BBBBBB&quot;</span><span class="p">,</span>
     <span class="n">extension_objects</span><span class="o">=</span><span class="p">[</span><span class="n">example_service</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
     <span class="n">extension_schema</span><span class="o">=</span><span class="n">webhook</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Extensions can be imported using the id.e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import pagerduty:index/extension:Extension main PLBP09X
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -921,6 +941,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">start_time</span><span class="o">=</span><span class="s2">&quot;2015-11-09T20:00:00-05:00&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Maintenance windows can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import pagerduty:index/maintenanceWindow:MaintenanceWindow main PLBP09X
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1081,6 +1105,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="p">))</span>
 </pre></div>
 </div>
+<p>Rulesets can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import pagerduty:index/ruleset:Ruleset main 19acac92-027a-4ea0-b06c-bbf516519601
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1236,6 +1264,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">))</span>
 </pre></div>
 </div>
+<p>Ruleset rules can be imported using using the related <code class="docutils literal notranslate"><span class="pre">ruleset</span></code> id and the <code class="docutils literal notranslate"><span class="pre">ruleset_rule</span></code> id separated by a dot, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import pagerduty:index/rulesetRule:RulesetRule main a19cdca1-3d5e-4b52-bfea-8c8de04da243.19acac92-027a-4ea0-b06c-bbf516519601
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1373,6 +1405,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">time_zone</span><span class="o">=</span><span class="s2">&quot;America/New_York&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Schedules can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import pagerduty:index/schedule:Schedule main PLBP09X
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1505,6 +1541,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">alert_creation</span><span class="o">=</span><span class="s2">&quot;create_incidents&quot;</span><span class="p">,</span>
     <span class="n">auto_resolve_timeout</span><span class="o">=</span><span class="s2">&quot;14400&quot;</span><span class="p">,</span>
     <span class="n">escalation_policy</span><span class="o">=</span><span class="n">pagerduty_escalation_policy</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Services can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import pagerduty:index/service:Service main PLBP09X
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1654,6 +1694,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="p">)])</span>
 </pre></div>
 </div>
+<p>Service dependencies can be imported using the related business service id and the dependency id separated by a dot, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import pagerduty:index/serviceDependency:ServiceDependency main P4B2Z7G.D5RTHKRNGU4PYE90PJ
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1758,6 +1802,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">cloudwatch_service_integration</span> <span class="o">=</span> <span class="n">pagerduty</span><span class="o">.</span><span class="n">ServiceIntegration</span><span class="p">(</span><span class="s2">&quot;cloudwatchServiceIntegration&quot;</span><span class="p">,</span>
     <span class="n">service</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">vendor</span><span class="o">=</span><span class="n">cloudwatch_vendor</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Services can be imported using their related <code class="docutils literal notranslate"><span class="pre">service</span></code> id and service integration <code class="docutils literal notranslate"><span class="pre">id</span></code> separated by a dot, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import pagerduty:index/serviceIntegration:ServiceIntegration main PLSSSSS.PLIIIII
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1915,6 +1963,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">example</span> <span class="o">=</span> <span class="n">pagerduty</span><span class="o">.</span><span class="n">Team</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;All engineering&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Teams can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import pagerduty:index/team:Team main PLBP09X
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2005,6 +2057,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">role</span><span class="o">=</span><span class="s2">&quot;manager&quot;</span><span class="p">,</span>
     <span class="n">team_id</span><span class="o">=</span><span class="n">foo_team</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">user_id</span><span class="o">=</span><span class="n">foo_user</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Team memberships can be imported using the <code class="docutils literal notranslate"><span class="pre">user_id</span></code> and <code class="docutils literal notranslate"><span class="pre">team_id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import pagerduty:index/teamMembership:TeamMembership main PLBP09X:PLB09Z
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -2101,6 +2157,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="kn">import</span> <span class="nn">pulumi_pagerduty</span> <span class="k">as</span> <span class="nn">pagerduty</span>
 
 <span class="n">example</span> <span class="o">=</span> <span class="n">pagerduty</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">email</span><span class="o">=</span><span class="s2">&quot;125.greenholt.earline@graham.name&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Users can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import pagerduty:index/user:User main PLBP09X
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -2269,6 +2329,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Work&quot;</span><span class="p">,</span>
     <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;sms_contact_method&quot;</span><span class="p">,</span>
     <span class="n">user_id</span><span class="o">=</span><span class="n">example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Contact methods can be imported using the <code class="docutils literal notranslate"><span class="pre">user_id</span></code> and the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import pagerduty:index/userContactMethod:UserContactMethod main PLBP09X:PLBP09X
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -2444,6 +2508,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;sms_contact_method&quot;</span><span class="p">,</span>
         <span class="nb">id</span><span class="o">=</span><span class="n">sms</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">))</span>
+</pre></div>
+</div>
+<p>User notification rules can be imported using the <code class="docutils literal notranslate"><span class="pre">user_id</span></code> and the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import pagerduty:index/userNotificationRule:UserNotificationRule main PXPGF42:PPSCXAN
 </pre></div>
 </div>
 <dl class="field-list simple">
