@@ -166,7 +166,7 @@ const stagingApp = new cloudflare.AccessApplication("staging_app", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.AccessApplication">AccessApplication</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allowed_idps</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">auto_redirect_to_identity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cors_headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessApplicationCorsHeaderArgs]]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_binding_cookie</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.AccessApplication">AccessApplication</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allowed_idps</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">auto_redirect_to_identity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cors_headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessApplicationCorsHeaderArgs]]</span> = None<span class="p">, </span><span class="nx">custom_deny_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_deny_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_binding_cookie</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -403,6 +403,26 @@ below for reference structure.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="customdenymessage_csharp">
+<a href="#customdenymessage_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Deny<wbr>Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Option that returns a custom error message when a user is denied access to the application.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customdenyurl_csharp">
+<a href="#customdenyurl_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Deny<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Option that redirects to a custom URL when a user is denied access to the application.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enablebindingcookie_csharp">
 <a href="#enablebindingcookie_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Binding<wbr>Cookie</a>
 </span>
@@ -501,6 +521,26 @@ selection if only one is configured in allowed_idps. Defaults to `false`
     </dt>
     <dd>{{% md %}}CORS configuration for the Access Application. See
 below for reference structure.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customdenymessage_go">
+<a href="#customdenymessage_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Deny<wbr>Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Option that returns a custom error message when a user is denied access to the application.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customdenyurl_go">
+<a href="#customdenyurl_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Deny<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Option that redirects to a custom URL when a user is denied access to the application.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -605,6 +645,26 @@ below for reference structure.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="customdenymessage_nodejs">
+<a href="#customdenymessage_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Deny<wbr>Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Option that returns a custom error message when a user is denied access to the application.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customdenyurl_nodejs">
+<a href="#customdenyurl_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Deny<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Option that redirects to a custom URL when a user is denied access to the application.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enablebindingcookie_nodejs">
 <a href="#enablebindingcookie_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Binding<wbr>Cookie</a>
 </span>
@@ -703,6 +763,26 @@ selection if only one is configured in allowed_idps. Defaults to `false`
     </dt>
     <dd>{{% md %}}CORS configuration for the Access Application. See
 below for reference structure.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="custom_deny_message_python">
+<a href="#custom_deny_message_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>deny_<wbr>message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Option that returns a custom error message when a user is denied access to the application.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="custom_deny_url_python">
+<a href="#custom_deny_url_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>deny_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Option that redirects to a custom URL when a user is denied access to the application.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -858,7 +938,7 @@ Get an existing AccessApplication resource's state with the given name, ID, and 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allowed_idps</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">aud</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_redirect_to_identity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cors_headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessApplicationCorsHeaderArgs]]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_binding_cookie</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AccessApplication</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allowed_idps</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">aud</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_redirect_to_identity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cors_headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessApplicationCorsHeaderArgs]]</span> = None<span class="p">, </span><span class="nx">custom_deny_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_deny_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_binding_cookie</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AccessApplication</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1026,6 +1106,26 @@ below for reference structure.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_customdenymessage_csharp">
+<a href="#state_customdenymessage_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Deny<wbr>Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Option that returns a custom error message when a user is denied access to the application.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_customdenyurl_csharp">
+<a href="#state_customdenyurl_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Deny<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Option that redirects to a custom URL when a user is denied access to the application.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_domain_csharp">
 <a href="#state_domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
 </span>
@@ -1134,6 +1234,26 @@ selection if only one is configured in allowed_idps. Defaults to `false`
     </dt>
     <dd>{{% md %}}CORS configuration for the Access Application. See
 below for reference structure.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_customdenymessage_go">
+<a href="#state_customdenymessage_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Deny<wbr>Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Option that returns a custom error message when a user is denied access to the application.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_customdenyurl_go">
+<a href="#state_customdenyurl_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Deny<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Option that redirects to a custom URL when a user is denied access to the application.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1248,6 +1368,26 @@ below for reference structure.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_customdenymessage_nodejs">
+<a href="#state_customdenymessage_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Deny<wbr>Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Option that returns a custom error message when a user is denied access to the application.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_customdenyurl_nodejs">
+<a href="#state_customdenyurl_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Deny<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Option that redirects to a custom URL when a user is denied access to the application.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_domain_nodejs">
 <a href="#state_domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
@@ -1356,6 +1496,26 @@ selection if only one is configured in allowed_idps. Defaults to `false`
     </dt>
     <dd>{{% md %}}CORS configuration for the Access Application. See
 below for reference structure.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_custom_deny_message_python">
+<a href="#state_custom_deny_message_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>deny_<wbr>message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Option that returns a custom error message when a user is denied access to the application.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_custom_deny_url_python">
+<a href="#state_custom_deny_url_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>deny_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Option that redirects to a custom URL when a user is denied access to the application.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
