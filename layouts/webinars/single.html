@@ -39,6 +39,9 @@
                             <pulumi-datetime class="uppercase text-orange text-sm font-bold" date="{{ .sortable_date }}"></pulumi-datetime>
                         {{ end }}
                         <p class="uppercase text-orange text-sm font-bold mt-2">DURATION: {{ .duration }}</p>
+                        {{ if .youtube_url }}
+                            <a href="{{ .youtube_url }}" target="_blank" rel="noopener noreferrer" class="btn">WATCH ON DEMAND</a>
+                        {{ end }}
                         <div class="text-gray-600">
                             {{ .description | markdownify }}
                         </div>
