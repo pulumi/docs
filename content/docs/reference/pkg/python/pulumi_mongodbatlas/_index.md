@@ -88,6 +88,12 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="p">))</span>
 </pre></div>
 </div>
+<p>Alert Configuration can be imported using the <code class="docutils literal notranslate"><span class="pre">project_id-alert_configuration_id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import mongodbatlas:index/alertConfiguration:AlertConfiguration <span class="nb">test</span> 5d0f1f74cf09a29120e123cd-5d0f1f74cf09a29120e1fscg
+
+For more information see<span class="se">\ </span><span class="sb">`</span>MongoDB Atlas API Reference. &lt;https://docs.atlas.mongodb.com/reference/api/alert-configurations/&gt;<span class="sb">`</span>_
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -215,6 +221,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">audit_filter</span><span class="o">=</span><span class="s2">&quot;{ &#39;atype&#39;: &#39;authenticate&#39;, &#39;param&#39;: {   &#39;user&#39;: &#39;auditAdmin&#39;,   &#39;db&#39;: &#39;admin&#39;,   &#39;mechanism&#39;: &#39;SCRAM-SHA-1&#39; }}&quot;</span><span class="p">,</span>
     <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;project-id&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Auditing must be imported using auditing ID, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import mongodbatlas:index/auditing:Auditing my_auditing 5d09d6a59ccf6445652a444a
+
+For more information see<span class="se">\ </span><span class="sb">`</span>MongoDB Atlas API Reference. &lt;https://docs.atlas.mongodb.com/reference/api/auditing/&gt;<span class="sb">`</span>_
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -503,6 +515,12 @@ On-demand snapshots happen immediately, unlike scheduled snapshots which occur a
     <span class="p">))</span>
 </pre></div>
 </div>
+<p>Cloud Backup Snapshot entries can be imported using project project_id, cluster_name and snapshot_id (Unique identifier of the snapshot), in the format <code class="docutils literal notranslate"><span class="pre">PROJECTID-CLUSTERNAME-SNAPSHOTID</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import mongodbatlas:index/cloudProviderSnapshot:CloudProviderSnapshot <span class="nb">test</span> 5d0f1f73cf09a29120e173cf-MyClusterTest-5d116d82014b764445b2f9b5
+
+For more information see<span class="se">\ </span><span class="sb">`</span>MongoDB Atlas API Reference. &lt;https://docs.atlas.mongodb.com/reference/api/cloud-backup/backup/backups/&gt;<span class="sb">`</span>_
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -663,11 +681,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.CloudProviderSnapshotBackupPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">CloudProviderSnapshotBackupPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policies</span><span class="p">:</span> <span class="n">Union[Sequence[Union[CloudProviderSnapshotBackupPolicyPolicyArgs, Mapping[str, Any], Awaitable[Union[CloudProviderSnapshotBackupPolicyPolicyArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[CloudProviderSnapshotBackupPolicyPolicyArgs, Mapping[str, Any], Awaitable[Union[CloudProviderSnapshotBackupPolicyPolicyArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reference_hour_of_day</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reference_minute_of_hour</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">restore_window_days</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_snapshots</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.CloudProviderSnapshotBackupPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a CloudProviderSnapshotBackupPolicy resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] cluster_name: The name of the Atlas cluster that contains the snapshot backup policy you want to retrieve.
-:param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType[‘CloudProviderSnapshotBackupPolicyPolicyArgs’]]]] policies: Contains a document for each backup policy item in the desired updated backup policy.</p>
+<dd><p>Cloud Backup Snapshot Policy entries can be imported using project project_id and cluster_name, in the format <code class="docutils literal notranslate"><span class="pre">PROJECTID-CLUSTERNAME</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import mongodbatlas:index/cloudProviderSnapshotBackupPolicy:CloudProviderSnapshotBackupPolicy <span class="nb">test</span> 5d0f1f73cf09a29120e173cf-MyClusterTest
+
+For more information see<span class="se">\ </span><span class="sb">`</span>MongoDB Atlas API Reference. &lt;https://docs.atlas.mongodb.com/reference/api/cloud-backup/schedule/modify-one-schedule/&gt;<span class="sb">`</span>_
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cluster_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Atlas cluster that contains the snapshot backup policy you want to retrieve.</p></li>
+<li><p><strong>policies</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'CloudProviderSnapshotBackupPolicyPolicyArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Contains a document for each backup policy item in the desired updated backup policy.</p></li>
+</ul>
+</dd>
+</dl>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `policies.#.id` - (Required) Unique identifier of the backup policy that you want to update. policies.#.id is a value obtained via the Cluster resource. provider_backup_enabled of the Cluster resource must be set to true. See the example above for how to refer to the Cluster resource for policies.#.id
 </pre></div>
 </div>
@@ -877,6 +906,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">delivery_type</span><span class="o">=</span><span class="n">mongodbatlas</span><span class="o">.</span><span class="n">CloudProviderSnapshotRestoreJobDeliveryTypeArgs</span><span class="p">(</span>
         <span class="n">download</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="p">))</span>
+</pre></div>
+</div>
+<p>Cloud Backup Snapshot Restore Job entries can be imported using project project_id, cluster_name and snapshot_id (Unique identifier of the snapshot), in the format <code class="docutils literal notranslate"><span class="pre">PROJECTID-CLUSTERNAME-JOBID</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import mongodbatlas:index/cloudProviderSnapshotRestoreJob:CloudProviderSnapshotRestoreJob <span class="nb">test</span> 5cf5a45a9ccf6400e60981b6-MyCluster-5d1b654ecf09a24b888f4c79
+
+For more information see<span class="se">\ </span><span class="sb">`</span>MongoDB Atlas API Reference. &lt;https://docs.atlas.mongodb.com/reference/api/cloud-backup/restore/restores/&gt;<span class="sb">`</span>_
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1179,6 +1214,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">provider_instance_size_name</span><span class="o">=</span><span class="s2">&quot;M2&quot;</span><span class="p">,</span>
     <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;TENANT&quot;</span><span class="p">,</span>
     <span class="n">provider_region_name</span><span class="o">=</span><span class="s2">&quot;US_EAST_1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Clusters can be imported using project ID and cluster name, in the format <code class="docutils literal notranslate"><span class="pre">PROJECTID-CLUSTERNAME</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import mongodbatlas:index/cluster:Cluster my_cluster 1112222b3bf99403840e8934-Cluster0
+
+See detailed information <span class="k">for</span> arguments and attributes<span class="se">\ </span><span class="sb">`</span>MongoDB API Clusters &lt;https://docs.atlas.mongodb.com/reference/api/clusters-create-one/&gt;<span class="sb">`</span>_
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1736,6 +1777,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">role_name</span><span class="o">=</span><span class="s2">&quot;myCustomRole&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Database users can be imported using project ID and username, in the format <code class="docutils literal notranslate"><span class="pre">PROJECTID-ROLENAME</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import mongodbatlas:index/customDbRole:CustomDbRole my_role 1112222b3bf99403840e8934-MyCustomRole
+
+For more information see<span class="se">\ </span><span class="sb">`</span>MongoDB Atlas API Reference. &lt;https://docs.atlas.mongodb.com/reference/api/custom-roles/&gt;<span class="sb">`</span>_
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1817,16 +1864,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.DatabaseUser">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">DatabaseUser</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auth_database_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">aws_iam_type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">Union[Sequence[Union[DatabaseUserLabelArgs, Mapping[str, Any], Awaitable[Union[DatabaseUserLabelArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[DatabaseUserLabelArgs, Mapping[str, Any], Awaitable[Union[DatabaseUserLabelArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">roles</span><span class="p">:</span> <span class="n">Union[Sequence[Union[DatabaseUserRoleArgs, Mapping[str, Any], Awaitable[Union[DatabaseUserRoleArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[DatabaseUserRoleArgs, Mapping[str, Any], Awaitable[Union[DatabaseUserRoleArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scopes</span><span class="p">:</span> <span class="n">Union[Sequence[Union[DatabaseUserScopeArgs, Mapping[str, Any], Awaitable[Union[DatabaseUserScopeArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[DatabaseUserScopeArgs, Mapping[str, Any], Awaitable[Union[DatabaseUserScopeArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">x509_type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.DatabaseUser" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a DatabaseUser resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] auth_database_name: Database against which Atlas authenticates the user. A user must provide both a username and authentication database to log into MongoDB.</p>
-<blockquote>
-<div><p>Accepted values include:</p>
-</div></blockquote>
+<dd><p>Database users can be imported using project ID and username, in the format <code class="docutils literal notranslate"><span class="pre">project_id</span></code>-<code class="docutils literal notranslate"><span class="pre">username</span></code>-<code class="docutils literal notranslate"><span class="pre">auth_database_name</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import mongodbatlas:index/databaseUser:DatabaseUser my_user 1112222b3bf99403840e8934-my_user-admin
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>auth_database_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Database against which Atlas authenticates the user. A user must provide both a username and authentication database to log into MongoDB.
+Accepted values include:</p></li>
 <li><p><strong>aws_iam_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If this value is set, the new database user authenticates with AWS IAM credentials. If no value is given, Atlas uses the default value of NONE. The accepted types are:</p></li>
 <li><p><strong>database_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Database on which the user has the specified role. A role on the <code class="docutils literal notranslate"><span class="pre">admin</span></code> database can include privileges that apply to the other databases.</p></li>
 <li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique ID for the project to create the database user.</p></li>
@@ -3307,6 +3355,12 @@ The following are valid roles:</p></li>
     <span class="p">)])</span>
 </pre></div>
 </div>
+<p>Database users can be imported using project ID and cluster name, in the format <code class="docutils literal notranslate"><span class="pre">PROJECTID-CLUSTER_NAME</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import mongodbatlas:index/globalClusterConfig:GlobalClusterConfig config 1112222b3bf99403840e8934-my-cluster
+
+See detailed information <span class="k">for</span> arguments and attributes<span class="se">\ </span><span class="sb">`</span>MongoDB API Global Clusters &lt;https://docs.atlas.mongodb.com/reference/api/global-clusters/&gt;<span class="sb">`</span>_
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3441,6 +3495,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">MaintenanceWindow</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
     <span class="n">defer</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;your-project-id&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Maintenance Window entries can be imported using project project_id, in the format <code class="docutils literal notranslate"><span class="pre">PROJECTID</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import mongodbatlas:index/maintenanceWindow:MaintenanceWindow <span class="nb">test</span> 5d0f1f73cf09a29120e173cf
+
+For more information see<span class="se">\ </span><span class="sb">`</span>MongoDB Atlas API Reference. &lt;https://docs.atlas.mongodb.com/reference/api/maintenance-windows/&gt;<span class="sb">`</span>_
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -3592,6 +3652,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR-PROJECT-ID&gt;&quot;</span><span class="p">,</span>
     <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AZURE&quot;</span><span class="p">,</span>
     <span class="n">region</span><span class="o">=</span><span class="s2">&quot;US_EAST_2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Clusters can be imported using project ID and network peering container id, in the format <code class="docutils literal notranslate"><span class="pre">PROJECTID-CONTAINER-ID</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import mongodbatlas:index/networkContainer:NetworkContainer my_container 1112222b3bf99403840e8934-5cbf563d87d9d67253be590a
+
+See detailed information <span class="k">for</span> arguments and attributes<span class="se">\ </span><span class="sb">`</span>MongoDB API Network Peering Container &lt;https://docs.atlas.mongodb.com/reference/api/vpc-create-container/&gt;<span class="sb">`</span>_
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -3793,23 +3859,35 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.NetworkPeering">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">NetworkPeering</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">accepter_region_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">atlas_cidr_block</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">atlas_gcp_project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">atlas_vpc_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">aws_account_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">azure_directory_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">azure_subscription_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gcp_project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">route_table_cidr_block</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vnet_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.NetworkPeering" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a NetworkPeering resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] accepter_region_name: Specifies the AWS region where the peer VPC resides. For complete lists of supported regions, see <a class="reference external" href="https://docs.atlas.mongodb.com/reference/amazon-aws/">Amazon Web Services</a>.
-:param pulumi.Input[str] atlas_gcp_project_id: The Atlas GCP Project ID for the GCP VPC used by your atlas cluster that it is need to set up the reciprocal connection.
-:param pulumi.Input[str] aws_account_id: AWS Account ID of the owner of the peer VPC.
-:param pulumi.Input[str] azure_directory_id: Unique identifier for an Azure AD directory.
-:param pulumi.Input[str] azure_subscription_id: Unique identifier of the Azure subscription in which the VNet resides.
-:param pulumi.Input[str] container_id: Unique identifier of the MongoDB Atlas container for the provider (GCP) or provider/region (AWS, AZURE). You can create an MongoDB Atlas container using the network_container resource or it can be obtained from the cluster returned values if a cluster has been created before the first container.
-:param pulumi.Input[str] gcp_project_id: GCP project ID of the owner of the network peer.
-:param pulumi.Input[str] network_name: Name of the network peer to which Atlas connects.
-:param pulumi.Input[str] project_id: The unique ID for the MongoDB Atlas project to create the database user.
-:param pulumi.Input[str] provider_name: Cloud provider to whom the peering connection is being made. (Possible Values <code class="docutils literal notranslate"><span class="pre">AWS</span></code>, <code class="docutils literal notranslate"><span class="pre">AZURE</span></code>, <code class="docutils literal notranslate"><span class="pre">GCP</span></code>).
-:param pulumi.Input[str] resource_group_name: Name of your Azure resource group.
-:param pulumi.Input[str] route_table_cidr_block: AWS VPC CIDR block or subnet.
-:param pulumi.Input[str] vnet_name: Name of your Azure VNet.
-:param pulumi.Input[str] vpc_id: Unique identifier of the AWS peer VPC (Note: this is <strong>not</strong> the same as the Atlas AWS VPC that is returned by the network_container resource).</p>
+<dd><p>Clusters can be imported using project ID and network peering peering id, in the format <code class="docutils literal notranslate"><span class="pre">PROJECTID-PEERID-PROVIDERNAME</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import mongodbatlas:index/networkPeering:NetworkPeering my_peering 1112222b3bf99403840e8934-5cbf563d87d9d67253be590a-AWS
+
+See detailed information <span class="k">for</span> arguments and attributes<span class="se">\ </span><span class="sb">`</span>MongoDB API Network Peering Connection &lt;https://docs.atlas.mongodb.com/reference/api/vpc-create-peering-connection/&gt;<span class="sb">`</span>_
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>accepter_region_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies the AWS region where the peer VPC resides. For complete lists of supported regions, see <a class="reference external" href="https://docs.atlas.mongodb.com/reference/amazon-aws/">Amazon Web Services</a>.</p>
+</p></li>
+<li><p><strong>atlas_gcp_project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Atlas GCP Project ID for the GCP VPC used by your atlas cluster that it is need to set up the reciprocal connection.</p></li>
+<li><p><strong>aws_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS Account ID of the owner of the peer VPC.</p></li>
+<li><p><strong>azure_directory_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier for an Azure AD directory.</p></li>
+<li><p><strong>azure_subscription_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the Azure subscription in which the VNet resides.</p></li>
+<li><p><strong>container_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the MongoDB Atlas container for the provider (GCP) or provider/region (AWS, AZURE). You can create an MongoDB Atlas container using the network_container resource or it can be obtained from the cluster returned values if a cluster has been created before the first container.</p></li>
+<li><p><strong>gcp_project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – GCP project ID of the owner of the network peer.</p></li>
+<li><p><strong>network_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the network peer to which Atlas connects.</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique ID for the MongoDB Atlas project to create the database user.</p></li>
+<li><p><strong>provider_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud provider to whom the peering connection is being made. (Possible Values <code class="docutils literal notranslate"><span class="pre">AWS</span></code>, <code class="docutils literal notranslate"><span class="pre">AZURE</span></code>, <code class="docutils literal notranslate"><span class="pre">GCP</span></code>).</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of your Azure resource group.</p></li>
+<li><p><strong>route_table_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS VPC CIDR block or subnet.</p></li>
+<li><p><strong>vnet_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of your Azure VNet.</p></li>
+<li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the AWS peer VPC (Note: this is <strong>not</strong> the same as the Atlas AWS VPC that is returned by the network_container resource).</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt id="pulumi_mongodbatlas.NetworkPeering.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">accepter_region_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">atlas_cidr_block</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">atlas_gcp_project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">atlas_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">atlas_vpc_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">aws_account_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">azure_directory_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">azure_subscription_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">error_message</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">error_state</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">error_state_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gcp_project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">route_table_cidr_block</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vnet_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_mongodbatlas.network_peering.NetworkPeering<a class="headerlink" href="#pulumi_mongodbatlas.NetworkPeering.get" title="Permalink to this definition">¶</a></dt>
@@ -4034,6 +4112,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-east-1&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Private Endpoint Connection can be imported using project ID and username, in the format <code class="docutils literal notranslate"><span class="pre">{project_id}-{private_link_id}</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import mongodbatlas:index/privateEndpoint:PrivateEndpoint <span class="nb">test</span> 1112222b3bf99403840e8934-3242342343112
+
+See detailed information <span class="k">for</span> arguments and attributes<span class="se">\ </span><span class="sb">`</span>MongoDB API Private Endpoint Connection &lt;https://docs.atlas.mongodb.com/reference/api/private-endpoint-create-one-private-endpoint-connection/&gt;<span class="sb">`</span>_
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4248,6 +4332,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">project_id</span><span class="o">=</span><span class="n">test_private_endpoint</span><span class="o">.</span><span class="n">project_id</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Private Endpoint Link Connection can be imported using project ID and username, in the format <code class="docutils literal notranslate"><span class="pre">{project_id}-{private_link_id}-{interface_endpoint_id}</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import mongodbatlas:index/privateEndpointInterfaceLink:PrivateEndpointInterfaceLink <span class="nb">test</span> 1112222b3bf99403840e8934-3242342343112-vpce-4242342343
+
+See detailed information <span class="k">for</span> arguments and attributes<span class="se">\ </span><span class="sb">`</span>MongoDB API Private Endpoint Link Connection &lt;https://docs.atlas.mongodb.com/reference/api/private-endpoint-create-one-interface-endpoint/&gt;<span class="sb">`</span>_
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4372,6 +4462,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR PROJECT ID&gt;&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Project must be imported using project ID, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import mongodbatlas:index/privateIpMode:PrivateIpMode my_private_ip_mode 5d09d6a59ccf6445652a444a
+
+For more information see<span class="se">\ </span><span class="sb">`</span>MongoDB Atlas API Reference. &lt;https://docs.atlas.mongodb.com/reference/api/get-private-ip-mode-for-project/&gt;<span class="sb">`</span>_
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4453,11 +4549,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.Project">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">Project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">teams</span><span class="p">:</span> <span class="n">Union[Sequence[Union[ProjectTeamArgs, Mapping[str, Any], Awaitable[Union[ProjectTeamArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[ProjectTeamArgs, Mapping[str, Any], Awaitable[Union[ProjectTeamArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.Project" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Project resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] name: The name of the project you want to create. (Cannot be changed via this Provider after creation.)
-:param pulumi.Input[str] org_id: The ID of the organization you want to create the project within.</p>
+<dd><p>Project must be imported using project ID, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import mongodbatlas:index/project:Project my_project 5d09d6a59ccf6445652a444a
+
+For more information see<span class="se">\ </span><span class="sb">`</span>MongoDB Atlas API Reference. &lt;https://docs.atlas.mongodb.com/reference/api/projects/&gt;<span class="sb">`</span>_ - <span class="sb">`</span>and MongoDB Atlas API - Teams &lt;https://docs.atlas.mongodb.com/reference/api/teams/&gt;<span class="sb">`</span>_ Documentation <span class="k">for</span> more information.
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the project you want to create. (Cannot be changed via this Provider after creation.)</p></li>
+<li><p><strong>org_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the organization you want to create the project within.</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt id="pulumi_mongodbatlas.Project.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_count</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">created</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">teams</span><span class="p">:</span> <span class="n">Union[Sequence[Union[ProjectTeamArgs, Mapping[str, Any], Awaitable[Union[ProjectTeamArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[ProjectTeamArgs, Mapping[str, Any], Awaitable[Union[ProjectTeamArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_mongodbatlas.project.Project<a class="headerlink" href="#pulumi_mongodbatlas.Project.get" title="Permalink to this definition">¶</a></dt>
@@ -4593,6 +4700,12 @@ When you remove an entry from the whitelist, existing connections from the remov
 <blockquote>
 <div><p><strong>IMPORTANT:</strong> In order to use AWS Security Group(s) VPC Peering must be enabled like above example.</p>
 </div></blockquote>
+<p>IP Whitelist entries can be imported using the <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">cidr_block</span></code> or <code class="docutils literal notranslate"><span class="pre">ip_address</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import mongodbatlas:index/projectIpWhitelist:ProjectIpWhitelist <span class="nb">test</span> 5d0f1f74cf09a29120e123cd-10.242.88.0/21
+
+For more information see<span class="se">\ </span><span class="sb">`</span>MongoDB Atlas API Reference. &lt;https://docs.atlas.mongodb.com/reference/api/whitelist/&gt;<span class="sb">`</span>_
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4769,6 +4882,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;user2@email.com&quot;</span><span class="p">,</span>
         <span class="s2">&quot;user3@email.com&quot;</span><span class="p">,</span>
     <span class="p">])</span>
+</pre></div>
+</div>
+<p>Teams can be imported using the organization ID and team id, in the format ORGID-TEAMID, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import mongodbatlas:index/team:Team my_team 1112222b3bf99403840e8934-1112222b3bf99403840e8935
+
+See detailed information <span class="k">for</span> arguments and attributes<span class="se">\ </span><span class="sb">`</span>MongoDB API Teams &lt;https://docs.atlas.mongodb.com/reference/api/teams-create-one/&gt;<span class="sb">`</span>_
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -4995,6 +5114,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
     <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>X.509 Certificates for a User can be imported using project ID and username, in the format <code class="docutils literal notranslate"><span class="pre">project_id-username</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import mongodbatlas:index/x509AuthenticationDatabaseUser:X509AuthenticationDatabaseUser <span class="nb">test</span> 1112222b3bf99403840e8934-myUsername
+
+For more information see<span class="se">\ </span><span class="sb">`</span>MongoDB Atlas API Reference. &lt;https://docs.atlas.mongodb.com/reference/api/x509-configuration-get-certificates/&gt;<span class="sb">`</span>_ Current X.509 Configuration can be imported using project ID, in the format <span class="sb">``</span>project_id<span class="sb">``</span><span class="se">\ </span>, e.g.
+</pre></div>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import mongodbatlas:index/x509AuthenticationDatabaseUser:X509AuthenticationDatabaseUser <span class="nb">test</span> 1112222b3bf99403840e8934
+
+For more information see<span class="se">\ </span><span class="sb">`</span>MongoDB Atlas API Reference. &lt;https://docs.atlas.mongodb.com/reference/api/x509-configuration-get-certificates/&gt;<span class="sb">`</span>_
 </pre></div>
 </div>
 <dl class="field-list simple">
