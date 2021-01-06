@@ -55,10 +55,10 @@ export class HubspotForm {
             // to populate those fields with the correct values.
 
             waitForElementToExist(`${hsFormTargetId} form fieldset div`).then(() => {
-                const fieldSets = document.querySelectorAll(`${hsFormTargetId} form fieldset div[style*="display:none"]`);
-                fieldSets.forEach((fieldset: any) => {
-                    fieldset.parentElement.style.display = "none";
-                });
+                // const fieldSets = document.querySelectorAll(`${hsFormTargetId} form fieldset div[style*="display:none"]`);
+                // fieldSets.forEach((fieldset: any) => {
+                //     fieldset.parentElement.style.display = "none";
+                // });
 
                 // Populate the UTM parameter fields.
                 const cookies = parseCookie();
