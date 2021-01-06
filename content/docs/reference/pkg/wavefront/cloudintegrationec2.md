@@ -13,7 +13,6 @@ meta_desc: "Explore the CloudIntegrationEc2 resource of the Wavefront package, i
 Provides a Wavefront Cloud Integration for EC2. This allows EC2 cloud integrations to be created,
 updated, and delete
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1152,6 +1151,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+EC2 Cloud Integrations can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import wavefront:index/cloudIntegrationEc2:CloudIntegrationEc2 ec2 a411c16b-3cf7-4f03-bf11-8ca05aab898d
+```
 
 
 

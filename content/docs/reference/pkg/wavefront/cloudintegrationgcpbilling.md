@@ -13,7 +13,6 @@ meta_desc: "Explore the CloudIntegrationGcpBilling resource of the Wavefront pac
 Provides a Wavefront Cloud Integration for GCP Billing. This allows GCP Billing cloud integrations to be created,
 updated, and deleted.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1169,6 +1168,16 @@ The account must be at least granted Monitoring Viewer permissions. This key mus
 
 
 
+
+
+## Import
+
+
+GCP Billing Cloud Integrations can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import wavefront:index/cloudIntegrationGcpBilling:CloudIntegrationGcpBilling gcp_billing a411c16b-3cf7-4f03-bf11-8ca05aab898d
+```
 
 
 

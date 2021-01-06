@@ -13,7 +13,6 @@ meta_desc: "Explore the CloudIntegrationTesla resource of the Wavefront package,
 Provides a Wavefront Cloud Integration for Tesla. This allows NewRelic cloud integrations to be created,
 updated, and deleted.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1071,6 +1070,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Tesla Integrations can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import wavefront:index/cloudIntegrationTesla:CloudIntegrationTesla tesla a411c16b-3cf7-4f03-bf11-8ca05aab898d
+```
 
 
 

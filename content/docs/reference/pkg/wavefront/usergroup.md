@@ -12,7 +12,6 @@ meta_desc: "Explore the UserGroup resource of the Wavefront package, including e
 
 Provides a Wavefront User Group Resource. This allows user groups to be created, updated, and deleted.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -665,6 +664,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+User Groups can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import wavefront:index/userGroup:UserGroup some_group a411c16b-3cf7-4f03-bf11-8ca05aab898d
+```
 
 
 

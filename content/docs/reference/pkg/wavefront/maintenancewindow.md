@@ -12,7 +12,6 @@ meta_desc: "Explore the MaintenanceWindow resource of the Wavefront package, inc
 
 Provides a Wavefront Maintenance Window Resource. This allows maintenance windows to be created, updated, and deleted.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1255,6 +1254,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Maintenance windows can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import wavefront:index/maintenanceWindow:MaintenanceWindow basic 1600383357095
+```
 
 
 

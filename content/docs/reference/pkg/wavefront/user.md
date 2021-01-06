@@ -12,7 +12,6 @@ meta_desc: "Explore the User resource of the Wavefront package, including exampl
 
 Provides a Wavefront User Resource. This allows users to be created, updated, and deleted.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -833,6 +832,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Users can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import wavefront:index/user:User some_user test@example.com
+```
 
 
 

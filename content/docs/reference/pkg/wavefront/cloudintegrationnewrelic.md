@@ -13,7 +13,6 @@ meta_desc: "Explore the CloudIntegrationNewRelic resource of the Wavefront packa
 Provides a Wavefront Cloud Integration for NewRelic. This allows NewRelic cloud integrations to be created,
 updated, and deleted.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1350,6 +1349,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+NewRelic Integrations can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import wavefront:index/cloudIntegrationNewRelic:CloudIntegrationNewRelic newrelic a411c16b-3cf7-4f03-bf11-8ca05aab898d
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

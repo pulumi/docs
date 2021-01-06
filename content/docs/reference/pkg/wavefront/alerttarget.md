@@ -202,7 +202,6 @@ func main() {
 }
 ```
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1874,6 +1873,16 @@ routing key. `WEBHOOK`: URL endpoint.
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+Alert Targets can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import wavefront:index/alertTarget:AlertTarget alert_target abcdEFGhijKLMNO
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

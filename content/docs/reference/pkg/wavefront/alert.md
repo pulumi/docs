@@ -12,7 +12,6 @@ meta_desc: "Explore the Alert resource of the Wavefront package, including examp
 
 Provides a Wavefront Alert resource.  This allows alerts to be created, updated, and deleted.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1839,6 +1838,16 @@ the same value as `minutes`.
 
 
 
+
+
+## Import
+
+
+Alerts can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import wavefront:index/alert:Alert alert_target 1479868728473
+```
 
 
 
