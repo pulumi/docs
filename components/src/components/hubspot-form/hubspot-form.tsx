@@ -35,6 +35,8 @@ export class HubspotForm {
     // propagate up to the global window object. Then once it is available
     // we should create the HubSpot form.
     componentDidLoad() {
+        const hsFormTargetId = `#hubspotForm_${this.formId}`;
+
         waitForWindowPropertyToExist("hbspt").then((hbspt: any) => {
             hbspt.forms.create({
                 portalId: "4429525",
@@ -42,18 +44,19 @@ export class HubspotForm {
                 css: "",
                 cssClass: this.class,
                 goToWebinarWebinarKey: this.goToWebinarKey,
-                target: `#hubspotForm_${this.formId}`,
+                target: hsFormTargetId,
             });
             this.isLoading = false;
             this.didLoad = true;
 
             // Hidden form fields from HubSpot created forms causes gaps to appear in
-            // the form which is less then desireable. So we need to find the hidden
+            // the form which is less then desirable. So we need to find the hidden
             // form fields and then hide the parent <fieldset> for it. We will also need
             // to populate those fields with the correct values.
-            waitForElementToExist(`#hubspotForm_${this.formId} form fieldset div`).then(() => {
-                const fieldSets = document.querySelectorAll(`#hubspotForm_${this.formId} form fieldset div[style*="display:none"]`);
-                fieldSets.forEach((fieldset) => {
+
+            waitForElementToExist(`${hsFormTargetId} form fieldset div`).then(() => {
+                const fieldSets = document.querySelectorAll(`${hsFormTargetId} form fieldset div[style*="display:none"]`);
+                fieldSets.forEach((fieldset: any) => {
                     fieldset.parentElement.style.display = "none";
                 });
 
@@ -64,17 +67,17 @@ export class HubspotForm {
                 const utmSource = utmCookie.utmcsr || "(direct)";
                 const utmMedium = utmCookie.utmcmd || "(none)";
 
-                const utmCampaignInput = document.querySelector<HTMLInputElement>(`input[name="last_utm_campaign"]`);
+                const utmCampaignInput = document.querySelector<HTMLInputElement>(`${hsFormTargetId} input[name="last_utm_campaign"]`);
                 if (utmCampaignInput) {
                     utmCampaignInput.value = utmCampaign;
                 }
 
-                const utmSourceInput = document.querySelector<HTMLInputElement>(`input[name="last_utm_source"]`);
+                const utmSourceInput = document.querySelector<HTMLInputElement>(`${hsFormTargetId} input[name="last_utm_source"]`);
                 if (utmSourceInput) {
-                    utmCampaignInput.value = utmSource;
+                    utmSourceInput.value = utmSource;
                 }
 
-                const utmMediumInput = document.querySelector<HTMLInputElement>(`input[name="last_utm_medium"]`);
+                const utmMediumInput = document.querySelector<HTMLInputElement>(`${hsFormTargetId} input[name="last_utm_medium"]`);
                 if (utmMediumInput) {
                     utmMediumInput.value = utmMedium;
                 }
@@ -101,7 +104,7 @@ export class HubspotForm {
         }
     }
 
-    // When the form is submitted we also send an event to segment with the relevant UTM tags.
+    // When the form is submitted we also send an event to Segment with the relevant UTM tags.
     private handleFormSubmission(formId: string) {
         const analytics = (window as any).analytics;
         const analyticsAvailable = analytics && analytics.track && (typeof analytics.track === "function");
