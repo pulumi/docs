@@ -21858,6 +21858,15 @@ marked as the main block. Default is `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="disabled_csharp">
+<a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="prefetchcondition_csharp">
 <a href="#prefetchcondition_csharp" style="color: inherit; text-decoration: inherit;">Prefetch<wbr>Condition</a>
 </span>
@@ -21892,6 +21901,15 @@ marked as the main block. Default is `false`.
     </dt>
     <dd>{{% md %}}The name of the response object used by the Web Application Firewall.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_go">
+<a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="prefetchcondition_go">
@@ -21930,6 +21948,15 @@ marked as the main block. Default is `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="disabled_nodejs">
+<a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="prefetchcondition_nodejs">
 <a href="#prefetchcondition_nodejs" style="color: inherit; text-decoration: inherit;">prefetch<wbr>Condition</a>
 </span>
@@ -21964,6 +21991,15 @@ marked as the main block. Default is `false`.
     </dt>
     <dd>{{% md %}}The name of the response object used by the Web Application Firewall.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_python">
+<a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="prefetch_condition_python">
