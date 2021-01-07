@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
 title: "Introduction to Pulumi"
-meta_desc: In this workshop, you will learn the fundamentals of Infrastructure as Code through a series of guided exercises using Pulumi's Cloud Engineering platform.
+meta_desc: In this bi-monthly workshop, you will learn the fundamentals of Infrastructure as Code through guided exercises using Pulumi's Cloud Engineering platform.
 
 # A featured webinar will display first in the list.
 featured: false
