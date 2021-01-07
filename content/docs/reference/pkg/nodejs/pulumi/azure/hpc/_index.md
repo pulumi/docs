@@ -3,7 +3,7 @@ title: "Module hpc"
 title_tag: "Module hpc | Package @pulumi/azure | Node.js SDK"
 linktitle: "hpc"
 meta_desc: "Explore members of the hpc module in the @pulumi/azure package."
-git_sha: "04a1756079c6f170cda88c2c8a1cebff49c8d597"
+git_sha: "759289fd9b3a0ab07d1ece84247638497d4bb8ba"
 block_external_search_index: true
 ---
 
@@ -36,7 +36,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Cache" data-link-title="Cache">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L48">
         Resource <strong>Cache</strong>
     </a>
 </h3>
@@ -84,7 +84,7 @@ HPC Caches can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Cache-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L111"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L111"> <b>constructor</b></a>
 </h4>
 
 
@@ -98,7 +98,7 @@ Create a Cache resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Cache-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L58">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L58">method <b>get</b></a>
 </h4>
 
 
@@ -109,14 +109,14 @@ Get an existing Cache resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Cache-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L48">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L48">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Cache-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L69">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L69">method <b>isInstance</b></a>
 </h4>
 
 
@@ -127,7 +127,7 @@ Returns true if the given object is an instance of Cache.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Cache-cacheSizeInGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L79">property <b>cacheSizeInGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L79">property <b>cacheSizeInGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cacheSizeInGb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -135,7 +135,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The size of the HPC Cache, in GB. Possible values are `3072`, `6144`, `12288`, `24576`, and `49152`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Cache-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L48">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L48">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -144,7 +144,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Cache-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L83">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L83">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -152,7 +152,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the supported Azure Region where the HPC Cache should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Cache-mountAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L87">property <b>mountAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L87">property <b>mountAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mountAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -160,7 +160,7 @@ Specifies the supported Azure Region where the HPC Cache should be created. Chan
 A list of IP Addresses where the HPC Cache can be mounted.
 
 <h4 class="pdoc-member-header" id="Cache-mtu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L91">property <b>mtu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L91">property <b>mtu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mtu: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -168,7 +168,7 @@ A list of IP Addresses where the HPC Cache can be mounted.
 The IPv4 maximum transmission unit configured for the subnet of the HPC Cache. Possible values range from 576 - 1500. Defaults to 1500.
 
 <h4 class="pdoc-member-header" id="Cache-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L95">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L95">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -176,7 +176,7 @@ The IPv4 maximum transmission unit configured for the subnet of the HPC Cache. P
 The name of the HPC Cache. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Cache-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L99">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L99">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -184,7 +184,7 @@ The name of the HPC Cache. Changing this forces a new resource to be created.
 The name of the Resource Group in which to create the HPC Cache. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Cache-rootSquashEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L103">property <b>rootSquashEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L103">property <b>rootSquashEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rootSquashEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -192,7 +192,7 @@ The name of the Resource Group in which to create the HPC Cache. Changing this f
 Whether root squash property is enabled for this HPC Cache.
 
 <h4 class="pdoc-member-header" id="Cache-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L107">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L107">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>skuName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -200,7 +200,7 @@ Whether root squash property is enabled for this HPC Cache.
 The SKU of HPC Cache to use. Possible values are `Standard_2G`, `Standard_4G` and `Standard_8G`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Cache-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L111">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L111">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -208,7 +208,7 @@ The SKU of HPC Cache to use. Possible values are `Standard_2G`, `Standard_4G` an
 The ID of the Subnet for the HPC Cache. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Cache-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L48">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L48">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -217,7 +217,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="CacheBlobTarget" data-link-title="CacheBlobTarget">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheBlobTarget.ts#L73">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheBlobTarget.ts#L73">
         Resource <strong>CacheBlobTarget</strong>
     </a>
 </h3>
@@ -290,7 +290,7 @@ Blob Targets within an HPC Cache can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="CacheBlobTarget-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheBlobTarget.ts#L120"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheBlobTarget.ts#L120"> <b>constructor</b></a>
 </h4>
 
 
@@ -304,7 +304,7 @@ Create a CacheBlobTarget resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="CacheBlobTarget-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheBlobTarget.ts#L83">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheBlobTarget.ts#L83">method <b>get</b></a>
 </h4>
 
 
@@ -315,14 +315,14 @@ Get an existing CacheBlobTarget resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="CacheBlobTarget-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheBlobTarget.ts#L73">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheBlobTarget.ts#L73">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CacheBlobTarget-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheBlobTarget.ts#L94">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheBlobTarget.ts#L94">method <b>isInstance</b></a>
 </h4>
 
 
@@ -333,7 +333,7 @@ Returns true if the given object is an instance of CacheBlobTarget.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CacheBlobTarget-cacheName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheBlobTarget.ts#L104">property <b>cacheName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheBlobTarget.ts#L104">property <b>cacheName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cacheName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -341,7 +341,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name HPC Cache, which the HPC Cache Blob Target will be added to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheBlobTarget-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheBlobTarget.ts#L73">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheBlobTarget.ts#L73">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -350,7 +350,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="CacheBlobTarget-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheBlobTarget.ts#L108">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheBlobTarget.ts#L108">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -358,7 +358,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the HPC Cache Blob Target. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheBlobTarget-namespacePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheBlobTarget.ts#L112">property <b>namespacePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheBlobTarget.ts#L112">property <b>namespacePath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namespacePath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -366,7 +366,7 @@ The name of the HPC Cache Blob Target. Changing this forces a new resource to be
 The client-facing file path of the HPC Cache Blob Target.
 
 <h4 class="pdoc-member-header" id="CacheBlobTarget-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheBlobTarget.ts#L116">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheBlobTarget.ts#L116">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -374,7 +374,7 @@ The client-facing file path of the HPC Cache Blob Target.
 The name of the Resource Group in which to create the HPC Cache Blob Target. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheBlobTarget-storageContainerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheBlobTarget.ts#L120">property <b>storageContainerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheBlobTarget.ts#L120">property <b>storageContainerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageContainerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -382,7 +382,7 @@ The name of the Resource Group in which to create the HPC Cache Blob Target. Cha
 The Resource Manager ID of the Storage Container used as the HPC Cache Blob Target. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheBlobTarget-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheBlobTarget.ts#L73">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheBlobTarget.ts#L73">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -391,7 +391,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="CacheNfsTarget" data-link-title="CacheNfsTarget">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheNfsTarget.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheNfsTarget.ts#L21">
         Resource <strong>CacheNfsTarget</strong>
     </a>
 </h3>
@@ -411,7 +411,7 @@ NFS Target within a HPC Cache can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="CacheNfsTarget-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheNfsTarget.ts#L72"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheNfsTarget.ts#L72"> <b>constructor</b></a>
 </h4>
 
 
@@ -425,7 +425,7 @@ Create a CacheNfsTarget resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="CacheNfsTarget-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheNfsTarget.ts#L31">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheNfsTarget.ts#L31">method <b>get</b></a>
 </h4>
 
 
@@ -436,14 +436,14 @@ Get an existing CacheNfsTarget resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="CacheNfsTarget-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheNfsTarget.ts#L21">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheNfsTarget.ts#L21">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CacheNfsTarget-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheNfsTarget.ts#L42">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheNfsTarget.ts#L42">method <b>isInstance</b></a>
 </h4>
 
 
@@ -454,7 +454,7 @@ Returns true if the given object is an instance of CacheNfsTarget.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CacheNfsTarget-cacheName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheNfsTarget.ts#L52">property <b>cacheName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheNfsTarget.ts#L52">property <b>cacheName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cacheName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -462,7 +462,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name HPC Cache, which the HPC Cache NFS Target will be added to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheNfsTarget-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheNfsTarget.ts#L21">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheNfsTarget.ts#L21">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -471,7 +471,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="CacheNfsTarget-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheNfsTarget.ts#L56">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheNfsTarget.ts#L56">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -479,7 +479,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the HPC Cache NFS Target. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheNfsTarget-namespaceJunctions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheNfsTarget.ts#L60">property <b>namespaceJunctions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheNfsTarget.ts#L60">property <b>namespaceJunctions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namespaceJunctions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CacheNfsTargetNamespaceJunction'>CacheNfsTargetNamespaceJunction</a>[]&gt;;</code></pre>
@@ -487,7 +487,7 @@ The name of the HPC Cache NFS Target. Changing this forces a new resource to be 
 Can be specified multiple times to define multiple `namespaceJunction`. Each `namespaceJuntion` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="CacheNfsTarget-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheNfsTarget.ts#L64">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheNfsTarget.ts#L64">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -495,7 +495,7 @@ Can be specified multiple times to define multiple `namespaceJunction`. Each `na
 The name of the Resource Group in which to create the HPC Cache NFS Target. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheNfsTarget-targetHostName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheNfsTarget.ts#L68">property <b>targetHostName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheNfsTarget.ts#L68">property <b>targetHostName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetHostName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -503,7 +503,7 @@ The name of the Resource Group in which to create the HPC Cache NFS Target. Chan
 The IP address or fully qualified domain name (FQDN) of the HPC Cache NFS target. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheNfsTarget-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheNfsTarget.ts#L21">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheNfsTarget.ts#L21">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -512,7 +512,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="CacheNfsTarget-usageModel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheNfsTarget.ts#L72">property <b>usageModel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheNfsTarget.ts#L72">property <b>usageModel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>usageModel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -523,7 +523,7 @@ The type of usage of the HPC Cache NFS Target.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="CacheArgs" data-link-title="CacheArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L214">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L214">
         interface <strong>CacheArgs</strong>
     </a>
 </h3>
@@ -533,7 +533,7 @@ The type of usage of the HPC Cache NFS Target.
 The set of arguments for constructing a Cache resource.
 
 <h4 class="pdoc-member-header" id="CacheArgs-cacheSizeInGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L218">property <b>cacheSizeInGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L218">property <b>cacheSizeInGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cacheSizeInGb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -541,7 +541,7 @@ The set of arguments for constructing a Cache resource.
 The size of the HPC Cache, in GB. Possible values are `3072`, `6144`, `12288`, `24576`, and `49152`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L222">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L222">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -549,7 +549,7 @@ The size of the HPC Cache, in GB. Possible values are `3072`, `6144`, `12288`, `
 Specifies the supported Azure Region where the HPC Cache should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheArgs-mtu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L226">property <b>mtu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L226">property <b>mtu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mtu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -557,7 +557,7 @@ Specifies the supported Azure Region where the HPC Cache should be created. Chan
 The IPv4 maximum transmission unit configured for the subnet of the HPC Cache. Possible values range from 576 - 1500. Defaults to 1500.
 
 <h4 class="pdoc-member-header" id="CacheArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L230">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L230">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -565,7 +565,7 @@ The IPv4 maximum transmission unit configured for the subnet of the HPC Cache. P
 The name of the HPC Cache. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L234">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L234">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -573,7 +573,7 @@ The name of the HPC Cache. Changing this forces a new resource to be created.
 The name of the Resource Group in which to create the HPC Cache. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheArgs-rootSquashEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L238">property <b>rootSquashEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L238">property <b>rootSquashEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rootSquashEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -581,7 +581,7 @@ The name of the Resource Group in which to create the HPC Cache. Changing this f
 Whether root squash property is enabled for this HPC Cache.
 
 <h4 class="pdoc-member-header" id="CacheArgs-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L242">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L242">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -589,7 +589,7 @@ Whether root squash property is enabled for this HPC Cache.
 The SKU of HPC Cache to use. Possible values are `Standard_2G`, `Standard_4G` and `Standard_8G`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheArgs-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L246">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L246">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -597,7 +597,7 @@ The SKU of HPC Cache to use. Possible values are `Standard_2G`, `Standard_4G` an
 The ID of the Subnet for the HPC Cache. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="CacheBlobTargetArgs" data-link-title="CacheBlobTargetArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheBlobTarget.ts#L199">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheBlobTarget.ts#L199">
         interface <strong>CacheBlobTargetArgs</strong>
     </a>
 </h3>
@@ -607,7 +607,7 @@ The ID of the Subnet for the HPC Cache. Changing this forces a new resource to b
 The set of arguments for constructing a CacheBlobTarget resource.
 
 <h4 class="pdoc-member-header" id="CacheBlobTargetArgs-cacheName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheBlobTarget.ts#L203">property <b>cacheName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheBlobTarget.ts#L203">property <b>cacheName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cacheName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -615,7 +615,7 @@ The set of arguments for constructing a CacheBlobTarget resource.
 The name HPC Cache, which the HPC Cache Blob Target will be added to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheBlobTargetArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheBlobTarget.ts#L207">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheBlobTarget.ts#L207">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -623,7 +623,7 @@ The name HPC Cache, which the HPC Cache Blob Target will be added to. Changing t
 The name of the HPC Cache Blob Target. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheBlobTargetArgs-namespacePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheBlobTarget.ts#L211">property <b>namespacePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheBlobTarget.ts#L211">property <b>namespacePath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespacePath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -631,7 +631,7 @@ The name of the HPC Cache Blob Target. Changing this forces a new resource to be
 The client-facing file path of the HPC Cache Blob Target.
 
 <h4 class="pdoc-member-header" id="CacheBlobTargetArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheBlobTarget.ts#L215">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheBlobTarget.ts#L215">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -639,7 +639,7 @@ The client-facing file path of the HPC Cache Blob Target.
 The name of the Resource Group in which to create the HPC Cache Blob Target. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheBlobTargetArgs-storageContainerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheBlobTarget.ts#L219">property <b>storageContainerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheBlobTarget.ts#L219">property <b>storageContainerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageContainerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -647,7 +647,7 @@ The name of the Resource Group in which to create the HPC Cache Blob Target. Cha
 The Resource Manager ID of the Storage Container used as the HPC Cache Blob Target. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="CacheBlobTargetState" data-link-title="CacheBlobTargetState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheBlobTarget.ts#L173">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheBlobTarget.ts#L173">
         interface <strong>CacheBlobTargetState</strong>
     </a>
 </h3>
@@ -657,7 +657,7 @@ The Resource Manager ID of the Storage Container used as the HPC Cache Blob Targ
 Input properties used for looking up and filtering CacheBlobTarget resources.
 
 <h4 class="pdoc-member-header" id="CacheBlobTargetState-cacheName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheBlobTarget.ts#L177">property <b>cacheName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheBlobTarget.ts#L177">property <b>cacheName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cacheName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -665,7 +665,7 @@ Input properties used for looking up and filtering CacheBlobTarget resources.
 The name HPC Cache, which the HPC Cache Blob Target will be added to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheBlobTargetState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheBlobTarget.ts#L181">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheBlobTarget.ts#L181">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -673,7 +673,7 @@ The name HPC Cache, which the HPC Cache Blob Target will be added to. Changing t
 The name of the HPC Cache Blob Target. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheBlobTargetState-namespacePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheBlobTarget.ts#L185">property <b>namespacePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheBlobTarget.ts#L185">property <b>namespacePath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespacePath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -681,7 +681,7 @@ The name of the HPC Cache Blob Target. Changing this forces a new resource to be
 The client-facing file path of the HPC Cache Blob Target.
 
 <h4 class="pdoc-member-header" id="CacheBlobTargetState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheBlobTarget.ts#L189">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheBlobTarget.ts#L189">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -689,7 +689,7 @@ The client-facing file path of the HPC Cache Blob Target.
 The name of the Resource Group in which to create the HPC Cache Blob Target. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheBlobTargetState-storageContainerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheBlobTarget.ts#L193">property <b>storageContainerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheBlobTarget.ts#L193">property <b>storageContainerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageContainerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -697,7 +697,7 @@ The name of the Resource Group in which to create the HPC Cache Blob Target. Cha
 The Resource Manager ID of the Storage Container used as the HPC Cache Blob Target. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="CacheNfsTargetArgs" data-link-title="CacheNfsTargetArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheNfsTarget.ts#L160">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheNfsTarget.ts#L160">
         interface <strong>CacheNfsTargetArgs</strong>
     </a>
 </h3>
@@ -707,7 +707,7 @@ The Resource Manager ID of the Storage Container used as the HPC Cache Blob Targ
 The set of arguments for constructing a CacheNfsTarget resource.
 
 <h4 class="pdoc-member-header" id="CacheNfsTargetArgs-cacheName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheNfsTarget.ts#L164">property <b>cacheName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheNfsTarget.ts#L164">property <b>cacheName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cacheName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -715,7 +715,7 @@ The set of arguments for constructing a CacheNfsTarget resource.
 The name HPC Cache, which the HPC Cache NFS Target will be added to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheNfsTargetArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheNfsTarget.ts#L168">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheNfsTarget.ts#L168">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -723,7 +723,7 @@ The name HPC Cache, which the HPC Cache NFS Target will be added to. Changing th
 The name of the HPC Cache NFS Target. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheNfsTargetArgs-namespaceJunctions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheNfsTarget.ts#L172">property <b>namespaceJunctions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheNfsTarget.ts#L172">property <b>namespaceJunctions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceJunctions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CacheNfsTargetNamespaceJunction'>CacheNfsTargetNamespaceJunction</a>&gt;[]&gt;;</code></pre>
@@ -731,7 +731,7 @@ The name of the HPC Cache NFS Target. Changing this forces a new resource to be 
 Can be specified multiple times to define multiple `namespaceJunction`. Each `namespaceJuntion` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="CacheNfsTargetArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheNfsTarget.ts#L176">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheNfsTarget.ts#L176">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -739,7 +739,7 @@ Can be specified multiple times to define multiple `namespaceJunction`. Each `na
 The name of the Resource Group in which to create the HPC Cache NFS Target. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheNfsTargetArgs-targetHostName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheNfsTarget.ts#L180">property <b>targetHostName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheNfsTarget.ts#L180">property <b>targetHostName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetHostName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -747,7 +747,7 @@ The name of the Resource Group in which to create the HPC Cache NFS Target. Chan
 The IP address or fully qualified domain name (FQDN) of the HPC Cache NFS target. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheNfsTargetArgs-usageModel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheNfsTarget.ts#L184">property <b>usageModel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheNfsTarget.ts#L184">property <b>usageModel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usageModel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -755,7 +755,7 @@ The IP address or fully qualified domain name (FQDN) of the HPC Cache NFS target
 The type of usage of the HPC Cache NFS Target.
 
 <h3 class="pdoc-module-header" id="CacheNfsTargetState" data-link-title="CacheNfsTargetState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheNfsTarget.ts#L130">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheNfsTarget.ts#L130">
         interface <strong>CacheNfsTargetState</strong>
     </a>
 </h3>
@@ -765,7 +765,7 @@ The type of usage of the HPC Cache NFS Target.
 Input properties used for looking up and filtering CacheNfsTarget resources.
 
 <h4 class="pdoc-member-header" id="CacheNfsTargetState-cacheName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheNfsTarget.ts#L134">property <b>cacheName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheNfsTarget.ts#L134">property <b>cacheName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cacheName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -773,7 +773,7 @@ Input properties used for looking up and filtering CacheNfsTarget resources.
 The name HPC Cache, which the HPC Cache NFS Target will be added to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheNfsTargetState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheNfsTarget.ts#L138">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheNfsTarget.ts#L138">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -781,7 +781,7 @@ The name HPC Cache, which the HPC Cache NFS Target will be added to. Changing th
 The name of the HPC Cache NFS Target. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheNfsTargetState-namespaceJunctions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheNfsTarget.ts#L142">property <b>namespaceJunctions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheNfsTarget.ts#L142">property <b>namespaceJunctions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceJunctions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CacheNfsTargetNamespaceJunction'>CacheNfsTargetNamespaceJunction</a>&gt;[]&gt;;</code></pre>
@@ -789,7 +789,7 @@ The name of the HPC Cache NFS Target. Changing this forces a new resource to be 
 Can be specified multiple times to define multiple `namespaceJunction`. Each `namespaceJuntion` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="CacheNfsTargetState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheNfsTarget.ts#L146">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheNfsTarget.ts#L146">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -797,7 +797,7 @@ Can be specified multiple times to define multiple `namespaceJunction`. Each `na
 The name of the Resource Group in which to create the HPC Cache NFS Target. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheNfsTargetState-targetHostName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheNfsTarget.ts#L150">property <b>targetHostName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheNfsTarget.ts#L150">property <b>targetHostName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetHostName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -805,7 +805,7 @@ The name of the Resource Group in which to create the HPC Cache NFS Target. Chan
 The IP address or fully qualified domain name (FQDN) of the HPC Cache NFS target. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheNfsTargetState-usageModel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cacheNfsTarget.ts#L154">property <b>usageModel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cacheNfsTarget.ts#L154">property <b>usageModel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usageModel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -813,7 +813,7 @@ The IP address or fully qualified domain name (FQDN) of the HPC Cache NFS target
 The type of usage of the HPC Cache NFS Target.
 
 <h3 class="pdoc-module-header" id="CacheState" data-link-title="CacheState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L172">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L172">
         interface <strong>CacheState</strong>
     </a>
 </h3>
@@ -823,7 +823,7 @@ The type of usage of the HPC Cache NFS Target.
 Input properties used for looking up and filtering Cache resources.
 
 <h4 class="pdoc-member-header" id="CacheState-cacheSizeInGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L176">property <b>cacheSizeInGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L176">property <b>cacheSizeInGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cacheSizeInGb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -831,7 +831,7 @@ Input properties used for looking up and filtering Cache resources.
 The size of the HPC Cache, in GB. Possible values are `3072`, `6144`, `12288`, `24576`, and `49152`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L180">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L180">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -839,7 +839,7 @@ The size of the HPC Cache, in GB. Possible values are `3072`, `6144`, `12288`, `
 Specifies the supported Azure Region where the HPC Cache should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheState-mountAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L184">property <b>mountAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L184">property <b>mountAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mountAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -847,7 +847,7 @@ Specifies the supported Azure Region where the HPC Cache should be created. Chan
 A list of IP Addresses where the HPC Cache can be mounted.
 
 <h4 class="pdoc-member-header" id="CacheState-mtu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L188">property <b>mtu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L188">property <b>mtu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mtu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -855,7 +855,7 @@ A list of IP Addresses where the HPC Cache can be mounted.
 The IPv4 maximum transmission unit configured for the subnet of the HPC Cache. Possible values range from 576 - 1500. Defaults to 1500.
 
 <h4 class="pdoc-member-header" id="CacheState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L192">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L192">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -863,7 +863,7 @@ The IPv4 maximum transmission unit configured for the subnet of the HPC Cache. P
 The name of the HPC Cache. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L196">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L196">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -871,7 +871,7 @@ The name of the HPC Cache. Changing this forces a new resource to be created.
 The name of the Resource Group in which to create the HPC Cache. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheState-rootSquashEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L200">property <b>rootSquashEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L200">property <b>rootSquashEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rootSquashEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -879,7 +879,7 @@ The name of the Resource Group in which to create the HPC Cache. Changing this f
 Whether root squash property is enabled for this HPC Cache.
 
 <h4 class="pdoc-member-header" id="CacheState-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L204">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L204">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -887,7 +887,7 @@ Whether root squash property is enabled for this HPC Cache.
 The SKU of HPC Cache to use. Possible values are `Standard_2G`, `Standard_4G` and `Standard_8G`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CacheState-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/hpc/cache.ts#L208">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/hpc/cache.ts#L208">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

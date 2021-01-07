@@ -3,7 +3,7 @@ title: "Module datashare"
 title_tag: "Module datashare | Package @pulumi/azure | Node.js SDK"
 linktitle: "datashare"
 meta_desc: "Explore members of the datashare module in the @pulumi/azure package."
-git_sha: "04a1756079c6f170cda88c2c8a1cebff49c8d597"
+git_sha: "759289fd9b3a0ab07d1ece84247638497d4bb8ba"
 block_external_search_index: true
 ---
 
@@ -72,7 +72,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Account" data-link-title="Account">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/account.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/account.ts#L38">
         Resource <strong>Account</strong>
     </a>
 </h3>
@@ -109,7 +109,7 @@ Data Share Accounts can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Account-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/account.ts#L85"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/account.ts#L85"> <b>constructor</b></a>
 </h4>
 
 
@@ -123,7 +123,7 @@ Create a Account resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Account-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/account.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/account.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -134,14 +134,14 @@ Get an existing Account resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Account-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/account.ts#L38">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/account.ts#L38">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Account-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/account.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/account.ts#L59">method <b>isInstance</b></a>
 </h4>
 
 
@@ -152,7 +152,7 @@ Returns true if the given object is an instance of Account.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Account-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/account.ts#L38">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/account.ts#L38">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -161,7 +161,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Account-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/account.ts#L69">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/account.ts#L69">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountIdentity'>AccountIdentity</a>&gt;;</code></pre>
@@ -169,7 +169,7 @@ deployments and may be missing (undefined) during planning phases.
 An `identity` block as defined below.
 
 <h4 class="pdoc-member-header" id="Account-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/account.ts#L73">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/account.ts#L73">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -177,7 +177,7 @@ An `identity` block as defined below.
 The Azure Region where the Data Share Account should exist. Changing this forces a new Data Share Account to be created.
 
 <h4 class="pdoc-member-header" id="Account-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/account.ts#L77">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/account.ts#L77">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -185,7 +185,7 @@ The Azure Region where the Data Share Account should exist. Changing this forces
 The name which should be used for this Data Share Account. Changing this forces a new Data Share Account to be created.
 
 <h4 class="pdoc-member-header" id="Account-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/account.ts#L81">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/account.ts#L81">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -193,7 +193,7 @@ The name which should be used for this Data Share Account. Changing this forces 
 The name of the Resource Group where the Data Share Account should exist. Changing this forces a new Data Share Account to be created.
 
 <h4 class="pdoc-member-header" id="Account-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/account.ts#L85">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/account.ts#L85">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -201,7 +201,7 @@ The name of the Resource Group where the Data Share Account should exist. Changi
 A mapping of tags which should be assigned to the Data Share Account.
 
 <h4 class="pdoc-member-header" id="Account-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/account.ts#L38">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/account.ts#L38">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -210,7 +210,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DatasetBlobStorage" data-link-title="DatasetBlobStorage">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetBlobStorage.ts#L70">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetBlobStorage.ts#L70">
         Resource <strong>DatasetBlobStorage</strong>
     </a>
 </h3>
@@ -279,7 +279,7 @@ Data Share Blob Storage Datasets can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="DatasetBlobStorage-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetBlobStorage.ts#L125"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetBlobStorage.ts#L125"> <b>constructor</b></a>
 </h4>
 
 
@@ -293,7 +293,7 @@ Create a DatasetBlobStorage resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DatasetBlobStorage-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetBlobStorage.ts#L80">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetBlobStorage.ts#L80">method <b>get</b></a>
 </h4>
 
 
@@ -304,14 +304,14 @@ Get an existing DatasetBlobStorage resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DatasetBlobStorage-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetBlobStorage.ts#L70">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetBlobStorage.ts#L70">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DatasetBlobStorage-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetBlobStorage.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetBlobStorage.ts#L91">method <b>isInstance</b></a>
 </h4>
 
 
@@ -322,7 +322,7 @@ Returns true if the given object is an instance of DatasetBlobStorage.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DatasetBlobStorage-containerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetBlobStorage.ts#L101">property <b>containerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetBlobStorage.ts#L101">property <b>containerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>containerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -330,7 +330,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the storage account container to be shared with the receiver. Changing this forces a new Data Share Blob Storage Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetBlobStorage-dataShareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetBlobStorage.ts#L105">property <b>dataShareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetBlobStorage.ts#L105">property <b>dataShareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataShareId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -338,7 +338,7 @@ The name of the storage account container to be shared with the receiver. Changi
 The ID of the Data Share in which this Data Share Blob Storage Dataset should be created. Changing this forces a new Data Share Blob Storage Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetBlobStorage-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetBlobStorage.ts#L109">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetBlobStorage.ts#L109">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -346,7 +346,7 @@ The ID of the Data Share in which this Data Share Blob Storage Dataset should be
 The name of the Data Share Dataset.
 
 <h4 class="pdoc-member-header" id="DatasetBlobStorage-filePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetBlobStorage.ts#L113">property <b>filePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetBlobStorage.ts#L113">property <b>filePath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>filePath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -354,7 +354,7 @@ The name of the Data Share Dataset.
 The path of the file in the storage container to be shared with the receiver. Changing this forces a new Data Share Blob Storage Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetBlobStorage-folderPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetBlobStorage.ts#L117">property <b>folderPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetBlobStorage.ts#L117">property <b>folderPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>folderPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -362,7 +362,7 @@ The path of the file in the storage container to be shared with the receiver. Ch
 The path of the folder in the storage container to be shared with the receiver. Changing this forces a new Data Share Blob Storage Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetBlobStorage-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetBlobStorage.ts#L70">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetBlobStorage.ts#L70">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -371,7 +371,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DatasetBlobStorage-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetBlobStorage.ts#L121">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetBlobStorage.ts#L121">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -379,7 +379,7 @@ deployments and may be missing (undefined) during planning phases.
 The name which should be used for this Data Share Blob Storage Dataset. Changing this forces a new Data Share Blob Storage Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetBlobStorage-storageAccount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetBlobStorage.ts#L125">property <b>storageAccount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetBlobStorage.ts#L125">property <b>storageAccount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageAccount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DatasetBlobStorageStorageAccount'>DatasetBlobStorageStorageAccount</a>&gt;;</code></pre>
@@ -387,7 +387,7 @@ The name which should be used for this Data Share Blob Storage Dataset. Changing
 A `storageAccount` block as defined below.
 
 <h4 class="pdoc-member-header" id="DatasetBlobStorage-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetBlobStorage.ts#L70">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetBlobStorage.ts#L70">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -396,7 +396,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DatasetDataLakeGen1" data-link-title="DatasetDataLakeGen1">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L65">
         Resource <strong>DatasetDataLakeGen1</strong>
     </a>
 </h3>
@@ -461,7 +461,7 @@ Data Share Data Lake Gen1 Datasets can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen1-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L116"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L116"> <b>constructor</b></a>
 </h4>
 
 
@@ -475,7 +475,7 @@ Create a DatasetDataLakeGen1 resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen1-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L75">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L75">method <b>get</b></a>
 </h4>
 
 
@@ -486,14 +486,14 @@ Get an existing DatasetDataLakeGen1 resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen1-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L65">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L65">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen1-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L86">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L86">method <b>isInstance</b></a>
 </h4>
 
 
@@ -504,7 +504,7 @@ Returns true if the given object is an instance of DatasetDataLakeGen1.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen1-dataLakeStoreId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L96">property <b>dataLakeStoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L96">property <b>dataLakeStoreId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataLakeStoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -512,7 +512,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The resource ID of the Data Lake Store to be shared with the receiver.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen1-dataShareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L100">property <b>dataShareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L100">property <b>dataShareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataShareId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -520,7 +520,7 @@ The resource ID of the Data Lake Store to be shared with the receiver.
 The resource ID of the Data Share where this Data Share Data Lake Gen1 Dataset should be created. Changing this forces a new Data Share Data Lake Gen1 Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen1-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L104">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L104">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -528,7 +528,7 @@ The resource ID of the Data Share where this Data Share Data Lake Gen1 Dataset s
 The displayed name of the Data Share Dataset.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen1-fileName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L108">property <b>fileName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L108">property <b>fileName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fileName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -536,7 +536,7 @@ The displayed name of the Data Share Dataset.
 The file name of the data lake store to be shared with the receiver. Changing this forces a new Data Share Data Lake Gen1 Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen1-folderPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L112">property <b>folderPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L112">property <b>folderPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>folderPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -544,7 +544,7 @@ The file name of the data lake store to be shared with the receiver. Changing th
 The folder path of the data lake store to be shared with the receiver. Changing this forces a new Data Share Data Lake Gen1 Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen1-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L65">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L65">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -553,7 +553,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen1-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L116">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L116">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -561,7 +561,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the Data Share Data Lake Gen1 Dataset. Changing this forces a new Data Share Data Lake Gen1 Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen1-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L65">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L65">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -570,7 +570,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DatasetDataLakeGen2" data-link-title="DatasetDataLakeGen2">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L63">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L63">
         Resource <strong>DatasetDataLakeGen2</strong>
     </a>
 </h3>
@@ -633,7 +633,7 @@ Data Share Data Lake Gen2 Datasets can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen2-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L118"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L118"> <b>constructor</b></a>
 </h4>
 
 
@@ -647,7 +647,7 @@ Create a DatasetDataLakeGen2 resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen2-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L73">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L73">method <b>get</b></a>
 </h4>
 
 
@@ -658,14 +658,14 @@ Get an existing DatasetDataLakeGen2 resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen2-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L63">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L63">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen2-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L84">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L84">method <b>isInstance</b></a>
 </h4>
 
 
@@ -676,7 +676,7 @@ Returns true if the given object is an instance of DatasetDataLakeGen2.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen2-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L94">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L94">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -684,7 +684,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the Data Share Dataset.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen2-filePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L98">property <b>filePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L98">property <b>filePath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>filePath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -692,7 +692,7 @@ The name of the Data Share Dataset.
 The path of the file in the data lake file system to be shared with the receiver. Conflicts with `folderPath` Changing this forces a new Data Share Data Lake Gen2 Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen2-fileSystemName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L102">property <b>fileSystemName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L102">property <b>fileSystemName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fileSystemName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -700,7 +700,7 @@ The path of the file in the data lake file system to be shared with the receiver
 The name of the data lake file system to be shared with the receiver. Changing this forces a new Data Share Data Lake Gen2 Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen2-folderPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L106">property <b>folderPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L106">property <b>folderPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>folderPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -708,7 +708,7 @@ The name of the data lake file system to be shared with the receiver. Changing t
 The folder path in the data lake file system to be shared with the receiver. Conflicts with `filePath` Changing this forces a new Data Share Data Lake Gen2 Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen2-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L63">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L63">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -717,7 +717,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen2-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L110">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L110">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -725,7 +725,7 @@ deployments and may be missing (undefined) during planning phases.
 The name which should be used for this Data Share Data Lake Gen2 Dataset. Changing this forces a new Data Share Data Lake Gen2 Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen2-shareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L114">property <b>shareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L114">property <b>shareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>shareId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -733,7 +733,7 @@ The name which should be used for this Data Share Data Lake Gen2 Dataset. Changi
 The resource ID of the Data Share where this Data Share Data Lake Gen2 Dataset should be created. Changing this forces a new Data Share Data Lake Gen2 Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen2-storageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L118">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L118">property <b>storageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -741,7 +741,7 @@ The resource ID of the Data Share where this Data Share Data Lake Gen2 Dataset s
 The resource id of the storage account of the data lake file system to be shared with the receiver. Changing this forces a new Data Share Data Lake Gen2 Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen2-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L63">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L63">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -750,7 +750,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DatasetKustoCluster" data-link-title="DatasetKustoCluster">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoCluster.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoCluster.ts#L18">
         Resource <strong>DatasetKustoCluster</strong>
     </a>
 </h3>
@@ -768,7 +768,7 @@ Data Share Kusto Cluster Datasets can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="DatasetKustoCluster-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoCluster.ts#L65"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoCluster.ts#L65"> <b>constructor</b></a>
 </h4>
 
 
@@ -782,7 +782,7 @@ Create a DatasetKustoCluster resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DatasetKustoCluster-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoCluster.ts#L28">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoCluster.ts#L28">method <b>get</b></a>
 </h4>
 
 
@@ -793,14 +793,14 @@ Get an existing DatasetKustoCluster resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DatasetKustoCluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoCluster.ts#L18">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoCluster.ts#L18">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DatasetKustoCluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoCluster.ts#L39">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoCluster.ts#L39">method <b>isInstance</b></a>
 </h4>
 
 
@@ -811,7 +811,7 @@ Returns true if the given object is an instance of DatasetKustoCluster.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DatasetKustoCluster-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoCluster.ts#L49">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoCluster.ts#L49">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -819,7 +819,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the Data Share Dataset.
 
 <h4 class="pdoc-member-header" id="DatasetKustoCluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoCluster.ts#L18">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoCluster.ts#L18">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -828,7 +828,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DatasetKustoCluster-kustoClusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoCluster.ts#L53">property <b>kustoClusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoCluster.ts#L53">property <b>kustoClusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kustoClusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -836,7 +836,7 @@ deployments and may be missing (undefined) during planning phases.
 The resource ID of the Kusto Cluster to be shared with the receiver. Changing this forces a new Data Share Kusto Cluster Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetKustoCluster-kustoClusterLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoCluster.ts#L57">property <b>kustoClusterLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoCluster.ts#L57">property <b>kustoClusterLocation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kustoClusterLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -844,7 +844,7 @@ The resource ID of the Kusto Cluster to be shared with the receiver. Changing th
 The location of the Kusto Cluster.
 
 <h4 class="pdoc-member-header" id="DatasetKustoCluster-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoCluster.ts#L61">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoCluster.ts#L61">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -852,7 +852,7 @@ The location of the Kusto Cluster.
 The name which should be used for this Data Share Kusto Cluster Dataset. Changing this forces a new Data Share Kusto Cluster Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetKustoCluster-shareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoCluster.ts#L65">property <b>shareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoCluster.ts#L65">property <b>shareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>shareId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -860,7 +860,7 @@ The name which should be used for this Data Share Kusto Cluster Dataset. Changin
 The resource ID of the Data Share where this Data Share Kusto Cluster Dataset should be created. Changing this forces a new Data Share Kusto Cluster Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetKustoCluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoCluster.ts#L18">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoCluster.ts#L18">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -869,7 +869,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DatasetKustoDatabase" data-link-title="DatasetKustoDatabase">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoDatabase.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoDatabase.ts#L18">
         Resource <strong>DatasetKustoDatabase</strong>
     </a>
 </h3>
@@ -887,7 +887,7 @@ Data Share Kusto Database Datasets can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="DatasetKustoDatabase-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoDatabase.ts#L65"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoDatabase.ts#L65"> <b>constructor</b></a>
 </h4>
 
 
@@ -901,7 +901,7 @@ Create a DatasetKustoDatabase resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DatasetKustoDatabase-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoDatabase.ts#L28">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoDatabase.ts#L28">method <b>get</b></a>
 </h4>
 
 
@@ -912,14 +912,14 @@ Get an existing DatasetKustoDatabase resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DatasetKustoDatabase-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoDatabase.ts#L18">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoDatabase.ts#L18">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DatasetKustoDatabase-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoDatabase.ts#L39">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoDatabase.ts#L39">method <b>isInstance</b></a>
 </h4>
 
 
@@ -930,7 +930,7 @@ Returns true if the given object is an instance of DatasetKustoDatabase.  This i
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DatasetKustoDatabase-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoDatabase.ts#L49">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoDatabase.ts#L49">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -938,7 +938,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the Data Share Dataset.
 
 <h4 class="pdoc-member-header" id="DatasetKustoDatabase-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoDatabase.ts#L18">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoDatabase.ts#L18">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -947,7 +947,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DatasetKustoDatabase-kustoClusterLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoDatabase.ts#L53">property <b>kustoClusterLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoDatabase.ts#L53">property <b>kustoClusterLocation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kustoClusterLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -955,7 +955,7 @@ deployments and may be missing (undefined) during planning phases.
 The location of the Kusto Cluster.
 
 <h4 class="pdoc-member-header" id="DatasetKustoDatabase-kustoDatabaseId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoDatabase.ts#L57">property <b>kustoDatabaseId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoDatabase.ts#L57">property <b>kustoDatabaseId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kustoDatabaseId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -963,7 +963,7 @@ The location of the Kusto Cluster.
 The resource ID of the Kusto Cluster Database to be shared with the receiver. Changing this forces a new Data Share Kusto Database Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetKustoDatabase-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoDatabase.ts#L61">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoDatabase.ts#L61">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -971,7 +971,7 @@ The resource ID of the Kusto Cluster Database to be shared with the receiver. Ch
 The name which should be used for this Data Share Kusto Database Dataset. Changing this forces a new Data Share Kusto Database Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetKustoDatabase-shareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoDatabase.ts#L65">property <b>shareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoDatabase.ts#L65">property <b>shareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>shareId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -979,7 +979,7 @@ The name which should be used for this Data Share Kusto Database Dataset. Changi
 The resource ID of the Data Share where this Data Share Kusto Database Dataset should be created. Changing this forces a new Data Share Kusto Database Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetKustoDatabase-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoDatabase.ts#L18">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoDatabase.ts#L18">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -988,7 +988,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Share" data-link-title="Share">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/share.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/share.ts#L46">
         Resource <strong>Share</strong>
     </a>
 </h3>
@@ -1033,7 +1033,7 @@ Data Shares can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Share-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/share.ts#L97"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/share.ts#L97"> <b>constructor</b></a>
 </h4>
 
 
@@ -1047,7 +1047,7 @@ Create a Share resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Share-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/share.ts#L56">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/share.ts#L56">method <b>get</b></a>
 </h4>
 
 
@@ -1058,14 +1058,14 @@ Get an existing Share resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Share-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/share.ts#L46">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/share.ts#L46">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Share-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/share.ts#L67">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/share.ts#L67">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1076,7 +1076,7 @@ Returns true if the given object is an instance of Share.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Share-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/share.ts#L77">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/share.ts#L77">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1084,7 +1084,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the Data Share account in which the Data Share is created. Changing this forces a new Data Share to be created.
 
 <h4 class="pdoc-member-header" id="Share-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/share.ts#L81">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/share.ts#L81">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1092,7 +1092,7 @@ The ID of the Data Share account in which the Data Share is created. Changing th
 The Data Share's description.
 
 <h4 class="pdoc-member-header" id="Share-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/share.ts#L46">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/share.ts#L46">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1101,7 +1101,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Share-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/share.ts#L85">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/share.ts#L85">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1109,7 +1109,7 @@ deployments and may be missing (undefined) during planning phases.
 The kind of the Data Share. Possible values are `CopyBased` and `InPlace`. Changing this forces a new Data Share to be created.
 
 <h4 class="pdoc-member-header" id="Share-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/share.ts#L89">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/share.ts#L89">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1117,7 +1117,7 @@ The kind of the Data Share. Possible values are `CopyBased` and `InPlace`. Chang
 The name which should be used for this Data Share. Changing this forces a new Data Share to be created.
 
 <h4 class="pdoc-member-header" id="Share-snapshotSchedule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/share.ts#L93">property <b>snapshotSchedule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/share.ts#L93">property <b>snapshotSchedule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snapshotSchedule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ShareSnapshotSchedule'>ShareSnapshotSchedule</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1125,7 +1125,7 @@ The name which should be used for this Data Share. Changing this forces a new Da
 A `snapshotSchedule` block as defined below.
 
 <h4 class="pdoc-member-header" id="Share-terms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/share.ts#L97">property <b>terms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/share.ts#L97">property <b>terms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>terms: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1133,7 +1133,7 @@ A `snapshotSchedule` block as defined below.
 The terms of the Data Share.
 
 <h4 class="pdoc-member-header" id="Share-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/share.ts#L46">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/share.ts#L46">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1144,7 +1144,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getAccount" data-link-title="getAccount">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getAccount.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getAccount.ts#L24">
         Function <strong>getAccount</strong>
     </a>
 </h3>
@@ -1169,7 +1169,7 @@ export const id = example.then(example => example.id);
 ```
 
 <h3 class="pdoc-module-header" id="getDatasetBlobStorage" data-link-title="getDatasetBlobStorage">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetBlobStorage.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetBlobStorage.ts#L24">
         Function <strong>getDatasetBlobStorage</strong>
     </a>
 </h3>
@@ -1194,7 +1194,7 @@ export const id = example.then(example => example.id);
 ```
 
 <h3 class="pdoc-module-header" id="getDatasetDataLakeGen1" data-link-title="getDatasetDataLakeGen1">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetDataLakeGen1.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetDataLakeGen1.ts#L24">
         Function <strong>getDatasetDataLakeGen1</strong>
     </a>
 </h3>
@@ -1219,7 +1219,7 @@ export const id = example.then(example => example.id);
 ```
 
 <h3 class="pdoc-module-header" id="getDatasetDataLakeGen2" data-link-title="getDatasetDataLakeGen2">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetDataLakeGen2.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetDataLakeGen2.ts#L24">
         Function <strong>getDatasetDataLakeGen2</strong>
     </a>
 </h3>
@@ -1244,7 +1244,7 @@ export const id = example.then(example => example.id);
 ```
 
 <h3 class="pdoc-module-header" id="getDatasetKustoCluster" data-link-title="getDatasetKustoCluster">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetKustoCluster.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetKustoCluster.ts#L24">
         Function <strong>getDatasetKustoCluster</strong>
     </a>
 </h3>
@@ -1269,7 +1269,7 @@ export const id = example.then(example => example.id);
 ```
 
 <h3 class="pdoc-module-header" id="getDatasetKustoDatabase" data-link-title="getDatasetKustoDatabase">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetKustoDatabase.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetKustoDatabase.ts#L24">
         Function <strong>getDatasetKustoDatabase</strong>
     </a>
 </h3>
@@ -1294,7 +1294,7 @@ export const id = example.then(example => example.id);
 ```
 
 <h3 class="pdoc-module-header" id="getShare" data-link-title="getShare">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getShare.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getShare.ts#L28">
         Function <strong>getShare</strong>
     </a>
 </h3>
@@ -1325,7 +1325,7 @@ export const id = exampleShare.then(exampleShare => exampleShare.id);
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AccountArgs" data-link-title="AccountArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/account.ts#L158">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/account.ts#L158">
         interface <strong>AccountArgs</strong>
     </a>
 </h3>
@@ -1335,7 +1335,7 @@ export const id = exampleShare.then(exampleShare => exampleShare.id);
 The set of arguments for constructing a Account resource.
 
 <h4 class="pdoc-member-header" id="AccountArgs-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/account.ts#L162">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/account.ts#L162">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountIdentity'>AccountIdentity</a>&gt;;</code></pre>
@@ -1343,7 +1343,7 @@ The set of arguments for constructing a Account resource.
 An `identity` block as defined below.
 
 <h4 class="pdoc-member-header" id="AccountArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/account.ts#L166">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/account.ts#L166">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1351,7 +1351,7 @@ An `identity` block as defined below.
 The Azure Region where the Data Share Account should exist. Changing this forces a new Data Share Account to be created.
 
 <h4 class="pdoc-member-header" id="AccountArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/account.ts#L170">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/account.ts#L170">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1359,7 +1359,7 @@ The Azure Region where the Data Share Account should exist. Changing this forces
 The name which should be used for this Data Share Account. Changing this forces a new Data Share Account to be created.
 
 <h4 class="pdoc-member-header" id="AccountArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/account.ts#L174">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/account.ts#L174">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1367,7 +1367,7 @@ The name which should be used for this Data Share Account. Changing this forces 
 The name of the Resource Group where the Data Share Account should exist. Changing this forces a new Data Share Account to be created.
 
 <h4 class="pdoc-member-header" id="AccountArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/account.ts#L178">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/account.ts#L178">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1375,7 +1375,7 @@ The name of the Resource Group where the Data Share Account should exist. Changi
 A mapping of tags which should be assigned to the Data Share Account.
 
 <h3 class="pdoc-module-header" id="AccountState" data-link-title="AccountState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/account.ts#L132">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/account.ts#L132">
         interface <strong>AccountState</strong>
     </a>
 </h3>
@@ -1385,7 +1385,7 @@ A mapping of tags which should be assigned to the Data Share Account.
 Input properties used for looking up and filtering Account resources.
 
 <h4 class="pdoc-member-header" id="AccountState-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/account.ts#L136">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/account.ts#L136">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountIdentity'>AccountIdentity</a>&gt;;</code></pre>
@@ -1393,7 +1393,7 @@ Input properties used for looking up and filtering Account resources.
 An `identity` block as defined below.
 
 <h4 class="pdoc-member-header" id="AccountState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/account.ts#L140">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/account.ts#L140">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1401,7 +1401,7 @@ An `identity` block as defined below.
 The Azure Region where the Data Share Account should exist. Changing this forces a new Data Share Account to be created.
 
 <h4 class="pdoc-member-header" id="AccountState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/account.ts#L144">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/account.ts#L144">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1409,7 +1409,7 @@ The Azure Region where the Data Share Account should exist. Changing this forces
 The name which should be used for this Data Share Account. Changing this forces a new Data Share Account to be created.
 
 <h4 class="pdoc-member-header" id="AccountState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/account.ts#L148">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/account.ts#L148">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1417,7 +1417,7 @@ The name which should be used for this Data Share Account. Changing this forces 
 The name of the Resource Group where the Data Share Account should exist. Changing this forces a new Data Share Account to be created.
 
 <h4 class="pdoc-member-header" id="AccountState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/account.ts#L152">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/account.ts#L152">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1425,7 +1425,7 @@ The name of the Resource Group where the Data Share Account should exist. Changi
 A mapping of tags which should be assigned to the Data Share Account.
 
 <h3 class="pdoc-module-header" id="DatasetBlobStorageArgs" data-link-title="DatasetBlobStorageArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetBlobStorage.ts#L213">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetBlobStorage.ts#L213">
         interface <strong>DatasetBlobStorageArgs</strong>
     </a>
 </h3>
@@ -1435,7 +1435,7 @@ A mapping of tags which should be assigned to the Data Share Account.
 The set of arguments for constructing a DatasetBlobStorage resource.
 
 <h4 class="pdoc-member-header" id="DatasetBlobStorageArgs-containerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetBlobStorage.ts#L217">property <b>containerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetBlobStorage.ts#L217">property <b>containerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1443,7 +1443,7 @@ The set of arguments for constructing a DatasetBlobStorage resource.
 The name of the storage account container to be shared with the receiver. Changing this forces a new Data Share Blob Storage Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetBlobStorageArgs-dataShareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetBlobStorage.ts#L221">property <b>dataShareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetBlobStorage.ts#L221">property <b>dataShareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataShareId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1451,7 +1451,7 @@ The name of the storage account container to be shared with the receiver. Changi
 The ID of the Data Share in which this Data Share Blob Storage Dataset should be created. Changing this forces a new Data Share Blob Storage Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetBlobStorageArgs-filePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetBlobStorage.ts#L225">property <b>filePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetBlobStorage.ts#L225">property <b>filePath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filePath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1459,7 +1459,7 @@ The ID of the Data Share in which this Data Share Blob Storage Dataset should be
 The path of the file in the storage container to be shared with the receiver. Changing this forces a new Data Share Blob Storage Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetBlobStorageArgs-folderPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetBlobStorage.ts#L229">property <b>folderPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetBlobStorage.ts#L229">property <b>folderPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>folderPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1467,7 +1467,7 @@ The path of the file in the storage container to be shared with the receiver. Ch
 The path of the folder in the storage container to be shared with the receiver. Changing this forces a new Data Share Blob Storage Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetBlobStorageArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetBlobStorage.ts#L233">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetBlobStorage.ts#L233">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1475,7 +1475,7 @@ The path of the folder in the storage container to be shared with the receiver. 
 The name which should be used for this Data Share Blob Storage Dataset. Changing this forces a new Data Share Blob Storage Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetBlobStorageArgs-storageAccount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetBlobStorage.ts#L237">property <b>storageAccount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetBlobStorage.ts#L237">property <b>storageAccount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatasetBlobStorageStorageAccount'>DatasetBlobStorageStorageAccount</a>&gt;;</code></pre>
@@ -1483,7 +1483,7 @@ The name which should be used for this Data Share Blob Storage Dataset. Changing
 A `storageAccount` block as defined below.
 
 <h3 class="pdoc-module-header" id="DatasetBlobStorageState" data-link-title="DatasetBlobStorageState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetBlobStorage.ts#L179">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetBlobStorage.ts#L179">
         interface <strong>DatasetBlobStorageState</strong>
     </a>
 </h3>
@@ -1493,7 +1493,7 @@ A `storageAccount` block as defined below.
 Input properties used for looking up and filtering DatasetBlobStorage resources.
 
 <h4 class="pdoc-member-header" id="DatasetBlobStorageState-containerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetBlobStorage.ts#L183">property <b>containerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetBlobStorage.ts#L183">property <b>containerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1501,7 +1501,7 @@ Input properties used for looking up and filtering DatasetBlobStorage resources.
 The name of the storage account container to be shared with the receiver. Changing this forces a new Data Share Blob Storage Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetBlobStorageState-dataShareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetBlobStorage.ts#L187">property <b>dataShareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetBlobStorage.ts#L187">property <b>dataShareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataShareId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1509,7 +1509,7 @@ The name of the storage account container to be shared with the receiver. Changi
 The ID of the Data Share in which this Data Share Blob Storage Dataset should be created. Changing this forces a new Data Share Blob Storage Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetBlobStorageState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetBlobStorage.ts#L191">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetBlobStorage.ts#L191">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1517,7 +1517,7 @@ The ID of the Data Share in which this Data Share Blob Storage Dataset should be
 The name of the Data Share Dataset.
 
 <h4 class="pdoc-member-header" id="DatasetBlobStorageState-filePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetBlobStorage.ts#L195">property <b>filePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetBlobStorage.ts#L195">property <b>filePath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filePath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1525,7 +1525,7 @@ The name of the Data Share Dataset.
 The path of the file in the storage container to be shared with the receiver. Changing this forces a new Data Share Blob Storage Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetBlobStorageState-folderPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetBlobStorage.ts#L199">property <b>folderPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetBlobStorage.ts#L199">property <b>folderPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>folderPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1533,7 +1533,7 @@ The path of the file in the storage container to be shared with the receiver. Ch
 The path of the folder in the storage container to be shared with the receiver. Changing this forces a new Data Share Blob Storage Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetBlobStorageState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetBlobStorage.ts#L203">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetBlobStorage.ts#L203">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1541,7 +1541,7 @@ The path of the folder in the storage container to be shared with the receiver. 
 The name which should be used for this Data Share Blob Storage Dataset. Changing this forces a new Data Share Blob Storage Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetBlobStorageState-storageAccount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetBlobStorage.ts#L207">property <b>storageAccount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetBlobStorage.ts#L207">property <b>storageAccount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatasetBlobStorageStorageAccount'>DatasetBlobStorageStorageAccount</a>&gt;;</code></pre>
@@ -1549,7 +1549,7 @@ The name which should be used for this Data Share Blob Storage Dataset. Changing
 A `storageAccount` block as defined below.
 
 <h3 class="pdoc-module-header" id="DatasetDataLakeGen1Args" data-link-title="DatasetDataLakeGen1Args">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L198">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L198">
         interface <strong>DatasetDataLakeGen1Args</strong>
     </a>
 </h3>
@@ -1559,7 +1559,7 @@ A `storageAccount` block as defined below.
 The set of arguments for constructing a DatasetDataLakeGen1 resource.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen1Args-dataLakeStoreId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L202">property <b>dataLakeStoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L202">property <b>dataLakeStoreId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataLakeStoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1567,7 +1567,7 @@ The set of arguments for constructing a DatasetDataLakeGen1 resource.
 The resource ID of the Data Lake Store to be shared with the receiver.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen1Args-dataShareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L206">property <b>dataShareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L206">property <b>dataShareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataShareId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1575,7 +1575,7 @@ The resource ID of the Data Lake Store to be shared with the receiver.
 The resource ID of the Data Share where this Data Share Data Lake Gen1 Dataset should be created. Changing this forces a new Data Share Data Lake Gen1 Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen1Args-fileName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L210">property <b>fileName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L210">property <b>fileName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fileName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1583,7 +1583,7 @@ The resource ID of the Data Share where this Data Share Data Lake Gen1 Dataset s
 The file name of the data lake store to be shared with the receiver. Changing this forces a new Data Share Data Lake Gen1 Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen1Args-folderPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L214">property <b>folderPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L214">property <b>folderPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>folderPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1591,7 +1591,7 @@ The file name of the data lake store to be shared with the receiver. Changing th
 The folder path of the data lake store to be shared with the receiver. Changing this forces a new Data Share Data Lake Gen1 Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen1Args-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L218">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L218">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1599,7 +1599,7 @@ The folder path of the data lake store to be shared with the receiver. Changing 
 The name of the Data Share Data Lake Gen1 Dataset. Changing this forces a new Data Share Data Lake Gen1 Dataset to be created.
 
 <h3 class="pdoc-module-header" id="DatasetDataLakeGen1State" data-link-title="DatasetDataLakeGen1State">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L168">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L168">
         interface <strong>DatasetDataLakeGen1State</strong>
     </a>
 </h3>
@@ -1609,7 +1609,7 @@ The name of the Data Share Data Lake Gen1 Dataset. Changing this forces a new Da
 Input properties used for looking up and filtering DatasetDataLakeGen1 resources.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen1State-dataLakeStoreId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L172">property <b>dataLakeStoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L172">property <b>dataLakeStoreId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataLakeStoreId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1617,7 +1617,7 @@ Input properties used for looking up and filtering DatasetDataLakeGen1 resources
 The resource ID of the Data Lake Store to be shared with the receiver.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen1State-dataShareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L176">property <b>dataShareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L176">property <b>dataShareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataShareId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1625,7 +1625,7 @@ The resource ID of the Data Lake Store to be shared with the receiver.
 The resource ID of the Data Share where this Data Share Data Lake Gen1 Dataset should be created. Changing this forces a new Data Share Data Lake Gen1 Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen1State-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L180">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L180">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1633,7 +1633,7 @@ The resource ID of the Data Share where this Data Share Data Lake Gen1 Dataset s
 The displayed name of the Data Share Dataset.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen1State-fileName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L184">property <b>fileName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L184">property <b>fileName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fileName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1641,7 +1641,7 @@ The displayed name of the Data Share Dataset.
 The file name of the data lake store to be shared with the receiver. Changing this forces a new Data Share Data Lake Gen1 Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen1State-folderPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L188">property <b>folderPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L188">property <b>folderPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>folderPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1649,7 +1649,7 @@ The file name of the data lake store to be shared with the receiver. Changing th
 The folder path of the data lake store to be shared with the receiver. Changing this forces a new Data Share Data Lake Gen1 Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen1State-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L192">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen1.ts#L192">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1657,7 +1657,7 @@ The folder path of the data lake store to be shared with the receiver. Changing 
 The name of the Data Share Data Lake Gen1 Dataset. Changing this forces a new Data Share Data Lake Gen1 Dataset to be created.
 
 <h3 class="pdoc-module-header" id="DatasetDataLakeGen2Args" data-link-title="DatasetDataLakeGen2Args">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L206">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L206">
         interface <strong>DatasetDataLakeGen2Args</strong>
     </a>
 </h3>
@@ -1667,7 +1667,7 @@ The name of the Data Share Data Lake Gen1 Dataset. Changing this forces a new Da
 The set of arguments for constructing a DatasetDataLakeGen2 resource.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen2Args-filePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L210">property <b>filePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L210">property <b>filePath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filePath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1675,7 +1675,7 @@ The set of arguments for constructing a DatasetDataLakeGen2 resource.
 The path of the file in the data lake file system to be shared with the receiver. Conflicts with `folderPath` Changing this forces a new Data Share Data Lake Gen2 Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen2Args-fileSystemName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L214">property <b>fileSystemName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L214">property <b>fileSystemName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fileSystemName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1683,7 +1683,7 @@ The path of the file in the data lake file system to be shared with the receiver
 The name of the data lake file system to be shared with the receiver. Changing this forces a new Data Share Data Lake Gen2 Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen2Args-folderPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L218">property <b>folderPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L218">property <b>folderPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>folderPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1691,7 +1691,7 @@ The name of the data lake file system to be shared with the receiver. Changing t
 The folder path in the data lake file system to be shared with the receiver. Conflicts with `filePath` Changing this forces a new Data Share Data Lake Gen2 Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen2Args-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L222">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L222">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1699,7 +1699,7 @@ The folder path in the data lake file system to be shared with the receiver. Con
 The name which should be used for this Data Share Data Lake Gen2 Dataset. Changing this forces a new Data Share Data Lake Gen2 Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen2Args-shareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L226">property <b>shareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L226">property <b>shareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shareId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1707,7 +1707,7 @@ The name which should be used for this Data Share Data Lake Gen2 Dataset. Changi
 The resource ID of the Data Share where this Data Share Data Lake Gen2 Dataset should be created. Changing this forces a new Data Share Data Lake Gen2 Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen2Args-storageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L230">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L230">property <b>storageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1715,7 +1715,7 @@ The resource ID of the Data Share where this Data Share Data Lake Gen2 Dataset s
 The resource id of the storage account of the data lake file system to be shared with the receiver. Changing this forces a new Data Share Data Lake Gen2 Dataset to be created.
 
 <h3 class="pdoc-module-header" id="DatasetDataLakeGen2State" data-link-title="DatasetDataLakeGen2State">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L172">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L172">
         interface <strong>DatasetDataLakeGen2State</strong>
     </a>
 </h3>
@@ -1725,7 +1725,7 @@ The resource id of the storage account of the data lake file system to be shared
 Input properties used for looking up and filtering DatasetDataLakeGen2 resources.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen2State-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L176">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L176">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1733,7 +1733,7 @@ Input properties used for looking up and filtering DatasetDataLakeGen2 resources
 The name of the Data Share Dataset.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen2State-filePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L180">property <b>filePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L180">property <b>filePath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filePath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1741,7 +1741,7 @@ The name of the Data Share Dataset.
 The path of the file in the data lake file system to be shared with the receiver. Conflicts with `folderPath` Changing this forces a new Data Share Data Lake Gen2 Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen2State-fileSystemName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L184">property <b>fileSystemName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L184">property <b>fileSystemName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fileSystemName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1749,7 +1749,7 @@ The path of the file in the data lake file system to be shared with the receiver
 The name of the data lake file system to be shared with the receiver. Changing this forces a new Data Share Data Lake Gen2 Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen2State-folderPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L188">property <b>folderPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L188">property <b>folderPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>folderPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1757,7 +1757,7 @@ The name of the data lake file system to be shared with the receiver. Changing t
 The folder path in the data lake file system to be shared with the receiver. Conflicts with `filePath` Changing this forces a new Data Share Data Lake Gen2 Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen2State-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L192">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L192">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1765,7 +1765,7 @@ The folder path in the data lake file system to be shared with the receiver. Con
 The name which should be used for this Data Share Data Lake Gen2 Dataset. Changing this forces a new Data Share Data Lake Gen2 Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen2State-shareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L196">property <b>shareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L196">property <b>shareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shareId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1773,7 +1773,7 @@ The name which should be used for this Data Share Data Lake Gen2 Dataset. Changi
 The resource ID of the Data Share where this Data Share Data Lake Gen2 Dataset should be created. Changing this forces a new Data Share Data Lake Gen2 Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetDataLakeGen2State-storageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L200">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetDataLakeGen2.ts#L200">property <b>storageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1781,7 +1781,7 @@ The resource ID of the Data Share where this Data Share Data Lake Gen2 Dataset s
 The resource id of the storage account of the data lake file system to be shared with the receiver. Changing this forces a new Data Share Data Lake Gen2 Dataset to be created.
 
 <h3 class="pdoc-module-header" id="DatasetKustoClusterArgs" data-link-title="DatasetKustoClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoCluster.ts#L138">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoCluster.ts#L138">
         interface <strong>DatasetKustoClusterArgs</strong>
     </a>
 </h3>
@@ -1791,7 +1791,7 @@ The resource id of the storage account of the data lake file system to be shared
 The set of arguments for constructing a DatasetKustoCluster resource.
 
 <h4 class="pdoc-member-header" id="DatasetKustoClusterArgs-kustoClusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoCluster.ts#L142">property <b>kustoClusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoCluster.ts#L142">property <b>kustoClusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kustoClusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1799,7 +1799,7 @@ The set of arguments for constructing a DatasetKustoCluster resource.
 The resource ID of the Kusto Cluster to be shared with the receiver. Changing this forces a new Data Share Kusto Cluster Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetKustoClusterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoCluster.ts#L146">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoCluster.ts#L146">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1807,7 +1807,7 @@ The resource ID of the Kusto Cluster to be shared with the receiver. Changing th
 The name which should be used for this Data Share Kusto Cluster Dataset. Changing this forces a new Data Share Kusto Cluster Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetKustoClusterArgs-shareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoCluster.ts#L150">property <b>shareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoCluster.ts#L150">property <b>shareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shareId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1815,7 +1815,7 @@ The name which should be used for this Data Share Kusto Cluster Dataset. Changin
 The resource ID of the Data Share where this Data Share Kusto Cluster Dataset should be created. Changing this forces a new Data Share Kusto Cluster Dataset to be created.
 
 <h3 class="pdoc-module-header" id="DatasetKustoClusterState" data-link-title="DatasetKustoClusterState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoCluster.ts#L112">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoCluster.ts#L112">
         interface <strong>DatasetKustoClusterState</strong>
     </a>
 </h3>
@@ -1825,7 +1825,7 @@ The resource ID of the Data Share where this Data Share Kusto Cluster Dataset sh
 Input properties used for looking up and filtering DatasetKustoCluster resources.
 
 <h4 class="pdoc-member-header" id="DatasetKustoClusterState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoCluster.ts#L116">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoCluster.ts#L116">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1833,7 +1833,7 @@ Input properties used for looking up and filtering DatasetKustoCluster resources
 The name of the Data Share Dataset.
 
 <h4 class="pdoc-member-header" id="DatasetKustoClusterState-kustoClusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoCluster.ts#L120">property <b>kustoClusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoCluster.ts#L120">property <b>kustoClusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kustoClusterId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1841,7 +1841,7 @@ The name of the Data Share Dataset.
 The resource ID of the Kusto Cluster to be shared with the receiver. Changing this forces a new Data Share Kusto Cluster Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetKustoClusterState-kustoClusterLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoCluster.ts#L124">property <b>kustoClusterLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoCluster.ts#L124">property <b>kustoClusterLocation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kustoClusterLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1849,7 +1849,7 @@ The resource ID of the Kusto Cluster to be shared with the receiver. Changing th
 The location of the Kusto Cluster.
 
 <h4 class="pdoc-member-header" id="DatasetKustoClusterState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoCluster.ts#L128">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoCluster.ts#L128">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1857,7 +1857,7 @@ The location of the Kusto Cluster.
 The name which should be used for this Data Share Kusto Cluster Dataset. Changing this forces a new Data Share Kusto Cluster Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetKustoClusterState-shareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoCluster.ts#L132">property <b>shareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoCluster.ts#L132">property <b>shareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shareId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1865,7 +1865,7 @@ The name which should be used for this Data Share Kusto Cluster Dataset. Changin
 The resource ID of the Data Share where this Data Share Kusto Cluster Dataset should be created. Changing this forces a new Data Share Kusto Cluster Dataset to be created.
 
 <h3 class="pdoc-module-header" id="DatasetKustoDatabaseArgs" data-link-title="DatasetKustoDatabaseArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoDatabase.ts#L138">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoDatabase.ts#L138">
         interface <strong>DatasetKustoDatabaseArgs</strong>
     </a>
 </h3>
@@ -1875,7 +1875,7 @@ The resource ID of the Data Share where this Data Share Kusto Cluster Dataset sh
 The set of arguments for constructing a DatasetKustoDatabase resource.
 
 <h4 class="pdoc-member-header" id="DatasetKustoDatabaseArgs-kustoDatabaseId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoDatabase.ts#L142">property <b>kustoDatabaseId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoDatabase.ts#L142">property <b>kustoDatabaseId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kustoDatabaseId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1883,7 +1883,7 @@ The set of arguments for constructing a DatasetKustoDatabase resource.
 The resource ID of the Kusto Cluster Database to be shared with the receiver. Changing this forces a new Data Share Kusto Database Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetKustoDatabaseArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoDatabase.ts#L146">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoDatabase.ts#L146">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1891,7 +1891,7 @@ The resource ID of the Kusto Cluster Database to be shared with the receiver. Ch
 The name which should be used for this Data Share Kusto Database Dataset. Changing this forces a new Data Share Kusto Database Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetKustoDatabaseArgs-shareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoDatabase.ts#L150">property <b>shareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoDatabase.ts#L150">property <b>shareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shareId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1899,7 +1899,7 @@ The name which should be used for this Data Share Kusto Database Dataset. Changi
 The resource ID of the Data Share where this Data Share Kusto Database Dataset should be created. Changing this forces a new Data Share Kusto Database Dataset to be created.
 
 <h3 class="pdoc-module-header" id="DatasetKustoDatabaseState" data-link-title="DatasetKustoDatabaseState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoDatabase.ts#L112">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoDatabase.ts#L112">
         interface <strong>DatasetKustoDatabaseState</strong>
     </a>
 </h3>
@@ -1909,7 +1909,7 @@ The resource ID of the Data Share where this Data Share Kusto Database Dataset s
 Input properties used for looking up and filtering DatasetKustoDatabase resources.
 
 <h4 class="pdoc-member-header" id="DatasetKustoDatabaseState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoDatabase.ts#L116">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoDatabase.ts#L116">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1917,7 +1917,7 @@ Input properties used for looking up and filtering DatasetKustoDatabase resource
 The name of the Data Share Dataset.
 
 <h4 class="pdoc-member-header" id="DatasetKustoDatabaseState-kustoClusterLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoDatabase.ts#L120">property <b>kustoClusterLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoDatabase.ts#L120">property <b>kustoClusterLocation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kustoClusterLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1925,7 +1925,7 @@ The name of the Data Share Dataset.
 The location of the Kusto Cluster.
 
 <h4 class="pdoc-member-header" id="DatasetKustoDatabaseState-kustoDatabaseId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoDatabase.ts#L124">property <b>kustoDatabaseId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoDatabase.ts#L124">property <b>kustoDatabaseId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kustoDatabaseId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1933,7 +1933,7 @@ The location of the Kusto Cluster.
 The resource ID of the Kusto Cluster Database to be shared with the receiver. Changing this forces a new Data Share Kusto Database Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetKustoDatabaseState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoDatabase.ts#L128">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoDatabase.ts#L128">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1941,7 +1941,7 @@ The resource ID of the Kusto Cluster Database to be shared with the receiver. Ch
 The name which should be used for this Data Share Kusto Database Dataset. Changing this forces a new Data Share Kusto Database Dataset to be created.
 
 <h4 class="pdoc-member-header" id="DatasetKustoDatabaseState-shareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/datasetKustoDatabase.ts#L132">property <b>shareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/datasetKustoDatabase.ts#L132">property <b>shareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shareId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1949,7 +1949,7 @@ The name which should be used for this Data Share Kusto Database Dataset. Changi
 The resource ID of the Data Share where this Data Share Kusto Database Dataset should be created. Changing this forces a new Data Share Kusto Database Dataset to be created.
 
 <h3 class="pdoc-module-header" id="GetAccountArgs" data-link-title="GetAccountArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getAccount.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getAccount.ts#L41">
         interface <strong>GetAccountArgs</strong>
     </a>
 </h3>
@@ -1959,7 +1959,7 @@ The resource ID of the Data Share where this Data Share Kusto Database Dataset s
 A collection of arguments for invoking getAccount.
 
 <h4 class="pdoc-member-header" id="GetAccountArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getAccount.ts#L45">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getAccount.ts#L45">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1967,7 +1967,7 @@ A collection of arguments for invoking getAccount.
 The name of this Data Share Account.
 
 <h4 class="pdoc-member-header" id="GetAccountArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getAccount.ts#L49">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getAccount.ts#L49">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1975,7 +1975,7 @@ The name of this Data Share Account.
 The name of the Resource Group where the Data Share Account exists.
 
 <h3 class="pdoc-module-header" id="GetAccountResult" data-link-title="GetAccountResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getAccount.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getAccount.ts#L55">
         interface <strong>GetAccountResult</strong>
     </a>
 </h3>
@@ -1985,7 +1985,7 @@ The name of the Resource Group where the Data Share Account exists.
 A collection of values returned by getAccount.
 
 <h4 class="pdoc-member-header" id="GetAccountResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getAccount.ts#L59">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getAccount.ts#L59">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1993,7 +1993,7 @@ A collection of values returned by getAccount.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAccountResult-identities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getAccount.ts#L63">property <b>identities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getAccount.ts#L63">property <b>identities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identities: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountIdentity'>GetAccountIdentity</a>[];</code></pre>
@@ -2001,17 +2001,17 @@ The provider-assigned unique ID for this managed resource.
 An `identity` block as defined below.
 
 <h4 class="pdoc-member-header" id="GetAccountResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getAccount.ts#L64">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getAccount.ts#L64">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getAccount.ts#L65">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getAccount.ts#L65">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getAccount.ts#L69">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getAccount.ts#L69">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -2019,7 +2019,7 @@ An `identity` block as defined below.
 A mapping of tags assigned to the Data Share Account.
 
 <h3 class="pdoc-module-header" id="GetDatasetBlobStorageArgs" data-link-title="GetDatasetBlobStorageArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetBlobStorage.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetBlobStorage.ts#L41">
         interface <strong>GetDatasetBlobStorageArgs</strong>
     </a>
 </h3>
@@ -2029,7 +2029,7 @@ A mapping of tags assigned to the Data Share Account.
 A collection of arguments for invoking getDatasetBlobStorage.
 
 <h4 class="pdoc-member-header" id="GetDatasetBlobStorageArgs-dataShareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetBlobStorage.ts#L45">property <b>dataShareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetBlobStorage.ts#L45">property <b>dataShareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataShareId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2037,7 +2037,7 @@ A collection of arguments for invoking getDatasetBlobStorage.
 The ID of the Data Share in which this Data Share Blob Storage Dataset should be created.
 
 <h4 class="pdoc-member-header" id="GetDatasetBlobStorageArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetBlobStorage.ts#L49">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetBlobStorage.ts#L49">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2045,7 +2045,7 @@ The ID of the Data Share in which this Data Share Blob Storage Dataset should be
 The name of this Data Share Blob Storage Dataset.
 
 <h3 class="pdoc-module-header" id="GetDatasetBlobStorageResult" data-link-title="GetDatasetBlobStorageResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetBlobStorage.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetBlobStorage.ts#L55">
         interface <strong>GetDatasetBlobStorageResult</strong>
     </a>
 </h3>
@@ -2055,7 +2055,7 @@ The name of this Data Share Blob Storage Dataset.
 A collection of values returned by getDatasetBlobStorage.
 
 <h4 class="pdoc-member-header" id="GetDatasetBlobStorageResult-containerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetBlobStorage.ts#L59">property <b>containerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetBlobStorage.ts#L59">property <b>containerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2063,12 +2063,12 @@ A collection of values returned by getDatasetBlobStorage.
 The name of the storage account container to be shared with the receiver.
 
 <h4 class="pdoc-member-header" id="GetDatasetBlobStorageResult-dataShareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetBlobStorage.ts#L60">property <b>dataShareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetBlobStorage.ts#L60">property <b>dataShareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataShareId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDatasetBlobStorageResult-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetBlobStorage.ts#L64">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetBlobStorage.ts#L64">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2076,7 +2076,7 @@ The name of the storage account container to be shared with the receiver.
 The name of the Data Share Dataset.
 
 <h4 class="pdoc-member-header" id="GetDatasetBlobStorageResult-filePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetBlobStorage.ts#L68">property <b>filePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetBlobStorage.ts#L68">property <b>filePath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filePath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2084,7 +2084,7 @@ The name of the Data Share Dataset.
 The path of the file in the storage container to be shared with the receiver.
 
 <h4 class="pdoc-member-header" id="GetDatasetBlobStorageResult-folderPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetBlobStorage.ts#L72">property <b>folderPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetBlobStorage.ts#L72">property <b>folderPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>folderPath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2092,7 +2092,7 @@ The path of the file in the storage container to be shared with the receiver.
 The folder path of the file in the storage container to be shared with the receiver.
 
 <h4 class="pdoc-member-header" id="GetDatasetBlobStorageResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetBlobStorage.ts#L76">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetBlobStorage.ts#L76">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2100,7 +2100,7 @@ The folder path of the file in the storage container to be shared with the recei
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDatasetBlobStorageResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetBlobStorage.ts#L80">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetBlobStorage.ts#L80">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2108,7 +2108,7 @@ The provider-assigned unique ID for this managed resource.
 The name of the storage account to be shared with the receiver.
 
 <h4 class="pdoc-member-header" id="GetDatasetBlobStorageResult-storageAccounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetBlobStorage.ts#L84">property <b>storageAccounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetBlobStorage.ts#L84">property <b>storageAccounts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetDatasetBlobStorageStorageAccount'>GetDatasetBlobStorageStorageAccount</a>[];</code></pre>
@@ -2116,7 +2116,7 @@ The name of the storage account to be shared with the receiver.
 A `storageAccount` block as defined below.
 
 <h3 class="pdoc-module-header" id="GetDatasetDataLakeGen1Args" data-link-title="GetDatasetDataLakeGen1Args">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetDataLakeGen1.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetDataLakeGen1.ts#L41">
         interface <strong>GetDatasetDataLakeGen1Args</strong>
     </a>
 </h3>
@@ -2126,7 +2126,7 @@ A `storageAccount` block as defined below.
 A collection of arguments for invoking getDatasetDataLakeGen1.
 
 <h4 class="pdoc-member-header" id="GetDatasetDataLakeGen1Args-dataShareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetDataLakeGen1.ts#L45">property <b>dataShareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetDataLakeGen1.ts#L45">property <b>dataShareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataShareId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2134,7 +2134,7 @@ A collection of arguments for invoking getDatasetDataLakeGen1.
 The resource ID of the Data Share where this Data Share Data Lake Gen1 Dataset should be created.
 
 <h4 class="pdoc-member-header" id="GetDatasetDataLakeGen1Args-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetDataLakeGen1.ts#L49">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetDataLakeGen1.ts#L49">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2142,7 +2142,7 @@ The resource ID of the Data Share where this Data Share Data Lake Gen1 Dataset s
 The name of the Data Share Data Lake Gen1 Dataset.
 
 <h3 class="pdoc-module-header" id="GetDatasetDataLakeGen1Result" data-link-title="GetDatasetDataLakeGen1Result">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetDataLakeGen1.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetDataLakeGen1.ts#L55">
         interface <strong>GetDatasetDataLakeGen1Result</strong>
     </a>
 </h3>
@@ -2152,7 +2152,7 @@ The name of the Data Share Data Lake Gen1 Dataset.
 A collection of values returned by getDatasetDataLakeGen1.
 
 <h4 class="pdoc-member-header" id="GetDatasetDataLakeGen1Result-dataLakeStoreId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetDataLakeGen1.ts#L59">property <b>dataLakeStoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetDataLakeGen1.ts#L59">property <b>dataLakeStoreId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataLakeStoreId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2160,12 +2160,12 @@ A collection of values returned by getDatasetDataLakeGen1.
 The resource ID of the Data Lake Store to be shared with the receiver.
 
 <h4 class="pdoc-member-header" id="GetDatasetDataLakeGen1Result-dataShareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetDataLakeGen1.ts#L60">property <b>dataShareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetDataLakeGen1.ts#L60">property <b>dataShareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataShareId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDatasetDataLakeGen1Result-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetDataLakeGen1.ts#L64">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetDataLakeGen1.ts#L64">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2173,7 +2173,7 @@ The resource ID of the Data Lake Store to be shared with the receiver.
 The displayed name of the Data Share Dataset.
 
 <h4 class="pdoc-member-header" id="GetDatasetDataLakeGen1Result-fileName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetDataLakeGen1.ts#L68">property <b>fileName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetDataLakeGen1.ts#L68">property <b>fileName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fileName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2181,7 +2181,7 @@ The displayed name of the Data Share Dataset.
 The file name of the data lake store to be shared with the receiver.
 
 <h4 class="pdoc-member-header" id="GetDatasetDataLakeGen1Result-folderPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetDataLakeGen1.ts#L72">property <b>folderPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetDataLakeGen1.ts#L72">property <b>folderPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>folderPath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2189,7 +2189,7 @@ The file name of the data lake store to be shared with the receiver.
 The folder path of the data lake store to be shared with the receiver.
 
 <h4 class="pdoc-member-header" id="GetDatasetDataLakeGen1Result-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetDataLakeGen1.ts#L76">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetDataLakeGen1.ts#L76">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2197,12 +2197,12 @@ The folder path of the data lake store to be shared with the receiver.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDatasetDataLakeGen1Result-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetDataLakeGen1.ts#L77">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetDataLakeGen1.ts#L77">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetDatasetDataLakeGen2Args" data-link-title="GetDatasetDataLakeGen2Args">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetDataLakeGen2.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetDataLakeGen2.ts#L41">
         interface <strong>GetDatasetDataLakeGen2Args</strong>
     </a>
 </h3>
@@ -2212,7 +2212,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getDatasetDataLakeGen2.
 
 <h4 class="pdoc-member-header" id="GetDatasetDataLakeGen2Args-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetDataLakeGen2.ts#L45">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetDataLakeGen2.ts#L45">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2220,7 +2220,7 @@ A collection of arguments for invoking getDatasetDataLakeGen2.
 The name of this Data Share Data Lake Gen2 Dataset.
 
 <h4 class="pdoc-member-header" id="GetDatasetDataLakeGen2Args-shareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetDataLakeGen2.ts#L49">property <b>shareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetDataLakeGen2.ts#L49">property <b>shareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shareId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2228,7 +2228,7 @@ The name of this Data Share Data Lake Gen2 Dataset.
 The resource ID of the Data Share where this Data Share Data Lake Gen2 Dataset should be created.
 
 <h3 class="pdoc-module-header" id="GetDatasetDataLakeGen2Result" data-link-title="GetDatasetDataLakeGen2Result">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetDataLakeGen2.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetDataLakeGen2.ts#L55">
         interface <strong>GetDatasetDataLakeGen2Result</strong>
     </a>
 </h3>
@@ -2238,7 +2238,7 @@ The resource ID of the Data Share where this Data Share Data Lake Gen2 Dataset s
 A collection of values returned by getDatasetDataLakeGen2.
 
 <h4 class="pdoc-member-header" id="GetDatasetDataLakeGen2Result-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetDataLakeGen2.ts#L59">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetDataLakeGen2.ts#L59">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2246,7 +2246,7 @@ A collection of values returned by getDatasetDataLakeGen2.
 The name of the Data Share Dataset.
 
 <h4 class="pdoc-member-header" id="GetDatasetDataLakeGen2Result-filePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetDataLakeGen2.ts#L63">property <b>filePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetDataLakeGen2.ts#L63">property <b>filePath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filePath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2254,7 +2254,7 @@ The name of the Data Share Dataset.
 The path of the file in the data lake file system to be shared with the receiver.
 
 <h4 class="pdoc-member-header" id="GetDatasetDataLakeGen2Result-fileSystemName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetDataLakeGen2.ts#L67">property <b>fileSystemName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetDataLakeGen2.ts#L67">property <b>fileSystemName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fileSystemName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2262,7 +2262,7 @@ The path of the file in the data lake file system to be shared with the receiver
 The name of the data lake file system to be shared with the receiver.
 
 <h4 class="pdoc-member-header" id="GetDatasetDataLakeGen2Result-folderPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetDataLakeGen2.ts#L71">property <b>folderPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetDataLakeGen2.ts#L71">property <b>folderPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>folderPath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2270,7 +2270,7 @@ The name of the data lake file system to be shared with the receiver.
 The folder path in the data lake file system to be shared with the receiver.
 
 <h4 class="pdoc-member-header" id="GetDatasetDataLakeGen2Result-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetDataLakeGen2.ts#L75">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetDataLakeGen2.ts#L75">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2278,17 +2278,17 @@ The folder path in the data lake file system to be shared with the receiver.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDatasetDataLakeGen2Result-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetDataLakeGen2.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetDataLakeGen2.ts#L76">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDatasetDataLakeGen2Result-shareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetDataLakeGen2.ts#L77">property <b>shareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetDataLakeGen2.ts#L77">property <b>shareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shareId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDatasetDataLakeGen2Result-storageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetDataLakeGen2.ts#L81">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetDataLakeGen2.ts#L81">property <b>storageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2296,7 +2296,7 @@ The provider-assigned unique ID for this managed resource.
 The resource ID of the storage account of the data lake file system to be shared with the receiver.
 
 <h3 class="pdoc-module-header" id="GetDatasetKustoClusterArgs" data-link-title="GetDatasetKustoClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetKustoCluster.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetKustoCluster.ts#L41">
         interface <strong>GetDatasetKustoClusterArgs</strong>
     </a>
 </h3>
@@ -2306,7 +2306,7 @@ The resource ID of the storage account of the data lake file system to be shared
 A collection of arguments for invoking getDatasetKustoCluster.
 
 <h4 class="pdoc-member-header" id="GetDatasetKustoClusterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetKustoCluster.ts#L45">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetKustoCluster.ts#L45">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2314,7 +2314,7 @@ A collection of arguments for invoking getDatasetKustoCluster.
 The name of this Data Share Kusto Cluster Dataset.
 
 <h4 class="pdoc-member-header" id="GetDatasetKustoClusterArgs-shareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetKustoCluster.ts#L49">property <b>shareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetKustoCluster.ts#L49">property <b>shareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shareId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2322,7 +2322,7 @@ The name of this Data Share Kusto Cluster Dataset.
 The resource ID of the Data Share where this Data Share Kusto Cluster Dataset should be created.
 
 <h3 class="pdoc-module-header" id="GetDatasetKustoClusterResult" data-link-title="GetDatasetKustoClusterResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetKustoCluster.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetKustoCluster.ts#L55">
         interface <strong>GetDatasetKustoClusterResult</strong>
     </a>
 </h3>
@@ -2332,7 +2332,7 @@ The resource ID of the Data Share where this Data Share Kusto Cluster Dataset sh
 A collection of values returned by getDatasetKustoCluster.
 
 <h4 class="pdoc-member-header" id="GetDatasetKustoClusterResult-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetKustoCluster.ts#L59">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetKustoCluster.ts#L59">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2340,7 +2340,7 @@ A collection of values returned by getDatasetKustoCluster.
 The name of the Data Share Dataset.
 
 <h4 class="pdoc-member-header" id="GetDatasetKustoClusterResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetKustoCluster.ts#L63">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetKustoCluster.ts#L63">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2348,7 +2348,7 @@ The name of the Data Share Dataset.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDatasetKustoClusterResult-kustoClusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetKustoCluster.ts#L67">property <b>kustoClusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetKustoCluster.ts#L67">property <b>kustoClusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kustoClusterId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2356,7 +2356,7 @@ The provider-assigned unique ID for this managed resource.
 The resource ID of the Kusto Cluster to be shared with the receiver.
 
 <h4 class="pdoc-member-header" id="GetDatasetKustoClusterResult-kustoClusterLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetKustoCluster.ts#L71">property <b>kustoClusterLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetKustoCluster.ts#L71">property <b>kustoClusterLocation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kustoClusterLocation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2364,17 +2364,17 @@ The resource ID of the Kusto Cluster to be shared with the receiver.
 The location of the Kusto Cluster.
 
 <h4 class="pdoc-member-header" id="GetDatasetKustoClusterResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetKustoCluster.ts#L72">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetKustoCluster.ts#L72">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDatasetKustoClusterResult-shareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetKustoCluster.ts#L73">property <b>shareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetKustoCluster.ts#L73">property <b>shareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shareId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetDatasetKustoDatabaseArgs" data-link-title="GetDatasetKustoDatabaseArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetKustoDatabase.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetKustoDatabase.ts#L41">
         interface <strong>GetDatasetKustoDatabaseArgs</strong>
     </a>
 </h3>
@@ -2384,7 +2384,7 @@ The location of the Kusto Cluster.
 A collection of arguments for invoking getDatasetKustoDatabase.
 
 <h4 class="pdoc-member-header" id="GetDatasetKustoDatabaseArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetKustoDatabase.ts#L45">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetKustoDatabase.ts#L45">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2392,7 +2392,7 @@ A collection of arguments for invoking getDatasetKustoDatabase.
 The name of this Data Share Kusto Database Dataset.
 
 <h4 class="pdoc-member-header" id="GetDatasetKustoDatabaseArgs-shareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetKustoDatabase.ts#L49">property <b>shareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetKustoDatabase.ts#L49">property <b>shareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shareId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2400,7 +2400,7 @@ The name of this Data Share Kusto Database Dataset.
 The resource ID of the Data Share where this Data Share Kusto Database Dataset should be created.
 
 <h3 class="pdoc-module-header" id="GetDatasetKustoDatabaseResult" data-link-title="GetDatasetKustoDatabaseResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetKustoDatabase.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetKustoDatabase.ts#L55">
         interface <strong>GetDatasetKustoDatabaseResult</strong>
     </a>
 </h3>
@@ -2410,7 +2410,7 @@ The resource ID of the Data Share where this Data Share Kusto Database Dataset s
 A collection of values returned by getDatasetKustoDatabase.
 
 <h4 class="pdoc-member-header" id="GetDatasetKustoDatabaseResult-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetKustoDatabase.ts#L59">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetKustoDatabase.ts#L59">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2418,7 +2418,7 @@ A collection of values returned by getDatasetKustoDatabase.
 The name of the Data Share Dataset.
 
 <h4 class="pdoc-member-header" id="GetDatasetKustoDatabaseResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetKustoDatabase.ts#L63">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetKustoDatabase.ts#L63">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2426,7 +2426,7 @@ The name of the Data Share Dataset.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDatasetKustoDatabaseResult-kustoClusterLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetKustoDatabase.ts#L67">property <b>kustoClusterLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetKustoDatabase.ts#L67">property <b>kustoClusterLocation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kustoClusterLocation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2434,7 +2434,7 @@ The provider-assigned unique ID for this managed resource.
 The location of the Kusto Cluster.
 
 <h4 class="pdoc-member-header" id="GetDatasetKustoDatabaseResult-kustoDatabaseId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetKustoDatabase.ts#L71">property <b>kustoDatabaseId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetKustoDatabase.ts#L71">property <b>kustoDatabaseId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kustoDatabaseId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2442,17 +2442,17 @@ The location of the Kusto Cluster.
 The resource ID of the Kusto Cluster Database to be shared with the receiver.
 
 <h4 class="pdoc-member-header" id="GetDatasetKustoDatabaseResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetKustoDatabase.ts#L72">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetKustoDatabase.ts#L72">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDatasetKustoDatabaseResult-shareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getDatasetKustoDatabase.ts#L73">property <b>shareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getDatasetKustoDatabase.ts#L73">property <b>shareId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shareId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetShareArgs" data-link-title="GetShareArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getShare.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getShare.ts#L45">
         interface <strong>GetShareArgs</strong>
     </a>
 </h3>
@@ -2462,7 +2462,7 @@ The resource ID of the Kusto Cluster Database to be shared with the receiver.
 A collection of arguments for invoking getShare.
 
 <h4 class="pdoc-member-header" id="GetShareArgs-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getShare.ts#L49">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getShare.ts#L49">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2470,7 +2470,7 @@ A collection of arguments for invoking getShare.
 The ID of the Data Share account in which the Data Share is created.
 
 <h4 class="pdoc-member-header" id="GetShareArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getShare.ts#L53">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getShare.ts#L53">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2478,7 +2478,7 @@ The ID of the Data Share account in which the Data Share is created.
 The name of this Data Share.
 
 <h3 class="pdoc-module-header" id="GetShareResult" data-link-title="GetShareResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getShare.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getShare.ts#L59">
         interface <strong>GetShareResult</strong>
     </a>
 </h3>
@@ -2488,12 +2488,12 @@ The name of this Data Share.
 A collection of values returned by getShare.
 
 <h4 class="pdoc-member-header" id="GetShareResult-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getShare.ts#L60">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getShare.ts#L60">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetShareResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getShare.ts#L64">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getShare.ts#L64">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2501,7 +2501,7 @@ A collection of values returned by getShare.
 The description of the Data Share.
 
 <h4 class="pdoc-member-header" id="GetShareResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getShare.ts#L68">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getShare.ts#L68">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2509,7 +2509,7 @@ The description of the Data Share.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetShareResult-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getShare.ts#L72">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getShare.ts#L72">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2517,7 +2517,7 @@ The provider-assigned unique ID for this managed resource.
 The kind of the Data Share.
 
 <h4 class="pdoc-member-header" id="GetShareResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getShare.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getShare.ts#L76">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2525,7 +2525,7 @@ The kind of the Data Share.
 The name of the snapshot schedule.
 
 <h4 class="pdoc-member-header" id="GetShareResult-snapshotSchedules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getShare.ts#L80">property <b>snapshotSchedules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getShare.ts#L80">property <b>snapshotSchedules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotSchedules: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetShareSnapshotSchedule'>GetShareSnapshotSchedule</a>[];</code></pre>
@@ -2533,7 +2533,7 @@ The name of the snapshot schedule.
 A `snapshotSchedule` block as defined below.
 
 <h4 class="pdoc-member-header" id="GetShareResult-terms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/getShare.ts#L84">property <b>terms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/getShare.ts#L84">property <b>terms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>terms: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2541,7 +2541,7 @@ A `snapshotSchedule` block as defined below.
 The terms of the Data Share.
 
 <h3 class="pdoc-module-header" id="ShareArgs" data-link-title="ShareArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/share.ts#L176">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/share.ts#L176">
         interface <strong>ShareArgs</strong>
     </a>
 </h3>
@@ -2551,7 +2551,7 @@ The terms of the Data Share.
 The set of arguments for constructing a Share resource.
 
 <h4 class="pdoc-member-header" id="ShareArgs-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/share.ts#L180">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/share.ts#L180">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2559,7 +2559,7 @@ The set of arguments for constructing a Share resource.
 The ID of the Data Share account in which the Data Share is created. Changing this forces a new Data Share to be created.
 
 <h4 class="pdoc-member-header" id="ShareArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/share.ts#L184">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/share.ts#L184">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2567,7 +2567,7 @@ The ID of the Data Share account in which the Data Share is created. Changing th
 The Data Share's description.
 
 <h4 class="pdoc-member-header" id="ShareArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/share.ts#L188">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/share.ts#L188">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2575,7 +2575,7 @@ The Data Share's description.
 The kind of the Data Share. Possible values are `CopyBased` and `InPlace`. Changing this forces a new Data Share to be created.
 
 <h4 class="pdoc-member-header" id="ShareArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/share.ts#L192">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/share.ts#L192">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2583,7 +2583,7 @@ The kind of the Data Share. Possible values are `CopyBased` and `InPlace`. Chang
 The name which should be used for this Data Share. Changing this forces a new Data Share to be created.
 
 <h4 class="pdoc-member-header" id="ShareArgs-snapshotSchedule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/share.ts#L196">property <b>snapshotSchedule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/share.ts#L196">property <b>snapshotSchedule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotSchedule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ShareSnapshotSchedule'>ShareSnapshotSchedule</a>&gt;;</code></pre>
@@ -2591,7 +2591,7 @@ The name which should be used for this Data Share. Changing this forces a new Da
 A `snapshotSchedule` block as defined below.
 
 <h4 class="pdoc-member-header" id="ShareArgs-terms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/share.ts#L200">property <b>terms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/share.ts#L200">property <b>terms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>terms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2599,7 +2599,7 @@ A `snapshotSchedule` block as defined below.
 The terms of the Data Share.
 
 <h3 class="pdoc-module-header" id="ShareState" data-link-title="ShareState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/share.ts#L146">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/share.ts#L146">
         interface <strong>ShareState</strong>
     </a>
 </h3>
@@ -2609,7 +2609,7 @@ The terms of the Data Share.
 Input properties used for looking up and filtering Share resources.
 
 <h4 class="pdoc-member-header" id="ShareState-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/share.ts#L150">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/share.ts#L150">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2617,7 +2617,7 @@ Input properties used for looking up and filtering Share resources.
 The ID of the Data Share account in which the Data Share is created. Changing this forces a new Data Share to be created.
 
 <h4 class="pdoc-member-header" id="ShareState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/share.ts#L154">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/share.ts#L154">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2625,7 +2625,7 @@ The ID of the Data Share account in which the Data Share is created. Changing th
 The Data Share's description.
 
 <h4 class="pdoc-member-header" id="ShareState-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/share.ts#L158">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/share.ts#L158">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2633,7 +2633,7 @@ The Data Share's description.
 The kind of the Data Share. Possible values are `CopyBased` and `InPlace`. Changing this forces a new Data Share to be created.
 
 <h4 class="pdoc-member-header" id="ShareState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/share.ts#L162">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/share.ts#L162">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2641,7 +2641,7 @@ The kind of the Data Share. Possible values are `CopyBased` and `InPlace`. Chang
 The name which should be used for this Data Share. Changing this forces a new Data Share to be created.
 
 <h4 class="pdoc-member-header" id="ShareState-snapshotSchedule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/share.ts#L166">property <b>snapshotSchedule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/share.ts#L166">property <b>snapshotSchedule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotSchedule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ShareSnapshotSchedule'>ShareSnapshotSchedule</a>&gt;;</code></pre>
@@ -2649,7 +2649,7 @@ The name which should be used for this Data Share. Changing this forces a new Da
 A `snapshotSchedule` block as defined below.
 
 <h4 class="pdoc-member-header" id="ShareState-terms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/datashare/share.ts#L170">property <b>terms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/759289fd9b3a0ab07d1ece84247638497d4bb8ba/sdk/nodejs/datashare/share.ts#L170">property <b>terms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>terms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
