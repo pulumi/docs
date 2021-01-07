@@ -1,4 +1,5 @@
 import { Component, Prop, State, h } from '@stencil/core';
+import { getQueryVariable } from '../../util/util';
 
 interface WebinarSessionItem {
     datetime: string;
@@ -42,23 +43,42 @@ export class WebinarFormSelect {
     // When the component loads we need to parse the session strings and turn the datetime
     // into a human friendly format.
     componentWillLoad() {
-        const parsedSessions = JSON.parse(this.sessions).map((session: WebinarSessionItem) => {
+        const parsedSessions: WebinarSessionItem[] = JSON.parse(this.sessions).map((session: WebinarSessionItem) => {
             const sessionDate = new Date(session.datetime);
             const options = {
                 timeZoneName: "short",
-                weekday: 'short',
-                year: 'numeric',
-                month: 'long',
+                weekday: "short",
+                year: "numeric",
+                month: "long",
                 day: 'numeric',
                 hour: "numeric",
                 minute: "2-digit"
-              };
-            return { ...session, datetime: sessionDate.toLocaleString(undefined, options) };
+            };
+            return { ...session, datetime: sessionDate.toLocaleString(undefined, options)};
         });
 
         // Set the initial state.
         this.webinarSessions = parsedSessions;
-        this.selectedSession = parsedSessions[0];
+
+        // Set the selector value if the `date` query parameter is set.
+        const dateQueryParam = getQueryVariable("date");
+        if (dateQueryParam) {
+            const queryParamDate = new Date(dateQueryParam);
+            if (isNaN(queryParamDate.getTime())) {
+                this.selectedSession = parsedSessions[0];
+            }
+
+            const selectedSession = parsedSessions.find((session) => {
+                const sessionDate = new Date(session.datetime);
+                return sessionDate.getFullYear() === queryParamDate.getFullYear() &&
+                       sessionDate.getMonth() === queryParamDate.getMonth() &&
+                       sessionDate.getDate() === queryParamDate.getDate();
+            });
+
+            this.selectedSession = selectedSession ? selectedSession : parsedSessions[0];
+        } else {
+            this.selectedSession = parsedSessions[0];
+        }
     }
 
     // After the form submits we should hide the session selector.
@@ -90,6 +110,7 @@ export class WebinarFormSelect {
     }
 
     render() {
+        const selectedFormId = this.selectedSession.hubspot_form_id;
         return (
             <div>
                 { this.formSubmitted ? null :
@@ -97,7 +118,8 @@ export class WebinarFormSelect {
                         <span class={this.labelClass || ""}>Pick a Session</span>
                         <select class={this.selectClass || ""} onInput={(event: any) => this.handleSelectChange(event.target.value)}>
                             {this.webinarSessions.map((session) => {
-                                return <option value={session.hubspot_form_id}>{session.datetime}</option>;
+                                const isSelected = session.hubspot_form_id === selectedFormId;
+                                return <option value={session.hubspot_form_id} selected={isSelected}>{session.datetime}</option>;
                             })}
                         </select>
                     </span>
