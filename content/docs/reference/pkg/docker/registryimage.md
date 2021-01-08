@@ -102,7 +102,7 @@ const helloworld = new docker.RegistryImage("helloworld", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#RegistryImage">RegistryImage</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#RegistryImageArgs">RegistryImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#RegistryImage">RegistryImage</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#RegistryImageArgs">RegistryImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -110,11 +110,11 @@ const helloworld = new docker.RegistryImage("helloworld", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#RegistryImage">NewRegistryImage</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#RegistryImageArgs">RegistryImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#RegistryImage">RegistryImage</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#RegistryImage">NewRegistryImage</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#RegistryImageArgs">RegistryImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#RegistryImage">RegistryImage</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.RegistryImage.html">RegistryImage</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.RegistryImageArgs.html">RegistryImageArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.RegistryImage.html">RegistryImage</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.RegistryImageArgs.html">RegistryImageArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -125,7 +125,7 @@ const helloworld = new docker.RegistryImage("helloworld", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -194,7 +194,7 @@ const helloworld = new docker.RegistryImage("helloworld", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -233,7 +233,7 @@ const helloworld = new docker.RegistryImage("helloworld", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -274,7 +274,6 @@ The RegistryImage resource accepts the following [input]({{< relref "/docs/intro
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -282,40 +281,36 @@ The RegistryImage resource accepts the following [input]({{< relref "/docs/intro
             title="Optional">
         <span id="build_csharp">
 <a href="#build_csharp" style="color: inherit; text-decoration: inherit;">Build</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#registryimagebuild">Registry<wbr>Image<wbr>Build<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Build below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keepremotely_csharp">
 <a href="#keepremotely_csharp" style="color: inherit; text-decoration: inherit;">Keep<wbr>Remotely</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then the Docker image won't be
 deleted on destroy operation. If this is false, it will delete the image from
 the docker registry on destroy operation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}type of ulimit, e.g. nofile
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -324,40 +319,36 @@ the docker registry on destroy operation.
             title="Optional">
         <span id="build_go">
 <a href="#build_go" style="color: inherit; text-decoration: inherit;">Build</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#registryimagebuild">Registry<wbr>Image<wbr>Build</a></span>
     </dt>
     <dd>{{% md %}}See Build below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keepremotely_go">
 <a href="#keepremotely_go" style="color: inherit; text-decoration: inherit;">Keep<wbr>Remotely</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then the Docker image won't be
 deleted on destroy operation. If this is false, it will delete the image from
 the docker registry on destroy operation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}type of ulimit, e.g. nofile
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -366,40 +357,36 @@ the docker registry on destroy operation.
             title="Optional">
         <span id="build_nodejs">
 <a href="#build_nodejs" style="color: inherit; text-decoration: inherit;">build</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#registryimagebuild">Registry<wbr>Image<wbr>Build</a></span>
     </dt>
     <dd>{{% md %}}See Build below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keepremotely_nodejs">
 <a href="#keepremotely_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>Remotely</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, then the Docker image won't be
 deleted on destroy operation. If this is false, it will delete the image from
 the docker registry on destroy operation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}type of ulimit, e.g. nofile
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -408,49 +395,41 @@ the docker registry on destroy operation.
             title="Optional">
         <span id="build_python">
 <a href="#build_python" style="color: inherit; text-decoration: inherit;">build</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#registryimagebuild">Registry<wbr>Image<wbr>Build<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Build below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keep_remotely_python">
 <a href="#keep_remotely_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>remotely</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then the Docker image won't be
 deleted on destroy operation. If this is false, it will delete the image from
 the docker registry on destroy operation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}type of ulimit, e.g. nofile
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the RegistryImage resource produces the following output properties:
-
 
 
 
@@ -461,25 +440,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="sha256digest_csharp">
 <a href="#sha256digest_csharp" style="color: inherit; text-decoration: inherit;">Sha256Digest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -488,25 +464,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="sha256digest_go">
 <a href="#sha256digest_go" style="color: inherit; text-decoration: inherit;">Sha256Digest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -515,25 +488,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="sha256digest_nodejs">
 <a href="#sha256digest_nodejs" style="color: inherit; text-decoration: inherit;">sha256Digest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -542,28 +512,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="sha256_digest_python">
 <a href="#sha256_digest_python" style="color: inherit; text-decoration: inherit;">sha256_<wbr>digest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -573,7 +537,7 @@ Get an existing RegistryImage resource's state with the given name, ID, and opti
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#RegistryImageState">RegistryImageState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#RegistryImage">RegistryImage</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#RegistryImageState">RegistryImageState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#RegistryImage">RegistryImage</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -582,11 +546,11 @@ Get an existing RegistryImage resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegistryImage<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#RegistryImageState">RegistryImageState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#RegistryImage">RegistryImage</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegistryImage<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#RegistryImageState">RegistryImageState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#RegistryImage">RegistryImage</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.RegistryImage.html">RegistryImage</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker..RegistryImageState.html">RegistryImageState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.RegistryImage.html">RegistryImage</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker..RegistryImageState.html">RegistryImageState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -688,7 +652,6 @@ Get an existing RegistryImage resource's state with the given name, ID, and opti
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -696,50 +659,45 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_build_csharp">
 <a href="#state_build_csharp" style="color: inherit; text-decoration: inherit;">Build</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#registryimagebuild">Registry<wbr>Image<wbr>Build<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Build below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_keepremotely_csharp">
 <a href="#state_keepremotely_csharp" style="color: inherit; text-decoration: inherit;">Keep<wbr>Remotely</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then the Docker image won't be
 deleted on destroy operation. If this is false, it will delete the image from
 the docker registry on destroy operation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}type of ulimit, e.g. nofile
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sha256digest_csharp">
 <a href="#state_sha256digest_csharp" style="color: inherit; text-decoration: inherit;">Sha256Digest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -748,50 +706,45 @@ the docker registry on destroy operation.
             title="Optional">
         <span id="state_build_go">
 <a href="#state_build_go" style="color: inherit; text-decoration: inherit;">Build</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#registryimagebuild">Registry<wbr>Image<wbr>Build</a></span>
     </dt>
     <dd>{{% md %}}See Build below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_keepremotely_go">
 <a href="#state_keepremotely_go" style="color: inherit; text-decoration: inherit;">Keep<wbr>Remotely</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then the Docker image won't be
 deleted on destroy operation. If this is false, it will delete the image from
 the docker registry on destroy operation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}type of ulimit, e.g. nofile
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sha256digest_go">
 <a href="#state_sha256digest_go" style="color: inherit; text-decoration: inherit;">Sha256Digest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -800,50 +753,45 @@ the docker registry on destroy operation.
             title="Optional">
         <span id="state_build_nodejs">
 <a href="#state_build_nodejs" style="color: inherit; text-decoration: inherit;">build</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#registryimagebuild">Registry<wbr>Image<wbr>Build</a></span>
     </dt>
     <dd>{{% md %}}See Build below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_keepremotely_nodejs">
 <a href="#state_keepremotely_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>Remotely</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, then the Docker image won't be
 deleted on destroy operation. If this is false, it will delete the image from
 the docker registry on destroy operation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}type of ulimit, e.g. nofile
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sha256digest_nodejs">
 <a href="#state_sha256digest_nodejs" style="color: inherit; text-decoration: inherit;">sha256Digest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -852,47 +800,43 @@ the docker registry on destroy operation.
             title="Optional">
         <span id="state_build_python">
 <a href="#state_build_python" style="color: inherit; text-decoration: inherit;">build</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#registryimagebuild">Registry<wbr>Image<wbr>Build<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Build below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_keep_remotely_python">
 <a href="#state_keep_remotely_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>remotely</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then the Docker image won't be
 deleted on destroy operation. If this is false, it will delete the image from
 the docker registry on destroy operation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}type of ulimit, e.g. nofile
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sha256_digest_python">
 <a href="#state_sha256_digest_python" style="color: inherit; text-decoration: inherit;">sha256_<wbr>digest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -901,11 +845,8 @@ the docker registry on destroy operation.
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="registryimagebuild">Registry<wbr>Image<wbr>Build</h4>
@@ -916,11 +857,10 @@ the docker registry on destroy operation.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#RegistryImageBuildArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#RegistryImageBuildOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.RegistryImageBuildArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.RegistryImageBuild.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -930,356 +870,323 @@ the docker registry on destroy operation.
             title="Required">
         <span id="context_csharp">
 <a href="#context_csharp" style="color: inherit; text-decoration: inherit;">Context</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- The path to the context folder
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authconfigs_csharp">
 <a href="#authconfigs_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#registryimagebuildauthconfig">List&lt;Registry<wbr>Image<wbr>Build<wbr>Auth<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}- See AuthConfig below for details
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="buildargs_csharp">
 <a href="#buildargs_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}string pairs for build-time variables
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="buildid_csharp">
 <a href="#buildid_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- BuildID is an optional identifier that can be passed together with the build request. The same identifier can be used to gracefully cancel the build with the cancel request
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cachefroms_csharp">
 <a href="#cachefroms_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Froms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}- Images to consider as cache sources
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cgroupparent_csharp">
 <a href="#cgroupparent_csharp" style="color: inherit; text-decoration: inherit;">Cgroup<wbr>Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Optional parent cgroup for the container
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpuperiod_csharp">
 <a href="#cpuperiod_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- The length of a CPU period in microseconds
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpuquota_csharp">
 <a href="#cpuquota_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Quota</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- Microseconds of CPU time that the container can get in a CPU period
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpusetcpus_csharp">
 <a href="#cpusetcpus_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Set<wbr>Cpus</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- CPUs in which to allow execution (e.g., 0-3, 0,1)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpusetmems_csharp">
 <a href="#cpusetmems_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Set<wbr>Mems</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- MEMs in which to allow execution (0-3, 0,1)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpushares_csharp">
 <a href="#cpushares_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Shares</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- CPU shares (relative weight)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dockerfile_csharp">
 <a href="#dockerfile_csharp" style="color: inherit; text-decoration: inherit;">Dockerfile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Dockerfile file. Default is "Dockerfile"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extrahosts_csharp">
 <a href="#extrahosts_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Hosts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}- A list of hostnames/IP mappings to add to the container’s /etc/hosts file. Specified in the form ["hostname:IP"]
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forceremove_csharp">
 <a href="#forceremove_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Remove</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Always remove intermediate containers
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isolation_csharp">
 <a href="#isolation_csharp" style="color: inherit; text-decoration: inherit;">Isolation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Isolation represents the isolation technology of a container. The supported values are platform specific
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}string pairs for labels
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memory_csharp">
 <a href="#memory_csharp" style="color: inherit; text-decoration: inherit;">Memory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- Set memory limit for build
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memoryswap_csharp">
 <a href="#memoryswap_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Swap</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- Total memory (memory + swap), -1 to enable unlimited swap
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkmode_csharp">
 <a href="#networkmode_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Set the networking mode for the RUN instructions during build
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nocache_csharp">
 <a href="#nocache_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Cache</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Do not use the cache when building the image
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="platform_csharp">
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Set platform if server is multi-platform capable
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pullparent_csharp">
 <a href="#pullparent_csharp" style="color: inherit; text-decoration: inherit;">Pull<wbr>Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Attempt to pull the image even if an older image exists locally
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="remotecontext_csharp">
 <a href="#remotecontext_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Context</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- A Git repository URI or HTTP/HTTPS context URI
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="remove_csharp">
 <a href="#remove_csharp" style="color: inherit; text-decoration: inherit;">Remove</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Remove intermediate containers after a successful build (default behavior)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="securityopts_csharp">
 <a href="#securityopts_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Opts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}- Security options
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sessionid_csharp">
 <a href="#sessionid_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shmsize_csharp">
 <a href="#shmsize_csharp" style="color: inherit; text-decoration: inherit;">Shm<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- Size of /dev/shm in bytes. The size must be greater than 0
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="squash_csharp">
 <a href="#squash_csharp" style="color: inherit; text-decoration: inherit;">Squash</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- squash the new layers into a new image with a single new layer
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="suppressoutput_csharp">
 <a href="#suppressoutput_csharp" style="color: inherit; text-decoration: inherit;">Suppress<wbr>Output</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Suppress the build output and print image ID on success
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Set the target build stage to build
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ulimits_csharp">
 <a href="#ulimits_csharp" style="color: inherit; text-decoration: inherit;">Ulimits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#registryimagebuildulimit">List&lt;Registry<wbr>Image<wbr>Build<wbr>Ulimit<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}- See Ulimit below for details
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Version of the unerlying builder to use
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1288,356 +1195,323 @@ the docker registry on destroy operation.
             title="Required">
         <span id="context_go">
 <a href="#context_go" style="color: inherit; text-decoration: inherit;">Context</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- The path to the context folder
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authconfigs_go">
 <a href="#authconfigs_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#registryimagebuildauthconfig">[]Registry<wbr>Image<wbr>Build<wbr>Auth<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}- See AuthConfig below for details
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="buildargs_go">
 <a href="#buildargs_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}string pairs for build-time variables
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="buildid_go">
 <a href="#buildid_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- BuildID is an optional identifier that can be passed together with the build request. The same identifier can be used to gracefully cancel the build with the cancel request
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cachefroms_go">
 <a href="#cachefroms_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Froms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}- Images to consider as cache sources
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cgroupparent_go">
 <a href="#cgroupparent_go" style="color: inherit; text-decoration: inherit;">Cgroup<wbr>Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Optional parent cgroup for the container
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpuperiod_go">
 <a href="#cpuperiod_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- The length of a CPU period in microseconds
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpuquota_go">
 <a href="#cpuquota_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Quota</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- Microseconds of CPU time that the container can get in a CPU period
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpusetcpus_go">
 <a href="#cpusetcpus_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Set<wbr>Cpus</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- CPUs in which to allow execution (e.g., 0-3, 0,1)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpusetmems_go">
 <a href="#cpusetmems_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Set<wbr>Mems</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- MEMs in which to allow execution (0-3, 0,1)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpushares_go">
 <a href="#cpushares_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Shares</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- CPU shares (relative weight)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dockerfile_go">
 <a href="#dockerfile_go" style="color: inherit; text-decoration: inherit;">Dockerfile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Dockerfile file. Default is "Dockerfile"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extrahosts_go">
 <a href="#extrahosts_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Hosts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}- A list of hostnames/IP mappings to add to the container’s /etc/hosts file. Specified in the form ["hostname:IP"]
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forceremove_go">
 <a href="#forceremove_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Remove</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Always remove intermediate containers
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isolation_go">
 <a href="#isolation_go" style="color: inherit; text-decoration: inherit;">Isolation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Isolation represents the isolation technology of a container. The supported values are platform specific
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}string pairs for labels
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memory_go">
 <a href="#memory_go" style="color: inherit; text-decoration: inherit;">Memory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- Set memory limit for build
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memoryswap_go">
 <a href="#memoryswap_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Swap</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- Total memory (memory + swap), -1 to enable unlimited swap
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkmode_go">
 <a href="#networkmode_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Set the networking mode for the RUN instructions during build
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nocache_go">
 <a href="#nocache_go" style="color: inherit; text-decoration: inherit;">No<wbr>Cache</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Do not use the cache when building the image
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="platform_go">
 <a href="#platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Set platform if server is multi-platform capable
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pullparent_go">
 <a href="#pullparent_go" style="color: inherit; text-decoration: inherit;">Pull<wbr>Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Attempt to pull the image even if an older image exists locally
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="remotecontext_go">
 <a href="#remotecontext_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Context</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- A Git repository URI or HTTP/HTTPS context URI
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="remove_go">
 <a href="#remove_go" style="color: inherit; text-decoration: inherit;">Remove</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Remove intermediate containers after a successful build (default behavior)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="securityopts_go">
 <a href="#securityopts_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Opts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}- Security options
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sessionid_go">
 <a href="#sessionid_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shmsize_go">
 <a href="#shmsize_go" style="color: inherit; text-decoration: inherit;">Shm<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- Size of /dev/shm in bytes. The size must be greater than 0
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="squash_go">
 <a href="#squash_go" style="color: inherit; text-decoration: inherit;">Squash</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- squash the new layers into a new image with a single new layer
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="suppressoutput_go">
 <a href="#suppressoutput_go" style="color: inherit; text-decoration: inherit;">Suppress<wbr>Output</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Suppress the build output and print image ID on success
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Set the target build stage to build
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ulimits_go">
 <a href="#ulimits_go" style="color: inherit; text-decoration: inherit;">Ulimits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#registryimagebuildulimit">[]Registry<wbr>Image<wbr>Build<wbr>Ulimit</a></span>
     </dt>
     <dd>{{% md %}}- See Ulimit below for details
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Version of the unerlying builder to use
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1646,356 +1520,323 @@ the docker registry on destroy operation.
             title="Required">
         <span id="context_nodejs">
 <a href="#context_nodejs" style="color: inherit; text-decoration: inherit;">context</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- The path to the context folder
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authconfigs_nodejs">
 <a href="#authconfigs_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#registryimagebuildauthconfig">Registry<wbr>Image<wbr>Build<wbr>Auth<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}- See AuthConfig below for details
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="buildargs_nodejs">
 <a href="#buildargs_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}string pairs for build-time variables
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="buildid_nodejs">
 <a href="#buildid_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- BuildID is an optional identifier that can be passed together with the build request. The same identifier can be used to gracefully cancel the build with the cancel request
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cachefroms_nodejs">
 <a href="#cachefroms_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Froms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}- Images to consider as cache sources
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cgroupparent_nodejs">
 <a href="#cgroupparent_nodejs" style="color: inherit; text-decoration: inherit;">cgroup<wbr>Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Optional parent cgroup for the container
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpuperiod_nodejs">
 <a href="#cpuperiod_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}- The length of a CPU period in microseconds
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpuquota_nodejs">
 <a href="#cpuquota_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Quota</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}- Microseconds of CPU time that the container can get in a CPU period
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpusetcpus_nodejs">
 <a href="#cpusetcpus_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Set<wbr>Cpus</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- CPUs in which to allow execution (e.g., 0-3, 0,1)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpusetmems_nodejs">
 <a href="#cpusetmems_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Set<wbr>Mems</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- MEMs in which to allow execution (0-3, 0,1)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpushares_nodejs">
 <a href="#cpushares_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Shares</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}- CPU shares (relative weight)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dockerfile_nodejs">
 <a href="#dockerfile_nodejs" style="color: inherit; text-decoration: inherit;">dockerfile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Dockerfile file. Default is "Dockerfile"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extrahosts_nodejs">
 <a href="#extrahosts_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Hosts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}- A list of hostnames/IP mappings to add to the container’s /etc/hosts file. Specified in the form ["hostname:IP"]
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forceremove_nodejs">
 <a href="#forceremove_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Remove</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}- Always remove intermediate containers
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isolation_nodejs">
 <a href="#isolation_nodejs" style="color: inherit; text-decoration: inherit;">isolation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Isolation represents the isolation technology of a container. The supported values are platform specific
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}string pairs for labels
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memory_nodejs">
 <a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}- Set memory limit for build
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memoryswap_nodejs">
 <a href="#memoryswap_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Swap</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}- Total memory (memory + swap), -1 to enable unlimited swap
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkmode_nodejs">
 <a href="#networkmode_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Set the networking mode for the RUN instructions during build
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nocache_nodejs">
 <a href="#nocache_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Cache</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}- Do not use the cache when building the image
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="platform_nodejs">
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Set platform if server is multi-platform capable
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pullparent_nodejs">
 <a href="#pullparent_nodejs" style="color: inherit; text-decoration: inherit;">pull<wbr>Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}- Attempt to pull the image even if an older image exists locally
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="remotecontext_nodejs">
 <a href="#remotecontext_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Context</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- A Git repository URI or HTTP/HTTPS context URI
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="remove_nodejs">
 <a href="#remove_nodejs" style="color: inherit; text-decoration: inherit;">remove</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}- Remove intermediate containers after a successful build (default behavior)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="securityopts_nodejs">
 <a href="#securityopts_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Opts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}- Security options
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sessionid_nodejs">
 <a href="#sessionid_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shmsize_nodejs">
 <a href="#shmsize_nodejs" style="color: inherit; text-decoration: inherit;">shm<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}- Size of /dev/shm in bytes. The size must be greater than 0
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="squash_nodejs">
 <a href="#squash_nodejs" style="color: inherit; text-decoration: inherit;">squash</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}- squash the new layers into a new image with a single new layer
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="suppressoutput_nodejs">
 <a href="#suppressoutput_nodejs" style="color: inherit; text-decoration: inherit;">suppress<wbr>Output</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}- Suppress the build output and print image ID on success
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Set the target build stage to build
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ulimits_nodejs">
 <a href="#ulimits_nodejs" style="color: inherit; text-decoration: inherit;">ulimits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#registryimagebuildulimit">Registry<wbr>Image<wbr>Build<wbr>Ulimit[]</a></span>
     </dt>
     <dd>{{% md %}}- See Ulimit below for details
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Version of the unerlying builder to use
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2004,359 +1845,323 @@ the docker registry on destroy operation.
             title="Required">
         <span id="context_python">
 <a href="#context_python" style="color: inherit; text-decoration: inherit;">context</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- The path to the context folder
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="auth_configs_python">
 <a href="#auth_configs_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#registryimagebuildauthconfig">Sequence[Registry<wbr>Image<wbr>Build<wbr>Auth<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}- See AuthConfig below for details
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="build_args_python">
 <a href="#build_args_python" style="color: inherit; text-decoration: inherit;">build_<wbr>args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}string pairs for build-time variables
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="build_id_python">
 <a href="#build_id_python" style="color: inherit; text-decoration: inherit;">build_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- BuildID is an optional identifier that can be passed together with the build request. The same identifier can be used to gracefully cancel the build with the cancel request
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cache_froms_python">
 <a href="#cache_froms_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>froms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}- Images to consider as cache sources
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cgroup_parent_python">
 <a href="#cgroup_parent_python" style="color: inherit; text-decoration: inherit;">cgroup_<wbr>parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- Optional parent cgroup for the container
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpu_period_python">
 <a href="#cpu_period_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- The length of a CPU period in microseconds
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpu_quota_python">
 <a href="#cpu_quota_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>quota</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- Microseconds of CPU time that the container can get in a CPU period
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpu_set_cpus_python">
 <a href="#cpu_set_cpus_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>set_<wbr>cpus</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- CPUs in which to allow execution (e.g., 0-3, 0,1)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpu_set_mems_python">
 <a href="#cpu_set_mems_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>set_<wbr>mems</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- MEMs in which to allow execution (0-3, 0,1)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpu_shares_python">
 <a href="#cpu_shares_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>shares</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- CPU shares (relative weight)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dockerfile_python">
 <a href="#dockerfile_python" style="color: inherit; text-decoration: inherit;">dockerfile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- Dockerfile file. Default is "Dockerfile"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extra_hosts_python">
 <a href="#extra_hosts_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>hosts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}- A list of hostnames/IP mappings to add to the container’s /etc/hosts file. Specified in the form ["hostname:IP"]
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="force_remove_python">
 <a href="#force_remove_python" style="color: inherit; text-decoration: inherit;">force_<wbr>remove</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Always remove intermediate containers
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isolation_python">
 <a href="#isolation_python" style="color: inherit; text-decoration: inherit;">isolation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- Isolation represents the isolation technology of a container. The supported values are platform specific
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}string pairs for labels
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memory_python">
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- Set memory limit for build
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memory_swap_python">
 <a href="#memory_swap_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>swap</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- Total memory (memory + swap), -1 to enable unlimited swap
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_mode_python">
 <a href="#network_mode_python" style="color: inherit; text-decoration: inherit;">network_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- Set the networking mode for the RUN instructions during build
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="no_cache_python">
 <a href="#no_cache_python" style="color: inherit; text-decoration: inherit;">no_<wbr>cache</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Do not use the cache when building the image
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="platform_python">
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- Set platform if server is multi-platform capable
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pull_parent_python">
 <a href="#pull_parent_python" style="color: inherit; text-decoration: inherit;">pull_<wbr>parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Attempt to pull the image even if an older image exists locally
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="remote_context_python">
 <a href="#remote_context_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>context</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- A Git repository URI or HTTP/HTTPS context URI
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="remove_python">
 <a href="#remove_python" style="color: inherit; text-decoration: inherit;">remove</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Remove intermediate containers after a successful build (default behavior)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="security_opts_python">
 <a href="#security_opts_python" style="color: inherit; text-decoration: inherit;">security_<wbr>opts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}- Security options
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="session_id_python">
 <a href="#session_id_python" style="color: inherit; text-decoration: inherit;">session_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shm_size_python">
 <a href="#shm_size_python" style="color: inherit; text-decoration: inherit;">shm_<wbr>size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- Size of /dev/shm in bytes. The size must be greater than 0
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="squash_python">
 <a href="#squash_python" style="color: inherit; text-decoration: inherit;">squash</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- squash the new layers into a new image with a single new layer
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="suppress_output_python">
 <a href="#suppress_output_python" style="color: inherit; text-decoration: inherit;">suppress_<wbr>output</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Suppress the build output and print image ID on success
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- Set the target build stage to build
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ulimits_python">
 <a href="#ulimits_python" style="color: inherit; text-decoration: inherit;">ulimits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#registryimagebuildulimit">Sequence[Registry<wbr>Image<wbr>Build<wbr>Ulimit<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}- See Ulimit below for details
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- Version of the unerlying builder to use
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="registryimagebuildauthconfig">Registry<wbr>Image<wbr>Build<wbr>Auth<wbr>Config</h4>
 {{% choosable language nodejs %}}
@@ -2366,11 +2171,10 @@ the docker registry on destroy operation.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#RegistryImageBuildAuthConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#RegistryImageBuildAuthConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.RegistryImageBuildAuthConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.RegistryImageBuildAuthConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2380,93 +2184,84 @@ the docker registry on destroy operation.
             title="Required">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}hostname of the registry
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="auth_csharp">
 <a href="#auth_csharp" style="color: inherit; text-decoration: inherit;">Auth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the auth token
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="email_csharp">
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the user emal
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="identitytoken_csharp">
 <a href="#identitytoken_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the identity token
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the registry password
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="registrytoken_csharp">
 <a href="#registrytoken_csharp" style="color: inherit; text-decoration: inherit;">Registry<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the registry token
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serveraddress_csharp">
 <a href="#serveraddress_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the server address
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the registry user name
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2475,93 +2270,84 @@ the docker registry on destroy operation.
             title="Required">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}hostname of the registry
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="auth_go">
 <a href="#auth_go" style="color: inherit; text-decoration: inherit;">Auth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the auth token
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="email_go">
 <a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the user emal
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="identitytoken_go">
 <a href="#identitytoken_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the identity token
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the registry password
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="registrytoken_go">
 <a href="#registrytoken_go" style="color: inherit; text-decoration: inherit;">Registry<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the registry token
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serveraddress_go">
 <a href="#serveraddress_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the server address
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the registry user name
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2570,93 +2356,84 @@ the docker registry on destroy operation.
             title="Required">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}hostname of the registry
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="auth_nodejs">
 <a href="#auth_nodejs" style="color: inherit; text-decoration: inherit;">auth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the auth token
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="email_nodejs">
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the user emal
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="identitytoken_nodejs">
 <a href="#identitytoken_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the identity token
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the registry password
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="registrytoken_nodejs">
 <a href="#registrytoken_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the registry token
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serveraddress_nodejs">
 <a href="#serveraddress_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the server address
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the registry user name
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2665,96 +2442,84 @@ the docker registry on destroy operation.
             title="Required">
         <span id="host_name_python">
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}hostname of the registry
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="auth_python">
 <a href="#auth_python" style="color: inherit; text-decoration: inherit;">auth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the auth token
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="email_python">
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the user emal
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="identity_token_python">
 <a href="#identity_token_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the identity token
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the registry password
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="registry_token_python">
 <a href="#registry_token_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the registry token
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="server_address_python">
 <a href="#server_address_python" style="color: inherit; text-decoration: inherit;">server_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the server address
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="user_name_python">
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the registry user name
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="registryimagebuildulimit">Registry<wbr>Image<wbr>Build<wbr>Ulimit</h4>
 {{% choosable language nodejs %}}
@@ -2764,11 +2529,10 @@ the docker registry on destroy operation.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#RegistryImageBuildUlimitArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#RegistryImageBuildUlimitOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.RegistryImageBuildUlimitArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.RegistryImageBuildUlimit.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2778,38 +2542,34 @@ the docker registry on destroy operation.
             title="Required">
         <span id="hard_csharp">
 <a href="#hard_csharp" style="color: inherit; text-decoration: inherit;">Hard</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- hard limit
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}type of ulimit, e.g. nofile
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="soft_csharp">
 <a href="#soft_csharp" style="color: inherit; text-decoration: inherit;">Soft</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- soft limit
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2818,38 +2578,34 @@ the docker registry on destroy operation.
             title="Required">
         <span id="hard_go">
 <a href="#hard_go" style="color: inherit; text-decoration: inherit;">Hard</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- hard limit
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}type of ulimit, e.g. nofile
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="soft_go">
 <a href="#soft_go" style="color: inherit; text-decoration: inherit;">Soft</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- soft limit
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2858,38 +2614,34 @@ the docker registry on destroy operation.
             title="Required">
         <span id="hard_nodejs">
 <a href="#hard_nodejs" style="color: inherit; text-decoration: inherit;">hard</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}- hard limit
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}type of ulimit, e.g. nofile
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="soft_nodejs">
 <a href="#soft_nodejs" style="color: inherit; text-decoration: inherit;">soft</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}- soft limit
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2898,46 +2650,34 @@ the docker registry on destroy operation.
             title="Required">
         <span id="hard_python">
 <a href="#hard_python" style="color: inherit; text-decoration: inherit;">hard</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- hard limit
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}type of ulimit, e.g. nofile
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="soft_python">
 <a href="#soft_python" style="color: inherit; text-decoration: inherit;">soft</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- soft limit
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>
