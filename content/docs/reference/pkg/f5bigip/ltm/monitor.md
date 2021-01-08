@@ -1,8 +1,8 @@
 
 ---
 title: "Monitor"
-title_tag: "Resource Monitor | Module ltm | Package f5 BIG-IP"
-meta_desc: "Explore the Monitor resource of the ltm module, including examples, input properties, output properties, lookup functions, and supporting types. `f5bigip.ltm.Monitor` Configures a custom monitor for use by health checks."
+title_tag: "f5bigip.ltm.Monitor"
+meta_desc: "Documentation for the f5bigip.ltm.Monitor resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -204,7 +204,7 @@ const test_postgresql_monitor = new f5bigip.ltm.Monitor("test-postgresql-monitor
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#Monitor">Monitor</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#MonitorArgs">MonitorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#Monitor">Monitor</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#MonitorArgs">MonitorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -212,11 +212,11 @@ const test_postgresql_monitor = new f5bigip.ltm.Monitor("test-postgresql-monitor
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#Monitor">NewMonitor</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#MonitorArgs">MonitorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#Monitor">Monitor</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#Monitor">NewMonitor</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#MonitorArgs">MonitorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#Monitor">Monitor</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.Ltm.Monitor.html">Monitor</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.Ltm.MonitorArgs.html">MonitorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.Ltm.Monitor.html">Monitor</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.Ltm.MonitorArgs.html">MonitorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -227,7 +227,7 @@ const test_postgresql_monitor = new f5bigip.ltm.Monitor("test-postgresql-monitor
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -296,7 +296,7 @@ const test_postgresql_monitor = new f5bigip.ltm.Monitor("test-postgresql-monitor
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -335,7 +335,7 @@ const test_postgresql_monitor = new f5bigip.ltm.Monitor("test-postgresql-monitor
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -376,7 +376,6 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -384,243 +383,220 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the monitor
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="parent_csharp">
 <a href="#parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Existing LTM monitor to inherit from
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adaptive_csharp">
 <a href="#adaptive_csharp" style="color: inherit; text-decoration: inherit;">Adaptive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ftp adaptive
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adaptivelimit_csharp">
 <a href="#adaptivelimit_csharp" style="color: inherit; text-decoration: inherit;">Adaptive<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Integer value
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="compatibility_csharp">
 <a href="#compatibility_csharp" style="color: inherit; text-decoration: inherit;">Compatibility</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies, when enabled, that the SSL options setting (in OpenSSL) is set to ALL. Accepts 'enabled' or 'disabled' values, the default value is 'enabled'.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="database_csharp">
 <a href="#database_csharp" style="color: inherit; text-decoration: inherit;">Database</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the database in which the user is created
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaultsfrom_csharp">
 <a href="#defaultsfrom_csharp" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Existing monitor to inherit from. Must be one of /Common/http, /Common/https, /Common/icmp or /Common/gateway-icmp.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destination_csharp">
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify an alias address for monitoring
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filename_csharp">
 <a href="#filename_csharp" style="color: inherit; text-decoration: inherit;">Filename</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the full path and file name of the file that the system attempts to download. The health check is successful if the system can download the file.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interval_csharp">
 <a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Check interval in seconds
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipdscp_csharp">
 <a href="#ipdscp_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Dscp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="manualresume_csharp">
 <a href="#manualresume_csharp" style="color: inherit; text-decoration: inherit;">Manual<wbr>Resume</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the data transfer process (DTP) mode. The default value is passive. The options are passive (Specifies that the monitor sends a data transfer request to the FTP server. When the FTP server receives the request, the FTP server then initiates and establishes the data connection.) and active (Specifies that the monitor initiates and establishes the data connection with the FTP server.).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the password if the monitored target requires authentication
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="receive_csharp">
 <a href="#receive_csharp" style="color: inherit; text-decoration: inherit;">Receive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expected response string
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="receivedisable_csharp">
 <a href="#receivedisable_csharp" style="color: inherit; text-decoration: inherit;">Receive<wbr>Disable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expected response string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="reverse_csharp">
 <a href="#reverse_csharp" style="color: inherit; text-decoration: inherit;">Reverse</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="send_csharp">
 <a href="#send_csharp" style="color: inherit; text-decoration: inherit;">Send</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Request string to send
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeuntilup_csharp">
 <a href="#timeuntilup_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Until<wbr>Up</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time in seconds
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout in seconds
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="transparent_csharp">
 <a href="#transparent_csharp" style="color: inherit; text-decoration: inherit;">Transparent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the user name if the monitored target requires authentication
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -629,243 +605,220 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the monitor
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="parent_go">
 <a href="#parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Existing LTM monitor to inherit from
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adaptive_go">
 <a href="#adaptive_go" style="color: inherit; text-decoration: inherit;">Adaptive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ftp adaptive
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adaptivelimit_go">
 <a href="#adaptivelimit_go" style="color: inherit; text-decoration: inherit;">Adaptive<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Integer value
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="compatibility_go">
 <a href="#compatibility_go" style="color: inherit; text-decoration: inherit;">Compatibility</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies, when enabled, that the SSL options setting (in OpenSSL) is set to ALL. Accepts 'enabled' or 'disabled' values, the default value is 'enabled'.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="database_go">
 <a href="#database_go" style="color: inherit; text-decoration: inherit;">Database</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the database in which the user is created
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaultsfrom_go">
 <a href="#defaultsfrom_go" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Existing monitor to inherit from. Must be one of /Common/http, /Common/https, /Common/icmp or /Common/gateway-icmp.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destination_go">
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify an alias address for monitoring
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filename_go">
 <a href="#filename_go" style="color: inherit; text-decoration: inherit;">Filename</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the full path and file name of the file that the system attempts to download. The health check is successful if the system can download the file.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interval_go">
 <a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Check interval in seconds
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipdscp_go">
 <a href="#ipdscp_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Dscp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="manualresume_go">
 <a href="#manualresume_go" style="color: inherit; text-decoration: inherit;">Manual<wbr>Resume</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the data transfer process (DTP) mode. The default value is passive. The options are passive (Specifies that the monitor sends a data transfer request to the FTP server. When the FTP server receives the request, the FTP server then initiates and establishes the data connection.) and active (Specifies that the monitor initiates and establishes the data connection with the FTP server.).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the password if the monitored target requires authentication
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="receive_go">
 <a href="#receive_go" style="color: inherit; text-decoration: inherit;">Receive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expected response string
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="receivedisable_go">
 <a href="#receivedisable_go" style="color: inherit; text-decoration: inherit;">Receive<wbr>Disable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expected response string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="reverse_go">
 <a href="#reverse_go" style="color: inherit; text-decoration: inherit;">Reverse</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="send_go">
 <a href="#send_go" style="color: inherit; text-decoration: inherit;">Send</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Request string to send
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeuntilup_go">
 <a href="#timeuntilup_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Until<wbr>Up</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time in seconds
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout in seconds
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="transparent_go">
 <a href="#transparent_go" style="color: inherit; text-decoration: inherit;">Transparent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the user name if the monitored target requires authentication
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -874,243 +827,220 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the monitor
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="parent_nodejs">
 <a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Existing LTM monitor to inherit from
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adaptive_nodejs">
 <a href="#adaptive_nodejs" style="color: inherit; text-decoration: inherit;">adaptive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ftp adaptive
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adaptivelimit_nodejs">
 <a href="#adaptivelimit_nodejs" style="color: inherit; text-decoration: inherit;">adaptive<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Integer value
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="compatibility_nodejs">
 <a href="#compatibility_nodejs" style="color: inherit; text-decoration: inherit;">compatibility</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies, when enabled, that the SSL options setting (in OpenSSL) is set to ALL. Accepts 'enabled' or 'disabled' values, the default value is 'enabled'.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="database_nodejs">
 <a href="#database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the database in which the user is created
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaultsfrom_nodejs">
 <a href="#defaultsfrom_nodejs" style="color: inherit; text-decoration: inherit;">defaults<wbr>From</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Existing monitor to inherit from. Must be one of /Common/http, /Common/https, /Common/icmp or /Common/gateway-icmp.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destination_nodejs">
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify an alias address for monitoring
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filename_nodejs">
 <a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">filename</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the full path and file name of the file that the system attempts to download. The health check is successful if the system can download the file.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interval_nodejs">
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Check interval in seconds
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipdscp_nodejs">
 <a href="#ipdscp_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Dscp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="manualresume_nodejs">
 <a href="#manualresume_nodejs" style="color: inherit; text-decoration: inherit;">manual<wbr>Resume</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the data transfer process (DTP) mode. The default value is passive. The options are passive (Specifies that the monitor sends a data transfer request to the FTP server. When the FTP server receives the request, the FTP server then initiates and establishes the data connection.) and active (Specifies that the monitor initiates and establishes the data connection with the FTP server.).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the password if the monitored target requires authentication
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="receive_nodejs">
 <a href="#receive_nodejs" style="color: inherit; text-decoration: inherit;">receive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expected response string
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="receivedisable_nodejs">
 <a href="#receivedisable_nodejs" style="color: inherit; text-decoration: inherit;">receive<wbr>Disable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expected response string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="reverse_nodejs">
 <a href="#reverse_nodejs" style="color: inherit; text-decoration: inherit;">reverse</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="send_nodejs">
 <a href="#send_nodejs" style="color: inherit; text-decoration: inherit;">send</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Request string to send
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeuntilup_nodejs">
 <a href="#timeuntilup_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Until<wbr>Up</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time in seconds
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout in seconds
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="transparent_nodejs">
 <a href="#transparent_nodejs" style="color: inherit; text-decoration: inherit;">transparent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the user name if the monitored target requires authentication
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1119,252 +1049,225 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the monitor
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="parent_python">
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Existing LTM monitor to inherit from
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adaptive_python">
 <a href="#adaptive_python" style="color: inherit; text-decoration: inherit;">adaptive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ftp adaptive
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adaptive_limit_python">
 <a href="#adaptive_limit_python" style="color: inherit; text-decoration: inherit;">adaptive_<wbr>limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Integer value
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="compatibility_python">
 <a href="#compatibility_python" style="color: inherit; text-decoration: inherit;">compatibility</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies, when enabled, that the SSL options setting (in OpenSSL) is set to ALL. Accepts 'enabled' or 'disabled' values, the default value is 'enabled'.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="database_python">
 <a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the database in which the user is created
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaults_from_python">
 <a href="#defaults_from_python" style="color: inherit; text-decoration: inherit;">defaults_<wbr>from</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Existing monitor to inherit from. Must be one of /Common/http, /Common/https, /Common/icmp or /Common/gateway-icmp.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destination_python">
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify an alias address for monitoring
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filename_python">
 <a href="#filename_python" style="color: inherit; text-decoration: inherit;">filename</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the full path and file name of the file that the system attempts to download. The health check is successful if the system can download the file.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interval_python">
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Check interval in seconds
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ip_dscp_python">
 <a href="#ip_dscp_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>dscp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="manual_resume_python">
 <a href="#manual_resume_python" style="color: inherit; text-decoration: inherit;">manual_<wbr>resume</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the data transfer process (DTP) mode. The default value is passive. The options are passive (Specifies that the monitor sends a data transfer request to the FTP server. When the FTP server receives the request, the FTP server then initiates and establishes the data connection.) and active (Specifies that the monitor initiates and establishes the data connection with the FTP server.).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the password if the monitored target requires authentication
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="receive_python">
 <a href="#receive_python" style="color: inherit; text-decoration: inherit;">receive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Expected response string
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="receive_disable_python">
 <a href="#receive_disable_python" style="color: inherit; text-decoration: inherit;">receive_<wbr>disable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Expected response string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="reverse_python">
 <a href="#reverse_python" style="color: inherit; text-decoration: inherit;">reverse</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="send_python">
 <a href="#send_python" style="color: inherit; text-decoration: inherit;">send</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Request string to send
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="time_until_up_python">
 <a href="#time_until_up_python" style="color: inherit; text-decoration: inherit;">time_<wbr>until_<wbr>up</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time in seconds
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout in seconds
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="transparent_python">
 <a href="#transparent_python" style="color: inherit; text-decoration: inherit;">transparent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the user name if the monitored target requires authentication
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Monitor resource produces the following output properties:
-
 
 
 
@@ -1375,15 +1278,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1392,15 +1293,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1409,15 +1308,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1426,18 +1323,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1447,7 +1339,7 @@ Get an existing Monitor resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#MonitorState">MonitorState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#Monitor">Monitor</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#MonitorState">MonitorState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#Monitor">Monitor</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1456,11 +1348,11 @@ Get an existing Monitor resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMonitor<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#MonitorState">MonitorState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#Monitor">Monitor</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMonitor<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#MonitorState">MonitorState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#Monitor">Monitor</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.Ltm.Monitor.html">Monitor</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.Ltm.MonitorState.html">MonitorState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.Ltm.Monitor.html">Monitor</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.Ltm.MonitorState.html">MonitorState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1562,7 +1454,6 @@ Get an existing Monitor resource's state with the given name, ID, and optional e
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1570,243 +1461,220 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_adaptive_csharp">
 <a href="#state_adaptive_csharp" style="color: inherit; text-decoration: inherit;">Adaptive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ftp adaptive
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_adaptivelimit_csharp">
 <a href="#state_adaptivelimit_csharp" style="color: inherit; text-decoration: inherit;">Adaptive<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Integer value
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_compatibility_csharp">
 <a href="#state_compatibility_csharp" style="color: inherit; text-decoration: inherit;">Compatibility</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies, when enabled, that the SSL options setting (in OpenSSL) is set to ALL. Accepts 'enabled' or 'disabled' values, the default value is 'enabled'.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_database_csharp">
 <a href="#state_database_csharp" style="color: inherit; text-decoration: inherit;">Database</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the database in which the user is created
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_defaultsfrom_csharp">
 <a href="#state_defaultsfrom_csharp" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Existing monitor to inherit from. Must be one of /Common/http, /Common/https, /Common/icmp or /Common/gateway-icmp.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_destination_csharp">
 <a href="#state_destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify an alias address for monitoring
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_filename_csharp">
 <a href="#state_filename_csharp" style="color: inherit; text-decoration: inherit;">Filename</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the full path and file name of the file that the system attempts to download. The health check is successful if the system can download the file.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_interval_csharp">
 <a href="#state_interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Check interval in seconds
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ipdscp_csharp">
 <a href="#state_ipdscp_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Dscp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_manualresume_csharp">
 <a href="#state_manualresume_csharp" style="color: inherit; text-decoration: inherit;">Manual<wbr>Resume</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mode_csharp">
 <a href="#state_mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the data transfer process (DTP) mode. The default value is passive. The options are passive (Specifies that the monitor sends a data transfer request to the FTP server. When the FTP server receives the request, the FTP server then initiates and establishes the data connection.) and active (Specifies that the monitor initiates and establishes the data connection with the FTP server.).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the monitor
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_csharp">
 <a href="#state_parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Existing LTM monitor to inherit from
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_password_csharp">
 <a href="#state_password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the password if the monitored target requires authentication
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_receive_csharp">
 <a href="#state_receive_csharp" style="color: inherit; text-decoration: inherit;">Receive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expected response string
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_receivedisable_csharp">
 <a href="#state_receivedisable_csharp" style="color: inherit; text-decoration: inherit;">Receive<wbr>Disable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expected response string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_reverse_csharp">
 <a href="#state_reverse_csharp" style="color: inherit; text-decoration: inherit;">Reverse</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_send_csharp">
 <a href="#state_send_csharp" style="color: inherit; text-decoration: inherit;">Send</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Request string to send
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_timeuntilup_csharp">
 <a href="#state_timeuntilup_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Until<wbr>Up</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time in seconds
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_timeout_csharp">
 <a href="#state_timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout in seconds
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_transparent_csharp">
 <a href="#state_transparent_csharp" style="color: inherit; text-decoration: inherit;">Transparent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_username_csharp">
 <a href="#state_username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the user name if the monitored target requires authentication
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1815,243 +1683,220 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_adaptive_go">
 <a href="#state_adaptive_go" style="color: inherit; text-decoration: inherit;">Adaptive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ftp adaptive
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_adaptivelimit_go">
 <a href="#state_adaptivelimit_go" style="color: inherit; text-decoration: inherit;">Adaptive<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Integer value
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_compatibility_go">
 <a href="#state_compatibility_go" style="color: inherit; text-decoration: inherit;">Compatibility</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies, when enabled, that the SSL options setting (in OpenSSL) is set to ALL. Accepts 'enabled' or 'disabled' values, the default value is 'enabled'.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_database_go">
 <a href="#state_database_go" style="color: inherit; text-decoration: inherit;">Database</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the database in which the user is created
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_defaultsfrom_go">
 <a href="#state_defaultsfrom_go" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Existing monitor to inherit from. Must be one of /Common/http, /Common/https, /Common/icmp or /Common/gateway-icmp.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_destination_go">
 <a href="#state_destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify an alias address for monitoring
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_filename_go">
 <a href="#state_filename_go" style="color: inherit; text-decoration: inherit;">Filename</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the full path and file name of the file that the system attempts to download. The health check is successful if the system can download the file.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_interval_go">
 <a href="#state_interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Check interval in seconds
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ipdscp_go">
 <a href="#state_ipdscp_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Dscp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_manualresume_go">
 <a href="#state_manualresume_go" style="color: inherit; text-decoration: inherit;">Manual<wbr>Resume</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mode_go">
 <a href="#state_mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the data transfer process (DTP) mode. The default value is passive. The options are passive (Specifies that the monitor sends a data transfer request to the FTP server. When the FTP server receives the request, the FTP server then initiates and establishes the data connection.) and active (Specifies that the monitor initiates and establishes the data connection with the FTP server.).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the monitor
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_go">
 <a href="#state_parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Existing LTM monitor to inherit from
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_password_go">
 <a href="#state_password_go" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the password if the monitored target requires authentication
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_receive_go">
 <a href="#state_receive_go" style="color: inherit; text-decoration: inherit;">Receive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expected response string
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_receivedisable_go">
 <a href="#state_receivedisable_go" style="color: inherit; text-decoration: inherit;">Receive<wbr>Disable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expected response string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_reverse_go">
 <a href="#state_reverse_go" style="color: inherit; text-decoration: inherit;">Reverse</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_send_go">
 <a href="#state_send_go" style="color: inherit; text-decoration: inherit;">Send</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Request string to send
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_timeuntilup_go">
 <a href="#state_timeuntilup_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Until<wbr>Up</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time in seconds
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_timeout_go">
 <a href="#state_timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout in seconds
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_transparent_go">
 <a href="#state_transparent_go" style="color: inherit; text-decoration: inherit;">Transparent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_username_go">
 <a href="#state_username_go" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the user name if the monitored target requires authentication
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2060,243 +1905,220 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_adaptive_nodejs">
 <a href="#state_adaptive_nodejs" style="color: inherit; text-decoration: inherit;">adaptive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ftp adaptive
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_adaptivelimit_nodejs">
 <a href="#state_adaptivelimit_nodejs" style="color: inherit; text-decoration: inherit;">adaptive<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Integer value
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_compatibility_nodejs">
 <a href="#state_compatibility_nodejs" style="color: inherit; text-decoration: inherit;">compatibility</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies, when enabled, that the SSL options setting (in OpenSSL) is set to ALL. Accepts 'enabled' or 'disabled' values, the default value is 'enabled'.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_database_nodejs">
 <a href="#state_database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the database in which the user is created
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_defaultsfrom_nodejs">
 <a href="#state_defaultsfrom_nodejs" style="color: inherit; text-decoration: inherit;">defaults<wbr>From</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Existing monitor to inherit from. Must be one of /Common/http, /Common/https, /Common/icmp or /Common/gateway-icmp.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_destination_nodejs">
 <a href="#state_destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify an alias address for monitoring
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_filename_nodejs">
 <a href="#state_filename_nodejs" style="color: inherit; text-decoration: inherit;">filename</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the full path and file name of the file that the system attempts to download. The health check is successful if the system can download the file.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_interval_nodejs">
 <a href="#state_interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Check interval in seconds
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ipdscp_nodejs">
 <a href="#state_ipdscp_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Dscp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_manualresume_nodejs">
 <a href="#state_manualresume_nodejs" style="color: inherit; text-decoration: inherit;">manual<wbr>Resume</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mode_nodejs">
 <a href="#state_mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the data transfer process (DTP) mode. The default value is passive. The options are passive (Specifies that the monitor sends a data transfer request to the FTP server. When the FTP server receives the request, the FTP server then initiates and establishes the data connection.) and active (Specifies that the monitor initiates and establishes the data connection with the FTP server.).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the monitor
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_nodejs">
 <a href="#state_parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Existing LTM monitor to inherit from
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_password_nodejs">
 <a href="#state_password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the password if the monitored target requires authentication
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_receive_nodejs">
 <a href="#state_receive_nodejs" style="color: inherit; text-decoration: inherit;">receive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expected response string
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_receivedisable_nodejs">
 <a href="#state_receivedisable_nodejs" style="color: inherit; text-decoration: inherit;">receive<wbr>Disable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expected response string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_reverse_nodejs">
 <a href="#state_reverse_nodejs" style="color: inherit; text-decoration: inherit;">reverse</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_send_nodejs">
 <a href="#state_send_nodejs" style="color: inherit; text-decoration: inherit;">send</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Request string to send
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_timeuntilup_nodejs">
 <a href="#state_timeuntilup_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Until<wbr>Up</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time in seconds
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_timeout_nodejs">
 <a href="#state_timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout in seconds
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_transparent_nodejs">
 <a href="#state_transparent_nodejs" style="color: inherit; text-decoration: inherit;">transparent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_username_nodejs">
 <a href="#state_username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the user name if the monitored target requires authentication
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2305,248 +2127,220 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_adaptive_python">
 <a href="#state_adaptive_python" style="color: inherit; text-decoration: inherit;">adaptive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ftp adaptive
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_adaptive_limit_python">
 <a href="#state_adaptive_limit_python" style="color: inherit; text-decoration: inherit;">adaptive_<wbr>limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Integer value
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_compatibility_python">
 <a href="#state_compatibility_python" style="color: inherit; text-decoration: inherit;">compatibility</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies, when enabled, that the SSL options setting (in OpenSSL) is set to ALL. Accepts 'enabled' or 'disabled' values, the default value is 'enabled'.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_database_python">
 <a href="#state_database_python" style="color: inherit; text-decoration: inherit;">database</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the database in which the user is created
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_defaults_from_python">
 <a href="#state_defaults_from_python" style="color: inherit; text-decoration: inherit;">defaults_<wbr>from</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Existing monitor to inherit from. Must be one of /Common/http, /Common/https, /Common/icmp or /Common/gateway-icmp.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_destination_python">
 <a href="#state_destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify an alias address for monitoring
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_filename_python">
 <a href="#state_filename_python" style="color: inherit; text-decoration: inherit;">filename</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the full path and file name of the file that the system attempts to download. The health check is successful if the system can download the file.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_interval_python">
 <a href="#state_interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Check interval in seconds
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ip_dscp_python">
 <a href="#state_ip_dscp_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>dscp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_manual_resume_python">
 <a href="#state_manual_resume_python" style="color: inherit; text-decoration: inherit;">manual_<wbr>resume</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mode_python">
 <a href="#state_mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the data transfer process (DTP) mode. The default value is passive. The options are passive (Specifies that the monitor sends a data transfer request to the FTP server. When the FTP server receives the request, the FTP server then initiates and establishes the data connection.) and active (Specifies that the monitor initiates and establishes the data connection with the FTP server.).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the monitor
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_python">
 <a href="#state_parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Existing LTM monitor to inherit from
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_password_python">
 <a href="#state_password_python" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the password if the monitored target requires authentication
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_receive_python">
 <a href="#state_receive_python" style="color: inherit; text-decoration: inherit;">receive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Expected response string
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_receive_disable_python">
 <a href="#state_receive_disable_python" style="color: inherit; text-decoration: inherit;">receive_<wbr>disable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Expected response string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_reverse_python">
 <a href="#state_reverse_python" style="color: inherit; text-decoration: inherit;">reverse</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_send_python">
 <a href="#state_send_python" style="color: inherit; text-decoration: inherit;">send</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Request string to send
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_time_until_up_python">
 <a href="#state_time_until_up_python" style="color: inherit; text-decoration: inherit;">time_<wbr>until_<wbr>up</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time in seconds
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_timeout_python">
 <a href="#state_timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout in seconds
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_transparent_python">
 <a href="#state_transparent_python" style="color: inherit; text-decoration: inherit;">transparent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_username_python">
 <a href="#state_username_python" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the user name if the monitored target requires authentication
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
 
 
 

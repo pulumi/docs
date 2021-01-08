@@ -1,8 +1,8 @@
 
 ---
 title: "Snat"
-title_tag: "Resource Snat | Module ltm | Package f5 BIG-IP"
-meta_desc: "Explore the Snat resource of the ltm module, including examples, input properties, output properties, lookup functions, and supporting types. `f5bigip.ltm.Snat` Manages a snat configuration"
+title_tag: "f5bigip.ltm.Snat"
+meta_desc: "Documentation for the f5bigip.ltm.Snat resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -155,7 +155,7 @@ const test_snat = new f5bigip.ltm.Snat("test-snat", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#Snat">Snat</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#SnatArgs">SnatArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#Snat">Snat</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#SnatArgs">SnatArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -163,11 +163,11 @@ const test_snat = new f5bigip.ltm.Snat("test-snat", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#Snat">NewSnat</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#SnatArgs">SnatArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#Snat">Snat</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#Snat">NewSnat</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#SnatArgs">SnatArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#Snat">Snat</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.Ltm.Snat.html">Snat</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.Ltm.SnatArgs.html">SnatArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.Ltm.Snat.html">Snat</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.Ltm.SnatArgs.html">SnatArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -178,7 +178,7 @@ const test_snat = new f5bigip.ltm.Snat("test-snat", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -247,7 +247,7 @@ const test_snat = new f5bigip.ltm.Snat("test-snat", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -286,7 +286,7 @@ const test_snat = new f5bigip.ltm.Snat("test-snat", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -327,7 +327,6 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -335,126 +334,114 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the snat
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="origins_csharp">
 <a href="#origins_csharp" style="color: inherit; text-decoration: inherit;">Origins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snatorigin">List&lt;Pulumi.<wbr>F5Big<wbr>IP.<wbr>Ltm.<wbr>Inputs.<wbr>Snat<wbr>Origin<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}IP or hostname of the snat
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autolasthop_csharp">
 <a href="#autolasthop_csharp" style="color: inherit; text-decoration: inherit;">Autolasthop</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fullpath_csharp">
 <a href="#fullpath_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fullpath
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mirror_csharp">
 <a href="#mirror_csharp" style="color: inherit; text-decoration: inherit;">Mirror</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables mirroring of SNAT connections.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="partition_csharp">
 <a href="#partition_csharp" style="color: inherit; text-decoration: inherit;">Partition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Displays the administrative partition within which this profile resides
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snatpool_csharp">
 <a href="#snatpool_csharp" style="color: inherit; text-decoration: inherit;">Snatpool</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a SNAT pool. You can only use this option when automap and translation are not used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceport_csharp">
 <a href="#sourceport_csharp" style="color: inherit; text-decoration: inherit;">Sourceport</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the system preserves the source port of the connection. The default is preserve. Use of the preserve-strict setting should be restricted to UDP only under very special circumstances such as nPath or transparent (that is, no translation of any other L3/L4 field), where there is a 1:1 relationship between virtual IP addresses and node addresses, or when clustered multi-processing (CMP) is disabled. The change setting is useful for obfuscating internal network addresses.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="translation_csharp">
 <a href="#translation_csharp" style="color: inherit; text-decoration: inherit;">Translation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a translated IP address. Note that translated addresses are outside the traffic management system. You can only use this option when automap and snatpool are not used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vlans_csharp">
 <a href="#vlans_csharp" style="color: inherit; text-decoration: inherit;">Vlans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the VLAN to which you want to assign the SNAT. The default is vlans-enabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vlansdisabled_csharp">
 <a href="#vlansdisabled_csharp" style="color: inherit; text-decoration: inherit;">Vlansdisabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disables the SNAT on all VLANs.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -463,126 +450,114 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the snat
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="origins_go">
 <a href="#origins_go" style="color: inherit; text-decoration: inherit;">Origins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snatorigin">[]Snat<wbr>Origin</a></span>
     </dt>
     <dd>{{% md %}}IP or hostname of the snat
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autolasthop_go">
 <a href="#autolasthop_go" style="color: inherit; text-decoration: inherit;">Autolasthop</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fullpath_go">
 <a href="#fullpath_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fullpath
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mirror_go">
 <a href="#mirror_go" style="color: inherit; text-decoration: inherit;">Mirror</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables mirroring of SNAT connections.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="partition_go">
 <a href="#partition_go" style="color: inherit; text-decoration: inherit;">Partition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Displays the administrative partition within which this profile resides
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snatpool_go">
 <a href="#snatpool_go" style="color: inherit; text-decoration: inherit;">Snatpool</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a SNAT pool. You can only use this option when automap and translation are not used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceport_go">
 <a href="#sourceport_go" style="color: inherit; text-decoration: inherit;">Sourceport</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the system preserves the source port of the connection. The default is preserve. Use of the preserve-strict setting should be restricted to UDP only under very special circumstances such as nPath or transparent (that is, no translation of any other L3/L4 field), where there is a 1:1 relationship between virtual IP addresses and node addresses, or when clustered multi-processing (CMP) is disabled. The change setting is useful for obfuscating internal network addresses.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="translation_go">
 <a href="#translation_go" style="color: inherit; text-decoration: inherit;">Translation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a translated IP address. Note that translated addresses are outside the traffic management system. You can only use this option when automap and snatpool are not used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vlans_go">
 <a href="#vlans_go" style="color: inherit; text-decoration: inherit;">Vlans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the VLAN to which you want to assign the SNAT. The default is vlans-enabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vlansdisabled_go">
 <a href="#vlansdisabled_go" style="color: inherit; text-decoration: inherit;">Vlansdisabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disables the SNAT on all VLANs.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -591,126 +566,114 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the snat
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="origins_nodejs">
 <a href="#origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snatorigin">Snat<wbr>Origin[]</a></span>
     </dt>
     <dd>{{% md %}}IP or hostname of the snat
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autolasthop_nodejs">
 <a href="#autolasthop_nodejs" style="color: inherit; text-decoration: inherit;">autolasthop</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fullpath_nodejs">
 <a href="#fullpath_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fullpath
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mirror_nodejs">
 <a href="#mirror_nodejs" style="color: inherit; text-decoration: inherit;">mirror</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables mirroring of SNAT connections.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="partition_nodejs">
 <a href="#partition_nodejs" style="color: inherit; text-decoration: inherit;">partition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Displays the administrative partition within which this profile resides
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snatpool_nodejs">
 <a href="#snatpool_nodejs" style="color: inherit; text-decoration: inherit;">snatpool</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a SNAT pool. You can only use this option when automap and translation are not used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceport_nodejs">
 <a href="#sourceport_nodejs" style="color: inherit; text-decoration: inherit;">sourceport</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the system preserves the source port of the connection. The default is preserve. Use of the preserve-strict setting should be restricted to UDP only under very special circumstances such as nPath or transparent (that is, no translation of any other L3/L4 field), where there is a 1:1 relationship between virtual IP addresses and node addresses, or when clustered multi-processing (CMP) is disabled. The change setting is useful for obfuscating internal network addresses.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="translation_nodejs">
 <a href="#translation_nodejs" style="color: inherit; text-decoration: inherit;">translation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a translated IP address. Note that translated addresses are outside the traffic management system. You can only use this option when automap and snatpool are not used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vlans_nodejs">
 <a href="#vlans_nodejs" style="color: inherit; text-decoration: inherit;">vlans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the VLAN to which you want to assign the SNAT. The default is vlans-enabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vlansdisabled_nodejs">
 <a href="#vlansdisabled_nodejs" style="color: inherit; text-decoration: inherit;">vlansdisabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Disables the SNAT on all VLANs.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -719,135 +682,119 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the snat
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="origins_python">
 <a href="#origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snatorigin">Sequence[Snat<wbr>Origin<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}IP or hostname of the snat
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autolasthop_python">
 <a href="#autolasthop_python" style="color: inherit; text-decoration: inherit;">autolasthop</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="full_path_python">
 <a href="#full_path_python" style="color: inherit; text-decoration: inherit;">full_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fullpath
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mirror_python">
 <a href="#mirror_python" style="color: inherit; text-decoration: inherit;">mirror</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enables or disables mirroring of SNAT connections.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="partition_python">
 <a href="#partition_python" style="color: inherit; text-decoration: inherit;">partition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Displays the administrative partition within which this profile resides
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snatpool_python">
 <a href="#snatpool_python" style="color: inherit; text-decoration: inherit;">snatpool</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a SNAT pool. You can only use this option when automap and translation are not used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceport_python">
 <a href="#sourceport_python" style="color: inherit; text-decoration: inherit;">sourceport</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the system preserves the source port of the connection. The default is preserve. Use of the preserve-strict setting should be restricted to UDP only under very special circumstances such as nPath or transparent (that is, no translation of any other L3/L4 field), where there is a 1:1 relationship between virtual IP addresses and node addresses, or when clustered multi-processing (CMP) is disabled. The change setting is useful for obfuscating internal network addresses.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="translation_python">
 <a href="#translation_python" style="color: inherit; text-decoration: inherit;">translation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a translated IP address. Note that translated addresses are outside the traffic management system. You can only use this option when automap and snatpool are not used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vlans_python">
 <a href="#vlans_python" style="color: inherit; text-decoration: inherit;">vlans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the VLAN to which you want to assign the SNAT. The default is vlans-enabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vlansdisabled_python">
 <a href="#vlansdisabled_python" style="color: inherit; text-decoration: inherit;">vlansdisabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disables the SNAT on all VLANs.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Snat resource produces the following output properties:
-
 
 
 
@@ -858,15 +805,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -875,15 +820,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -892,15 +835,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -909,18 +850,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -930,7 +866,7 @@ Get an existing Snat resource's state with the given name, ID, and optional extr
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#SnatState">SnatState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#Snat">Snat</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#SnatState">SnatState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ltm/#Snat">Snat</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -939,11 +875,11 @@ Get an existing Snat resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSnat<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#SnatState">SnatState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#Snat">Snat</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSnat<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#SnatState">SnatState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#Snat">Snat</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.Ltm.Snat.html">Snat</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.Ltm.SnatState.html">SnatState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.Ltm.Snat.html">Snat</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.Ltm.SnatState.html">SnatState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1045,7 +981,6 @@ Get an existing Snat resource's state with the given name, ID, and optional extr
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1053,126 +988,114 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_autolasthop_csharp">
 <a href="#state_autolasthop_csharp" style="color: inherit; text-decoration: inherit;">Autolasthop</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fullpath_csharp">
 <a href="#state_fullpath_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fullpath
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mirror_csharp">
 <a href="#state_mirror_csharp" style="color: inherit; text-decoration: inherit;">Mirror</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables mirroring of SNAT connections.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the snat
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_origins_csharp">
 <a href="#state_origins_csharp" style="color: inherit; text-decoration: inherit;">Origins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snatorigin">List&lt;Pulumi.<wbr>F5Big<wbr>IP.<wbr>Ltm.<wbr>Inputs.<wbr>Snat<wbr>Origin<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}IP or hostname of the snat
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_partition_csharp">
 <a href="#state_partition_csharp" style="color: inherit; text-decoration: inherit;">Partition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Displays the administrative partition within which this profile resides
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_snatpool_csharp">
 <a href="#state_snatpool_csharp" style="color: inherit; text-decoration: inherit;">Snatpool</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a SNAT pool. You can only use this option when automap and translation are not used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sourceport_csharp">
 <a href="#state_sourceport_csharp" style="color: inherit; text-decoration: inherit;">Sourceport</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the system preserves the source port of the connection. The default is preserve. Use of the preserve-strict setting should be restricted to UDP only under very special circumstances such as nPath or transparent (that is, no translation of any other L3/L4 field), where there is a 1:1 relationship between virtual IP addresses and node addresses, or when clustered multi-processing (CMP) is disabled. The change setting is useful for obfuscating internal network addresses.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_translation_csharp">
 <a href="#state_translation_csharp" style="color: inherit; text-decoration: inherit;">Translation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a translated IP address. Note that translated addresses are outside the traffic management system. You can only use this option when automap and snatpool are not used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vlans_csharp">
 <a href="#state_vlans_csharp" style="color: inherit; text-decoration: inherit;">Vlans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the VLAN to which you want to assign the SNAT. The default is vlans-enabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vlansdisabled_csharp">
 <a href="#state_vlansdisabled_csharp" style="color: inherit; text-decoration: inherit;">Vlansdisabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disables the SNAT on all VLANs.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1181,126 +1104,114 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_autolasthop_go">
 <a href="#state_autolasthop_go" style="color: inherit; text-decoration: inherit;">Autolasthop</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fullpath_go">
 <a href="#state_fullpath_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fullpath
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mirror_go">
 <a href="#state_mirror_go" style="color: inherit; text-decoration: inherit;">Mirror</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables mirroring of SNAT connections.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the snat
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_origins_go">
 <a href="#state_origins_go" style="color: inherit; text-decoration: inherit;">Origins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snatorigin">[]Snat<wbr>Origin</a></span>
     </dt>
     <dd>{{% md %}}IP or hostname of the snat
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_partition_go">
 <a href="#state_partition_go" style="color: inherit; text-decoration: inherit;">Partition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Displays the administrative partition within which this profile resides
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_snatpool_go">
 <a href="#state_snatpool_go" style="color: inherit; text-decoration: inherit;">Snatpool</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a SNAT pool. You can only use this option when automap and translation are not used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sourceport_go">
 <a href="#state_sourceport_go" style="color: inherit; text-decoration: inherit;">Sourceport</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the system preserves the source port of the connection. The default is preserve. Use of the preserve-strict setting should be restricted to UDP only under very special circumstances such as nPath or transparent (that is, no translation of any other L3/L4 field), where there is a 1:1 relationship between virtual IP addresses and node addresses, or when clustered multi-processing (CMP) is disabled. The change setting is useful for obfuscating internal network addresses.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_translation_go">
 <a href="#state_translation_go" style="color: inherit; text-decoration: inherit;">Translation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a translated IP address. Note that translated addresses are outside the traffic management system. You can only use this option when automap and snatpool are not used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vlans_go">
 <a href="#state_vlans_go" style="color: inherit; text-decoration: inherit;">Vlans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the VLAN to which you want to assign the SNAT. The default is vlans-enabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vlansdisabled_go">
 <a href="#state_vlansdisabled_go" style="color: inherit; text-decoration: inherit;">Vlansdisabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disables the SNAT on all VLANs.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1309,126 +1220,114 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_autolasthop_nodejs">
 <a href="#state_autolasthop_nodejs" style="color: inherit; text-decoration: inherit;">autolasthop</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fullpath_nodejs">
 <a href="#state_fullpath_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fullpath
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mirror_nodejs">
 <a href="#state_mirror_nodejs" style="color: inherit; text-decoration: inherit;">mirror</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables mirroring of SNAT connections.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the snat
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_origins_nodejs">
 <a href="#state_origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snatorigin">Snat<wbr>Origin[]</a></span>
     </dt>
     <dd>{{% md %}}IP or hostname of the snat
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_partition_nodejs">
 <a href="#state_partition_nodejs" style="color: inherit; text-decoration: inherit;">partition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Displays the administrative partition within which this profile resides
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_snatpool_nodejs">
 <a href="#state_snatpool_nodejs" style="color: inherit; text-decoration: inherit;">snatpool</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a SNAT pool. You can only use this option when automap and translation are not used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sourceport_nodejs">
 <a href="#state_sourceport_nodejs" style="color: inherit; text-decoration: inherit;">sourceport</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the system preserves the source port of the connection. The default is preserve. Use of the preserve-strict setting should be restricted to UDP only under very special circumstances such as nPath or transparent (that is, no translation of any other L3/L4 field), where there is a 1:1 relationship between virtual IP addresses and node addresses, or when clustered multi-processing (CMP) is disabled. The change setting is useful for obfuscating internal network addresses.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_translation_nodejs">
 <a href="#state_translation_nodejs" style="color: inherit; text-decoration: inherit;">translation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a translated IP address. Note that translated addresses are outside the traffic management system. You can only use this option when automap and snatpool are not used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vlans_nodejs">
 <a href="#state_vlans_nodejs" style="color: inherit; text-decoration: inherit;">vlans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the VLAN to which you want to assign the SNAT. The default is vlans-enabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vlansdisabled_nodejs">
 <a href="#state_vlansdisabled_nodejs" style="color: inherit; text-decoration: inherit;">vlansdisabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Disables the SNAT on all VLANs.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1437,123 +1336,112 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_autolasthop_python">
 <a href="#state_autolasthop_python" style="color: inherit; text-decoration: inherit;">autolasthop</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_full_path_python">
 <a href="#state_full_path_python" style="color: inherit; text-decoration: inherit;">full_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fullpath
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mirror_python">
 <a href="#state_mirror_python" style="color: inherit; text-decoration: inherit;">mirror</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enables or disables mirroring of SNAT connections.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the snat
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_origins_python">
 <a href="#state_origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snatorigin">Sequence[Snat<wbr>Origin<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}IP or hostname of the snat
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_partition_python">
 <a href="#state_partition_python" style="color: inherit; text-decoration: inherit;">partition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Displays the administrative partition within which this profile resides
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_snatpool_python">
 <a href="#state_snatpool_python" style="color: inherit; text-decoration: inherit;">snatpool</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a SNAT pool. You can only use this option when automap and translation are not used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sourceport_python">
 <a href="#state_sourceport_python" style="color: inherit; text-decoration: inherit;">sourceport</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the system preserves the source port of the connection. The default is preserve. Use of the preserve-strict setting should be restricted to UDP only under very special circumstances such as nPath or transparent (that is, no translation of any other L3/L4 field), where there is a 1:1 relationship between virtual IP addresses and node addresses, or when clustered multi-processing (CMP) is disabled. The change setting is useful for obfuscating internal network addresses.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_translation_python">
 <a href="#state_translation_python" style="color: inherit; text-decoration: inherit;">translation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a translated IP address. Note that translated addresses are outside the traffic management system. You can only use this option when automap and snatpool are not used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vlans_python">
 <a href="#state_vlans_python" style="color: inherit; text-decoration: inherit;">vlans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the VLAN to which you want to assign the SNAT. The default is vlans-enabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vlansdisabled_python">
 <a href="#state_vlansdisabled_python" style="color: inherit; text-decoration: inherit;">vlansdisabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disables the SNAT on all VLANs.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1562,11 +1450,8 @@ The following state arguments are supported:
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="snatorigin">Snat<wbr>Origin</h4>
@@ -1577,11 +1462,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#SnatOriginArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#SnatOriginOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.Ltm.Inputs.SnatOriginArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.Ltm.Outputs.SnatOrigin.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1591,26 +1475,23 @@ The following state arguments are supported:
             title="Optional">
         <span id="appservice_csharp">
 <a href="#appservice_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the snat
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1619,26 +1500,23 @@ The following state arguments are supported:
             title="Optional">
         <span id="appservice_go">
 <a href="#appservice_go" style="color: inherit; text-decoration: inherit;">App<wbr>Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the snat
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1647,26 +1525,23 @@ The following state arguments are supported:
             title="Optional">
         <span id="appservice_nodejs">
 <a href="#appservice_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the snat
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1675,34 +1550,23 @@ The following state arguments are supported:
             title="Optional">
         <span id="app_service_python">
 <a href="#app_service_python" style="color: inherit; text-decoration: inherit;">app_<wbr>service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the snat
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>
