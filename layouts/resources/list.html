@@ -33,9 +33,10 @@
 
             <!-- If the webinar has multiple sessions we will choose the earliest session -->
             {{ if isset .Params "multiple" }}
-                {{ $sortedSessions := sort .Params.multiple "datetime" "asc" }}
-                {{ $earliestSession := index ($sortedSessions) 0 }}
-                {{ $resourcesWithDate = $resourcesWithDate | append (dict "date" $earliestSession.datetime "data" .) }}
+                {{ $multipleEventData := . }}
+                {{ range .Params.multiple }}
+                    {{ $resourcesWithDate = $resourcesWithDate | append (dict "date" .datetime "data" $multipleEventData) }}
+                {{ end }}
             {{ else }}
                 {{ $resourcesWithDate = $resourcesWithDate | append (dict "date" .Params.main.sortable_date "data" .) }}
             {{ end }}
@@ -107,7 +108,7 @@
             <ul class="flex flex-wrap justify-center list-none p-0 sm:p-2 resource-list">
 
                 <!-- Loop over the resource items and create the tiles. -->
-                {{ range sort $resourcesWithDate "date" "desc" }}
+                {{ range sort $resourcesWithDate "date" "asc" }}
                     {{ $data := .data }}
 
                     <!-- Create the values for rendering. -->
@@ -121,7 +122,7 @@
                     <!-- Set the values based on the type of the page. -->
                     {{ if eq $data.Type "webinars" }}
                         {{ $description = $data.Params.meta_desc }}
-                        {{ $displayDate = dateFormat "January 2, 2006" $data.Params.main.sortable_date }}
+                        {{ $displayDate = dateFormat "January 2, 2006" .date }}
 
                         <!-- Set the url to link to. -->
                         {{ if $data.Params.external }}
@@ -129,6 +130,10 @@
                             {{ $external = true }}
                         {{ else }}
                             {{ $link = printf "/resources/%s" $data.Params.url_slug }}
+                        {{ end }}
+
+                        {{ if isset $data.Params "multiple" }}
+                            {{ $link = printf "%s?date=%s" $link  (dateFormat "2006/01/02" .date)}}
                         {{ end }}
 
                         <!-- If the webinar is featured add the feature filter. -->
@@ -162,18 +167,8 @@
                         {{ end }}
                     {{ end }}
 
-                    {{ if isset $data.Params "multiple" }}
-                        {{ range $data.Params.multiple }}
-                            {{ $multipleDisplayDate := dateFormat "January 2, 2006" .datetime }}
-                            {{ $multipleLink := printf "%s?date=%s" $link  (dateFormat "2006/01/02" .datetime)}}
-
-                            {{ $tileOptions := (dict "multiple" true "pageContext" $pageContext "external" $external "filters" $filters "link" $multipleLink "icon" $icon "description" $description "displayDate" $multipleDisplayDate "data" $data)}}
-                            {{ partial "content-tile.html" $tileOptions }}
-                        {{ end }}
-                    {{ else }}
-                        {{ $tileOptions := (dict "pageContext" $pageContext "external" $external "filters" $filters "link" $link "icon" $icon "description" $description "displayDate" $displayDate "data" $data)}}
-                        {{ partial "content-tile.html" $tileOptions }}
-                    {{ end }}
+                    {{ $tileOptions := (dict "multiple" $data.Params.multiple "pageContext" $pageContext "external" $external "filters" $filters "link" $link "icon" $icon "description" $description "displayDate" $displayDate "data" $data)}}
+                    {{ partial "content-tile.html" $tileOptions }}
                 {{ end }}
             </ul>
         </div>
