@@ -7,6 +7,10 @@
         {{ $href = (relref .pageContext .link) }}
         {{ $relref = "" }}
         {{ $target = "" }}
+
+        {{ if eq .multiple true }}
+            {{ $href = .link}}
+        {{ end }}
     {{ end }}
 
     <article class="rounded shadow-md bg-white border border-gray-200 mb-10 flex flex-col mx-2 md:mx-0">
