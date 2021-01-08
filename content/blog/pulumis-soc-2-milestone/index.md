@@ -1,7 +1,6 @@
 ---
 title: "Pulumi is SOC 2 Certified"
 date: 2021-01-07
-draft: true
 meta_desc: "Pulumi achieved SOC 2 certification for reporting on the design of controls, testing, and operating effectiveness of processes for a service organization."
 meta_image: soc2.png
 authors:
