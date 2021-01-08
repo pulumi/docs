@@ -3,7 +3,7 @@ title: "Module resourcemanager"
 title_tag: "Module resourcemanager | Package @pulumi/gcp | Node.js SDK"
 linktitle: "resourcemanager"
 meta_desc: "Explore members of the resourcemanager module in the @pulumi/gcp package."
-git_sha: "190d8b0982043d566daf0a0e22d4f73afa046cc7"
+git_sha: "d2a042ddab1ab562409b1b0e98628f0272e98ead"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Lien" data-link-title="Lien">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/resourcemanager/lien.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/resourcemanager/lien.ts#L36">
         Resource <strong>Lien</strong>
     </a>
 </h3>
@@ -40,9 +40,33 @@ block_external_search_index: true
 A Lien represents an encumbrance on the actions that can be performed on a resource.
 
 #### Example Usage
+##### Resource Manager Lien
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const project = new gcp.organizations.Project("project", {
+    projectId: "staging-project",
+});
+const lien = new gcp.resourcemanager.Lien("lien", {
+    origin: "machine-readable-explanation",
+    parent: pulumi.interpolate`projects/${project.number}`,
+    reason: "This project is an important environment",
+    restrictions: ["resourcemanager.projects.delete"],
+});
+```
+
+#### Import
+
+Lien can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:resourcemanager/lien:Lien default {{parent}}/{{name}}
+```
 
 <h4 class="pdoc-member-header" id="Lien-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/resourcemanager/lien.ts#L73"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/resourcemanager/lien.ts#L97"> <b>constructor</b></a>
 </h4>
 
 
@@ -56,7 +80,7 @@ Create a Lien resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Lien-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/resourcemanager/lien.ts#L22">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/resourcemanager/lien.ts#L46">method <b>get</b></a>
 </h4>
 
 
@@ -67,14 +91,14 @@ Get an existing Lien resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Lien-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/resourcemanager/lien.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/resourcemanager/lien.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Lien-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/resourcemanager/lien.ts#L33">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/resourcemanager/lien.ts#L57">method <b>isInstance</b></a>
 </h4>
 
 
@@ -85,7 +109,7 @@ Returns true if the given object is an instance of Lien.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Lien-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/resourcemanager/lien.ts#L43">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/resourcemanager/lien.ts#L67">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -93,7 +117,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Time of creation
 
 <h4 class="pdoc-member-header" id="Lien-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/resourcemanager/lien.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/resourcemanager/lien.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -102,7 +126,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Lien-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/resourcemanager/lien.ts#L47">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/resourcemanager/lien.ts#L71">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -110,7 +134,7 @@ deployments and may be missing (undefined) during planning phases.
 A system-generated unique identifier for this Lien.
 
 <h4 class="pdoc-member-header" id="Lien-origin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/resourcemanager/lien.ts#L53">property <b>origin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/resourcemanager/lien.ts#L77">property <b>origin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>origin: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -120,7 +144,7 @@ of the Lien, intended to be inspected programmatically. Maximum length of
 200 characters.
 
 <h4 class="pdoc-member-header" id="Lien-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/resourcemanager/lien.ts#L60">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/resourcemanager/lien.ts#L84">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -131,7 +155,7 @@ Since a variety of objects can have Liens against them, you must provide the typ
 prefix (e.g. "projects/my-project-name").
 
 <h4 class="pdoc-member-header" id="Lien-reason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/resourcemanager/lien.ts#L65">property <b>reason</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/resourcemanager/lien.ts#L89">property <b>reason</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>reason: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -140,7 +164,7 @@ Concise user-visible strings indicating why an action cannot be performed
 on a resource. Maximum length of 200 characters.
 
 <h4 class="pdoc-member-header" id="Lien-restrictions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/resourcemanager/lien.ts#L73">property <b>restrictions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/resourcemanager/lien.ts#L97">property <b>restrictions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>restrictions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -152,7 +176,7 @@ list is meaningless and will be rejected.
 e.g. ['resourcemanager.projects.delete']
 
 <h4 class="pdoc-member-header" id="Lien-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/resourcemanager/lien.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/resourcemanager/lien.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -164,7 +188,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="LienArgs" data-link-title="LienArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/resourcemanager/lien.ts#L168">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/resourcemanager/lien.ts#L192">
         interface <strong>LienArgs</strong>
     </a>
 </h3>
@@ -174,7 +198,7 @@ deployments.
 The set of arguments for constructing a Lien resource.
 
 <h4 class="pdoc-member-header" id="LienArgs-origin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/resourcemanager/lien.ts#L174">property <b>origin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/resourcemanager/lien.ts#L198">property <b>origin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>origin: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -184,7 +208,7 @@ of the Lien, intended to be inspected programmatically. Maximum length of
 200 characters.
 
 <h4 class="pdoc-member-header" id="LienArgs-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/resourcemanager/lien.ts#L181">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/resourcemanager/lien.ts#L205">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -195,7 +219,7 @@ Since a variety of objects can have Liens against them, you must provide the typ
 prefix (e.g. "projects/my-project-name").
 
 <h4 class="pdoc-member-header" id="LienArgs-reason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/resourcemanager/lien.ts#L186">property <b>reason</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/resourcemanager/lien.ts#L210">property <b>reason</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reason: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -204,7 +228,7 @@ Concise user-visible strings indicating why an action cannot be performed
 on a resource. Maximum length of 200 characters.
 
 <h4 class="pdoc-member-header" id="LienArgs-restrictions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/resourcemanager/lien.ts#L194">property <b>restrictions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/resourcemanager/lien.ts#L218">property <b>restrictions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>restrictions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -216,7 +240,7 @@ list is meaningless and will be rejected.
 e.g. ['resourcemanager.projects.delete']
 
 <h3 class="pdoc-module-header" id="LienState" data-link-title="LienState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/resourcemanager/lien.ts#L128">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/resourcemanager/lien.ts#L152">
         interface <strong>LienState</strong>
     </a>
 </h3>
@@ -226,7 +250,7 @@ e.g. ['resourcemanager.projects.delete']
 Input properties used for looking up and filtering Lien resources.
 
 <h4 class="pdoc-member-header" id="LienState-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/resourcemanager/lien.ts#L132">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/resourcemanager/lien.ts#L156">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -234,7 +258,7 @@ Input properties used for looking up and filtering Lien resources.
 Time of creation
 
 <h4 class="pdoc-member-header" id="LienState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/resourcemanager/lien.ts#L136">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/resourcemanager/lien.ts#L160">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -242,7 +266,7 @@ Time of creation
 A system-generated unique identifier for this Lien.
 
 <h4 class="pdoc-member-header" id="LienState-origin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/resourcemanager/lien.ts#L142">property <b>origin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/resourcemanager/lien.ts#L166">property <b>origin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>origin?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -252,7 +276,7 @@ of the Lien, intended to be inspected programmatically. Maximum length of
 200 characters.
 
 <h4 class="pdoc-member-header" id="LienState-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/resourcemanager/lien.ts#L149">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/resourcemanager/lien.ts#L173">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -263,7 +287,7 @@ Since a variety of objects can have Liens against them, you must provide the typ
 prefix (e.g. "projects/my-project-name").
 
 <h4 class="pdoc-member-header" id="LienState-reason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/resourcemanager/lien.ts#L154">property <b>reason</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/resourcemanager/lien.ts#L178">property <b>reason</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reason?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -272,7 +296,7 @@ Concise user-visible strings indicating why an action cannot be performed
 on a resource. Maximum length of 200 characters.
 
 <h4 class="pdoc-member-header" id="LienState-restrictions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/resourcemanager/lien.ts#L162">property <b>restrictions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/resourcemanager/lien.ts#L186">property <b>restrictions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>restrictions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>

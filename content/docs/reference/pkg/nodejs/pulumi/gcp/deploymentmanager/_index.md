@@ -3,7 +3,7 @@ title: "Module deploymentmanager"
 title_tag: "Module deploymentmanager | Package @pulumi/gcp | Node.js SDK"
 linktitle: "deploymentmanager"
 meta_desc: "Explore members of the deploymentmanager module in the @pulumi/gcp package."
-git_sha: "190d8b0982043d566daf0a0e22d4f73afa046cc7"
+git_sha: "d2a042ddab1ab562409b1b0e98628f0272e98ead"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Deployment" data-link-title="Deployment">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L60">
         Resource <strong>Deployment</strong>
     </a>
 </h3>
@@ -52,9 +52,44 @@ than actually deploying an in-preview deployment (i.e. `preview=true` to
 `preview=false`).
 
 #### Example Usage
+##### Deployment Manager Deployment Basic
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const deployment = new gcp.deploymentmanager.Deployment("deployment", {
+    target: {
+        config: {
+            content: fs.readFileSync("path/to/config.yml"),
+        },
+    },
+    labels: [{
+        key: "foo",
+        value: "bar",
+    }],
+});
+```
+
+#### Import
+
+Deployment can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:deploymentmanager/deployment:Deployment default projects/{{project}}/deployments/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:deploymentmanager/deployment:Deployment default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:deploymentmanager/deployment:Deployment default {{name}}
+```
 
 <h4 class="pdoc-member-header" id="Deployment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L122"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L156"> <b>constructor</b></a>
 </h4>
 
 
@@ -68,7 +103,7 @@ Create a Deployment resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Deployment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L70">method <b>get</b></a>
 </h4>
 
 
@@ -79,14 +114,14 @@ Get an existing Deployment resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Deployment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L26">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L60">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Deployment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L81">method <b>isInstance</b></a>
 </h4>
 
 
@@ -97,7 +132,7 @@ Returns true if the given object is an instance of Deployment.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Deployment-createPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L63">property <b>createPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L97">property <b>createPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -111,7 +146,7 @@ Default value is `CREATE_OR_ACQUIRE`.
 Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
 
 <h4 class="pdoc-member-header" id="Deployment-deletePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L74">property <b>deletePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L108">property <b>deletePolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deletePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -126,7 +161,7 @@ Default value is `DELETE`.
 Possible values are `ABANDON` and `DELETE`.
 
 <h4 class="pdoc-member-header" id="Deployment-deploymentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L78">property <b>deploymentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L112">property <b>deploymentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deploymentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -134,7 +169,7 @@ Possible values are `ABANDON` and `DELETE`.
 Unique identifier for deployment. Output only.
 
 <h4 class="pdoc-member-header" id="Deployment-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L82">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L116">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -142,7 +177,7 @@ Unique identifier for deployment. Output only.
 Optional user-provided description of deployment.
 
 <h4 class="pdoc-member-header" id="Deployment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L26">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L60">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -151,7 +186,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Deployment-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L87">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L121">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DeploymentLabel'>DeploymentLabel</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -160,7 +195,7 @@ Key-value pairs to apply to this labels.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Deployment-manifest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L91">property <b>manifest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L125">property <b>manifest</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>manifest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -168,7 +203,7 @@ Structure is documented below.
 Output only. URL of the manifest representing the last manifest that was successfully deployed.
 
 <h4 class="pdoc-member-header" id="Deployment-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L96">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L130">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -177,7 +212,7 @@ The name of the template to import, as declared in the YAML
 configuration.
 
 <h4 class="pdoc-member-header" id="Deployment-preview">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L107">property <b>preview</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L141">property <b>preview</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>preview: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -192,7 +227,7 @@ the provider will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true.
 
 <h4 class="pdoc-member-header" id="Deployment-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L112">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L146">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -201,7 +236,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Deployment-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L116">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L150">property <b>selfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>selfLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -209,7 +244,7 @@ If it is not provided, the provider project is used.
 Output only. Server defined URL for the resource.
 
 <h4 class="pdoc-member-header" id="Deployment-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L122">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L156">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>target: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DeploymentTarget'>DeploymentTarget</a>&gt;;</code></pre>
@@ -219,7 +254,7 @@ configuration and relevant templates.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Deployment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L26">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L60">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -231,7 +266,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="DeploymentArgs" data-link-title="DeploymentArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L253">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L287">
         interface <strong>DeploymentArgs</strong>
     </a>
 </h3>
@@ -241,7 +276,7 @@ deployments.
 The set of arguments for constructing a Deployment resource.
 
 <h4 class="pdoc-member-header" id="DeploymentArgs-createPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L263">property <b>createPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L297">property <b>createPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -255,7 +290,7 @@ Default value is `CREATE_OR_ACQUIRE`.
 Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
 
 <h4 class="pdoc-member-header" id="DeploymentArgs-deletePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L274">property <b>deletePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L308">property <b>deletePolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deletePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -270,7 +305,7 @@ Default value is `DELETE`.
 Possible values are `ABANDON` and `DELETE`.
 
 <h4 class="pdoc-member-header" id="DeploymentArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L278">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L312">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -278,7 +313,7 @@ Possible values are `ABANDON` and `DELETE`.
 Optional user-provided description of deployment.
 
 <h4 class="pdoc-member-header" id="DeploymentArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L283">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L317">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DeploymentLabel'>DeploymentLabel</a>&gt;[]&gt;;</code></pre>
@@ -287,7 +322,7 @@ Key-value pairs to apply to this labels.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="DeploymentArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L288">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L322">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -296,7 +331,7 @@ The name of the template to import, as declared in the YAML
 configuration.
 
 <h4 class="pdoc-member-header" id="DeploymentArgs-preview">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L299">property <b>preview</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L333">property <b>preview</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preview?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -311,7 +346,7 @@ the provider will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true.
 
 <h4 class="pdoc-member-header" id="DeploymentArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L304">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L338">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -320,7 +355,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="DeploymentArgs-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L310">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L344">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>target: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DeploymentTarget'>DeploymentTarget</a>&gt;;</code></pre>
@@ -330,7 +365,7 @@ configuration and relevant templates.
 Structure is documented below.
 
 <h3 class="pdoc-module-header" id="DeploymentState" data-link-title="DeploymentState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L178">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L212">
         interface <strong>DeploymentState</strong>
     </a>
 </h3>
@@ -340,7 +375,7 @@ Structure is documented below.
 Input properties used for looking up and filtering Deployment resources.
 
 <h4 class="pdoc-member-header" id="DeploymentState-createPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L188">property <b>createPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L222">property <b>createPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -354,7 +389,7 @@ Default value is `CREATE_OR_ACQUIRE`.
 Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
 
 <h4 class="pdoc-member-header" id="DeploymentState-deletePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L199">property <b>deletePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L233">property <b>deletePolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deletePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -369,7 +404,7 @@ Default value is `DELETE`.
 Possible values are `ABANDON` and `DELETE`.
 
 <h4 class="pdoc-member-header" id="DeploymentState-deploymentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L203">property <b>deploymentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L237">property <b>deploymentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -377,7 +412,7 @@ Possible values are `ABANDON` and `DELETE`.
 Unique identifier for deployment. Output only.
 
 <h4 class="pdoc-member-header" id="DeploymentState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L207">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L241">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -385,7 +420,7 @@ Unique identifier for deployment. Output only.
 Optional user-provided description of deployment.
 
 <h4 class="pdoc-member-header" id="DeploymentState-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L212">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L246">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DeploymentLabel'>DeploymentLabel</a>&gt;[]&gt;;</code></pre>
@@ -394,7 +429,7 @@ Key-value pairs to apply to this labels.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="DeploymentState-manifest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L216">property <b>manifest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L250">property <b>manifest</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>manifest?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -402,7 +437,7 @@ Structure is documented below.
 Output only. URL of the manifest representing the last manifest that was successfully deployed.
 
 <h4 class="pdoc-member-header" id="DeploymentState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L221">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L255">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -411,7 +446,7 @@ The name of the template to import, as declared in the YAML
 configuration.
 
 <h4 class="pdoc-member-header" id="DeploymentState-preview">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L232">property <b>preview</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L266">property <b>preview</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preview?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -426,7 +461,7 @@ the provider will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true.
 
 <h4 class="pdoc-member-header" id="DeploymentState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L237">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L271">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -435,7 +470,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="DeploymentState-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L241">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L275">property <b>selfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>selfLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -443,7 +478,7 @@ If it is not provided, the provider project is used.
 Output only. Server defined URL for the resource.
 
 <h4 class="pdoc-member-header" id="DeploymentState-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/deploymentmanager/deployment.ts#L247">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d2a042ddab1ab562409b1b0e98628f0272e98ead/sdk/nodejs/deploymentmanager/deployment.ts#L281">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>target?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DeploymentTarget'>DeploymentTarget</a>&gt;;</code></pre>
