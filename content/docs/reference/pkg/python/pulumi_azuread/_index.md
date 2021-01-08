@@ -118,7 +118,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>app_roles</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ApplicationAppRoleArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A collection of <code class="docutils literal notranslate"><span class="pre">app_role</span></code> blocks as documented below. For more information <a class="reference external" href="https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles">https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles</a></p></li>
 <li><p><strong>available_to_other_tenants</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is this Azure AD Application available to other tenants? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>group_membership_claims</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Configures the <code class="docutils literal notranslate"><span class="pre">groups</span></code> claim issued in a user or OAuth 2.0 access token that the app expects. Defaults to <code class="docutils literal notranslate"><span class="pre">SecurityGroup</span></code>. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">SecurityGroup</span></code>, <code class="docutils literal notranslate"><span class="pre">DirectoryRole</span></code>, <code class="docutils literal notranslate"><span class="pre">ApplicationGroup</span></code> or <code class="docutils literal notranslate"><span class="pre">All</span></code>.</p></li>
-<li><p><strong>homepage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL to the application’s home page. If no homepage is specified this defaults to <code class="docutils literal notranslate"><span class="pre">https://{name}</span></code>.</p></li>
+<li><p><strong>homepage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL to the application’s home page.</p></li>
 <li><p><strong>identifier_uris</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of user-defined URI(s) that uniquely identify a Web application within it’s Azure AD tenant, or within a verified custom domain if the application is multi-tenant.</p></li>
 <li><p><strong>logout_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the logout page.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The display name for the application.</p></li>
@@ -149,7 +149,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>application_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Application ID.</p></li>
 <li><p><strong>available_to_other_tenants</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is this Azure AD Application available to other tenants? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>group_membership_claims</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Configures the <code class="docutils literal notranslate"><span class="pre">groups</span></code> claim issued in a user or OAuth 2.0 access token that the app expects. Defaults to <code class="docutils literal notranslate"><span class="pre">SecurityGroup</span></code>. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">SecurityGroup</span></code>, <code class="docutils literal notranslate"><span class="pre">DirectoryRole</span></code>, <code class="docutils literal notranslate"><span class="pre">ApplicationGroup</span></code> or <code class="docutils literal notranslate"><span class="pre">All</span></code>.</p></li>
-<li><p><strong>homepage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL to the application’s home page. If no homepage is specified this defaults to <code class="docutils literal notranslate"><span class="pre">https://{name}</span></code>.</p></li>
+<li><p><strong>homepage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL to the application’s home page.</p></li>
 <li><p><strong>identifier_uris</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of user-defined URI(s) that uniquely identify a Web application within it’s Azure AD tenant, or within a verified custom domain if the application is multi-tenant.</p></li>
 <li><p><strong>logout_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the logout page.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The display name for the application.</p></li>
@@ -195,7 +195,7 @@ properties used to qualify the lookup.</p>
 <dl class="py method">
 <dt id="pulumi_azuread.Application.homepage">
 <em class="property">property </em><code class="sig-name descname">homepage</code><a class="headerlink" href="#pulumi_azuread.Application.homepage" title="Permalink to this definition">¶</a></dt>
-<dd><p>The URL to the application’s home page. If no homepage is specified this defaults to <code class="docutils literal notranslate"><span class="pre">https://{name}</span></code>.</p>
+<dd><p>The URL to the application’s home page.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -928,7 +928,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_azuread.AwaitableGetUserResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">AwaitableGetUserResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">account_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">immutable_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mail</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mail_nickname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">object_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">onpremises_sam_account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">onpremises_user_principal_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">usage_location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_principal_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.AwaitableGetUserResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">AwaitableGetUserResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">account_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">city</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">company_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">country</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">department</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">given_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">immutable_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">job_title</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mail</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mail_nickname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mobile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">object_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">onpremises_sam_account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">onpremises_user_principal_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">physical_delivery_office_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">postal_code</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">street_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">surname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">usage_location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_principal_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.AwaitableGetUserResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -1148,7 +1148,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_azuread.GetUserResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">GetUserResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">account_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">immutable_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mail</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mail_nickname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">object_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">onpremises_sam_account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">onpremises_user_principal_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">usage_location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_principal_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.GetUserResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">GetUserResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">account_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">city</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">company_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">country</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">department</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">given_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">immutable_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">job_title</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mail</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mail_nickname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mobile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">object_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">onpremises_sam_account_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">onpremises_user_principal_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">physical_delivery_office_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">postal_code</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">street_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">surname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">usage_location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_principal_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.GetUserResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getUser.</p>
 <dl class="py method">
 <dt id="pulumi_azuread.GetUserResult.account_enabled">
@@ -1157,9 +1157,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py method">
+<dt id="pulumi_azuread.GetUserResult.city">
+<em class="property">property </em><code class="sig-name descname">city</code><a class="headerlink" href="#pulumi_azuread.GetUserResult.city" title="Permalink to this definition">¶</a></dt>
+<dd><p>The city in which the user is located.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuread.GetUserResult.company_name">
+<em class="property">property </em><code class="sig-name descname">company_name</code><a class="headerlink" href="#pulumi_azuread.GetUserResult.company_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The company name which the user is associated. This property can be useful for describing the company that an external user comes from.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuread.GetUserResult.country">
+<em class="property">property </em><code class="sig-name descname">country</code><a class="headerlink" href="#pulumi_azuread.GetUserResult.country" title="Permalink to this definition">¶</a></dt>
+<dd><p>The country/region in which the user is located; for example, “US” or “UK”.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuread.GetUserResult.department">
+<em class="property">property </em><code class="sig-name descname">department</code><a class="headerlink" href="#pulumi_azuread.GetUserResult.department" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name for the department in which the user works.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pulumi_azuread.GetUserResult.display_name">
 <em class="property">property </em><code class="sig-name descname">display_name</code><a class="headerlink" href="#pulumi_azuread.GetUserResult.display_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Display Name of the Azure AD User.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuread.GetUserResult.given_name">
+<em class="property">property </em><code class="sig-name descname">given_name</code><a class="headerlink" href="#pulumi_azuread.GetUserResult.given_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The given name (first name) of the user.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1171,7 +1201,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py method">
 <dt id="pulumi_azuread.GetUserResult.immutable_id">
 <em class="property">property </em><code class="sig-name descname">immutable_id</code><a class="headerlink" href="#pulumi_azuread.GetUserResult.immutable_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The value used to associate an on-premises Active Directory user account with their Azure AD user object.</p>
+<dd><p>The value used to associate an on-premise Active Directory user account with their Azure AD user object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuread.GetUserResult.job_title">
+<em class="property">property </em><code class="sig-name descname">job_title</code><a class="headerlink" href="#pulumi_azuread.GetUserResult.job_title" title="Permalink to this definition">¶</a></dt>
+<dd><p>The user’s job title.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1187,15 +1223,51 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py method">
+<dt id="pulumi_azuread.GetUserResult.mobile">
+<em class="property">property </em><code class="sig-name descname">mobile</code><a class="headerlink" href="#pulumi_azuread.GetUserResult.mobile" title="Permalink to this definition">¶</a></dt>
+<dd><p>The primary cellular telephone number for the user.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pulumi_azuread.GetUserResult.onpremises_sam_account_name">
 <em class="property">property </em><code class="sig-name descname">onpremises_sam_account_name</code><a class="headerlink" href="#pulumi_azuread.GetUserResult.onpremises_sam_account_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The on premise sam account name of the Azure AD User.</p>
+<dd><p>The on-premise SAM account name of the Azure AD User.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_azuread.GetUserResult.onpremises_user_principal_name">
 <em class="property">property </em><code class="sig-name descname">onpremises_user_principal_name</code><a class="headerlink" href="#pulumi_azuread.GetUserResult.onpremises_user_principal_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The on premise user principal name of the Azure AD User.</p>
+<dd><p>The on-premise user principal name of the Azure AD User.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuread.GetUserResult.physical_delivery_office_name">
+<em class="property">property </em><code class="sig-name descname">physical_delivery_office_name</code><a class="headerlink" href="#pulumi_azuread.GetUserResult.physical_delivery_office_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The office location in the user’s place of business.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuread.GetUserResult.postal_code">
+<em class="property">property </em><code class="sig-name descname">postal_code</code><a class="headerlink" href="#pulumi_azuread.GetUserResult.postal_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>The postal code for the user’s postal address. The postal code is specific to the user’s country/region. In the United States of America, this attribute contains the ZIP code.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuread.GetUserResult.state">
+<em class="property">property </em><code class="sig-name descname">state</code><a class="headerlink" href="#pulumi_azuread.GetUserResult.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>The state or province in the user’s address.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuread.GetUserResult.street_address">
+<em class="property">property </em><code class="sig-name descname">street_address</code><a class="headerlink" href="#pulumi_azuread.GetUserResult.street_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>The street address of the user’s place of business.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuread.GetUserResult.surname">
+<em class="property">property </em><code class="sig-name descname">surname</code><a class="headerlink" href="#pulumi_azuread.GetUserResult.surname" title="Permalink to this definition">¶</a></dt>
+<dd><p>The user’s surname (family name or last name).</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1480,7 +1552,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_azuread.Provider">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">Provider</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_certificate_password</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_certificate_path</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_secret</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">environment</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_host</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">msi_endpoint</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenant_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_msi</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.Provider" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">Provider</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_certificate_password</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_certificate_path</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_secret</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_terraform_partner_id</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">environment</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_host</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">msi_endpoint</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partner_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenant_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_msi</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.Provider" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider type for the azuread package. By default, resources use package-wide configuration
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
@@ -1490,7 +1562,20 @@ construction to achieve fine-grained programmatic control over provider settings
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>metadata_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Hostname which should be used to fetch environment metadata from.</p></li>
+<li><p><strong>client_certificate_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service
+Principal using a Client Certificate.</p></li>
+<li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Client ID which should be used for service principal authentication.</p></li>
+<li><p><strong>client_secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password to decrypt the Client Certificate. For use when authenticating as a Service Principal using a Client
+Certificate</p></li>
+<li><p><strong>disable_terraform_partner_id</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Disable the Terraform Partner ID which is used if a custom <code class="docutils literal notranslate"><span class="pre">partner_id</span></code> isn’t specified.</p></li>
+<li><p><strong>environment</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Cloud Environment which should be used. Possible values are <code class="docutils literal notranslate"><span class="pre">public</span></code>, <code class="docutils literal notranslate"><span class="pre">usgovernment</span></code>, <code class="docutils literal notranslate"><span class="pre">german</span></code>, and <code class="docutils literal notranslate"><span class="pre">china</span></code>.
+Defaults to <code class="docutils literal notranslate"><span class="pre">public</span></code>.</p></li>
+<li><p><strong>metadata_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Hostname which should be used for the Azure Metadata Service.</p></li>
+<li><p><strong>msi_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected
+automatically.</p></li>
+<li><p><strong>partner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.</p></li>
+<li><p><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Tenant ID which should be used. Works with all authentication methods except MSI.</p></li>
+<li><p><strong>use_msi</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow Managed Service Identity to be used for Authentication.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1830,7 +1915,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">end_date</span><span class="o">=</span><span class="s2">&quot;2099-01-01T01:02:03Z&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>PPasswords can be imported using the <code class="docutils literal notranslate"><span class="pre">object</span> <span class="pre">id</span></code> of a Service Principal and the <code class="docutils literal notranslate"><span class="pre">key</span> <span class="pre">id</span></code> of the password, e.g.</p>
+<p>Passwords can be imported using the <code class="docutils literal notranslate"><span class="pre">object</span> <span class="pre">id</span></code> of a Service Principal and the <code class="docutils literal notranslate"><span class="pre">key</span> <span class="pre">id</span></code> of the password, e.g.</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuread:index/servicePrincipalPassword:ServicePrincipalPassword <span class="nb">test</span> <span class="m">00000000</span>-0000-0000-0000-000000000000/11111111-1111-1111-1111-111111111111
 </pre></div>
 </div>
@@ -1954,7 +2039,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_azuread.User">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">User</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_password_change</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">immutable_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mail_nickname</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">usage_location</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_principal_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.User" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">User</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">city</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">company_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">country</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">department</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_password_change</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">given_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">immutable_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">job_title</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mail_nickname</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mobile</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">physical_delivery_office_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">postal_code</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">street_address</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">surname</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">usage_location</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_principal_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.User" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a User within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to <code class="docutils literal notranslate"><span class="pre">Directory.ReadWrite.All</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
@@ -1979,11 +2064,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>account_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">true</span></code> if the account should be enabled, otherwise <code class="docutils literal notranslate"><span class="pre">false</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>city</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The city in which the user is located.</p></li>
+<li><p><strong>company_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The company name which the user is associated. This property can be useful for describing the company that an external user comes from.</p></li>
+<li><p><strong>country</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The country/region in which the user is located; for example, “US” or “UK”.</p></li>
+<li><p><strong>department</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the department in which the user works.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name to display in the address book for the user.</p></li>
 <li><p><strong>force_password_change</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">true</span></code> if the User is forced to change the password during the next sign-in. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-<li><p><strong>immutable_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value used to associate an on-premises Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user’s userPrincipalName (UPN) property when creating a new user account.</p></li>
+<li><p><strong>given_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The given name (first name) of the user.</p></li>
+<li><p><strong>immutable_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value used to associate an on-premise Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user’s userPrincipalName (UPN) property when creating a new user account.</p></li>
+<li><p><strong>job_title</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user’s job title.</p></li>
 <li><p><strong>mail_nickname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mail alias for the user. Defaults to the user name part of the User Principal Name.</p></li>
+<li><p><strong>mobile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The primary cellular telephone number for the user.</p></li>
 <li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password for the User. The password must satisfy minimum requirements as specified by the password policy. The maximum length is 256 characters.</p></li>
+<li><p><strong>physical_delivery_office_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The office location in the user’s place of business.</p></li>
+<li><p><strong>postal_code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The postal code for the user’s postal address. The postal code is specific to the user’s country/region. In the United States of America, this attribute contains the ZIP code.</p></li>
+<li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The state or province in the user’s address.</p></li>
+<li><p><strong>street_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The street address of the user’s place of business.</p></li>
+<li><p><strong>surname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user’s surname (family name or last name).</p></li>
 <li><p><strong>usage_location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The usage location of the User. Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries. The usage location is a two letter country code (ISO standard 3166). Examples include: <code class="docutils literal notranslate"><span class="pre">NO</span></code>, <code class="docutils literal notranslate"><span class="pre">JP</span></code>, and <code class="docutils literal notranslate"><span class="pre">GB</span></code>. Cannot be reset to null once set.</p></li>
 <li><p><strong>user_principal_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The User Principal Name of the Azure AD User.</p></li>
 </ul>
@@ -1991,7 +2088,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <dl class="py method">
 <dt id="pulumi_azuread.User.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_password_change</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">immutable_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mail</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mail_nickname</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">object_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">onpremises_sam_account_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">onpremises_user_principal_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">usage_location</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_principal_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_azuread.user.User<a class="headerlink" href="#pulumi_azuread.User.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">city</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">company_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">country</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">department</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_password_change</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">given_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">immutable_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">job_title</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mail</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mail_nickname</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mobile</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">object_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">onpremises_sam_account_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">onpremises_user_principal_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">physical_delivery_office_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">postal_code</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">street_address</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">surname</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">usage_location</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_principal_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_azuread.user.User<a class="headerlink" href="#pulumi_azuread.User.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing User resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2001,15 +2098,27 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>account_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">true</span></code> if the account should be enabled, otherwise <code class="docutils literal notranslate"><span class="pre">false</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>city</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The city in which the user is located.</p></li>
+<li><p><strong>company_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The company name which the user is associated. This property can be useful for describing the company that an external user comes from.</p></li>
+<li><p><strong>country</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The country/region in which the user is located; for example, “US” or “UK”.</p></li>
+<li><p><strong>department</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the department in which the user works.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name to display in the address book for the user.</p></li>
 <li><p><strong>force_password_change</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">true</span></code> if the User is forced to change the password during the next sign-in. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-<li><p><strong>immutable_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value used to associate an on-premises Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user’s userPrincipalName (UPN) property when creating a new user account.</p></li>
+<li><p><strong>given_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The given name (first name) of the user.</p></li>
+<li><p><strong>immutable_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value used to associate an on-premise Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user’s userPrincipalName (UPN) property when creating a new user account.</p></li>
+<li><p><strong>job_title</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user’s job title.</p></li>
 <li><p><strong>mail</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The primary email address of the Azure AD User.</p></li>
 <li><p><strong>mail_nickname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mail alias for the user. Defaults to the user name part of the User Principal Name.</p></li>
+<li><p><strong>mobile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The primary cellular telephone number for the user.</p></li>
 <li><p><strong>object_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Object ID of the Azure AD User.</p></li>
-<li><p><strong>onpremises_sam_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The on premise sam account name of the Azure AD User.</p></li>
-<li><p><strong>onpremises_user_principal_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The on premise user principal name of the Azure AD User.</p></li>
+<li><p><strong>onpremises_sam_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The on-premise SAM account name of the Azure AD User.</p></li>
+<li><p><strong>onpremises_user_principal_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The on-premise user principal name of the Azure AD User.</p></li>
 <li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password for the User. The password must satisfy minimum requirements as specified by the password policy. The maximum length is 256 characters.</p></li>
+<li><p><strong>physical_delivery_office_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The office location in the user’s place of business.</p></li>
+<li><p><strong>postal_code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The postal code for the user’s postal address. The postal code is specific to the user’s country/region. In the United States of America, this attribute contains the ZIP code.</p></li>
+<li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The state or province in the user’s address.</p></li>
+<li><p><strong>street_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The street address of the user’s place of business.</p></li>
+<li><p><strong>surname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user’s surname (family name or last name).</p></li>
 <li><p><strong>usage_location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The usage location of the User. Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries. The usage location is a two letter country code (ISO standard 3166). Examples include: <code class="docutils literal notranslate"><span class="pre">NO</span></code>, <code class="docutils literal notranslate"><span class="pre">JP</span></code>, and <code class="docutils literal notranslate"><span class="pre">GB</span></code>. Cannot be reset to null once set.</p></li>
 <li><p><strong>user_principal_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The User Principal Name of the Azure AD User.</p></li>
 </ul>
@@ -2021,6 +2130,30 @@ properties used to qualify the lookup.</p>
 <dt id="pulumi_azuread.User.account_enabled">
 <em class="property">property </em><code class="sig-name descname">account_enabled</code><a class="headerlink" href="#pulumi_azuread.User.account_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if the account should be enabled, otherwise <code class="docutils literal notranslate"><span class="pre">false</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuread.User.city">
+<em class="property">property </em><code class="sig-name descname">city</code><a class="headerlink" href="#pulumi_azuread.User.city" title="Permalink to this definition">¶</a></dt>
+<dd><p>The city in which the user is located.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuread.User.company_name">
+<em class="property">property </em><code class="sig-name descname">company_name</code><a class="headerlink" href="#pulumi_azuread.User.company_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The company name which the user is associated. This property can be useful for describing the company that an external user comes from.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuread.User.country">
+<em class="property">property </em><code class="sig-name descname">country</code><a class="headerlink" href="#pulumi_azuread.User.country" title="Permalink to this definition">¶</a></dt>
+<dd><p>The country/region in which the user is located; for example, “US” or “UK”.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuread.User.department">
+<em class="property">property </em><code class="sig-name descname">department</code><a class="headerlink" href="#pulumi_azuread.User.department" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name for the department in which the user works.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2036,9 +2169,21 @@ properties used to qualify the lookup.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt id="pulumi_azuread.User.given_name">
+<em class="property">property </em><code class="sig-name descname">given_name</code><a class="headerlink" href="#pulumi_azuread.User.given_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The given name (first name) of the user.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pulumi_azuread.User.immutable_id">
 <em class="property">property </em><code class="sig-name descname">immutable_id</code><a class="headerlink" href="#pulumi_azuread.User.immutable_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The value used to associate an on-premises Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user’s userPrincipalName (UPN) property when creating a new user account.</p>
+<dd><p>The value used to associate an on-premise Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user’s userPrincipalName (UPN) property when creating a new user account.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuread.User.job_title">
+<em class="property">property </em><code class="sig-name descname">job_title</code><a class="headerlink" href="#pulumi_azuread.User.job_title" title="Permalink to this definition">¶</a></dt>
+<dd><p>The user’s job title.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2054,6 +2199,12 @@ properties used to qualify the lookup.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt id="pulumi_azuread.User.mobile">
+<em class="property">property </em><code class="sig-name descname">mobile</code><a class="headerlink" href="#pulumi_azuread.User.mobile" title="Permalink to this definition">¶</a></dt>
+<dd><p>The primary cellular telephone number for the user.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pulumi_azuread.User.object_id">
 <em class="property">property </em><code class="sig-name descname">object_id</code><a class="headerlink" href="#pulumi_azuread.User.object_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Object ID of the Azure AD User.</p>
@@ -2062,19 +2213,49 @@ properties used to qualify the lookup.</p>
 <dl class="py method">
 <dt id="pulumi_azuread.User.onpremises_sam_account_name">
 <em class="property">property </em><code class="sig-name descname">onpremises_sam_account_name</code><a class="headerlink" href="#pulumi_azuread.User.onpremises_sam_account_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The on premise sam account name of the Azure AD User.</p>
+<dd><p>The on-premise SAM account name of the Azure AD User.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_azuread.User.onpremises_user_principal_name">
 <em class="property">property </em><code class="sig-name descname">onpremises_user_principal_name</code><a class="headerlink" href="#pulumi_azuread.User.onpremises_user_principal_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The on premise user principal name of the Azure AD User.</p>
+<dd><p>The on-premise user principal name of the Azure AD User.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_azuread.User.password">
 <em class="property">property </em><code class="sig-name descname">password</code><a class="headerlink" href="#pulumi_azuread.User.password" title="Permalink to this definition">¶</a></dt>
 <dd><p>The password for the User. The password must satisfy minimum requirements as specified by the password policy. The maximum length is 256 characters.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuread.User.physical_delivery_office_name">
+<em class="property">property </em><code class="sig-name descname">physical_delivery_office_name</code><a class="headerlink" href="#pulumi_azuread.User.physical_delivery_office_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The office location in the user’s place of business.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuread.User.postal_code">
+<em class="property">property </em><code class="sig-name descname">postal_code</code><a class="headerlink" href="#pulumi_azuread.User.postal_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>The postal code for the user’s postal address. The postal code is specific to the user’s country/region. In the United States of America, this attribute contains the ZIP code.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuread.User.state">
+<em class="property">property </em><code class="sig-name descname">state</code><a class="headerlink" href="#pulumi_azuread.User.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>The state or province in the user’s address.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuread.User.street_address">
+<em class="property">property </em><code class="sig-name descname">street_address</code><a class="headerlink" href="#pulumi_azuread.User.street_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>The street address of the user’s place of business.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuread.User.surname">
+<em class="property">property </em><code class="sig-name descname">surname</code><a class="headerlink" href="#pulumi_azuread.User.surname" title="Permalink to this definition">¶</a></dt>
+<dd><p>The user’s surname (family name or last name).</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2157,7 +2338,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_azuread.get_client_config">
 <code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">get_client_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_azuread.get_client_config.AwaitableGetClientConfigResult<a class="headerlink" href="#pulumi_azuread.get_client_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access the configuration of the AzureRM provider.</p>
+<dd><p>Use this data source to access the configuration of the AzureAD provider.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_azuread</span> <span class="k">as</span> <span class="nn">azuread</span>
 
@@ -2170,7 +2351,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_azuread.get_domains">
 <code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">get_domains</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">include_unverified</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">only_default</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">only_initial</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_azuread.get_domains.AwaitableGetDomainsResult<a class="headerlink" href="#pulumi_azuread.get_domains" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing Domains within Azure Active Directory.</p>
+<dd><p>Use this data source to access information about existing Domains within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to <code class="docutils literal notranslate"><span class="pre">Directory.Read.All</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
 </div></blockquote>
@@ -2184,7 +2365,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>include_unverified</strong> (<em>bool</em>) – Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if unverified Azure AD Domains should be included. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>include_unverified</strong> (<em>bool</em>) – Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if unverified Azure AD domains should be included. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>only_default</strong> (<em>bool</em>) – Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to only return the default domain.</p></li>
 <li><p><strong>only_initial</strong> (<em>bool</em>) – Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to only return the initial domain, which is your primary Azure Active Directory tenant domain. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
@@ -2295,7 +2476,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>mail_nickname</strong> (<em>str</em>) – The email alias of the Azure AD User.</p></li>
-<li><p><strong>object_id</strong> (<em>str</em>) – Specifies the Object ID of the Application within Azure Active Directory.</p></li>
+<li><p><strong>object_id</strong> (<em>str</em>) – Specifies the Object ID of the User within Azure Active Directory.</p></li>
 <li><p><strong>user_principal_name</strong> (<em>str</em>) – The User Principal Name of the Azure AD User.</p></li>
 </ul>
 </dd>

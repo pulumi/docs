@@ -1,7 +1,7 @@
 import * as uuid from "uuid";
 
 // Extracts a query string variable from the browser's location.
-export function getQueryVariable(paramKey) :string {
+export function getQueryVariable(paramKey): string {
     const query = window.location.search.substring(1);
     const vars = query.split("&");
 

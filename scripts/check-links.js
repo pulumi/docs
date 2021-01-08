@@ -260,6 +260,8 @@ function getDefaultExcludedKeywords() {
         "https://blog.coinbase.com/",
         "https://www.netfilter.org/",
         "https://codepen.io",
+        "https://twitter.com",
+        "https://t.co",
     ];
 }
 

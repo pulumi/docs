@@ -94,7 +94,7 @@ In the above code, the S3 `Bucket` resource has a property called `acl`, where w
 
 If we look at the [resource docs](https://www.pulumi.com/docs/reference/pkg/aws/s3/bucket/#acl_nodejs), we can see that the `acl` property can only be set to one of a few different values: `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, and `log-delivery-write`. The `acl` property is the perfect candidate for an enum type and is emitted as one, so you can use the following code instead.
 
-{{< chooser >}}
+{{< chooser language "typescript,python,csharp,go" >}}
 {{< choosable language typescript >}}
 
 ```typescript
@@ -166,7 +166,6 @@ Enum properties provide discoverable and normalized constants that can be used i
 
 Using the provided constants, you can avoid referring back to the documentation to remember the valid values and save precious moments in the development cycle that would be lost to debugging errors caused by typos.
 
-{{< chooser >}}
 {{< choosable language typescript >}}
 
 ![ENUM_TYPESCRIPT](ts-enum.gif)
@@ -187,7 +186,6 @@ Using the provided constants, you can avoid referring back to the documentation 
 ![ENUM_GO](go-enum.gif)
 
 {{< /choosable >}}
-{{< /chooser >}}
 
 ## Optimized for flexibility
 
@@ -199,7 +197,7 @@ A property is a "strict" enum when the input value **must** be one of the enumer
 
 We will use "strict" enums when we are sure that the enum will include all legal values, such as when a provider is auto-generated from a cloud provider specification (like our [Azure NextGen](https://www.pulumi.com/blog/announcing-nextgen-azure-provider/) or [Kubernetes](https://www.pulumi.com/docs/intro/cloud-providers/kubernetes/#pulumi-kubernetes-provider) providers).
 
-{{< chooser >}}
+{{< chooser language "typescript,python,csharp,go" >}}
 {{< choosable language typescript >}}
 
 ```typescript
@@ -266,7 +264,6 @@ type StorageAccountArgs struct {
 {{< /choosable >}}
 {{< /chooser >}}
 
-{{< chooser >}}
 {{< choosable language typescript >}}
 
 {{% notes type="info" %}}
@@ -276,7 +273,6 @@ When using TypeScript, "strict" enums will accept both the constant (`AccessTier
 ![ENUM_ERROR_TYPESCRIPT](ts-enum-spelling.png)
 
 {{< /choosable >}}
-{{< /chooser >}}
 
 ### "Relaxed" enums
 
@@ -284,7 +280,7 @@ When a property is a "relaxed" enum, the property type is specified as the `Unio
 
 In the AWS provider (and other Terraform-based providers), we have opted for **only** using "relaxed" enums. The reasoning is twofold. Allowing the primitive type maintains backward compatibility and also allows users to use values that may not yet be represented in the Pulumi schema (e.g., a new Managed Policy ARN, EC2 Instance type, etc.).
 
-{{< chooser >}}
+{{< chooser language "typescript,python,csharp,go" >}}
 {{< choosable language typescript >}}
 
 ```typescript
@@ -363,4 +359,4 @@ You can find enum types integrated into `v3.19.0` of the [AWS provider](https://
 
 **AWS**: The AWS provider enums are manually identified and maintained as part of the [provider schema](https://github.com/pulumi/pulumi-aws/blob/master/provider/resources.go#L2392-L3375). We've already added many that you might find useful, such as Lambda Runtimes, EC2 Instance Types, and IAM Managed Policies, and will continue to add more in the coming months.
 
-Take the new providers for a spin and let us know what you think in the [Community Slack](https://slack.pulumi.com/)! If there are properties that you would like to see represented as enums, let us know. Or even better, submit a PR to add them to the schema!
+Take the new providers for a spin and let us know what you think in the [Community Slack](https://slack.pulumi.com/)! If there are properties that you would like to see represented as enums, let us know. Or even better, submit a PR like [this one](https://github.com/pulumi/pulumi-kubernetes/pull/1408) to add them to the schema!

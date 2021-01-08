@@ -45,7 +45,6 @@ meta_desc: "Explore the ListJobCredentials function of the databox module, inclu
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -53,25 +52,22 @@ The following arguments are supported:
             title="Required">
         <span id="jobname_csharp">
 <a href="#jobname_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -80,25 +76,22 @@ The following arguments are supported:
             title="Required">
         <span id="jobname_go">
 <a href="#jobname_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -107,25 +100,22 @@ The following arguments are supported:
             title="Required">
         <span id="jobname_nodejs">
 <a href="#jobname_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -134,28 +124,22 @@ The following arguments are supported:
             title="Required">
         <span id="job_name_python">
 <a href="#job_name_python" style="color: inherit; text-decoration: inherit;">job_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -166,7 +150,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -174,25 +157,22 @@ The following output properties are available:
             title="">
         <span id="nextlink_csharp">
 <a href="#nextlink_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Link for the next set of unencrypted credentials.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#unencryptedcredentialsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Outputs.<wbr>Unencrypted<wbr>Credentials<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of unencrypted credentials.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -201,25 +181,22 @@ The following output properties are available:
             title="">
         <span id="nextlink_go">
 <a href="#nextlink_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Link for the next set of unencrypted credentials.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#unencryptedcredentialsresponse">[]Unencrypted<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of unencrypted credentials.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -228,25 +205,22 @@ The following output properties are available:
             title="">
         <span id="nextlink_nodejs">
 <a href="#nextlink_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Link for the next set of unencrypted credentials.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#unencryptedcredentialsresponse">Unencrypted<wbr>Credentials<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of unencrypted credentials.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -255,28 +229,22 @@ The following output properties are available:
             title="">
         <span id="next_link_python">
 <a href="#next_link_python" style="color: inherit; text-decoration: inherit;">next_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Link for the next set of unencrypted credentials.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#unencryptedcredentialsresponse">Sequence[Unencrypted<wbr>Credentials<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of unencrypted credentials.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -291,7 +259,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -299,45 +266,40 @@ The following output properties are available:
             title="Required">
         <span id="accountconnectionstring_csharp">
 <a href="#accountconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Connection<wbr>String</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Connection string of the account endpoint to use the account as a storage endpoint on the device.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the account.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="dataaccounttype_csharp">
 <a href="#dataaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Account<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the account.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sharecredentialdetails_csharp">
 <a href="#sharecredentialdetails_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Credential<wbr>Details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharecredentialdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Share<wbr>Credential<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Per share level unencrypted access credentials.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -346,45 +308,40 @@ The following output properties are available:
             title="Required">
         <span id="accountconnectionstring_go">
 <a href="#accountconnectionstring_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Connection<wbr>String</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Connection string of the account endpoint to use the account as a storage endpoint on the device.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the account.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="dataaccounttype_go">
 <a href="#dataaccounttype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Account<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the account.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sharecredentialdetails_go">
 <a href="#sharecredentialdetails_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Credential<wbr>Details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharecredentialdetailsresponse">[]Share<wbr>Credential<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Per share level unencrypted access credentials.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -393,45 +350,40 @@ The following output properties are available:
             title="Required">
         <span id="accountconnectionstring_nodejs">
 <a href="#accountconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Connection<wbr>String</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Connection string of the account endpoint to use the account as a storage endpoint on the device.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the account.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="dataaccounttype_nodejs">
 <a href="#dataaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Account<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the account.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sharecredentialdetails_nodejs">
 <a href="#sharecredentialdetails_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Credential<wbr>Details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharecredentialdetailsresponse">Share<wbr>Credential<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Per share level unencrypted access credentials.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -440,51 +392,42 @@ The following output properties are available:
             title="Required">
         <span id="account_connection_string_python">
 <a href="#account_connection_string_python" style="color: inherit; text-decoration: inherit;">account_<wbr>connection_<wbr>string</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Connection string of the account endpoint to use the account as a storage endpoint on the device.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the account.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="data_account_type_python">
 <a href="#data_account_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>account_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the account.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="share_credential_details_python">
 <a href="#share_credential_details_python" style="color: inherit; text-decoration: inherit;">share_<wbr>credential_<wbr>details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharecredentialdetailsresponse">Sequence[Share<wbr>Credential<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Per share level unencrypted access credentials.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="additionalerrorinforesponse">Additional<wbr>Error<wbr>Info<wbr>Response</h4>
-
 
 
 
@@ -498,25 +441,22 @@ The following output properties are available:
             title="Optional">
         <span id="info_csharp">
 <a href="#info_csharp" style="color: inherit; text-decoration: inherit;">Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}Additional error info.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Additional error type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -525,25 +465,22 @@ The following output properties are available:
             title="Optional">
         <span id="info_go">
 <a href="#info_go" style="color: inherit; text-decoration: inherit;">Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}Additional error info.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Additional error type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -552,25 +489,22 @@ The following output properties are available:
             title="Optional">
         <span id="info_nodejs">
 <a href="#info_nodejs" style="color: inherit; text-decoration: inherit;">info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}Additional error info.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Additional error type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -579,31 +513,24 @@ The following output properties are available:
             title="Optional">
         <span id="info_python">
 <a href="#info_python" style="color: inherit; text-decoration: inherit;">info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Additional error info.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Additional error type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="appliancenetworkconfigurationresponse">Appliance<wbr>Network<wbr>Configuration<wbr>Response</h4>
-
 
 
 
@@ -617,25 +544,22 @@ The following output properties are available:
             title="Required">
         <span id="macaddress_csharp">
 <a href="#macaddress_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mac Address.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the network.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -644,25 +568,22 @@ The following output properties are available:
             title="Required">
         <span id="macaddress_go">
 <a href="#macaddress_go" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mac Address.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the network.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -671,25 +592,22 @@ The following output properties are available:
             title="Required">
         <span id="macaddress_nodejs">
 <a href="#macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mac Address.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the network.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -698,31 +616,24 @@ The following output properties are available:
             title="Required">
         <span id="mac_address_python">
 <a href="#mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mac Address.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the network.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="clouderrorresponse">Cloud<wbr>Error<wbr>Response</h4>
-
 
 
 
@@ -736,55 +647,49 @@ The following output properties are available:
             title="Required">
         <span id="additionalinfo_csharp">
 <a href="#additionalinfo_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#additionalerrorinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Additional<wbr>Error<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Cloud error additional info.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="details_csharp">
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Cloud error details.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud error code.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud error message.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud error target.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -793,55 +698,49 @@ The following output properties are available:
             title="Required">
         <span id="additionalinfo_go">
 <a href="#additionalinfo_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#additionalerrorinforesponse">[]Additional<wbr>Error<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cloud error additional info.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="details_go">
 <a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorresponse">[]Cloud<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cloud error details.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud error code.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud error message.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud error target.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -850,55 +749,49 @@ The following output properties are available:
             title="Required">
         <span id="additionalinfo_nodejs">
 <a href="#additionalinfo_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#additionalerrorinforesponse">Additional<wbr>Error<wbr>Info<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Cloud error additional info.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="details_nodejs">
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Cloud error details.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud error code.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud error message.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud error target.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -907,61 +800,51 @@ The following output properties are available:
             title="Required">
         <span id="additional_info_python">
 <a href="#additional_info_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#additionalerrorinforesponse">Sequence[Additional<wbr>Error<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Cloud error additional info.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="details_python">
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorresponse">Sequence[Cloud<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Cloud error details.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud error code.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud error message.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud error target.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="databoxdiskjobsecretsresponse">Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Secrets<wbr>Response</h4>
-
 
 
 
@@ -975,55 +858,49 @@ The following output properties are available:
             title="Required">
         <span id="dcaccesssecuritycode_csharp">
 <a href="#dcaccesssecuritycode_csharp" style="color: inherit; text-decoration: inherit;">Dc<wbr>Access<wbr>Security<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dc Access Security Code for Customer Managed Shipping{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="disksecrets_csharp">
 <a href="#disksecrets_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#disksecretresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Disk<wbr>Secret<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Contains the list of secrets object for that device.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="error_csharp">
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error while fetching the secrets.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ispasskeyuserdefined_csharp">
 <a href="#ispasskeyuserdefined_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Passkey<wbr>User<wbr>Defined</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether passkey was provided by user.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="passkey_csharp">
 <a href="#passkey_csharp" style="color: inherit; text-decoration: inherit;">Pass<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PassKey for the disk Job.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1032,55 +909,49 @@ The following output properties are available:
             title="Required">
         <span id="dcaccesssecuritycode_go">
 <a href="#dcaccesssecuritycode_go" style="color: inherit; text-decoration: inherit;">Dc<wbr>Access<wbr>Security<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Dc Access Security Code for Customer Managed Shipping{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="disksecrets_go">
 <a href="#disksecrets_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#disksecretresponse">[]Disk<wbr>Secret<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains the list of secrets object for that device.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="error_go">
 <a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Error while fetching the secrets.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ispasskeyuserdefined_go">
 <a href="#ispasskeyuserdefined_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Passkey<wbr>User<wbr>Defined</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether passkey was provided by user.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="passkey_go">
 <a href="#passkey_go" style="color: inherit; text-decoration: inherit;">Pass<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PassKey for the disk Job.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1089,55 +960,49 @@ The following output properties are available:
             title="Required">
         <span id="dcaccesssecuritycode_nodejs">
 <a href="#dcaccesssecuritycode_nodejs" style="color: inherit; text-decoration: inherit;">dc<wbr>Access<wbr>Security<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Dc Access Security Code for Customer Managed Shipping{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="disksecrets_nodejs">
 <a href="#disksecrets_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#disksecretresponse">Disk<wbr>Secret<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Contains the list of secrets object for that device.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="error_nodejs">
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Error while fetching the secrets.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ispasskeyuserdefined_nodejs">
 <a href="#ispasskeyuserdefined_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Passkey<wbr>User<wbr>Defined</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether passkey was provided by user.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="passkey_nodejs">
 <a href="#passkey_nodejs" style="color: inherit; text-decoration: inherit;">pass<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PassKey for the disk Job.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1146,61 +1011,51 @@ The following output properties are available:
             title="Required">
         <span id="dc_access_security_code_python">
 <a href="#dc_access_security_code_python" style="color: inherit; text-decoration: inherit;">dc_<wbr>access_<wbr>security_<wbr>code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dc Access Security Code for Customer Managed Shipping{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="disk_secrets_python">
 <a href="#disk_secrets_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#disksecretresponse">Sequence[Disk<wbr>Secret<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Contains the list of secrets object for that device.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="error_python">
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error while fetching the secrets.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="is_passkey_user_defined_python">
 <a href="#is_passkey_user_defined_python" style="color: inherit; text-decoration: inherit;">is_<wbr>passkey_<wbr>user_<wbr>defined</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether passkey was provided by user.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="pass_key_python">
 <a href="#pass_key_python" style="color: inherit; text-decoration: inherit;">pass_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PassKey for the disk Job.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="databoxheavyjobsecretsresponse">Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Secrets<wbr>Response</h4>
-
 
 
 
@@ -1214,35 +1069,31 @@ The following output properties are available:
             title="Required">
         <span id="cabinetpodsecrets_csharp">
 <a href="#cabinetpodsecrets_csharp" style="color: inherit; text-decoration: inherit;">Cabinet<wbr>Pod<wbr>Secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databoxheavysecretresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Heavy<wbr>Secret<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Contains the list of secret objects for a databox heavy job.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="dcaccesssecuritycode_csharp">
 <a href="#dcaccesssecuritycode_csharp" style="color: inherit; text-decoration: inherit;">Dc<wbr>Access<wbr>Security<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dc Access Security Code for Customer Managed Shipping{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="error_csharp">
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error while fetching the secrets.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1251,35 +1102,31 @@ The following output properties are available:
             title="Required">
         <span id="cabinetpodsecrets_go">
 <a href="#cabinetpodsecrets_go" style="color: inherit; text-decoration: inherit;">Cabinet<wbr>Pod<wbr>Secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databoxheavysecretresponse">[]Data<wbr>Box<wbr>Heavy<wbr>Secret<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains the list of secret objects for a databox heavy job.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="dcaccesssecuritycode_go">
 <a href="#dcaccesssecuritycode_go" style="color: inherit; text-decoration: inherit;">Dc<wbr>Access<wbr>Security<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Dc Access Security Code for Customer Managed Shipping{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="error_go">
 <a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Error while fetching the secrets.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1288,35 +1135,31 @@ The following output properties are available:
             title="Required">
         <span id="cabinetpodsecrets_nodejs">
 <a href="#cabinetpodsecrets_nodejs" style="color: inherit; text-decoration: inherit;">cabinet<wbr>Pod<wbr>Secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databoxheavysecretresponse">Data<wbr>Box<wbr>Heavy<wbr>Secret<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Contains the list of secret objects for a databox heavy job.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="dcaccesssecuritycode_nodejs">
 <a href="#dcaccesssecuritycode_nodejs" style="color: inherit; text-decoration: inherit;">dc<wbr>Access<wbr>Security<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Dc Access Security Code for Customer Managed Shipping{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="error_nodejs">
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Error while fetching the secrets.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1325,38 +1168,31 @@ The following output properties are available:
             title="Required">
         <span id="cabinet_pod_secrets_python">
 <a href="#cabinet_pod_secrets_python" style="color: inherit; text-decoration: inherit;">cabinet_<wbr>pod_<wbr>secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databoxheavysecretresponse">Sequence[Data<wbr>Box<wbr>Heavy<wbr>Secret<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Contains the list of secret objects for a databox heavy job.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="dc_access_security_code_python">
 <a href="#dc_access_security_code_python" style="color: inherit; text-decoration: inherit;">dc_<wbr>access_<wbr>security_<wbr>code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dc Access Security Code for Customer Managed Shipping{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="error_python">
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error while fetching the secrets.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="databoxheavysecretresponse">Data<wbr>Box<wbr>Heavy<wbr>Secret<wbr>Response</h4>
 
@@ -1365,7 +1201,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1373,55 +1208,49 @@ The following output properties are available:
             title="Required">
         <span id="accountcredentialdetails_csharp">
 <a href="#accountcredentialdetails_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Credential<wbr>Details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcredentialdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Account<wbr>Credential<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Per account level access credentials.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="devicepassword_csharp">
 <a href="#devicepassword_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for out of the box experience on device.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="deviceserialnumber_csharp">
 <a href="#deviceserialnumber_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Serial<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serial number of the assigned device.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="encodedvalidationcertpubkey_csharp">
 <a href="#encodedvalidationcertpubkey_csharp" style="color: inherit; text-decoration: inherit;">Encoded<wbr>Validation<wbr>Cert<wbr>Pub<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base 64 encoded public key to authenticate with the device{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="networkconfigurations_csharp">
 <a href="#networkconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appliancenetworkconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Appliance<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Network configuration of the appliance.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1430,55 +1259,49 @@ The following output properties are available:
             title="Required">
         <span id="accountcredentialdetails_go">
 <a href="#accountcredentialdetails_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Credential<wbr>Details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcredentialdetailsresponse">[]Account<wbr>Credential<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Per account level access credentials.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="devicepassword_go">
 <a href="#devicepassword_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for out of the box experience on device.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="deviceserialnumber_go">
 <a href="#deviceserialnumber_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Serial<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serial number of the assigned device.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="encodedvalidationcertpubkey_go">
 <a href="#encodedvalidationcertpubkey_go" style="color: inherit; text-decoration: inherit;">Encoded<wbr>Validation<wbr>Cert<wbr>Pub<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base 64 encoded public key to authenticate with the device{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="networkconfigurations_go">
 <a href="#networkconfigurations_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appliancenetworkconfigurationresponse">[]Appliance<wbr>Network<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Network configuration of the appliance.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1487,55 +1310,49 @@ The following output properties are available:
             title="Required">
         <span id="accountcredentialdetails_nodejs">
 <a href="#accountcredentialdetails_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Credential<wbr>Details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcredentialdetailsresponse">Account<wbr>Credential<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Per account level access credentials.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="devicepassword_nodejs">
 <a href="#devicepassword_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for out of the box experience on device.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="deviceserialnumber_nodejs">
 <a href="#deviceserialnumber_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Serial<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serial number of the assigned device.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="encodedvalidationcertpubkey_nodejs">
 <a href="#encodedvalidationcertpubkey_nodejs" style="color: inherit; text-decoration: inherit;">encoded<wbr>Validation<wbr>Cert<wbr>Pub<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base 64 encoded public key to authenticate with the device{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="networkconfigurations_nodejs">
 <a href="#networkconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appliancenetworkconfigurationresponse">Appliance<wbr>Network<wbr>Configuration<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Network configuration of the appliance.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1544,58 +1361,49 @@ The following output properties are available:
             title="Required">
         <span id="account_credential_details_python">
 <a href="#account_credential_details_python" style="color: inherit; text-decoration: inherit;">account_<wbr>credential_<wbr>details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcredentialdetailsresponse">Sequence[Account<wbr>Credential<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Per account level access credentials.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="device_password_python">
 <a href="#device_password_python" style="color: inherit; text-decoration: inherit;">device_<wbr>password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password for out of the box experience on device.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="device_serial_number_python">
 <a href="#device_serial_number_python" style="color: inherit; text-decoration: inherit;">device_<wbr>serial_<wbr>number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Serial number of the assigned device.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="encoded_validation_cert_pub_key_python">
 <a href="#encoded_validation_cert_pub_key_python" style="color: inherit; text-decoration: inherit;">encoded_<wbr>validation_<wbr>cert_<wbr>pub_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base 64 encoded public key to authenticate with the device{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="network_configurations_python">
 <a href="#network_configurations_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appliancenetworkconfigurationresponse">Sequence[Appliance<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Network configuration of the appliance.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="databoxsecretresponse">Data<wbr>Box<wbr>Secret<wbr>Response</h4>
 
@@ -1604,7 +1412,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1612,55 +1419,49 @@ The following output properties are available:
             title="Required">
         <span id="accountcredentialdetails_csharp">
 <a href="#accountcredentialdetails_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Credential<wbr>Details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcredentialdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Account<wbr>Credential<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Per account level access credentials.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="devicepassword_csharp">
 <a href="#devicepassword_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for out of the box experience on device.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="deviceserialnumber_csharp">
 <a href="#deviceserialnumber_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Serial<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serial number of the assigned device.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="encodedvalidationcertpubkey_csharp">
 <a href="#encodedvalidationcertpubkey_csharp" style="color: inherit; text-decoration: inherit;">Encoded<wbr>Validation<wbr>Cert<wbr>Pub<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base 64 encoded public key to authenticate with the device{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="networkconfigurations_csharp">
 <a href="#networkconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appliancenetworkconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Appliance<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Network configuration of the appliance.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1669,55 +1470,49 @@ The following output properties are available:
             title="Required">
         <span id="accountcredentialdetails_go">
 <a href="#accountcredentialdetails_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Credential<wbr>Details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcredentialdetailsresponse">[]Account<wbr>Credential<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Per account level access credentials.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="devicepassword_go">
 <a href="#devicepassword_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for out of the box experience on device.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="deviceserialnumber_go">
 <a href="#deviceserialnumber_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Serial<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serial number of the assigned device.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="encodedvalidationcertpubkey_go">
 <a href="#encodedvalidationcertpubkey_go" style="color: inherit; text-decoration: inherit;">Encoded<wbr>Validation<wbr>Cert<wbr>Pub<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base 64 encoded public key to authenticate with the device{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="networkconfigurations_go">
 <a href="#networkconfigurations_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appliancenetworkconfigurationresponse">[]Appliance<wbr>Network<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Network configuration of the appliance.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1726,55 +1521,49 @@ The following output properties are available:
             title="Required">
         <span id="accountcredentialdetails_nodejs">
 <a href="#accountcredentialdetails_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Credential<wbr>Details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcredentialdetailsresponse">Account<wbr>Credential<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Per account level access credentials.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="devicepassword_nodejs">
 <a href="#devicepassword_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for out of the box experience on device.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="deviceserialnumber_nodejs">
 <a href="#deviceserialnumber_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Serial<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serial number of the assigned device.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="encodedvalidationcertpubkey_nodejs">
 <a href="#encodedvalidationcertpubkey_nodejs" style="color: inherit; text-decoration: inherit;">encoded<wbr>Validation<wbr>Cert<wbr>Pub<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base 64 encoded public key to authenticate with the device{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="networkconfigurations_nodejs">
 <a href="#networkconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appliancenetworkconfigurationresponse">Appliance<wbr>Network<wbr>Configuration<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Network configuration of the appliance.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1783,61 +1572,51 @@ The following output properties are available:
             title="Required">
         <span id="account_credential_details_python">
 <a href="#account_credential_details_python" style="color: inherit; text-decoration: inherit;">account_<wbr>credential_<wbr>details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcredentialdetailsresponse">Sequence[Account<wbr>Credential<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Per account level access credentials.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="device_password_python">
 <a href="#device_password_python" style="color: inherit; text-decoration: inherit;">device_<wbr>password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password for out of the box experience on device.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="device_serial_number_python">
 <a href="#device_serial_number_python" style="color: inherit; text-decoration: inherit;">device_<wbr>serial_<wbr>number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Serial number of the assigned device.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="encoded_validation_cert_pub_key_python">
 <a href="#encoded_validation_cert_pub_key_python" style="color: inherit; text-decoration: inherit;">encoded_<wbr>validation_<wbr>cert_<wbr>pub_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base 64 encoded public key to authenticate with the device{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="network_configurations_python">
 <a href="#network_configurations_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appliancenetworkconfigurationresponse">Sequence[Appliance<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Network configuration of the appliance.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="databoxjobsecretsresponse">Databox<wbr>Job<wbr>Secrets<wbr>Response</h4>
-
 
 
 
@@ -1851,35 +1630,31 @@ The following output properties are available:
             title="Required">
         <span id="dcaccesssecuritycode_csharp">
 <a href="#dcaccesssecuritycode_csharp" style="color: inherit; text-decoration: inherit;">Dc<wbr>Access<wbr>Security<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dc Access Security Code for Customer Managed Shipping{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="error_csharp">
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error while fetching the secrets.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="podsecrets_csharp">
 <a href="#podsecrets_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databoxsecretresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Secret<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Contains the list of secret objects for a job.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1888,35 +1663,31 @@ The following output properties are available:
             title="Required">
         <span id="dcaccesssecuritycode_go">
 <a href="#dcaccesssecuritycode_go" style="color: inherit; text-decoration: inherit;">Dc<wbr>Access<wbr>Security<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Dc Access Security Code for Customer Managed Shipping{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="error_go">
 <a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Error while fetching the secrets.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="podsecrets_go">
 <a href="#podsecrets_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databoxsecretresponse">[]Data<wbr>Box<wbr>Secret<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains the list of secret objects for a job.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1925,35 +1696,31 @@ The following output properties are available:
             title="Required">
         <span id="dcaccesssecuritycode_nodejs">
 <a href="#dcaccesssecuritycode_nodejs" style="color: inherit; text-decoration: inherit;">dc<wbr>Access<wbr>Security<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Dc Access Security Code for Customer Managed Shipping{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="error_nodejs">
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Error while fetching the secrets.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="podsecrets_nodejs">
 <a href="#podsecrets_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databoxsecretresponse">Data<wbr>Box<wbr>Secret<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Contains the list of secret objects for a job.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1962,41 +1729,33 @@ The following output properties are available:
             title="Required">
         <span id="dc_access_security_code_python">
 <a href="#dc_access_security_code_python" style="color: inherit; text-decoration: inherit;">dc_<wbr>access_<wbr>security_<wbr>code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dc Access Security Code for Customer Managed Shipping{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="error_python">
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error while fetching the secrets.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pod_secrets_python">
 <a href="#pod_secrets_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databoxsecretresponse">Sequence[Data<wbr>Box<wbr>Secret<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Contains the list of secret objects for a job.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="dcaccesssecuritycoderesponse">Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response</h4>
-
 
 
 
@@ -2010,25 +1769,22 @@ The following output properties are available:
             title="Optional">
         <span id="forwarddcaccesscode_csharp">
 <a href="#forwarddcaccesscode_csharp" style="color: inherit; text-decoration: inherit;">Forward<wbr>Dc<wbr>Access<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Forward Dc access security code.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="reversedcaccesscode_csharp">
 <a href="#reversedcaccesscode_csharp" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Dc<wbr>Access<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reverse Dc access security code.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2037,25 +1793,22 @@ The following output properties are available:
             title="Optional">
         <span id="forwarddcaccesscode_go">
 <a href="#forwarddcaccesscode_go" style="color: inherit; text-decoration: inherit;">Forward<wbr>Dc<wbr>Access<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Forward Dc access security code.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="reversedcaccesscode_go">
 <a href="#reversedcaccesscode_go" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Dc<wbr>Access<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reverse Dc access security code.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2064,25 +1817,22 @@ The following output properties are available:
             title="Optional">
         <span id="forwarddcaccesscode_nodejs">
 <a href="#forwarddcaccesscode_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>Dc<wbr>Access<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Forward Dc access security code.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="reversedcaccesscode_nodejs">
 <a href="#reversedcaccesscode_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Dc<wbr>Access<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reverse Dc access security code.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2091,31 +1841,24 @@ The following output properties are available:
             title="Optional">
         <span id="forward_dc_access_code_python">
 <a href="#forward_dc_access_code_python" style="color: inherit; text-decoration: inherit;">forward_<wbr>dc_<wbr>access_<wbr>code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Forward Dc access security code.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="reverse_dc_access_code_python">
 <a href="#reverse_dc_access_code_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>dc_<wbr>access_<wbr>code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Reverse Dc access security code.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="disksecretresponse">Disk<wbr>Secret<wbr>Response</h4>
-
 
 
 
@@ -2129,25 +1872,22 @@ The following output properties are available:
             title="Required">
         <span id="bitlockerkey_csharp">
 <a href="#bitlockerkey_csharp" style="color: inherit; text-decoration: inherit;">Bit<wbr>Locker<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bit Locker key of the disk which can be used to unlock the disk to copy data.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="diskserialnumber_csharp">
 <a href="#diskserialnumber_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Serial<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serial number of the assigned disk.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2156,25 +1896,22 @@ The following output properties are available:
             title="Required">
         <span id="bitlockerkey_go">
 <a href="#bitlockerkey_go" style="color: inherit; text-decoration: inherit;">Bit<wbr>Locker<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bit Locker key of the disk which can be used to unlock the disk to copy data.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="diskserialnumber_go">
 <a href="#diskserialnumber_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Serial<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serial number of the assigned disk.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2183,25 +1920,22 @@ The following output properties are available:
             title="Required">
         <span id="bitlockerkey_nodejs">
 <a href="#bitlockerkey_nodejs" style="color: inherit; text-decoration: inherit;">bit<wbr>Locker<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bit Locker key of the disk which can be used to unlock the disk to copy data.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="diskserialnumber_nodejs">
 <a href="#diskserialnumber_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Serial<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serial number of the assigned disk.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2210,31 +1944,24 @@ The following output properties are available:
             title="Required">
         <span id="bit_locker_key_python">
 <a href="#bit_locker_key_python" style="color: inherit; text-decoration: inherit;">bit_<wbr>locker_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Bit Locker key of the disk which can be used to unlock the disk to copy data.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="disk_serial_number_python">
 <a href="#disk_serial_number_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>serial_<wbr>number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Serial number of the assigned disk.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="sharecredentialdetailsresponse">Share<wbr>Credential<wbr>Details<wbr>Response</h4>
-
 
 
 
@@ -2248,55 +1975,49 @@ The following output properties are available:
             title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for the share.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sharename_csharp">
 <a href="#sharename_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the share.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sharetype_csharp">
 <a href="#sharetype_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the share.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="supportedaccessprotocols_csharp">
 <a href="#supportedaccessprotocols_csharp" style="color: inherit; text-decoration: inherit;">Supported<wbr>Access<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Access protocols supported on the device.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name for the share.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2305,55 +2026,49 @@ The following output properties are available:
             title="Required">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for the share.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sharename_go">
 <a href="#sharename_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the share.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sharetype_go">
 <a href="#sharetype_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the share.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="supportedaccessprotocols_go">
 <a href="#supportedaccessprotocols_go" style="color: inherit; text-decoration: inherit;">Supported<wbr>Access<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Access protocols supported on the device.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name for the share.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2362,55 +2077,49 @@ The following output properties are available:
             title="Required">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for the share.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sharename_nodejs">
 <a href="#sharename_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the share.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sharetype_nodejs">
 <a href="#sharetype_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the share.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="supportedaccessprotocols_nodejs">
 <a href="#supportedaccessprotocols_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Access<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Access protocols supported on the device.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name for the share.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2419,61 +2128,51 @@ The following output properties are available:
             title="Required">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password for the share.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="share_name_python">
 <a href="#share_name_python" style="color: inherit; text-decoration: inherit;">share_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the share.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="share_type_python">
 <a href="#share_type_python" style="color: inherit; text-decoration: inherit;">share_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the share.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="supported_access_protocols_python">
 <a href="#supported_access_protocols_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>access_<wbr>protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Access protocols supported on the device.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="user_name_python">
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User name for the share.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="unencryptedcredentialsresponse">Unencrypted<wbr>Credentials<wbr>Response</h4>
-
 
 
 
@@ -2487,25 +2186,22 @@ The following output properties are available:
             title="Required">
         <span id="jobname_csharp">
 <a href="#jobname_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the job.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="jobsecrets_csharp">
 <a href="#jobsecrets_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databoxdiskjobsecretsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxheavyjobsecretsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxjobsecretsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Databox<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#databoxdiskjobsecretsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args</a> | <a href="#databoxheavyjobsecretsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args</a> | <a href="#databoxjobsecretsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Databox<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Secrets related to this job.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2514,25 +2210,22 @@ The following output properties are available:
             title="Required">
         <span id="jobname_go">
 <a href="#jobname_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the job.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="jobsecrets_go">
 <a href="#jobsecrets_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databoxdiskjobsecretsresponse">Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Secrets<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxheavyjobsecretsresponse">Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Secrets<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxjobsecretsresponse">Databox<wbr>Job<wbr>Secrets<wbr>Response</a></span>
+        <span class="property-type"><a href="#databoxdiskjobsecretsresponse">Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Secrets<wbr>Response</a> | <a href="#databoxheavyjobsecretsresponse">Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Secrets<wbr>Response</a> | <a href="#databoxjobsecretsresponse">Databox<wbr>Job<wbr>Secrets<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Secrets related to this job.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2541,25 +2234,22 @@ The following output properties are available:
             title="Required">
         <span id="jobname_nodejs">
 <a href="#jobname_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the job.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="jobsecrets_nodejs">
 <a href="#jobsecrets_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databoxdiskjobsecretsresponse">Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Secrets<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxheavyjobsecretsresponse">Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Secrets<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxjobsecretsresponse">Databox<wbr>Job<wbr>Secrets<wbr>Response</a></span>
+        <span class="property-type"><a href="#databoxdiskjobsecretsresponse">Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Secrets<wbr>Response</a> | <a href="#databoxheavyjobsecretsresponse">Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Secrets<wbr>Response</a> | <a href="#databoxjobsecretsresponse">Databox<wbr>Job<wbr>Secrets<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Secrets related to this job.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2568,28 +2258,22 @@ The following output properties are available:
             title="Required">
         <span id="job_name_python">
 <a href="#job_name_python" style="color: inherit; text-decoration: inherit;">job_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the job.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="job_secrets_python">
 <a href="#job_secrets_python" style="color: inherit; text-decoration: inherit;">job_<wbr>secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databoxdiskjobsecretsresponse">Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxheavyjobsecretsresponse">Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#databoxjobsecretsresponse">Databox<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#databoxdiskjobsecretsresponse">Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args</a> | <a href="#databoxheavyjobsecretsresponse">Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args</a> | <a href="#databoxjobsecretsresponse">Databox<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Secrets related to this job.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

@@ -2,7 +2,7 @@
 ---
 title: "RoleAssignment"
 title_tag: "azure-nextgen.customerinsights.RoleAssignment"
-meta_desc: "Explore the RoleAssignment resource of the customerinsights module, including examples, input properties, output properties, lookup functions, and supporting types. The Role Assignment resource format."
+meta_desc: "Documentation for the azure-nextgen.customerinsights.RoleAssignment resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -11,7 +11,7 @@ meta_desc: "Explore the RoleAssignment resource of the customerinsights module, 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The Role Assignment resource format.
-
+Latest API Version: 2017-04-26.
 
 {{% examples %}}
 ## Example Usage
@@ -155,7 +155,7 @@ const roleAssignment = new azure_nextgen.customerinsights.latest.RoleAssignment(
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RoleAssignment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">RoleAssignmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RoleAssignment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">RoleAssignmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -163,11 +163,11 @@ const roleAssignment = new azure_nextgen.customerinsights.latest.RoleAssignment(
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRoleAssignment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">RoleAssignmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RoleAssignment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRoleAssignment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">RoleAssignmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RoleAssignment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RoleAssignment</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">RoleAssignmentArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RoleAssignment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">RoleAssignmentArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -178,7 +178,7 @@ const roleAssignment = new azure_nextgen.customerinsights.latest.RoleAssignment(
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -247,7 +247,7 @@ const roleAssignment = new azure_nextgen.customerinsights.latest.RoleAssignment(
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -286,7 +286,7 @@ const roleAssignment = new azure_nextgen.customerinsights.latest.RoleAssignment(
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -327,7 +327,6 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -335,205 +334,184 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="assignmentname_csharp">
 <a href="#assignmentname_csharp" style="color: inherit; text-decoration: inherit;">Assignment<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The assignment name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hubname_csharp">
 <a href="#hubname_csharp" style="color: inherit; text-decoration: inherit;">Hub<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="principals_csharp">
 <a href="#principals_csharp" style="color: inherit; text-decoration: inherit;">Principals</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assignmentprincipal">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Assignment<wbr>Principal<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The principals being assigned to.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="role_csharp">
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Role<wbr>Types</span>
+        <span class="property-type"><a href="#roletypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Role<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Type of roles.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="conflationpolicies_csharp">
 <a href="#conflationpolicies_csharp" style="color: inherit; text-decoration: inherit;">Conflation<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connectors_csharp">
 <a href="#connectors_csharp" style="color: inherit; text-decoration: inherit;">Connectors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connectors set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Localized description for the metadata.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Localized display names for the metadata.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interactions_csharp">
 <a href="#interactions_csharp" style="color: inherit; text-decoration: inherit;">Interactions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Interactions set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kpis_csharp">
 <a href="#kpis_csharp" style="color: inherit; text-decoration: inherit;">Kpis</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kpis set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="links_csharp">
 <a href="#links_csharp" style="color: inherit; text-decoration: inherit;">Links</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Links set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="profiles_csharp">
 <a href="#profiles_csharp" style="color: inherit; text-decoration: inherit;">Profiles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profiles set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="relationshiplinks_csharp">
 <a href="#relationshiplinks_csharp" style="color: inherit; text-decoration: inherit;">Relationship<wbr>Links</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the relationship links.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="relationships_csharp">
 <a href="#relationships_csharp" style="color: inherit; text-decoration: inherit;">Relationships</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the relationships.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="roleassignments_csharp">
 <a href="#roleassignments_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Assignments</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="saspolicies_csharp">
 <a href="#saspolicies_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sas Policies set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="segments_csharp">
 <a href="#segments_csharp" style="color: inherit; text-decoration: inherit;">Segments</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="views_csharp">
 <a href="#views_csharp" style="color: inherit; text-decoration: inherit;">Views</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Views set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="widgettypes_csharp">
 <a href="#widgettypes_csharp" style="color: inherit; text-decoration: inherit;">Widget<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -542,205 +520,184 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="assignmentname_go">
 <a href="#assignmentname_go" style="color: inherit; text-decoration: inherit;">Assignment<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The assignment name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hubname_go">
 <a href="#hubname_go" style="color: inherit; text-decoration: inherit;">Hub<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="principals_go">
 <a href="#principals_go" style="color: inherit; text-decoration: inherit;">Principals</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assignmentprincipal">[]Assignment<wbr>Principal</a></span>
     </dt>
     <dd>{{% md %}}The principals being assigned to.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="role_go">
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#roletypes">Role<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Type of roles.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="conflationpolicies_go">
 <a href="#conflationpolicies_go" style="color: inherit; text-decoration: inherit;">Conflation<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connectors_go">
 <a href="#connectors_go" style="color: inherit; text-decoration: inherit;">Connectors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}Connectors set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Localized description for the metadata.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Localized display names for the metadata.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interactions_go">
 <a href="#interactions_go" style="color: inherit; text-decoration: inherit;">Interactions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}Interactions set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kpis_go">
 <a href="#kpis_go" style="color: inherit; text-decoration: inherit;">Kpis</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}Kpis set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="links_go">
 <a href="#links_go" style="color: inherit; text-decoration: inherit;">Links</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}Links set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="profiles_go">
 <a href="#profiles_go" style="color: inherit; text-decoration: inherit;">Profiles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}Profiles set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="relationshiplinks_go">
 <a href="#relationshiplinks_go" style="color: inherit; text-decoration: inherit;">Relationship<wbr>Links</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the relationship links.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="relationships_go">
 <a href="#relationships_go" style="color: inherit; text-decoration: inherit;">Relationships</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the relationships.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="roleassignments_go">
 <a href="#roleassignments_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Assignments</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="saspolicies_go">
 <a href="#saspolicies_go" style="color: inherit; text-decoration: inherit;">Sas<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}Sas Policies set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="segments_go">
 <a href="#segments_go" style="color: inherit; text-decoration: inherit;">Segments</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="views_go">
 <a href="#views_go" style="color: inherit; text-decoration: inherit;">Views</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}Views set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="widgettypes_go">
 <a href="#widgettypes_go" style="color: inherit; text-decoration: inherit;">Widget<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -749,205 +706,184 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="assignmentname_nodejs">
 <a href="#assignmentname_nodejs" style="color: inherit; text-decoration: inherit;">assignment<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The assignment name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hubname_nodejs">
 <a href="#hubname_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="principals_nodejs">
 <a href="#principals_nodejs" style="color: inherit; text-decoration: inherit;">principals</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assignmentprincipal">Assignment<wbr>Principal[]</a></span>
     </dt>
     <dd>{{% md %}}The principals being assigned to.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="role_nodejs">
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">enums.<wbr>Role<wbr>Types</span>
+        <span class="property-type"><a href="#roletypes">Role<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Type of roles.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="conflationpolicies_nodejs">
 <a href="#conflationpolicies_nodejs" style="color: inherit; text-decoration: inherit;">conflation<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connectors_nodejs">
 <a href="#connectors_nodejs" style="color: inherit; text-decoration: inherit;">connectors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}Connectors set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Localized description for the metadata.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Localized display names for the metadata.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interactions_nodejs">
 <a href="#interactions_nodejs" style="color: inherit; text-decoration: inherit;">interactions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}Interactions set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kpis_nodejs">
 <a href="#kpis_nodejs" style="color: inherit; text-decoration: inherit;">kpis</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}Kpis set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="links_nodejs">
 <a href="#links_nodejs" style="color: inherit; text-decoration: inherit;">links</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}Links set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="profiles_nodejs">
 <a href="#profiles_nodejs" style="color: inherit; text-decoration: inherit;">profiles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}Profiles set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="relationshiplinks_nodejs">
 <a href="#relationshiplinks_nodejs" style="color: inherit; text-decoration: inherit;">relationship<wbr>Links</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the relationship links.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="relationships_nodejs">
 <a href="#relationships_nodejs" style="color: inherit; text-decoration: inherit;">relationships</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the relationships.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="roleassignments_nodejs">
 <a href="#roleassignments_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Assignments</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="saspolicies_nodejs">
 <a href="#saspolicies_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}Sas Policies set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="segments_nodejs">
 <a href="#segments_nodejs" style="color: inherit; text-decoration: inherit;">segments</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="views_nodejs">
 <a href="#views_nodejs" style="color: inherit; text-decoration: inherit;">views</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}Views set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="widgettypes_nodejs">
 <a href="#widgettypes_nodejs" style="color: inherit; text-decoration: inherit;">widget<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -956,214 +892,189 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="assignment_name_python">
 <a href="#assignment_name_python" style="color: inherit; text-decoration: inherit;">assignment_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The assignment name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hub_name_python">
 <a href="#hub_name_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="principals_python">
 <a href="#principals_python" style="color: inherit; text-decoration: inherit;">principals</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assignmentprincipal">Sequence[Assignment<wbr>Principal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The principals being assigned to.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="role_python">
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Role<wbr>Types</span>
+        <span class="property-type"><a href="#roletypes">Role<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Type of roles.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="conflation_policies_python">
 <a href="#conflation_policies_python" style="color: inherit; text-decoration: inherit;">conflation_<wbr>policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connectors_python">
 <a href="#connectors_python" style="color: inherit; text-decoration: inherit;">connectors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connectors set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Localized description for the metadata.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Localized display names for the metadata.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interactions_python">
 <a href="#interactions_python" style="color: inherit; text-decoration: inherit;">interactions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Interactions set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kpis_python">
 <a href="#kpis_python" style="color: inherit; text-decoration: inherit;">kpis</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kpis set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="links_python">
 <a href="#links_python" style="color: inherit; text-decoration: inherit;">links</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Links set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="profiles_python">
 <a href="#profiles_python" style="color: inherit; text-decoration: inherit;">profiles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profiles set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="relationship_links_python">
 <a href="#relationship_links_python" style="color: inherit; text-decoration: inherit;">relationship_<wbr>links</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the relationship links.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="relationships_python">
 <a href="#relationships_python" style="color: inherit; text-decoration: inherit;">relationships</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the relationships.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="role_assignments_python">
 <a href="#role_assignments_python" style="color: inherit; text-decoration: inherit;">role_<wbr>assignments</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sas_policies_python">
 <a href="#sas_policies_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sas Policies set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="segments_python">
 <a href="#segments_python" style="color: inherit; text-decoration: inherit;">segments</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="views_python">
 <a href="#views_python" style="color: inherit; text-decoration: inherit;">views</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Views set for the assignment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="widget_types_python">
 <a href="#widget_types_python" style="color: inherit; text-decoration: inherit;">widget_<wbr>types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the RoleAssignment resource produces the following output properties:
-
 
 
 
@@ -1174,55 +1085,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1231,55 +1136,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1288,55 +1187,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1345,58 +1238,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1407,13 +1291,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
 <h4 id="assignmentprincipal">Assignment<wbr>Principal</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1422,35 +1301,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal id being assigned to.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="principaltype_csharp">
 <a href="#principaltype_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Type of the principal ID.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="principalmetadata_csharp">
 <a href="#principalmetadata_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Other metadata for the principal.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1459,35 +1334,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal id being assigned to.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="principaltype_go">
 <a href="#principaltype_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Type of the principal ID.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="principalmetadata_go">
 <a href="#principalmetadata_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Other metadata for the principal.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1496,35 +1367,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal id being assigned to.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="principaltype_nodejs">
 <a href="#principaltype_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Type of the principal ID.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="principalmetadata_nodejs">
 <a href="#principalmetadata_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Other metadata for the principal.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1533,47 +1400,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The principal id being assigned to.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="principal_type_python">
 <a href="#principal_type_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Type of the principal ID.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="principal_metadata_python">
 <a href="#principal_metadata_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Other metadata for the principal.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="assignmentprincipalresponse">Assignment<wbr>Principal<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1581,35 +1435,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal id being assigned to.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="principaltype_csharp">
 <a href="#principaltype_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Type of the principal ID.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="principalmetadata_csharp">
 <a href="#principalmetadata_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Other metadata for the principal.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1618,35 +1468,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal id being assigned to.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="principaltype_go">
 <a href="#principaltype_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Type of the principal ID.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="principalmetadata_go">
 <a href="#principalmetadata_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Other metadata for the principal.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1655,35 +1501,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal id being assigned to.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="principaltype_nodejs">
 <a href="#principaltype_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Type of the principal ID.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="principalmetadata_nodejs">
 <a href="#principalmetadata_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Other metadata for the principal.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1692,47 +1534,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The principal id being assigned to.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="principal_type_python">
 <a href="#principal_type_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Type of the principal ID.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="principal_metadata_python">
 <a href="#principal_metadata_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Other metadata for the principal.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="resourcesetdescription">Resource<wbr>Set<wbr>Description</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1740,25 +1569,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="elements_csharp">
 <a href="#elements_csharp" style="color: inherit; text-decoration: inherit;">Elements</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The elements included in the set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exceptions_csharp">
 <a href="#exceptions_csharp" style="color: inherit; text-decoration: inherit;">Exceptions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The elements that are not included in the set, in case elements contains '*' indicating 'all'.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1767,25 +1593,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="elements_go">
 <a href="#elements_go" style="color: inherit; text-decoration: inherit;">Elements</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The elements included in the set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exceptions_go">
 <a href="#exceptions_go" style="color: inherit; text-decoration: inherit;">Exceptions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The elements that are not included in the set, in case elements contains '*' indicating 'all'.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1794,25 +1617,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="elements_nodejs">
 <a href="#elements_nodejs" style="color: inherit; text-decoration: inherit;">elements</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The elements included in the set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exceptions_nodejs">
 <a href="#exceptions_nodejs" style="color: inherit; text-decoration: inherit;">exceptions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The elements that are not included in the set, in case elements contains '*' indicating 'all'.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1821,37 +1641,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="elements_python">
 <a href="#elements_python" style="color: inherit; text-decoration: inherit;">elements</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The elements included in the set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exceptions_python">
 <a href="#exceptions_python" style="color: inherit; text-decoration: inherit;">exceptions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The elements that are not included in the set, in case elements contains '*' indicating 'all'.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1859,25 +1667,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="elements_csharp">
 <a href="#elements_csharp" style="color: inherit; text-decoration: inherit;">Elements</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The elements included in the set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exceptions_csharp">
 <a href="#exceptions_csharp" style="color: inherit; text-decoration: inherit;">Exceptions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The elements that are not included in the set, in case elements contains '*' indicating 'all'.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1886,25 +1691,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="elements_go">
 <a href="#elements_go" style="color: inherit; text-decoration: inherit;">Elements</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The elements included in the set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exceptions_go">
 <a href="#exceptions_go" style="color: inherit; text-decoration: inherit;">Exceptions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The elements that are not included in the set, in case elements contains '*' indicating 'all'.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1913,25 +1715,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="elements_nodejs">
 <a href="#elements_nodejs" style="color: inherit; text-decoration: inherit;">elements</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The elements included in the set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exceptions_nodejs">
 <a href="#exceptions_nodejs" style="color: inherit; text-decoration: inherit;">exceptions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The elements that are not included in the set, in case elements contains '*' indicating 'all'.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1940,31 +1739,100 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="elements_python">
 <a href="#elements_python" style="color: inherit; text-decoration: inherit;">elements</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The elements included in the set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exceptions_python">
 <a href="#exceptions_python" style="color: inherit; text-decoration: inherit;">exceptions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The elements that are not included in the set, in case elements contains '*' indicating 'all'.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="roletypes">Role<wbr>Types</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Admin</dt>
+    <dd>Admin</dd>
+    <dt>Reader</dt>
+    <dd>Reader</dd>
+    <dt>Manage<wbr>Admin</dt>
+    <dd>ManageAdmin</dd>
+    <dt>Manage<wbr>Reader</dt>
+    <dd>ManageReader</dd>
+    <dt>Data<wbr>Admin</dt>
+    <dd>DataAdmin</dd>
+    <dt>Data<wbr>Reader</dt>
+    <dd>DataReader</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Role<wbr>Types<wbr>Admin</dt>
+    <dd>Admin</dd>
+    <dt>Role<wbr>Types<wbr>Reader</dt>
+    <dd>Reader</dd>
+    <dt>Role<wbr>Types<wbr>Manage<wbr>Admin</dt>
+    <dd>ManageAdmin</dd>
+    <dt>Role<wbr>Types<wbr>Manage<wbr>Reader</dt>
+    <dd>ManageReader</dd>
+    <dt>Role<wbr>Types<wbr>Data<wbr>Admin</dt>
+    <dd>DataAdmin</dd>
+    <dt>Role<wbr>Types<wbr>Data<wbr>Reader</dt>
+    <dd>DataReader</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Admin</dt>
+    <dd>Admin</dd>
+    <dt>Reader</dt>
+    <dd>Reader</dd>
+    <dt>Manage<wbr>Admin</dt>
+    <dd>ManageAdmin</dd>
+    <dt>Manage<wbr>Reader</dt>
+    <dd>ManageReader</dd>
+    <dt>Data<wbr>Admin</dt>
+    <dd>DataAdmin</dd>
+    <dt>Data<wbr>Reader</dt>
+    <dd>DataReader</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>ADMIN</dt>
+    <dd>Admin</dd>
+    <dt>READER</dt>
+    <dd>Reader</dd>
+    <dt>MANAGE_ADMIN</dt>
+    <dd>ManageAdmin</dd>
+    <dt>MANAGE_READER</dt>
+    <dd>ManageReader</dd>
+    <dt>DATA_ADMIN</dt>
+    <dd>DataAdmin</dd>
+    <dt>DATA_READER</dt>
+    <dd>DataReader</dd>
+</dl>
+{{% /choosable %}}
+## Import
 
 
+An existing resource can be imported using its type token, name, and identifier, e.g.
 
-
-
-
+```sh
+$ pulumi import azure-nextgen:customerinsights/latest:RoleAssignment azSdkTestHub/assignmentName8976 /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/azSdkTestHub/RoleAssignments/assignmentName8976 
+```
 
 
 

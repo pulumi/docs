@@ -42,6 +42,7 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="ess/" title="ess"><span class="symbol module"></span>ess</a></li>
     <li><a href="fc/" title="fc"><span class="symbol module"></span>fc</a></li>
     <li><a href="fnf/" title="fnf"><span class="symbol module"></span>fnf</a></li>
+    <li><a href="ga/" title="ga"><span class="symbol module"></span>ga</a></li>
     <li><a href="gpdb/" title="gpdb"><span class="symbol module"></span>gpdb</a></li>
     <li><a href="hbase/" title="hbase"><span class="symbol module"></span>hbase</a></li>
     <li><a href="kms/" title="kms"><span class="symbol module"></span>kms</a></li>
@@ -57,11 +58,13 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="oss/" title="oss"><span class="symbol module"></span>oss</a></li>
     <li><a href="ots/" title="ots"><span class="symbol module"></span>ots</a></li>
     <li><a href="polardb/" title="polardb"><span class="symbol module"></span>polardb</a></li>
+    <li><a href="privatelink/" title="privatelink"><span class="symbol module"></span>privatelink</a></li>
     <li><a href="pvtz/" title="pvtz"><span class="symbol module"></span>pvtz</a></li>
     <li><a href="ram/" title="ram"><span class="symbol module"></span>ram</a></li>
     <li><a href="rds/" title="rds"><span class="symbol module"></span>rds</a></li>
     <li><a href="resourcemanager/" title="resourcemanager"><span class="symbol module"></span>resourcemanager</a></li>
     <li><a href="rocketmq/" title="rocketmq"><span class="symbol module"></span>rocketmq</a></li>
+    <li><a href="ros/" title="ros"><span class="symbol module"></span>ros</a></li>
     <li><a href="sag/" title="sag"><span class="symbol module"></span>sag</a></li>
     <li><a href="slb/" title="slb"><span class="symbol module"></span>slb</a></li>
     <li><a href="vpc/" title="vpc"><span class="symbol module"></span>vpc</a></li>
@@ -93,7 +96,7 @@ A Pulumi package for creating and managing AliCloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.27.0</dd>
+	<dd>2.30.0</dd>
 </dl>
 
 

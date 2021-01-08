@@ -2,7 +2,7 @@
 ---
 title: "Volume"
 title_tag: "azure-nextgen.netapp.Volume"
-meta_desc: "Explore the Volume resource of the netapp module, including examples, input properties, output properties, lookup functions, and supporting types. Volume resource"
+meta_desc: "Documentation for the azure-nextgen.netapp.Volume resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -11,7 +11,7 @@ meta_desc: "Explore the Volume resource of the netapp module, including examples
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Volume resource
-
+Latest API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -69,7 +69,7 @@ func main() {
 			ServiceLevel:      pulumi.String("Premium"),
 			SubnetId:          pulumi.String("/subscriptions/9760acf5-4638-11e7-9bdb-020073ca7778/resourceGroups/myRP/providers/Microsoft.Network/virtualNetworks/testvnet3/subnets/testsubnet3"),
 			ThroughputMibps:   pulumi.Float64(128),
-			UsageThreshold:    pulumi.Int(107374182400),
+			UsageThreshold:    pulumi.Float64(107374182400),
 			VolumeName:        pulumi.String("volume1"),
 		})
 		if err != nil {
@@ -136,19 +136,19 @@ const volume = new azure_nextgen.netapp.latest.Volume("volume", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">VolumeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">VolumeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_protection</span><span class="p">:</span> <span class="nx">Optional[VolumePropertiesDataProtectionArgs]</span> = None<span class="p">, </span><span class="nx">export_policy</span><span class="p">:</span> <span class="nx">Optional[VolumePropertiesExportPolicyArgs]</span> = None<span class="p">, </span><span class="nx">is_restoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kerberos_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mount_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[MountTargetPropertiesArgs]]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_style</span><span class="p">:</span> <span class="nx">Optional[Union[str, SecurityStyle]]</span> = None<span class="p">, </span><span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[Union[str, ServiceLevel]]</span> = None<span class="p">, </span><span class="nx">snapshot_directory_visible</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">throughput_mibps</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">usage_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">volume_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_protection</span><span class="p">:</span> <span class="nx">Optional[VolumePropertiesDataProtectionArgs]</span> = None<span class="p">, </span><span class="nx">export_policy</span><span class="p">:</span> <span class="nx">Optional[VolumePropertiesExportPolicyArgs]</span> = None<span class="p">, </span><span class="nx">is_restoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kerberos_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mount_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[MountTargetPropertiesArgs]]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_style</span><span class="p">:</span> <span class="nx">Optional[Union[str, SecurityStyle]]</span> = None<span class="p">, </span><span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[Union[str, ServiceLevel]]</span> = None<span class="p">, </span><span class="nx">smb_continuously_available</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">smb_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">snapshot_directory_visible</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">throughput_mibps</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">usage_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">volume_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVolume</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">VolumeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Volume</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVolume</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">VolumeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Volume</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Volume</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">VolumeArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">VolumeArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -159,7 +159,7 @@ const volume = new azure_nextgen.netapp.latest.Volume("volume", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -228,7 +228,7 @@ const volume = new azure_nextgen.netapp.latest.Volume("volume", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -267,7 +267,7 @@ const volume = new azure_nextgen.netapp.latest.Volume("volume", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -308,7 +308,6 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -316,225 +315,220 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="creationtoken_csharp">
 <a href="#creationtoken_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique file path for the volume. Used when creating mount targets{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="poolname_csharp">
 <a href="#poolname_csharp" style="color: inherit; text-decoration: inherit;">Pool<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the capacity pool{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="usagethreshold_csharp">
 <a href="#usagethreshold_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volumename_csharp">
 <a href="#volumename_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupid_csharp">
 <a href="#backupid_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID v4 or resource identifier used to identify the Backup.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dataprotection_csharp">
 <a href="#dataprotection_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Protection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumepropertiesdataprotection">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Volume<wbr>Properties<wbr>Data<wbr>Protection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DataProtection type volumes include an object containing details of the replication{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exportpolicy_csharp">
 <a href="#exportpolicy_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumepropertiesexportpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Volume<wbr>Properties<wbr>Export<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of export policy rules{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrestoring_csharp">
 <a href="#isrestoring_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Restoring</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Restoring{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberosenabled_csharp">
 <a href="#kerberosenabled_csharp" style="color: inherit; text-decoration: inherit;">Kerberos<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mounttargets_csharp">
 <a href="#mounttargets_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Targets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mounttargetproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Mount<wbr>Target<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of mount targets{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocoltypes_csharp">
 <a href="#protocoltypes_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of protocol types{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="securitystyle_csharp">
 <a href="#securitystyle_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Style</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Security<wbr>Style</span>
+        <span class="property-type">string | <a href="#securitystyle">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Security<wbr>Style</a></span>
     </dt>
     <dd>{{% md %}}The security style of volume{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servicelevel_csharp">
 <a href="#servicelevel_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Service<wbr>Level</span>
+        <span class="property-type">string | <a href="#servicelevel">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Service<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}The service level of the file system{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="smbcontinuouslyavailable_csharp">
+<a href="#smbcontinuouslyavailable_csharp" style="color: inherit; text-decoration: inherit;">Smb<wbr>Continuously<wbr>Available</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables continuously available share property for smb volume. Only applicable for SMB volume{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="smbencryption_csharp">
+<a href="#smbencryption_csharp" style="color: inherit; text-decoration: inherit;">Smb<wbr>Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables encryption for in-flight smb3 data. Only applicable for SMB/DualProtocol volume. To be used with swagger version 2020-08-01 or later{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="snapshotdirectoryvisible_csharp">
 <a href="#snapshotdirectoryvisible_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Directory<wbr>Visible</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If enabled (true) the volume will contain a read-only .snapshot directory which provides access to each of the volume's snapshots (default to true).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snapshotid_csharp">
 <a href="#snapshotid_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID v4 or resource identifier used to identify the Snapshot.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="throughputmibps_csharp">
 <a href="#throughputmibps_csharp" style="color: inherit; text-decoration: inherit;">Throughput<wbr>Mibps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="volumetype_csharp">
 <a href="#volumetype_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What type of volume is this{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -543,225 +537,220 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="creationtoken_go">
 <a href="#creationtoken_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique file path for the volume. Used when creating mount targets{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="poolname_go">
 <a href="#poolname_go" style="color: inherit; text-decoration: inherit;">Pool<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the capacity pool{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="usagethreshold_go">
 <a href="#usagethreshold_go" style="color: inherit; text-decoration: inherit;">Usage<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volumename_go">
 <a href="#volumename_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupid_go">
 <a href="#backupid_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID v4 or resource identifier used to identify the Backup.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dataprotection_go">
 <a href="#dataprotection_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Protection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumepropertiesdataprotection">Volume<wbr>Properties<wbr>Data<wbr>Protection</a></span>
     </dt>
     <dd>{{% md %}}DataProtection type volumes include an object containing details of the replication{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exportpolicy_go">
 <a href="#exportpolicy_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumepropertiesexportpolicy">Volume<wbr>Properties<wbr>Export<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Set of export policy rules{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrestoring_go">
 <a href="#isrestoring_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Restoring</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Restoring{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberosenabled_go">
 <a href="#kerberosenabled_go" style="color: inherit; text-decoration: inherit;">Kerberos<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mounttargets_go">
 <a href="#mounttargets_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Targets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mounttargetproperties">[]Mount<wbr>Target<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}List of mount targets{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocoltypes_go">
 <a href="#protocoltypes_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of protocol types{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="securitystyle_go">
 <a href="#securitystyle_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Style</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#securitystyle">Security<wbr>Style</a></span>
     </dt>
     <dd>{{% md %}}The security style of volume{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servicelevel_go">
 <a href="#servicelevel_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#servicelevel">Service<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}The service level of the file system{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="smbcontinuouslyavailable_go">
+<a href="#smbcontinuouslyavailable_go" style="color: inherit; text-decoration: inherit;">Smb<wbr>Continuously<wbr>Available</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables continuously available share property for smb volume. Only applicable for SMB volume{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="smbencryption_go">
+<a href="#smbencryption_go" style="color: inherit; text-decoration: inherit;">Smb<wbr>Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables encryption for in-flight smb3 data. Only applicable for SMB/DualProtocol volume. To be used with swagger version 2020-08-01 or later{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="snapshotdirectoryvisible_go">
 <a href="#snapshotdirectoryvisible_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Directory<wbr>Visible</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If enabled (true) the volume will contain a read-only .snapshot directory which provides access to each of the volume's snapshots (default to true).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snapshotid_go">
 <a href="#snapshotid_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID v4 or resource identifier used to identify the Snapshot.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="throughputmibps_go">
 <a href="#throughputmibps_go" style="color: inherit; text-decoration: inherit;">Throughput<wbr>Mibps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="volumetype_go">
 <a href="#volumetype_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What type of volume is this{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -770,225 +759,220 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="creationtoken_nodejs">
 <a href="#creationtoken_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique file path for the volume. Used when creating mount targets{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="poolname_nodejs">
 <a href="#poolname_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the capacity pool{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="usagethreshold_nodejs">
 <a href="#usagethreshold_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volumename_nodejs">
 <a href="#volumename_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupid_nodejs">
 <a href="#backupid_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID v4 or resource identifier used to identify the Backup.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dataprotection_nodejs">
 <a href="#dataprotection_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Protection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumepropertiesdataprotection">Volume<wbr>Properties<wbr>Data<wbr>Protection</a></span>
     </dt>
     <dd>{{% md %}}DataProtection type volumes include an object containing details of the replication{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exportpolicy_nodejs">
 <a href="#exportpolicy_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumepropertiesexportpolicy">Volume<wbr>Properties<wbr>Export<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Set of export policy rules{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrestoring_nodejs">
 <a href="#isrestoring_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Restoring</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Restoring{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberosenabled_nodejs">
 <a href="#kerberosenabled_nodejs" style="color: inherit; text-decoration: inherit;">kerberos<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mounttargets_nodejs">
 <a href="#mounttargets_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Targets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mounttargetproperties">Mount<wbr>Target<wbr>Properties[]</a></span>
     </dt>
     <dd>{{% md %}}List of mount targets{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocoltypes_nodejs">
 <a href="#protocoltypes_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of protocol types{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="securitystyle_nodejs">
 <a href="#securitystyle_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Style</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Security<wbr>Style</span>
+        <span class="property-type">string | <a href="#securitystyle">Security<wbr>Style</a></span>
     </dt>
     <dd>{{% md %}}The security style of volume{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servicelevel_nodejs">
 <a href="#servicelevel_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Service<wbr>Level</span>
+        <span class="property-type">string | <a href="#servicelevel">Service<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}The service level of the file system{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="smbcontinuouslyavailable_nodejs">
+<a href="#smbcontinuouslyavailable_nodejs" style="color: inherit; text-decoration: inherit;">smb<wbr>Continuously<wbr>Available</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enables continuously available share property for smb volume. Only applicable for SMB volume{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="smbencryption_nodejs">
+<a href="#smbencryption_nodejs" style="color: inherit; text-decoration: inherit;">smb<wbr>Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enables encryption for in-flight smb3 data. Only applicable for SMB/DualProtocol volume. To be used with swagger version 2020-08-01 or later{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="snapshotdirectoryvisible_nodejs">
 <a href="#snapshotdirectoryvisible_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Directory<wbr>Visible</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If enabled (true) the volume will contain a read-only .snapshot directory which provides access to each of the volume's snapshots (default to true).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snapshotid_nodejs">
 <a href="#snapshotid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID v4 or resource identifier used to identify the Snapshot.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="throughputmibps_nodejs">
 <a href="#throughputmibps_nodejs" style="color: inherit; text-decoration: inherit;">throughput<wbr>Mibps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="volumetype_nodejs">
 <a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What type of volume is this{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -997,234 +981,225 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="creation_token_python">
 <a href="#creation_token_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique file path for the volume. Used when creating mount targets{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="pool_name_python">
 <a href="#pool_name_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the capacity pool{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="usage_threshold_python">
 <a href="#usage_threshold_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volume_name_python">
 <a href="#volume_name_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the volume{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backup_id_python">
 <a href="#backup_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UUID v4 or resource identifier used to identify the Backup.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="data_protection_python">
 <a href="#data_protection_python" style="color: inherit; text-decoration: inherit;">data_<wbr>protection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumepropertiesdataprotection">Volume<wbr>Properties<wbr>Data<wbr>Protection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DataProtection type volumes include an object containing details of the replication{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="export_policy_python">
 <a href="#export_policy_python" style="color: inherit; text-decoration: inherit;">export_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumepropertiesexportpolicy">Volume<wbr>Properties<wbr>Export<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of export policy rules{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_restoring_python">
 <a href="#is_restoring_python" style="color: inherit; text-decoration: inherit;">is_<wbr>restoring</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Restoring{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos_enabled_python">
 <a href="#kerberos_enabled_python" style="color: inherit; text-decoration: inherit;">kerberos_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mount_targets_python">
 <a href="#mount_targets_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>targets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mounttargetproperties">Sequence[Mount<wbr>Target<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of mount targets{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocol_types_python">
 <a href="#protocol_types_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of protocol types{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="security_style_python">
 <a href="#security_style_python" style="color: inherit; text-decoration: inherit;">security_<wbr>style</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Security<wbr>Style</span>
+        <span class="property-type">str | <a href="#securitystyle">Security<wbr>Style</a></span>
     </dt>
     <dd>{{% md %}}The security style of volume{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="service_level_python">
 <a href="#service_level_python" style="color: inherit; text-decoration: inherit;">service_<wbr>level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Service<wbr>Level</span>
+        <span class="property-type">str | <a href="#servicelevel">Service<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}The service level of the file system{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="smb_continuously_available_python">
+<a href="#smb_continuously_available_python" style="color: inherit; text-decoration: inherit;">smb_<wbr>continuously_<wbr>available</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables continuously available share property for smb volume. Only applicable for SMB volume{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="smb_encryption_python">
+<a href="#smb_encryption_python" style="color: inherit; text-decoration: inherit;">smb_<wbr>encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables encryption for in-flight smb3 data. Only applicable for SMB/DualProtocol volume. To be used with swagger version 2020-08-01 or later{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="snapshot_directory_visible_python">
 <a href="#snapshot_directory_visible_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>directory_<wbr>visible</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If enabled (true) the volume will contain a read-only .snapshot directory which provides access to each of the volume's snapshots (default to true).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snapshot_id_python">
 <a href="#snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UUID v4 or resource identifier used to identify the Snapshot.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="throughput_mibps_python">
 <a href="#throughput_mibps_python" style="color: inherit; text-decoration: inherit;">throughput_<wbr>mibps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="volume_type_python">
 <a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}What type of volume is this{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Volume resource produces the following output properties:
-
 
 
 
@@ -1235,65 +1210,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="baremetaltenantid_csharp">
 <a href="#baremetaltenantid_csharp" style="color: inherit; text-decoration: inherit;">Baremetal<wbr>Tenant<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique Baremetal Tenant Identifier.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="filesystemid_csharp">
 <a href="#filesystemid_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique FileSystem Identifier.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1302,65 +1270,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="baremetaltenantid_go">
 <a href="#baremetaltenantid_go" style="color: inherit; text-decoration: inherit;">Baremetal<wbr>Tenant<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique Baremetal Tenant Identifier.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="filesystemid_go">
 <a href="#filesystemid_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique FileSystem Identifier.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1369,65 +1330,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="baremetaltenantid_nodejs">
 <a href="#baremetaltenantid_nodejs" style="color: inherit; text-decoration: inherit;">baremetal<wbr>Tenant<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique Baremetal Tenant Identifier.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="filesystemid_nodejs">
 <a href="#filesystemid_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique FileSystem Identifier.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1436,68 +1390,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="baremetal_tenant_id_python">
 <a href="#baremetal_tenant_id_python" style="color: inherit; text-decoration: inherit;">baremetal_<wbr>tenant_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique Baremetal Tenant Identifier.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="file_system_id_python">
 <a href="#file_system_id_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique FileSystem Identifier.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1508,13 +1452,46 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="endpointtype">Endpoint<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Src</dt>
+    <dd>src</dd>
+    <dt>Dst</dt>
+    <dd>dst</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Endpoint<wbr>Type<wbr>Src</dt>
+    <dd>src</dd>
+    <dt>Endpoint<wbr>Type<wbr>Dst</dt>
+    <dd>dst</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Src</dt>
+    <dd>src</dd>
+    <dt>Dst</dt>
+    <dd>dst</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>SRC</dt>
+    <dd>src</dd>
+    <dt>DST</dt>
+    <dd>dst</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="exportpolicyrule">Export<wbr>Policy<wbr>Rule</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1523,145 +1500,130 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="allowedclients_csharp">
 <a href="#allowedclients_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Clients</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client ingress specification as comma separated string with IPv4 CIDRs, IPv4 host addresses and host names{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cifs_csharp">
 <a href="#cifs_csharp" style="color: inherit; text-decoration: inherit;">Cifs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows CIFS protocol{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hasrootaccess_csharp">
 <a href="#hasrootaccess_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Root<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Has root access to volume{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5readonly_csharp">
 <a href="#kerberos5readonly_csharp" style="color: inherit; text-decoration: inherit;">Kerberos5Read<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5 Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5readwrite_csharp">
 <a href="#kerberos5readwrite_csharp" style="color: inherit; text-decoration: inherit;">Kerberos5Read<wbr>Write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5 Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5ireadonly_csharp">
 <a href="#kerberos5ireadonly_csharp" style="color: inherit; text-decoration: inherit;">Kerberos5i<wbr>Read<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5i Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5ireadwrite_csharp">
 <a href="#kerberos5ireadwrite_csharp" style="color: inherit; text-decoration: inherit;">Kerberos5i<wbr>Read<wbr>Write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5i Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5preadonly_csharp">
 <a href="#kerberos5preadonly_csharp" style="color: inherit; text-decoration: inherit;">Kerberos5p<wbr>Read<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5p Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5preadwrite_csharp">
 <a href="#kerberos5preadwrite_csharp" style="color: inherit; text-decoration: inherit;">Kerberos5p<wbr>Read<wbr>Write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5p Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nfsv3_csharp">
 <a href="#nfsv3_csharp" style="color: inherit; text-decoration: inherit;">Nfsv3</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows NFSv3 protocol. Enable only for NFSv3 type volumes{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nfsv41_csharp">
 <a href="#nfsv41_csharp" style="color: inherit; text-decoration: inherit;">Nfsv41</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows NFSv4.1 protocol. Enable only for NFSv4.1 type volumes{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ruleindex_csharp">
 <a href="#ruleindex_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Index</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Order index{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unixreadonly_csharp">
 <a href="#unixreadonly_csharp" style="color: inherit; text-decoration: inherit;">Unix<wbr>Read<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Read only access{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unixreadwrite_csharp">
 <a href="#unixreadwrite_csharp" style="color: inherit; text-decoration: inherit;">Unix<wbr>Read<wbr>Write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Read and write access{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1670,145 +1632,130 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="allowedclients_go">
 <a href="#allowedclients_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Clients</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client ingress specification as comma separated string with IPv4 CIDRs, IPv4 host addresses and host names{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cifs_go">
 <a href="#cifs_go" style="color: inherit; text-decoration: inherit;">Cifs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows CIFS protocol{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hasrootaccess_go">
 <a href="#hasrootaccess_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Root<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Has root access to volume{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5readonly_go">
 <a href="#kerberos5readonly_go" style="color: inherit; text-decoration: inherit;">Kerberos5Read<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5 Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5readwrite_go">
 <a href="#kerberos5readwrite_go" style="color: inherit; text-decoration: inherit;">Kerberos5Read<wbr>Write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5 Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5ireadonly_go">
 <a href="#kerberos5ireadonly_go" style="color: inherit; text-decoration: inherit;">Kerberos5i<wbr>Read<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5i Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5ireadwrite_go">
 <a href="#kerberos5ireadwrite_go" style="color: inherit; text-decoration: inherit;">Kerberos5i<wbr>Read<wbr>Write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5i Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5preadonly_go">
 <a href="#kerberos5preadonly_go" style="color: inherit; text-decoration: inherit;">Kerberos5p<wbr>Read<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5p Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5preadwrite_go">
 <a href="#kerberos5preadwrite_go" style="color: inherit; text-decoration: inherit;">Kerberos5p<wbr>Read<wbr>Write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5p Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nfsv3_go">
 <a href="#nfsv3_go" style="color: inherit; text-decoration: inherit;">Nfsv3</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows NFSv3 protocol. Enable only for NFSv3 type volumes{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nfsv41_go">
 <a href="#nfsv41_go" style="color: inherit; text-decoration: inherit;">Nfsv41</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows NFSv4.1 protocol. Enable only for NFSv4.1 type volumes{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ruleindex_go">
 <a href="#ruleindex_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Index</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Order index{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unixreadonly_go">
 <a href="#unixreadonly_go" style="color: inherit; text-decoration: inherit;">Unix<wbr>Read<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Read only access{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unixreadwrite_go">
 <a href="#unixreadwrite_go" style="color: inherit; text-decoration: inherit;">Unix<wbr>Read<wbr>Write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Read and write access{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1817,145 +1764,130 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="allowedclients_nodejs">
 <a href="#allowedclients_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Clients</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client ingress specification as comma separated string with IPv4 CIDRs, IPv4 host addresses and host names{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cifs_nodejs">
 <a href="#cifs_nodejs" style="color: inherit; text-decoration: inherit;">cifs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allows CIFS protocol{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hasrootaccess_nodejs">
 <a href="#hasrootaccess_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Root<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Has root access to volume{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5readonly_nodejs">
 <a href="#kerberos5readonly_nodejs" style="color: inherit; text-decoration: inherit;">kerberos5Read<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Kerberos5 Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5readwrite_nodejs">
 <a href="#kerberos5readwrite_nodejs" style="color: inherit; text-decoration: inherit;">kerberos5Read<wbr>Write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Kerberos5 Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5ireadonly_nodejs">
 <a href="#kerberos5ireadonly_nodejs" style="color: inherit; text-decoration: inherit;">kerberos5i<wbr>Read<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Kerberos5i Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5ireadwrite_nodejs">
 <a href="#kerberos5ireadwrite_nodejs" style="color: inherit; text-decoration: inherit;">kerberos5i<wbr>Read<wbr>Write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Kerberos5i Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5preadonly_nodejs">
 <a href="#kerberos5preadonly_nodejs" style="color: inherit; text-decoration: inherit;">kerberos5p<wbr>Read<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Kerberos5p Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5preadwrite_nodejs">
 <a href="#kerberos5preadwrite_nodejs" style="color: inherit; text-decoration: inherit;">kerberos5p<wbr>Read<wbr>Write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Kerberos5p Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nfsv3_nodejs">
 <a href="#nfsv3_nodejs" style="color: inherit; text-decoration: inherit;">nfsv3</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allows NFSv3 protocol. Enable only for NFSv3 type volumes{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nfsv41_nodejs">
 <a href="#nfsv41_nodejs" style="color: inherit; text-decoration: inherit;">nfsv41</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allows NFSv4.1 protocol. Enable only for NFSv4.1 type volumes{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ruleindex_nodejs">
 <a href="#ruleindex_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Index</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Order index{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unixreadonly_nodejs">
 <a href="#unixreadonly_nodejs" style="color: inherit; text-decoration: inherit;">unix<wbr>Read<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Read only access{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unixreadwrite_nodejs">
 <a href="#unixreadwrite_nodejs" style="color: inherit; text-decoration: inherit;">unix<wbr>Read<wbr>Write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Read and write access{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1964,157 +1896,133 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="allowed_clients_python">
 <a href="#allowed_clients_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>clients</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Client ingress specification as comma separated string with IPv4 CIDRs, IPv4 host addresses and host names{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cifs_python">
 <a href="#cifs_python" style="color: inherit; text-decoration: inherit;">cifs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows CIFS protocol{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="has_root_access_python">
 <a href="#has_root_access_python" style="color: inherit; text-decoration: inherit;">has_<wbr>root_<wbr>access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Has root access to volume{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5_read_only_python">
 <a href="#kerberos5_read_only_python" style="color: inherit; text-decoration: inherit;">kerberos5_<wbr>read_<wbr>only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5 Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5_read_write_python">
 <a href="#kerberos5_read_write_python" style="color: inherit; text-decoration: inherit;">kerberos5_<wbr>read_<wbr>write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5 Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5i_read_only_python">
 <a href="#kerberos5i_read_only_python" style="color: inherit; text-decoration: inherit;">kerberos5i_<wbr>read_<wbr>only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5i Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5i_read_write_python">
 <a href="#kerberos5i_read_write_python" style="color: inherit; text-decoration: inherit;">kerberos5i_<wbr>read_<wbr>write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5i Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5p_read_only_python">
 <a href="#kerberos5p_read_only_python" style="color: inherit; text-decoration: inherit;">kerberos5p_<wbr>read_<wbr>only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5p Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5p_read_write_python">
 <a href="#kerberos5p_read_write_python" style="color: inherit; text-decoration: inherit;">kerberos5p_<wbr>read_<wbr>write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5p Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nfsv3_python">
 <a href="#nfsv3_python" style="color: inherit; text-decoration: inherit;">nfsv3</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows NFSv3 protocol. Enable only for NFSv3 type volumes{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nfsv41_python">
 <a href="#nfsv41_python" style="color: inherit; text-decoration: inherit;">nfsv41</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows NFSv4.1 protocol. Enable only for NFSv4.1 type volumes{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rule_index_python">
 <a href="#rule_index_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>index</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Order index{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unix_read_only_python">
 <a href="#unix_read_only_python" style="color: inherit; text-decoration: inherit;">unix_<wbr>read_<wbr>only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Read only access{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unix_read_write_python">
 <a href="#unix_read_write_python" style="color: inherit; text-decoration: inherit;">unix_<wbr>read_<wbr>write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Read and write access{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="exportpolicyruleresponse">Export<wbr>Policy<wbr>Rule<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2122,145 +2030,130 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="allowedclients_csharp">
 <a href="#allowedclients_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Clients</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client ingress specification as comma separated string with IPv4 CIDRs, IPv4 host addresses and host names{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cifs_csharp">
 <a href="#cifs_csharp" style="color: inherit; text-decoration: inherit;">Cifs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows CIFS protocol{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hasrootaccess_csharp">
 <a href="#hasrootaccess_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Root<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Has root access to volume{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5readonly_csharp">
 <a href="#kerberos5readonly_csharp" style="color: inherit; text-decoration: inherit;">Kerberos5Read<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5 Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5readwrite_csharp">
 <a href="#kerberos5readwrite_csharp" style="color: inherit; text-decoration: inherit;">Kerberos5Read<wbr>Write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5 Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5ireadonly_csharp">
 <a href="#kerberos5ireadonly_csharp" style="color: inherit; text-decoration: inherit;">Kerberos5i<wbr>Read<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5i Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5ireadwrite_csharp">
 <a href="#kerberos5ireadwrite_csharp" style="color: inherit; text-decoration: inherit;">Kerberos5i<wbr>Read<wbr>Write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5i Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5preadonly_csharp">
 <a href="#kerberos5preadonly_csharp" style="color: inherit; text-decoration: inherit;">Kerberos5p<wbr>Read<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5p Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5preadwrite_csharp">
 <a href="#kerberos5preadwrite_csharp" style="color: inherit; text-decoration: inherit;">Kerberos5p<wbr>Read<wbr>Write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5p Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nfsv3_csharp">
 <a href="#nfsv3_csharp" style="color: inherit; text-decoration: inherit;">Nfsv3</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows NFSv3 protocol. Enable only for NFSv3 type volumes{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nfsv41_csharp">
 <a href="#nfsv41_csharp" style="color: inherit; text-decoration: inherit;">Nfsv41</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows NFSv4.1 protocol. Enable only for NFSv4.1 type volumes{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ruleindex_csharp">
 <a href="#ruleindex_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Index</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Order index{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unixreadonly_csharp">
 <a href="#unixreadonly_csharp" style="color: inherit; text-decoration: inherit;">Unix<wbr>Read<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Read only access{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unixreadwrite_csharp">
 <a href="#unixreadwrite_csharp" style="color: inherit; text-decoration: inherit;">Unix<wbr>Read<wbr>Write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Read and write access{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2269,145 +2162,130 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="allowedclients_go">
 <a href="#allowedclients_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Clients</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client ingress specification as comma separated string with IPv4 CIDRs, IPv4 host addresses and host names{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cifs_go">
 <a href="#cifs_go" style="color: inherit; text-decoration: inherit;">Cifs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows CIFS protocol{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hasrootaccess_go">
 <a href="#hasrootaccess_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Root<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Has root access to volume{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5readonly_go">
 <a href="#kerberos5readonly_go" style="color: inherit; text-decoration: inherit;">Kerberos5Read<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5 Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5readwrite_go">
 <a href="#kerberos5readwrite_go" style="color: inherit; text-decoration: inherit;">Kerberos5Read<wbr>Write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5 Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5ireadonly_go">
 <a href="#kerberos5ireadonly_go" style="color: inherit; text-decoration: inherit;">Kerberos5i<wbr>Read<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5i Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5ireadwrite_go">
 <a href="#kerberos5ireadwrite_go" style="color: inherit; text-decoration: inherit;">Kerberos5i<wbr>Read<wbr>Write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5i Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5preadonly_go">
 <a href="#kerberos5preadonly_go" style="color: inherit; text-decoration: inherit;">Kerberos5p<wbr>Read<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5p Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5preadwrite_go">
 <a href="#kerberos5preadwrite_go" style="color: inherit; text-decoration: inherit;">Kerberos5p<wbr>Read<wbr>Write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5p Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nfsv3_go">
 <a href="#nfsv3_go" style="color: inherit; text-decoration: inherit;">Nfsv3</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows NFSv3 protocol. Enable only for NFSv3 type volumes{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nfsv41_go">
 <a href="#nfsv41_go" style="color: inherit; text-decoration: inherit;">Nfsv41</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows NFSv4.1 protocol. Enable only for NFSv4.1 type volumes{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ruleindex_go">
 <a href="#ruleindex_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Index</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Order index{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unixreadonly_go">
 <a href="#unixreadonly_go" style="color: inherit; text-decoration: inherit;">Unix<wbr>Read<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Read only access{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unixreadwrite_go">
 <a href="#unixreadwrite_go" style="color: inherit; text-decoration: inherit;">Unix<wbr>Read<wbr>Write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Read and write access{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2416,145 +2294,130 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="allowedclients_nodejs">
 <a href="#allowedclients_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Clients</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client ingress specification as comma separated string with IPv4 CIDRs, IPv4 host addresses and host names{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cifs_nodejs">
 <a href="#cifs_nodejs" style="color: inherit; text-decoration: inherit;">cifs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allows CIFS protocol{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hasrootaccess_nodejs">
 <a href="#hasrootaccess_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Root<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Has root access to volume{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5readonly_nodejs">
 <a href="#kerberos5readonly_nodejs" style="color: inherit; text-decoration: inherit;">kerberos5Read<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Kerberos5 Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5readwrite_nodejs">
 <a href="#kerberos5readwrite_nodejs" style="color: inherit; text-decoration: inherit;">kerberos5Read<wbr>Write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Kerberos5 Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5ireadonly_nodejs">
 <a href="#kerberos5ireadonly_nodejs" style="color: inherit; text-decoration: inherit;">kerberos5i<wbr>Read<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Kerberos5i Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5ireadwrite_nodejs">
 <a href="#kerberos5ireadwrite_nodejs" style="color: inherit; text-decoration: inherit;">kerberos5i<wbr>Read<wbr>Write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Kerberos5i Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5preadonly_nodejs">
 <a href="#kerberos5preadonly_nodejs" style="color: inherit; text-decoration: inherit;">kerberos5p<wbr>Read<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Kerberos5p Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5preadwrite_nodejs">
 <a href="#kerberos5preadwrite_nodejs" style="color: inherit; text-decoration: inherit;">kerberos5p<wbr>Read<wbr>Write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Kerberos5p Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nfsv3_nodejs">
 <a href="#nfsv3_nodejs" style="color: inherit; text-decoration: inherit;">nfsv3</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allows NFSv3 protocol. Enable only for NFSv3 type volumes{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nfsv41_nodejs">
 <a href="#nfsv41_nodejs" style="color: inherit; text-decoration: inherit;">nfsv41</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allows NFSv4.1 protocol. Enable only for NFSv4.1 type volumes{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ruleindex_nodejs">
 <a href="#ruleindex_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Index</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Order index{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unixreadonly_nodejs">
 <a href="#unixreadonly_nodejs" style="color: inherit; text-decoration: inherit;">unix<wbr>Read<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Read only access{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unixreadwrite_nodejs">
 <a href="#unixreadwrite_nodejs" style="color: inherit; text-decoration: inherit;">unix<wbr>Read<wbr>Write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Read and write access{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2563,156 +2426,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="allowed_clients_python">
 <a href="#allowed_clients_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>clients</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Client ingress specification as comma separated string with IPv4 CIDRs, IPv4 host addresses and host names{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cifs_python">
 <a href="#cifs_python" style="color: inherit; text-decoration: inherit;">cifs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows CIFS protocol{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="has_root_access_python">
 <a href="#has_root_access_python" style="color: inherit; text-decoration: inherit;">has_<wbr>root_<wbr>access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Has root access to volume{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5_read_only_python">
 <a href="#kerberos5_read_only_python" style="color: inherit; text-decoration: inherit;">kerberos5_<wbr>read_<wbr>only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5 Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5_read_write_python">
 <a href="#kerberos5_read_write_python" style="color: inherit; text-decoration: inherit;">kerberos5_<wbr>read_<wbr>write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5 Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5i_read_only_python">
 <a href="#kerberos5i_read_only_python" style="color: inherit; text-decoration: inherit;">kerberos5i_<wbr>read_<wbr>only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5i Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5i_read_write_python">
 <a href="#kerberos5i_read_write_python" style="color: inherit; text-decoration: inherit;">kerberos5i_<wbr>read_<wbr>write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5i Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5p_read_only_python">
 <a href="#kerberos5p_read_only_python" style="color: inherit; text-decoration: inherit;">kerberos5p_<wbr>read_<wbr>only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5p Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kerberos5p_read_write_python">
 <a href="#kerberos5p_read_write_python" style="color: inherit; text-decoration: inherit;">kerberos5p_<wbr>read_<wbr>write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5p Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nfsv3_python">
 <a href="#nfsv3_python" style="color: inherit; text-decoration: inherit;">nfsv3</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows NFSv3 protocol. Enable only for NFSv3 type volumes{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nfsv41_python">
 <a href="#nfsv41_python" style="color: inherit; text-decoration: inherit;">nfsv41</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows NFSv4.1 protocol. Enable only for NFSv4.1 type volumes{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rule_index_python">
 <a href="#rule_index_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>index</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Order index{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unix_read_only_python">
 <a href="#unix_read_only_python" style="color: inherit; text-decoration: inherit;">unix_<wbr>read_<wbr>only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Read only access{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unix_read_write_python">
 <a href="#unix_read_write_python" style="color: inherit; text-decoration: inherit;">unix_<wbr>read_<wbr>write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Read and write access{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="mounttargetproperties">Mount<wbr>Target<wbr>Properties</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2721,25 +2560,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="filesystemid_csharp">
 <a href="#filesystemid_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID v4 used to identify the MountTarget{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="smbserverfqdn_csharp">
 <a href="#smbserverfqdn_csharp" style="color: inherit; text-decoration: inherit;">Smb<wbr>Server<wbr>Fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SMB server's Fully Qualified Domain Name, FQDN{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2748,25 +2584,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="filesystemid_go">
 <a href="#filesystemid_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID v4 used to identify the MountTarget{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="smbserverfqdn_go">
 <a href="#smbserverfqdn_go" style="color: inherit; text-decoration: inherit;">Smb<wbr>Server<wbr>Fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SMB server's Fully Qualified Domain Name, FQDN{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2775,25 +2608,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="filesystemid_nodejs">
 <a href="#filesystemid_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID v4 used to identify the MountTarget{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="smbserverfqdn_nodejs">
 <a href="#smbserverfqdn_nodejs" style="color: inherit; text-decoration: inherit;">smb<wbr>Server<wbr>Fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SMB server's Fully Qualified Domain Name, FQDN{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2802,36 +2632,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="file_system_id_python">
 <a href="#file_system_id_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UUID v4 used to identify the MountTarget{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="smb_server_fqdn_python">
 <a href="#smb_server_fqdn_python" style="color: inherit; text-decoration: inherit;">smb_<wbr>server_<wbr>fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SMB server's Fully Qualified Domain Name, FQDN{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="mounttargetpropertiesresponse">Mount<wbr>Target<wbr>Properties<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2840,45 +2658,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="filesystemid_csharp">
 <a href="#filesystemid_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID v4 used to identify the MountTarget{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mount target's IPv4 address{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mounttargetid_csharp">
 <a href="#mounttargetid_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Target<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID v4 used to identify the MountTarget{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="smbserverfqdn_csharp">
 <a href="#smbserverfqdn_csharp" style="color: inherit; text-decoration: inherit;">Smb<wbr>Server<wbr>Fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SMB server's Fully Qualified Domain Name, FQDN{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2887,45 +2700,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="filesystemid_go">
 <a href="#filesystemid_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID v4 used to identify the MountTarget{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mount target's IPv4 address{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mounttargetid_go">
 <a href="#mounttargetid_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Target<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID v4 used to identify the MountTarget{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="smbserverfqdn_go">
 <a href="#smbserverfqdn_go" style="color: inherit; text-decoration: inherit;">Smb<wbr>Server<wbr>Fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SMB server's Fully Qualified Domain Name, FQDN{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2934,45 +2742,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="filesystemid_nodejs">
 <a href="#filesystemid_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID v4 used to identify the MountTarget{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mount target's IPv4 address{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mounttargetid_nodejs">
 <a href="#mounttargetid_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Target<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID v4 used to identify the MountTarget{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="smbserverfqdn_nodejs">
 <a href="#smbserverfqdn_nodejs" style="color: inherit; text-decoration: inherit;">smb<wbr>Server<wbr>Fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SMB server's Fully Qualified Domain Name, FQDN{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2981,57 +2784,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="file_system_id_python">
 <a href="#file_system_id_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UUID v4 used to identify the MountTarget{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The mount target's IPv4 address{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mount_target_id_python">
 <a href="#mount_target_id_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>target_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UUID v4 used to identify the MountTarget{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="smb_server_fqdn_python">
 <a href="#smb_server_fqdn_python" style="color: inherit; text-decoration: inherit;">smb_<wbr>server_<wbr>fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SMB server's Fully Qualified Domain Name, FQDN{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="replicationobject">Replication<wbr>Object</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3039,55 +2828,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="remotevolumeresourceid_csharp">
 <a href="#remotevolumeresourceid_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Volume<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the remote volume.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="replicationschedule_csharp">
 <a href="#replicationschedule_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Replication<wbr>Schedule</span>
+        <span class="property-type">string | <a href="#replicationschedule">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Replication<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endpointtype_csharp">
 <a href="#endpointtype_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Endpoint<wbr>Type</span>
+        <span class="property-type">string | <a href="#endpointtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Endpoint<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the local volume is the source or destination for the Volume Replication{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="remotevolumeregion_csharp">
 <a href="#remotevolumeregion_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Volume<wbr>Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remote region for the other end of the Volume Replication.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="replicationid_csharp">
 <a href="#replicationid_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3096,55 +2879,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="remotevolumeresourceid_go">
 <a href="#remotevolumeresourceid_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Volume<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the remote volume.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="replicationschedule_go">
 <a href="#replicationschedule_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#replicationschedule">Replication<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endpointtype_go">
 <a href="#endpointtype_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#endpointtype">Endpoint<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the local volume is the source or destination for the Volume Replication{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="remotevolumeregion_go">
 <a href="#remotevolumeregion_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Volume<wbr>Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remote region for the other end of the Volume Replication.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="replicationid_go">
 <a href="#replicationid_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3153,55 +2930,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="remotevolumeresourceid_nodejs">
 <a href="#remotevolumeresourceid_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Volume<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the remote volume.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="replicationschedule_nodejs">
 <a href="#replicationschedule_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Replication<wbr>Schedule</span>
+        <span class="property-type">string | <a href="#replicationschedule">Replication<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endpointtype_nodejs">
 <a href="#endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Endpoint<wbr>Type</span>
+        <span class="property-type">string | <a href="#endpointtype">Endpoint<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the local volume is the source or destination for the Volume Replication{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="remotevolumeregion_nodejs">
 <a href="#remotevolumeregion_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Volume<wbr>Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remote region for the other end of the Volume Replication.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="replicationid_nodejs">
 <a href="#replicationid_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3210,67 +2981,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="remote_volume_resource_id_python">
 <a href="#remote_volume_resource_id_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>volume_<wbr>resource_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of the remote volume.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="replication_schedule_python">
 <a href="#replication_schedule_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Replication<wbr>Schedule</span>
+        <span class="property-type">str | <a href="#replicationschedule">Replication<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endpoint_type_python">
 <a href="#endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Endpoint<wbr>Type</span>
+        <span class="property-type">str | <a href="#endpointtype">Endpoint<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the local volume is the source or destination for the Volume Replication{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="remote_volume_region_python">
 <a href="#remote_volume_region_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>volume_<wbr>region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The remote region for the other end of the Volume Replication.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="replication_id_python">
 <a href="#replication_id_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="replicationobjectresponse">Replication<wbr>Object<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3278,55 +3034,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="remotevolumeresourceid_csharp">
 <a href="#remotevolumeresourceid_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Volume<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the remote volume.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="replicationschedule_csharp">
 <a href="#replicationschedule_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Schedule{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endpointtype_csharp">
 <a href="#endpointtype_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the local volume is the source or destination for the Volume Replication{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="remotevolumeregion_csharp">
 <a href="#remotevolumeregion_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Volume<wbr>Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remote region for the other end of the Volume Replication.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="replicationid_csharp">
 <a href="#replicationid_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3335,55 +3085,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="remotevolumeresourceid_go">
 <a href="#remotevolumeresourceid_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Volume<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the remote volume.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="replicationschedule_go">
 <a href="#replicationschedule_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Schedule{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endpointtype_go">
 <a href="#endpointtype_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the local volume is the source or destination for the Volume Replication{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="remotevolumeregion_go">
 <a href="#remotevolumeregion_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Volume<wbr>Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remote region for the other end of the Volume Replication.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="replicationid_go">
 <a href="#replicationid_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3392,55 +3136,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="remotevolumeresourceid_nodejs">
 <a href="#remotevolumeresourceid_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Volume<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the remote volume.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="replicationschedule_nodejs">
 <a href="#replicationschedule_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Schedule{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endpointtype_nodejs">
 <a href="#endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the local volume is the source or destination for the Volume Replication{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="remotevolumeregion_nodejs">
 <a href="#remotevolumeregion_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Volume<wbr>Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remote region for the other end of the Volume Replication.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="replicationid_nodejs">
 <a href="#replicationid_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3449,67 +3187,182 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="remote_volume_resource_id_python">
 <a href="#remote_volume_resource_id_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>volume_<wbr>resource_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of the remote volume.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="replication_schedule_python">
 <a href="#replication_schedule_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Schedule{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endpoint_type_python">
 <a href="#endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether the local volume is the source or destination for the Volume Replication{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="remote_volume_region_python">
 <a href="#remote_volume_region_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>volume_<wbr>region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The remote region for the other end of the Volume Replication.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="replication_id_python">
 <a href="#replication_id_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="replicationschedule">Replication<wbr>Schedule</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Replication<wbr>Schedule_10minutely</dt>
+    <dd>_10minutely</dd>
+    <dt>Hourly</dt>
+    <dd>hourly</dd>
+    <dt>Daily</dt>
+    <dd>daily</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Replication<wbr>Schedule_10minutely</dt>
+    <dd>_10minutely</dd>
+    <dt>Replication<wbr>Schedule<wbr>Hourly</dt>
+    <dd>hourly</dd>
+    <dt>Replication<wbr>Schedule<wbr>Daily</dt>
+    <dd>daily</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Replication<wbr>Schedule_10minutely</dt>
+    <dd>_10minutely</dd>
+    <dt>Hourly</dt>
+    <dd>hourly</dd>
+    <dt>Daily</dt>
+    <dd>daily</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>REPLICATION_SCHEDULE_10MINUTELY</dt>
+    <dd>_10minutely</dd>
+    <dt>HOURLY</dt>
+    <dd>hourly</dd>
+    <dt>DAILY</dt>
+    <dd>daily</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="securitystyle">Security<wbr>Style</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Ntfs</dt>
+    <dd>ntfs</dd>
+    <dt>Unix</dt>
+    <dd>unix</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Security<wbr>Style<wbr>Ntfs</dt>
+    <dd>ntfs</dd>
+    <dt>Security<wbr>Style<wbr>Unix</dt>
+    <dd>unix</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Ntfs</dt>
+    <dd>ntfs</dd>
+    <dt>Unix</dt>
+    <dd>unix</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>NTFS</dt>
+    <dd>ntfs</dd>
+    <dt>UNIX</dt>
+    <dd>unix</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="servicelevel">Service<wbr>Level</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Standard</dt>
+    <dd>Standard{{% md %}}Standard service level{{% /md %}}</dd>
+    <dt>Premium</dt>
+    <dd>Premium{{% md %}}Premium service level{{% /md %}}</dd>
+    <dt>Ultra</dt>
+    <dd>Ultra{{% md %}}Ultra service level{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Service<wbr>Level<wbr>Standard</dt>
+    <dd>Standard{{% md %}}Standard service level{{% /md %}}</dd>
+    <dt>Service<wbr>Level<wbr>Premium</dt>
+    <dd>Premium{{% md %}}Premium service level{{% /md %}}</dd>
+    <dt>Service<wbr>Level<wbr>Ultra</dt>
+    <dd>Ultra{{% md %}}Ultra service level{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Standard</dt>
+    <dd>Standard{{% md %}}Standard service level{{% /md %}}</dd>
+    <dt>Premium</dt>
+    <dd>Premium{{% md %}}Premium service level{{% /md %}}</dd>
+    <dt>Ultra</dt>
+    <dd>Ultra{{% md %}}Ultra service level{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>STANDARD</dt>
+    <dd>Standard{{% md %}}Standard service level{{% /md %}}</dd>
+    <dt>PREMIUM</dt>
+    <dd>Premium{{% md %}}Premium service level{{% /md %}}</dd>
+    <dt>ULTRA</dt>
+    <dd>Ultra{{% md %}}Ultra service level{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="volumebackupproperties">Volume<wbr>Backup<wbr>Properties</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3517,45 +3370,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupenabled_csharp">
 <a href="#backupenabled_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Backup Enabled{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backuppolicyid_csharp">
 <a href="#backuppolicyid_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup Policy Resource ID{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyenforced_csharp">
 <a href="#policyenforced_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Enforced</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Policy Enforced{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vaultid_csharp">
 <a href="#vaultid_csharp" style="color: inherit; text-decoration: inherit;">Vault<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Vault Resource ID{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3564,45 +3412,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupenabled_go">
 <a href="#backupenabled_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Backup Enabled{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backuppolicyid_go">
 <a href="#backuppolicyid_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup Policy Resource ID{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyenforced_go">
 <a href="#policyenforced_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Enforced</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Policy Enforced{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vaultid_go">
 <a href="#vaultid_go" style="color: inherit; text-decoration: inherit;">Vault<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Vault Resource ID{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3611,45 +3454,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupenabled_nodejs">
 <a href="#backupenabled_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Backup Enabled{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backuppolicyid_nodejs">
 <a href="#backuppolicyid_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup Policy Resource ID{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyenforced_nodejs">
 <a href="#policyenforced_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Enforced</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Policy Enforced{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vaultid_nodejs">
 <a href="#vaultid_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Vault Resource ID{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3658,57 +3496,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backup_enabled_python">
 <a href="#backup_enabled_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Backup Enabled{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backup_policy_id_python">
 <a href="#backup_policy_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>policy_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Backup Policy Resource ID{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_enforced_python">
 <a href="#policy_enforced_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>enforced</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Policy Enforced{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vault_id_python">
 <a href="#vault_id_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Vault Resource ID{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="volumebackuppropertiesresponse">Volume<wbr>Backup<wbr>Properties<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3716,45 +3540,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupenabled_csharp">
 <a href="#backupenabled_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Backup Enabled{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backuppolicyid_csharp">
 <a href="#backuppolicyid_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup Policy Resource ID{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyenforced_csharp">
 <a href="#policyenforced_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Enforced</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Policy Enforced{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vaultid_csharp">
 <a href="#vaultid_csharp" style="color: inherit; text-decoration: inherit;">Vault<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Vault Resource ID{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3763,45 +3582,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupenabled_go">
 <a href="#backupenabled_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Backup Enabled{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backuppolicyid_go">
 <a href="#backuppolicyid_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup Policy Resource ID{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyenforced_go">
 <a href="#policyenforced_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Enforced</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Policy Enforced{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vaultid_go">
 <a href="#vaultid_go" style="color: inherit; text-decoration: inherit;">Vault<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Vault Resource ID{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3810,45 +3624,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupenabled_nodejs">
 <a href="#backupenabled_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Backup Enabled{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backuppolicyid_nodejs">
 <a href="#backuppolicyid_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup Policy Resource ID{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyenforced_nodejs">
 <a href="#policyenforced_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Enforced</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Policy Enforced{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vaultid_nodejs">
 <a href="#vaultid_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Vault Resource ID{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3857,56 +3666,42 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backup_enabled_python">
 <a href="#backup_enabled_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Backup Enabled{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backup_policy_id_python">
 <a href="#backup_policy_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>policy_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Backup Policy Resource ID{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_enforced_python">
 <a href="#policy_enforced_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>enforced</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Policy Enforced{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vault_id_python">
 <a href="#vault_id_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Vault Resource ID{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="volumepropertiesdataprotection">Volume<wbr>Properties<wbr>Data<wbr>Protection</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3915,35 +3710,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backup_csharp">
 <a href="#backup_csharp" style="color: inherit; text-decoration: inherit;">Backup</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumebackupproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Volume<wbr>Backup<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup Properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="replication_csharp">
 <a href="#replication_csharp" style="color: inherit; text-decoration: inherit;">Replication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#replicationobject">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Replication<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Replication properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snapshot_csharp">
 <a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumesnapshotproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Volume<wbr>Snapshot<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Snapshot properties.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3952,35 +3743,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backup_go">
 <a href="#backup_go" style="color: inherit; text-decoration: inherit;">Backup</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumebackupproperties">Volume<wbr>Backup<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Backup Properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="replication_go">
 <a href="#replication_go" style="color: inherit; text-decoration: inherit;">Replication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#replicationobject">Replication<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}Replication properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snapshot_go">
 <a href="#snapshot_go" style="color: inherit; text-decoration: inherit;">Snapshot</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumesnapshotproperties">Volume<wbr>Snapshot<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Snapshot properties.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3989,35 +3776,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backup_nodejs">
 <a href="#backup_nodejs" style="color: inherit; text-decoration: inherit;">backup</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumebackupproperties">Volume<wbr>Backup<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Backup Properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="replication_nodejs">
 <a href="#replication_nodejs" style="color: inherit; text-decoration: inherit;">replication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#replicationobject">Replication<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}Replication properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snapshot_nodejs">
 <a href="#snapshot_nodejs" style="color: inherit; text-decoration: inherit;">snapshot</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumesnapshotproperties">Volume<wbr>Snapshot<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Snapshot properties.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4026,46 +3809,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backup_python">
 <a href="#backup_python" style="color: inherit; text-decoration: inherit;">backup</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumebackupproperties">Volume<wbr>Backup<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup Properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="replication_python">
 <a href="#replication_python" style="color: inherit; text-decoration: inherit;">replication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#replicationobject">Replication<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Replication properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snapshot_python">
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumesnapshotproperties">Volume<wbr>Snapshot<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Snapshot properties.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="volumepropertiesexportpolicy">Volume<wbr>Properties<wbr>Export<wbr>Policy</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4074,15 +3844,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportpolicyrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Export<wbr>Policy<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Export policy rule{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4091,15 +3859,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportpolicyrule">[]Export<wbr>Policy<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Export policy rule{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4108,15 +3874,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportpolicyrule">Export<wbr>Policy<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Export policy rule{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4125,26 +3889,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportpolicyrule">Sequence[Export<wbr>Policy<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Export policy rule{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="volumepropertiesresponsedataprotection">Volume<wbr>Properties<wbr>Response<wbr>Data<wbr>Protection</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4153,35 +3906,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backup_csharp">
 <a href="#backup_csharp" style="color: inherit; text-decoration: inherit;">Backup</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumebackuppropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Volume<wbr>Backup<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup Properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="replication_csharp">
 <a href="#replication_csharp" style="color: inherit; text-decoration: inherit;">Replication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#replicationobjectresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Replication<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Replication properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snapshot_csharp">
 <a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumesnapshotpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Volume<wbr>Snapshot<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Snapshot properties.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4190,35 +3939,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backup_go">
 <a href="#backup_go" style="color: inherit; text-decoration: inherit;">Backup</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumebackuppropertiesresponse">Volume<wbr>Backup<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup Properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="replication_go">
 <a href="#replication_go" style="color: inherit; text-decoration: inherit;">Replication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#replicationobjectresponse">Replication<wbr>Object<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Replication properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snapshot_go">
 <a href="#snapshot_go" style="color: inherit; text-decoration: inherit;">Snapshot</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumesnapshotpropertiesresponse">Volume<wbr>Snapshot<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Snapshot properties.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4227,35 +3972,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backup_nodejs">
 <a href="#backup_nodejs" style="color: inherit; text-decoration: inherit;">backup</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumebackuppropertiesresponse">Volume<wbr>Backup<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup Properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="replication_nodejs">
 <a href="#replication_nodejs" style="color: inherit; text-decoration: inherit;">replication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#replicationobjectresponse">Replication<wbr>Object<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Replication properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snapshot_nodejs">
 <a href="#snapshot_nodejs" style="color: inherit; text-decoration: inherit;">snapshot</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumesnapshotpropertiesresponse">Volume<wbr>Snapshot<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Snapshot properties.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4264,46 +4005,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backup_python">
 <a href="#backup_python" style="color: inherit; text-decoration: inherit;">backup</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumebackuppropertiesresponse">Volume<wbr>Backup<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup Properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="replication_python">
 <a href="#replication_python" style="color: inherit; text-decoration: inherit;">replication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#replicationobjectresponse">Replication<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Replication properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snapshot_python">
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumesnapshotpropertiesresponse">Volume<wbr>Snapshot<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Snapshot properties.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="volumepropertiesresponseexportpolicy">Volume<wbr>Properties<wbr>Response<wbr>Export<wbr>Policy</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4312,15 +4040,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportpolicyruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Export<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Export policy rule{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4329,15 +4055,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportpolicyruleresponse">[]Export<wbr>Policy<wbr>Rule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Export policy rule{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4346,15 +4070,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportpolicyruleresponse">Export<wbr>Policy<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Export policy rule{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4363,27 +4085,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportpolicyruleresponse">Sequence[Export<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Export policy rule{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="volumesnapshotproperties">Volume<wbr>Snapshot<wbr>Properties</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4391,15 +4102,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="snapshotpolicyid_csharp">
 <a href="#snapshotpolicyid_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Snapshot Policy ResourceId{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4408,15 +4117,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="snapshotpolicyid_go">
 <a href="#snapshotpolicyid_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Snapshot Policy ResourceId{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4425,15 +4132,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="snapshotpolicyid_nodejs">
 <a href="#snapshotpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Snapshot Policy ResourceId{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4442,27 +4147,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="snapshot_policy_id_python">
 <a href="#snapshot_policy_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>policy_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Snapshot Policy ResourceId{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="volumesnapshotpropertiesresponse">Volume<wbr>Snapshot<wbr>Properties<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4470,15 +4164,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="snapshotpolicyid_csharp">
 <a href="#snapshotpolicyid_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Snapshot Policy ResourceId{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4487,15 +4179,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="snapshotpolicyid_go">
 <a href="#snapshotpolicyid_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Snapshot Policy ResourceId{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4504,15 +4194,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="snapshotpolicyid_nodejs">
 <a href="#snapshotpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Snapshot Policy ResourceId{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4521,21 +4209,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="snapshot_policy_id_python">
 <a href="#snapshot_policy_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>policy_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Snapshot Policy ResourceId{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+An existing resource can be imported using its type token, name, and identifier, e.g.
 
-
-
-
-
+```sh
+$ pulumi import azure-nextgen:netapp/latest:Volume account1/pool1/volume1 /subscriptions/D633CC2E-722B-4AE1-B636-BBD9E4C60ED9/resourceGroups/myRG/providers/Microsoft.NetApp/netAppAccounts/account1/capacityPools/pool1/volumes/volume1 
+```
 
 
 

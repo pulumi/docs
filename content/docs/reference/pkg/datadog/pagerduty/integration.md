@@ -1,7 +1,7 @@
 
 ---
 title: "Integration"
-title_tag: "Resource Integration | Module pagerduty | Package Datadog"
+title_tag: "datadog.pagerduty.Integration"
 meta_desc: "Explore the Integration resource of the pagerduty module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Datadog - PagerDuty resource. This can be used to create and manage Datadog - PagerDuty integration. This resource is deprecated and should only be used for legacy purposes."
 ---
 
@@ -131,11 +131,11 @@ pd = datadog.pagerduty.Integration("pd",
 testing_foo = datadog.pagerduty.ServiceObject("testingFoo",
     service_key="9876543210123456789",
     service_name="testing_foo",
-    opts=ResourceOptions(depends_on=["datadog_integration_pagerduty.pd"]))
+    opts=pulumi.ResourceOptions(depends_on=["datadog_integration_pagerduty.pd"]))
 testing_bar = datadog.pagerduty.ServiceObject("testingBar",
     service_key="54321098765432109876",
     service_name="testing_bar",
-    opts=ResourceOptions(depends_on=["datadog_integration_pagerduty.pd"]))
+    opts=pulumi.ResourceOptions(depends_on=["datadog_integration_pagerduty.pd"]))
 ```
 
 {{% /example %}}

@@ -17,6 +17,7 @@ Explore the resources and functions of the dcdn module in the AliCloud package.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getdomains" title="GetDomains"><span class="symbol function"></span>GetDomains</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -28,7 +29,7 @@ Explore the resources and functions of the dcdn module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.27.0</dd>
+	<dd>2.30.0</dd>
 </dl>
 
 

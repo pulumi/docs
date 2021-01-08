@@ -47,7 +47,6 @@ meta_desc: "Explore the GetJob function of the batchai module, including example
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -55,45 +54,40 @@ The following arguments are supported:
             title="Required">
         <span id="experimentname_csharp">
 <a href="#experimentname_csharp" style="color: inherit; text-decoration: inherit;">Experiment<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the experiment. Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="jobname_csharp">
 <a href="#jobname_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the job within the specified resource group. Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="workspacename_csharp">
 <a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the workspace. Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -102,45 +96,40 @@ The following arguments are supported:
             title="Required">
         <span id="experimentname_go">
 <a href="#experimentname_go" style="color: inherit; text-decoration: inherit;">Experiment<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the experiment. Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="jobname_go">
 <a href="#jobname_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the job within the specified resource group. Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="workspacename_go">
 <a href="#workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the workspace. Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -149,45 +138,40 @@ The following arguments are supported:
             title="Required">
         <span id="experimentname_nodejs">
 <a href="#experimentname_nodejs" style="color: inherit; text-decoration: inherit;">experiment<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the experiment. Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="jobname_nodejs">
 <a href="#jobname_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the job within the specified resource group. Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="workspacename_nodejs">
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the workspace. Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -196,48 +180,40 @@ The following arguments are supported:
             title="Required">
         <span id="experiment_name_python">
 <a href="#experiment_name_python" style="color: inherit; text-decoration: inherit;">experiment_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the experiment. Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="job_name_python">
 <a href="#job_name_python" style="color: inherit; text-decoration: inherit;">job_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the job within the specified resource group. Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="workspace_name_python">
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the workspace. Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -248,7 +224,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -256,325 +231,292 @@ The following output properties are available:
             title="">
         <span id="creationtime_csharp">
 <a href="#creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation time of the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="executionstate_csharp">
 <a href="#executionstate_csharp" style="color: inherit; text-decoration: inherit;">Execution<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the job. Possible values are: queued - The job is queued and able to run. A job enters this state when it is created, or when it is awaiting a retry after a failed run. running - The job is running on a compute cluster. This includes job-level preparation such as downloading resource files or set up container specified on the job - it does not necessarily mean that the job command line has started executing. terminating - The job is terminated by the user, the terminate operation is in progress. succeeded - The job has completed running successfully and exited with exit code 0. failed - The job has finished unsuccessfully (failed with a non-zero exit code) and has exhausted its retry limit. A job is also marked as failed if an error occurred launching the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="executionstatetransitiontime_csharp">
 <a href="#executionstatetransitiontime_csharp" style="color: inherit; text-decoration: inherit;">Execution<wbr>State<wbr>Transition<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the job entered its current execution state.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="joboutputdirectorypathsegment_csharp">
 <a href="#joboutputdirectorypathsegment_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Output<wbr>Directory<wbr>Path<wbr>Segment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A segment of job's output directories path created by Batch AI. Batch AI creates job's output directories under an unique path to avoid conflicts between jobs. This value contains a path segment generated by Batch AI to make the path unique and can be used to find the output directory on the node or mounted filesystem.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioned state of the Batch AI job{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstatetransitiontime_csharp">
 <a href="#provisioningstatetransitiontime_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State<wbr>Transition<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the job entered its current provisioning state.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="caffe2settings_csharp">
 <a href="#caffe2settings_csharp" style="color: inherit; text-decoration: inherit;">Caffe2Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#caffe2settingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Caffe2Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Caffe2 job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="caffesettings_csharp">
 <a href="#caffesettings_csharp" style="color: inherit; text-decoration: inherit;">Caffe<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#caffesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Caffe<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Caffe job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="chainersettings_csharp">
 <a href="#chainersettings_csharp" style="color: inherit; text-decoration: inherit;">Chainer<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#chainersettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Chainer<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Chainer job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="cluster_csharp">
 <a href="#cluster_csharp" style="color: inherit; text-decoration: inherit;">Cluster</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Resource<wbr>Id<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource ID of the cluster associated with the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="cntksettings_csharp">
 <a href="#cntksettings_csharp" style="color: inherit; text-decoration: inherit;">Cntk<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cntksettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>CNTKsettings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}CNTK (aka Microsoft Cognitive Toolkit) job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="constraints_csharp">
 <a href="#constraints_csharp" style="color: inherit; text-decoration: inherit;">Constraints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpropertiesresponseconstraints">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Job<wbr>Properties<wbr>Response<wbr>Constraints</a></span>
     </dt>
     <dd>{{% md %}}Constraints associated with the Job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="containersettings_csharp">
 <a href="#containersettings_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containersettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Container<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the container was downloaded as part of cluster setup then the same container image will be used. If not provided, the job will run on the VM.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="custommpisettings_csharp">
 <a href="#custommpisettings_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Mpi<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#custommpisettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Custom<wbr>Mpi<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Custom MPI job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="customtoolkitsettings_csharp">
 <a href="#customtoolkitsettings_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Toolkit<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customtoolkitsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Custom<wbr>Toolkit<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Custom tool kit job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="environmentvariables_csharp">
 <a href="#environmentvariables_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentvariableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Environment<wbr>Variable<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of user defined environment variables to be setup for the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="executioninfo_csharp">
 <a href="#executioninfo_csharp" style="color: inherit; text-decoration: inherit;">Execution<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpropertiesresponseexecutioninfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Job<wbr>Properties<wbr>Response<wbr>Execution<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information about the execution of a job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="horovodsettings_csharp">
 <a href="#horovodsettings_csharp" style="color: inherit; text-decoration: inherit;">Horovod<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#horovodsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Horovod<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the settings for Horovod job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="inputdirectories_csharp">
 <a href="#inputdirectories_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Directories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputdirectoryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Input<wbr>Directory<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of input directories for the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="jobpreparation_csharp">
 <a href="#jobpreparation_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Preparation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpreparationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Job<wbr>Preparation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The specified actions will run on all the nodes that are part of the job{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="mountvolumes_csharp">
 <a href="#mountvolumes_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Volumes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mountvolumesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Mount<wbr>Volumes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Collection of mount volumes available to the job during execution. These volumes are mounted before the job execution and unmounted after the job completion. The volumes are mounted at location specified by $AZ_BATCHAI_JOB_MOUNT_ROOT environment variable.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nodecount_csharp">
 <a href="#nodecount_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The job will be gang scheduled on that many compute nodes{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputdirectories_csharp">
 <a href="#outputdirectories_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Directories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#outputdirectoryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Output<wbr>Directory<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of output directories for the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="pytorchsettings_csharp">
 <a href="#pytorchsettings_csharp" style="color: inherit; text-decoration: inherit;">Py<wbr>Torch<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pytorchsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Py<wbr>Torch<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}pyTorch job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="schedulingpriority_csharp">
 <a href="#schedulingpriority_csharp" style="color: inherit; text-decoration: inherit;">Scheduling<wbr>Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Scheduling priority associated with the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="secrets_csharp">
 <a href="#secrets_csharp" style="color: inherit; text-decoration: inherit;">Secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentvariablewithsecretvalueresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of user defined environment variables with secret values to be setup for the job. Server will never report values of these variables back.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="stdouterrpathprefix_csharp">
 <a href="#stdouterrpathprefix_csharp" style="color: inherit; text-decoration: inherit;">Std<wbr>Out<wbr>Err<wbr>Path<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path where the Batch AI service stores stdout, stderror and execution log of the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tensorflowsettings_csharp">
 <a href="#tensorflowsettings_csharp" style="color: inherit; text-decoration: inherit;">Tensor<wbr>Flow<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tensorflowsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Tensor<wbr>Flow<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}TensorFlow job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tooltype_csharp">
 <a href="#tooltype_csharp" style="color: inherit; text-decoration: inherit;">Tool<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Possible values are: cntk, tensorflow, caffe, caffe2, chainer, pytorch, custom, custommpi, horovod.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -583,325 +525,292 @@ The following output properties are available:
             title="">
         <span id="creationtime_go">
 <a href="#creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation time of the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="executionstate_go">
 <a href="#executionstate_go" style="color: inherit; text-decoration: inherit;">Execution<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the job. Possible values are: queued - The job is queued and able to run. A job enters this state when it is created, or when it is awaiting a retry after a failed run. running - The job is running on a compute cluster. This includes job-level preparation such as downloading resource files or set up container specified on the job - it does not necessarily mean that the job command line has started executing. terminating - The job is terminated by the user, the terminate operation is in progress. succeeded - The job has completed running successfully and exited with exit code 0. failed - The job has finished unsuccessfully (failed with a non-zero exit code) and has exhausted its retry limit. A job is also marked as failed if an error occurred launching the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="executionstatetransitiontime_go">
 <a href="#executionstatetransitiontime_go" style="color: inherit; text-decoration: inherit;">Execution<wbr>State<wbr>Transition<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the job entered its current execution state.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="joboutputdirectorypathsegment_go">
 <a href="#joboutputdirectorypathsegment_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Output<wbr>Directory<wbr>Path<wbr>Segment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A segment of job's output directories path created by Batch AI. Batch AI creates job's output directories under an unique path to avoid conflicts between jobs. This value contains a path segment generated by Batch AI to make the path unique and can be used to find the output directory on the node or mounted filesystem.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioned state of the Batch AI job{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstatetransitiontime_go">
 <a href="#provisioningstatetransitiontime_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State<wbr>Transition<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the job entered its current provisioning state.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="caffe2settings_go">
 <a href="#caffe2settings_go" style="color: inherit; text-decoration: inherit;">Caffe2Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#caffe2settingsresponse">Caffe2Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Caffe2 job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="caffesettings_go">
 <a href="#caffesettings_go" style="color: inherit; text-decoration: inherit;">Caffe<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#caffesettingsresponse">Caffe<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Caffe job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="chainersettings_go">
 <a href="#chainersettings_go" style="color: inherit; text-decoration: inherit;">Chainer<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#chainersettingsresponse">Chainer<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Chainer job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="cluster_go">
 <a href="#cluster_go" style="color: inherit; text-decoration: inherit;">Cluster</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource ID of the cluster associated with the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="cntksettings_go">
 <a href="#cntksettings_go" style="color: inherit; text-decoration: inherit;">Cntk<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cntksettingsresponse">CNTKsettings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}CNTK (aka Microsoft Cognitive Toolkit) job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="constraints_go">
 <a href="#constraints_go" style="color: inherit; text-decoration: inherit;">Constraints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpropertiesresponseconstraints">Job<wbr>Properties<wbr>Response<wbr>Constraints</a></span>
     </dt>
     <dd>{{% md %}}Constraints associated with the Job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="containersettings_go">
 <a href="#containersettings_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containersettingsresponse">Container<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the container was downloaded as part of cluster setup then the same container image will be used. If not provided, the job will run on the VM.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="custommpisettings_go">
 <a href="#custommpisettings_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Mpi<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#custommpisettingsresponse">Custom<wbr>Mpi<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Custom MPI job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="customtoolkitsettings_go">
 <a href="#customtoolkitsettings_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Toolkit<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customtoolkitsettingsresponse">Custom<wbr>Toolkit<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Custom tool kit job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="environmentvariables_go">
 <a href="#environmentvariables_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentvariableresponse">[]Environment<wbr>Variable<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of user defined environment variables to be setup for the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="executioninfo_go">
 <a href="#executioninfo_go" style="color: inherit; text-decoration: inherit;">Execution<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpropertiesresponseexecutioninfo">Job<wbr>Properties<wbr>Response<wbr>Execution<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information about the execution of a job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="horovodsettings_go">
 <a href="#horovodsettings_go" style="color: inherit; text-decoration: inherit;">Horovod<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#horovodsettingsresponse">Horovod<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the settings for Horovod job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="inputdirectories_go">
 <a href="#inputdirectories_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Directories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputdirectoryresponse">[]Input<wbr>Directory<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A list of input directories for the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="jobpreparation_go">
 <a href="#jobpreparation_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Preparation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpreparationresponse">Job<wbr>Preparation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The specified actions will run on all the nodes that are part of the job{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="mountvolumes_go">
 <a href="#mountvolumes_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Volumes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mountvolumesresponse">Mount<wbr>Volumes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Collection of mount volumes available to the job during execution. These volumes are mounted before the job execution and unmounted after the job completion. The volumes are mounted at location specified by $AZ_BATCHAI_JOB_MOUNT_ROOT environment variable.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nodecount_go">
 <a href="#nodecount_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The job will be gang scheduled on that many compute nodes{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputdirectories_go">
 <a href="#outputdirectories_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Directories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#outputdirectoryresponse">[]Output<wbr>Directory<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A list of output directories for the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="pytorchsettings_go">
 <a href="#pytorchsettings_go" style="color: inherit; text-decoration: inherit;">Py<wbr>Torch<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pytorchsettingsresponse">Py<wbr>Torch<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}pyTorch job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="schedulingpriority_go">
 <a href="#schedulingpriority_go" style="color: inherit; text-decoration: inherit;">Scheduling<wbr>Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Scheduling priority associated with the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="secrets_go">
 <a href="#secrets_go" style="color: inherit; text-decoration: inherit;">Secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentvariablewithsecretvalueresponse">[]Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of user defined environment variables with secret values to be setup for the job. Server will never report values of these variables back.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="stdouterrpathprefix_go">
 <a href="#stdouterrpathprefix_go" style="color: inherit; text-decoration: inherit;">Std<wbr>Out<wbr>Err<wbr>Path<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path where the Batch AI service stores stdout, stderror and execution log of the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tensorflowsettings_go">
 <a href="#tensorflowsettings_go" style="color: inherit; text-decoration: inherit;">Tensor<wbr>Flow<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tensorflowsettingsresponse">Tensor<wbr>Flow<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}TensorFlow job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tooltype_go">
 <a href="#tooltype_go" style="color: inherit; text-decoration: inherit;">Tool<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Possible values are: cntk, tensorflow, caffe, caffe2, chainer, pytorch, custom, custommpi, horovod.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -910,325 +819,292 @@ The following output properties are available:
             title="">
         <span id="creationtime_nodejs">
 <a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation time of the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="executionstate_nodejs">
 <a href="#executionstate_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the job. Possible values are: queued - The job is queued and able to run. A job enters this state when it is created, or when it is awaiting a retry after a failed run. running - The job is running on a compute cluster. This includes job-level preparation such as downloading resource files or set up container specified on the job - it does not necessarily mean that the job command line has started executing. terminating - The job is terminated by the user, the terminate operation is in progress. succeeded - The job has completed running successfully and exited with exit code 0. failed - The job has finished unsuccessfully (failed with a non-zero exit code) and has exhausted its retry limit. A job is also marked as failed if an error occurred launching the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="executionstatetransitiontime_nodejs">
 <a href="#executionstatetransitiontime_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>State<wbr>Transition<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the job entered its current execution state.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="joboutputdirectorypathsegment_nodejs">
 <a href="#joboutputdirectorypathsegment_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Output<wbr>Directory<wbr>Path<wbr>Segment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A segment of job's output directories path created by Batch AI. Batch AI creates job's output directories under an unique path to avoid conflicts between jobs. This value contains a path segment generated by Batch AI to make the path unique and can be used to find the output directory on the node or mounted filesystem.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioned state of the Batch AI job{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstatetransitiontime_nodejs">
 <a href="#provisioningstatetransitiontime_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State<wbr>Transition<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the job entered its current provisioning state.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="caffe2settings_nodejs">
 <a href="#caffe2settings_nodejs" style="color: inherit; text-decoration: inherit;">caffe2Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#caffe2settingsresponse">Caffe2Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Caffe2 job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="caffesettings_nodejs">
 <a href="#caffesettings_nodejs" style="color: inherit; text-decoration: inherit;">caffe<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#caffesettingsresponse">Caffe<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Caffe job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="chainersettings_nodejs">
 <a href="#chainersettings_nodejs" style="color: inherit; text-decoration: inherit;">chainer<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#chainersettingsresponse">Chainer<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Chainer job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="cluster_nodejs">
 <a href="#cluster_nodejs" style="color: inherit; text-decoration: inherit;">cluster</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource ID of the cluster associated with the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="cntksettings_nodejs">
 <a href="#cntksettings_nodejs" style="color: inherit; text-decoration: inherit;">cntk<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cntksettingsresponse">CNTKsettings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}CNTK (aka Microsoft Cognitive Toolkit) job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="constraints_nodejs">
 <a href="#constraints_nodejs" style="color: inherit; text-decoration: inherit;">constraints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpropertiesresponseconstraints">Job<wbr>Properties<wbr>Response<wbr>Constraints</a></span>
     </dt>
     <dd>{{% md %}}Constraints associated with the Job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="containersettings_nodejs">
 <a href="#containersettings_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containersettingsresponse">Container<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the container was downloaded as part of cluster setup then the same container image will be used. If not provided, the job will run on the VM.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="custommpisettings_nodejs">
 <a href="#custommpisettings_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Mpi<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#custommpisettingsresponse">Custom<wbr>Mpi<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Custom MPI job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="customtoolkitsettings_nodejs">
 <a href="#customtoolkitsettings_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Toolkit<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customtoolkitsettingsresponse">Custom<wbr>Toolkit<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Custom tool kit job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="environmentvariables_nodejs">
 <a href="#environmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Variables</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentvariableresponse">Environment<wbr>Variable<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of user defined environment variables to be setup for the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="executioninfo_nodejs">
 <a href="#executioninfo_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpropertiesresponseexecutioninfo">Job<wbr>Properties<wbr>Response<wbr>Execution<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information about the execution of a job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="horovodsettings_nodejs">
 <a href="#horovodsettings_nodejs" style="color: inherit; text-decoration: inherit;">horovod<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#horovodsettingsresponse">Horovod<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the settings for Horovod job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="inputdirectories_nodejs">
 <a href="#inputdirectories_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Directories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputdirectoryresponse">Input<wbr>Directory<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of input directories for the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="jobpreparation_nodejs">
 <a href="#jobpreparation_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Preparation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpreparationresponse">Job<wbr>Preparation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The specified actions will run on all the nodes that are part of the job{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="mountvolumes_nodejs">
 <a href="#mountvolumes_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Volumes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mountvolumesresponse">Mount<wbr>Volumes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Collection of mount volumes available to the job during execution. These volumes are mounted before the job execution and unmounted after the job completion. The volumes are mounted at location specified by $AZ_BATCHAI_JOB_MOUNT_ROOT environment variable.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nodecount_nodejs">
 <a href="#nodecount_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The job will be gang scheduled on that many compute nodes{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputdirectories_nodejs">
 <a href="#outputdirectories_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Directories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#outputdirectoryresponse">Output<wbr>Directory<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of output directories for the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="pytorchsettings_nodejs">
 <a href="#pytorchsettings_nodejs" style="color: inherit; text-decoration: inherit;">py<wbr>Torch<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pytorchsettingsresponse">Py<wbr>Torch<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}pyTorch job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="schedulingpriority_nodejs">
 <a href="#schedulingpriority_nodejs" style="color: inherit; text-decoration: inherit;">scheduling<wbr>Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Scheduling priority associated with the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="secrets_nodejs">
 <a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentvariablewithsecretvalueresponse">Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of user defined environment variables with secret values to be setup for the job. Server will never report values of these variables back.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="stdouterrpathprefix_nodejs">
 <a href="#stdouterrpathprefix_nodejs" style="color: inherit; text-decoration: inherit;">std<wbr>Out<wbr>Err<wbr>Path<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path where the Batch AI service stores stdout, stderror and execution log of the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tensorflowsettings_nodejs">
 <a href="#tensorflowsettings_nodejs" style="color: inherit; text-decoration: inherit;">tensor<wbr>Flow<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tensorflowsettingsresponse">Tensor<wbr>Flow<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}TensorFlow job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tooltype_nodejs">
 <a href="#tooltype_nodejs" style="color: inherit; text-decoration: inherit;">tool<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Possible values are: cntk, tensorflow, caffe, caffe2, chainer, pytorch, custom, custommpi, horovod.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1237,328 +1113,292 @@ The following output properties are available:
             title="">
         <span id="creation_time_python">
 <a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creation time of the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="execution_state_python">
 <a href="#execution_state_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current state of the job. Possible values are: queued - The job is queued and able to run. A job enters this state when it is created, or when it is awaiting a retry after a failed run. running - The job is running on a compute cluster. This includes job-level preparation such as downloading resource files or set up container specified on the job - it does not necessarily mean that the job command line has started executing. terminating - The job is terminated by the user, the terminate operation is in progress. succeeded - The job has completed running successfully and exited with exit code 0. failed - The job has finished unsuccessfully (failed with a non-zero exit code) and has exhausted its retry limit. A job is also marked as failed if an error occurred launching the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="execution_state_transition_time_python">
 <a href="#execution_state_transition_time_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>state_<wbr>transition_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which the job entered its current execution state.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="job_output_directory_path_segment_python">
 <a href="#job_output_directory_path_segment_python" style="color: inherit; text-decoration: inherit;">job_<wbr>output_<wbr>directory_<wbr>path_<wbr>segment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A segment of job's output directories path created by Batch AI. Batch AI creates job's output directories under an unique path to avoid conflicts between jobs. This value contains a path segment generated by Batch AI to make the path unique and can be used to find the output directory on the node or mounted filesystem.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provisioned state of the Batch AI job{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioning_state_transition_time_python">
 <a href="#provisioning_state_transition_time_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state_<wbr>transition_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which the job entered its current provisioning state.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="caffe2_settings_python">
 <a href="#caffe2_settings_python" style="color: inherit; text-decoration: inherit;">caffe2_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#caffe2settingsresponse">Caffe2Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Caffe2 job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="caffe_settings_python">
 <a href="#caffe_settings_python" style="color: inherit; text-decoration: inherit;">caffe_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#caffesettingsresponse">Caffe<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Caffe job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="chainer_settings_python">
 <a href="#chainer_settings_python" style="color: inherit; text-decoration: inherit;">chainer_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#chainersettingsresponse">Chainer<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Chainer job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="cluster_python">
 <a href="#cluster_python" style="color: inherit; text-decoration: inherit;">cluster</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource ID of the cluster associated with the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="cntk_settings_python">
 <a href="#cntk_settings_python" style="color: inherit; text-decoration: inherit;">cntk_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cntksettingsresponse">CNTKsettings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}CNTK (aka Microsoft Cognitive Toolkit) job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="constraints_python">
 <a href="#constraints_python" style="color: inherit; text-decoration: inherit;">constraints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpropertiesresponseconstraints">Job<wbr>Properties<wbr>Response<wbr>Constraints</a></span>
     </dt>
     <dd>{{% md %}}Constraints associated with the Job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="container_settings_python">
 <a href="#container_settings_python" style="color: inherit; text-decoration: inherit;">container_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containersettingsresponse">Container<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the container was downloaded as part of cluster setup then the same container image will be used. If not provided, the job will run on the VM.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="custom_mpi_settings_python">
 <a href="#custom_mpi_settings_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>mpi_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#custommpisettingsresponse">Custom<wbr>Mpi<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Custom MPI job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="custom_toolkit_settings_python">
 <a href="#custom_toolkit_settings_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>toolkit_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customtoolkitsettingsresponse">Custom<wbr>Toolkit<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Custom tool kit job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="environment_variables_python">
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentvariableresponse">Sequence[Environment<wbr>Variable<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A collection of user defined environment variables to be setup for the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="execution_info_python">
 <a href="#execution_info_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpropertiesresponseexecutioninfo">Job<wbr>Properties<wbr>Response<wbr>Execution<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information about the execution of a job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="horovod_settings_python">
 <a href="#horovod_settings_python" style="color: inherit; text-decoration: inherit;">horovod_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#horovodsettingsresponse">Horovod<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the settings for Horovod job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="input_directories_python">
 <a href="#input_directories_python" style="color: inherit; text-decoration: inherit;">input_<wbr>directories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputdirectoryresponse">Sequence[Input<wbr>Directory<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of input directories for the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="job_preparation_python">
 <a href="#job_preparation_python" style="color: inherit; text-decoration: inherit;">job_<wbr>preparation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpreparationresponse">Job<wbr>Preparation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The specified actions will run on all the nodes that are part of the job{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="mount_volumes_python">
 <a href="#mount_volumes_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>volumes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mountvolumesresponse">Mount<wbr>Volumes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Collection of mount volumes available to the job during execution. These volumes are mounted before the job execution and unmounted after the job completion. The volumes are mounted at location specified by $AZ_BATCHAI_JOB_MOUNT_ROOT environment variable.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="node_count_python">
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The job will be gang scheduled on that many compute nodes{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="output_directories_python">
 <a href="#output_directories_python" style="color: inherit; text-decoration: inherit;">output_<wbr>directories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#outputdirectoryresponse">Sequence[Output<wbr>Directory<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of output directories for the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="py_torch_settings_python">
 <a href="#py_torch_settings_python" style="color: inherit; text-decoration: inherit;">py_<wbr>torch_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pytorchsettingsresponse">Py<wbr>Torch<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}pyTorch job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="scheduling_priority_python">
 <a href="#scheduling_priority_python" style="color: inherit; text-decoration: inherit;">scheduling_<wbr>priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Scheduling priority associated with the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="secrets_python">
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentvariablewithsecretvalueresponse">Sequence[Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A collection of user defined environment variables with secret values to be setup for the job. Server will never report values of these variables back.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="std_out_err_path_prefix_python">
 <a href="#std_out_err_path_prefix_python" style="color: inherit; text-decoration: inherit;">std_<wbr>out_<wbr>err_<wbr>path_<wbr>prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path where the Batch AI service stores stdout, stderror and execution log of the job.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tensor_flow_settings_python">
 <a href="#tensor_flow_settings_python" style="color: inherit; text-decoration: inherit;">tensor_<wbr>flow_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tensorflowsettingsresponse">Tensor<wbr>Flow<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}TensorFlow job settings.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tool_type_python">
 <a href="#tool_type_python" style="color: inherit; text-decoration: inherit;">tool_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Possible values are: cntk, tensorflow, caffe, caffe2, chainer, pytorch, custom, custommpi, horovod.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1573,7 +1413,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1581,55 +1420,49 @@ The following output properties are available:
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="containername_csharp">
 <a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Blob Storage container to mount on the cluster.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="credentials_csharp">
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="relativemountpath_csharp">
 <a href="#relativemountpath_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Mount<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the Azure File container will be mounted. Note that all cluster level containers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level containers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mountoptions_csharp">
 <a href="#mountoptions_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mount options for mounting blobfuse file system.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1638,55 +1471,49 @@ The following output properties are available:
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="containername_go">
 <a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Blob Storage container to mount on the cluster.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="credentials_go">
 <a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="relativemountpath_go">
 <a href="#relativemountpath_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Mount<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the Azure File container will be mounted. Note that all cluster level containers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level containers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mountoptions_go">
 <a href="#mountoptions_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mount options for mounting blobfuse file system.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1695,55 +1522,49 @@ The following output properties are available:
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="containername_nodejs">
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Blob Storage container to mount on the cluster.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="credentials_nodejs">
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="relativemountpath_nodejs">
 <a href="#relativemountpath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the Azure File container will be mounted. Note that all cluster level containers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level containers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mountoptions_nodejs">
 <a href="#mountoptions_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mount options for mounting blobfuse file system.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1752,58 +1573,49 @@ The following output properties are available:
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="container_name_python">
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Blob Storage container to mount on the cluster.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="credentials_python">
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="relative_mount_path_python">
 <a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the Azure File container will be mounted. Note that all cluster level containers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level containers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mount_options_python">
 <a href="#mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mount options for mounting blobfuse file system.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="azurefilesharereferenceresponse">Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Response</h4>
 
@@ -1812,7 +1624,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1820,65 +1631,58 @@ The following output properties are available:
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurefileurl_csharp">
 <a href="#azurefileurl_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>File<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to access the Azure File.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="credentials_csharp">
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="relativemountpath_csharp">
 <a href="#relativemountpath_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Mount<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the Azure File share will be mounted. Note that all cluster level file shares will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file shares will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="directorymode_csharp">
 <a href="#directorymode_csharp" style="color: inherit; text-decoration: inherit;">Directory<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File mode for directories on the mounted file share. Default value: 0777.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filemode_csharp">
 <a href="#filemode_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File mode for files on the mounted file share. Default value: 0777.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1887,65 +1691,58 @@ The following output properties are available:
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurefileurl_go">
 <a href="#azurefileurl_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>File<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to access the Azure File.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="credentials_go">
 <a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="relativemountpath_go">
 <a href="#relativemountpath_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Mount<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the Azure File share will be mounted. Note that all cluster level file shares will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file shares will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="directorymode_go">
 <a href="#directorymode_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File mode for directories on the mounted file share. Default value: 0777.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filemode_go">
 <a href="#filemode_go" style="color: inherit; text-decoration: inherit;">File<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File mode for files on the mounted file share. Default value: 0777.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1954,65 +1751,58 @@ The following output properties are available:
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurefileurl_nodejs">
 <a href="#azurefileurl_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to access the Azure File.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="credentials_nodejs">
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="relativemountpath_nodejs">
 <a href="#relativemountpath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the Azure File share will be mounted. Note that all cluster level file shares will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file shares will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="directorymode_nodejs">
 <a href="#directorymode_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File mode for directories on the mounted file share. Default value: 0777.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filemode_nodejs">
 <a href="#filemode_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File mode for files on the mounted file share. Default value: 0777.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2021,71 +1811,60 @@ The following output properties are available:
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azure_file_url_python">
 <a href="#azure_file_url_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL to access the Azure File.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="credentials_python">
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="relative_mount_path_python">
 <a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the Azure File share will be mounted. Note that all cluster level file shares will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file shares will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="directory_mode_python">
 <a href="#directory_mode_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}File mode for directories on the mounted file share. Default value: 0777.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="file_mode_python">
 <a href="#file_mode_python" style="color: inherit; text-decoration: inherit;">file_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}File mode for files on the mounted file share. Default value: 0777.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response</h4>
-
 
 
 
@@ -2099,25 +1878,22 @@ The following output properties are available:
             title="Optional">
         <span id="accountkey_csharp">
 <a href="#accountkey_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="accountkeysecretreference_csharp">
 <a href="#accountkeysecretreference_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Key<wbr>Secret<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2126,25 +1902,22 @@ The following output properties are available:
             title="Optional">
         <span id="accountkey_go">
 <a href="#accountkey_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="accountkeysecretreference_go">
 <a href="#accountkeysecretreference_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Key<wbr>Secret<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2153,25 +1926,22 @@ The following output properties are available:
             title="Optional">
         <span id="accountkey_nodejs">
 <a href="#accountkey_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="accountkeysecretreference_nodejs">
 <a href="#accountkeysecretreference_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Key<wbr>Secret<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2180,31 +1950,24 @@ The following output properties are available:
             title="Optional">
         <span id="account_key_python">
 <a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="account_key_secret_reference_python">
 <a href="#account_key_secret_reference_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key_<wbr>secret_<wbr>reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="batchaierrorresponse">Batch<wbr>AIError<wbr>Response</h4>
-
 
 
 
@@ -2218,35 +1981,31 @@ The following output properties are available:
             title="Required">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An identifier of the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="details_csharp">
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namevaluepairresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Name<wbr>Value<wbr>Pair<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2255,35 +2014,31 @@ The following output properties are available:
             title="Required">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An identifier of the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="details_go">
 <a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namevaluepairresponse">[]Name<wbr>Value<wbr>Pair<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2292,35 +2047,31 @@ The following output properties are available:
             title="Required">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An identifier of the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="details_nodejs">
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namevaluepairresponse">Name<wbr>Value<wbr>Pair<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2329,38 +2080,31 @@ The following output properties are available:
             title="Required">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An identifier of the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="details_python">
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namevaluepairresponse">Sequence[Name<wbr>Value<wbr>Pair<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="cntksettingsresponse">CNTKsettings<wbr>Response</h4>
 
@@ -2369,7 +2113,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2377,65 +2120,58 @@ The following output properties are available:
             title="Optional">
         <span id="commandlineargs_csharp">
 <a href="#commandlineargs_csharp" style="color: inherit; text-decoration: inherit;">Command<wbr>Line<wbr>Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script or cntk executable.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configfilepath_csharp">
 <a href="#configfilepath_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>File<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the path of the BrainScript config file. This property can be specified only if the languageType is 'BrainScript'.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="languagetype_csharp">
 <a href="#languagetype_csharp" style="color: inherit; text-decoration: inherit;">Language<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language to use for launching CNTK (aka Microsoft Cognitive Toolkit) job. Valid values are 'BrainScript' or 'Python'.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="processcount_csharp">
 <a href="#processcount_csharp" style="color: inherit; text-decoration: inherit;">Process<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pythoninterpreterpath_csharp">
 <a href="#pythoninterpreterpath_csharp" style="color: inherit; text-decoration: inherit;">Python<wbr>Interpreter<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter. This property can be specified only if the languageType is 'Python'.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pythonscriptfilepath_csharp">
 <a href="#pythonscriptfilepath_csharp" style="color: inherit; text-decoration: inherit;">Python<wbr>Script<wbr>File<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Python script to execute. This property can be specified only if the languageType is 'Python'.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2444,65 +2180,58 @@ The following output properties are available:
             title="Optional">
         <span id="commandlineargs_go">
 <a href="#commandlineargs_go" style="color: inherit; text-decoration: inherit;">Command<wbr>Line<wbr>Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script or cntk executable.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configfilepath_go">
 <a href="#configfilepath_go" style="color: inherit; text-decoration: inherit;">Config<wbr>File<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the path of the BrainScript config file. This property can be specified only if the languageType is 'BrainScript'.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="languagetype_go">
 <a href="#languagetype_go" style="color: inherit; text-decoration: inherit;">Language<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language to use for launching CNTK (aka Microsoft Cognitive Toolkit) job. Valid values are 'BrainScript' or 'Python'.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="processcount_go">
 <a href="#processcount_go" style="color: inherit; text-decoration: inherit;">Process<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pythoninterpreterpath_go">
 <a href="#pythoninterpreterpath_go" style="color: inherit; text-decoration: inherit;">Python<wbr>Interpreter<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter. This property can be specified only if the languageType is 'Python'.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pythonscriptfilepath_go">
 <a href="#pythonscriptfilepath_go" style="color: inherit; text-decoration: inherit;">Python<wbr>Script<wbr>File<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Python script to execute. This property can be specified only if the languageType is 'Python'.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2511,65 +2240,58 @@ The following output properties are available:
             title="Optional">
         <span id="commandlineargs_nodejs">
 <a href="#commandlineargs_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line<wbr>Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script or cntk executable.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configfilepath_nodejs">
 <a href="#configfilepath_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>File<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the path of the BrainScript config file. This property can be specified only if the languageType is 'BrainScript'.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="languagetype_nodejs">
 <a href="#languagetype_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language to use for launching CNTK (aka Microsoft Cognitive Toolkit) job. Valid values are 'BrainScript' or 'Python'.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="processcount_nodejs">
 <a href="#processcount_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pythoninterpreterpath_nodejs">
 <a href="#pythoninterpreterpath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Interpreter<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter. This property can be specified only if the languageType is 'Python'.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pythonscriptfilepath_nodejs">
 <a href="#pythonscriptfilepath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Script<wbr>File<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Python script to execute. This property can be specified only if the languageType is 'Python'.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2578,68 +2300,58 @@ The following output properties are available:
             title="Optional">
         <span id="command_line_args_python">
 <a href="#command_line_args_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line_<wbr>args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script or cntk executable.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="config_file_path_python">
 <a href="#config_file_path_python" style="color: inherit; text-decoration: inherit;">config_<wbr>file_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the path of the BrainScript config file. This property can be specified only if the languageType is 'BrainScript'.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="language_type_python">
 <a href="#language_type_python" style="color: inherit; text-decoration: inherit;">language_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The language to use for launching CNTK (aka Microsoft Cognitive Toolkit) job. Valid values are 'BrainScript' or 'Python'.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="process_count_python">
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="python_interpreter_path_python">
 <a href="#python_interpreter_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>interpreter_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter. This property can be specified only if the languageType is 'Python'.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="python_script_file_path_python">
 <a href="#python_script_file_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>script_<wbr>file_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Python script to execute. This property can be specified only if the languageType is 'Python'.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="caffe2settingsresponse">Caffe2Settings<wbr>Response</h4>
 
@@ -2648,7 +2360,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2656,35 +2367,31 @@ The following output properties are available:
             title="Required">
         <span id="pythonscriptfilepath_csharp">
 <a href="#pythonscriptfilepath_csharp" style="color: inherit; text-decoration: inherit;">Python<wbr>Script<wbr>File<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="commandlineargs_csharp">
 <a href="#commandlineargs_csharp" style="color: inherit; text-decoration: inherit;">Command<wbr>Line<wbr>Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pythoninterpreterpath_csharp">
 <a href="#pythoninterpreterpath_csharp" style="color: inherit; text-decoration: inherit;">Python<wbr>Interpreter<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2693,35 +2400,31 @@ The following output properties are available:
             title="Required">
         <span id="pythonscriptfilepath_go">
 <a href="#pythonscriptfilepath_go" style="color: inherit; text-decoration: inherit;">Python<wbr>Script<wbr>File<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="commandlineargs_go">
 <a href="#commandlineargs_go" style="color: inherit; text-decoration: inherit;">Command<wbr>Line<wbr>Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pythoninterpreterpath_go">
 <a href="#pythoninterpreterpath_go" style="color: inherit; text-decoration: inherit;">Python<wbr>Interpreter<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2730,35 +2433,31 @@ The following output properties are available:
             title="Required">
         <span id="pythonscriptfilepath_nodejs">
 <a href="#pythonscriptfilepath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Script<wbr>File<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="commandlineargs_nodejs">
 <a href="#commandlineargs_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line<wbr>Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pythoninterpreterpath_nodejs">
 <a href="#pythoninterpreterpath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Interpreter<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2767,38 +2466,31 @@ The following output properties are available:
             title="Required">
         <span id="python_script_file_path_python">
 <a href="#python_script_file_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>script_<wbr>file_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="command_line_args_python">
 <a href="#command_line_args_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line_<wbr>args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="python_interpreter_path_python">
 <a href="#python_interpreter_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>interpreter_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="caffesettingsresponse">Caffe<wbr>Settings<wbr>Response</h4>
 
@@ -2807,7 +2499,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2815,55 +2506,49 @@ The following output properties are available:
             title="Optional">
         <span id="commandlineargs_csharp">
 <a href="#commandlineargs_csharp" style="color: inherit; text-decoration: inherit;">Command<wbr>Line<wbr>Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the Caffe job.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configfilepath_csharp">
 <a href="#configfilepath_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>File<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path of the config file for the job. This property cannot be specified if pythonScriptFilePath is specified.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="processcount_csharp">
 <a href="#processcount_csharp" style="color: inherit; text-decoration: inherit;">Process<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pythoninterpreterpath_csharp">
 <a href="#pythoninterpreterpath_csharp" style="color: inherit; text-decoration: inherit;">Python<wbr>Interpreter<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter. The property can be specified only if the pythonScriptFilePath is specified.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pythonscriptfilepath_csharp">
 <a href="#pythonscriptfilepath_csharp" style="color: inherit; text-decoration: inherit;">Python<wbr>Script<wbr>File<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Python script to execute. This property cannot be specified if configFilePath is specified.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2872,55 +2557,49 @@ The following output properties are available:
             title="Optional">
         <span id="commandlineargs_go">
 <a href="#commandlineargs_go" style="color: inherit; text-decoration: inherit;">Command<wbr>Line<wbr>Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the Caffe job.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configfilepath_go">
 <a href="#configfilepath_go" style="color: inherit; text-decoration: inherit;">Config<wbr>File<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path of the config file for the job. This property cannot be specified if pythonScriptFilePath is specified.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="processcount_go">
 <a href="#processcount_go" style="color: inherit; text-decoration: inherit;">Process<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pythoninterpreterpath_go">
 <a href="#pythoninterpreterpath_go" style="color: inherit; text-decoration: inherit;">Python<wbr>Interpreter<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter. The property can be specified only if the pythonScriptFilePath is specified.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pythonscriptfilepath_go">
 <a href="#pythonscriptfilepath_go" style="color: inherit; text-decoration: inherit;">Python<wbr>Script<wbr>File<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Python script to execute. This property cannot be specified if configFilePath is specified.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2929,55 +2608,49 @@ The following output properties are available:
             title="Optional">
         <span id="commandlineargs_nodejs">
 <a href="#commandlineargs_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line<wbr>Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the Caffe job.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configfilepath_nodejs">
 <a href="#configfilepath_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>File<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path of the config file for the job. This property cannot be specified if pythonScriptFilePath is specified.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="processcount_nodejs">
 <a href="#processcount_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pythoninterpreterpath_nodejs">
 <a href="#pythoninterpreterpath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Interpreter<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter. The property can be specified only if the pythonScriptFilePath is specified.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pythonscriptfilepath_nodejs">
 <a href="#pythonscriptfilepath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Script<wbr>File<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Python script to execute. This property cannot be specified if configFilePath is specified.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2986,58 +2659,49 @@ The following output properties are available:
             title="Optional">
         <span id="command_line_args_python">
 <a href="#command_line_args_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line_<wbr>args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the Caffe job.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="config_file_path_python">
 <a href="#config_file_path_python" style="color: inherit; text-decoration: inherit;">config_<wbr>file_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path of the config file for the job. This property cannot be specified if pythonScriptFilePath is specified.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="process_count_python">
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="python_interpreter_path_python">
 <a href="#python_interpreter_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>interpreter_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter. The property can be specified only if the pythonScriptFilePath is specified.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="python_script_file_path_python">
 <a href="#python_script_file_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>script_<wbr>file_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Python script to execute. This property cannot be specified if configFilePath is specified.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="chainersettingsresponse">Chainer<wbr>Settings<wbr>Response</h4>
 
@@ -3046,7 +2710,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3054,45 +2717,40 @@ The following output properties are available:
             title="Required">
         <span id="pythonscriptfilepath_csharp">
 <a href="#pythonscriptfilepath_csharp" style="color: inherit; text-decoration: inherit;">Python<wbr>Script<wbr>File<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="commandlineargs_csharp">
 <a href="#commandlineargs_csharp" style="color: inherit; text-decoration: inherit;">Command<wbr>Line<wbr>Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="processcount_csharp">
 <a href="#processcount_csharp" style="color: inherit; text-decoration: inherit;">Process<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pythoninterpreterpath_csharp">
 <a href="#pythoninterpreterpath_csharp" style="color: inherit; text-decoration: inherit;">Python<wbr>Interpreter<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3101,45 +2759,40 @@ The following output properties are available:
             title="Required">
         <span id="pythonscriptfilepath_go">
 <a href="#pythonscriptfilepath_go" style="color: inherit; text-decoration: inherit;">Python<wbr>Script<wbr>File<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="commandlineargs_go">
 <a href="#commandlineargs_go" style="color: inherit; text-decoration: inherit;">Command<wbr>Line<wbr>Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="processcount_go">
 <a href="#processcount_go" style="color: inherit; text-decoration: inherit;">Process<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pythoninterpreterpath_go">
 <a href="#pythoninterpreterpath_go" style="color: inherit; text-decoration: inherit;">Python<wbr>Interpreter<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3148,45 +2801,40 @@ The following output properties are available:
             title="Required">
         <span id="pythonscriptfilepath_nodejs">
 <a href="#pythonscriptfilepath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Script<wbr>File<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="commandlineargs_nodejs">
 <a href="#commandlineargs_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line<wbr>Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="processcount_nodejs">
 <a href="#processcount_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pythoninterpreterpath_nodejs">
 <a href="#pythoninterpreterpath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Interpreter<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3195,51 +2843,42 @@ The following output properties are available:
             title="Required">
         <span id="python_script_file_path_python">
 <a href="#python_script_file_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>script_<wbr>file_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="command_line_args_python">
 <a href="#command_line_args_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line_<wbr>args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="process_count_python">
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="python_interpreter_path_python">
 <a href="#python_interpreter_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>interpreter_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="containersettingsresponse">Container<wbr>Settings<wbr>Response</h4>
-
 
 
 
@@ -3253,25 +2892,22 @@ The following output properties are available:
             title="Required">
         <span id="imagesourceregistry_csharp">
 <a href="#imagesourceregistry_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Source<wbr>Registry</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagesourceregistryresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Image<wbr>Source<wbr>Registry<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about docker image and docker registry to download the container from.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shmsize_csharp">
 <a href="#shmsize_csharp" style="color: inherit; text-decoration: inherit;">Shm<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of /dev/shm. Please refer to docker documentation for supported argument formats.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3280,25 +2916,22 @@ The following output properties are available:
             title="Required">
         <span id="imagesourceregistry_go">
 <a href="#imagesourceregistry_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Source<wbr>Registry</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagesourceregistryresponse">Image<wbr>Source<wbr>Registry<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about docker image and docker registry to download the container from.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shmsize_go">
 <a href="#shmsize_go" style="color: inherit; text-decoration: inherit;">Shm<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of /dev/shm. Please refer to docker documentation for supported argument formats.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3307,25 +2940,22 @@ The following output properties are available:
             title="Required">
         <span id="imagesourceregistry_nodejs">
 <a href="#imagesourceregistry_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Source<wbr>Registry</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagesourceregistryresponse">Image<wbr>Source<wbr>Registry<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about docker image and docker registry to download the container from.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shmsize_nodejs">
 <a href="#shmsize_nodejs" style="color: inherit; text-decoration: inherit;">shm<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of /dev/shm. Please refer to docker documentation for supported argument formats.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3334,28 +2964,22 @@ The following output properties are available:
             title="Required">
         <span id="image_source_registry_python">
 <a href="#image_source_registry_python" style="color: inherit; text-decoration: inherit;">image_<wbr>source_<wbr>registry</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagesourceregistryresponse">Image<wbr>Source<wbr>Registry<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about docker image and docker registry to download the container from.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shm_size_python">
 <a href="#shm_size_python" style="color: inherit; text-decoration: inherit;">shm_<wbr>size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Size of /dev/shm. Please refer to docker documentation for supported argument formats.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="custommpisettingsresponse">Custom<wbr>Mpi<wbr>Settings<wbr>Response</h4>
 
@@ -3364,7 +2988,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3372,25 +2995,22 @@ The following output properties are available:
             title="Required">
         <span id="commandline_csharp">
 <a href="#commandline_csharp" style="color: inherit; text-decoration: inherit;">Command<wbr>Line</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The command line to be executed by mpi runtime on each compute node.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="processcount_csharp">
 <a href="#processcount_csharp" style="color: inherit; text-decoration: inherit;">Process<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3399,25 +3019,22 @@ The following output properties are available:
             title="Required">
         <span id="commandline_go">
 <a href="#commandline_go" style="color: inherit; text-decoration: inherit;">Command<wbr>Line</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The command line to be executed by mpi runtime on each compute node.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="processcount_go">
 <a href="#processcount_go" style="color: inherit; text-decoration: inherit;">Process<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3426,25 +3043,22 @@ The following output properties are available:
             title="Required">
         <span id="commandline_nodejs">
 <a href="#commandline_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The command line to be executed by mpi runtime on each compute node.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="processcount_nodejs">
 <a href="#processcount_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3453,28 +3067,22 @@ The following output properties are available:
             title="Required">
         <span id="command_line_python">
 <a href="#command_line_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The command line to be executed by mpi runtime on each compute node.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="process_count_python">
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="customtoolkitsettingsresponse">Custom<wbr>Toolkit<wbr>Settings<wbr>Response</h4>
 
@@ -3483,7 +3091,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3491,15 +3098,13 @@ The following output properties are available:
             title="Optional">
         <span id="commandline_csharp">
 <a href="#commandline_csharp" style="color: inherit; text-decoration: inherit;">Command<wbr>Line</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The command line to execute on the master node.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3508,15 +3113,13 @@ The following output properties are available:
             title="Optional">
         <span id="commandline_go">
 <a href="#commandline_go" style="color: inherit; text-decoration: inherit;">Command<wbr>Line</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The command line to execute on the master node.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3525,15 +3128,13 @@ The following output properties are available:
             title="Optional">
         <span id="commandline_nodejs">
 <a href="#commandline_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The command line to execute on the master node.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3542,18 +3143,13 @@ The following output properties are available:
             title="Optional">
         <span id="command_line_python">
 <a href="#command_line_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The command line to execute on the master node.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="environmentvariableresponse">Environment<wbr>Variable<wbr>Response</h4>
 
@@ -3562,7 +3158,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3570,25 +3165,22 @@ The following output properties are available:
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the environment variable.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the environment variable.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3597,25 +3189,22 @@ The following output properties are available:
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the environment variable.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the environment variable.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3624,25 +3213,22 @@ The following output properties are available:
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the environment variable.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the environment variable.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3651,28 +3237,22 @@ The following output properties are available:
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the environment variable.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the environment variable.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="environmentvariablewithsecretvalueresponse">Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value<wbr>Response</h4>
 
@@ -3681,7 +3261,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3689,35 +3268,31 @@ The following output properties are available:
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the environment variable to store the secret value.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the environment variable. This value will never be reported back by Batch AI.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="valuesecretreference_csharp">
 <a href="#valuesecretreference_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Secret<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault store and secret which contains the value for the environment variable. One of value or valueSecretReference must be provided.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3726,35 +3301,31 @@ The following output properties are available:
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the environment variable to store the secret value.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the environment variable. This value will never be reported back by Batch AI.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="valuesecretreference_go">
 <a href="#valuesecretreference_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Secret<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}KeyVault store and secret which contains the value for the environment variable. One of value or valueSecretReference must be provided.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3763,35 +3334,31 @@ The following output properties are available:
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the environment variable to store the secret value.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the environment variable. This value will never be reported back by Batch AI.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="valuesecretreference_nodejs">
 <a href="#valuesecretreference_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Secret<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}KeyVault store and secret which contains the value for the environment variable. One of value or valueSecretReference must be provided.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3800,41 +3367,33 @@ The following output properties are available:
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the environment variable to store the secret value.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the environment variable. This value will never be reported back by Batch AI.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_secret_reference_python">
 <a href="#value_secret_reference_python" style="color: inherit; text-decoration: inherit;">value_<wbr>secret_<wbr>reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault store and secret which contains the value for the environment variable. One of value or valueSecretReference must be provided.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="fileserverreferenceresponse">File<wbr>Server<wbr>Reference<wbr>Response</h4>
-
 
 
 
@@ -3848,45 +3407,40 @@ The following output properties are available:
             title="Required">
         <span id="fileserver_csharp">
 <a href="#fileserver_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource ID of the existing File Server to be mounted.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="relativemountpath_csharp">
 <a href="#relativemountpath_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Mount<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the File Server will be mounted. Note that all cluster level file servers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file servers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mountoptions_csharp">
 <a href="#mountoptions_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mount options to be passed to mount command.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcedirectory_csharp">
 <a href="#sourcedirectory_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Directory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File Server directory that needs to be mounted. If this property is not specified, the entire File Server will be mounted.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3895,45 +3449,40 @@ The following output properties are available:
             title="Required">
         <span id="fileserver_go">
 <a href="#fileserver_go" style="color: inherit; text-decoration: inherit;">File<wbr>Server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource ID of the existing File Server to be mounted.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="relativemountpath_go">
 <a href="#relativemountpath_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Mount<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the File Server will be mounted. Note that all cluster level file servers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file servers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mountoptions_go">
 <a href="#mountoptions_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mount options to be passed to mount command.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcedirectory_go">
 <a href="#sourcedirectory_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Directory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File Server directory that needs to be mounted. If this property is not specified, the entire File Server will be mounted.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3942,45 +3491,40 @@ The following output properties are available:
             title="Required">
         <span id="fileserver_nodejs">
 <a href="#fileserver_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource ID of the existing File Server to be mounted.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="relativemountpath_nodejs">
 <a href="#relativemountpath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the File Server will be mounted. Note that all cluster level file servers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file servers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mountoptions_nodejs">
 <a href="#mountoptions_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mount options to be passed to mount command.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcedirectory_nodejs">
 <a href="#sourcedirectory_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Directory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File Server directory that needs to be mounted. If this property is not specified, the entire File Server will be mounted.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3989,51 +3533,42 @@ The following output properties are available:
             title="Required">
         <span id="file_server_python">
 <a href="#file_server_python" style="color: inherit; text-decoration: inherit;">file_<wbr>server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource ID of the existing File Server to be mounted.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="relative_mount_path_python">
 <a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the File Server will be mounted. Note that all cluster level file servers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file servers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mount_options_python">
 <a href="#mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mount options to be passed to mount command.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_directory_python">
 <a href="#source_directory_python" style="color: inherit; text-decoration: inherit;">source_<wbr>directory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}File Server directory that needs to be mounted. If this property is not specified, the entire File Server will be mounted.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="horovodsettingsresponse">Horovod<wbr>Settings<wbr>Response</h4>
-
 
 
 
@@ -4047,45 +3582,40 @@ The following output properties are available:
             title="Required">
         <span id="pythonscriptfilepath_csharp">
 <a href="#pythonscriptfilepath_csharp" style="color: inherit; text-decoration: inherit;">Python<wbr>Script<wbr>File<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="commandlineargs_csharp">
 <a href="#commandlineargs_csharp" style="color: inherit; text-decoration: inherit;">Command<wbr>Line<wbr>Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="processcount_csharp">
 <a href="#processcount_csharp" style="color: inherit; text-decoration: inherit;">Process<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pythoninterpreterpath_csharp">
 <a href="#pythoninterpreterpath_csharp" style="color: inherit; text-decoration: inherit;">Python<wbr>Interpreter<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4094,45 +3624,40 @@ The following output properties are available:
             title="Required">
         <span id="pythonscriptfilepath_go">
 <a href="#pythonscriptfilepath_go" style="color: inherit; text-decoration: inherit;">Python<wbr>Script<wbr>File<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="commandlineargs_go">
 <a href="#commandlineargs_go" style="color: inherit; text-decoration: inherit;">Command<wbr>Line<wbr>Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="processcount_go">
 <a href="#processcount_go" style="color: inherit; text-decoration: inherit;">Process<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pythoninterpreterpath_go">
 <a href="#pythoninterpreterpath_go" style="color: inherit; text-decoration: inherit;">Python<wbr>Interpreter<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4141,45 +3666,40 @@ The following output properties are available:
             title="Required">
         <span id="pythonscriptfilepath_nodejs">
 <a href="#pythonscriptfilepath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Script<wbr>File<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="commandlineargs_nodejs">
 <a href="#commandlineargs_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line<wbr>Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="processcount_nodejs">
 <a href="#processcount_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pythoninterpreterpath_nodejs">
 <a href="#pythoninterpreterpath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Interpreter<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4188,51 +3708,42 @@ The following output properties are available:
             title="Required">
         <span id="python_script_file_path_python">
 <a href="#python_script_file_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>script_<wbr>file_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="command_line_args_python">
 <a href="#command_line_args_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line_<wbr>args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="process_count_python">
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="python_interpreter_path_python">
 <a href="#python_interpreter_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>interpreter_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="imagesourceregistryresponse">Image<wbr>Source<wbr>Registry<wbr>Response</h4>
-
 
 
 
@@ -4246,35 +3757,31 @@ The following output properties are available:
             title="Required">
         <span id="image_csharp">
 <a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the image in the image repository.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="credentials_csharp">
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateregistrycredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Private<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Credentials to access the private docker repository.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serverurl_csharp">
 <a href="#serverurl_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL for image repository.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4283,35 +3790,31 @@ The following output properties are available:
             title="Required">
         <span id="image_go">
 <a href="#image_go" style="color: inherit; text-decoration: inherit;">Image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the image in the image repository.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="credentials_go">
 <a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateregistrycredentialsresponse">Private<wbr>Registry<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Credentials to access the private docker repository.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serverurl_go">
 <a href="#serverurl_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL for image repository.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4320,35 +3823,31 @@ The following output properties are available:
             title="Required">
         <span id="image_nodejs">
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the image in the image repository.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="credentials_nodejs">
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateregistrycredentialsresponse">Private<wbr>Registry<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Credentials to access the private docker repository.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serverurl_nodejs">
 <a href="#serverurl_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL for image repository.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4357,41 +3856,33 @@ The following output properties are available:
             title="Required">
         <span id="image_python">
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the image in the image repository.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="credentials_python">
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateregistrycredentialsresponse">Private<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Credentials to access the private docker repository.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="server_url_python">
 <a href="#server_url_python" style="color: inherit; text-decoration: inherit;">server_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL for image repository.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="inputdirectoryresponse">Input<wbr>Directory<wbr>Response</h4>
-
 
 
 
@@ -4405,25 +3896,22 @@ The following output properties are available:
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the input directory. The job can use AZ_BATCHAI_INPUT_<id> environment variable to find the directory path, where <id> is the value of id attribute.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the input directory.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4432,25 +3920,22 @@ The following output properties are available:
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the input directory. The job can use AZ_BATCHAI_INPUT_<id> environment variable to find the directory path, where <id> is the value of id attribute.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the input directory.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4459,25 +3944,22 @@ The following output properties are available:
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the input directory. The job can use AZ_BATCHAI_INPUT_<id> environment variable to find the directory path, where <id> is the value of id attribute.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the input directory.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4486,31 +3968,24 @@ The following output properties are available:
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID for the input directory. The job can use AZ_BATCHAI_INPUT_<id> environment variable to find the directory path, where <id> is the value of id attribute.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the input directory.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="jobpreparationresponse">Job<wbr>Preparation<wbr>Response</h4>
-
 
 
 
@@ -4524,15 +3999,13 @@ The following output properties are available:
             title="Required">
         <span id="commandline_csharp">
 <a href="#commandline_csharp" style="color: inherit; text-decoration: inherit;">Command<wbr>Line</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The command line to execute. If containerSettings is specified on the job, this commandLine will be executed in the same container as job. Otherwise it will be executed on the node.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4541,15 +4014,13 @@ The following output properties are available:
             title="Required">
         <span id="commandline_go">
 <a href="#commandline_go" style="color: inherit; text-decoration: inherit;">Command<wbr>Line</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The command line to execute. If containerSettings is specified on the job, this commandLine will be executed in the same container as job. Otherwise it will be executed on the node.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4558,15 +4029,13 @@ The following output properties are available:
             title="Required">
         <span id="commandline_nodejs">
 <a href="#commandline_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The command line to execute. If containerSettings is specified on the job, this commandLine will be executed in the same container as job. Otherwise it will be executed on the node.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4575,21 +4044,15 @@ The following output properties are available:
             title="Required">
         <span id="command_line_python">
 <a href="#command_line_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The command line to execute. If containerSettings is specified on the job, this commandLine will be executed in the same container as job. Otherwise it will be executed on the node.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="jobpropertiesresponseconstraints">Job<wbr>Properties<wbr>Response<wbr>Constraints</h4>
-
 
 
 
@@ -4603,15 +4066,13 @@ The following output properties are available:
             title="Optional">
         <span id="maxwallclocktime_csharp">
 <a href="#maxwallclocktime_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Wall<wbr>Clock<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Max time the job can run. Default value: 1 week.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4620,15 +4081,13 @@ The following output properties are available:
             title="Optional">
         <span id="maxwallclocktime_go">
 <a href="#maxwallclocktime_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Wall<wbr>Clock<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Max time the job can run. Default value: 1 week.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4637,15 +4096,13 @@ The following output properties are available:
             title="Optional">
         <span id="maxwallclocktime_nodejs">
 <a href="#maxwallclocktime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Wall<wbr>Clock<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Max time the job can run. Default value: 1 week.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4654,21 +4111,15 @@ The following output properties are available:
             title="Optional">
         <span id="max_wall_clock_time_python">
 <a href="#max_wall_clock_time_python" style="color: inherit; text-decoration: inherit;">max_<wbr>wall_<wbr>clock_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Max time the job can run. Default value: 1 week.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="jobpropertiesresponseexecutioninfo">Job<wbr>Properties<wbr>Response<wbr>Execution<wbr>Info</h4>
-
 
 
 
@@ -4682,45 +4133,40 @@ The following output properties are available:
             title="Required">
         <span id="endtime_csharp">
 <a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the job completed. This property is only returned if the job is in completed state.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="errors_csharp">
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#batchaierrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Batch<wbr>AIError<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of errors encountered by the service during job execution.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="exitcode_csharp">
 <a href="#exitcode_csharp" style="color: inherit; text-decoration: inherit;">Exit<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The exit code of the job. This property is only returned if the job is in completed state.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the job started running. 'Running' corresponds to the running state. If the job has been restarted or retried, this is the most recent time at which the job started running. This property is present only for job that are in the running or completed state.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4729,45 +4175,40 @@ The following output properties are available:
             title="Required">
         <span id="endtime_go">
 <a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the job completed. This property is only returned if the job is in completed state.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="errors_go">
 <a href="#errors_go" style="color: inherit; text-decoration: inherit;">Errors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#batchaierrorresponse">[]Batch<wbr>AIError<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of errors encountered by the service during job execution.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="exitcode_go">
 <a href="#exitcode_go" style="color: inherit; text-decoration: inherit;">Exit<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The exit code of the job. This property is only returned if the job is in completed state.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the job started running. 'Running' corresponds to the running state. If the job has been restarted or retried, this is the most recent time at which the job started running. This property is present only for job that are in the running or completed state.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4776,45 +4217,40 @@ The following output properties are available:
             title="Required">
         <span id="endtime_nodejs">
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the job completed. This property is only returned if the job is in completed state.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="errors_nodejs">
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#batchaierrorresponse">Batch<wbr>AIError<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of errors encountered by the service during job execution.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="exitcode_nodejs">
 <a href="#exitcode_nodejs" style="color: inherit; text-decoration: inherit;">exit<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The exit code of the job. This property is only returned if the job is in completed state.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the job started running. 'Running' corresponds to the running state. If the job has been restarted or retried, this is the most recent time at which the job started running. This property is present only for job that are in the running or completed state.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4823,51 +4259,42 @@ The following output properties are available:
             title="Required">
         <span id="end_time_python">
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which the job completed. This property is only returned if the job is in completed state.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="errors_python">
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#batchaierrorresponse">Sequence[Batch<wbr>AIError<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of errors encountered by the service during job execution.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="exit_code_python">
 <a href="#exit_code_python" style="color: inherit; text-decoration: inherit;">exit_<wbr>code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The exit code of the job. This property is only returned if the job is in completed state.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which the job started running. 'Running' corresponds to the running state. If the job has been restarted or retried, this is the most recent time at which the job started running. This property is present only for job that are in the running or completed state.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</h4>
-
 
 
 
@@ -4881,25 +4308,22 @@ The following output properties are available:
             title="Required">
         <span id="secreturl_csharp">
 <a href="#secreturl_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL referencing a secret in the Key Vault.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sourcevault_csharp">
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fully qualified resource identifier of the Key Vault.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4908,25 +4332,22 @@ The following output properties are available:
             title="Required">
         <span id="secreturl_go">
 <a href="#secreturl_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL referencing a secret in the Key Vault.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sourcevault_go">
 <a href="#sourcevault_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Fully qualified resource identifier of the Key Vault.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4935,25 +4356,22 @@ The following output properties are available:
             title="Required">
         <span id="secreturl_nodejs">
 <a href="#secreturl_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL referencing a secret in the Key Vault.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sourcevault_nodejs">
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Fully qualified resource identifier of the Key Vault.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4962,31 +4380,24 @@ The following output properties are available:
             title="Required">
         <span id="secret_url_python">
 <a href="#secret_url_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL referencing a secret in the Key Vault.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="source_vault_python">
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fully qualified resource identifier of the Key Vault.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="mountvolumesresponse">Mount<wbr>Volumes<wbr>Response</h4>
-
 
 
 
@@ -5000,45 +4411,40 @@ The following output properties are available:
             title="Optional">
         <span id="azureblobfilesystems_csharp">
 <a href="#azureblobfilesystems_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>File<wbr>Systems</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureblobfilesystemreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure Blob Containers that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="azurefileshares_csharp">
 <a href="#azurefileshares_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>File<wbr>Shares</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurefilesharereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure File Shares that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fileservers_csharp">
 <a href="#fileservers_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Servers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fileserverreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of Batch AI File Servers that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unmanagedfilesystems_csharp">
 <a href="#unmanagedfilesystems_csharp" style="color: inherit; text-decoration: inherit;">Unmanaged<wbr>File<wbr>Systems</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#unmanagedfilesystemreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of unmanaged file systems that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5047,45 +4453,40 @@ The following output properties are available:
             title="Optional">
         <span id="azureblobfilesystems_go">
 <a href="#azureblobfilesystems_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>File<wbr>Systems</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureblobfilesystemreferenceresponse">[]Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure Blob Containers that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="azurefileshares_go">
 <a href="#azurefileshares_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>File<wbr>Shares</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurefilesharereferenceresponse">[]Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure File Shares that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fileservers_go">
 <a href="#fileservers_go" style="color: inherit; text-decoration: inherit;">File<wbr>Servers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fileserverreferenceresponse">[]File<wbr>Server<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of Batch AI File Servers that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unmanagedfilesystems_go">
 <a href="#unmanagedfilesystems_go" style="color: inherit; text-decoration: inherit;">Unmanaged<wbr>File<wbr>Systems</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#unmanagedfilesystemreferenceresponse">[]Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of unmanaged file systems that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5094,45 +4495,40 @@ The following output properties are available:
             title="Optional">
         <span id="azureblobfilesystems_nodejs">
 <a href="#azureblobfilesystems_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>File<wbr>Systems</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureblobfilesystemreferenceresponse">Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure Blob Containers that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="azurefileshares_nodejs">
 <a href="#azurefileshares_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Shares</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurefilesharereferenceresponse">Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure File Shares that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fileservers_nodejs">
 <a href="#fileservers_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Servers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fileserverreferenceresponse">File<wbr>Server<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Batch AI File Servers that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unmanagedfilesystems_nodejs">
 <a href="#unmanagedfilesystems_nodejs" style="color: inherit; text-decoration: inherit;">unmanaged<wbr>File<wbr>Systems</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#unmanagedfilesystemreferenceresponse">Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of unmanaged file systems that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5141,51 +4537,42 @@ The following output properties are available:
             title="Optional">
         <span id="azure_blob_file_systems_python">
 <a href="#azure_blob_file_systems_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>file_<wbr>systems</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureblobfilesystemreferenceresponse">Sequence[Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure Blob Containers that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="azure_file_shares_python">
 <a href="#azure_file_shares_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>shares</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurefilesharereferenceresponse">Sequence[Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure File Shares that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="file_servers_python">
 <a href="#file_servers_python" style="color: inherit; text-decoration: inherit;">file_<wbr>servers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fileserverreferenceresponse">Sequence[File<wbr>Server<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Batch AI File Servers that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unmanaged_file_systems_python">
 <a href="#unmanaged_file_systems_python" style="color: inherit; text-decoration: inherit;">unmanaged_<wbr>file_<wbr>systems</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#unmanagedfilesystemreferenceresponse">Sequence[Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of unmanaged file systems that are to be mounted to the cluster nodes.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="namevaluepairresponse">Name<wbr>Value<wbr>Pair<wbr>Response</h4>
-
 
 
 
@@ -5199,25 +4586,22 @@ The following output properties are available:
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name in the name-value pair.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value in the name-value pair.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5226,25 +4610,22 @@ The following output properties are available:
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name in the name-value pair.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value in the name-value pair.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5253,25 +4634,22 @@ The following output properties are available:
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name in the name-value pair.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value in the name-value pair.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5280,31 +4658,24 @@ The following output properties are available:
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name in the name-value pair.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value in the name-value pair.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="outputdirectoryresponse">Output<wbr>Directory<wbr>Response</h4>
-
 
 
 
@@ -5318,35 +4689,31 @@ The following output properties are available:
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the output directory. The job can use AZ_BATCHAI_OUTPUT_<id> environment variable to find the directory path, where <id> is the value of id attribute.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="pathprefix_csharp">
 <a href="#pathprefix_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix path where the output directory will be created. Note, this is an absolute path to prefix. E.g. $AZ_BATCHAI_MOUNT_ROOT/MyNFS/MyLogs. The full path to the output directory by combining pathPrefix, jobOutputDirectoryPathSegment (reported by get job) and pathSuffix.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pathsuffix_csharp">
 <a href="#pathsuffix_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Suffix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The suffix path where the output directory will be created. E.g. models. You can find the full path to the output directory by combining pathPrefix, jobOutputDirectoryPathSegment (reported by get job) and pathSuffix.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5355,35 +4722,31 @@ The following output properties are available:
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the output directory. The job can use AZ_BATCHAI_OUTPUT_<id> environment variable to find the directory path, where <id> is the value of id attribute.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="pathprefix_go">
 <a href="#pathprefix_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix path where the output directory will be created. Note, this is an absolute path to prefix. E.g. $AZ_BATCHAI_MOUNT_ROOT/MyNFS/MyLogs. The full path to the output directory by combining pathPrefix, jobOutputDirectoryPathSegment (reported by get job) and pathSuffix.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pathsuffix_go">
 <a href="#pathsuffix_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Suffix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The suffix path where the output directory will be created. E.g. models. You can find the full path to the output directory by combining pathPrefix, jobOutputDirectoryPathSegment (reported by get job) and pathSuffix.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5392,35 +4755,31 @@ The following output properties are available:
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the output directory. The job can use AZ_BATCHAI_OUTPUT_<id> environment variable to find the directory path, where <id> is the value of id attribute.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="pathprefix_nodejs">
 <a href="#pathprefix_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix path where the output directory will be created. Note, this is an absolute path to prefix. E.g. $AZ_BATCHAI_MOUNT_ROOT/MyNFS/MyLogs. The full path to the output directory by combining pathPrefix, jobOutputDirectoryPathSegment (reported by get job) and pathSuffix.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pathsuffix_nodejs">
 <a href="#pathsuffix_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Suffix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The suffix path where the output directory will be created. E.g. models. You can find the full path to the output directory by combining pathPrefix, jobOutputDirectoryPathSegment (reported by get job) and pathSuffix.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5429,41 +4788,33 @@ The following output properties are available:
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the output directory. The job can use AZ_BATCHAI_OUTPUT_<id> environment variable to find the directory path, where <id> is the value of id attribute.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="path_prefix_python">
 <a href="#path_prefix_python" style="color: inherit; text-decoration: inherit;">path_<wbr>prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The prefix path where the output directory will be created. Note, this is an absolute path to prefix. E.g. $AZ_BATCHAI_MOUNT_ROOT/MyNFS/MyLogs. The full path to the output directory by combining pathPrefix, jobOutputDirectoryPathSegment (reported by get job) and pathSuffix.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_suffix_python">
 <a href="#path_suffix_python" style="color: inherit; text-decoration: inherit;">path_<wbr>suffix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The suffix path where the output directory will be created. E.g. models. You can find the full path to the output directory by combining pathPrefix, jobOutputDirectoryPathSegment (reported by get job) and pathSuffix.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="privateregistrycredentialsresponse">Private<wbr>Registry<wbr>Credentials<wbr>Response</h4>
-
 
 
 
@@ -5477,35 +4828,31 @@ The following output properties are available:
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name to login to the repository.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User password to login to the docker repository. One of password or passwordSecretReference must be specified.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="passwordsecretreference_csharp">
 <a href="#passwordsecretreference_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Secret<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault Secret storing the password. Users can store their secrets in Azure KeyVault and pass it to the Batch AI service to integrate with KeyVault. One of password or passwordSecretReference must be specified.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5514,35 +4861,31 @@ The following output properties are available:
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name to login to the repository.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User password to login to the docker repository. One of password or passwordSecretReference must be specified.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="passwordsecretreference_go">
 <a href="#passwordsecretreference_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Secret<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}KeyVault Secret storing the password. Users can store their secrets in Azure KeyVault and pass it to the Batch AI service to integrate with KeyVault. One of password or passwordSecretReference must be specified.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5551,35 +4894,31 @@ The following output properties are available:
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name to login to the repository.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User password to login to the docker repository. One of password or passwordSecretReference must be specified.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="passwordsecretreference_nodejs">
 <a href="#passwordsecretreference_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Secret<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}KeyVault Secret storing the password. Users can store their secrets in Azure KeyVault and pass it to the Batch AI service to integrate with KeyVault. One of password or passwordSecretReference must be specified.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5588,41 +4927,33 @@ The following output properties are available:
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User name to login to the repository.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User password to login to the docker repository. One of password or passwordSecretReference must be specified.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_secret_reference_python">
 <a href="#password_secret_reference_python" style="color: inherit; text-decoration: inherit;">password_<wbr>secret_<wbr>reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault Secret storing the password. Users can store their secrets in Azure KeyVault and pass it to the Batch AI service to integrate with KeyVault. One of password or passwordSecretReference must be specified.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="pytorchsettingsresponse">Py<wbr>Torch<wbr>Settings<wbr>Response</h4>
-
 
 
 
@@ -5636,55 +4967,49 @@ The following output properties are available:
             title="Required">
         <span id="pythonscriptfilepath_csharp">
 <a href="#pythonscriptfilepath_csharp" style="color: inherit; text-decoration: inherit;">Python<wbr>Script<wbr>File<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="commandlineargs_csharp">
 <a href="#commandlineargs_csharp" style="color: inherit; text-decoration: inherit;">Command<wbr>Line<wbr>Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="communicationbackend_csharp">
 <a href="#communicationbackend_csharp" style="color: inherit; text-decoration: inherit;">Communication<wbr>Backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the communication backend for distributed jobs. Valid values are 'TCP', 'Gloo' or 'MPI'. Not required for non-distributed jobs.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="processcount_csharp">
 <a href="#processcount_csharp" style="color: inherit; text-decoration: inherit;">Process<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pythoninterpreterpath_csharp">
 <a href="#pythoninterpreterpath_csharp" style="color: inherit; text-decoration: inherit;">Python<wbr>Interpreter<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5693,55 +5018,49 @@ The following output properties are available:
             title="Required">
         <span id="pythonscriptfilepath_go">
 <a href="#pythonscriptfilepath_go" style="color: inherit; text-decoration: inherit;">Python<wbr>Script<wbr>File<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="commandlineargs_go">
 <a href="#commandlineargs_go" style="color: inherit; text-decoration: inherit;">Command<wbr>Line<wbr>Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="communicationbackend_go">
 <a href="#communicationbackend_go" style="color: inherit; text-decoration: inherit;">Communication<wbr>Backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the communication backend for distributed jobs. Valid values are 'TCP', 'Gloo' or 'MPI'. Not required for non-distributed jobs.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="processcount_go">
 <a href="#processcount_go" style="color: inherit; text-decoration: inherit;">Process<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pythoninterpreterpath_go">
 <a href="#pythoninterpreterpath_go" style="color: inherit; text-decoration: inherit;">Python<wbr>Interpreter<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5750,55 +5069,49 @@ The following output properties are available:
             title="Required">
         <span id="pythonscriptfilepath_nodejs">
 <a href="#pythonscriptfilepath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Script<wbr>File<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="commandlineargs_nodejs">
 <a href="#commandlineargs_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line<wbr>Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="communicationbackend_nodejs">
 <a href="#communicationbackend_nodejs" style="color: inherit; text-decoration: inherit;">communication<wbr>Backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the communication backend for distributed jobs. Valid values are 'TCP', 'Gloo' or 'MPI'. Not required for non-distributed jobs.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="processcount_nodejs">
 <a href="#processcount_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pythoninterpreterpath_nodejs">
 <a href="#pythoninterpreterpath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Interpreter<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5807,61 +5120,51 @@ The following output properties are available:
             title="Required">
         <span id="python_script_file_path_python">
 <a href="#python_script_file_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>script_<wbr>file_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="command_line_args_python">
 <a href="#command_line_args_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line_<wbr>args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="communication_backend_python">
 <a href="#communication_backend_python" style="color: inherit; text-decoration: inherit;">communication_<wbr>backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the communication backend for distributed jobs. Valid values are 'TCP', 'Gloo' or 'MPI'. Not required for non-distributed jobs.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="process_count_python">
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="python_interpreter_path_python">
 <a href="#python_interpreter_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>interpreter_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="resourceidresponse">Resource<wbr>Id<wbr>Response</h4>
-
 
 
 
@@ -5875,15 +5178,13 @@ The following output properties are available:
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the resource{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5892,15 +5193,13 @@ The following output properties are available:
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the resource{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5909,15 +5208,13 @@ The following output properties are available:
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the resource{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5926,21 +5223,15 @@ The following output properties are available:
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the resource{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="tensorflowsettingsresponse">Tensor<wbr>Flow<wbr>Settings<wbr>Response</h4>
-
 
 
 
@@ -5954,75 +5245,67 @@ The following output properties are available:
             title="Required">
         <span id="pythonscriptfilepath_csharp">
 <a href="#pythonscriptfilepath_csharp" style="color: inherit; text-decoration: inherit;">Python<wbr>Script<wbr>File<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mastercommandlineargs_csharp">
 <a href="#mastercommandlineargs_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Command<wbr>Line<wbr>Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script for the master task.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parameterservercommandlineargs_csharp">
 <a href="#parameterservercommandlineargs_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Server<wbr>Command<wbr>Line<wbr>Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script for the parameter server. Optional for single process jobs.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parameterservercount_csharp">
 <a href="#parameterservercount_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Server<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of parameter server tasks. If specified, the value must be less than or equal to nodeCount. If not specified, the default value is equal to 1 for distributed TensorFlow training. This property can be specified only for distributed TensorFlow training.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pythoninterpreterpath_csharp">
 <a href="#pythoninterpreterpath_csharp" style="color: inherit; text-decoration: inherit;">Python<wbr>Interpreter<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workercommandlineargs_csharp">
 <a href="#workercommandlineargs_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Command<wbr>Line<wbr>Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script for the worker task. Optional for single process jobs.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workercount_csharp">
 <a href="#workercount_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of worker tasks. If specified, the value must be less than or equal to (nodeCount * numberOfGPUs per VM). If not specified, the default value is equal to nodeCount. This property can be specified only for distributed TensorFlow training.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6031,75 +5314,67 @@ The following output properties are available:
             title="Required">
         <span id="pythonscriptfilepath_go">
 <a href="#pythonscriptfilepath_go" style="color: inherit; text-decoration: inherit;">Python<wbr>Script<wbr>File<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mastercommandlineargs_go">
 <a href="#mastercommandlineargs_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Command<wbr>Line<wbr>Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script for the master task.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parameterservercommandlineargs_go">
 <a href="#parameterservercommandlineargs_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Server<wbr>Command<wbr>Line<wbr>Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script for the parameter server. Optional for single process jobs.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parameterservercount_go">
 <a href="#parameterservercount_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Server<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of parameter server tasks. If specified, the value must be less than or equal to nodeCount. If not specified, the default value is equal to 1 for distributed TensorFlow training. This property can be specified only for distributed TensorFlow training.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pythoninterpreterpath_go">
 <a href="#pythoninterpreterpath_go" style="color: inherit; text-decoration: inherit;">Python<wbr>Interpreter<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workercommandlineargs_go">
 <a href="#workercommandlineargs_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Command<wbr>Line<wbr>Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script for the worker task. Optional for single process jobs.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workercount_go">
 <a href="#workercount_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of worker tasks. If specified, the value must be less than or equal to (nodeCount * numberOfGPUs per VM). If not specified, the default value is equal to nodeCount. This property can be specified only for distributed TensorFlow training.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6108,75 +5383,67 @@ The following output properties are available:
             title="Required">
         <span id="pythonscriptfilepath_nodejs">
 <a href="#pythonscriptfilepath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Script<wbr>File<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mastercommandlineargs_nodejs">
 <a href="#mastercommandlineargs_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Command<wbr>Line<wbr>Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script for the master task.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parameterservercommandlineargs_nodejs">
 <a href="#parameterservercommandlineargs_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Server<wbr>Command<wbr>Line<wbr>Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script for the parameter server. Optional for single process jobs.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parameterservercount_nodejs">
 <a href="#parameterservercount_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Server<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of parameter server tasks. If specified, the value must be less than or equal to nodeCount. If not specified, the default value is equal to 1 for distributed TensorFlow training. This property can be specified only for distributed TensorFlow training.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pythoninterpreterpath_nodejs">
 <a href="#pythoninterpreterpath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Interpreter<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workercommandlineargs_nodejs">
 <a href="#workercommandlineargs_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Command<wbr>Line<wbr>Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script for the worker task. Optional for single process jobs.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workercount_nodejs">
 <a href="#workercount_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of worker tasks. If specified, the value must be less than or equal to (nodeCount * numberOfGPUs per VM). If not specified, the default value is equal to nodeCount. This property can be specified only for distributed TensorFlow training.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6185,81 +5452,69 @@ The following output properties are available:
             title="Required">
         <span id="python_script_file_path_python">
 <a href="#python_script_file_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>script_<wbr>file_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="master_command_line_args_python">
 <a href="#master_command_line_args_python" style="color: inherit; text-decoration: inherit;">master_<wbr>command_<wbr>line_<wbr>args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script for the master task.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parameter_server_command_line_args_python">
 <a href="#parameter_server_command_line_args_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>server_<wbr>command_<wbr>line_<wbr>args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script for the parameter server. Optional for single process jobs.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parameter_server_count_python">
 <a href="#parameter_server_count_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>server_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of parameter server tasks. If specified, the value must be less than or equal to nodeCount. If not specified, the default value is equal to 1 for distributed TensorFlow training. This property can be specified only for distributed TensorFlow training.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="python_interpreter_path_python">
 <a href="#python_interpreter_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>interpreter_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="worker_command_line_args_python">
 <a href="#worker_command_line_args_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>command_<wbr>line_<wbr>args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script for the worker task. Optional for single process jobs.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="worker_count_python">
 <a href="#worker_count_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of worker tasks. If specified, the value must be less than or equal to (nodeCount * numberOfGPUs per VM). If not specified, the default value is equal to nodeCount. This property can be specified only for distributed TensorFlow training.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="unmanagedfilesystemreferenceresponse">Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Response</h4>
-
 
 
 
@@ -6273,25 +5528,22 @@ The following output properties are available:
             title="Required">
         <span id="mountcommand_csharp">
 <a href="#mountcommand_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Command</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mount command line. Note, Batch AI will append mount path to the command on its own.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="relativemountpath_csharp">
 <a href="#relativemountpath_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Mount<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the unmanaged file system will be mounted. Note that all cluster level unmanaged file systems will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level unmanaged file systems will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6300,25 +5552,22 @@ The following output properties are available:
             title="Required">
         <span id="mountcommand_go">
 <a href="#mountcommand_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Command</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mount command line. Note, Batch AI will append mount path to the command on its own.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="relativemountpath_go">
 <a href="#relativemountpath_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Mount<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the unmanaged file system will be mounted. Note that all cluster level unmanaged file systems will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level unmanaged file systems will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6327,25 +5576,22 @@ The following output properties are available:
             title="Required">
         <span id="mountcommand_nodejs">
 <a href="#mountcommand_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Command</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mount command line. Note, Batch AI will append mount path to the command on its own.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="relativemountpath_nodejs">
 <a href="#relativemountpath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the unmanaged file system will be mounted. Note that all cluster level unmanaged file systems will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level unmanaged file systems will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6354,28 +5600,22 @@ The following output properties are available:
             title="Required">
         <span id="mount_command_python">
 <a href="#mount_command_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>command</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mount command line. Note, Batch AI will append mount path to the command on its own.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="relative_mount_path_python">
 <a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the unmanaged file system will be mounted. Note that all cluster level unmanaged file systems will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level unmanaged file systems will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

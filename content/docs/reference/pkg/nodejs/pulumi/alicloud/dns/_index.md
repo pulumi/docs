@@ -3,7 +3,7 @@ title: "Module dns"
 title_tag: "Module dns | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "dns"
 meta_desc: "Explore members of the dns module in the @pulumi/alicloud package."
-git_sha: "fcdd66dccf963899382dd7b59249d3ec24e3632c"
+git_sha: "8b0235f54ce04ebef3a63df7ea1100f2c58382cf"
 block_external_search_index: true
 ---
 
@@ -105,7 +105,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AlidnsDomain" data-link-title="AlidnsDomain">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L39">
         Resource <strong>AlidnsDomain</strong>
     </a>
 </h3>
@@ -144,7 +144,7 @@ Alidns domain can be imported using the id or domain name, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="AlidnsDomain-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L105"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L105"> <b>constructor</b></a>
 </h4>
 
 
@@ -158,7 +158,7 @@ Create a AlidnsDomain resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AlidnsDomain-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L49">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -169,14 +169,14 @@ Get an existing AlidnsDomain resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AlidnsDomain-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L39">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AlidnsDomain-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L60">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -187,12 +187,12 @@ Returns true if the given object is an instance of AlidnsDomain.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AlidnsDomain-dnsServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L67">property <b>dnsServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L67">property <b>dnsServers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsServers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AlidnsDomain-domainId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L71">property <b>domainId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L71">property <b>domainId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -200,7 +200,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The domain ID.
 
 <h4 class="pdoc-member-header" id="AlidnsDomain-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L75">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L75">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -208,7 +208,7 @@ The domain ID.
 Name of the domain. This name without suffix can have a string of 1 to 63 characters(domain name subject, excluding suffix), must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 
 <h4 class="pdoc-member-header" id="AlidnsDomain-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L79">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L79">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -216,7 +216,7 @@ Name of the domain. This name without suffix can have a string of 1 to 63 charac
 Id of the group in which the domain will add. If not supplied, then use default group.
 
 <h4 class="pdoc-member-header" id="AlidnsDomain-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L83">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L83">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -224,7 +224,7 @@ Id of the group in which the domain will add. If not supplied, then use default 
 Domain name group name.
 
 <h4 class="pdoc-member-header" id="AlidnsDomain-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -233,7 +233,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AlidnsDomain-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L87">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L87">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lang: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -241,7 +241,7 @@ deployments and may be missing (undefined) during planning phases.
 User language.
 
 <h4 class="pdoc-member-header" id="AlidnsDomain-punyCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L91">property <b>punyCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L91">property <b>punyCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>punyCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -249,7 +249,7 @@ User language.
 Only return punycode codes for Chinese domain names.
 
 <h4 class="pdoc-member-header" id="AlidnsDomain-remark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L95">property <b>remark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L95">property <b>remark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>remark: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -257,7 +257,7 @@ Only return punycode codes for Chinese domain names.
 Remarks information for your domain name.
 
 <h4 class="pdoc-member-header" id="AlidnsDomain-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L99">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L99">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -265,7 +265,7 @@ Remarks information for your domain name.
 The Id of resource group which the dns domain belongs.
 
 <h4 class="pdoc-member-header" id="AlidnsDomain-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L105">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L105">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -275,7 +275,7 @@ A mapping of tags to assign to the resource.
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
 
 <h4 class="pdoc-member-header" id="AlidnsDomain-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L39">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -284,7 +284,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="AlidnsDomainAttachment" data-link-title="AlidnsDomainAttachment">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomainAttachment.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomainAttachment.ts#L35">
         Resource <strong>AlidnsDomainAttachment</strong>
     </a>
 </h3>
@@ -319,7 +319,7 @@ DNS domain attachment can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="AlidnsDomainAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomainAttachment.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomainAttachment.ts#L70"> <b>constructor</b></a>
 </h4>
 
 
@@ -333,7 +333,7 @@ Create a AlidnsDomainAttachment resource with the given unique name, arguments, 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AlidnsDomainAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomainAttachment.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomainAttachment.ts#L45">method <b>get</b></a>
 </h4>
 
 
@@ -344,14 +344,14 @@ Get an existing AlidnsDomainAttachment resource's state with the given name, ID,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AlidnsDomainAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomainAttachment.ts#L35">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomainAttachment.ts#L35">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AlidnsDomainAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomainAttachment.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomainAttachment.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -362,7 +362,7 @@ Returns true if the given object is an instance of AlidnsDomainAttachment.  This
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AlidnsDomainAttachment-domainNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomainAttachment.ts#L66">property <b>domainNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomainAttachment.ts#L66">property <b>domainNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -370,7 +370,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The domain names bound to the DNS instance.
 
 <h4 class="pdoc-member-header" id="AlidnsDomainAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomainAttachment.ts#L35">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomainAttachment.ts#L35">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -379,7 +379,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AlidnsDomainAttachment-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomainAttachment.ts#L70">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomainAttachment.ts#L70">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -387,7 +387,7 @@ deployments and may be missing (undefined) during planning phases.
 The id of the DNS instance.
 
 <h4 class="pdoc-member-header" id="AlidnsDomainAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomainAttachment.ts#L35">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomainAttachment.ts#L35">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -396,7 +396,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="AlidnsInstance" data-link-title="AlidnsInstance">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L38">
         Resource <strong>AlidnsInstance</strong>
     </a>
 </h3>
@@ -434,7 +434,7 @@ DNS instance be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="AlidnsInstance-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L97"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L97"> <b>constructor</b></a>
 </h4>
 
 
@@ -448,7 +448,7 @@ Create a AlidnsInstance resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AlidnsInstance-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -459,14 +459,14 @@ Get an existing AlidnsInstance resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AlidnsInstance-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L38">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L38">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AlidnsInstance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L59">method <b>isInstance</b></a>
 </h4>
 
 
@@ -477,7 +477,7 @@ Returns true if the given object is an instance of AlidnsInstance.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AlidnsInstance-dnsSecurity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L69">property <b>dnsSecurity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L69">property <b>dnsSecurity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsSecurity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -485,7 +485,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Alidns security level. Valid values: `no`, `basic`, `advanced`.
 
 <h4 class="pdoc-member-header" id="AlidnsInstance-domainNumbers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L73">property <b>domainNumbers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L73">property <b>domainNumbers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainNumbers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -493,7 +493,7 @@ Alidns security level. Valid values: `no`, `basic`, `advanced`.
 Number of domain names bound.
 
 <h4 class="pdoc-member-header" id="AlidnsInstance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L38">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L38">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -502,7 +502,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AlidnsInstance-paymentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L77">property <b>paymentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L77">property <b>paymentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>paymentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -510,7 +510,7 @@ deployments and may be missing (undefined) during planning phases.
 The billing method of the Alidns instance. Valid values: `Subscription`. Default to `Subscription`.
 
 <h4 class="pdoc-member-header" id="AlidnsInstance-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L81">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L81">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>period: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -518,7 +518,7 @@ The billing method of the Alidns instance. Valid values: `Subscription`. Default
 Creating a pre-paid instance, it must be set, the unit is month, please enter an integer multiple of 12 for annually paid products.
 
 <h4 class="pdoc-member-header" id="AlidnsInstance-renewPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L85">property <b>renewPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L85">property <b>renewPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>renewPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -526,7 +526,7 @@ Creating a pre-paid instance, it must be set, the unit is month, please enter an
 Automatic renewal period, the unit is month. When setting RenewalStatus to AutoRenewal, it must be set.
 
 <h4 class="pdoc-member-header" id="AlidnsInstance-renewalStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L89">property <b>renewalStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L89">property <b>renewalStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>renewalStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -534,7 +534,7 @@ Automatic renewal period, the unit is month. When setting RenewalStatus to AutoR
 Automatic renewal status. Valid values: `AutoRenewal`, `ManualRenewal`, default to `ManualRenewal`.
 
 <h4 class="pdoc-member-header" id="AlidnsInstance-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L38">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L38">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -543,7 +543,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="AlidnsInstance-versionCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L93">property <b>versionCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L93">property <b>versionCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>versionCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -551,7 +551,7 @@ deployments.
 Paid package version. Valid values: `versionPersonal`, `versionEnterpriseBasic`, `versionEnterpriseAdvanced`.
 
 <h4 class="pdoc-member-header" id="AlidnsInstance-versionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L97">property <b>versionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L97">property <b>versionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>versionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -559,7 +559,7 @@ Paid package version. Valid values: `versionPersonal`, `versionEnterpriseBasic`,
 Paid package version name.
 
 <h3 class="pdoc-module-header" id="AlidnsRecord" data-link-title="AlidnsRecord">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L39">
         Resource <strong>AlidnsRecord</strong>
     </a>
 </h3>
@@ -598,7 +598,7 @@ Alidns Domain Record can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="AlidnsRecord-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L110"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L110"> <b>constructor</b></a>
 </h4>
 
 
@@ -612,7 +612,7 @@ Create a AlidnsRecord resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AlidnsRecord-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L49">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -623,14 +623,14 @@ Get an existing AlidnsRecord resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AlidnsRecord-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L39">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AlidnsRecord-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L60">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -641,7 +641,7 @@ Returns true if the given object is an instance of AlidnsRecord.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AlidnsRecord-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L70">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L70">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -649,7 +649,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Name of the domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 
 <h4 class="pdoc-member-header" id="AlidnsRecord-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -658,7 +658,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AlidnsRecord-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L74">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L74">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lang: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -666,7 +666,7 @@ deployments and may be missing (undefined) during planning phases.
 User language.
 
 <h4 class="pdoc-member-header" id="AlidnsRecord-line">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L78">property <b>line</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L78">property <b>line</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>line: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -674,7 +674,7 @@ User language.
 The resolution line of domain record. When the `type` is `FORWORD_URL`, this parameter must be `default`. Default value is `default`. For checking all resolution lines enumeration please visit [Alibaba Cloud DNS doc](https://www.alibabacloud.com/help/doc-detail/34339.htm) or using alicloud.dns.getResolutionLines in data source to get the value.
 
 <h4 class="pdoc-member-header" id="AlidnsRecord-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L82">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L82">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -682,7 +682,7 @@ The resolution line of domain record. When the `type` is `FORWORD_URL`, this par
 The priority of domain record. Valid values: `[1-10]`. When the `type` is `MX`, this parameter is required.
 
 <h4 class="pdoc-member-header" id="AlidnsRecord-remark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L86">property <b>remark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L86">property <b>remark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>remark: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -690,7 +690,7 @@ The priority of domain record. Valid values: `[1-10]`. When the `type` is `MX`, 
 The remark of the domain record.
 
 <h4 class="pdoc-member-header" id="AlidnsRecord-rr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L90">property <b>rr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L90">property <b>rr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -698,7 +698,7 @@ The remark of the domain record.
 Host record for the domain record. This hostRecord can have at most 253 characters, and each part split with `.` can have at most 63 characters, and must contain only alphanumeric characters or hyphens, such as `-`, `.`, `*`, `@`, and must not begin or end with `-`.
 
 <h4 class="pdoc-member-header" id="AlidnsRecord-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L94">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L94">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -706,7 +706,7 @@ Host record for the domain record. This hostRecord can have at most 253 characte
 The status of the domain record. Valid values: `ENABLE`,`DISABLE`.
 
 <h4 class="pdoc-member-header" id="AlidnsRecord-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L98">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L98">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -714,7 +714,7 @@ The status of the domain record. Valid values: `ENABLE`,`DISABLE`.
 The effective time of domain record. Its scope depends on the edition of the cloud resolution. Free is `[600, 86400]`, Basic is `[120, 86400]`, Standard is `[60, 86400]`, Ultimate is `[10, 86400]`, Exclusive is `[1, 86400]`. Default value is `600`.
 
 <h4 class="pdoc-member-header" id="AlidnsRecord-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L102">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L102">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -722,7 +722,7 @@ The effective time of domain record. Its scope depends on the edition of the clo
 The type of domain record. Valid values: `A`,`NS`,`MX`,`TXT`,`CNAME`,`SRV`,`AAAA`,`CAA`, `REDIRECT_URL` and `FORWORD_URL`.
 
 <h4 class="pdoc-member-header" id="AlidnsRecord-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L39">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -731,7 +731,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="AlidnsRecord-userClientIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L106">property <b>userClientIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L106">property <b>userClientIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userClientIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -739,7 +739,7 @@ deployments.
 The IP address of the client.
 
 <h4 class="pdoc-member-header" id="AlidnsRecord-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L110">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L110">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -747,7 +747,7 @@ The IP address of the client.
 The value of domain record, When the `type` is `MX`,`NS`,`CNAME`,`SRV`, the server will treat the `value` as a fully qualified domain name, so it's no need to add a `.` at the end.
 
 <h3 class="pdoc-module-header" id="DdosBgpInstance" data-link-title="DdosBgpInstance">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosBgpInstance.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosBgpInstance.ts#L40">
         Resource <strong>DdosBgpInstance</strong>
     </a>
 </h3>
@@ -789,7 +789,7 @@ Ddosbgp instance can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="DdosBgpInstance-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosBgpInstance.ts#L96"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosBgpInstance.ts#L96"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -804,7 +804,7 @@ alicloud.dns.DdosBgpInstance has been deprecated in favor of alicloud.ddos.DdosB
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> DdosBgpInstance(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DdosBgpInstanceArgs'>DdosBgpInstanceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="DdosBgpInstance-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosBgpInstance.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosBgpInstance.ts#L50">method <b>get</b></a>
 </h4>
 
 
@@ -815,14 +815,14 @@ Get an existing DdosBgpInstance resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DdosBgpInstance-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosBgpInstance.ts#L40">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosBgpInstance.ts#L40">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DdosBgpInstance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosBgpInstance.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosBgpInstance.ts#L62">method <b>isInstance</b></a>
 </h4>
 
 
@@ -833,7 +833,7 @@ Returns true if the given object is an instance of DdosBgpInstance.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DdosBgpInstance-bandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosBgpInstance.ts#L72">property <b>bandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosBgpInstance.ts#L72">property <b>bandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bandwidth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -841,7 +841,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Elastic defend bandwidth of the instance. This value must be larger than the base defend bandwidth. Valid values: 51,91,101,201,301. The unit is Gbps.
 
 <h4 class="pdoc-member-header" id="DdosBgpInstance-baseBandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosBgpInstance.ts#L76">property <b>baseBandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosBgpInstance.ts#L76">property <b>baseBandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>baseBandwidth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -849,7 +849,7 @@ Elastic defend bandwidth of the instance. This value must be larger than the bas
 Base defend bandwidth of the instance. Valid values: 20. The unit is Gbps. Default to `20`.
 
 <h4 class="pdoc-member-header" id="DdosBgpInstance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosBgpInstance.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosBgpInstance.ts#L40">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -858,7 +858,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DdosBgpInstance-ipCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosBgpInstance.ts#L80">property <b>ipCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosBgpInstance.ts#L80">property <b>ipCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -866,7 +866,7 @@ deployments and may be missing (undefined) during planning phases.
 IP count of the instance. Valid values: 100.
 
 <h4 class="pdoc-member-header" id="DdosBgpInstance-ipType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosBgpInstance.ts#L84">property <b>ipType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosBgpInstance.ts#L84">property <b>ipType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -874,7 +874,7 @@ IP count of the instance. Valid values: 100.
 IP version of the instance. Valid values: IPv4,IPv6.
 
 <h4 class="pdoc-member-header" id="DdosBgpInstance-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosBgpInstance.ts#L88">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosBgpInstance.ts#L88">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -882,7 +882,7 @@ IP version of the instance. Valid values: IPv4,IPv6.
 Name of the instance. This name can have a string of 1 to 63 characters.
 
 <h4 class="pdoc-member-header" id="DdosBgpInstance-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosBgpInstance.ts#L92">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosBgpInstance.ts#L92">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>period: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -890,7 +890,7 @@ Name of the instance. This name can have a string of 1 to 63 characters.
 The duration that you will buy Ddosbgp instance (in month). Valid values: [1~9], 12, 24, 36. Default to 12. At present, the provider does not support modify "period".
 
 <h4 class="pdoc-member-header" id="DdosBgpInstance-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosBgpInstance.ts#L96">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosBgpInstance.ts#L96">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -898,7 +898,7 @@ The duration that you will buy Ddosbgp instance (in month). Valid values: [1~9],
 Type of the instance. Valid values: Enterprise,Professional. Default to `Enterprise`
 
 <h4 class="pdoc-member-header" id="DdosBgpInstance-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosBgpInstance.ts#L40">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosBgpInstance.ts#L40">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -907,7 +907,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DdosCooInstance" data-link-title="DdosCooInstance">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosCooInstance.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosCooInstance.ts#L44">
         Resource <strong>DdosCooInstance</strong>
     </a>
 </h3>
@@ -953,7 +953,7 @@ Ddoscoo instance can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="DdosCooInstance-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosCooInstance.ts#L100"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosCooInstance.ts#L100"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -968,7 +968,7 @@ alicloud.dns.DdosCooInstance has been deprecated in favor of alicloud.ddos.DdosC
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> DdosCooInstance(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DdosCooInstanceArgs'>DdosCooInstanceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="DdosCooInstance-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosCooInstance.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosCooInstance.ts#L54">method <b>get</b></a>
 </h4>
 
 
@@ -979,14 +979,14 @@ Get an existing DdosCooInstance resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DdosCooInstance-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosCooInstance.ts#L44">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosCooInstance.ts#L44">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DdosCooInstance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosCooInstance.ts#L66">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosCooInstance.ts#L66">method <b>isInstance</b></a>
 </h4>
 
 
@@ -997,7 +997,7 @@ Returns true if the given object is an instance of DdosCooInstance.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DdosCooInstance-bandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosCooInstance.ts#L76">property <b>bandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosCooInstance.ts#L76">property <b>bandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bandwidth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1005,7 +1005,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Elastic defend bandwidth of the instance. This value must be larger than the base defend bandwidth. Valid values: 30, 60, 100, 300, 400, 500, 600. The unit is Gbps. Only support upgrade.
 
 <h4 class="pdoc-member-header" id="DdosCooInstance-baseBandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosCooInstance.ts#L80">property <b>baseBandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosCooInstance.ts#L80">property <b>baseBandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>baseBandwidth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1013,7 +1013,7 @@ Elastic defend bandwidth of the instance. This value must be larger than the bas
 Base defend bandwidth of the instance. Valid values: 30, 60, 100, 300, 400, 500, 600. The unit is Gbps. Only support upgrade.
 
 <h4 class="pdoc-member-header" id="DdosCooInstance-domainCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosCooInstance.ts#L84">property <b>domainCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosCooInstance.ts#L84">property <b>domainCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1021,7 +1021,7 @@ Base defend bandwidth of the instance. Valid values: 30, 60, 100, 300, 400, 500,
 Domain retransmission rule count of the instance. At least 50. Increase 5 per step, such as 55, 60, 65. Only support upgrade.
 
 <h4 class="pdoc-member-header" id="DdosCooInstance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosCooInstance.ts#L44">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosCooInstance.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1030,7 +1030,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DdosCooInstance-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosCooInstance.ts#L88">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosCooInstance.ts#L88">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1038,7 +1038,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of the instance. This name can have a string of 1 to 63 characters.
 
 <h4 class="pdoc-member-header" id="DdosCooInstance-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosCooInstance.ts#L92">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosCooInstance.ts#L92">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>period: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1046,7 +1046,7 @@ Name of the instance. This name can have a string of 1 to 63 characters.
 The duration that you will buy Ddoscoo instance (in month). Valid values: [1~9], 12, 24, 36. Default to 1. At present, the provider does not support modify "period".
 
 <h4 class="pdoc-member-header" id="DdosCooInstance-portCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosCooInstance.ts#L96">property <b>portCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosCooInstance.ts#L96">property <b>portCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>portCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1054,7 +1054,7 @@ The duration that you will buy Ddoscoo instance (in month). Valid values: [1~9],
 Port retransmission rule count of the instance. At least 50. Increase 5 per step, such as 55, 60, 65. Only support upgrade.
 
 <h4 class="pdoc-member-header" id="DdosCooInstance-serviceBandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosCooInstance.ts#L100">property <b>serviceBandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosCooInstance.ts#L100">property <b>serviceBandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceBandwidth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1062,7 +1062,7 @@ Port retransmission rule count of the instance. At least 50. Increase 5 per step
 Business bandwidth of the instance. At leaset 100. Increased 100 per step, such as 100, 200, 300. The unit is Mbps. Only support upgrade.
 
 <h4 class="pdoc-member-header" id="DdosCooInstance-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosCooInstance.ts#L44">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosCooInstance.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1071,7 +1071,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DnsDomain" data-link-title="DnsDomain">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L16">
         Resource <strong>DnsDomain</strong>
     </a>
 </h3>
@@ -1087,7 +1087,7 @@ DNS domain can be imported using the id or domain name, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="DnsDomain-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L76"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L76"> <b>constructor</b></a>
 </h4>
 
 
@@ -1101,7 +1101,7 @@ Create a DnsDomain resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DnsDomain-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -1112,14 +1112,14 @@ Get an existing DnsDomain resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DnsDomain-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DnsDomain-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1130,12 +1130,12 @@ Returns true if the given object is an instance of DnsDomain.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DnsDomain-dnsServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L44">property <b>dnsServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L44">property <b>dnsServers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsServers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsDomain-domainId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L48">property <b>domainId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L48">property <b>domainId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1143,7 +1143,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The domain ID.
 
 <h4 class="pdoc-member-header" id="DnsDomain-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L52">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L52">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1151,7 +1151,7 @@ The domain ID.
 Name of the domain. This name without suffix can have a string of 1 to 63 characters(domain name subject, excluding suffix), must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 
 <h4 class="pdoc-member-header" id="DnsDomain-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L56">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L56">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1159,12 +1159,12 @@ Name of the domain. This name without suffix can have a string of 1 to 63 charac
 Id of the group in which the domain will add. If not supplied, then use default group.
 
 <h4 class="pdoc-member-header" id="DnsDomain-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L57">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L57">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsDomain-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1173,7 +1173,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DnsDomain-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L61">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L61">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lang: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1181,12 +1181,12 @@ deployments and may be missing (undefined) during planning phases.
 User language.
 
 <h4 class="pdoc-member-header" id="DnsDomain-punyCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L62">property <b>punyCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L62">property <b>punyCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>punyCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsDomain-remark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L66">property <b>remark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L66">property <b>remark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>remark: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1194,7 +1194,7 @@ User language.
 Remarks information for your domain name.
 
 <h4 class="pdoc-member-header" id="DnsDomain-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L70">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L70">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1202,7 +1202,7 @@ Remarks information for your domain name.
 The Id of resource group which the dns domain belongs.
 
 <h4 class="pdoc-member-header" id="DnsDomain-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L76">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L76">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1212,7 +1212,7 @@ A mapping of tags to assign to the resource.
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
 
 <h4 class="pdoc-member-header" id="DnsDomain-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1221,7 +1221,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Domain" data-link-title="Domain">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domain.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domain.ts#L18">
         Resource <strong>Domain</strong>
     </a>
 </h3>
@@ -1241,7 +1241,7 @@ DNS can be imported using the id or domain name, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Domain-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domain.ts#L66"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domain.ts#L66"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1256,7 +1256,7 @@ This resource has been deprecated in favour of DnsDomain
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> Domain(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#DomainArgs'>DomainArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="Domain-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domain.ts#L28">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domain.ts#L28">method <b>get</b></a>
 </h4>
 
 
@@ -1267,14 +1267,14 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Domain-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domain.ts#L18">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domain.ts#L18">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Domain-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domain.ts#L40">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domain.ts#L40">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1285,7 +1285,7 @@ Returns true if the given object is an instance of Domain.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Domain-dnsServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domain.ts#L50">property <b>dnsServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domain.ts#L50">property <b>dnsServers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsServers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1293,7 +1293,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A list of the dns server name.
 
 <h4 class="pdoc-member-header" id="Domain-domainId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domain.ts#L54">property <b>domainId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domain.ts#L54">property <b>domainId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1301,7 +1301,7 @@ A list of the dns server name.
 The domain ID.
 
 <h4 class="pdoc-member-header" id="Domain-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domain.ts#L58">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domain.ts#L58">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1309,7 +1309,7 @@ The domain ID.
 Id of the group in which the domain will add. If not supplied, then use default group.
 
 <h4 class="pdoc-member-header" id="Domain-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domain.ts#L18">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domain.ts#L18">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1318,7 +1318,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Domain-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domain.ts#L62">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domain.ts#L62">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1326,7 +1326,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of the domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 
 <h4 class="pdoc-member-header" id="Domain-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domain.ts#L66">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domain.ts#L66">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1334,7 +1334,7 @@ Name of the domain. This name without suffix can have a string of 1 to 63 charac
 The Id of resource group which the dns belongs.
 
 <h4 class="pdoc-member-header" id="Domain-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domain.ts#L18">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domain.ts#L18">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1343,7 +1343,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DomainAttachment" data-link-title="DomainAttachment">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainAttachment.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainAttachment.ts#L16">
         Resource <strong>DomainAttachment</strong>
     </a>
 </h3>
@@ -1359,7 +1359,7 @@ DNS domain attachment can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="DomainAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainAttachment.ts#L51"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainAttachment.ts#L51"> <b>constructor</b></a>
 </h4>
 
 
@@ -1373,7 +1373,7 @@ Create a DomainAttachment resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DomainAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainAttachment.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainAttachment.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -1384,14 +1384,14 @@ Get an existing DomainAttachment resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DomainAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainAttachment.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainAttachment.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DomainAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainAttachment.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainAttachment.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1402,7 +1402,7 @@ Returns true if the given object is an instance of DomainAttachment.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DomainAttachment-domainNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainAttachment.ts#L47">property <b>domainNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainAttachment.ts#L47">property <b>domainNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1410,7 +1410,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The domain names bound to the DNS instance.
 
 <h4 class="pdoc-member-header" id="DomainAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainAttachment.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainAttachment.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1419,7 +1419,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DomainAttachment-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainAttachment.ts#L51">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainAttachment.ts#L51">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1427,7 +1427,7 @@ deployments and may be missing (undefined) during planning phases.
 The id of the DNS instance.
 
 <h4 class="pdoc-member-header" id="DomainAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainAttachment.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainAttachment.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1436,7 +1436,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DomainGroup" data-link-title="DomainGroup">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainGroup.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainGroup.ts#L32">
         Resource <strong>DomainGroup</strong>
     </a>
 </h3>
@@ -1468,7 +1468,7 @@ Alidns domain group can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="DomainGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainGroup.ts#L73"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainGroup.ts#L73"> <b>constructor</b></a>
 </h4>
 
 
@@ -1482,7 +1482,7 @@ Create a DomainGroup resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DomainGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainGroup.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainGroup.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -1493,14 +1493,14 @@ Get an existing DomainGroup resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DomainGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainGroup.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainGroup.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DomainGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainGroup.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainGroup.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1511,7 +1511,7 @@ Returns true if the given object is an instance of DomainGroup.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DomainGroup-domainGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainGroup.ts#L63">property <b>domainGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainGroup.ts#L63">property <b>domainGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1519,7 +1519,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Name of the domain group.
 
 <h4 class="pdoc-member-header" id="DomainGroup-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainGroup.ts#L69">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainGroup.ts#L69">property <b>groupName</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1531,7 +1531,7 @@ Field &#39;group_name&#39; has been deprecated from version 1.97.0. Use &#39;dom
 Replaced by `domainGroupName` after version 1.97.0.
 
 <h4 class="pdoc-member-header" id="DomainGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainGroup.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainGroup.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1540,7 +1540,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DomainGroup-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainGroup.ts#L73">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainGroup.ts#L73">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lang: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1548,7 +1548,7 @@ deployments and may be missing (undefined) during planning phases.
 User language.
 
 <h4 class="pdoc-member-header" id="DomainGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainGroup.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainGroup.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1557,14 +1557,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Group" data-link-title="Group">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/group.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/group.ts#L7">
         Resource <strong>Group</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Group</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="Group-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/group.ts#L38"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/group.ts#L38"> <b>constructor</b></a>
 </h4>
 
 
@@ -1578,7 +1578,7 @@ Create a Group resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Group-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/group.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/group.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -1589,14 +1589,14 @@ Get an existing Group resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Group-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/group.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/group.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Group-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/group.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/group.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1607,7 +1607,7 @@ Returns true if the given object is an instance of Group.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Group-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/group.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/group.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1616,7 +1616,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Group-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/group.ts#L38">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/group.ts#L38">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1624,7 +1624,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of the domain group.
 
 <h4 class="pdoc-member-header" id="Group-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/group.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/group.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1633,7 +1633,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Instance" data-link-title="Instance">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L16">
         Resource <strong>Instance</strong>
     </a>
 </h3>
@@ -1649,7 +1649,7 @@ DNS instance be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Instance-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L72"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L72"> <b>constructor</b></a>
 </h4>
 
 
@@ -1663,7 +1663,7 @@ Create a Instance resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Instance-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -1674,14 +1674,14 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Instance-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Instance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1692,7 +1692,7 @@ Returns true if the given object is an instance of Instance.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Instance-dnsSecurity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L47">property <b>dnsSecurity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L47">property <b>dnsSecurity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsSecurity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1700,7 +1700,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 DNS security level. Valid values: `no`, `basic`, `advanced`.
 
 <h4 class="pdoc-member-header" id="Instance-domainNumbers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L51">property <b>domainNumbers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L51">property <b>domainNumbers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainNumbers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1708,7 +1708,7 @@ DNS security level. Valid values: `no`, `basic`, `advanced`.
 Number of domain names bound.
 
 <h4 class="pdoc-member-header" id="Instance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1717,12 +1717,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Instance-paymentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L52">property <b>paymentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L52">property <b>paymentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>paymentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Instance-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L56">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L56">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>period: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1730,7 +1730,7 @@ deployments and may be missing (undefined) during planning phases.
 Creating a pre-paid instance, it must be set, the unit is month, please enter an integer multiple of 12 for annually paid products.
 
 <h4 class="pdoc-member-header" id="Instance-renewPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L60">property <b>renewPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L60">property <b>renewPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>renewPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1738,7 +1738,7 @@ Creating a pre-paid instance, it must be set, the unit is month, please enter an
 Automatic renewal period, the unit is month. When setting RenewalStatus to AutoRenewal, it must be set.
 
 <h4 class="pdoc-member-header" id="Instance-renewalStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L64">property <b>renewalStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L64">property <b>renewalStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>renewalStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1746,7 +1746,7 @@ Automatic renewal period, the unit is month. When setting RenewalStatus to AutoR
 Automatic renewal status. Valid values: `AutoRenewal`, `ManualRenewal`, default to `ManualRenewal`.
 
 <h4 class="pdoc-member-header" id="Instance-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1755,7 +1755,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Instance-versionCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L68">property <b>versionCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L68">property <b>versionCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>versionCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1763,7 +1763,7 @@ deployments.
 Paid package version. Valid values: `versionPersonal`, `versionEnterpriseBasic`, `versionEnterpriseAdvanced`.
 
 <h4 class="pdoc-member-header" id="Instance-versionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L72">property <b>versionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L72">property <b>versionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>versionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1771,7 +1771,7 @@ Paid package version. Valid values: `versionPersonal`, `versionEnterpriseBasic`,
 Paid package version name.
 
 <h3 class="pdoc-module-header" id="Record" data-link-title="Record">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L16">
         Resource <strong>Record</strong>
     </a>
 </h3>
@@ -1787,7 +1787,7 @@ RDS record can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Record-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L76"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L76"> <b>constructor</b></a>
 </h4>
 
 
@@ -1801,7 +1801,7 @@ Create a Record resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Record-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -1812,14 +1812,14 @@ Get an existing Record resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Record-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Record-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1830,7 +1830,7 @@ Returns true if the given object is an instance of Record.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Record-hostRecord">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L47">property <b>hostRecord</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L47">property <b>hostRecord</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hostRecord: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1838,7 +1838,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Host record for the domain record. This hostRecord can have at most 253 characters, and each part split with "." can have at most 63 characters, and must contain only alphanumeric characters or hyphens, such as "-",".","*","@",  and must not begin or end with "-".
 
 <h4 class="pdoc-member-header" id="Record-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1847,12 +1847,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Record-locked">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L48">property <b>locked</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L48">property <b>locked</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>locked: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Record-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L52">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L52">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1860,7 +1860,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of the domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 
 <h4 class="pdoc-member-header" id="Record-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L56">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L56">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1868,7 +1868,7 @@ Name of the domain. This name without suffix can have a string of 1 to 63 charac
 The priority of domain record. Valid values are `[1-10]`. When the `type` is `MX`, this parameter is required.
 
 <h4 class="pdoc-member-header" id="Record-routing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L60">property <b>routing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L60">property <b>routing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>routing: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1876,7 +1876,7 @@ The priority of domain record. Valid values are `[1-10]`. When the `type` is `MX
 The resolution line of domain record. Valid values are `default`, `telecom`, `unicom`, `mobile`, `oversea`, `edu`, `drpeng`, `btvn`, .etc. When the `type` is `FORWORD_URL`, this parameter must be `default`. Default value is `default`. For checking all resolution lines enumeration please visit [Alibaba Cloud DNS doc](https://www.alibabacloud.com/help/doc-detail/34339.htm) or using alicloud.dns.getResolutionLines in data source to get the value.
 
 <h4 class="pdoc-member-header" id="Record-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L64">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L64">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1884,7 +1884,7 @@ The resolution line of domain record. Valid values are `default`, `telecom`, `un
 The record status. `Enable` or `Disable`.
 
 <h4 class="pdoc-member-header" id="Record-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L68">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L68">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1892,7 +1892,7 @@ The record status. `Enable` or `Disable`.
 The effective time of domain record. Its scope depends on the edition of the cloud resolution. Free is `[600, 86400]`, Basic is `[120, 86400]`, Standard is `[60, 86400]`, Ultimate is `[10, 86400]`, Exclusive is `[1, 86400]`. Default value is `600`.
 
 <h4 class="pdoc-member-header" id="Record-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L72">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L72">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1900,7 +1900,7 @@ The effective time of domain record. Its scope depends on the edition of the clo
 The type of domain record. Valid values are `A`,`NS`,`MX`,`TXT`,`CNAME`,`SRV`,`AAAA`,`CAA`, `REDIRECT_URL` and `FORWORD_URL`.
 
 <h4 class="pdoc-member-header" id="Record-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1909,7 +1909,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Record-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L76">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L76">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1919,7 +1919,7 @@ The value of domain record, When the `type` is `MX`,`NS`,`CNAME`,`SRV`, the serv
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getAlidnsDomainGroups" data-link-title="getAlidnsDomainGroups">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomainGroups.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomainGroups.ts#L26">
         Function <strong>getAlidnsDomainGroups</strong>
     </a>
 </h3>
@@ -1946,7 +1946,7 @@ export const firstDomainGroupId = example.groups[0].id;
 ```
 
 <h3 class="pdoc-module-header" id="getAlidnsDomains" data-link-title="getAlidnsDomains">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L27">
         Function <strong>getAlidnsDomains</strong>
     </a>
 </h3>
@@ -1974,7 +1974,7 @@ export const firstDomainId = domainsDs.domains[0].domainId;
 ```
 
 <h3 class="pdoc-module-header" id="getAlidnsInstances" data-link-title="getAlidnsInstances">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsInstances.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsInstances.ts#L26">
         Function <strong>getAlidnsInstances</strong>
     </a>
 </h3>
@@ -2001,7 +2001,7 @@ export const firstInstanceId = example.instances[0].id;
 ```
 
 <h3 class="pdoc-module-header" id="getAlidnsRecords" data-link-title="getAlidnsRecords">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L13">
         Function <strong>getAlidnsRecords</strong>
     </a>
 </h3>
@@ -2015,7 +2015,7 @@ This data source provides a list of Alidns Domain Records in an Alibaba Cloud ac
 > **NOTE:**  Available in 1.86.0+.
 
 <h3 class="pdoc-module-header" id="getDomainGroups" data-link-title="getDomainGroups">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainGroups.ts#L8">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainGroups.ts#L8">
         Function <strong>getDomainGroups</strong>
     </a>
 </h3>
@@ -2024,7 +2024,7 @@ This data source provides a list of Alidns Domain Records in an Alibaba Cloud ac
 <pre class="highlight"><code><span class='kd'></span>getDomainGroups(args?: <a href='#GetDomainGroupsArgs'>GetDomainGroupsArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetDomainGroupsResult'>GetDomainGroupsResult</a>&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="getDomainRecords" data-link-title="getDomainRecords">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainRecords.ts#L8">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainRecords.ts#L8">
         Function <strong>getDomainRecords</strong>
     </a>
 </h3>
@@ -2033,7 +2033,7 @@ This data source provides a list of Alidns Domain Records in an Alibaba Cloud ac
 <pre class="highlight"><code><span class='kd'></span>getDomainRecords(args: <a href='#GetDomainRecordsArgs'>GetDomainRecordsArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetDomainRecordsResult'>GetDomainRecordsResult</a>&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="getDomains" data-link-title="getDomains">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L8">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L8">
         Function <strong>getDomains</strong>
     </a>
 </h3>
@@ -2042,7 +2042,7 @@ This data source provides a list of Alidns Domain Records in an Alibaba Cloud ac
 <pre class="highlight"><code><span class='kd'></span>getDomains(args?: <a href='#GetDomainsArgs'>GetDomainsArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetDomainsResult'>GetDomainsResult</a>&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="getDomainTxtGuid" data-link-title="getDomainTxtGuid">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainTxtGuid.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainTxtGuid.ts#L28">
         Function <strong>getDomainTxtGuid</strong>
     </a>
 </h3>
@@ -2071,7 +2071,7 @@ export const value = thisDomainTxtGuid.value;
 ```
 
 <h3 class="pdoc-module-header" id="getGroups" data-link-title="getGroups">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getGroups.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getGroups.ts#L25">
         Function <strong>getGroups</strong>
     </a>
 </h3>
@@ -2097,7 +2097,7 @@ export const firstGroupName = groupsDs.groups[0].groupName;
 ```
 
 <h3 class="pdoc-module-header" id="getInstances" data-link-title="getInstances">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getInstances.ts#L8">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getInstances.ts#L8">
         Function <strong>getInstances</strong>
     </a>
 </h3>
@@ -2106,7 +2106,7 @@ export const firstGroupName = groupsDs.groups[0].groupName;
 <pre class="highlight"><code><span class='kd'></span>getInstances(args?: <a href='#GetInstancesArgs'>GetInstancesArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetInstancesResult'>GetInstancesResult</a>&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="getRecords" data-link-title="getRecords">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getRecords.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getRecords.ts#L28">
         Function <strong>getRecords</strong>
     </a>
 </h3>
@@ -2135,7 +2135,7 @@ export const firstRecordId = recordsDs.records[0].recordId;
 ```
 
 <h3 class="pdoc-module-header" id="getResolutionLines" data-link-title="getResolutionLines">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getResolutionLines.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getResolutionLines.ts#L27">
         Function <strong>getResolutionLines</strong>
     </a>
 </h3>
@@ -2165,7 +2165,7 @@ export const firstLineCode = resolutionLinesDs.lines[0].lineCode;
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AlidnsDomainArgs" data-link-title="AlidnsDomainArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L204">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L204">
         interface <strong>AlidnsDomainArgs</strong>
     </a>
 </h3>
@@ -2175,7 +2175,7 @@ export const firstLineCode = resolutionLinesDs.lines[0].lineCode;
 The set of arguments for constructing a AlidnsDomain resource.
 
 <h4 class="pdoc-member-header" id="AlidnsDomainArgs-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L208">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L208">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2183,7 +2183,7 @@ The set of arguments for constructing a AlidnsDomain resource.
 Name of the domain. This name without suffix can have a string of 1 to 63 characters(domain name subject, excluding suffix), must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 
 <h4 class="pdoc-member-header" id="AlidnsDomainArgs-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L212">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L212">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2191,7 +2191,7 @@ Name of the domain. This name without suffix can have a string of 1 to 63 charac
 Id of the group in which the domain will add. If not supplied, then use default group.
 
 <h4 class="pdoc-member-header" id="AlidnsDomainArgs-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L216">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L216">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lang?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2199,7 +2199,7 @@ Id of the group in which the domain will add. If not supplied, then use default 
 User language.
 
 <h4 class="pdoc-member-header" id="AlidnsDomainArgs-remark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L220">property <b>remark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L220">property <b>remark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>remark?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2207,7 +2207,7 @@ User language.
 Remarks information for your domain name.
 
 <h4 class="pdoc-member-header" id="AlidnsDomainArgs-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L224">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L224">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2215,7 +2215,7 @@ Remarks information for your domain name.
 The Id of resource group which the dns domain belongs.
 
 <h4 class="pdoc-member-header" id="AlidnsDomainArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L230">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L230">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2225,7 +2225,7 @@ A mapping of tags to assign to the resource.
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
 
 <h3 class="pdoc-module-header" id="AlidnsDomainAttachmentArgs" data-link-title="AlidnsDomainAttachmentArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomainAttachment.ts#L125">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomainAttachment.ts#L125">
         interface <strong>AlidnsDomainAttachmentArgs</strong>
     </a>
 </h3>
@@ -2235,7 +2235,7 @@ A mapping of tags to assign to the resource.
 The set of arguments for constructing a AlidnsDomainAttachment resource.
 
 <h4 class="pdoc-member-header" id="AlidnsDomainAttachmentArgs-domainNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomainAttachment.ts#L129">property <b>domainNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomainAttachment.ts#L129">property <b>domainNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2243,7 +2243,7 @@ The set of arguments for constructing a AlidnsDomainAttachment resource.
 The domain names bound to the DNS instance.
 
 <h4 class="pdoc-member-header" id="AlidnsDomainAttachmentArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomainAttachment.ts#L133">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomainAttachment.ts#L133">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2251,7 +2251,7 @@ The domain names bound to the DNS instance.
 The id of the DNS instance.
 
 <h3 class="pdoc-module-header" id="AlidnsDomainAttachmentState" data-link-title="AlidnsDomainAttachmentState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomainAttachment.ts#L111">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomainAttachment.ts#L111">
         interface <strong>AlidnsDomainAttachmentState</strong>
     </a>
 </h3>
@@ -2261,7 +2261,7 @@ The id of the DNS instance.
 Input properties used for looking up and filtering AlidnsDomainAttachment resources.
 
 <h4 class="pdoc-member-header" id="AlidnsDomainAttachmentState-domainNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomainAttachment.ts#L115">property <b>domainNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomainAttachment.ts#L115">property <b>domainNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2269,7 +2269,7 @@ Input properties used for looking up and filtering AlidnsDomainAttachment resour
 The domain names bound to the DNS instance.
 
 <h4 class="pdoc-member-header" id="AlidnsDomainAttachmentState-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomainAttachment.ts#L119">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomainAttachment.ts#L119">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2277,7 +2277,7 @@ The domain names bound to the DNS instance.
 The id of the DNS instance.
 
 <h3 class="pdoc-module-header" id="AlidnsDomainState" data-link-title="AlidnsDomainState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L159">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L159">
         interface <strong>AlidnsDomainState</strong>
     </a>
 </h3>
@@ -2287,12 +2287,12 @@ The id of the DNS instance.
 Input properties used for looking up and filtering AlidnsDomain resources.
 
 <h4 class="pdoc-member-header" id="AlidnsDomainState-dnsServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L160">property <b>dnsServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L160">property <b>dnsServers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsServers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AlidnsDomainState-domainId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L164">property <b>domainId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L164">property <b>domainId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2300,7 +2300,7 @@ Input properties used for looking up and filtering AlidnsDomain resources.
 The domain ID.
 
 <h4 class="pdoc-member-header" id="AlidnsDomainState-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L168">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L168">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2308,7 +2308,7 @@ The domain ID.
 Name of the domain. This name without suffix can have a string of 1 to 63 characters(domain name subject, excluding suffix), must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 
 <h4 class="pdoc-member-header" id="AlidnsDomainState-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L172">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L172">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2316,7 +2316,7 @@ Name of the domain. This name without suffix can have a string of 1 to 63 charac
 Id of the group in which the domain will add. If not supplied, then use default group.
 
 <h4 class="pdoc-member-header" id="AlidnsDomainState-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L176">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L176">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2324,7 +2324,7 @@ Id of the group in which the domain will add. If not supplied, then use default 
 Domain name group name.
 
 <h4 class="pdoc-member-header" id="AlidnsDomainState-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L180">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L180">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lang?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2332,7 +2332,7 @@ Domain name group name.
 User language.
 
 <h4 class="pdoc-member-header" id="AlidnsDomainState-punyCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L184">property <b>punyCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L184">property <b>punyCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>punyCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2340,7 +2340,7 @@ User language.
 Only return punycode codes for Chinese domain names.
 
 <h4 class="pdoc-member-header" id="AlidnsDomainState-remark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L188">property <b>remark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L188">property <b>remark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>remark?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2348,7 +2348,7 @@ Only return punycode codes for Chinese domain names.
 Remarks information for your domain name.
 
 <h4 class="pdoc-member-header" id="AlidnsDomainState-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L192">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L192">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2356,7 +2356,7 @@ Remarks information for your domain name.
 The Id of resource group which the dns domain belongs.
 
 <h4 class="pdoc-member-header" id="AlidnsDomainState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsDomain.ts#L198">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsDomain.ts#L198">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2366,7 +2366,7 @@ A mapping of tags to assign to the resource.
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
 
 <h3 class="pdoc-module-header" id="AlidnsInstanceArgs" data-link-title="AlidnsInstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L191">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L191">
         interface <strong>AlidnsInstanceArgs</strong>
     </a>
 </h3>
@@ -2376,7 +2376,7 @@ A mapping of tags to assign to the resource.
 The set of arguments for constructing a AlidnsInstance resource.
 
 <h4 class="pdoc-member-header" id="AlidnsInstanceArgs-dnsSecurity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L195">property <b>dnsSecurity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L195">property <b>dnsSecurity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsSecurity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2384,7 +2384,7 @@ The set of arguments for constructing a AlidnsInstance resource.
 Alidns security level. Valid values: `no`, `basic`, `advanced`.
 
 <h4 class="pdoc-member-header" id="AlidnsInstanceArgs-domainNumbers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L199">property <b>domainNumbers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L199">property <b>domainNumbers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainNumbers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2392,7 +2392,7 @@ Alidns security level. Valid values: `no`, `basic`, `advanced`.
 Number of domain names bound.
 
 <h4 class="pdoc-member-header" id="AlidnsInstanceArgs-paymentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L203">property <b>paymentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L203">property <b>paymentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>paymentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2400,7 +2400,7 @@ Number of domain names bound.
 The billing method of the Alidns instance. Valid values: `Subscription`. Default to `Subscription`.
 
 <h4 class="pdoc-member-header" id="AlidnsInstanceArgs-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L207">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L207">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2408,7 +2408,7 @@ The billing method of the Alidns instance. Valid values: `Subscription`. Default
 Creating a pre-paid instance, it must be set, the unit is month, please enter an integer multiple of 12 for annually paid products.
 
 <h4 class="pdoc-member-header" id="AlidnsInstanceArgs-renewPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L211">property <b>renewPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L211">property <b>renewPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>renewPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2416,7 +2416,7 @@ Creating a pre-paid instance, it must be set, the unit is month, please enter an
 Automatic renewal period, the unit is month. When setting RenewalStatus to AutoRenewal, it must be set.
 
 <h4 class="pdoc-member-header" id="AlidnsInstanceArgs-renewalStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L215">property <b>renewalStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L215">property <b>renewalStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>renewalStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2424,7 +2424,7 @@ Automatic renewal period, the unit is month. When setting RenewalStatus to AutoR
 Automatic renewal status. Valid values: `AutoRenewal`, `ManualRenewal`, default to `ManualRenewal`.
 
 <h4 class="pdoc-member-header" id="AlidnsInstanceArgs-versionCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L219">property <b>versionCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L219">property <b>versionCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2432,7 +2432,7 @@ Automatic renewal status. Valid values: `AutoRenewal`, `ManualRenewal`, default 
 Paid package version. Valid values: `versionPersonal`, `versionEnterpriseBasic`, `versionEnterpriseAdvanced`.
 
 <h3 class="pdoc-module-header" id="AlidnsInstanceState" data-link-title="AlidnsInstanceState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L153">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L153">
         interface <strong>AlidnsInstanceState</strong>
     </a>
 </h3>
@@ -2442,7 +2442,7 @@ Paid package version. Valid values: `versionPersonal`, `versionEnterpriseBasic`,
 Input properties used for looking up and filtering AlidnsInstance resources.
 
 <h4 class="pdoc-member-header" id="AlidnsInstanceState-dnsSecurity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L157">property <b>dnsSecurity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L157">property <b>dnsSecurity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsSecurity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2450,7 +2450,7 @@ Input properties used for looking up and filtering AlidnsInstance resources.
 Alidns security level. Valid values: `no`, `basic`, `advanced`.
 
 <h4 class="pdoc-member-header" id="AlidnsInstanceState-domainNumbers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L161">property <b>domainNumbers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L161">property <b>domainNumbers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainNumbers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2458,7 +2458,7 @@ Alidns security level. Valid values: `no`, `basic`, `advanced`.
 Number of domain names bound.
 
 <h4 class="pdoc-member-header" id="AlidnsInstanceState-paymentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L165">property <b>paymentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L165">property <b>paymentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>paymentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2466,7 +2466,7 @@ Number of domain names bound.
 The billing method of the Alidns instance. Valid values: `Subscription`. Default to `Subscription`.
 
 <h4 class="pdoc-member-header" id="AlidnsInstanceState-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L169">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L169">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2474,7 +2474,7 @@ The billing method of the Alidns instance. Valid values: `Subscription`. Default
 Creating a pre-paid instance, it must be set, the unit is month, please enter an integer multiple of 12 for annually paid products.
 
 <h4 class="pdoc-member-header" id="AlidnsInstanceState-renewPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L173">property <b>renewPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L173">property <b>renewPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>renewPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2482,7 +2482,7 @@ Creating a pre-paid instance, it must be set, the unit is month, please enter an
 Automatic renewal period, the unit is month. When setting RenewalStatus to AutoRenewal, it must be set.
 
 <h4 class="pdoc-member-header" id="AlidnsInstanceState-renewalStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L177">property <b>renewalStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L177">property <b>renewalStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>renewalStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2490,7 +2490,7 @@ Automatic renewal period, the unit is month. When setting RenewalStatus to AutoR
 Automatic renewal status. Valid values: `AutoRenewal`, `ManualRenewal`, default to `ManualRenewal`.
 
 <h4 class="pdoc-member-header" id="AlidnsInstanceState-versionCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L181">property <b>versionCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L181">property <b>versionCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2498,7 +2498,7 @@ Automatic renewal status. Valid values: `AutoRenewal`, `ManualRenewal`, default 
 Paid package version. Valid values: `versionPersonal`, `versionEnterpriseBasic`, `versionEnterpriseAdvanced`.
 
 <h4 class="pdoc-member-header" id="AlidnsInstanceState-versionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsInstance.ts#L185">property <b>versionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsInstance.ts#L185">property <b>versionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2506,7 +2506,7 @@ Paid package version. Valid values: `versionPersonal`, `versionEnterpriseBasic`,
 Paid package version name.
 
 <h3 class="pdoc-module-header" id="AlidnsRecordArgs" data-link-title="AlidnsRecordArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L225">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L225">
         interface <strong>AlidnsRecordArgs</strong>
     </a>
 </h3>
@@ -2516,7 +2516,7 @@ Paid package version name.
 The set of arguments for constructing a AlidnsRecord resource.
 
 <h4 class="pdoc-member-header" id="AlidnsRecordArgs-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L229">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L229">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2524,7 +2524,7 @@ The set of arguments for constructing a AlidnsRecord resource.
 Name of the domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 
 <h4 class="pdoc-member-header" id="AlidnsRecordArgs-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L233">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L233">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lang?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2532,7 +2532,7 @@ Name of the domain. This name without suffix can have a string of 1 to 63 charac
 User language.
 
 <h4 class="pdoc-member-header" id="AlidnsRecordArgs-line">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L237">property <b>line</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L237">property <b>line</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>line?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2540,7 +2540,7 @@ User language.
 The resolution line of domain record. When the `type` is `FORWORD_URL`, this parameter must be `default`. Default value is `default`. For checking all resolution lines enumeration please visit [Alibaba Cloud DNS doc](https://www.alibabacloud.com/help/doc-detail/34339.htm) or using alicloud.dns.getResolutionLines in data source to get the value.
 
 <h4 class="pdoc-member-header" id="AlidnsRecordArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L241">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L241">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2548,7 +2548,7 @@ The resolution line of domain record. When the `type` is `FORWORD_URL`, this par
 The priority of domain record. Valid values: `[1-10]`. When the `type` is `MX`, this parameter is required.
 
 <h4 class="pdoc-member-header" id="AlidnsRecordArgs-remark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L245">property <b>remark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L245">property <b>remark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>remark?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2556,7 +2556,7 @@ The priority of domain record. Valid values: `[1-10]`. When the `type` is `MX`, 
 The remark of the domain record.
 
 <h4 class="pdoc-member-header" id="AlidnsRecordArgs-rr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L249">property <b>rr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L249">property <b>rr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2564,7 +2564,7 @@ The remark of the domain record.
 Host record for the domain record. This hostRecord can have at most 253 characters, and each part split with `.` can have at most 63 characters, and must contain only alphanumeric characters or hyphens, such as `-`, `.`, `*`, `@`, and must not begin or end with `-`.
 
 <h4 class="pdoc-member-header" id="AlidnsRecordArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L253">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L253">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2572,7 +2572,7 @@ Host record for the domain record. This hostRecord can have at most 253 characte
 The status of the domain record. Valid values: `ENABLE`,`DISABLE`.
 
 <h4 class="pdoc-member-header" id="AlidnsRecordArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L257">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L257">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2580,7 +2580,7 @@ The status of the domain record. Valid values: `ENABLE`,`DISABLE`.
 The effective time of domain record. Its scope depends on the edition of the cloud resolution. Free is `[600, 86400]`, Basic is `[120, 86400]`, Standard is `[60, 86400]`, Ultimate is `[10, 86400]`, Exclusive is `[1, 86400]`. Default value is `600`.
 
 <h4 class="pdoc-member-header" id="AlidnsRecordArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L261">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L261">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2588,7 +2588,7 @@ The effective time of domain record. Its scope depends on the edition of the clo
 The type of domain record. Valid values: `A`,`NS`,`MX`,`TXT`,`CNAME`,`SRV`,`AAAA`,`CAA`, `REDIRECT_URL` and `FORWORD_URL`.
 
 <h4 class="pdoc-member-header" id="AlidnsRecordArgs-userClientIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L265">property <b>userClientIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L265">property <b>userClientIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userClientIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2596,7 +2596,7 @@ The type of domain record. Valid values: `A`,`NS`,`MX`,`TXT`,`CNAME`,`SRV`,`AAAA
 The IP address of the client.
 
 <h4 class="pdoc-member-header" id="AlidnsRecordArgs-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L269">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L269">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2604,7 +2604,7 @@ The IP address of the client.
 The value of domain record, When the `type` is `MX`,`NS`,`CNAME`,`SRV`, the server will treat the `value` as a fully qualified domain name, so it's no need to add a `.` at the end.
 
 <h3 class="pdoc-module-header" id="AlidnsRecordState" data-link-title="AlidnsRecordState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L175">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L175">
         interface <strong>AlidnsRecordState</strong>
     </a>
 </h3>
@@ -2614,7 +2614,7 @@ The value of domain record, When the `type` is `MX`,`NS`,`CNAME`,`SRV`, the serv
 Input properties used for looking up and filtering AlidnsRecord resources.
 
 <h4 class="pdoc-member-header" id="AlidnsRecordState-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L179">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L179">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2622,7 +2622,7 @@ Input properties used for looking up and filtering AlidnsRecord resources.
 Name of the domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 
 <h4 class="pdoc-member-header" id="AlidnsRecordState-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L183">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L183">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lang?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2630,7 +2630,7 @@ Name of the domain. This name without suffix can have a string of 1 to 63 charac
 User language.
 
 <h4 class="pdoc-member-header" id="AlidnsRecordState-line">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L187">property <b>line</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L187">property <b>line</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>line?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2638,7 +2638,7 @@ User language.
 The resolution line of domain record. When the `type` is `FORWORD_URL`, this parameter must be `default`. Default value is `default`. For checking all resolution lines enumeration please visit [Alibaba Cloud DNS doc](https://www.alibabacloud.com/help/doc-detail/34339.htm) or using alicloud.dns.getResolutionLines in data source to get the value.
 
 <h4 class="pdoc-member-header" id="AlidnsRecordState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L191">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L191">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2646,7 +2646,7 @@ The resolution line of domain record. When the `type` is `FORWORD_URL`, this par
 The priority of domain record. Valid values: `[1-10]`. When the `type` is `MX`, this parameter is required.
 
 <h4 class="pdoc-member-header" id="AlidnsRecordState-remark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L195">property <b>remark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L195">property <b>remark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>remark?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2654,7 +2654,7 @@ The priority of domain record. Valid values: `[1-10]`. When the `type` is `MX`, 
 The remark of the domain record.
 
 <h4 class="pdoc-member-header" id="AlidnsRecordState-rr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L199">property <b>rr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L199">property <b>rr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2662,7 +2662,7 @@ The remark of the domain record.
 Host record for the domain record. This hostRecord can have at most 253 characters, and each part split with `.` can have at most 63 characters, and must contain only alphanumeric characters or hyphens, such as `-`, `.`, `*`, `@`, and must not begin or end with `-`.
 
 <h4 class="pdoc-member-header" id="AlidnsRecordState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L203">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L203">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2670,7 +2670,7 @@ Host record for the domain record. This hostRecord can have at most 253 characte
 The status of the domain record. Valid values: `ENABLE`,`DISABLE`.
 
 <h4 class="pdoc-member-header" id="AlidnsRecordState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L207">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L207">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2678,7 +2678,7 @@ The status of the domain record. Valid values: `ENABLE`,`DISABLE`.
 The effective time of domain record. Its scope depends on the edition of the cloud resolution. Free is `[600, 86400]`, Basic is `[120, 86400]`, Standard is `[60, 86400]`, Ultimate is `[10, 86400]`, Exclusive is `[1, 86400]`. Default value is `600`.
 
 <h4 class="pdoc-member-header" id="AlidnsRecordState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L211">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L211">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2686,7 +2686,7 @@ The effective time of domain record. Its scope depends on the edition of the clo
 The type of domain record. Valid values: `A`,`NS`,`MX`,`TXT`,`CNAME`,`SRV`,`AAAA`,`CAA`, `REDIRECT_URL` and `FORWORD_URL`.
 
 <h4 class="pdoc-member-header" id="AlidnsRecordState-userClientIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L215">property <b>userClientIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L215">property <b>userClientIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userClientIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2694,7 +2694,7 @@ The type of domain record. Valid values: `A`,`NS`,`MX`,`TXT`,`CNAME`,`SRV`,`AAAA
 The IP address of the client.
 
 <h4 class="pdoc-member-header" id="AlidnsRecordState-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/alidnsRecord.ts#L219">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/alidnsRecord.ts#L219">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2702,7 +2702,7 @@ The IP address of the client.
 The value of domain record, When the `type` is `MX`,`NS`,`CNAME`,`SRV`, the server will treat the `value` as a fully qualified domain name, so it's no need to add a `.` at the end.
 
 <h3 class="pdoc-module-header" id="DdosBgpInstanceArgs" data-link-title="DdosBgpInstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosBgpInstance.ts#L187">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosBgpInstance.ts#L187">
         interface <strong>DdosBgpInstanceArgs</strong>
     </a>
 </h3>
@@ -2712,7 +2712,7 @@ The value of domain record, When the `type` is `MX`,`NS`,`CNAME`,`SRV`, the serv
 The set of arguments for constructing a DdosBgpInstance resource.
 
 <h4 class="pdoc-member-header" id="DdosBgpInstanceArgs-bandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosBgpInstance.ts#L191">property <b>bandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosBgpInstance.ts#L191">property <b>bandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bandwidth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2720,7 +2720,7 @@ The set of arguments for constructing a DdosBgpInstance resource.
 Elastic defend bandwidth of the instance. This value must be larger than the base defend bandwidth. Valid values: 51,91,101,201,301. The unit is Gbps.
 
 <h4 class="pdoc-member-header" id="DdosBgpInstanceArgs-baseBandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosBgpInstance.ts#L195">property <b>baseBandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosBgpInstance.ts#L195">property <b>baseBandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>baseBandwidth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2728,7 +2728,7 @@ Elastic defend bandwidth of the instance. This value must be larger than the bas
 Base defend bandwidth of the instance. Valid values: 20. The unit is Gbps. Default to `20`.
 
 <h4 class="pdoc-member-header" id="DdosBgpInstanceArgs-ipCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosBgpInstance.ts#L199">property <b>ipCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosBgpInstance.ts#L199">property <b>ipCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2736,7 +2736,7 @@ Base defend bandwidth of the instance. Valid values: 20. The unit is Gbps. Defau
 IP count of the instance. Valid values: 100.
 
 <h4 class="pdoc-member-header" id="DdosBgpInstanceArgs-ipType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosBgpInstance.ts#L203">property <b>ipType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosBgpInstance.ts#L203">property <b>ipType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2744,7 +2744,7 @@ IP count of the instance. Valid values: 100.
 IP version of the instance. Valid values: IPv4,IPv6.
 
 <h4 class="pdoc-member-header" id="DdosBgpInstanceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosBgpInstance.ts#L207">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosBgpInstance.ts#L207">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2752,7 +2752,7 @@ IP version of the instance. Valid values: IPv4,IPv6.
 Name of the instance. This name can have a string of 1 to 63 characters.
 
 <h4 class="pdoc-member-header" id="DdosBgpInstanceArgs-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosBgpInstance.ts#L211">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosBgpInstance.ts#L211">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2760,7 +2760,7 @@ Name of the instance. This name can have a string of 1 to 63 characters.
 The duration that you will buy Ddosbgp instance (in month). Valid values: [1~9], 12, 24, 36. Default to 12. At present, the provider does not support modify "period".
 
 <h4 class="pdoc-member-header" id="DdosBgpInstanceArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosBgpInstance.ts#L215">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosBgpInstance.ts#L215">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2768,7 +2768,7 @@ The duration that you will buy Ddosbgp instance (in month). Valid values: [1~9],
 Type of the instance. Valid values: Enterprise,Professional. Default to `Enterprise`
 
 <h3 class="pdoc-module-header" id="DdosBgpInstanceState" data-link-title="DdosBgpInstanceState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosBgpInstance.ts#L153">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosBgpInstance.ts#L153">
         interface <strong>DdosBgpInstanceState</strong>
     </a>
 </h3>
@@ -2778,7 +2778,7 @@ Type of the instance. Valid values: Enterprise,Professional. Default to `Enterpr
 Input properties used for looking up and filtering DdosBgpInstance resources.
 
 <h4 class="pdoc-member-header" id="DdosBgpInstanceState-bandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosBgpInstance.ts#L157">property <b>bandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosBgpInstance.ts#L157">property <b>bandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bandwidth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2786,7 +2786,7 @@ Input properties used for looking up and filtering DdosBgpInstance resources.
 Elastic defend bandwidth of the instance. This value must be larger than the base defend bandwidth. Valid values: 51,91,101,201,301. The unit is Gbps.
 
 <h4 class="pdoc-member-header" id="DdosBgpInstanceState-baseBandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosBgpInstance.ts#L161">property <b>baseBandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosBgpInstance.ts#L161">property <b>baseBandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>baseBandwidth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2794,7 +2794,7 @@ Elastic defend bandwidth of the instance. This value must be larger than the bas
 Base defend bandwidth of the instance. Valid values: 20. The unit is Gbps. Default to `20`.
 
 <h4 class="pdoc-member-header" id="DdosBgpInstanceState-ipCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosBgpInstance.ts#L165">property <b>ipCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosBgpInstance.ts#L165">property <b>ipCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2802,7 +2802,7 @@ Base defend bandwidth of the instance. Valid values: 20. The unit is Gbps. Defau
 IP count of the instance. Valid values: 100.
 
 <h4 class="pdoc-member-header" id="DdosBgpInstanceState-ipType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosBgpInstance.ts#L169">property <b>ipType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosBgpInstance.ts#L169">property <b>ipType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2810,7 +2810,7 @@ IP count of the instance. Valid values: 100.
 IP version of the instance. Valid values: IPv4,IPv6.
 
 <h4 class="pdoc-member-header" id="DdosBgpInstanceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosBgpInstance.ts#L173">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosBgpInstance.ts#L173">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2818,7 +2818,7 @@ IP version of the instance. Valid values: IPv4,IPv6.
 Name of the instance. This name can have a string of 1 to 63 characters.
 
 <h4 class="pdoc-member-header" id="DdosBgpInstanceState-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosBgpInstance.ts#L177">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosBgpInstance.ts#L177">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2826,7 +2826,7 @@ Name of the instance. This name can have a string of 1 to 63 characters.
 The duration that you will buy Ddosbgp instance (in month). Valid values: [1~9], 12, 24, 36. Default to 12. At present, the provider does not support modify "period".
 
 <h4 class="pdoc-member-header" id="DdosBgpInstanceState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosBgpInstance.ts#L181">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosBgpInstance.ts#L181">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2834,7 +2834,7 @@ The duration that you will buy Ddosbgp instance (in month). Valid values: [1~9],
 Type of the instance. Valid values: Enterprise,Professional. Default to `Enterprise`
 
 <h3 class="pdoc-module-header" id="DdosCooInstanceArgs" data-link-title="DdosCooInstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosCooInstance.ts#L197">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosCooInstance.ts#L197">
         interface <strong>DdosCooInstanceArgs</strong>
     </a>
 </h3>
@@ -2844,7 +2844,7 @@ Type of the instance. Valid values: Enterprise,Professional. Default to `Enterpr
 The set of arguments for constructing a DdosCooInstance resource.
 
 <h4 class="pdoc-member-header" id="DdosCooInstanceArgs-bandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosCooInstance.ts#L201">property <b>bandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosCooInstance.ts#L201">property <b>bandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bandwidth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2852,7 +2852,7 @@ The set of arguments for constructing a DdosCooInstance resource.
 Elastic defend bandwidth of the instance. This value must be larger than the base defend bandwidth. Valid values: 30, 60, 100, 300, 400, 500, 600. The unit is Gbps. Only support upgrade.
 
 <h4 class="pdoc-member-header" id="DdosCooInstanceArgs-baseBandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosCooInstance.ts#L205">property <b>baseBandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosCooInstance.ts#L205">property <b>baseBandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>baseBandwidth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2860,7 +2860,7 @@ Elastic defend bandwidth of the instance. This value must be larger than the bas
 Base defend bandwidth of the instance. Valid values: 30, 60, 100, 300, 400, 500, 600. The unit is Gbps. Only support upgrade.
 
 <h4 class="pdoc-member-header" id="DdosCooInstanceArgs-domainCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosCooInstance.ts#L209">property <b>domainCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosCooInstance.ts#L209">property <b>domainCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2868,7 +2868,7 @@ Base defend bandwidth of the instance. Valid values: 30, 60, 100, 300, 400, 500,
 Domain retransmission rule count of the instance. At least 50. Increase 5 per step, such as 55, 60, 65. Only support upgrade.
 
 <h4 class="pdoc-member-header" id="DdosCooInstanceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosCooInstance.ts#L213">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosCooInstance.ts#L213">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2876,7 +2876,7 @@ Domain retransmission rule count of the instance. At least 50. Increase 5 per st
 Name of the instance. This name can have a string of 1 to 63 characters.
 
 <h4 class="pdoc-member-header" id="DdosCooInstanceArgs-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosCooInstance.ts#L217">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosCooInstance.ts#L217">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2884,7 +2884,7 @@ Name of the instance. This name can have a string of 1 to 63 characters.
 The duration that you will buy Ddoscoo instance (in month). Valid values: [1~9], 12, 24, 36. Default to 1. At present, the provider does not support modify "period".
 
 <h4 class="pdoc-member-header" id="DdosCooInstanceArgs-portCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosCooInstance.ts#L221">property <b>portCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosCooInstance.ts#L221">property <b>portCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>portCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2892,7 +2892,7 @@ The duration that you will buy Ddoscoo instance (in month). Valid values: [1~9],
 Port retransmission rule count of the instance. At least 50. Increase 5 per step, such as 55, 60, 65. Only support upgrade.
 
 <h4 class="pdoc-member-header" id="DdosCooInstanceArgs-serviceBandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosCooInstance.ts#L225">property <b>serviceBandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosCooInstance.ts#L225">property <b>serviceBandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceBandwidth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2900,7 +2900,7 @@ Port retransmission rule count of the instance. At least 50. Increase 5 per step
 Business bandwidth of the instance. At leaset 100. Increased 100 per step, such as 100, 200, 300. The unit is Mbps. Only support upgrade.
 
 <h3 class="pdoc-module-header" id="DdosCooInstanceState" data-link-title="DdosCooInstanceState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosCooInstance.ts#L163">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosCooInstance.ts#L163">
         interface <strong>DdosCooInstanceState</strong>
     </a>
 </h3>
@@ -2910,7 +2910,7 @@ Business bandwidth of the instance. At leaset 100. Increased 100 per step, such 
 Input properties used for looking up and filtering DdosCooInstance resources.
 
 <h4 class="pdoc-member-header" id="DdosCooInstanceState-bandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosCooInstance.ts#L167">property <b>bandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosCooInstance.ts#L167">property <b>bandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bandwidth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2918,7 +2918,7 @@ Input properties used for looking up and filtering DdosCooInstance resources.
 Elastic defend bandwidth of the instance. This value must be larger than the base defend bandwidth. Valid values: 30, 60, 100, 300, 400, 500, 600. The unit is Gbps. Only support upgrade.
 
 <h4 class="pdoc-member-header" id="DdosCooInstanceState-baseBandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosCooInstance.ts#L171">property <b>baseBandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosCooInstance.ts#L171">property <b>baseBandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>baseBandwidth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2926,7 +2926,7 @@ Elastic defend bandwidth of the instance. This value must be larger than the bas
 Base defend bandwidth of the instance. Valid values: 30, 60, 100, 300, 400, 500, 600. The unit is Gbps. Only support upgrade.
 
 <h4 class="pdoc-member-header" id="DdosCooInstanceState-domainCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosCooInstance.ts#L175">property <b>domainCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosCooInstance.ts#L175">property <b>domainCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2934,7 +2934,7 @@ Base defend bandwidth of the instance. Valid values: 30, 60, 100, 300, 400, 500,
 Domain retransmission rule count of the instance. At least 50. Increase 5 per step, such as 55, 60, 65. Only support upgrade.
 
 <h4 class="pdoc-member-header" id="DdosCooInstanceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosCooInstance.ts#L179">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosCooInstance.ts#L179">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2942,7 +2942,7 @@ Domain retransmission rule count of the instance. At least 50. Increase 5 per st
 Name of the instance. This name can have a string of 1 to 63 characters.
 
 <h4 class="pdoc-member-header" id="DdosCooInstanceState-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosCooInstance.ts#L183">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosCooInstance.ts#L183">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2950,7 +2950,7 @@ Name of the instance. This name can have a string of 1 to 63 characters.
 The duration that you will buy Ddoscoo instance (in month). Valid values: [1~9], 12, 24, 36. Default to 1. At present, the provider does not support modify "period".
 
 <h4 class="pdoc-member-header" id="DdosCooInstanceState-portCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosCooInstance.ts#L187">property <b>portCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosCooInstance.ts#L187">property <b>portCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>portCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2958,7 +2958,7 @@ The duration that you will buy Ddoscoo instance (in month). Valid values: [1~9],
 Port retransmission rule count of the instance. At least 50. Increase 5 per step, such as 55, 60, 65. Only support upgrade.
 
 <h4 class="pdoc-member-header" id="DdosCooInstanceState-serviceBandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/ddosCooInstance.ts#L191">property <b>serviceBandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/ddosCooInstance.ts#L191">property <b>serviceBandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceBandwidth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2966,7 +2966,7 @@ Port retransmission rule count of the instance. At least 50. Increase 5 per step
 Business bandwidth of the instance. At leaset 100. Increased 100 per step, such as 100, 200, 300. The unit is Mbps. Only support upgrade.
 
 <h3 class="pdoc-module-header" id="DnsDomainArgs" data-link-title="DnsDomainArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L169">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L169">
         interface <strong>DnsDomainArgs</strong>
     </a>
 </h3>
@@ -2976,7 +2976,7 @@ Business bandwidth of the instance. At leaset 100. Increased 100 per step, such 
 The set of arguments for constructing a DnsDomain resource.
 
 <h4 class="pdoc-member-header" id="DnsDomainArgs-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L173">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L173">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2984,7 +2984,7 @@ The set of arguments for constructing a DnsDomain resource.
 Name of the domain. This name without suffix can have a string of 1 to 63 characters(domain name subject, excluding suffix), must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 
 <h4 class="pdoc-member-header" id="DnsDomainArgs-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L177">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L177">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2992,7 +2992,7 @@ Name of the domain. This name without suffix can have a string of 1 to 63 charac
 Id of the group in which the domain will add. If not supplied, then use default group.
 
 <h4 class="pdoc-member-header" id="DnsDomainArgs-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L181">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L181">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lang?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3000,7 +3000,7 @@ Id of the group in which the domain will add. If not supplied, then use default 
 User language.
 
 <h4 class="pdoc-member-header" id="DnsDomainArgs-remark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L185">property <b>remark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L185">property <b>remark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>remark?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3008,7 +3008,7 @@ User language.
 Remarks information for your domain name.
 
 <h4 class="pdoc-member-header" id="DnsDomainArgs-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L189">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L189">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3016,7 +3016,7 @@ Remarks information for your domain name.
 The Id of resource group which the dns domain belongs.
 
 <h4 class="pdoc-member-header" id="DnsDomainArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L195">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L195">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -3026,7 +3026,7 @@ A mapping of tags to assign to the resource.
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
 
 <h3 class="pdoc-module-header" id="DnsDomainState" data-link-title="DnsDomainState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L130">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L130">
         interface <strong>DnsDomainState</strong>
     </a>
 </h3>
@@ -3036,12 +3036,12 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering DnsDomain resources.
 
 <h4 class="pdoc-member-header" id="DnsDomainState-dnsServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L131">property <b>dnsServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L131">property <b>dnsServers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsServers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsDomainState-domainId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L135">property <b>domainId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L135">property <b>domainId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3049,7 +3049,7 @@ Input properties used for looking up and filtering DnsDomain resources.
 The domain ID.
 
 <h4 class="pdoc-member-header" id="DnsDomainState-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L139">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L139">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3057,7 +3057,7 @@ The domain ID.
 Name of the domain. This name without suffix can have a string of 1 to 63 characters(domain name subject, excluding suffix), must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 
 <h4 class="pdoc-member-header" id="DnsDomainState-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L143">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L143">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3065,12 +3065,12 @@ Name of the domain. This name without suffix can have a string of 1 to 63 charac
 Id of the group in which the domain will add. If not supplied, then use default group.
 
 <h4 class="pdoc-member-header" id="DnsDomainState-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L144">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L144">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsDomainState-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L148">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L148">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lang?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3078,12 +3078,12 @@ Id of the group in which the domain will add. If not supplied, then use default 
 User language.
 
 <h4 class="pdoc-member-header" id="DnsDomainState-punyCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L149">property <b>punyCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L149">property <b>punyCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>punyCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsDomainState-remark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L153">property <b>remark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L153">property <b>remark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>remark?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3091,7 +3091,7 @@ User language.
 Remarks information for your domain name.
 
 <h4 class="pdoc-member-header" id="DnsDomainState-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L157">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L157">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3099,7 +3099,7 @@ Remarks information for your domain name.
 The Id of resource group which the dns domain belongs.
 
 <h4 class="pdoc-member-header" id="DnsDomainState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/dnsDomain.ts#L163">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/dnsDomain.ts#L163">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -3109,7 +3109,7 @@ A mapping of tags to assign to the resource.
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
 
 <h3 class="pdoc-module-header" id="DomainArgs" data-link-title="DomainArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domain.ts#L136">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domain.ts#L136">
         interface <strong>DomainArgs</strong>
     </a>
 </h3>
@@ -3119,7 +3119,7 @@ A mapping of tags to assign to the resource.
 The set of arguments for constructing a Domain resource.
 
 <h4 class="pdoc-member-header" id="DomainArgs-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domain.ts#L140">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domain.ts#L140">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3127,7 +3127,7 @@ The set of arguments for constructing a Domain resource.
 Id of the group in which the domain will add. If not supplied, then use default group.
 
 <h4 class="pdoc-member-header" id="DomainArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domain.ts#L144">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domain.ts#L144">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3135,7 +3135,7 @@ Id of the group in which the domain will add. If not supplied, then use default 
 Name of the domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 
 <h4 class="pdoc-member-header" id="DomainArgs-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domain.ts#L148">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domain.ts#L148">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3143,7 +3143,7 @@ Name of the domain. This name without suffix can have a string of 1 to 63 charac
 The Id of resource group which the dns belongs.
 
 <h3 class="pdoc-module-header" id="DomainAttachmentArgs" data-link-title="DomainAttachmentArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainAttachment.ts#L106">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainAttachment.ts#L106">
         interface <strong>DomainAttachmentArgs</strong>
     </a>
 </h3>
@@ -3153,7 +3153,7 @@ The Id of resource group which the dns belongs.
 The set of arguments for constructing a DomainAttachment resource.
 
 <h4 class="pdoc-member-header" id="DomainAttachmentArgs-domainNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainAttachment.ts#L110">property <b>domainNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainAttachment.ts#L110">property <b>domainNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3161,7 +3161,7 @@ The set of arguments for constructing a DomainAttachment resource.
 The domain names bound to the DNS instance.
 
 <h4 class="pdoc-member-header" id="DomainAttachmentArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainAttachment.ts#L114">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainAttachment.ts#L114">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3169,7 +3169,7 @@ The domain names bound to the DNS instance.
 The id of the DNS instance.
 
 <h3 class="pdoc-module-header" id="DomainAttachmentState" data-link-title="DomainAttachmentState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainAttachment.ts#L92">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainAttachment.ts#L92">
         interface <strong>DomainAttachmentState</strong>
     </a>
 </h3>
@@ -3179,7 +3179,7 @@ The id of the DNS instance.
 Input properties used for looking up and filtering DomainAttachment resources.
 
 <h4 class="pdoc-member-header" id="DomainAttachmentState-domainNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainAttachment.ts#L96">property <b>domainNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainAttachment.ts#L96">property <b>domainNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3187,7 +3187,7 @@ Input properties used for looking up and filtering DomainAttachment resources.
 The domain names bound to the DNS instance.
 
 <h4 class="pdoc-member-header" id="DomainAttachmentState-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainAttachment.ts#L100">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainAttachment.ts#L100">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3195,7 +3195,7 @@ The domain names bound to the DNS instance.
 The id of the DNS instance.
 
 <h3 class="pdoc-module-header" id="DomainGroupArgs" data-link-title="DomainGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainGroup.ts#L130">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainGroup.ts#L130">
         interface <strong>DomainGroupArgs</strong>
     </a>
 </h3>
@@ -3205,7 +3205,7 @@ The id of the DNS instance.
 The set of arguments for constructing a DomainGroup resource.
 
 <h4 class="pdoc-member-header" id="DomainGroupArgs-domainGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainGroup.ts#L134">property <b>domainGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainGroup.ts#L134">property <b>domainGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3213,7 +3213,7 @@ The set of arguments for constructing a DomainGroup resource.
 Name of the domain group.
 
 <h4 class="pdoc-member-header" id="DomainGroupArgs-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainGroup.ts#L140">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainGroup.ts#L140">property <b>groupName</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -3225,7 +3225,7 @@ Field &#39;group_name&#39; has been deprecated from version 1.97.0. Use &#39;dom
 Replaced by `domainGroupName` after version 1.97.0.
 
 <h4 class="pdoc-member-header" id="DomainGroupArgs-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainGroup.ts#L144">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainGroup.ts#L144">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lang?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3233,7 +3233,7 @@ Replaced by `domainGroupName` after version 1.97.0.
 User language.
 
 <h3 class="pdoc-module-header" id="DomainGroupState" data-link-title="DomainGroupState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainGroup.ts#L110">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainGroup.ts#L110">
         interface <strong>DomainGroupState</strong>
     </a>
 </h3>
@@ -3243,7 +3243,7 @@ User language.
 Input properties used for looking up and filtering DomainGroup resources.
 
 <h4 class="pdoc-member-header" id="DomainGroupState-domainGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainGroup.ts#L114">property <b>domainGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainGroup.ts#L114">property <b>domainGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3251,7 +3251,7 @@ Input properties used for looking up and filtering DomainGroup resources.
 Name of the domain group.
 
 <h4 class="pdoc-member-header" id="DomainGroupState-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainGroup.ts#L120">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainGroup.ts#L120">property <b>groupName</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -3263,7 +3263,7 @@ Field &#39;group_name&#39; has been deprecated from version 1.97.0. Use &#39;dom
 Replaced by `domainGroupName` after version 1.97.0.
 
 <h4 class="pdoc-member-header" id="DomainGroupState-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domainGroup.ts#L124">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domainGroup.ts#L124">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lang?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3271,7 +3271,7 @@ Replaced by `domainGroupName` after version 1.97.0.
 User language.
 
 <h3 class="pdoc-module-header" id="DomainState" data-link-title="DomainState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domain.ts#L110">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domain.ts#L110">
         interface <strong>DomainState</strong>
     </a>
 </h3>
@@ -3281,7 +3281,7 @@ User language.
 Input properties used for looking up and filtering Domain resources.
 
 <h4 class="pdoc-member-header" id="DomainState-dnsServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domain.ts#L114">property <b>dnsServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domain.ts#L114">property <b>dnsServers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsServers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3289,7 +3289,7 @@ Input properties used for looking up and filtering Domain resources.
 A list of the dns server name.
 
 <h4 class="pdoc-member-header" id="DomainState-domainId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domain.ts#L118">property <b>domainId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domain.ts#L118">property <b>domainId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3297,7 +3297,7 @@ A list of the dns server name.
 The domain ID.
 
 <h4 class="pdoc-member-header" id="DomainState-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domain.ts#L122">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domain.ts#L122">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3305,7 +3305,7 @@ The domain ID.
 Id of the group in which the domain will add. If not supplied, then use default group.
 
 <h4 class="pdoc-member-header" id="DomainState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domain.ts#L126">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domain.ts#L126">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3313,7 +3313,7 @@ Id of the group in which the domain will add. If not supplied, then use default 
 Name of the domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 
 <h4 class="pdoc-member-header" id="DomainState-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/domain.ts#L130">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/domain.ts#L130">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3321,7 +3321,7 @@ Name of the domain. This name without suffix can have a string of 1 to 63 charac
 The Id of resource group which the dns belongs.
 
 <h3 class="pdoc-module-header" id="GetAlidnsDomainGroupsArgs" data-link-title="GetAlidnsDomainGroupsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomainGroups.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomainGroups.ts#L45">
         interface <strong>GetAlidnsDomainGroupsArgs</strong>
     </a>
 </h3>
@@ -3331,7 +3331,7 @@ The Id of resource group which the dns belongs.
 A collection of arguments for invoking getAlidnsDomainGroups.
 
 <h4 class="pdoc-member-header" id="GetAlidnsDomainGroupsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomainGroups.ts#L49">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomainGroups.ts#L49">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3339,7 +3339,7 @@ A collection of arguments for invoking getAlidnsDomainGroups.
 A list of instance IDs.
 
 <h4 class="pdoc-member-header" id="GetAlidnsDomainGroupsArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomainGroups.ts#L53">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomainGroups.ts#L53">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3347,12 +3347,12 @@ A list of instance IDs.
 A regex string to filter results by the domain group name.
 
 <h4 class="pdoc-member-header" id="GetAlidnsDomainGroupsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomainGroups.ts#L54">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomainGroups.ts#L54">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetAlidnsDomainGroupsResult" data-link-title="GetAlidnsDomainGroupsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomainGroups.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomainGroups.ts#L60">
         interface <strong>GetAlidnsDomainGroupsResult</strong>
     </a>
 </h3>
@@ -3362,7 +3362,7 @@ A regex string to filter results by the domain group name.
 A collection of values returned by getAlidnsDomainGroups.
 
 <h4 class="pdoc-member-header" id="GetAlidnsDomainGroupsResult-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomainGroups.ts#L64">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomainGroups.ts#L64">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetAlidnsDomainGroupsGroup'>GetAlidnsDomainGroupsGroup</a>[];</code></pre>
@@ -3370,7 +3370,7 @@ A collection of values returned by getAlidnsDomainGroups.
 A list of instances. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetAlidnsDomainGroupsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomainGroups.ts#L68">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomainGroups.ts#L68">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3378,7 +3378,7 @@ A list of instances. Each element contains the following attributes:
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAlidnsDomainGroupsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomainGroups.ts#L72">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomainGroups.ts#L72">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3386,12 +3386,12 @@ The provider-assigned unique ID for this managed resource.
 A list of instance IDs.
 
 <h4 class="pdoc-member-header" id="GetAlidnsDomainGroupsResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomainGroups.ts#L73">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomainGroups.ts#L73">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlidnsDomainGroupsResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomainGroups.ts#L77">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomainGroups.ts#L77">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3399,12 +3399,12 @@ A list of instance IDs.
 A list of domain group names.
 
 <h4 class="pdoc-member-header" id="GetAlidnsDomainGroupsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomainGroups.ts#L78">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomainGroups.ts#L78">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetAlidnsDomainsArgs" data-link-title="GetAlidnsDomainsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L58">
         interface <strong>GetAlidnsDomainsArgs</strong>
     </a>
 </h3>
@@ -3414,7 +3414,7 @@ A list of domain group names.
 A collection of arguments for invoking getAlidnsDomains.
 
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsArgs-aliDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L62">property <b>aliDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L62">property <b>aliDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliDomain?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -3422,7 +3422,7 @@ A collection of arguments for invoking getAlidnsDomains.
 Specifies whether the domain is from Alibaba Cloud or not.
 
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsArgs-domainNameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L66">property <b>domainNameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L66">property <b>domainNameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainNameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3430,12 +3430,12 @@ Specifies whether the domain is from Alibaba Cloud or not.
 A regex string to filter results by the domain name.
 
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsArgs-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L67">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L67">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsArgs-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L71">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L71">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3443,7 +3443,7 @@ A regex string to filter results by the domain name.
 Domain group ID, if not filled, the default is all groups.
 
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsArgs-groupNameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L75">property <b>groupNameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L75">property <b>groupNameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupNameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3451,7 +3451,7 @@ Domain group ID, if not filled, the default is all groups.
 A regex string to filter results by the group name.
 
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L79">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L79">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3459,7 +3459,7 @@ A regex string to filter results by the group name.
 A list of domain IDs.
 
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L83">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L83">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3467,7 +3467,7 @@ A list of domain IDs.
 Cloud analysis product ID.
 
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsArgs-keyWord">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L87">property <b>keyWord</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L87">property <b>keyWord</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyWord?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3475,7 +3475,7 @@ Cloud analysis product ID.
 The keywords are searched according to the `%KeyWord%` mode, which is not case sensitive.
 
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsArgs-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L91">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L91">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lang?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3483,12 +3483,12 @@ The keywords are searched according to the `%KeyWord%` mode, which is not case s
 User language.
 
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L92">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L92">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsArgs-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L96">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L96">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3496,7 +3496,7 @@ User language.
 The Id of resource group which the dns belongs.
 
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsArgs-searchMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L100">property <b>searchMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L100">property <b>searchMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>searchMode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3504,7 +3504,7 @@ The Id of resource group which the dns belongs.
 Search mode, `LIKE` fuzzy search, `EXACT` exact search.
 
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsArgs-starmark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L104">property <b>starmark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L104">property <b>starmark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>starmark?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -3512,7 +3512,7 @@ Search mode, `LIKE` fuzzy search, `EXACT` exact search.
 Whether to query the domain name star.
 
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L108">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L108">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -3520,7 +3520,7 @@ Whether to query the domain name star.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsArgs-versionCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L112">property <b>versionCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L112">property <b>versionCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionCode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3528,7 +3528,7 @@ A mapping of tags to assign to the resource.
 Cloud analysis version code.
 
 <h3 class="pdoc-module-header" id="GetAlidnsDomainsResult" data-link-title="GetAlidnsDomainsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L118">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L118">
         interface <strong>GetAlidnsDomainsResult</strong>
     </a>
 </h3>
@@ -3538,7 +3538,7 @@ Cloud analysis version code.
 A collection of values returned by getAlidnsDomains.
 
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsResult-aliDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L122">property <b>aliDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L122">property <b>aliDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliDomain?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -3546,12 +3546,12 @@ A collection of values returned by getAlidnsDomains.
 Indicates whether the domain is an Alibaba Cloud domain.
 
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsResult-domainNameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L123">property <b>domainNameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L123">property <b>domainNameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainNameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsResult-domains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L127">property <b>domains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L127">property <b>domains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domains: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetAlidnsDomainsDomain'>GetAlidnsDomainsDomain</a>[];</code></pre>
@@ -3559,12 +3559,12 @@ Indicates whether the domain is an Alibaba Cloud domain.
 A list of domains. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsResult-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L128">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L128">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsResult-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L132">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L132">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3572,12 +3572,12 @@ A list of domains. Each element contains the following attributes:
 Id of group that contains the domain.
 
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsResult-groupNameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L133">property <b>groupNameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L133">property <b>groupNameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupNameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L137">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L137">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3585,7 +3585,7 @@ Id of group that contains the domain.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L141">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L141">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3593,7 +3593,7 @@ The provider-assigned unique ID for this managed resource.
 A list of domain IDs.
 
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsResult-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L145">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L145">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3601,17 +3601,17 @@ A list of domain IDs.
 Cloud analysis product ID of the domain.
 
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsResult-keyWord">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L146">property <b>keyWord</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L146">property <b>keyWord</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyWord?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsResult-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L147">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L147">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lang?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L151">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L151">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3619,12 +3619,12 @@ Cloud analysis product ID of the domain.
 A list of domain names.
 
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L152">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L152">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsResult-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L156">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L156">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3632,22 +3632,22 @@ A list of domain names.
 The Id of resource group which the dns belongs.
 
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsResult-searchMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L157">property <b>searchMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L157">property <b>searchMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>searchMode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsResult-starmark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L158">property <b>starmark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L158">property <b>starmark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>starmark?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L159">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L159">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetAlidnsDomainsResult-versionCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsDomains.ts#L163">property <b>versionCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsDomains.ts#L163">property <b>versionCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionCode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3655,7 +3655,7 @@ The Id of resource group which the dns belongs.
 Cloud resolution version ID.
 
 <h3 class="pdoc-module-header" id="GetAlidnsInstancesArgs" data-link-title="GetAlidnsInstancesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsInstances.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsInstances.ts#L46">
         interface <strong>GetAlidnsInstancesArgs</strong>
     </a>
 </h3>
@@ -3665,7 +3665,7 @@ Cloud resolution version ID.
 A collection of arguments for invoking getAlidnsInstances.
 
 <h4 class="pdoc-member-header" id="GetAlidnsInstancesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsInstances.ts#L50">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsInstances.ts#L50">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3673,7 +3673,7 @@ A collection of arguments for invoking getAlidnsInstances.
 A list of instance IDs.
 
 <h4 class="pdoc-member-header" id="GetAlidnsInstancesArgs-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsInstances.ts#L54">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsInstances.ts#L54">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lang?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3681,12 +3681,12 @@ A list of instance IDs.
 Language.
 
 <h4 class="pdoc-member-header" id="GetAlidnsInstancesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsInstances.ts#L55">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsInstances.ts#L55">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlidnsInstancesArgs-userClientIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsInstances.ts#L59">property <b>userClientIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsInstances.ts#L59">property <b>userClientIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userClientIp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3694,7 +3694,7 @@ Language.
 The IP address of the client.
 
 <h3 class="pdoc-module-header" id="GetAlidnsInstancesResult" data-link-title="GetAlidnsInstancesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsInstances.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsInstances.ts#L65">
         interface <strong>GetAlidnsInstancesResult</strong>
     </a>
 </h3>
@@ -3704,7 +3704,7 @@ The IP address of the client.
 A collection of values returned by getAlidnsInstances.
 
 <h4 class="pdoc-member-header" id="GetAlidnsInstancesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsInstances.ts#L69">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsInstances.ts#L69">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3712,7 +3712,7 @@ A collection of values returned by getAlidnsInstances.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAlidnsInstancesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsInstances.ts#L73">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsInstances.ts#L73">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3720,7 +3720,7 @@ The provider-assigned unique ID for this managed resource.
 A list of instance IDs.
 
 <h4 class="pdoc-member-header" id="GetAlidnsInstancesResult-instances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsInstances.ts#L77">property <b>instances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsInstances.ts#L77">property <b>instances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instances: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetAlidnsInstancesInstance'>GetAlidnsInstancesInstance</a>[];</code></pre>
@@ -3728,22 +3728,22 @@ A list of instance IDs.
 A list of instances. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetAlidnsInstancesResult-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsInstances.ts#L78">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsInstances.ts#L78">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lang?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlidnsInstancesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsInstances.ts#L79">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsInstances.ts#L79">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlidnsInstancesResult-userClientIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsInstances.ts#L80">property <b>userClientIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsInstances.ts#L80">property <b>userClientIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userClientIp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetAlidnsRecordsArgs" data-link-title="GetAlidnsRecordsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L45">
         interface <strong>GetAlidnsRecordsArgs</strong>
     </a>
 </h3>
@@ -3753,7 +3753,7 @@ A list of instances. Each element contains the following attributes:
 A collection of arguments for invoking getAlidnsRecords.
 
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsArgs-direction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L49">property <b>direction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L49">property <b>direction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>direction?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3761,7 +3761,7 @@ A collection of arguments for invoking getAlidnsRecords.
 Sorting direction. Valid values: `DESC`,`ASC`. Default to `AESC`.
 
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsArgs-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L53">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L53">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3769,7 +3769,7 @@ Sorting direction. Valid values: `DESC`,`ASC`. Default to `AESC`.
 The domain name associated to the records.
 
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsArgs-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L57">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L57">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -3777,7 +3777,7 @@ The domain name associated to the records.
 Domain name group ID.
 
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L61">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L61">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3785,7 +3785,7 @@ Domain name group ID.
 A list of record IDs.
 
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsArgs-keyWord">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L65">property <b>keyWord</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L65">property <b>keyWord</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyWord?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3793,7 +3793,7 @@ A list of record IDs.
 Keywords.
 
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsArgs-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L69">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L69">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lang?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3801,7 +3801,7 @@ Keywords.
 User language.
 
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsArgs-line">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L73">property <b>line</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L73">property <b>line</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>line?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3809,7 +3809,7 @@ User language.
 ISP line. For checking all resolution lines enumeration please visit [Alibaba Cloud DNS doc](https://www.alibabacloud.com/help/doc-detail/34339.htm)
 
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsArgs-orderBy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L77">property <b>orderBy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L77">property <b>orderBy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>orderBy?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3817,12 +3817,12 @@ ISP line. For checking all resolution lines enumeration please visit [Alibaba Cl
 Sort by. Sort from newest to oldest according to the time added by resolution.
 
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L78">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L78">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsArgs-rrKeyWord">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L82">property <b>rrKeyWord</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L82">property <b>rrKeyWord</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rrKeyWord?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3830,7 +3830,7 @@ Sort by. Sort from newest to oldest according to the time added by resolution.
 The keywords recorded by the host are searched according to the `%RRKeyWord%` mode, and are not case sensitive.
 
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsArgs-rrRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L86">property <b>rrRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L86">property <b>rrRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rrRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3838,7 +3838,7 @@ The keywords recorded by the host are searched according to the `%RRKeyWord%` mo
 Host record regex.
 
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsArgs-searchMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L90">property <b>searchMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L90">property <b>searchMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>searchMode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3846,7 +3846,7 @@ Host record regex.
 Search mode, Valid values: `LIKE`, `EXACT`, `ADVANCED`, `LIKE` (fuzzy), `EXACT` (accurate) search supports KeyWord field, `ADVANCED` (advanced) mode supports other fields.
 
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L94">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L94">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3854,7 +3854,7 @@ Search mode, Valid values: `LIKE`, `EXACT`, `ADVANCED`, `LIKE` (fuzzy), `EXACT` 
 Record status. Valid values: `ENABLE` and `DISABLE`.
 
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L98">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L98">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3862,7 +3862,7 @@ Record status. Valid values: `ENABLE` and `DISABLE`.
 Record type. Valid values: `A`, `NS`, `MX`, `TXT`, `CNAME`, `SRV`, `AAAA`, `REDIRECT_URL`, `FORWORD_URL` .
 
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsArgs-typeKeyWord">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L102">property <b>typeKeyWord</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L102">property <b>typeKeyWord</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>typeKeyWord?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3870,7 +3870,7 @@ Record type. Valid values: `A`, `NS`, `MX`, `TXT`, `CNAME`, `SRV`, `AAAA`, `REDI
 Analyze type keywords, search by full match, not case sensitive.
 
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsArgs-valueKeyWord">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L106">property <b>valueKeyWord</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L106">property <b>valueKeyWord</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueKeyWord?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3878,7 +3878,7 @@ Analyze type keywords, search by full match, not case sensitive.
 The keywords of the recorded value are searched according to the `%ValueKeyWord%` mode, and are not case sensitive.
 
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsArgs-valueRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L110">property <b>valueRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L110">property <b>valueRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3886,7 +3886,7 @@ The keywords of the recorded value are searched according to the `%ValueKeyWord%
 Host record value regex.
 
 <h3 class="pdoc-module-header" id="GetAlidnsRecordsResult" data-link-title="GetAlidnsRecordsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L116">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L116">
         interface <strong>GetAlidnsRecordsResult</strong>
     </a>
 </h3>
@@ -3896,12 +3896,12 @@ Host record value regex.
 A collection of values returned by getAlidnsRecords.
 
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsResult-direction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L117">property <b>direction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L117">property <b>direction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>direction?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsResult-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L121">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L121">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3909,12 +3909,12 @@ A collection of values returned by getAlidnsRecords.
 Name of the domain record belongs to.
 
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsResult-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L122">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L122">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L126">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L126">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3922,7 +3922,7 @@ Name of the domain record belongs to.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L130">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L130">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3930,17 +3930,17 @@ The provider-assigned unique ID for this managed resource.
 A list of record IDs.
 
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsResult-keyWord">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L131">property <b>keyWord</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L131">property <b>keyWord</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyWord?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsResult-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L132">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L132">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lang?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsResult-line">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L136">property <b>line</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L136">property <b>line</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>line?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3948,17 +3948,17 @@ A list of record IDs.
 ISP line of the record.
 
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsResult-orderBy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L137">property <b>orderBy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L137">property <b>orderBy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>orderBy?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L138">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L138">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsResult-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L142">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L142">property <b>records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>records: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetAlidnsRecordsRecord'>GetAlidnsRecordsRecord</a>[];</code></pre>
@@ -3966,22 +3966,22 @@ ISP line of the record.
 A list of records. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsResult-rrKeyWord">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L143">property <b>rrKeyWord</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L143">property <b>rrKeyWord</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rrKeyWord?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsResult-rrRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L144">property <b>rrRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L144">property <b>rrRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rrRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsResult-searchMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L145">property <b>searchMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L145">property <b>searchMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>searchMode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L149">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L149">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3989,7 +3989,7 @@ A list of records. Each element contains the following attributes:
 Status of the record.
 
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L153">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L153">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3997,22 +3997,22 @@ Status of the record.
 Type of the record.
 
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsResult-typeKeyWord">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L154">property <b>typeKeyWord</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L154">property <b>typeKeyWord</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>typeKeyWord?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsResult-valueKeyWord">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L155">property <b>valueKeyWord</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L155">property <b>valueKeyWord</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueKeyWord?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlidnsRecordsResult-valueRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getAlidnsRecords.ts#L156">property <b>valueRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getAlidnsRecords.ts#L156">property <b>valueRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetDomainGroupsArgs" data-link-title="GetDomainGroupsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainGroups.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainGroups.ts#L27">
         interface <strong>GetDomainGroupsArgs</strong>
     </a>
 </h3>
@@ -4022,22 +4022,22 @@ Type of the record.
 A collection of arguments for invoking getDomainGroups.
 
 <h4 class="pdoc-member-header" id="GetDomainGroupsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainGroups.ts#L28">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainGroups.ts#L28">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainGroupsArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainGroups.ts#L29">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainGroups.ts#L29">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainGroupsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainGroups.ts#L30">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainGroups.ts#L30">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetDomainGroupsResult" data-link-title="GetDomainGroupsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainGroups.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainGroups.ts#L36">
         interface <strong>GetDomainGroupsResult</strong>
     </a>
 </h3>
@@ -4047,12 +4047,12 @@ A collection of arguments for invoking getDomainGroups.
 A collection of values returned by getDomainGroups.
 
 <h4 class="pdoc-member-header" id="GetDomainGroupsResult-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainGroups.ts#L37">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainGroups.ts#L37">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetDomainGroupsGroup'>GetDomainGroupsGroup</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainGroupsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainGroups.ts#L41">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainGroups.ts#L41">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4060,27 +4060,27 @@ A collection of values returned by getDomainGroups.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDomainGroupsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainGroups.ts#L42">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainGroups.ts#L42">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainGroupsResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainGroups.ts#L43">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainGroups.ts#L43">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainGroupsResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainGroups.ts#L44">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainGroups.ts#L44">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainGroupsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainGroups.ts#L45">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainGroups.ts#L45">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetDomainRecordsArgs" data-link-title="GetDomainRecordsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainRecords.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainRecords.ts#L32">
         interface <strong>GetDomainRecordsArgs</strong>
     </a>
 </h3>
@@ -4090,52 +4090,52 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getDomainRecords.
 
 <h4 class="pdoc-member-header" id="GetDomainRecordsArgs-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainRecords.ts#L33">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainRecords.ts#L33">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainRecordsArgs-hostRecordRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainRecords.ts#L34">property <b>hostRecordRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainRecords.ts#L34">property <b>hostRecordRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostRecordRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainRecordsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainRecords.ts#L35">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainRecords.ts#L35">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainRecordsArgs-isLocked">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainRecords.ts#L36">property <b>isLocked</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainRecords.ts#L36">property <b>isLocked</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isLocked?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainRecordsArgs-line">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainRecords.ts#L37">property <b>line</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainRecords.ts#L37">property <b>line</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>line?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainRecordsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainRecords.ts#L38">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainRecords.ts#L38">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainRecordsArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainRecords.ts#L39">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainRecords.ts#L39">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainRecordsArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainRecords.ts#L40">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainRecords.ts#L40">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainRecordsArgs-valueRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainRecords.ts#L41">property <b>valueRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainRecords.ts#L41">property <b>valueRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetDomainRecordsResult" data-link-title="GetDomainRecordsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainRecords.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainRecords.ts#L47">
         interface <strong>GetDomainRecordsResult</strong>
     </a>
 </h3>
@@ -4145,17 +4145,17 @@ A collection of arguments for invoking getDomainRecords.
 A collection of values returned by getDomainRecords.
 
 <h4 class="pdoc-member-header" id="GetDomainRecordsResult-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainRecords.ts#L48">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainRecords.ts#L48">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainRecordsResult-hostRecordRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainRecords.ts#L49">property <b>hostRecordRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainRecords.ts#L49">property <b>hostRecordRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostRecordRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainRecordsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainRecords.ts#L53">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainRecords.ts#L53">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4163,52 +4163,52 @@ A collection of values returned by getDomainRecords.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDomainRecordsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainRecords.ts#L54">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainRecords.ts#L54">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainRecordsResult-isLocked">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainRecords.ts#L55">property <b>isLocked</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainRecords.ts#L55">property <b>isLocked</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isLocked?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainRecordsResult-line">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainRecords.ts#L56">property <b>line</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainRecords.ts#L56">property <b>line</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>line?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainRecordsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainRecords.ts#L57">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainRecords.ts#L57">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainRecordsResult-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainRecords.ts#L58">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainRecords.ts#L58">property <b>records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>records: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetDomainRecordsRecord'>GetDomainRecordsRecord</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainRecordsResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainRecords.ts#L59">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainRecords.ts#L59">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainRecordsResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainRecords.ts#L60">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainRecords.ts#L60">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainRecordsResult-urls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainRecords.ts#L61">property <b>urls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainRecords.ts#L61">property <b>urls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urls: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainRecordsResult-valueRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainRecords.ts#L62">property <b>valueRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainRecords.ts#L62">property <b>valueRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetDomainsArgs" data-link-title="GetDomainsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L39">
         interface <strong>GetDomainsArgs</strong>
     </a>
 </h3>
@@ -4218,7 +4218,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getDomains.
 
 <h4 class="pdoc-member-header" id="GetDomainsArgs-aliDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L43">property <b>aliDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L43">property <b>aliDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliDomain?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -4226,7 +4226,7 @@ A collection of arguments for invoking getDomains.
 Specifies whether the domain is from Alibaba Cloud or not.
 
 <h4 class="pdoc-member-header" id="GetDomainsArgs-domainNameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L47">property <b>domainNameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L47">property <b>domainNameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainNameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4234,12 +4234,12 @@ Specifies whether the domain is from Alibaba Cloud or not.
 A regex string to filter results by the domain name.
 
 <h4 class="pdoc-member-header" id="GetDomainsArgs-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L48">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L48">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainsArgs-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L52">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L52">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4247,7 +4247,7 @@ A regex string to filter results by the domain name.
 Domain group ID, if not filled, the default is all groups.
 
 <h4 class="pdoc-member-header" id="GetDomainsArgs-groupNameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L56">property <b>groupNameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L56">property <b>groupNameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupNameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4255,7 +4255,7 @@ Domain group ID, if not filled, the default is all groups.
 A regex string to filter results by the group name.
 
 <h4 class="pdoc-member-header" id="GetDomainsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L60">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L60">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4263,7 +4263,7 @@ A regex string to filter results by the group name.
 - A list of domain IDs.
 
 <h4 class="pdoc-member-header" id="GetDomainsArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L64">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L64">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4271,7 +4271,7 @@ A regex string to filter results by the group name.
 Cloud analysis product ID.
 
 <h4 class="pdoc-member-header" id="GetDomainsArgs-keyWord">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L68">property <b>keyWord</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L68">property <b>keyWord</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyWord?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4279,7 +4279,7 @@ Cloud analysis product ID.
 The keywords are searched according to the `%KeyWord%` mode, which is not case sensitive.
 
 <h4 class="pdoc-member-header" id="GetDomainsArgs-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L72">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L72">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lang?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4287,12 +4287,12 @@ The keywords are searched according to the `%KeyWord%` mode, which is not case s
 User language.
 
 <h4 class="pdoc-member-header" id="GetDomainsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L73">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L73">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainsArgs-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L77">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L77">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4300,7 +4300,7 @@ User language.
 The Id of resource group which the dns belongs.
 
 <h4 class="pdoc-member-header" id="GetDomainsArgs-searchMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L81">property <b>searchMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L81">property <b>searchMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>searchMode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4308,7 +4308,7 @@ The Id of resource group which the dns belongs.
 Search mode, `LIKE` fuzzy search, `EXACT` exact search.
 
 <h4 class="pdoc-member-header" id="GetDomainsArgs-starmark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L85">property <b>starmark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L85">property <b>starmark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>starmark?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -4316,7 +4316,7 @@ Search mode, `LIKE` fuzzy search, `EXACT` exact search.
 Whether to query the domain name star.
 
 <h4 class="pdoc-member-header" id="GetDomainsArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L89">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L89">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -4324,7 +4324,7 @@ Whether to query the domain name star.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="GetDomainsArgs-versionCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L93">property <b>versionCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L93">property <b>versionCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionCode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4332,7 +4332,7 @@ A mapping of tags to assign to the resource.
 Cloud analysis version code.
 
 <h3 class="pdoc-module-header" id="GetDomainsResult" data-link-title="GetDomainsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L99">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L99">
         interface <strong>GetDomainsResult</strong>
     </a>
 </h3>
@@ -4342,7 +4342,7 @@ Cloud analysis version code.
 A collection of values returned by getDomains.
 
 <h4 class="pdoc-member-header" id="GetDomainsResult-aliDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L103">property <b>aliDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L103">property <b>aliDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliDomain?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -4350,12 +4350,12 @@ A collection of values returned by getDomains.
 Indicates whether the domain is an Alibaba Cloud domain.
 
 <h4 class="pdoc-member-header" id="GetDomainsResult-domainNameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L104">property <b>domainNameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L104">property <b>domainNameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainNameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainsResult-domains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L108">property <b>domains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L108">property <b>domains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domains: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetDomainsDomain'>GetDomainsDomain</a>[];</code></pre>
@@ -4363,12 +4363,12 @@ Indicates whether the domain is an Alibaba Cloud domain.
 A list of domains. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetDomainsResult-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L109">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L109">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainsResult-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L113">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L113">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4376,12 +4376,12 @@ A list of domains. Each element contains the following attributes:
 Id of group that contains the domain.
 
 <h4 class="pdoc-member-header" id="GetDomainsResult-groupNameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L114">property <b>groupNameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L114">property <b>groupNameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupNameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L118">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L118">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4389,7 +4389,7 @@ Id of group that contains the domain.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDomainsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L122">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L122">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4397,7 +4397,7 @@ The provider-assigned unique ID for this managed resource.
 A list of domain IDs.
 
 <h4 class="pdoc-member-header" id="GetDomainsResult-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L126">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L126">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4405,17 +4405,17 @@ A list of domain IDs.
 Cloud analysis product ID of the domain.
 
 <h4 class="pdoc-member-header" id="GetDomainsResult-keyWord">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L127">property <b>keyWord</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L127">property <b>keyWord</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyWord?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainsResult-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L128">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L128">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lang?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainsResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L132">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L132">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4423,12 +4423,12 @@ Cloud analysis product ID of the domain.
 A list of domain names.
 
 <h4 class="pdoc-member-header" id="GetDomainsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L133">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L133">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainsResult-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L137">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L137">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4436,22 +4436,22 @@ A list of domain names.
 The Id of resource group which the dns belongs.
 
 <h4 class="pdoc-member-header" id="GetDomainsResult-searchMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L138">property <b>searchMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L138">property <b>searchMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>searchMode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainsResult-starmark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L139">property <b>starmark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L139">property <b>starmark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>starmark?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainsResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L140">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L140">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainsResult-versionCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomains.ts#L144">property <b>versionCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomains.ts#L144">property <b>versionCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionCode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4459,7 +4459,7 @@ The Id of resource group which the dns belongs.
 Cloud resolution version ID.
 
 <h3 class="pdoc-module-header" id="GetDomainTxtGuidArgs" data-link-title="GetDomainTxtGuidArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainTxtGuid.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainTxtGuid.ts#L47">
         interface <strong>GetDomainTxtGuidArgs</strong>
     </a>
 </h3>
@@ -4469,7 +4469,7 @@ Cloud resolution version ID.
 A collection of arguments for invoking getDomainTxtGuid.
 
 <h4 class="pdoc-member-header" id="GetDomainTxtGuidArgs-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainTxtGuid.ts#L51">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainTxtGuid.ts#L51">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4477,7 +4477,7 @@ A collection of arguments for invoking getDomainTxtGuid.
 Verified domain name.
 
 <h4 class="pdoc-member-header" id="GetDomainTxtGuidArgs-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainTxtGuid.ts#L55">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainTxtGuid.ts#L55">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lang?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4485,12 +4485,12 @@ Verified domain name.
 User language.
 
 <h4 class="pdoc-member-header" id="GetDomainTxtGuidArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainTxtGuid.ts#L56">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainTxtGuid.ts#L56">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainTxtGuidArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainTxtGuid.ts#L60">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainTxtGuid.ts#L60">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4498,7 +4498,7 @@ User language.
 Txt verification function. Value:`ADD_SUB_DOMAIN`, `RETRIEVAL`.
 
 <h3 class="pdoc-module-header" id="GetDomainTxtGuidResult" data-link-title="GetDomainTxtGuidResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainTxtGuid.ts#L66">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainTxtGuid.ts#L66">
         interface <strong>GetDomainTxtGuidResult</strong>
     </a>
 </h3>
@@ -4508,12 +4508,12 @@ Txt verification function. Value:`ADD_SUB_DOMAIN`, `RETRIEVAL`.
 A collection of values returned by getDomainTxtGuid.
 
 <h4 class="pdoc-member-header" id="GetDomainTxtGuidResult-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainTxtGuid.ts#L67">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainTxtGuid.ts#L67">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainTxtGuidResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainTxtGuid.ts#L71">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainTxtGuid.ts#L71">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4521,17 +4521,17 @@ A collection of values returned by getDomainTxtGuid.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDomainTxtGuidResult-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainTxtGuid.ts#L72">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainTxtGuid.ts#L72">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lang?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainTxtGuidResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainTxtGuid.ts#L73">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainTxtGuid.ts#L73">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainTxtGuidResult-rr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainTxtGuid.ts#L77">property <b>rr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainTxtGuid.ts#L77">property <b>rr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rr: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4539,12 +4539,12 @@ The provider-assigned unique ID for this managed resource.
 Host record.
 
 <h4 class="pdoc-member-header" id="GetDomainTxtGuidResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainTxtGuid.ts#L78">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainTxtGuid.ts#L78">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainTxtGuidResult-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getDomainTxtGuid.ts#L82">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getDomainTxtGuid.ts#L82">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4552,7 +4552,7 @@ Host record.
 Record the value.
 
 <h3 class="pdoc-module-header" id="GetGroupsArgs" data-link-title="GetGroupsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getGroups.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getGroups.ts#L44">
         interface <strong>GetGroupsArgs</strong>
     </a>
 </h3>
@@ -4562,7 +4562,7 @@ Record the value.
 A collection of arguments for invoking getGroups.
 
 <h4 class="pdoc-member-header" id="GetGroupsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getGroups.ts#L48">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getGroups.ts#L48">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4570,7 +4570,7 @@ A collection of arguments for invoking getGroups.
 A list of group IDs.
 
 <h4 class="pdoc-member-header" id="GetGroupsArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getGroups.ts#L52">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getGroups.ts#L52">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4578,12 +4578,12 @@ A list of group IDs.
 A regex string to filter results by group name.
 
 <h4 class="pdoc-member-header" id="GetGroupsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getGroups.ts#L53">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getGroups.ts#L53">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetGroupsResult" data-link-title="GetGroupsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getGroups.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getGroups.ts#L59">
         interface <strong>GetGroupsResult</strong>
     </a>
 </h3>
@@ -4593,7 +4593,7 @@ A regex string to filter results by group name.
 A collection of values returned by getGroups.
 
 <h4 class="pdoc-member-header" id="GetGroupsResult-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getGroups.ts#L63">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getGroups.ts#L63">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetGroupsGroup'>GetGroupsGroup</a>[];</code></pre>
@@ -4601,7 +4601,7 @@ A collection of values returned by getGroups.
 A list of groups. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetGroupsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getGroups.ts#L67">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getGroups.ts#L67">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4609,7 +4609,7 @@ A list of groups. Each element contains the following attributes:
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetGroupsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getGroups.ts#L71">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getGroups.ts#L71">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4617,12 +4617,12 @@ The provider-assigned unique ID for this managed resource.
 A list of group IDs.
 
 <h4 class="pdoc-member-header" id="GetGroupsResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getGroups.ts#L72">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getGroups.ts#L72">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetGroupsResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getGroups.ts#L76">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getGroups.ts#L76">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4630,12 +4630,12 @@ A list of group IDs.
 A list of group names.
 
 <h4 class="pdoc-member-header" id="GetGroupsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getGroups.ts#L77">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getGroups.ts#L77">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetInstancesArgs" data-link-title="GetInstancesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getInstances.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getInstances.ts#L28">
         interface <strong>GetInstancesArgs</strong>
     </a>
 </h3>
@@ -4645,7 +4645,7 @@ A list of group names.
 A collection of arguments for invoking getInstances.
 
 <h4 class="pdoc-member-header" id="GetInstancesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getInstances.ts#L32">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getInstances.ts#L32">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4653,22 +4653,22 @@ A collection of arguments for invoking getInstances.
 A list of instance IDs.
 
 <h4 class="pdoc-member-header" id="GetInstancesArgs-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getInstances.ts#L33">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getInstances.ts#L33">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lang?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getInstances.ts#L34">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getInstances.ts#L34">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesArgs-userClientIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getInstances.ts#L35">property <b>userClientIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getInstances.ts#L35">property <b>userClientIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userClientIp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetInstancesResult" data-link-title="GetInstancesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getInstances.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getInstances.ts#L41">
         interface <strong>GetInstancesResult</strong>
     </a>
 </h3>
@@ -4678,7 +4678,7 @@ A list of instance IDs.
 A collection of values returned by getInstances.
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getInstances.ts#L45">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getInstances.ts#L45">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4686,7 +4686,7 @@ A collection of values returned by getInstances.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getInstances.ts#L49">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getInstances.ts#L49">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4694,7 +4694,7 @@ The provider-assigned unique ID for this managed resource.
 A list of instance IDs.
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-instances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getInstances.ts#L53">property <b>instances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getInstances.ts#L53">property <b>instances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instances: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstancesInstance'>GetInstancesInstance</a>[];</code></pre>
@@ -4702,22 +4702,22 @@ A list of instance IDs.
 A list of instances. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getInstances.ts#L54">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getInstances.ts#L54">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lang?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getInstances.ts#L55">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getInstances.ts#L55">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesResult-userClientIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getInstances.ts#L56">property <b>userClientIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getInstances.ts#L56">property <b>userClientIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userClientIp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetRecordsArgs" data-link-title="GetRecordsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getRecords.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getRecords.ts#L52">
         interface <strong>GetRecordsArgs</strong>
     </a>
 </h3>
@@ -4727,7 +4727,7 @@ A list of instances. Each element contains the following attributes:
 A collection of arguments for invoking getRecords.
 
 <h4 class="pdoc-member-header" id="GetRecordsArgs-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getRecords.ts#L56">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getRecords.ts#L56">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4735,7 +4735,7 @@ A collection of arguments for invoking getRecords.
 The domain name associated to the records.
 
 <h4 class="pdoc-member-header" id="GetRecordsArgs-hostRecordRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getRecords.ts#L60">property <b>hostRecordRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getRecords.ts#L60">property <b>hostRecordRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostRecordRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4743,7 +4743,7 @@ The domain name associated to the records.
 Host record regex.
 
 <h4 class="pdoc-member-header" id="GetRecordsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getRecords.ts#L64">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getRecords.ts#L64">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4751,7 +4751,7 @@ Host record regex.
 A list of record IDs.
 
 <h4 class="pdoc-member-header" id="GetRecordsArgs-isLocked">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getRecords.ts#L68">property <b>isLocked</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getRecords.ts#L68">property <b>isLocked</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isLocked?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -4759,7 +4759,7 @@ A list of record IDs.
 Whether the record is locked or not.
 
 <h4 class="pdoc-member-header" id="GetRecordsArgs-line">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getRecords.ts#L72">property <b>line</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getRecords.ts#L72">property <b>line</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>line?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4767,12 +4767,12 @@ Whether the record is locked or not.
 ISP line. Valid items are `default`, `telecom`, `unicom`, `mobile`, `oversea`, `edu`, `drpeng`, `btvn`, .etc. For checking all resolution lines enumeration please visit [Alibaba Cloud DNS doc](https://www.alibabacloud.com/help/doc-detail/34339.htm)
 
 <h4 class="pdoc-member-header" id="GetRecordsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getRecords.ts#L73">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getRecords.ts#L73">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRecordsArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getRecords.ts#L77">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getRecords.ts#L77">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4780,7 +4780,7 @@ ISP line. Valid items are `default`, `telecom`, `unicom`, `mobile`, `oversea`, `
 Record status. Valid items are `ENABLE` and `DISABLE`.
 
 <h4 class="pdoc-member-header" id="GetRecordsArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getRecords.ts#L81">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getRecords.ts#L81">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4788,7 +4788,7 @@ Record status. Valid items are `ENABLE` and `DISABLE`.
 Record type. Valid items are `A`, `NS`, `MX`, `TXT`, `CNAME`, `SRV`, `AAAA`, `REDIRECT_URL`, `FORWORD_URL` .
 
 <h4 class="pdoc-member-header" id="GetRecordsArgs-valueRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getRecords.ts#L85">property <b>valueRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getRecords.ts#L85">property <b>valueRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4796,7 +4796,7 @@ Record type. Valid items are `A`, `NS`, `MX`, `TXT`, `CNAME`, `SRV`, `AAAA`, `RE
 Host record value regex.
 
 <h3 class="pdoc-module-header" id="GetRecordsResult" data-link-title="GetRecordsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getRecords.ts#L91">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getRecords.ts#L91">
         interface <strong>GetRecordsResult</strong>
     </a>
 </h3>
@@ -4806,7 +4806,7 @@ Host record value regex.
 A collection of values returned by getRecords.
 
 <h4 class="pdoc-member-header" id="GetRecordsResult-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getRecords.ts#L95">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getRecords.ts#L95">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4814,12 +4814,12 @@ A collection of values returned by getRecords.
 Name of the domain the record belongs to.
 
 <h4 class="pdoc-member-header" id="GetRecordsResult-hostRecordRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getRecords.ts#L96">property <b>hostRecordRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getRecords.ts#L96">property <b>hostRecordRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostRecordRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRecordsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getRecords.ts#L100">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getRecords.ts#L100">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4827,7 +4827,7 @@ Name of the domain the record belongs to.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetRecordsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getRecords.ts#L104">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getRecords.ts#L104">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4835,12 +4835,12 @@ The provider-assigned unique ID for this managed resource.
 A list of record IDs.
 
 <h4 class="pdoc-member-header" id="GetRecordsResult-isLocked">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getRecords.ts#L105">property <b>isLocked</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getRecords.ts#L105">property <b>isLocked</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isLocked?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRecordsResult-line">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getRecords.ts#L109">property <b>line</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getRecords.ts#L109">property <b>line</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>line?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4848,12 +4848,12 @@ A list of record IDs.
 ISP line of the record.
 
 <h4 class="pdoc-member-header" id="GetRecordsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getRecords.ts#L110">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getRecords.ts#L110">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRecordsResult-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getRecords.ts#L114">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getRecords.ts#L114">property <b>records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>records: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetRecordsRecord'>GetRecordsRecord</a>[];</code></pre>
@@ -4861,7 +4861,7 @@ ISP line of the record.
 A list of records. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetRecordsResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getRecords.ts#L118">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getRecords.ts#L118">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4869,7 +4869,7 @@ A list of records. Each element contains the following attributes:
 Status of the record.
 
 <h4 class="pdoc-member-header" id="GetRecordsResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getRecords.ts#L122">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getRecords.ts#L122">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4877,7 +4877,7 @@ Status of the record.
 Type of the record.
 
 <h4 class="pdoc-member-header" id="GetRecordsResult-urls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getRecords.ts#L126">property <b>urls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getRecords.ts#L126">property <b>urls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urls: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4885,12 +4885,12 @@ Type of the record.
 A list of entire URLs. Each item format as `<host_record>.<domain_name>`.
 
 <h4 class="pdoc-member-header" id="GetRecordsResult-valueRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getRecords.ts#L127">property <b>valueRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getRecords.ts#L127">property <b>valueRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetResolutionLinesArgs" data-link-title="GetResolutionLinesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getResolutionLines.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getResolutionLines.ts#L50">
         interface <strong>GetResolutionLinesArgs</strong>
     </a>
 </h3>
@@ -4900,7 +4900,7 @@ A list of entire URLs. Each item format as `<host_record>.<domain_name>`.
 A collection of arguments for invoking getResolutionLines.
 
 <h4 class="pdoc-member-header" id="GetResolutionLinesArgs-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getResolutionLines.ts#L54">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getResolutionLines.ts#L54">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4908,7 +4908,7 @@ A collection of arguments for invoking getResolutionLines.
 Domain Name.
 
 <h4 class="pdoc-member-header" id="GetResolutionLinesArgs-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getResolutionLines.ts#L58">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getResolutionLines.ts#L58">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lang?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4916,7 +4916,7 @@ Domain Name.
 language.
 
 <h4 class="pdoc-member-header" id="GetResolutionLinesArgs-lineCodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getResolutionLines.ts#L62">property <b>lineCodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getResolutionLines.ts#L62">property <b>lineCodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lineCodes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4924,7 +4924,7 @@ language.
 A list of lines codes.
 
 <h4 class="pdoc-member-header" id="GetResolutionLinesArgs-lineDisplayNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getResolutionLines.ts#L66">property <b>lineDisplayNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getResolutionLines.ts#L66">property <b>lineDisplayNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lineDisplayNames?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4932,17 +4932,17 @@ A list of lines codes.
 A list of line display names.
 
 <h4 class="pdoc-member-header" id="GetResolutionLinesArgs-lineNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getResolutionLines.ts#L67">property <b>lineNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getResolutionLines.ts#L67">property <b>lineNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lineNames?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetResolutionLinesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getResolutionLines.ts#L68">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getResolutionLines.ts#L68">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetResolutionLinesArgs-userClientIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getResolutionLines.ts#L72">property <b>userClientIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getResolutionLines.ts#L72">property <b>userClientIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userClientIp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4950,7 +4950,7 @@ A list of line display names.
 The ip of user client.
 
 <h3 class="pdoc-module-header" id="GetResolutionLinesResult" data-link-title="GetResolutionLinesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getResolutionLines.ts#L78">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getResolutionLines.ts#L78">
         interface <strong>GetResolutionLinesResult</strong>
     </a>
 </h3>
@@ -4960,12 +4960,12 @@ The ip of user client.
 A collection of values returned by getResolutionLines.
 
 <h4 class="pdoc-member-header" id="GetResolutionLinesResult-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getResolutionLines.ts#L79">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getResolutionLines.ts#L79">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetResolutionLinesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getResolutionLines.ts#L83">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getResolutionLines.ts#L83">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4973,12 +4973,12 @@ A collection of values returned by getResolutionLines.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetResolutionLinesResult-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getResolutionLines.ts#L84">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getResolutionLines.ts#L84">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lang?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetResolutionLinesResult-lineCodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getResolutionLines.ts#L88">property <b>lineCodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getResolutionLines.ts#L88">property <b>lineCodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lineCodes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4986,7 +4986,7 @@ The provider-assigned unique ID for this managed resource.
 Line code.
 
 <h4 class="pdoc-member-header" id="GetResolutionLinesResult-lineDisplayNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getResolutionLines.ts#L92">property <b>lineDisplayNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getResolutionLines.ts#L92">property <b>lineDisplayNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lineDisplayNames: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4994,12 +4994,12 @@ Line code.
 A list of line display names.
 
 <h4 class="pdoc-member-header" id="GetResolutionLinesResult-lineNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getResolutionLines.ts#L93">property <b>lineNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getResolutionLines.ts#L93">property <b>lineNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lineNames?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetResolutionLinesResult-lines">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getResolutionLines.ts#L97">property <b>lines</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getResolutionLines.ts#L97">property <b>lines</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lines: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetResolutionLinesLine'>GetResolutionLinesLine</a>[];</code></pre>
@@ -5007,17 +5007,17 @@ A list of line display names.
 A list of cloud resolution line. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetResolutionLinesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getResolutionLines.ts#L98">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getResolutionLines.ts#L98">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetResolutionLinesResult-userClientIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/getResolutionLines.ts#L99">property <b>userClientIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/getResolutionLines.ts#L99">property <b>userClientIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userClientIp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GroupArgs" data-link-title="GroupArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/group.ts#L81">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/group.ts#L81">
         interface <strong>GroupArgs</strong>
     </a>
 </h3>
@@ -5027,7 +5027,7 @@ A list of cloud resolution line. Each element contains the following attributes:
 The set of arguments for constructing a Group resource.
 
 <h4 class="pdoc-member-header" id="GroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/group.ts#L85">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/group.ts#L85">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5035,7 +5035,7 @@ The set of arguments for constructing a Group resource.
 Name of the domain group.
 
 <h3 class="pdoc-module-header" id="GroupState" data-link-title="GroupState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/group.ts#L71">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/group.ts#L71">
         interface <strong>GroupState</strong>
     </a>
 </h3>
@@ -5045,7 +5045,7 @@ Name of the domain group.
 Input properties used for looking up and filtering Group resources.
 
 <h4 class="pdoc-member-header" id="GroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/group.ts#L75">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/group.ts#L75">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5053,7 +5053,7 @@ Input properties used for looking up and filtering Group resources.
 Name of the domain group.
 
 <h3 class="pdoc-module-header" id="InstanceArgs" data-link-title="InstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L163">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L163">
         interface <strong>InstanceArgs</strong>
     </a>
 </h3>
@@ -5063,7 +5063,7 @@ Name of the domain group.
 The set of arguments for constructing a Instance resource.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-dnsSecurity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L167">property <b>dnsSecurity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L167">property <b>dnsSecurity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsSecurity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5071,7 +5071,7 @@ The set of arguments for constructing a Instance resource.
 DNS security level. Valid values: `no`, `basic`, `advanced`.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-domainNumbers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L171">property <b>domainNumbers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L171">property <b>domainNumbers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainNumbers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5079,12 +5079,12 @@ DNS security level. Valid values: `no`, `basic`, `advanced`.
 Number of domain names bound.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-paymentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L172">property <b>paymentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L172">property <b>paymentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>paymentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceArgs-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L176">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L176">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5092,7 +5092,7 @@ Number of domain names bound.
 Creating a pre-paid instance, it must be set, the unit is month, please enter an integer multiple of 12 for annually paid products.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-renewPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L180">property <b>renewPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L180">property <b>renewPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>renewPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5100,7 +5100,7 @@ Creating a pre-paid instance, it must be set, the unit is month, please enter an
 Automatic renewal period, the unit is month. When setting RenewalStatus to AutoRenewal, it must be set.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-renewalStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L184">property <b>renewalStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L184">property <b>renewalStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>renewalStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5108,7 +5108,7 @@ Automatic renewal period, the unit is month. When setting RenewalStatus to AutoR
 Automatic renewal status. Valid values: `AutoRenewal`, `ManualRenewal`, default to `ManualRenewal`.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-versionCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L188">property <b>versionCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L188">property <b>versionCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5116,7 +5116,7 @@ Automatic renewal status. Valid values: `AutoRenewal`, `ManualRenewal`, default 
 Paid package version. Valid values: `versionPersonal`, `versionEnterpriseBasic`, `versionEnterpriseAdvanced`.
 
 <h3 class="pdoc-module-header" id="InstanceState" data-link-title="InstanceState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L128">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L128">
         interface <strong>InstanceState</strong>
     </a>
 </h3>
@@ -5126,7 +5126,7 @@ Paid package version. Valid values: `versionPersonal`, `versionEnterpriseBasic`,
 Input properties used for looking up and filtering Instance resources.
 
 <h4 class="pdoc-member-header" id="InstanceState-dnsSecurity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L132">property <b>dnsSecurity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L132">property <b>dnsSecurity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsSecurity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5134,7 +5134,7 @@ Input properties used for looking up and filtering Instance resources.
 DNS security level. Valid values: `no`, `basic`, `advanced`.
 
 <h4 class="pdoc-member-header" id="InstanceState-domainNumbers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L136">property <b>domainNumbers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L136">property <b>domainNumbers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainNumbers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5142,12 +5142,12 @@ DNS security level. Valid values: `no`, `basic`, `advanced`.
 Number of domain names bound.
 
 <h4 class="pdoc-member-header" id="InstanceState-paymentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L137">property <b>paymentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L137">property <b>paymentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>paymentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceState-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L141">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L141">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5155,7 +5155,7 @@ Number of domain names bound.
 Creating a pre-paid instance, it must be set, the unit is month, please enter an integer multiple of 12 for annually paid products.
 
 <h4 class="pdoc-member-header" id="InstanceState-renewPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L145">property <b>renewPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L145">property <b>renewPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>renewPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5163,7 +5163,7 @@ Creating a pre-paid instance, it must be set, the unit is month, please enter an
 Automatic renewal period, the unit is month. When setting RenewalStatus to AutoRenewal, it must be set.
 
 <h4 class="pdoc-member-header" id="InstanceState-renewalStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L149">property <b>renewalStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L149">property <b>renewalStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>renewalStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5171,7 +5171,7 @@ Automatic renewal period, the unit is month. When setting RenewalStatus to AutoR
 Automatic renewal status. Valid values: `AutoRenewal`, `ManualRenewal`, default to `ManualRenewal`.
 
 <h4 class="pdoc-member-header" id="InstanceState-versionCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L153">property <b>versionCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L153">property <b>versionCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5179,7 +5179,7 @@ Automatic renewal status. Valid values: `AutoRenewal`, `ManualRenewal`, default 
 Paid package version. Valid values: `versionPersonal`, `versionEnterpriseBasic`, `versionEnterpriseAdvanced`.
 
 <h4 class="pdoc-member-header" id="InstanceState-versionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/instance.ts#L157">property <b>versionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/instance.ts#L157">property <b>versionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5187,7 +5187,7 @@ Paid package version. Valid values: `versionPersonal`, `versionEnterpriseBasic`,
 Paid package version name.
 
 <h3 class="pdoc-module-header" id="RecordArgs" data-link-title="RecordArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L173">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L173">
         interface <strong>RecordArgs</strong>
     </a>
 </h3>
@@ -5197,7 +5197,7 @@ Paid package version name.
 The set of arguments for constructing a Record resource.
 
 <h4 class="pdoc-member-header" id="RecordArgs-hostRecord">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L177">property <b>hostRecord</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L177">property <b>hostRecord</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostRecord: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5205,7 +5205,7 @@ The set of arguments for constructing a Record resource.
 Host record for the domain record. This hostRecord can have at most 253 characters, and each part split with "." can have at most 63 characters, and must contain only alphanumeric characters or hyphens, such as "-",".","*","@",  and must not begin or end with "-".
 
 <h4 class="pdoc-member-header" id="RecordArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L181">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L181">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5213,7 +5213,7 @@ Host record for the domain record. This hostRecord can have at most 253 characte
 Name of the domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 
 <h4 class="pdoc-member-header" id="RecordArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L185">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L185">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5221,7 +5221,7 @@ Name of the domain. This name without suffix can have a string of 1 to 63 charac
 The priority of domain record. Valid values are `[1-10]`. When the `type` is `MX`, this parameter is required.
 
 <h4 class="pdoc-member-header" id="RecordArgs-routing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L189">property <b>routing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L189">property <b>routing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routing?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5229,7 +5229,7 @@ The priority of domain record. Valid values are `[1-10]`. When the `type` is `MX
 The resolution line of domain record. Valid values are `default`, `telecom`, `unicom`, `mobile`, `oversea`, `edu`, `drpeng`, `btvn`, .etc. When the `type` is `FORWORD_URL`, this parameter must be `default`. Default value is `default`. For checking all resolution lines enumeration please visit [Alibaba Cloud DNS doc](https://www.alibabacloud.com/help/doc-detail/34339.htm) or using alicloud.dns.getResolutionLines in data source to get the value.
 
 <h4 class="pdoc-member-header" id="RecordArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L193">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L193">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5237,7 +5237,7 @@ The resolution line of domain record. Valid values are `default`, `telecom`, `un
 The effective time of domain record. Its scope depends on the edition of the cloud resolution. Free is `[600, 86400]`, Basic is `[120, 86400]`, Standard is `[60, 86400]`, Ultimate is `[10, 86400]`, Exclusive is `[1, 86400]`. Default value is `600`.
 
 <h4 class="pdoc-member-header" id="RecordArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L197">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L197">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5245,7 +5245,7 @@ The effective time of domain record. Its scope depends on the edition of the clo
 The type of domain record. Valid values are `A`,`NS`,`MX`,`TXT`,`CNAME`,`SRV`,`AAAA`,`CAA`, `REDIRECT_URL` and `FORWORD_URL`.
 
 <h4 class="pdoc-member-header" id="RecordArgs-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L201">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L201">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5253,7 +5253,7 @@ The type of domain record. Valid values are `A`,`NS`,`MX`,`TXT`,`CNAME`,`SRV`,`A
 The value of domain record, When the `type` is `MX`,`NS`,`CNAME`,`SRV`, the server will treat the `value` as a fully qualified domain name, so it's no need to add a `.` at the end.
 
 <h3 class="pdoc-module-header" id="RecordState" data-link-title="RecordState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L134">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L134">
         interface <strong>RecordState</strong>
     </a>
 </h3>
@@ -5263,7 +5263,7 @@ The value of domain record, When the `type` is `MX`,`NS`,`CNAME`,`SRV`, the serv
 Input properties used for looking up and filtering Record resources.
 
 <h4 class="pdoc-member-header" id="RecordState-hostRecord">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L138">property <b>hostRecord</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L138">property <b>hostRecord</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostRecord?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5271,12 +5271,12 @@ Input properties used for looking up and filtering Record resources.
 Host record for the domain record. This hostRecord can have at most 253 characters, and each part split with "." can have at most 63 characters, and must contain only alphanumeric characters or hyphens, such as "-",".","*","@",  and must not begin or end with "-".
 
 <h4 class="pdoc-member-header" id="RecordState-locked">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L139">property <b>locked</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L139">property <b>locked</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locked?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RecordState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L143">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L143">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5284,7 +5284,7 @@ Host record for the domain record. This hostRecord can have at most 253 characte
 Name of the domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 
 <h4 class="pdoc-member-header" id="RecordState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L147">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L147">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5292,7 +5292,7 @@ Name of the domain. This name without suffix can have a string of 1 to 63 charac
 The priority of domain record. Valid values are `[1-10]`. When the `type` is `MX`, this parameter is required.
 
 <h4 class="pdoc-member-header" id="RecordState-routing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L151">property <b>routing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L151">property <b>routing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routing?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5300,7 +5300,7 @@ The priority of domain record. Valid values are `[1-10]`. When the `type` is `MX
 The resolution line of domain record. Valid values are `default`, `telecom`, `unicom`, `mobile`, `oversea`, `edu`, `drpeng`, `btvn`, .etc. When the `type` is `FORWORD_URL`, this parameter must be `default`. Default value is `default`. For checking all resolution lines enumeration please visit [Alibaba Cloud DNS doc](https://www.alibabacloud.com/help/doc-detail/34339.htm) or using alicloud.dns.getResolutionLines in data source to get the value.
 
 <h4 class="pdoc-member-header" id="RecordState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L155">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L155">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5308,7 +5308,7 @@ The resolution line of domain record. Valid values are `default`, `telecom`, `un
 The record status. `Enable` or `Disable`.
 
 <h4 class="pdoc-member-header" id="RecordState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L159">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L159">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5316,7 +5316,7 @@ The record status. `Enable` or `Disable`.
 The effective time of domain record. Its scope depends on the edition of the cloud resolution. Free is `[600, 86400]`, Basic is `[120, 86400]`, Standard is `[60, 86400]`, Ultimate is `[10, 86400]`, Exclusive is `[1, 86400]`. Default value is `600`.
 
 <h4 class="pdoc-member-header" id="RecordState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L163">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L163">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5324,7 +5324,7 @@ The effective time of domain record. Its scope depends on the edition of the clo
 The type of domain record. Valid values are `A`,`NS`,`MX`,`TXT`,`CNAME`,`SRV`,`AAAA`,`CAA`, `REDIRECT_URL` and `FORWORD_URL`.
 
 <h4 class="pdoc-member-header" id="RecordState-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/dns/record.ts#L167">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/dns/record.ts#L167">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

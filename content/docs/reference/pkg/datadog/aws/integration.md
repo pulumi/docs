@@ -1,7 +1,7 @@
 
 ---
 title: "Integration"
-title_tag: "Resource Integration | Module aws | Package Datadog"
+title_tag: "datadog.aws.Integration"
 meta_desc: "Explore the Integration resource of the aws module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Datadog - Amazon Web Services integration resource. This can be used to create and manage Datadog - Amazon Web Services integration."
 ---
 

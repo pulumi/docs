@@ -1,7 +1,7 @@
 
 ---
 title: "IntegrationLambdaArn"
-title_tag: "Resource IntegrationLambdaArn | Module aws | Package Datadog"
+title_tag: "datadog.aws.IntegrationLambdaArn"
 meta_desc: "Explore the IntegrationLambdaArn resource of the aws module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Datadog - Amazon Web Services integration Lambda ARN resource. This can be used to create and manage the log collection Lambdas for an account."
 ---
 

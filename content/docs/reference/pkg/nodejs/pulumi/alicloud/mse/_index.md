@@ -3,7 +3,7 @@ title: "Module mse"
 title_tag: "Module mse | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "mse"
 meta_desc: "Explore members of the mse module in the @pulumi/alicloud package."
-git_sha: "fcdd66dccf963899382dd7b59249d3ec24e3632c"
+git_sha: "8b0235f54ce04ebef3a63df7ea1100f2c58382cf"
 block_external_search_index: true
 ---
 
@@ -36,7 +36,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Cluster" data-link-title="Cluster">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L39">
         Resource <strong>Cluster</strong>
     </a>
 </h3>
@@ -75,7 +75,7 @@ MSE Cluster can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Cluster-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L118"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L118"> <b>constructor</b></a>
 </h4>
 
 
@@ -89,7 +89,7 @@ Create a Cluster resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Cluster-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L49">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -100,14 +100,14 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Cluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L39">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Cluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L60">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -118,7 +118,7 @@ Returns true if the given object is an instance of Cluster.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Cluster-aclEntryLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L70">property <b>aclEntryLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L70">property <b>aclEntryLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>aclEntryLists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -126,7 +126,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The whitelist.
 
 <h4 class="pdoc-member-header" id="Cluster-clusterAliasName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L74">property <b>clusterAliasName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L74">property <b>clusterAliasName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterAliasName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -134,7 +134,7 @@ The whitelist.
 The alias of MSE Cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-clusterSpecification">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L78">property <b>clusterSpecification</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L78">property <b>clusterSpecification</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterSpecification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -142,7 +142,7 @@ The alias of MSE Cluster.
 The engine specification of MSE Cluster. Valid values: `MSE_SC_1_2_200_c`, `MSE_SC_2`, `MSE_SC_4_8_200_c_4_200_c`, `MSE_SC_8_16_200_c`.
 
 <h4 class="pdoc-member-header" id="Cluster-clusterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L82">property <b>clusterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L82">property <b>clusterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -150,7 +150,7 @@ The engine specification of MSE Cluster. Valid values: `MSE_SC_1_2_200_c`, `MSE_
 The type of MSE Cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-clusterVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L86">property <b>clusterVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L86">property <b>clusterVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -158,7 +158,7 @@ The type of MSE Cluster.
 The version of MSE Cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-diskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L90">property <b>diskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L90">property <b>diskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>diskType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -166,7 +166,7 @@ The version of MSE Cluster.
 The type of Disk.
 
 <h4 class="pdoc-member-header" id="Cluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -175,7 +175,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Cluster-instanceCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L94">property <b>instanceCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L94">property <b>instanceCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -183,7 +183,7 @@ deployments and may be missing (undefined) during planning phases.
 The count of instance.
 
 <h4 class="pdoc-member-header" id="Cluster-netType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L98">property <b>netType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L98">property <b>netType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>netType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -191,7 +191,7 @@ The count of instance.
 The type of network. Range limit: 1~5.
 
 <h4 class="pdoc-member-header" id="Cluster-privateSlbSpecification">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L102">property <b>privateSlbSpecification</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L102">property <b>privateSlbSpecification</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateSlbSpecification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -199,7 +199,7 @@ The type of network. Range limit: 1~5.
 The specification of private network SLB.
 
 <h4 class="pdoc-member-header" id="Cluster-pubNetworkFlow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L106">property <b>pubNetworkFlow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L106">property <b>pubNetworkFlow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pubNetworkFlow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -207,7 +207,7 @@ The specification of private network SLB.
 The public network bandwidth. `0` means no access to the public network.
 
 <h4 class="pdoc-member-header" id="Cluster-pubSlbSpecification">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L110">property <b>pubSlbSpecification</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L110">property <b>pubSlbSpecification</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pubSlbSpecification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -215,7 +215,7 @@ The public network bandwidth. `0` means no access to the public network.
 The specification of public network SLB.
 
 <h4 class="pdoc-member-header" id="Cluster-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L114">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L114">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -223,7 +223,7 @@ The specification of public network SLB.
 The status of MSE Cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L39">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -232,7 +232,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Cluster-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L118">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L118">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vswitchId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -242,7 +242,7 @@ The id of VSwitch.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getClusters" data-link-title="getClusters">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/getClusters.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/getClusters.ts#L27">
         Function <strong>getClusters</strong>
     </a>
 </h3>
@@ -272,7 +272,7 @@ export const clusterId = example.clusters[0].id;
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ClusterArgs" data-link-title="ClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L248">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L248">
         interface <strong>ClusterArgs</strong>
     </a>
 </h3>
@@ -282,7 +282,7 @@ export const clusterId = example.clusters[0].id;
 The set of arguments for constructing a Cluster resource.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-aclEntryLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L252">property <b>aclEntryLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L252">property <b>aclEntryLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclEntryLists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -290,7 +290,7 @@ The set of arguments for constructing a Cluster resource.
 The whitelist.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clusterAliasName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L256">property <b>clusterAliasName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L256">property <b>clusterAliasName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterAliasName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -298,7 +298,7 @@ The whitelist.
 The alias of MSE Cluster.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clusterSpecification">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L260">property <b>clusterSpecification</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L260">property <b>clusterSpecification</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterSpecification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -306,7 +306,7 @@ The alias of MSE Cluster.
 The engine specification of MSE Cluster. Valid values: `MSE_SC_1_2_200_c`, `MSE_SC_2`, `MSE_SC_4_8_200_c_4_200_c`, `MSE_SC_8_16_200_c`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clusterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L264">property <b>clusterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L264">property <b>clusterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -314,7 +314,7 @@ The engine specification of MSE Cluster. Valid values: `MSE_SC_1_2_200_c`, `MSE_
 The type of MSE Cluster.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clusterVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L268">property <b>clusterVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L268">property <b>clusterVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -322,7 +322,7 @@ The type of MSE Cluster.
 The version of MSE Cluster.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-diskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L272">property <b>diskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L272">property <b>diskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -330,7 +330,7 @@ The version of MSE Cluster.
 The type of Disk.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-instanceCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L276">property <b>instanceCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L276">property <b>instanceCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -338,7 +338,7 @@ The type of Disk.
 The count of instance.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-netType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L280">property <b>netType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L280">property <b>netType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>netType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -346,7 +346,7 @@ The count of instance.
 The type of network. Range limit: 1~5.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-privateSlbSpecification">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L284">property <b>privateSlbSpecification</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L284">property <b>privateSlbSpecification</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateSlbSpecification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -354,7 +354,7 @@ The type of network. Range limit: 1~5.
 The specification of private network SLB.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-pubNetworkFlow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L288">property <b>pubNetworkFlow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L288">property <b>pubNetworkFlow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pubNetworkFlow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -362,7 +362,7 @@ The specification of private network SLB.
 The public network bandwidth. `0` means no access to the public network.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-pubSlbSpecification">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L292">property <b>pubSlbSpecification</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L292">property <b>pubSlbSpecification</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pubSlbSpecification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -370,7 +370,7 @@ The public network bandwidth. `0` means no access to the public network.
 The specification of public network SLB.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L296">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L296">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -378,7 +378,7 @@ The specification of public network SLB.
 The id of VSwitch.
 
 <h3 class="pdoc-module-header" id="ClusterState" data-link-title="ClusterState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L190">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L190">
         interface <strong>ClusterState</strong>
     </a>
 </h3>
@@ -388,7 +388,7 @@ The id of VSwitch.
 Input properties used for looking up and filtering Cluster resources.
 
 <h4 class="pdoc-member-header" id="ClusterState-aclEntryLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L194">property <b>aclEntryLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L194">property <b>aclEntryLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclEntryLists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -396,7 +396,7 @@ Input properties used for looking up and filtering Cluster resources.
 The whitelist.
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterAliasName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L198">property <b>clusterAliasName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L198">property <b>clusterAliasName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterAliasName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -404,7 +404,7 @@ The whitelist.
 The alias of MSE Cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterSpecification">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L202">property <b>clusterSpecification</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L202">property <b>clusterSpecification</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterSpecification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -412,7 +412,7 @@ The alias of MSE Cluster.
 The engine specification of MSE Cluster. Valid values: `MSE_SC_1_2_200_c`, `MSE_SC_2`, `MSE_SC_4_8_200_c_4_200_c`, `MSE_SC_8_16_200_c`.
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L206">property <b>clusterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L206">property <b>clusterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -420,7 +420,7 @@ The engine specification of MSE Cluster. Valid values: `MSE_SC_1_2_200_c`, `MSE_
 The type of MSE Cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L210">property <b>clusterVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L210">property <b>clusterVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -428,7 +428,7 @@ The type of MSE Cluster.
 The version of MSE Cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-diskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L214">property <b>diskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L214">property <b>diskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -436,7 +436,7 @@ The version of MSE Cluster.
 The type of Disk.
 
 <h4 class="pdoc-member-header" id="ClusterState-instanceCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L218">property <b>instanceCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L218">property <b>instanceCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -444,7 +444,7 @@ The type of Disk.
 The count of instance.
 
 <h4 class="pdoc-member-header" id="ClusterState-netType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L222">property <b>netType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L222">property <b>netType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>netType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -452,7 +452,7 @@ The count of instance.
 The type of network. Range limit: 1~5.
 
 <h4 class="pdoc-member-header" id="ClusterState-privateSlbSpecification">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L226">property <b>privateSlbSpecification</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L226">property <b>privateSlbSpecification</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateSlbSpecification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -460,7 +460,7 @@ The type of network. Range limit: 1~5.
 The specification of private network SLB.
 
 <h4 class="pdoc-member-header" id="ClusterState-pubNetworkFlow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L230">property <b>pubNetworkFlow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L230">property <b>pubNetworkFlow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pubNetworkFlow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -468,7 +468,7 @@ The specification of private network SLB.
 The public network bandwidth. `0` means no access to the public network.
 
 <h4 class="pdoc-member-header" id="ClusterState-pubSlbSpecification">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L234">property <b>pubSlbSpecification</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L234">property <b>pubSlbSpecification</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pubSlbSpecification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -476,7 +476,7 @@ The public network bandwidth. `0` means no access to the public network.
 The specification of public network SLB.
 
 <h4 class="pdoc-member-header" id="ClusterState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L238">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L238">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -484,7 +484,7 @@ The specification of public network SLB.
 The status of MSE Cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/cluster.ts#L242">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/cluster.ts#L242">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -492,7 +492,7 @@ The status of MSE Cluster.
 The id of VSwitch.
 
 <h3 class="pdoc-module-header" id="GetClustersArgs" data-link-title="GetClustersArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/getClusters.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/getClusters.ts#L50">
         interface <strong>GetClustersArgs</strong>
     </a>
 </h3>
@@ -502,7 +502,7 @@ The id of VSwitch.
 A collection of arguments for invoking getClusters.
 
 <h4 class="pdoc-member-header" id="GetClustersArgs-clusterAliasName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/getClusters.ts#L54">property <b>clusterAliasName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/getClusters.ts#L54">property <b>clusterAliasName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterAliasName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -510,12 +510,12 @@ A collection of arguments for invoking getClusters.
 The alias name of MSE Cluster.
 
 <h4 class="pdoc-member-header" id="GetClustersArgs-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/getClusters.ts#L55">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/getClusters.ts#L55">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClustersArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/getClusters.ts#L59">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/getClusters.ts#L59">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -523,7 +523,7 @@ The alias name of MSE Cluster.
 A list of MSE Cluster ids.
 
 <h4 class="pdoc-member-header" id="GetClustersArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/getClusters.ts#L63">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/getClusters.ts#L63">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -531,17 +531,17 @@ A list of MSE Cluster ids.
 A regex string to filter the results by the cluster alias name.
 
 <h4 class="pdoc-member-header" id="GetClustersArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/getClusters.ts#L64">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/getClusters.ts#L64">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClustersArgs-requestPars">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/getClusters.ts#L65">property <b>requestPars</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/getClusters.ts#L65">property <b>requestPars</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestPars?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClustersArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/getClusters.ts#L69">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/getClusters.ts#L69">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -549,7 +549,7 @@ A regex string to filter the results by the cluster alias name.
 The status of MSE Cluster. Valid: `DESTROY_FAILED`, `DESTROY_ING`, `DESTROY_SUCCESS`, `INIT_FAILED`, `INIT_ING`, `INIT_SUCCESS`, `INIT_TIME_OUT`, `RESTART_FAILED`, `RESTART_ING`, `RESTART_SUCCESS`, `SCALE_FAILED`, `SCALE_ING`, `SCALE_SUCCESS`
 
 <h3 class="pdoc-module-header" id="GetClustersResult" data-link-title="GetClustersResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/getClusters.ts#L75">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/getClusters.ts#L75">
         interface <strong>GetClustersResult</strong>
     </a>
 </h3>
@@ -559,12 +559,12 @@ The status of MSE Cluster. Valid: `DESTROY_FAILED`, `DESTROY_ING`, `DESTROY_SUCC
 A collection of values returned by getClusters.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-clusterAliasName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/getClusters.ts#L76">property <b>clusterAliasName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/getClusters.ts#L76">property <b>clusterAliasName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterAliasName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResult-clusters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/getClusters.ts#L80">property <b>clusters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/getClusters.ts#L80">property <b>clusters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusters: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetClustersCluster'>GetClustersCluster</a>[];</code></pre>
@@ -572,12 +572,12 @@ A collection of values returned by getClusters.
 A list of MSE Clusters. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetClustersResult-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/getClusters.ts#L81">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/getClusters.ts#L81">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/getClusters.ts#L85">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/getClusters.ts#L85">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -585,7 +585,7 @@ A list of MSE Clusters. Each element contains the following attributes:
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/getClusters.ts#L89">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/getClusters.ts#L89">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -593,12 +593,12 @@ The provider-assigned unique ID for this managed resource.
 A list of MSE Cluster ids.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/getClusters.ts#L90">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/getClusters.ts#L90">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/getClusters.ts#L94">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/getClusters.ts#L94">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -606,17 +606,17 @@ A list of MSE Cluster ids.
 A list of MSE Cluster names.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/getClusters.ts#L95">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/getClusters.ts#L95">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResult-requestPars">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/getClusters.ts#L96">property <b>requestPars</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/getClusters.ts#L96">property <b>requestPars</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestPars?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/mse/getClusters.ts#L100">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/mse/getClusters.ts#L100">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>

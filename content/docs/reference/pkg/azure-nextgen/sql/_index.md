@@ -19,7 +19,6 @@ Explore the resources and functions of the sql module in the Azure NextGen packa
     <li><a href="failovergroup" title="FailoverGroup"><span class="symbol resource"></span>FailoverGroup</a></li>
     <li><a href="firewallrule" title="FirewallRule"><span class="symbol resource"></span>FirewallRule</a></li>
     <li><a href="geobackuppolicy" title="GeoBackupPolicy"><span class="symbol resource"></span>GeoBackupPolicy</a></li>
-    <li><a href="hybridlink" title="HybridLink"><span class="symbol resource"></span>HybridLink</a></li>
     <li><a href="instancefailovergroup" title="InstanceFailoverGroup"><span class="symbol resource"></span>InstanceFailoverGroup</a></li>
     <li><a href="instancepool" title="InstancePool"><span class="symbol resource"></span>InstancePool</a></li>
     <li><a href="job" title="Job"><span class="symbol resource"></span>Job</a></li>
@@ -66,7 +65,6 @@ Explore the resources and functions of the sql module in the Azure NextGen packa
     <li><a href="getfailovergroup" title="GetFailoverGroup"><span class="symbol function"></span>GetFailoverGroup</a></li>
     <li><a href="getfirewallrule" title="GetFirewallRule"><span class="symbol function"></span>GetFirewallRule</a></li>
     <li><a href="getgeobackuppolicy" title="GetGeoBackupPolicy"><span class="symbol function"></span>GetGeoBackupPolicy</a></li>
-    <li><a href="gethybridlink" title="GetHybridLink"><span class="symbol function"></span>GetHybridLink</a></li>
     <li><a href="getinstancefailovergroup" title="GetInstanceFailoverGroup"><span class="symbol function"></span>GetInstanceFailoverGroup</a></li>
     <li><a href="getinstancepool" title="GetInstancePool"><span class="symbol function"></span>GetInstancePool</a></li>
     <li><a href="getjob" title="GetJob"><span class="symbol function"></span>GetJob</a></li>
@@ -110,7 +108,7 @@ Explore the resources and functions of the sql module in the Azure NextGen packa
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 
 

@@ -23,7 +23,9 @@ Explore the resources and functions of the storage module in the Azure package.
     <li><a href="queue" title="Queue"><span class="symbol resource"></span>Queue</a></li>
     <li><a href="share" title="Share"><span class="symbol resource"></span>Share</a></li>
     <li><a href="sharedirectory" title="ShareDirectory"><span class="symbol resource"></span>ShareDirectory</a></li>
+    <li><a href="sharefile" title="ShareFile"><span class="symbol resource"></span>ShareFile</a></li>
     <li><a href="sync" title="Sync"><span class="symbol resource"></span>Sync</a></li>
+    <li><a href="synccloudendpoint" title="SyncCloudEndpoint"><span class="symbol resource"></span>SyncCloudEndpoint</a></li>
     <li><a href="syncgroup" title="SyncGroup"><span class="symbol resource"></span>SyncGroup</a></li>
     <li><a href="table" title="Table"><span class="symbol resource"></span>Table</a></li>
     <li><a href="tableentity" title="TableEntity"><span class="symbol resource"></span>TableEntity</a></li>
@@ -51,7 +53,7 @@ Explore the resources and functions of the storage module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.33.2</dd>
+	<dd>3.41.1</dd>
 </dl>
 
 

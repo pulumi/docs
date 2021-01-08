@@ -1,8 +1,8 @@
 
 ---
 title: "Budget"
-title_tag: "Resource Budget | Module billing | Package GCP"
-meta_desc: "Explore the Budget resource of the billing module, including examples, input properties, output properties, lookup functions, and supporting types. Budget configuration for a billing account."
+title_tag: "gcp.billing.Budget"
+meta_desc: "Documentation for the gcp.billing.Budget resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -743,7 +743,7 @@ const budget = new gcp.billing.Budget("budget", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/billing/#Budget">Budget</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/billing/#BudgetArgs">BudgetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/billing/#Budget">Budget</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/billing/#BudgetArgs">BudgetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -751,11 +751,11 @@ const budget = new gcp.billing.Budget("budget", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/billing?tab=doc#Budget">NewBudget</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/billing?tab=doc#BudgetArgs">BudgetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/billing?tab=doc#Budget">Budget</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/billing?tab=doc#Budget">NewBudget</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/billing?tab=doc#BudgetArgs">BudgetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/billing?tab=doc#Budget">Budget</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.Budget.html">Budget</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.BudgetArgs.html">BudgetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.Budget.html">Budget</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.BudgetArgs.html">BudgetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -766,7 +766,7 @@ const budget = new gcp.billing.Budget("budget", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -835,7 +835,7 @@ const budget = new gcp.billing.Budget("budget", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -874,7 +874,7 @@ const budget = new gcp.billing.Budget("budget", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -915,7 +915,6 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -923,30 +922,28 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="amount_csharp">
 <a href="#amount_csharp" style="color: inherit; text-decoration: inherit;">Amount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetamount">Budget<wbr>Amount<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The budgeted amount for each usage period.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="billingaccount_csharp">
 <a href="#billingaccount_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the billing account to set a budget on.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="thresholdrules_csharp">
 <a href="#thresholdrules_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetthresholdrule">List&lt;Budget<wbr>Threshold<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -955,12 +952,11 @@ crossed) when spend exceeds the specified percentages of the
 budget.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allupdatesrule_csharp">
 <a href="#allupdatesrule_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Updates<wbr>Rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetallupdatesrule">Budget<wbr>All<wbr>Updates<wbr>Rule<wbr>Args</a></span>
     </dt>
@@ -969,12 +965,11 @@ billing account's spend, regardless of the thresholds defined
 using threshold rules.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="budgetfilter_csharp">
 <a href="#budgetfilter_csharp" style="color: inherit; text-decoration: inherit;">Budget<wbr>Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetbudgetfilter">Budget<wbr>Budget<wbr>Filter<wbr>Args</a></span>
     </dt>
@@ -982,21 +977,18 @@ Structure is documented below.
 spend against the budget.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User data for display name in UI. Must be <= 60 chars.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1005,30 +997,28 @@ Structure is documented below.
             title="Required">
         <span id="amount_go">
 <a href="#amount_go" style="color: inherit; text-decoration: inherit;">Amount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetamount">Budget<wbr>Amount</a></span>
     </dt>
     <dd>{{% md %}}The budgeted amount for each usage period.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="billingaccount_go">
 <a href="#billingaccount_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the billing account to set a budget on.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="thresholdrules_go">
 <a href="#thresholdrules_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetthresholdrule">[]Budget<wbr>Threshold<wbr>Rule</a></span>
     </dt>
@@ -1037,12 +1027,11 @@ crossed) when spend exceeds the specified percentages of the
 budget.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allupdatesrule_go">
 <a href="#allupdatesrule_go" style="color: inherit; text-decoration: inherit;">All<wbr>Updates<wbr>Rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetallupdatesrule">Budget<wbr>All<wbr>Updates<wbr>Rule</a></span>
     </dt>
@@ -1051,12 +1040,11 @@ billing account's spend, regardless of the thresholds defined
 using threshold rules.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="budgetfilter_go">
 <a href="#budgetfilter_go" style="color: inherit; text-decoration: inherit;">Budget<wbr>Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetbudgetfilter">Budget<wbr>Budget<wbr>Filter</a></span>
     </dt>
@@ -1064,21 +1052,18 @@ Structure is documented below.
 spend against the budget.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User data for display name in UI. Must be <= 60 chars.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1087,30 +1072,28 @@ Structure is documented below.
             title="Required">
         <span id="amount_nodejs">
 <a href="#amount_nodejs" style="color: inherit; text-decoration: inherit;">amount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetamount">Budget<wbr>Amount</a></span>
     </dt>
     <dd>{{% md %}}The budgeted amount for each usage period.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="billingaccount_nodejs">
 <a href="#billingaccount_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the billing account to set a budget on.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="thresholdrules_nodejs">
 <a href="#thresholdrules_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetthresholdrule">Budget<wbr>Threshold<wbr>Rule[]</a></span>
     </dt>
@@ -1119,12 +1102,11 @@ crossed) when spend exceeds the specified percentages of the
 budget.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allupdatesrule_nodejs">
 <a href="#allupdatesrule_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Updates<wbr>Rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetallupdatesrule">Budget<wbr>All<wbr>Updates<wbr>Rule</a></span>
     </dt>
@@ -1133,12 +1115,11 @@ billing account's spend, regardless of the thresholds defined
 using threshold rules.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="budgetfilter_nodejs">
 <a href="#budgetfilter_nodejs" style="color: inherit; text-decoration: inherit;">budget<wbr>Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetbudgetfilter">Budget<wbr>Budget<wbr>Filter</a></span>
     </dt>
@@ -1146,21 +1127,18 @@ Structure is documented below.
 spend against the budget.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User data for display name in UI. Must be <= 60 chars.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1169,30 +1147,28 @@ Structure is documented below.
             title="Required">
         <span id="amount_python">
 <a href="#amount_python" style="color: inherit; text-decoration: inherit;">amount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetamount">Budget<wbr>Amount<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The budgeted amount for each usage period.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="billing_account_python">
 <a href="#billing_account_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the billing account to set a budget on.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="threshold_rules_python">
 <a href="#threshold_rules_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetthresholdrule">Sequence[Budget<wbr>Threshold<wbr>Rule<wbr>Args]</a></span>
     </dt>
@@ -1201,12 +1177,11 @@ crossed) when spend exceeds the specified percentages of the
 budget.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="all_updates_rule_python">
 <a href="#all_updates_rule_python" style="color: inherit; text-decoration: inherit;">all_<wbr>updates_<wbr>rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetallupdatesrule">Budget<wbr>All<wbr>Updates<wbr>Rule<wbr>Args</a></span>
     </dt>
@@ -1215,12 +1190,11 @@ billing account's spend, regardless of the thresholds defined
 using threshold rules.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="budget_filter_python">
 <a href="#budget_filter_python" style="color: inherit; text-decoration: inherit;">budget_<wbr>filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetbudgetfilter">Budget<wbr>Budget<wbr>Filter<wbr>Args</a></span>
     </dt>
@@ -1228,30 +1202,23 @@ Structure is documented below.
 spend against the budget.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User data for display name in UI. Must be <= 60 chars.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Budget resource produces the following output properties:
-
 
 
 
@@ -1262,27 +1229,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the budget. The resource name implies the scope of a budget. Values are of the form
 billingAccounts/{billingAccountId}/budgets/{budgetId}.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1291,27 +1255,24 @@ billingAccounts/{billingAccountId}/budgets/{budgetId}.
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the budget. The resource name implies the scope of a budget. Values are of the form
 billingAccounts/{billingAccountId}/budgets/{budgetId}.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1320,27 +1281,24 @@ billingAccounts/{billingAccountId}/budgets/{budgetId}.
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the budget. The resource name implies the scope of a budget. Values are of the form
 billingAccounts/{billingAccountId}/budgets/{budgetId}.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1349,30 +1307,24 @@ billingAccounts/{billingAccountId}/budgets/{budgetId}.
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name of the budget. The resource name implies the scope of a budget. Values are of the form
 billingAccounts/{billingAccountId}/budgets/{budgetId}.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1382,7 +1334,7 @@ Get an existing Budget resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/billing/#BudgetState">BudgetState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/billing/#Budget">Budget</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/billing/#BudgetState">BudgetState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/billing/#Budget">Budget</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1391,11 +1343,11 @@ Get an existing Budget resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBudget<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/billing?tab=doc#BudgetState">BudgetState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/billing?tab=doc#Budget">Budget</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBudget<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/billing?tab=doc#BudgetState">BudgetState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/billing?tab=doc#Budget">Budget</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.Budget.html">Budget</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.BudgetState.html">BudgetState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.Budget.html">Budget</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.BudgetState.html">BudgetState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1497,7 +1449,6 @@ Get an existing Budget resource's state with the given name, ID, and optional ex
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1505,7 +1456,7 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_allupdatesrule_csharp">
 <a href="#state_allupdatesrule_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Updates<wbr>Rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetallupdatesrule">Budget<wbr>All<wbr>Updates<wbr>Rule<wbr>Args</a></span>
     </dt>
@@ -1514,35 +1465,32 @@ billing account's spend, regardless of the thresholds defined
 using threshold rules.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_amount_csharp">
 <a href="#state_amount_csharp" style="color: inherit; text-decoration: inherit;">Amount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetamount">Budget<wbr>Amount<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The budgeted amount for each usage period.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_billingaccount_csharp">
 <a href="#state_billingaccount_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the billing account to set a budget on.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_budgetfilter_csharp">
 <a href="#state_budgetfilter_csharp" style="color: inherit; text-decoration: inherit;">Budget<wbr>Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetbudgetfilter">Budget<wbr>Budget<wbr>Filter<wbr>Args</a></span>
     </dt>
@@ -1550,35 +1498,32 @@ Structure is documented below.
 spend against the budget.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User data for display name in UI. Must be <= 60 chars.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the budget. The resource name implies the scope of a budget. Values are of the form
 billingAccounts/{billingAccountId}/budgets/{budgetId}.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_thresholdrules_csharp">
 <a href="#state_thresholdrules_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetthresholdrule">List&lt;Budget<wbr>Threshold<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -1587,10 +1532,8 @@ crossed) when spend exceeds the specified percentages of the
 budget.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1599,7 +1542,7 @@ Structure is documented below.
             title="Optional">
         <span id="state_allupdatesrule_go">
 <a href="#state_allupdatesrule_go" style="color: inherit; text-decoration: inherit;">All<wbr>Updates<wbr>Rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetallupdatesrule">Budget<wbr>All<wbr>Updates<wbr>Rule</a></span>
     </dt>
@@ -1608,35 +1551,32 @@ billing account's spend, regardless of the thresholds defined
 using threshold rules.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_amount_go">
 <a href="#state_amount_go" style="color: inherit; text-decoration: inherit;">Amount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetamount">Budget<wbr>Amount</a></span>
     </dt>
     <dd>{{% md %}}The budgeted amount for each usage period.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_billingaccount_go">
 <a href="#state_billingaccount_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the billing account to set a budget on.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_budgetfilter_go">
 <a href="#state_budgetfilter_go" style="color: inherit; text-decoration: inherit;">Budget<wbr>Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetbudgetfilter">Budget<wbr>Budget<wbr>Filter</a></span>
     </dt>
@@ -1644,35 +1584,32 @@ Structure is documented below.
 spend against the budget.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User data for display name in UI. Must be <= 60 chars.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the budget. The resource name implies the scope of a budget. Values are of the form
 billingAccounts/{billingAccountId}/budgets/{budgetId}.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_thresholdrules_go">
 <a href="#state_thresholdrules_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetthresholdrule">[]Budget<wbr>Threshold<wbr>Rule</a></span>
     </dt>
@@ -1681,10 +1618,8 @@ crossed) when spend exceeds the specified percentages of the
 budget.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1693,7 +1628,7 @@ Structure is documented below.
             title="Optional">
         <span id="state_allupdatesrule_nodejs">
 <a href="#state_allupdatesrule_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Updates<wbr>Rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetallupdatesrule">Budget<wbr>All<wbr>Updates<wbr>Rule</a></span>
     </dt>
@@ -1702,35 +1637,32 @@ billing account's spend, regardless of the thresholds defined
 using threshold rules.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_amount_nodejs">
 <a href="#state_amount_nodejs" style="color: inherit; text-decoration: inherit;">amount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetamount">Budget<wbr>Amount</a></span>
     </dt>
     <dd>{{% md %}}The budgeted amount for each usage period.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_billingaccount_nodejs">
 <a href="#state_billingaccount_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the billing account to set a budget on.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_budgetfilter_nodejs">
 <a href="#state_budgetfilter_nodejs" style="color: inherit; text-decoration: inherit;">budget<wbr>Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetbudgetfilter">Budget<wbr>Budget<wbr>Filter</a></span>
     </dt>
@@ -1738,35 +1670,32 @@ Structure is documented below.
 spend against the budget.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User data for display name in UI. Must be <= 60 chars.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the budget. The resource name implies the scope of a budget. Values are of the form
 billingAccounts/{billingAccountId}/budgets/{budgetId}.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_thresholdrules_nodejs">
 <a href="#state_thresholdrules_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetthresholdrule">Budget<wbr>Threshold<wbr>Rule[]</a></span>
     </dt>
@@ -1775,10 +1704,8 @@ crossed) when spend exceeds the specified percentages of the
 budget.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1787,7 +1714,7 @@ Structure is documented below.
             title="Optional">
         <span id="state_all_updates_rule_python">
 <a href="#state_all_updates_rule_python" style="color: inherit; text-decoration: inherit;">all_<wbr>updates_<wbr>rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetallupdatesrule">Budget<wbr>All<wbr>Updates<wbr>Rule<wbr>Args</a></span>
     </dt>
@@ -1796,35 +1723,32 @@ billing account's spend, regardless of the thresholds defined
 using threshold rules.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_amount_python">
 <a href="#state_amount_python" style="color: inherit; text-decoration: inherit;">amount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetamount">Budget<wbr>Amount<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The budgeted amount for each usage period.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_billing_account_python">
 <a href="#state_billing_account_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the billing account to set a budget on.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_budget_filter_python">
 <a href="#state_budget_filter_python" style="color: inherit; text-decoration: inherit;">budget_<wbr>filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetbudgetfilter">Budget<wbr>Budget<wbr>Filter<wbr>Args</a></span>
     </dt>
@@ -1832,35 +1756,32 @@ Structure is documented below.
 spend against the budget.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User data for display name in UI. Must be <= 60 chars.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name of the budget. The resource name implies the scope of a budget. Values are of the form
 billingAccounts/{billingAccountId}/budgets/{budgetId}.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_threshold_rules_python">
 <a href="#state_threshold_rules_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetthresholdrule">Sequence[Budget<wbr>Threshold<wbr>Rule<wbr>Args]</a></span>
     </dt>
@@ -1869,7 +1790,6 @@ crossed) when spend exceeds the specified percentages of the
 budget.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1878,11 +1798,8 @@ Structure is documented below.
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="budgetallupdatesrule">Budget<wbr>All<wbr>Updates<wbr>Rule</h4>
@@ -1893,11 +1810,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/billing?tab=doc#BudgetAllUpdatesRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/billing?tab=doc#BudgetAllUpdatesRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.Inputs.BudgetAllUpdatesRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.Outputs.BudgetAllUpdatesRule.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1907,60 +1823,55 @@ Structure is documented below.
             title="Optional">
         <span id="disabledefaultiamrecipients_csharp">
 <a href="#disabledefaultiamrecipients_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Default<wbr>Iam<wbr>Recipients</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. When set to true, disables default notifications sent
 when a threshold is exceeded. Default recipients are
 those with Billing Account Administrators and Billing
 Account Users IAM roles for the target account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="monitoringnotificationchannels_csharp">
 <a href="#monitoringnotificationchannels_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Notification<wbr>Channels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The full resource name of a monitoring notification
 channel in the form
 projects/{project_id}/notificationChannels/{channel_id}.
 A maximum of 5 channels are allowed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pubsubtopic_csharp">
 <a href="#pubsubtopic_csharp" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Pub/Sub topic where budget related
 messages will be published, in the form
 projects/{project_id}/topics/{topic_id}. Updates are sent
 at regular intervals to the topic.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schemaversion_csharp">
 <a href="#schemaversion_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The schema version of the notification. Only "1.0" is
 accepted. It represents the JSON schema as defined in
 https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1969,60 +1880,55 @@ https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
             title="Optional">
         <span id="disabledefaultiamrecipients_go">
 <a href="#disabledefaultiamrecipients_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Default<wbr>Iam<wbr>Recipients</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. When set to true, disables default notifications sent
 when a threshold is exceeded. Default recipients are
 those with Billing Account Administrators and Billing
 Account Users IAM roles for the target account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="monitoringnotificationchannels_go">
 <a href="#monitoringnotificationchannels_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Notification<wbr>Channels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The full resource name of a monitoring notification
 channel in the form
 projects/{project_id}/notificationChannels/{channel_id}.
 A maximum of 5 channels are allowed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pubsubtopic_go">
 <a href="#pubsubtopic_go" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Pub/Sub topic where budget related
 messages will be published, in the form
 projects/{project_id}/topics/{topic_id}. Updates are sent
 at regular intervals to the topic.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schemaversion_go">
 <a href="#schemaversion_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The schema version of the notification. Only "1.0" is
 accepted. It represents the JSON schema as defined in
 https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2031,60 +1937,55 @@ https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
             title="Optional">
         <span id="disabledefaultiamrecipients_nodejs">
 <a href="#disabledefaultiamrecipients_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Default<wbr>Iam<wbr>Recipients</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean. When set to true, disables default notifications sent
 when a threshold is exceeded. Default recipients are
 those with Billing Account Administrators and Billing
 Account Users IAM roles for the target account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="monitoringnotificationchannels_nodejs">
 <a href="#monitoringnotificationchannels_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Notification<wbr>Channels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The full resource name of a monitoring notification
 channel in the form
 projects/{project_id}/notificationChannels/{channel_id}.
 A maximum of 5 channels are allowed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pubsubtopic_nodejs">
 <a href="#pubsubtopic_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Pub/Sub topic where budget related
 messages will be published, in the form
 projects/{project_id}/topics/{topic_id}. Updates are sent
 at regular intervals to the topic.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schemaversion_nodejs">
 <a href="#schemaversion_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The schema version of the notification. Only "1.0" is
 accepted. It represents the JSON schema as defined in
 https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2093,63 +1994,55 @@ https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
             title="Optional">
         <span id="disable_default_iam_recipients_python">
 <a href="#disable_default_iam_recipients_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>default_<wbr>iam_<wbr>recipients</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. When set to true, disables default notifications sent
 when a threshold is exceeded. Default recipients are
 those with Billing Account Administrators and Billing
 Account Users IAM roles for the target account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="monitoring_notification_channels_python">
 <a href="#monitoring_notification_channels_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>notification_<wbr>channels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The full resource name of a monitoring notification
 channel in the form
 projects/{project_id}/notificationChannels/{channel_id}.
 A maximum of 5 channels are allowed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pubsub_topic_python">
 <a href="#pubsub_topic_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Pub/Sub topic where budget related
 messages will be published, in the form
 projects/{project_id}/topics/{topic_id}. Updates are sent
 at regular intervals to the topic.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schema_version_python">
 <a href="#schema_version_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The schema version of the notification. Only "1.0" is
 accepted. It represents the JSON schema as defined in
 https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="budgetamount">Budget<wbr>Amount</h4>
 {{% choosable language nodejs %}}
@@ -2159,11 +2052,10 @@ https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/billing?tab=doc#BudgetAmountArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/billing?tab=doc#BudgetAmountOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.Inputs.BudgetAmountArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.Outputs.BudgetAmount.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2173,21 +2065,20 @@ https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
             title="Optional">
         <span id="lastperiodamount_csharp">
 <a href="#lastperiodamount_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Period<wbr>Amount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configures a budget amount that is automatically set to 100% of
 last period's spend.
 Boolean. Set value to true to use. Do not set to false, instead
 use the `specified_amount` block.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="specifiedamount_csharp">
 <a href="#specifiedamount_csharp" style="color: inherit; text-decoration: inherit;">Specified<wbr>Amount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetamountspecifiedamount">Budget<wbr>Amount<wbr>Specified<wbr>Amount<wbr>Args</a></span>
     </dt>
@@ -2196,10 +2087,8 @@ optional. If specified, it must match the currency of the
 billing account. The currencyCode is provided on output.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2208,21 +2097,20 @@ Structure is documented below.
             title="Optional">
         <span id="lastperiodamount_go">
 <a href="#lastperiodamount_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Period<wbr>Amount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configures a budget amount that is automatically set to 100% of
 last period's spend.
 Boolean. Set value to true to use. Do not set to false, instead
 use the `specified_amount` block.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="specifiedamount_go">
 <a href="#specifiedamount_go" style="color: inherit; text-decoration: inherit;">Specified<wbr>Amount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetamountspecifiedamount">Budget<wbr>Amount<wbr>Specified<wbr>Amount</a></span>
     </dt>
@@ -2231,10 +2119,8 @@ optional. If specified, it must match the currency of the
 billing account. The currencyCode is provided on output.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2243,21 +2129,20 @@ Structure is documented below.
             title="Optional">
         <span id="lastperiodamount_nodejs">
 <a href="#lastperiodamount_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Period<wbr>Amount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Configures a budget amount that is automatically set to 100% of
 last period's spend.
 Boolean. Set value to true to use. Do not set to false, instead
 use the `specified_amount` block.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="specifiedamount_nodejs">
 <a href="#specifiedamount_nodejs" style="color: inherit; text-decoration: inherit;">specified<wbr>Amount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetamountspecifiedamount">Budget<wbr>Amount<wbr>Specified<wbr>Amount</a></span>
     </dt>
@@ -2266,10 +2151,8 @@ optional. If specified, it must match the currency of the
 billing account. The currencyCode is provided on output.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2278,21 +2161,20 @@ Structure is documented below.
             title="Optional">
         <span id="last_period_amount_python">
 <a href="#last_period_amount_python" style="color: inherit; text-decoration: inherit;">last_<wbr>period_<wbr>amount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configures a budget amount that is automatically set to 100% of
 last period's spend.
 Boolean. Set value to true to use. Do not set to false, instead
 use the `specified_amount` block.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="specified_amount_python">
 <a href="#specified_amount_python" style="color: inherit; text-decoration: inherit;">specified_<wbr>amount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetamountspecifiedamount">Budget<wbr>Amount<wbr>Specified<wbr>Amount<wbr>Args</a></span>
     </dt>
@@ -2301,13 +2183,8 @@ optional. If specified, it must match the currency of the
 billing account. The currencyCode is provided on output.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="budgetamountspecifiedamount">Budget<wbr>Amount<wbr>Specified<wbr>Amount</h4>
 {{% choosable language nodejs %}}
@@ -2317,11 +2194,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/billing?tab=doc#BudgetAmountSpecifiedAmountArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/billing?tab=doc#BudgetAmountSpecifiedAmountOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.Inputs.BudgetAmountSpecifiedAmountArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.Outputs.BudgetAmountSpecifiedAmount.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2331,20 +2207,19 @@ Structure is documented below.
             title="Optional">
         <span id="currencycode_csharp">
 <a href="#currencycode_csharp" style="color: inherit; text-decoration: inherit;">Currency<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The 3-letter currency code defined in ISO 4217.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nanos_csharp">
 <a href="#nanos_csharp" style="color: inherit; text-decoration: inherit;">Nanos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of nano (10^-9) units of the amount.
 The value must be between -999,999,999 and +999,999,999
@@ -2354,22 +2229,19 @@ negative. If units is negative, nanos must be negative or
 zero. For example $-1.75 is represented as units=-1 and
 nanos=-750,000,000.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="units_csharp">
 <a href="#units_csharp" style="color: inherit; text-decoration: inherit;">Units</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The whole units of the amount. For example if currencyCode
 is "USD", then 1 unit is one US dollar.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2378,20 +2250,19 @@ is "USD", then 1 unit is one US dollar.
             title="Optional">
         <span id="currencycode_go">
 <a href="#currencycode_go" style="color: inherit; text-decoration: inherit;">Currency<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The 3-letter currency code defined in ISO 4217.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nanos_go">
 <a href="#nanos_go" style="color: inherit; text-decoration: inherit;">Nanos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of nano (10^-9) units of the amount.
 The value must be between -999,999,999 and +999,999,999
@@ -2401,22 +2272,19 @@ negative. If units is negative, nanos must be negative or
 zero. For example $-1.75 is represented as units=-1 and
 nanos=-750,000,000.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="units_go">
 <a href="#units_go" style="color: inherit; text-decoration: inherit;">Units</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The whole units of the amount. For example if currencyCode
 is "USD", then 1 unit is one US dollar.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2425,20 +2293,19 @@ is "USD", then 1 unit is one US dollar.
             title="Optional">
         <span id="currencycode_nodejs">
 <a href="#currencycode_nodejs" style="color: inherit; text-decoration: inherit;">currency<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The 3-letter currency code defined in ISO 4217.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nanos_nodejs">
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of nano (10^-9) units of the amount.
 The value must be between -999,999,999 and +999,999,999
@@ -2448,22 +2315,19 @@ negative. If units is negative, nanos must be negative or
 zero. For example $-1.75 is represented as units=-1 and
 nanos=-750,000,000.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="units_nodejs">
 <a href="#units_nodejs" style="color: inherit; text-decoration: inherit;">units</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The whole units of the amount. For example if currencyCode
 is "USD", then 1 unit is one US dollar.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2472,20 +2336,19 @@ is "USD", then 1 unit is one US dollar.
             title="Optional">
         <span id="currency_code_python">
 <a href="#currency_code_python" style="color: inherit; text-decoration: inherit;">currency_<wbr>code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The 3-letter currency code defined in ISO 4217.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nanos_python">
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of nano (10^-9) units of the amount.
 The value must be between -999,999,999 and +999,999,999
@@ -2495,25 +2358,19 @@ negative. If units is negative, nanos must be negative or
 zero. For example $-1.75 is represented as units=-1 and
 nanos=-750,000,000.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="units_python">
 <a href="#units_python" style="color: inherit; text-decoration: inherit;">units</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The whole units of the amount. For example if currencyCode
 is "USD", then 1 unit is one US dollar.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="budgetbudgetfilter">Budget<wbr>Budget<wbr>Filter</h4>
 {{% choosable language nodejs %}}
@@ -2523,11 +2380,10 @@ is "USD", then 1 unit is one US dollar.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/billing?tab=doc#BudgetBudgetFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/billing?tab=doc#BudgetBudgetFilterOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.Inputs.BudgetBudgetFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.Outputs.BudgetBudgetFilter.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2537,23 +2393,22 @@ is "USD", then 1 unit is one US dollar.
             title="Optional">
         <span id="credittypestreatment_csharp">
 <a href="#credittypestreatment_csharp" style="color: inherit; text-decoration: inherit;">Credit<wbr>Types<wbr>Treatment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how credits should be treated when determining spend
 for threshold calculations.
 Default value is `INCLUDE_ALL_CREDITS`.
 Possible values are `INCLUDE_ALL_CREDITS` and `EXCLUDE_ALL_CREDITS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="projects_csharp">
 <a href="#projects_csharp" style="color: inherit; text-decoration: inherit;">Projects</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of projects of the form projects/{project_id},
 specifying that usage from only this set of projects should be
@@ -2562,14 +2417,13 @@ all usage for the billing account, regardless of which project
 the usage occurred on. Only zero or one project can be
 specified currently.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="services_csharp">
 <a href="#services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of services of the form services/{service_id},
 specifying that usage from only this set of services should be
@@ -2578,10 +2432,8 @@ usage for all the services. The service names are available
 through the Catalog API:
 https://cloud.google.com/billing/v1/how-tos/catalog-api.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2590,23 +2442,22 @@ https://cloud.google.com/billing/v1/how-tos/catalog-api.
             title="Optional">
         <span id="credittypestreatment_go">
 <a href="#credittypestreatment_go" style="color: inherit; text-decoration: inherit;">Credit<wbr>Types<wbr>Treatment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how credits should be treated when determining spend
 for threshold calculations.
 Default value is `INCLUDE_ALL_CREDITS`.
 Possible values are `INCLUDE_ALL_CREDITS` and `EXCLUDE_ALL_CREDITS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="projects_go">
 <a href="#projects_go" style="color: inherit; text-decoration: inherit;">Projects</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A set of projects of the form projects/{project_id},
 specifying that usage from only this set of projects should be
@@ -2615,14 +2466,13 @@ all usage for the billing account, regardless of which project
 the usage occurred on. Only zero or one project can be
 specified currently.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="services_go">
 <a href="#services_go" style="color: inherit; text-decoration: inherit;">Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A set of services of the form services/{service_id},
 specifying that usage from only this set of services should be
@@ -2631,10 +2481,8 @@ usage for all the services. The service names are available
 through the Catalog API:
 https://cloud.google.com/billing/v1/how-tos/catalog-api.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2643,23 +2491,22 @@ https://cloud.google.com/billing/v1/how-tos/catalog-api.
             title="Optional">
         <span id="credittypestreatment_nodejs">
 <a href="#credittypestreatment_nodejs" style="color: inherit; text-decoration: inherit;">credit<wbr>Types<wbr>Treatment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how credits should be treated when determining spend
 for threshold calculations.
 Default value is `INCLUDE_ALL_CREDITS`.
 Possible values are `INCLUDE_ALL_CREDITS` and `EXCLUDE_ALL_CREDITS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="projects_nodejs">
 <a href="#projects_nodejs" style="color: inherit; text-decoration: inherit;">projects</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of projects of the form projects/{project_id},
 specifying that usage from only this set of projects should be
@@ -2668,14 +2515,13 @@ all usage for the billing account, regardless of which project
 the usage occurred on. Only zero or one project can be
 specified currently.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="services_nodejs">
 <a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of services of the form services/{service_id},
 specifying that usage from only this set of services should be
@@ -2684,10 +2530,8 @@ usage for all the services. The service names are available
 through the Catalog API:
 https://cloud.google.com/billing/v1/how-tos/catalog-api.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2696,23 +2540,22 @@ https://cloud.google.com/billing/v1/how-tos/catalog-api.
             title="Optional">
         <span id="credit_types_treatment_python">
 <a href="#credit_types_treatment_python" style="color: inherit; text-decoration: inherit;">credit_<wbr>types_<wbr>treatment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how credits should be treated when determining spend
 for threshold calculations.
 Default value is `INCLUDE_ALL_CREDITS`.
 Possible values are `INCLUDE_ALL_CREDITS` and `EXCLUDE_ALL_CREDITS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="projects_python">
 <a href="#projects_python" style="color: inherit; text-decoration: inherit;">projects</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of projects of the form projects/{project_id},
 specifying that usage from only this set of projects should be
@@ -2721,14 +2564,13 @@ all usage for the billing account, regardless of which project
 the usage occurred on. Only zero or one project can be
 specified currently.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="services_python">
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of services of the form services/{service_id},
 specifying that usage from only this set of services should be
@@ -2737,13 +2579,8 @@ usage for all the services. The service names are available
 through the Catalog API:
 https://cloud.google.com/billing/v1/how-tos/catalog-api.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="budgetthresholdrule">Budget<wbr>Threshold<wbr>Rule</h4>
 {{% choosable language nodejs %}}
@@ -2753,11 +2590,10 @@ https://cloud.google.com/billing/v1/how-tos/catalog-api.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/billing?tab=doc#BudgetThresholdRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/billing?tab=doc#BudgetThresholdRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.Inputs.BudgetThresholdRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.Outputs.BudgetThresholdRule.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2767,31 +2603,28 @@ https://cloud.google.com/billing/v1/how-tos/catalog-api.
             title="Required">
         <span id="thresholdpercent_csharp">
 <a href="#thresholdpercent_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Send an alert when this threshold is exceeded. This is a
 1.0-based percentage, so 0.5 = 50%. Must be >= 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="spendbasis_csharp">
 <a href="#spendbasis_csharp" style="color: inherit; text-decoration: inherit;">Spend<wbr>Basis</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of basis used to determine if spend has passed
 the threshold.
 Default value is `CURRENT_SPEND`.
 Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2800,31 +2633,28 @@ Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
             title="Required">
         <span id="thresholdpercent_go">
 <a href="#thresholdpercent_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Send an alert when this threshold is exceeded. This is a
 1.0-based percentage, so 0.5 = 50%. Must be >= 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="spendbasis_go">
 <a href="#spendbasis_go" style="color: inherit; text-decoration: inherit;">Spend<wbr>Basis</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of basis used to determine if spend has passed
 the threshold.
 Default value is `CURRENT_SPEND`.
 Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2833,31 +2663,28 @@ Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
             title="Required">
         <span id="thresholdpercent_nodejs">
 <a href="#thresholdpercent_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Send an alert when this threshold is exceeded. This is a
 1.0-based percentage, so 0.5 = 50%. Must be >= 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="spendbasis_nodejs">
 <a href="#spendbasis_nodejs" style="color: inherit; text-decoration: inherit;">spend<wbr>Basis</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of basis used to determine if spend has passed
 the threshold.
 Default value is `CURRENT_SPEND`.
 Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2866,39 +2693,28 @@ Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
             title="Required">
         <span id="threshold_percent_python">
 <a href="#threshold_percent_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Send an alert when this threshold is exceeded. This is a
 1.0-based percentage, so 0.5 = 50%. Must be >= 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="spend_basis_python">
 <a href="#spend_basis_python" style="color: inherit; text-decoration: inherit;">spend_<wbr>basis</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of basis used to determine if spend has passed
 the threshold.
 Default value is `CURRENT_SPEND`.
 Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 ## Import
 
 

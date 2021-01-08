@@ -286,7 +286,8 @@ Defined below.</p></li>
 <li><p><strong>logging_sftps</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceComputeLoggingSftpArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – An SFTP endpoint to send streaming logs to.
 Defined below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique name of the Rackspace Cloud Files logging endpoint.</p></li>
-<li><p><strong>package</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceComputePackageArgs'</em><em>]</em><em>]</em>) – A Wasm deployment package to upload. Defined below.</p></li>
+<li><p><strong>package</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceComputePackageArgs'</em><em>]</em><em>]</em>) – A Wasm deployment package to upload.
+Defined below.</p></li>
 <li><p><strong>papertrails</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceComputePapertrailArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A Papertrail endpoint to send streaming logs too.
 Defined below.</p></li>
 <li><p><strong>s3loggings</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceComputeS3loggingArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of S3 Buckets to send streaming logs too.
@@ -363,7 +364,8 @@ Defined below.</p></li>
 <li><p><strong>logging_sftps</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceComputeLoggingSftpArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – An SFTP endpoint to send streaming logs to.
 Defined below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique name of the Rackspace Cloud Files logging endpoint.</p></li>
-<li><p><strong>package</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceComputePackageArgs'</em><em>]</em><em>]</em>) – A Wasm deployment package to upload. Defined below.</p></li>
+<li><p><strong>package</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceComputePackageArgs'</em><em>]</em><em>]</em>) – A Wasm deployment package to upload.
+Defined below.</p></li>
 <li><p><strong>papertrails</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceComputePapertrailArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A Papertrail endpoint to send streaming logs too.
 Defined below.</p></li>
 <li><p><strong>s3loggings</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceComputeS3loggingArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of S3 Buckets to send streaming logs too.
@@ -574,7 +576,8 @@ Defined below.</p>
 <dl class="py method">
 <dt id="pulumi_fastly.ServiceCompute.package">
 <em class="property">property </em><code class="sig-name descname">package</code><a class="headerlink" href="#pulumi_fastly.ServiceCompute.package" title="Permalink to this definition">¶</a></dt>
-<dd><p>A Wasm deployment package to upload. Defined below.</p>
+<dd><p>A Wasm deployment package to upload.
+Defined below.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -885,8 +888,8 @@ If Terraform is already managing a remote WAF configurations against a resource 
 <li><p><strong>restricted_extensions</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A space-separated list of allowed file extensions.</p></li>
 <li><p><strong>restricted_headers</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A space-separated list of allowed header names.</p></li>
 <li><p><strong>rfi_score_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Remote file inclusion attack threshold.</p></li>
-<li><p><strong>rule_exclusions</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceWafConfigurationRuleExclusionArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – The Web Application Firewall’s rule exclusions.</p></li>
-<li><p><strong>rules</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceWafConfigurationRuleArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – The Web Application Firewall’s active rules.</p></li>
+<li><p><strong>rule_exclusions</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceWafConfigurationRuleExclusionArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – The Web Application Firewall’s rule exclusions. Defined below</p></li>
+<li><p><strong>rules</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceWafConfigurationRuleArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – The Web Application Firewall’s active rules. Defined below</p></li>
 <li><p><strong>session_fixation_score_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Session fixation attack threshold.</p></li>
 <li><p><strong>sql_injection_score_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – SQL injection attack threshold.</p></li>
 <li><p><strong>total_arg_length</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum size of argument names and values.</p></li>
@@ -930,8 +933,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>restricted_extensions</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A space-separated list of allowed file extensions.</p></li>
 <li><p><strong>restricted_headers</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A space-separated list of allowed header names.</p></li>
 <li><p><strong>rfi_score_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Remote file inclusion attack threshold.</p></li>
-<li><p><strong>rule_exclusions</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceWafConfigurationRuleExclusionArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – The Web Application Firewall’s rule exclusions.</p></li>
-<li><p><strong>rules</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceWafConfigurationRuleArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – The Web Application Firewall’s active rules.</p></li>
+<li><p><strong>rule_exclusions</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceWafConfigurationRuleExclusionArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – The Web Application Firewall’s rule exclusions. Defined below</p></li>
+<li><p><strong>rules</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceWafConfigurationRuleArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – The Web Application Firewall’s active rules. Defined below</p></li>
 <li><p><strong>session_fixation_score_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Session fixation attack threshold.</p></li>
 <li><p><strong>sql_injection_score_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – SQL injection attack threshold.</p></li>
 <li><p><strong>total_arg_length</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum size of argument names and values.</p></li>
@@ -1084,13 +1087,13 @@ properties used to qualify the lookup.</p>
 <dl class="py method">
 <dt id="pulumi_fastly.ServiceWafConfiguration.rule_exclusions">
 <em class="property">property </em><code class="sig-name descname">rule_exclusions</code><a class="headerlink" href="#pulumi_fastly.ServiceWafConfiguration.rule_exclusions" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Web Application Firewall’s rule exclusions.</p>
+<dd><p>The Web Application Firewall’s rule exclusions. Defined below</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_fastly.ServiceWafConfiguration.rules">
 <em class="property">property </em><code class="sig-name descname">rules</code><a class="headerlink" href="#pulumi_fastly.ServiceWafConfiguration.rules" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Web Application Firewall’s active rules.</p>
+<dd><p>The Web Application Firewall’s active rules. Defined below</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1179,7 +1182,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>acls</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1AclArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of ACL configuration blocks.  Defined below.</p></li>
+<li><p><strong>acls</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1AclArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of ACL configuration blocks.
+Defined below.</p></li>
 <li><p><strong>activate</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Conditionally prevents the Service from being activated. The apply step will continue to create a new draft version but will not activate it if this is set to false. Default true.</p></li>
 <li><p><strong>backends</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1BackendArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of Backends to service requests from your Domains.
 Defined below. Backends must be defined in this argument, or defined in the
@@ -1188,26 +1192,30 @@ Defined below. Backends must be defined in this argument, or defined in the
 Defined below.</p></li>
 <li><p><strong>blobstorageloggings</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1BlobstorageloggingArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.</p></li>
-<li><p><strong>cache_settings</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1CacheSettingArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of Cache Settings, allowing you to override</p></li>
+<li><p><strong>cache_settings</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1CacheSettingArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of Cache Settings, allowing you to override.
+Defined below.</p></li>
 <li><p><strong>comment</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional comment about the Director.</p></li>
 <li><p><strong>conditions</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1ConditionArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of conditions to add logic to any basic
 configuration object in this service. Defined below.</p></li>
 <li><p><strong>default_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Sets the host header.</p></li>
 <li><p><strong>default_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The default Time-to-live (TTL) for
 requests.</p></li>
-<li><p><strong>dictionaries</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1DictionaryArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of dictionaries that allow the storing of key values pair for use within VCL functions. Defined below.</p></li>
+<li><p><strong>dictionaries</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1DictionaryArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of dictionaries that allow the storing of key values pair for use within VCL functions.
+Defined below.</p></li>
 <li><p><strong>directors</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1DirectorArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A director to allow more control over balancing traffic over backends.
-when an item is not to be cached based on an above <code class="docutils literal notranslate"><span class="pre">condition</span></code>. Defined below</p></li>
+when an item is not to be cached based on an above <code class="docutils literal notranslate"><span class="pre">condition</span></code>.
+Defined below</p></li>
 <li><p><strong>domains</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1DomainArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – The domain of the DigitalOcean Spaces endpoint (default “nyc3.digitaloceanspaces.com”).</p></li>
-<li><p><strong>dynamicsnippets</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1DynamicsnippetArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of custom, “dynamic” VCL Snippet configuration blocks.  Defined below.</p></li>
+<li><p><strong>dynamicsnippets</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1DynamicsnippetArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of custom, “dynamic” VCL Snippet configuration blocks.
+Defined below.</p></li>
 <li><p><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Services that are active cannot be destroyed. In
 order to destroy the Service, set <code class="docutils literal notranslate"><span class="pre">force_destroy</span></code> to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>gcsloggings</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1GcsloggingArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A gcs endpoint to send streaming logs too.
 Defined below.</p></li>
 <li><p><strong>gzips</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1GzipArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of gzip rules to control automatic gzipping of
 content. Defined below.</p></li>
-<li><p><strong>headers</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1HeaderArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of Headers to manipulate for each request. Defined
-below.</p></li>
+<li><p><strong>headers</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1HeaderArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of Headers to manipulate for each request.
+Defined below.</p></li>
 <li><p><strong>healthchecks</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1HealthcheckArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Name of a defined <code class="docutils literal notranslate"><span class="pre">healthcheck</span></code> to assign to this backend.</p></li>
 <li><p><strong>httpsloggings</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1HttpsloggingArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – An HTTPS endpoint to send streaming logs to.
 Defined below.</p></li>
@@ -1246,20 +1254,24 @@ Defined below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name to identify this dictionary.</p></li>
 <li><p><strong>papertrails</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1PapertrailArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A Papertrail endpoint to send streaming logs too.
 Defined below.</p></li>
-<li><p><strong>request_settings</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1RequestSettingArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of Request modifiers. Defined below</p></li>
+<li><p><strong>request_settings</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1RequestSettingArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of Request modifiers.
+Defined below</p></li>
 <li><p><strong>response_objects</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1ResponseObjectArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – The name of the response object used by the Web Application Firewall.</p></li>
 <li><p><strong>s3loggings</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1S3loggingArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of S3 Buckets to send streaming logs too.
 Defined below.</p></li>
-<li><p><strong>snippets</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1SnippetArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of custom, “regular” (non-dynamic) VCL Snippet configuration blocks.  Defined below.</p></li>
+<li><p><strong>snippets</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1SnippetArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of custom, “regular” (non-dynamic) VCL Snippet configuration blocks.
+Defined below.</p></li>
 <li><p><strong>splunks</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1SplunkArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A Splunk endpoint to send streaming logs too.
 Defined below.</p></li>
 <li><p><strong>sumologics</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1SumologicArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A Sumologic endpoint to send streaming logs too.
 Defined below.</p></li>
 <li><p><strong>syslogs</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1SyslogArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A syslog endpoint to send streaming logs too.
 Defined below.</p></li>
-<li><p><strong>vcls</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1VclArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of custom VCL configuration blocks. See the <a class="reference external" href="https://docs.fastly.com/vcl/custom-vcl/uploading-custom-vcl/">Fastly documentation</a> for more information on using custom VCL.</p></li>
+<li><p><strong>vcls</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1VclArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of custom VCL configuration blocks.
+Defined below. See the <a class="reference external" href="https://docs.fastly.com/vcl/custom-vcl/uploading-custom-vcl/">Fastly documentation</a> for more information on using custom VCL.</p></li>
 <li><p><strong>version_comment</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description field for the version.</p></li>
-<li><p><strong>waf</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1WafArgs'</em><em>]</em><em>]</em>) – A WAF configuration block.  Defined below.</p></li>
+<li><p><strong>waf</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1WafArgs'</em><em>]</em><em>]</em>) – A WAF configuration block.
+Defined below.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1274,7 +1286,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>acls</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1AclArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of ACL configuration blocks.  Defined below.</p></li>
+<li><p><strong>acls</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1AclArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of ACL configuration blocks.
+Defined below.</p></li>
 <li><p><strong>activate</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Conditionally prevents the Service from being activated. The apply step will continue to create a new draft version but will not activate it if this is set to false. Default true.</p></li>
 <li><p><strong>active_version</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The currently active version of your Fastly Service.</p></li>
 <li><p><strong>backends</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1BackendArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of Backends to service requests from your Domains.
@@ -1284,7 +1297,8 @@ Defined below. Backends must be defined in this argument, or defined in the
 Defined below.</p></li>
 <li><p><strong>blobstorageloggings</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1BlobstorageloggingArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.</p></li>
-<li><p><strong>cache_settings</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1CacheSettingArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of Cache Settings, allowing you to override</p></li>
+<li><p><strong>cache_settings</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1CacheSettingArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of Cache Settings, allowing you to override.
+Defined below.</p></li>
 <li><p><strong>cloned_version</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The latest cloned version by the provider. The value gets only set after running <code class="docutils literal notranslate"><span class="pre">pulumi</span> <span class="pre">up</span></code>.</p></li>
 <li><p><strong>comment</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional comment about the Director.</p></li>
 <li><p><strong>conditions</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1ConditionArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of conditions to add logic to any basic
@@ -1292,19 +1306,22 @@ configuration object in this service. Defined below.</p></li>
 <li><p><strong>default_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Sets the host header.</p></li>
 <li><p><strong>default_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The default Time-to-live (TTL) for
 requests.</p></li>
-<li><p><strong>dictionaries</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1DictionaryArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of dictionaries that allow the storing of key values pair for use within VCL functions. Defined below.</p></li>
+<li><p><strong>dictionaries</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1DictionaryArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of dictionaries that allow the storing of key values pair for use within VCL functions.
+Defined below.</p></li>
 <li><p><strong>directors</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1DirectorArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A director to allow more control over balancing traffic over backends.
-when an item is not to be cached based on an above <code class="docutils literal notranslate"><span class="pre">condition</span></code>. Defined below</p></li>
+when an item is not to be cached based on an above <code class="docutils literal notranslate"><span class="pre">condition</span></code>.
+Defined below</p></li>
 <li><p><strong>domains</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1DomainArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – The domain of the DigitalOcean Spaces endpoint (default “nyc3.digitaloceanspaces.com”).</p></li>
-<li><p><strong>dynamicsnippets</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1DynamicsnippetArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of custom, “dynamic” VCL Snippet configuration blocks.  Defined below.</p></li>
+<li><p><strong>dynamicsnippets</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1DynamicsnippetArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of custom, “dynamic” VCL Snippet configuration blocks.
+Defined below.</p></li>
 <li><p><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Services that are active cannot be destroyed. In
 order to destroy the Service, set <code class="docutils literal notranslate"><span class="pre">force_destroy</span></code> to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>gcsloggings</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1GcsloggingArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A gcs endpoint to send streaming logs too.
 Defined below.</p></li>
 <li><p><strong>gzips</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1GzipArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of gzip rules to control automatic gzipping of
 content. Defined below.</p></li>
-<li><p><strong>headers</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1HeaderArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of Headers to manipulate for each request. Defined
-below.</p></li>
+<li><p><strong>headers</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1HeaderArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of Headers to manipulate for each request.
+Defined below.</p></li>
 <li><p><strong>healthchecks</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1HealthcheckArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Name of a defined <code class="docutils literal notranslate"><span class="pre">healthcheck</span></code> to assign to this backend.</p></li>
 <li><p><strong>httpsloggings</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1HttpsloggingArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – An HTTPS endpoint to send streaming logs to.
 Defined below.</p></li>
@@ -1343,21 +1360,25 @@ Defined below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name to identify this dictionary.</p></li>
 <li><p><strong>papertrails</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1PapertrailArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A Papertrail endpoint to send streaming logs too.
 Defined below.</p></li>
-<li><p><strong>request_settings</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1RequestSettingArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of Request modifiers. Defined below</p></li>
+<li><p><strong>request_settings</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1RequestSettingArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of Request modifiers.
+Defined below</p></li>
 <li><p><strong>response_objects</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1ResponseObjectArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – The name of the response object used by the Web Application Firewall.</p></li>
 <li><p><strong>s3loggings</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1S3loggingArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of S3 Buckets to send streaming logs too.
 Defined below.</p></li>
-<li><p><strong>snippets</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1SnippetArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of custom, “regular” (non-dynamic) VCL Snippet configuration blocks.  Defined below.</p></li>
+<li><p><strong>snippets</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1SnippetArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A set of custom, “regular” (non-dynamic) VCL Snippet configuration blocks.
+Defined below.</p></li>
 <li><p><strong>splunks</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1SplunkArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A Splunk endpoint to send streaming logs too.
 Defined below.</p></li>
 <li><p><strong>sumologics</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1SumologicArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A Sumologic endpoint to send streaming logs too.
 Defined below.</p></li>
 <li><p><strong>syslogs</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1SyslogArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A syslog endpoint to send streaming logs too.
 Defined below.</p></li>
-<li><p><strong>vcls</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1VclArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – <p>A set of custom VCL configuration blocks. See the <a class="reference external" href="https://docs.fastly.com/vcl/custom-vcl/uploading-custom-vcl/">Fastly documentation</a> for more information on using custom VCL.</p>
+<li><p><strong>vcls</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1VclArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – <p>A set of custom VCL configuration blocks.
+Defined below. See the <a class="reference external" href="https://docs.fastly.com/vcl/custom-vcl/uploading-custom-vcl/">Fastly documentation</a> for more information on using custom VCL.</p>
 </p></li>
 <li><p><strong>version_comment</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description field for the version.</p></li>
-<li><p><strong>waf</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1WafArgs'</em><em>]</em><em>]</em>) – A WAF configuration block.  Defined below.</p></li>
+<li><p><strong>waf</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'Servicev1WafArgs'</em><em>]</em><em>]</em>) – A WAF configuration block.
+Defined below.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1366,7 +1387,8 @@ Defined below.</p></li>
 <dl class="py method">
 <dt id="pulumi_fastly.Servicev1.acls">
 <em class="property">property </em><code class="sig-name descname">acls</code><a class="headerlink" href="#pulumi_fastly.Servicev1.acls" title="Permalink to this definition">¶</a></dt>
-<dd><p>A set of ACL configuration blocks.  Defined below.</p>
+<dd><p>A set of ACL configuration blocks.
+Defined below.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1406,7 +1428,8 @@ Defined below.</p>
 <dl class="py method">
 <dt id="pulumi_fastly.Servicev1.cache_settings">
 <em class="property">property </em><code class="sig-name descname">cache_settings</code><a class="headerlink" href="#pulumi_fastly.Servicev1.cache_settings" title="Permalink to this definition">¶</a></dt>
-<dd><p>A set of Cache Settings, allowing you to override</p>
+<dd><p>A set of Cache Settings, allowing you to override.
+Defined below.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1444,14 +1467,16 @@ requests.</p>
 <dl class="py method">
 <dt id="pulumi_fastly.Servicev1.dictionaries">
 <em class="property">property </em><code class="sig-name descname">dictionaries</code><a class="headerlink" href="#pulumi_fastly.Servicev1.dictionaries" title="Permalink to this definition">¶</a></dt>
-<dd><p>A set of dictionaries that allow the storing of key values pair for use within VCL functions. Defined below.</p>
+<dd><p>A set of dictionaries that allow the storing of key values pair for use within VCL functions.
+Defined below.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_fastly.Servicev1.directors">
 <em class="property">property </em><code class="sig-name descname">directors</code><a class="headerlink" href="#pulumi_fastly.Servicev1.directors" title="Permalink to this definition">¶</a></dt>
 <dd><p>A director to allow more control over balancing traffic over backends.
-when an item is not to be cached based on an above <code class="docutils literal notranslate"><span class="pre">condition</span></code>. Defined below</p>
+when an item is not to be cached based on an above <code class="docutils literal notranslate"><span class="pre">condition</span></code>.
+Defined below</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1463,7 +1488,8 @@ when an item is not to be cached based on an above <code class="docutils literal
 <dl class="py method">
 <dt id="pulumi_fastly.Servicev1.dynamicsnippets">
 <em class="property">property </em><code class="sig-name descname">dynamicsnippets</code><a class="headerlink" href="#pulumi_fastly.Servicev1.dynamicsnippets" title="Permalink to this definition">¶</a></dt>
-<dd><p>A set of custom, “dynamic” VCL Snippet configuration blocks.  Defined below.</p>
+<dd><p>A set of custom, “dynamic” VCL Snippet configuration blocks.
+Defined below.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1490,8 +1516,8 @@ content. Defined below.</p>
 <dl class="py method">
 <dt id="pulumi_fastly.Servicev1.headers">
 <em class="property">property </em><code class="sig-name descname">headers</code><a class="headerlink" href="#pulumi_fastly.Servicev1.headers" title="Permalink to this definition">¶</a></dt>
-<dd><p>A set of Headers to manipulate for each request. Defined
-below.</p>
+<dd><p>A set of Headers to manipulate for each request.
+Defined below.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1635,7 +1661,8 @@ Defined below.</p>
 <dl class="py method">
 <dt id="pulumi_fastly.Servicev1.request_settings">
 <em class="property">property </em><code class="sig-name descname">request_settings</code><a class="headerlink" href="#pulumi_fastly.Servicev1.request_settings" title="Permalink to this definition">¶</a></dt>
-<dd><p>A set of Request modifiers. Defined below</p>
+<dd><p>A set of Request modifiers.
+Defined below</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1654,7 +1681,8 @@ Defined below.</p>
 <dl class="py method">
 <dt id="pulumi_fastly.Servicev1.snippets">
 <em class="property">property </em><code class="sig-name descname">snippets</code><a class="headerlink" href="#pulumi_fastly.Servicev1.snippets" title="Permalink to this definition">¶</a></dt>
-<dd><p>A set of custom, “regular” (non-dynamic) VCL Snippet configuration blocks.  Defined below.</p>
+<dd><p>A set of custom, “regular” (non-dynamic) VCL Snippet configuration blocks.
+Defined below.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1681,7 +1709,8 @@ Defined below.</p>
 <dl class="py method">
 <dt id="pulumi_fastly.Servicev1.vcls">
 <em class="property">property </em><code class="sig-name descname">vcls</code><a class="headerlink" href="#pulumi_fastly.Servicev1.vcls" title="Permalink to this definition">¶</a></dt>
-<dd><p>A set of custom VCL configuration blocks. See the <a class="reference external" href="https://docs.fastly.com/vcl/custom-vcl/uploading-custom-vcl/">Fastly documentation</a> for more information on using custom VCL.</p>
+<dd><p>A set of custom VCL configuration blocks.
+Defined below. See the <a class="reference external" href="https://docs.fastly.com/vcl/custom-vcl/uploading-custom-vcl/">Fastly documentation</a> for more information on using custom VCL.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1693,7 +1722,8 @@ Defined below.</p>
 <dl class="py method">
 <dt id="pulumi_fastly.Servicev1.waf">
 <em class="property">property </em><code class="sig-name descname">waf</code><a class="headerlink" href="#pulumi_fastly.Servicev1.waf" title="Permalink to this definition">¶</a></dt>
-<dd><p>A WAF configuration block.  Defined below.</p>
+<dd><p>A WAF configuration block.
+Defined below.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1846,11 +1876,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <span class="n">fastly</span> <span class="o">=</span> <span class="n">fastly</span><span class="o">.</span><span class="n">get_fastly_ip_ranges</span><span class="p">()</span>
 <span class="n">from_fastly</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">SecurityGroup</span><span class="p">(</span><span class="s2">&quot;fromFastly&quot;</span><span class="p">,</span> <span class="n">ingress</span><span class="o">=</span><span class="p">[</span><span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">SecurityGroupIngressArgs</span><span class="p">(</span>
-    <span class="n">cidr_blocks</span><span class="o">=</span><span class="n">fastly</span><span class="o">.</span><span class="n">cidr_blocks</span><span class="p">,</span>
     <span class="n">from_port</span><span class="o">=</span><span class="s2">&quot;443&quot;</span><span class="p">,</span>
-    <span class="n">ipv6_cidr_blocks</span><span class="o">=</span><span class="n">fastly</span><span class="o">.</span><span class="n">ipv6_cidr_blocks</span><span class="p">,</span>
-    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
     <span class="n">to_port</span><span class="o">=</span><span class="s2">&quot;443&quot;</span><span class="p">,</span>
+    <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+    <span class="n">cidr_blocks</span><span class="o">=</span><span class="n">fastly</span><span class="o">.</span><span class="n">cidr_blocks</span><span class="p">,</span>
+    <span class="n">ipv6_cidr_blocks</span><span class="o">=</span><span class="n">fastly</span><span class="o">.</span><span class="n">ipv6_cidr_blocks</span><span class="p">,</span>
 <span class="p">)])</span>
 </pre></div>
 </div>

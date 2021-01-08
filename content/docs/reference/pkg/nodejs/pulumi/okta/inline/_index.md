@@ -3,7 +3,7 @@ title: "Module inline"
 title_tag: "Module inline | Package @pulumi/okta | Node.js SDK"
 linktitle: "inline"
 meta_desc: "Explore members of the inline module in the @pulumi/okta package."
-git_sha: "df38f7a628913e798f4a290274f0158737c3e299"
+git_sha: "d8223ec34121f866677918fc6244e020f13ce023"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Hook" data-link-title="Hook">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/inline/hook.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/inline/hook.ts#L43">
         Resource <strong>Hook</strong>
     </a>
 </h3>
@@ -72,7 +72,7 @@ An inline hook can be imported via the Okta ID.
 ```
 
 <h4 class="pdoc-member-header" id="Hook-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/inline/hook.ts#L95"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/inline/hook.ts#L95"> <b>constructor</b></a>
 </h4>
 
 
@@ -86,7 +86,7 @@ Create a Hook resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Hook-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/inline/hook.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/inline/hook.ts#L53">method <b>get</b></a>
 </h4>
 
 
@@ -97,14 +97,14 @@ Get an existing Hook resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Hook-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/inline/hook.ts#L43">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/inline/hook.ts#L43">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Hook-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/inline/hook.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/inline/hook.ts#L64">method <b>isInstance</b></a>
 </h4>
 
 
@@ -115,23 +115,23 @@ Returns true if the given object is an instance of Hook.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Hook-auth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/inline/hook.ts#L74">property <b>auth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/inline/hook.ts#L74">property <b>auth</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>auth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#HookAuth'>HookAuth</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>auth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Authentication required for inline hook request.
 
 <h4 class="pdoc-member-header" id="Hook-channel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/inline/hook.ts#L78">property <b>channel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/inline/hook.ts#L78">property <b>channel</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>channel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#HookChannel'>HookChannel</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>channel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
 
 Details of the endpoint the inline hook will hit.
 
 <h4 class="pdoc-member-header" id="Hook-headers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/inline/hook.ts#L82">property <b>headers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/inline/hook.ts#L82">property <b>headers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>headers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#HookHeader'>HookHeader</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -139,7 +139,7 @@ Details of the endpoint the inline hook will hit.
 Map of headers to send along in inline hook request.
 
 <h4 class="pdoc-member-header" id="Hook-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/inline/hook.ts#L43">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/inline/hook.ts#L43">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -148,7 +148,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Hook-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/inline/hook.ts#L86">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/inline/hook.ts#L86">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -156,20 +156,20 @@ deployments and may be missing (undefined) during planning phases.
 The inline hook display name.
 
 <h4 class="pdoc-member-header" id="Hook-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/inline/hook.ts#L87">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/inline/hook.ts#L87">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Hook-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/inline/hook.ts#L91">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/inline/hook.ts#L91">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The type of hook to trigger. Currently only `"HTTP"` is supported.
+The type of hook to trigger. Currently, the only supported type is `"HTTP"`.
 
 <h4 class="pdoc-member-header" id="Hook-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/inline/hook.ts#L43">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/inline/hook.ts#L43">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -178,18 +178,18 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Hook-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/inline/hook.ts#L95">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/inline/hook.ts#L95">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The version of the endpoint.
+Version of the channel. The currently-supported version is `"1.0.0"`.
 
 
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="HookArgs" data-link-title="HookArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/inline/hook.ts#L177">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/inline/hook.ts#L180">
         interface <strong>HookArgs</strong>
     </a>
 </h3>
@@ -199,23 +199,23 @@ The version of the endpoint.
 The set of arguments for constructing a Hook resource.
 
 <h4 class="pdoc-member-header" id="HookArgs-auth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/inline/hook.ts#L181">property <b>auth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/inline/hook.ts#L184">property <b>auth</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>auth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#HookAuth'>HookAuth</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>auth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 
 Authentication required for inline hook request.
 
 <h4 class="pdoc-member-header" id="HookArgs-channel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/inline/hook.ts#L185">property <b>channel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/inline/hook.ts#L188">property <b>channel</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>channel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#HookChannel'>HookChannel</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>channel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 
 Details of the endpoint the inline hook will hit.
 
 <h4 class="pdoc-member-header" id="HookArgs-headers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/inline/hook.ts#L189">property <b>headers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/inline/hook.ts#L192">property <b>headers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>headers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#HookHeader'>HookHeader</a>&gt;[]&gt;;</code></pre>
@@ -223,7 +223,7 @@ Details of the endpoint the inline hook will hit.
 Map of headers to send along in inline hook request.
 
 <h4 class="pdoc-member-header" id="HookArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/inline/hook.ts#L193">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/inline/hook.ts#L196">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -231,28 +231,28 @@ Map of headers to send along in inline hook request.
 The inline hook display name.
 
 <h4 class="pdoc-member-header" id="HookArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/inline/hook.ts#L194">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/inline/hook.ts#L197">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="HookArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/inline/hook.ts#L198">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/inline/hook.ts#L201">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The type of hook to trigger. Currently only `"HTTP"` is supported.
+The type of hook to trigger. Currently, the only supported type is `"HTTP"`.
 
 <h4 class="pdoc-member-header" id="HookArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/inline/hook.ts#L202">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/inline/hook.ts#L205">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The version of the endpoint.
+Version of the channel. The currently-supported version is `"1.0.0"`.
 
 <h3 class="pdoc-module-header" id="HookState" data-link-title="HookState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/inline/hook.ts#L146">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/inline/hook.ts#L149">
         interface <strong>HookState</strong>
     </a>
 </h3>
@@ -262,23 +262,23 @@ The version of the endpoint.
 Input properties used for looking up and filtering Hook resources.
 
 <h4 class="pdoc-member-header" id="HookState-auth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/inline/hook.ts#L150">property <b>auth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/inline/hook.ts#L153">property <b>auth</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>auth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#HookAuth'>HookAuth</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>auth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 
 Authentication required for inline hook request.
 
 <h4 class="pdoc-member-header" id="HookState-channel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/inline/hook.ts#L154">property <b>channel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/inline/hook.ts#L157">property <b>channel</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>channel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#HookChannel'>HookChannel</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>channel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 
 Details of the endpoint the inline hook will hit.
 
 <h4 class="pdoc-member-header" id="HookState-headers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/inline/hook.ts#L158">property <b>headers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/inline/hook.ts#L161">property <b>headers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>headers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#HookHeader'>HookHeader</a>&gt;[]&gt;;</code></pre>
@@ -286,7 +286,7 @@ Details of the endpoint the inline hook will hit.
 Map of headers to send along in inline hook request.
 
 <h4 class="pdoc-member-header" id="HookState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/inline/hook.ts#L162">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/inline/hook.ts#L165">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -294,23 +294,23 @@ Map of headers to send along in inline hook request.
 The inline hook display name.
 
 <h4 class="pdoc-member-header" id="HookState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/inline/hook.ts#L163">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/inline/hook.ts#L166">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="HookState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/inline/hook.ts#L167">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/inline/hook.ts#L170">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The type of hook to trigger. Currently only `"HTTP"` is supported.
+The type of hook to trigger. Currently, the only supported type is `"HTTP"`.
 
 <h4 class="pdoc-member-header" id="HookState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/inline/hook.ts#L171">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/inline/hook.ts#L174">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The version of the endpoint.
+Version of the channel. The currently-supported version is `"1.0.0"`.
 

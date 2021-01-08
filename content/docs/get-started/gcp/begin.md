@@ -2,7 +2,7 @@
 title: Before You Begin | GCP
 h1: Before You Begin
 linktitle: Before You Begin
-meta_desc: This page provides an overview on how to get started with Pulumi when starting an GCP project.
+meta_desc: This page provides an overview on how to get started with Pulumi and Google Cloud.
 weight: 2
 menu:
   getstarted:
@@ -20,13 +20,17 @@ aliases: [
 ]
 ---
 
-Before we get started using Pulumi, let's run through a few quick steps to ensure our environment is setup correctly.
+Before you get started using Pulumi, let's run through a few quick steps to ensure your environment is setup correctly.
 
 ### Install Pulumi
 
 {{< install-pulumi >}}
+{{% notes "info" %}}
+All Windows examples in this tutorial assume you are running in PowerShell.
+{{% /notes %}}
+{{< /install-pulumi >}}
 
-Next, we'll install the required language runtime.
+Next, install the required language runtime, if you have not already.
 
 ### Install Language Runtime
 
@@ -50,23 +54,18 @@ Next, we'll install the required language runtime.
 {{< install-dotnet >}}
 {{% /choosable %}}
 
-Next, we'll configure GCP.
+Finally, configure Pulumi with Google Cloud.
 
-### Configure GCP
+### Configure Pulumi to access your Google Cloud account
 
-The [Pulumi Google Cloud Platform Provider]({{< relref "/docs/intro/cloud-providers/gcp" >}}) needs to be configured with Google credentials
-before it can be used to create resources.
+Pulumi requires cloud credentials to manage and provision resources. You must use an IAM user or service account that has **Programmatic access** with rights to deploy and manage your Google Cloud resources.
 
-When developing locally, we recommend that you use `gcloud login` to configure your account credentials. First, install the [Google Cloud SDK](https://cloud.google.com/sdk/install), which includes the `gcloud` command line tool. Then, execute the following:
+In this guide, you will need an IAM user account with permissions that can create and populate a Cloud Storage bucket, such as those in the predefined Storage Admin (`roles/storage.admin`) or the Storage Legacy Bucket Owner (`roles/storage.legacyBucketOwner`) roles.
 
-```bash
-$ gcloud auth login
-$ gcloud config set project <YOUR_GCP_PROJECT_HERE>
-$ gcloud auth application-default login
-```
+{{% configure-gcp %}}
 
-For more detailed setup information, please refer to our <a href="{{< relref "/docs/intro/cloud-providers/gcp/setup" >}}" target="_blank">GCP provider setup guide</a>
+For additional information on setting and using Google Cloud credentials, see [Google Cloud Setup]({{< relref "/docs/intro/cloud-providers/gcp/setup" >}}).
 
-Next, we'll create a new project.
+Next, you'll create a new project.
 
 {{< get-started-stepper >}}

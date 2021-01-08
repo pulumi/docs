@@ -11,12 +11,12 @@ Explore the resources and functions of the healthbot module in the Azure NextGen
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="getbot" title="Getbot"><span class="symbol resource"></span>Getbot</a></li>
+    <li><a href="bot" title="Bot"><span class="symbol resource"></span>Bot</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
-    <li><a href="getgetbot" title="Getgetbot"><span class="symbol function"></span>Getgetbot</a></li>
+    <li><a href="getbot" title="GetBot"><span class="symbol function"></span>GetBot</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -26,7 +26,7 @@ Explore the resources and functions of the healthbot module in the Azure NextGen
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 
 

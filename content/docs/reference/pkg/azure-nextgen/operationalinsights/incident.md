@@ -2,7 +2,7 @@
 ---
 title: "Incident"
 title_tag: "azure-nextgen.operationalinsights.Incident"
-meta_desc: "Explore the Incident resource of the operationalinsights module, including examples, input properties, output properties, lookup functions, and supporting types. Represents an incident in Azure Security Insights."
+meta_desc: "Documentation for the azure-nextgen.operationalinsights.Incident resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -11,7 +11,7 @@ meta_desc: "Explore the Incident resource of the operationalinsights module, inc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents an incident in Azure Security Insights.
-
+Latest API Version: 2020-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -161,7 +161,7 @@ const incident = new azure_nextgen.operationalinsights.latest.Incident("incident
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Incident</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">IncidentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Incident</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">IncidentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -169,11 +169,11 @@ const incident = new azure_nextgen.operationalinsights.latest.Incident("incident
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIncident</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">IncidentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Incident</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIncident</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">IncidentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Incident</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Incident</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">IncidentArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Incident</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">IncidentArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -184,7 +184,7 @@ const incident = new azure_nextgen.operationalinsights.latest.Incident("incident
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -253,7 +253,7 @@ const incident = new azure_nextgen.operationalinsights.latest.Incident("incident
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -292,7 +292,7 @@ const incident = new azure_nextgen.operationalinsights.latest.Incident("incident
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -333,7 +333,6 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -341,155 +340,139 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="incidentid_csharp">
 <a href="#incidentid_csharp" style="color: inherit; text-decoration: inherit;">Incident<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Incident ID{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="severity_csharp">
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Incident<wbr>Severity</span>
+        <span class="property-type">string | <a href="#incidentseverity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Incident<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}The severity of the incident{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Incident<wbr>Status</span>
+        <span class="property-type">string | <a href="#incidentstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Incident<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the incident{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="title_csharp">
 <a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of the incident{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="workspacename_csharp">
 <a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="classification_csharp">
 <a href="#classification_csharp" style="color: inherit; text-decoration: inherit;">Classification</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Incident<wbr>Classification</span>
+        <span class="property-type">string | <a href="#incidentclassification">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Incident<wbr>Classification</a></span>
     </dt>
     <dd>{{% md %}}The reason the incident was closed{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="classificationcomment_csharp">
 <a href="#classificationcomment_csharp" style="color: inherit; text-decoration: inherit;">Classification<wbr>Comment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the reason the incident was closed{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="classificationreason_csharp">
 <a href="#classificationreason_csharp" style="color: inherit; text-decoration: inherit;">Classification<wbr>Reason</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Incident<wbr>Classification<wbr>Reason</span>
+        <span class="property-type">string | <a href="#incidentclassificationreason">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Incident<wbr>Classification<wbr>Reason</a></span>
     </dt>
     <dd>{{% md %}}The classification reason the incident was closed with{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the incident{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="firstactivitytimeutc_csharp">
 <a href="#firstactivitytimeutc_csharp" style="color: inherit; text-decoration: inherit;">First<wbr>Activity<wbr>Time<wbr>Utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of the first activity in the incident{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#incidentlabel">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Inputs.<wbr>Incident<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of labels relevant to this incident{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastactivitytimeutc_csharp">
 <a href="#lastactivitytimeutc_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Activity<wbr>Time<wbr>Utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of the last activity in the incident{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="owner_csharp">
 <a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#incidentownerinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Inputs.<wbr>Incident<wbr>Owner<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that the incident is assigned to{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -498,155 +481,139 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="incidentid_go">
 <a href="#incidentid_go" style="color: inherit; text-decoration: inherit;">Incident<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Incident ID{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="severity_go">
 <a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#incidentseverity">Incident<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}The severity of the incident{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#incidentstatus">Incident<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the incident{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="title_go">
 <a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of the incident{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="workspacename_go">
 <a href="#workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="classification_go">
 <a href="#classification_go" style="color: inherit; text-decoration: inherit;">Classification</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#incidentclassification">Incident<wbr>Classification</a></span>
     </dt>
     <dd>{{% md %}}The reason the incident was closed{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="classificationcomment_go">
 <a href="#classificationcomment_go" style="color: inherit; text-decoration: inherit;">Classification<wbr>Comment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the reason the incident was closed{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="classificationreason_go">
 <a href="#classificationreason_go" style="color: inherit; text-decoration: inherit;">Classification<wbr>Reason</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#incidentclassificationreason">Incident<wbr>Classification<wbr>Reason</a></span>
     </dt>
     <dd>{{% md %}}The classification reason the incident was closed with{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the incident{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="firstactivitytimeutc_go">
 <a href="#firstactivitytimeutc_go" style="color: inherit; text-decoration: inherit;">First<wbr>Activity<wbr>Time<wbr>Utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of the first activity in the incident{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#incidentlabel">[]Incident<wbr>Label</a></span>
     </dt>
     <dd>{{% md %}}List of labels relevant to this incident{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastactivitytimeutc_go">
 <a href="#lastactivitytimeutc_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Activity<wbr>Time<wbr>Utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of the last activity in the incident{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="owner_go">
 <a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#incidentownerinfo">Incident<wbr>Owner<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that the incident is assigned to{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -655,155 +622,139 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="incidentid_nodejs">
 <a href="#incidentid_nodejs" style="color: inherit; text-decoration: inherit;">incident<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Incident ID{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="severity_nodejs">
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Incident<wbr>Severity</span>
+        <span class="property-type">string | <a href="#incidentseverity">Incident<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}The severity of the incident{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Incident<wbr>Status</span>
+        <span class="property-type">string | <a href="#incidentstatus">Incident<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the incident{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="title_nodejs">
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of the incident{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="workspacename_nodejs">
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="classification_nodejs">
 <a href="#classification_nodejs" style="color: inherit; text-decoration: inherit;">classification</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Incident<wbr>Classification</span>
+        <span class="property-type">string | <a href="#incidentclassification">Incident<wbr>Classification</a></span>
     </dt>
     <dd>{{% md %}}The reason the incident was closed{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="classificationcomment_nodejs">
 <a href="#classificationcomment_nodejs" style="color: inherit; text-decoration: inherit;">classification<wbr>Comment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the reason the incident was closed{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="classificationreason_nodejs">
 <a href="#classificationreason_nodejs" style="color: inherit; text-decoration: inherit;">classification<wbr>Reason</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Incident<wbr>Classification<wbr>Reason</span>
+        <span class="property-type">string | <a href="#incidentclassificationreason">Incident<wbr>Classification<wbr>Reason</a></span>
     </dt>
     <dd>{{% md %}}The classification reason the incident was closed with{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the incident{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="firstactivitytimeutc_nodejs">
 <a href="#firstactivitytimeutc_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Activity<wbr>Time<wbr>Utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of the first activity in the incident{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#incidentlabel">Incident<wbr>Label[]</a></span>
     </dt>
     <dd>{{% md %}}List of labels relevant to this incident{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastactivitytimeutc_nodejs">
 <a href="#lastactivitytimeutc_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Activity<wbr>Time<wbr>Utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of the last activity in the incident{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="owner_nodejs">
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#incidentownerinfo">Incident<wbr>Owner<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that the incident is assigned to{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -812,164 +763,144 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="incident_id_python">
 <a href="#incident_id_python" style="color: inherit; text-decoration: inherit;">incident_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Incident ID{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="severity_python">
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Incident<wbr>Severity</span>
+        <span class="property-type">str | <a href="#incidentseverity">Incident<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}The severity of the incident{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Incident<wbr>Status</span>
+        <span class="property-type">str | <a href="#incidentstatus">Incident<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the incident{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="title_python">
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The title of the incident{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="workspace_name_python">
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="classification_python">
 <a href="#classification_python" style="color: inherit; text-decoration: inherit;">classification</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Incident<wbr>Classification</span>
+        <span class="property-type">str | <a href="#incidentclassification">Incident<wbr>Classification</a></span>
     </dt>
     <dd>{{% md %}}The reason the incident was closed{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="classification_comment_python">
 <a href="#classification_comment_python" style="color: inherit; text-decoration: inherit;">classification_<wbr>comment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes the reason the incident was closed{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="classification_reason_python">
 <a href="#classification_reason_python" style="color: inherit; text-decoration: inherit;">classification_<wbr>reason</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Incident<wbr>Classification<wbr>Reason</span>
+        <span class="property-type">str | <a href="#incidentclassificationreason">Incident<wbr>Classification<wbr>Reason</a></span>
     </dt>
     <dd>{{% md %}}The classification reason the incident was closed with{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the incident{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="first_activity_time_utc_python">
 <a href="#first_activity_time_utc_python" style="color: inherit; text-decoration: inherit;">first_<wbr>activity_<wbr>time_<wbr>utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time of the first activity in the incident{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#incidentlabel">Sequence[Incident<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of labels relevant to this incident{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_activity_time_utc_python">
 <a href="#last_activity_time_utc_python" style="color: inherit; text-decoration: inherit;">last_<wbr>activity_<wbr>time_<wbr>utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time of the last activity in the incident{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="owner_python">
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#incidentownerinfo">Incident<wbr>Owner<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that the incident is assigned to{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Incident resource produces the following output properties:
-
 
 
 
@@ -980,95 +911,85 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="additionaldata_csharp">
 <a href="#additionaldata_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#incidentadditionaldataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Outputs.<wbr>Incident<wbr>Additional<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional data on the incident{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="createdtimeutc_csharp">
 <a href="#createdtimeutc_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Time<wbr>Utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the incident was created{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="incidentnumber_csharp">
 <a href="#incidentnumber_csharp" style="color: inherit; text-decoration: inherit;">Incident<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A sequential number{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="incidenturl_csharp">
 <a href="#incidenturl_csharp" style="color: inherit; text-decoration: inherit;">Incident<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deep-link url to the incident in Azure portal{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastmodifiedtimeutc_csharp">
 <a href="#lastmodifiedtimeutc_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time<wbr>Utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time the incident was updated{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="relatedanalyticruleids_csharp">
 <a href="#relatedanalyticruleids_csharp" style="color: inherit; text-decoration: inherit;">Related<wbr>Analytic<wbr>Rule<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of resource ids of Analytic rules related to the incident{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1077,95 +998,85 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="additionaldata_go">
 <a href="#additionaldata_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#incidentadditionaldataresponse">Incident<wbr>Additional<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional data on the incident{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="createdtimeutc_go">
 <a href="#createdtimeutc_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Time<wbr>Utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the incident was created{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="incidentnumber_go">
 <a href="#incidentnumber_go" style="color: inherit; text-decoration: inherit;">Incident<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A sequential number{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="incidenturl_go">
 <a href="#incidenturl_go" style="color: inherit; text-decoration: inherit;">Incident<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deep-link url to the incident in Azure portal{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastmodifiedtimeutc_go">
 <a href="#lastmodifiedtimeutc_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time<wbr>Utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time the incident was updated{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="relatedanalyticruleids_go">
 <a href="#relatedanalyticruleids_go" style="color: inherit; text-decoration: inherit;">Related<wbr>Analytic<wbr>Rule<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of resource ids of Analytic rules related to the incident{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1174,95 +1085,85 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="additionaldata_nodejs">
 <a href="#additionaldata_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#incidentadditionaldataresponse">Incident<wbr>Additional<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional data on the incident{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="createdtimeutc_nodejs">
 <a href="#createdtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time<wbr>Utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the incident was created{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="incidentnumber_nodejs">
 <a href="#incidentnumber_nodejs" style="color: inherit; text-decoration: inherit;">incident<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A sequential number{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="incidenturl_nodejs">
 <a href="#incidenturl_nodejs" style="color: inherit; text-decoration: inherit;">incident<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deep-link url to the incident in Azure portal{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastmodifiedtimeutc_nodejs">
 <a href="#lastmodifiedtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time<wbr>Utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time the incident was updated{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="relatedanalyticruleids_nodejs">
 <a href="#relatedanalyticruleids_nodejs" style="color: inherit; text-decoration: inherit;">related<wbr>Analytic<wbr>Rule<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of resource ids of Analytic rules related to the incident{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1271,98 +1172,85 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="additional_data_python">
 <a href="#additional_data_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#incidentadditionaldataresponse">Incident<wbr>Additional<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional data on the incident{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="created_time_utc_python">
 <a href="#created_time_utc_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time_<wbr>utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the incident was created{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="incident_number_python">
 <a href="#incident_number_python" style="color: inherit; text-decoration: inherit;">incident_<wbr>number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A sequential number{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="incident_url_python">
 <a href="#incident_url_python" style="color: inherit; text-decoration: inherit;">incident_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The deep-link url to the incident in Azure portal{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="last_modified_time_utc_python">
 <a href="#last_modified_time_utc_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time_<wbr>utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last time the incident was updated{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="related_analytic_rule_ids_python">
 <a href="#related_analytic_rule_ids_python" style="color: inherit; text-decoration: inherit;">related_<wbr>analytic_<wbr>rule_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of resource ids of Analytic rules related to the incident{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1373,13 +1261,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
 <h4 id="incidentadditionaldataresponse">Incident<wbr>Additional<wbr>Data<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1388,55 +1271,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="alertproductnames_csharp">
 <a href="#alertproductnames_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Product<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of product names of alerts in the incident{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="alertscount_csharp">
 <a href="#alertscount_csharp" style="color: inherit; text-decoration: inherit;">Alerts<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of alerts in the incident{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="bookmarkscount_csharp">
 <a href="#bookmarkscount_csharp" style="color: inherit; text-decoration: inherit;">Bookmarks<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of bookmarks in the incident{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="commentscount_csharp">
 <a href="#commentscount_csharp" style="color: inherit; text-decoration: inherit;">Comments<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of comments in the incident{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tactics_csharp">
 <a href="#tactics_csharp" style="color: inherit; text-decoration: inherit;">Tactics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The tactics associated with incident{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1445,55 +1322,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="alertproductnames_go">
 <a href="#alertproductnames_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Product<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of product names of alerts in the incident{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="alertscount_go">
 <a href="#alertscount_go" style="color: inherit; text-decoration: inherit;">Alerts<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of alerts in the incident{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="bookmarkscount_go">
 <a href="#bookmarkscount_go" style="color: inherit; text-decoration: inherit;">Bookmarks<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of bookmarks in the incident{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="commentscount_go">
 <a href="#commentscount_go" style="color: inherit; text-decoration: inherit;">Comments<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of comments in the incident{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tactics_go">
 <a href="#tactics_go" style="color: inherit; text-decoration: inherit;">Tactics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The tactics associated with incident{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1502,55 +1373,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="alertproductnames_nodejs">
 <a href="#alertproductnames_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Product<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of product names of alerts in the incident{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="alertscount_nodejs">
 <a href="#alertscount_nodejs" style="color: inherit; text-decoration: inherit;">alerts<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of alerts in the incident{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="bookmarkscount_nodejs">
 <a href="#bookmarkscount_nodejs" style="color: inherit; text-decoration: inherit;">bookmarks<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of bookmarks in the incident{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="commentscount_nodejs">
 <a href="#commentscount_nodejs" style="color: inherit; text-decoration: inherit;">comments<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of comments in the incident{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tactics_nodejs">
 <a href="#tactics_nodejs" style="color: inherit; text-decoration: inherit;">tactics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The tactics associated with incident{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1559,66 +1424,159 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="alert_product_names_python">
 <a href="#alert_product_names_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>product_<wbr>names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of product names of alerts in the incident{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="alerts_count_python">
 <a href="#alerts_count_python" style="color: inherit; text-decoration: inherit;">alerts_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of alerts in the incident{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="bookmarks_count_python">
 <a href="#bookmarks_count_python" style="color: inherit; text-decoration: inherit;">bookmarks_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of bookmarks in the incident{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="comments_count_python">
 <a href="#comments_count_python" style="color: inherit; text-decoration: inherit;">comments_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of comments in the incident{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tactics_python">
 <a href="#tactics_python" style="color: inherit; text-decoration: inherit;">tactics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The tactics associated with incident{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="incidentclassification">Incident<wbr>Classification</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Undetermined</dt>
+    <dd>Undetermined{{% md %}}Incident classification was undetermined{{% /md %}}</dd>
+    <dt>True<wbr>Positive</dt>
+    <dd>TruePositive{{% md %}}Incident was true positive{{% /md %}}</dd>
+    <dt>Benign<wbr>Positive</dt>
+    <dd>BenignPositive{{% md %}}Incident was benign positive{{% /md %}}</dd>
+    <dt>False<wbr>Positive</dt>
+    <dd>FalsePositive{{% md %}}Incident was false positive{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Incident<wbr>Classification<wbr>Undetermined</dt>
+    <dd>Undetermined{{% md %}}Incident classification was undetermined{{% /md %}}</dd>
+    <dt>Incident<wbr>Classification<wbr>True<wbr>Positive</dt>
+    <dd>TruePositive{{% md %}}Incident was true positive{{% /md %}}</dd>
+    <dt>Incident<wbr>Classification<wbr>Benign<wbr>Positive</dt>
+    <dd>BenignPositive{{% md %}}Incident was benign positive{{% /md %}}</dd>
+    <dt>Incident<wbr>Classification<wbr>False<wbr>Positive</dt>
+    <dd>FalsePositive{{% md %}}Incident was false positive{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Undetermined</dt>
+    <dd>Undetermined{{% md %}}Incident classification was undetermined{{% /md %}}</dd>
+    <dt>True<wbr>Positive</dt>
+    <dd>TruePositive{{% md %}}Incident was true positive{{% /md %}}</dd>
+    <dt>Benign<wbr>Positive</dt>
+    <dd>BenignPositive{{% md %}}Incident was benign positive{{% /md %}}</dd>
+    <dt>False<wbr>Positive</dt>
+    <dd>FalsePositive{{% md %}}Incident was false positive{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>UNDETERMINED</dt>
+    <dd>Undetermined{{% md %}}Incident classification was undetermined{{% /md %}}</dd>
+    <dt>TRUE_POSITIVE</dt>
+    <dd>TruePositive{{% md %}}Incident was true positive{{% /md %}}</dd>
+    <dt>BENIGN_POSITIVE</dt>
+    <dd>BenignPositive{{% md %}}Incident was benign positive{{% /md %}}</dd>
+    <dt>FALSE_POSITIVE</dt>
+    <dd>FalsePositive{{% md %}}Incident was false positive{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="incidentclassificationreason">Incident<wbr>Classification<wbr>Reason</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Suspicious<wbr>Activity</dt>
+    <dd>SuspiciousActivity{{% md %}}Classification reason was suspicious activity{{% /md %}}</dd>
+    <dt>Suspicious<wbr>But<wbr>Expected</dt>
+    <dd>SuspiciousButExpected{{% md %}}Classification reason was suspicious but expected{{% /md %}}</dd>
+    <dt>Incorrect<wbr>Alert<wbr>Logic</dt>
+    <dd>IncorrectAlertLogic{{% md %}}Classification reason was incorrect alert logic{{% /md %}}</dd>
+    <dt>Inaccurate<wbr>Data</dt>
+    <dd>InaccurateData{{% md %}}Classification reason was inaccurate data{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Incident<wbr>Classification<wbr>Reason<wbr>Suspicious<wbr>Activity</dt>
+    <dd>SuspiciousActivity{{% md %}}Classification reason was suspicious activity{{% /md %}}</dd>
+    <dt>Incident<wbr>Classification<wbr>Reason<wbr>Suspicious<wbr>But<wbr>Expected</dt>
+    <dd>SuspiciousButExpected{{% md %}}Classification reason was suspicious but expected{{% /md %}}</dd>
+    <dt>Incident<wbr>Classification<wbr>Reason<wbr>Incorrect<wbr>Alert<wbr>Logic</dt>
+    <dd>IncorrectAlertLogic{{% md %}}Classification reason was incorrect alert logic{{% /md %}}</dd>
+    <dt>Incident<wbr>Classification<wbr>Reason<wbr>Inaccurate<wbr>Data</dt>
+    <dd>InaccurateData{{% md %}}Classification reason was inaccurate data{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Suspicious<wbr>Activity</dt>
+    <dd>SuspiciousActivity{{% md %}}Classification reason was suspicious activity{{% /md %}}</dd>
+    <dt>Suspicious<wbr>But<wbr>Expected</dt>
+    <dd>SuspiciousButExpected{{% md %}}Classification reason was suspicious but expected{{% /md %}}</dd>
+    <dt>Incorrect<wbr>Alert<wbr>Logic</dt>
+    <dd>IncorrectAlertLogic{{% md %}}Classification reason was incorrect alert logic{{% /md %}}</dd>
+    <dt>Inaccurate<wbr>Data</dt>
+    <dd>InaccurateData{{% md %}}Classification reason was inaccurate data{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>SUSPICIOUS_ACTIVITY</dt>
+    <dd>SuspiciousActivity{{% md %}}Classification reason was suspicious activity{{% /md %}}</dd>
+    <dt>SUSPICIOUS_BUT_EXPECTED</dt>
+    <dd>SuspiciousButExpected{{% md %}}Classification reason was suspicious but expected{{% /md %}}</dd>
+    <dt>INCORRECT_ALERT_LOGIC</dt>
+    <dd>IncorrectAlertLogic{{% md %}}Classification reason was incorrect alert logic{{% /md %}}</dd>
+    <dt>INACCURATE_DATA</dt>
+    <dd>InaccurateData{{% md %}}Classification reason was inaccurate data{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="incidentlabel">Incident<wbr>Label</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1627,15 +1585,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="labelname_csharp">
 <a href="#labelname_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the label{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1644,15 +1600,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="labelname_go">
 <a href="#labelname_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the label{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1661,15 +1615,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="labelname_nodejs">
 <a href="#labelname_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the label{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1678,26 +1630,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="label_name_python">
 <a href="#label_name_python" style="color: inherit; text-decoration: inherit;">label_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the label{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="incidentlabelresponse">Incident<wbr>Label<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1706,25 +1647,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="labelname_csharp">
 <a href="#labelname_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the label{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="labeltype_csharp">
 <a href="#labeltype_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the label{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1733,25 +1671,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="labelname_go">
 <a href="#labelname_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the label{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="labeltype_go">
 <a href="#labeltype_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the label{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1760,25 +1695,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="labelname_nodejs">
 <a href="#labelname_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the label{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="labeltype_nodejs">
 <a href="#labeltype_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the label{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1787,37 +1719,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="label_name_python">
 <a href="#label_name_python" style="color: inherit; text-decoration: inherit;">label_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the label{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="label_type_python">
 <a href="#label_type_python" style="color: inherit; text-decoration: inherit;">label_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the label{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="incidentownerinfo">Incident<wbr>Owner<wbr>Info</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1825,45 +1745,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="assignedto_csharp">
 <a href="#assignedto_csharp" style="color: inherit; text-decoration: inherit;">Assigned<wbr>To</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user the incident is assigned to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="email_csharp">
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email of the user the incident is assigned to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object id of the user the incident is assigned to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userprincipalname_csharp">
 <a href="#userprincipalname_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user principal name of the user the incident is assigned to.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1872,45 +1787,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="assignedto_go">
 <a href="#assignedto_go" style="color: inherit; text-decoration: inherit;">Assigned<wbr>To</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user the incident is assigned to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="email_go">
 <a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email of the user the incident is assigned to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object id of the user the incident is assigned to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userprincipalname_go">
 <a href="#userprincipalname_go" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user principal name of the user the incident is assigned to.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1919,45 +1829,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="assignedto_nodejs">
 <a href="#assignedto_nodejs" style="color: inherit; text-decoration: inherit;">assigned<wbr>To</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user the incident is assigned to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="email_nodejs">
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email of the user the incident is assigned to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object id of the user the incident is assigned to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userprincipalname_nodejs">
 <a href="#userprincipalname_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Principal<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user principal name of the user the incident is assigned to.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1966,57 +1871,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="assigned_to_python">
 <a href="#assigned_to_python" style="color: inherit; text-decoration: inherit;">assigned_<wbr>to</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the user the incident is assigned to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="email_python">
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email of the user the incident is assigned to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The object id of the user the incident is assigned to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="user_principal_name_python">
 <a href="#user_principal_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>principal_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user principal name of the user the incident is assigned to.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="incidentownerinforesponse">Incident<wbr>Owner<wbr>Info<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2024,45 +1915,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="assignedto_csharp">
 <a href="#assignedto_csharp" style="color: inherit; text-decoration: inherit;">Assigned<wbr>To</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user the incident is assigned to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="email_csharp">
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email of the user the incident is assigned to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object id of the user the incident is assigned to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userprincipalname_csharp">
 <a href="#userprincipalname_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user principal name of the user the incident is assigned to.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2071,45 +1957,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="assignedto_go">
 <a href="#assignedto_go" style="color: inherit; text-decoration: inherit;">Assigned<wbr>To</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user the incident is assigned to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="email_go">
 <a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email of the user the incident is assigned to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object id of the user the incident is assigned to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userprincipalname_go">
 <a href="#userprincipalname_go" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user principal name of the user the incident is assigned to.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2118,45 +1999,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="assignedto_nodejs">
 <a href="#assignedto_nodejs" style="color: inherit; text-decoration: inherit;">assigned<wbr>To</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user the incident is assigned to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="email_nodejs">
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email of the user the incident is assigned to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object id of the user the incident is assigned to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userprincipalname_nodejs">
 <a href="#userprincipalname_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Principal<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user principal name of the user the incident is assigned to.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2165,51 +2041,148 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="assigned_to_python">
 <a href="#assigned_to_python" style="color: inherit; text-decoration: inherit;">assigned_<wbr>to</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the user the incident is assigned to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="email_python">
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email of the user the incident is assigned to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The object id of the user the incident is assigned to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="user_principal_name_python">
 <a href="#user_principal_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>principal_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user principal name of the user the incident is assigned to.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="incidentseverity">Incident<wbr>Severity</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>High</dt>
+    <dd>High{{% md %}}High severity{{% /md %}}</dd>
+    <dt>Medium</dt>
+    <dd>Medium{{% md %}}Medium severity{{% /md %}}</dd>
+    <dt>Low</dt>
+    <dd>Low{{% md %}}Low severity{{% /md %}}</dd>
+    <dt>Informational</dt>
+    <dd>Informational{{% md %}}Informational severity{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Incident<wbr>Severity<wbr>High</dt>
+    <dd>High{{% md %}}High severity{{% /md %}}</dd>
+    <dt>Incident<wbr>Severity<wbr>Medium</dt>
+    <dd>Medium{{% md %}}Medium severity{{% /md %}}</dd>
+    <dt>Incident<wbr>Severity<wbr>Low</dt>
+    <dd>Low{{% md %}}Low severity{{% /md %}}</dd>
+    <dt>Incident<wbr>Severity<wbr>Informational</dt>
+    <dd>Informational{{% md %}}Informational severity{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>High</dt>
+    <dd>High{{% md %}}High severity{{% /md %}}</dd>
+    <dt>Medium</dt>
+    <dd>Medium{{% md %}}Medium severity{{% /md %}}</dd>
+    <dt>Low</dt>
+    <dd>Low{{% md %}}Low severity{{% /md %}}</dd>
+    <dt>Informational</dt>
+    <dd>Informational{{% md %}}Informational severity{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>HIGH</dt>
+    <dd>High{{% md %}}High severity{{% /md %}}</dd>
+    <dt>MEDIUM</dt>
+    <dd>Medium{{% md %}}Medium severity{{% /md %}}</dd>
+    <dt>LOW</dt>
+    <dd>Low{{% md %}}Low severity{{% /md %}}</dd>
+    <dt>INFORMATIONAL</dt>
+    <dd>Informational{{% md %}}Informational severity{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="incidentstatus">Incident<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>New</dt>
+    <dd>New{{% md %}}An active incident which isn't being handled currently{{% /md %}}</dd>
+    <dt>Active</dt>
+    <dd>Active{{% md %}}An active incident which is being handled{{% /md %}}</dd>
+    <dt>Closed</dt>
+    <dd>Closed{{% md %}}A non-active incident{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Incident<wbr>Status<wbr>New</dt>
+    <dd>New{{% md %}}An active incident which isn't being handled currently{{% /md %}}</dd>
+    <dt>Incident<wbr>Status<wbr>Active</dt>
+    <dd>Active{{% md %}}An active incident which is being handled{{% /md %}}</dd>
+    <dt>Incident<wbr>Status<wbr>Closed</dt>
+    <dd>Closed{{% md %}}A non-active incident{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>New</dt>
+    <dd>New{{% md %}}An active incident which isn't being handled currently{{% /md %}}</dd>
+    <dt>Active</dt>
+    <dd>Active{{% md %}}An active incident which is being handled{{% /md %}}</dd>
+    <dt>Closed</dt>
+    <dd>Closed{{% md %}}A non-active incident{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>NEW</dt>
+    <dd>New{{% md %}}An active incident which isn't being handled currently{{% /md %}}</dd>
+    <dt>ACTIVE</dt>
+    <dd>Active{{% md %}}An active incident which is being handled{{% /md %}}</dd>
+    <dt>CLOSED</dt>
+    <dd>Closed{{% md %}}A non-active incident{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+## Import
 
 
+An existing resource can be imported using its type token, name, and identifier, e.g.
 
-
-
-
+```sh
+$ pulumi import azure-nextgen:operationalinsights/latest:Incident 73e01a99-5cd7-4139-a149-9f2736ff2ab5 /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/incidents/73e01a99-5cd7-4139-a149-9f2736ff2ab5 
+```
 
 
 

@@ -16,6 +16,11 @@ Explore the resources and functions of the datahub module in the AliCloud packag
     <li><a href="topic" title="Topic"><span class="symbol resource"></span>Topic</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -25,7 +30,7 @@ Explore the resources and functions of the datahub module in the AliCloud packag
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.27.0</dd>
+	<dd>2.30.0</dd>
 </dl>
 
 

@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/fastly | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/fastly package."
-git_sha: "05c959314305b3e514510a3b9d5ed7f5ea5a3f1b"
+git_sha: "83209f904060a67298a7c273caf43ee7e21f1619"
 block_external_search_index: true
 ---
 

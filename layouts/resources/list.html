@@ -121,12 +121,7 @@
                     <!-- Set the values based on the type of the page. -->
                     {{ if eq $data.Type "webinars" }}
                         {{ $description = $data.Params.meta_desc }}
-
-                        {{ if isset $data.Params "multiple" }}
-                            {{ $displayDate = dateFormat "January 2, 2006" (index ($data.Params.multiple) 0).datetime }}
-                        {{ else }}
-                            {{ $displayDate = dateFormat "January 2, 2006" $data.Params.main.sortable_date }}
-                        {{ end }}
+                        {{ $displayDate = dateFormat "January 2, 2006" $data.Params.main.sortable_date }}
 
                         <!-- Set the url to link to. -->
                         {{ if $data.Params.external }}
@@ -167,8 +162,18 @@
                         {{ end }}
                     {{ end }}
 
-                    {{ $tileOptions := (dict "pageContext" $pageContext "external" $external "filters" $filters "link" $link "icon" $icon "description" $description "displayDate" $displayDate "data" $data)}}
-                    {{ partial "content-tile.html" $tileOptions }}
+                    {{ if isset $data.Params "multiple" }}
+                        {{ range $data.Params.multiple }}
+                            {{ $multipleDisplayDate := dateFormat "January 2, 2006" .datetime }}
+                            {{ $multipleLink := printf "%s?date=%s" $link  (dateFormat "2006/01/02" .datetime)}}
+
+                            {{ $tileOptions := (dict "multiple" true "pageContext" $pageContext "external" $external "filters" $filters "link" $multipleLink "icon" $icon "description" $description "displayDate" $multipleDisplayDate "data" $data)}}
+                            {{ partial "content-tile.html" $tileOptions }}
+                        {{ end }}
+                    {{ else }}
+                        {{ $tileOptions := (dict "pageContext" $pageContext "external" $external "filters" $filters "link" $link "icon" $icon "description" $description "displayDate" $displayDate "data" $data)}}
+                        {{ partial "content-tile.html" $tileOptions }}
+                    {{ end }}
                 {{ end }}
             </ul>
         </div>

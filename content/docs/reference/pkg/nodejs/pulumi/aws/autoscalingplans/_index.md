@@ -3,7 +3,7 @@ title: "Module autoscalingplans"
 title_tag: "Module autoscalingplans | Package @pulumi/aws | Node.js SDK"
 linktitle: "autoscalingplans"
 meta_desc: "Explore members of the autoscalingplans module in the @pulumi/aws package."
-git_sha: "ed0313016d5626d90188604d1cfc2b42aeb10e82"
+git_sha: "6c9e985f93682e9b4056b497c1a31a75fd7884fc"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="ScalingPlan" data-link-title="ScalingPlan">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/ed0313016d5626d90188604d1cfc2b42aeb10e82/sdk/nodejs/autoscalingplans/scalingPlan.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/autoscalingplans/scalingPlan.ts#L26">
         Resource <strong>ScalingPlan</strong>
     </a>
 </h3>
@@ -55,7 +55,7 @@ Auto Scaling scaling plans can be imported using the `name`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="ScalingPlan-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ed0313016d5626d90188604d1cfc2b42aeb10e82/sdk/nodejs/autoscalingplans/scalingPlan.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/autoscalingplans/scalingPlan.ts#L69"> <b>constructor</b></a>
 </h4>
 
 
@@ -69,7 +69,7 @@ Create a ScalingPlan resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ScalingPlan-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ed0313016d5626d90188604d1cfc2b42aeb10e82/sdk/nodejs/autoscalingplans/scalingPlan.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/autoscalingplans/scalingPlan.ts#L36">method <b>get</b></a>
 </h4>
 
 
@@ -80,14 +80,14 @@ Get an existing ScalingPlan resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ScalingPlan-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ed0313016d5626d90188604d1cfc2b42aeb10e82/sdk/nodejs/autoscalingplans/scalingPlan.ts#L26">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/autoscalingplans/scalingPlan.ts#L26">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ScalingPlan-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ed0313016d5626d90188604d1cfc2b42aeb10e82/sdk/nodejs/autoscalingplans/scalingPlan.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/autoscalingplans/scalingPlan.ts#L47">method <b>isInstance</b></a>
 </h4>
 
 
@@ -98,7 +98,7 @@ Returns true if the given object is an instance of ScalingPlan.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ScalingPlan-applicationSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ed0313016d5626d90188604d1cfc2b42aeb10e82/sdk/nodejs/autoscalingplans/scalingPlan.ts#L57">property <b>applicationSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/autoscalingplans/scalingPlan.ts#L57">property <b>applicationSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationSource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ScalingPlanApplicationSource'>ScalingPlanApplicationSource</a>&gt;;</code></pre>
@@ -106,7 +106,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A CloudFormation stack or set of tags. You can create one scaling plan per application source.
 
 <h4 class="pdoc-member-header" id="ScalingPlan-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ed0313016d5626d90188604d1cfc2b42aeb10e82/sdk/nodejs/autoscalingplans/scalingPlan.ts#L26">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/autoscalingplans/scalingPlan.ts#L26">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -115,7 +115,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ScalingPlan-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ed0313016d5626d90188604d1cfc2b42aeb10e82/sdk/nodejs/autoscalingplans/scalingPlan.ts#L61">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/autoscalingplans/scalingPlan.ts#L61">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -123,7 +123,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the scaling plan. Names cannot contain vertical bars, colons, or forward slashes.
 
 <h4 class="pdoc-member-header" id="ScalingPlan-scalingInstructions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ed0313016d5626d90188604d1cfc2b42aeb10e82/sdk/nodejs/autoscalingplans/scalingPlan.ts#L65">property <b>scalingInstructions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/autoscalingplans/scalingPlan.ts#L65">property <b>scalingInstructions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scalingInstructions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ScalingPlanScalingInstruction'>ScalingPlanScalingInstruction</a>[]&gt;;</code></pre>
@@ -131,7 +131,7 @@ The name of the scaling plan. Names cannot contain vertical bars, colons, or for
 The scaling instructions. More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_ScalingInstruction.html).
 
 <h4 class="pdoc-member-header" id="ScalingPlan-scalingPlanVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ed0313016d5626d90188604d1cfc2b42aeb10e82/sdk/nodejs/autoscalingplans/scalingPlan.ts#L69">property <b>scalingPlanVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/autoscalingplans/scalingPlan.ts#L69">property <b>scalingPlanVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scalingPlanVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -139,7 +139,7 @@ The scaling instructions. More details can be found in the [AWS Auto Scaling API
 The version number of the scaling plan. This value is always 1.
 
 <h4 class="pdoc-member-header" id="ScalingPlan-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ed0313016d5626d90188604d1cfc2b42aeb10e82/sdk/nodejs/autoscalingplans/scalingPlan.ts#L26">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/autoscalingplans/scalingPlan.ts#L26">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -151,7 +151,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ScalingPlanArgs" data-link-title="ScalingPlanArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/ed0313016d5626d90188604d1cfc2b42aeb10e82/sdk/nodejs/autoscalingplans/scalingPlan.ts#L136">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/autoscalingplans/scalingPlan.ts#L136">
         interface <strong>ScalingPlanArgs</strong>
     </a>
 </h3>
@@ -161,7 +161,7 @@ deployments.
 The set of arguments for constructing a ScalingPlan resource.
 
 <h4 class="pdoc-member-header" id="ScalingPlanArgs-applicationSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ed0313016d5626d90188604d1cfc2b42aeb10e82/sdk/nodejs/autoscalingplans/scalingPlan.ts#L140">property <b>applicationSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/autoscalingplans/scalingPlan.ts#L140">property <b>applicationSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationSource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ScalingPlanApplicationSource'>ScalingPlanApplicationSource</a>&gt;;</code></pre>
@@ -169,7 +169,7 @@ The set of arguments for constructing a ScalingPlan resource.
 A CloudFormation stack or set of tags. You can create one scaling plan per application source.
 
 <h4 class="pdoc-member-header" id="ScalingPlanArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ed0313016d5626d90188604d1cfc2b42aeb10e82/sdk/nodejs/autoscalingplans/scalingPlan.ts#L144">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/autoscalingplans/scalingPlan.ts#L144">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -177,7 +177,7 @@ A CloudFormation stack or set of tags. You can create one scaling plan per appli
 The name of the scaling plan. Names cannot contain vertical bars, colons, or forward slashes.
 
 <h4 class="pdoc-member-header" id="ScalingPlanArgs-scalingInstructions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ed0313016d5626d90188604d1cfc2b42aeb10e82/sdk/nodejs/autoscalingplans/scalingPlan.ts#L148">property <b>scalingInstructions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/autoscalingplans/scalingPlan.ts#L148">property <b>scalingInstructions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingInstructions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ScalingPlanScalingInstruction'>ScalingPlanScalingInstruction</a>&gt;[]&gt;;</code></pre>
@@ -185,7 +185,7 @@ The name of the scaling plan. Names cannot contain vertical bars, colons, or for
 The scaling instructions. More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_ScalingInstruction.html).
 
 <h3 class="pdoc-module-header" id="ScalingPlanState" data-link-title="ScalingPlanState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/ed0313016d5626d90188604d1cfc2b42aeb10e82/sdk/nodejs/autoscalingplans/scalingPlan.ts#L114">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/autoscalingplans/scalingPlan.ts#L114">
         interface <strong>ScalingPlanState</strong>
     </a>
 </h3>
@@ -195,7 +195,7 @@ The scaling instructions. More details can be found in the [AWS Auto Scaling API
 Input properties used for looking up and filtering ScalingPlan resources.
 
 <h4 class="pdoc-member-header" id="ScalingPlanState-applicationSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ed0313016d5626d90188604d1cfc2b42aeb10e82/sdk/nodejs/autoscalingplans/scalingPlan.ts#L118">property <b>applicationSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/autoscalingplans/scalingPlan.ts#L118">property <b>applicationSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationSource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ScalingPlanApplicationSource'>ScalingPlanApplicationSource</a>&gt;;</code></pre>
@@ -203,7 +203,7 @@ Input properties used for looking up and filtering ScalingPlan resources.
 A CloudFormation stack or set of tags. You can create one scaling plan per application source.
 
 <h4 class="pdoc-member-header" id="ScalingPlanState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ed0313016d5626d90188604d1cfc2b42aeb10e82/sdk/nodejs/autoscalingplans/scalingPlan.ts#L122">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/autoscalingplans/scalingPlan.ts#L122">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -211,7 +211,7 @@ A CloudFormation stack or set of tags. You can create one scaling plan per appli
 The name of the scaling plan. Names cannot contain vertical bars, colons, or forward slashes.
 
 <h4 class="pdoc-member-header" id="ScalingPlanState-scalingInstructions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ed0313016d5626d90188604d1cfc2b42aeb10e82/sdk/nodejs/autoscalingplans/scalingPlan.ts#L126">property <b>scalingInstructions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/autoscalingplans/scalingPlan.ts#L126">property <b>scalingInstructions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingInstructions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ScalingPlanScalingInstruction'>ScalingPlanScalingInstruction</a>&gt;[]&gt;;</code></pre>
@@ -219,7 +219,7 @@ The name of the scaling plan. Names cannot contain vertical bars, colons, or for
 The scaling instructions. More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_ScalingInstruction.html).
 
 <h4 class="pdoc-member-header" id="ScalingPlanState-scalingPlanVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/ed0313016d5626d90188604d1cfc2b42aeb10e82/sdk/nodejs/autoscalingplans/scalingPlan.ts#L130">property <b>scalingPlanVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/autoscalingplans/scalingPlan.ts#L130">property <b>scalingPlanVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingPlanVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>

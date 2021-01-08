@@ -11,6 +11,7 @@ Explore the resources and functions of the authorization module in the Azure Nex
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="accessreviewscheduledefinitionbyid" title="AccessReviewScheduleDefinitionById"><span class="symbol resource"></span>AccessReviewScheduleDefinitionById</a></li>
     <li><a href="managementlockatresourcegrouplevel" title="ManagementLockAtResourceGroupLevel"><span class="symbol resource"></span>ManagementLockAtResourceGroupLevel</a></li>
     <li><a href="managementlockatresourcelevel" title="ManagementLockAtResourceLevel"><span class="symbol resource"></span>ManagementLockAtResourceLevel</a></li>
     <li><a href="managementlockatsubscriptionlevel" title="ManagementLockAtSubscriptionLevel"><span class="symbol resource"></span>ManagementLockAtSubscriptionLevel</a></li>
@@ -25,6 +26,8 @@ Explore the resources and functions of the authorization module in the Azure Nex
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getaccessreviewscheduledefinitionbyid" title="GetAccessReviewScheduleDefinitionById"><span class="symbol function"></span>GetAccessReviewScheduleDefinitionById</a></li>
+    <li><a href="getclientconfig" title="GetClientConfig"><span class="symbol function"></span>GetClientConfig</a></li>
     <li><a href="getmanagementlockatresourcegrouplevel" title="GetManagementLockAtResourceGroupLevel"><span class="symbol function"></span>GetManagementLockAtResourceGroupLevel</a></li>
     <li><a href="getmanagementlockatresourcelevel" title="GetManagementLockAtResourceLevel"><span class="symbol function"></span>GetManagementLockAtResourceLevel</a></li>
     <li><a href="getmanagementlockatsubscriptionlevel" title="GetManagementLockAtSubscriptionLevel"><span class="symbol function"></span>GetManagementLockAtSubscriptionLevel</a></li>
@@ -44,7 +47,7 @@ Explore the resources and functions of the authorization module in the Azure Nex
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 
 

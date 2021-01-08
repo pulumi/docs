@@ -44,7 +44,7 @@ Explore the resources and functions of the resources module in the Azure NextGen
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.4.0</dd>
 </dl>
 
 

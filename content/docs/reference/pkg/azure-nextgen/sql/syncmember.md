@@ -2,7 +2,7 @@
 ---
 title: "SyncMember"
 title_tag: "azure-nextgen.sql.SyncMember"
-meta_desc: "Explore the SyncMember resource of the sql module, including examples, input properties, output properties, lookup functions, and supporting types. An Azure SQL Database sync member."
+meta_desc: "Documentation for the azure-nextgen.sql.SyncMember resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -12,12 +12,122 @@ meta_desc: "Explore the SyncMember resource of the sql module, including example
 
 An Azure SQL Database sync member.
 
-
 {{% examples %}}
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Create a new sync member
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var syncMember = new AzureNextGen.Sql.V20200801Preview.SyncMember("syncMember", new AzureNextGen.Sql.V20200801Preview.SyncMemberArgs
+        {
+            DatabaseName = "syncgroupcrud-4328",
+            DatabaseType = "AzureSqlDatabase",
+            ResourceGroupName = "syncgroupcrud-65440",
+            ServerName = "syncgroupcrud-8475",
+            SyncDirection = "Bidirectional",
+            SyncGroupName = "syncgroupcrud-3187",
+            SyncMemberAzureDatabaseResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
+            SyncMemberName = "syncmembercrud-4879",
+            UsePrivateLinkConnection = true,
+            UserName = "myUser",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sql.NewSyncMember(ctx, "syncMember", &sql.SyncMemberArgs{
+			DatabaseName:                      pulumi.String("syncgroupcrud-4328"),
+			DatabaseType:                      pulumi.String("AzureSqlDatabase"),
+			ResourceGroupName:                 pulumi.String("syncgroupcrud-65440"),
+			ServerName:                        pulumi.String("syncgroupcrud-8475"),
+			SyncDirection:                     pulumi.String("Bidirectional"),
+			SyncGroupName:                     pulumi.String("syncgroupcrud-3187"),
+			SyncMemberAzureDatabaseResourceId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328"),
+			SyncMemberName:                    pulumi.String("syncmembercrud-4879"),
+			UsePrivateLinkConnection:          pulumi.Bool(true),
+			UserName:                          pulumi.String("myUser"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+sync_member = azure_nextgen.sql.v20200801preview.SyncMember("syncMember",
+    database_name="syncgroupcrud-4328",
+    database_type="AzureSqlDatabase",
+    resource_group_name="syncgroupcrud-65440",
+    server_name="syncgroupcrud-8475",
+    sync_direction="Bidirectional",
+    sync_group_name="syncgroupcrud-3187",
+    sync_member_azure_database_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
+    sync_member_name="syncmembercrud-4879",
+    use_private_link_connection=True,
+    user_name="myUser")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const syncMember = new azure_nextgen.sql.v20200801preview.SyncMember("syncMember", {
+    databaseName: "syncgroupcrud-4328",
+    databaseType: "AzureSqlDatabase",
+    resourceGroupName: "syncgroupcrud-65440",
+    serverName: "syncgroupcrud-8475",
+    syncDirection: "Bidirectional",
+    syncGroupName: "syncgroupcrud-3187",
+    syncMemberAzureDatabaseResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
+    syncMemberName: "syncmembercrud-4879",
+    usePrivateLinkConnection: true,
+    userName: "myUser",
+});
+
+```
+
+{{% /example %}}
+
+### Update a sync member
 {{% example csharp %}}
 ```csharp
 using Pulumi;
@@ -128,117 +238,6 @@ const syncMember = new azure_nextgen.sql.v20200801preview.SyncMember("syncMember
 
 {{% /example %}}
 
-### Update a sync member
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureNextGen = Pulumi.AzureNextGen;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var syncMember = new AzureNextGen.Sql.V20200801Preview.SyncMember("syncMember", new AzureNextGen.Sql.V20200801Preview.SyncMemberArgs
-        {
-            DatabaseName = "syncgroupcrud-7421",
-            DatabaseType = "AzureSqlDatabase",
-            ResourceGroupName = "syncgroupcrud-65440",
-            ServerName = "syncgroupcrud-8475",
-            SyncDirection = "Bidirectional",
-            SyncGroupName = "syncgroupcrud-3187",
-            SyncMemberAzureDatabaseResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
-            SyncMemberName = "syncmembercrud-4879",
-            UsePrivateLinkConnection = true,
-            UserName = "myUser",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	sql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql/v20200801preview"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := sql.NewSyncMember(ctx, "syncMember", &sql.SyncMemberArgs{
-			DatabaseName:                      pulumi.String("syncgroupcrud-7421"),
-			DatabaseType:                      pulumi.String("AzureSqlDatabase"),
-			ResourceGroupName:                 pulumi.String("syncgroupcrud-65440"),
-			ServerName:                        pulumi.String("syncgroupcrud-8475"),
-			SyncDirection:                     pulumi.String("Bidirectional"),
-			SyncGroupName:                     pulumi.String("syncgroupcrud-3187"),
-			SyncMemberAzureDatabaseResourceId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328"),
-			SyncMemberName:                    pulumi.String("syncmembercrud-4879"),
-			UsePrivateLinkConnection:          pulumi.Bool(true),
-			UserName:                          pulumi.String("myUser"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azure_nextgen as azure_nextgen
-
-sync_member = azure_nextgen.sql.v20200801preview.SyncMember("syncMember",
-    database_name="syncgroupcrud-7421",
-    database_type="AzureSqlDatabase",
-    resource_group_name="syncgroupcrud-65440",
-    server_name="syncgroupcrud-8475",
-    sync_direction="Bidirectional",
-    sync_group_name="syncgroupcrud-3187",
-    sync_member_azure_database_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
-    sync_member_name="syncmembercrud-4879",
-    use_private_link_connection=True,
-    user_name="myUser")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure-nextgen";
-
-const syncMember = new azure_nextgen.sql.v20200801preview.SyncMember("syncMember", {
-    databaseName: "syncgroupcrud-7421",
-    databaseType: "AzureSqlDatabase",
-    resourceGroupName: "syncgroupcrud-65440",
-    serverName: "syncgroupcrud-8475",
-    syncDirection: "Bidirectional",
-    syncGroupName: "syncgroupcrud-3187",
-    syncMemberAzureDatabaseResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
-    syncMemberName: "syncmembercrud-4879",
-    usePrivateLinkConnection: true,
-    userName: "myUser",
-});
-
-```
-
-{{% /example %}}
-
 {{% /examples %}}
 
 
@@ -247,7 +246,7 @@ const syncMember = new azure_nextgen.sql.v20200801preview.SyncMember("syncMember
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SyncMember</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">SyncMemberArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SyncMember</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">SyncMemberArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -255,11 +254,11 @@ const syncMember = new azure_nextgen.sql.v20200801preview.SyncMember("syncMember
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSyncMember</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">SyncMemberArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SyncMember</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSyncMember</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">SyncMemberArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SyncMember</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SyncMember</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">SyncMemberArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SyncMember</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">SyncMemberArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -270,7 +269,7 @@ const syncMember = new azure_nextgen.sql.v20200801preview.SyncMember("syncMember
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -339,7 +338,7 @@ const syncMember = new azure_nextgen.sql.v20200801preview.SyncMember("syncMember
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -378,7 +377,7 @@ const syncMember = new azure_nextgen.sql.v20200801preview.SyncMember("syncMember
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -419,7 +418,6 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -427,135 +425,121 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database name of the member database in the sync member.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="servername_csharp">
 <a href="#servername_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Server name of the member database in the sync member{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="syncgroupname_csharp">
 <a href="#syncgroupname_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the sync group on which the sync member is hosted.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="syncmembername_csharp">
 <a href="#syncmembername_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Member<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the sync member.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="databasetype_csharp">
 <a href="#databasetype_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Sync<wbr>Member<wbr>Db<wbr>Type</span>
+        <span class="property-type">string | <a href="#syncmemberdbtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Sync<wbr>Member<wbr>Db<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Database type of the sync member.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password of the member database in the sync member.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sqlserverdatabaseid_csharp">
 <a href="#sqlserverdatabaseid_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Server<wbr>Database<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SQL Server database id of the sync member.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="syncagentid_csharp">
 <a href="#syncagentid_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Agent<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM resource id of the sync agent in the sync member.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="syncdirection_csharp">
 <a href="#syncdirection_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Sync<wbr>Direction</span>
+        <span class="property-type">string | <a href="#syncdirection">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Sql.<wbr>Sync<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}Sync direction of the sync member.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="syncmemberazuredatabaseresourceid_csharp">
 <a href="#syncmemberazuredatabaseresourceid_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Member<wbr>Azure<wbr>Database<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM resource id of the sync member logical database, for sync members in Azure.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="useprivatelinkconnection_csharp">
 <a href="#useprivatelinkconnection_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Private<wbr>Link<wbr>Connection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use private link connection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name of the member database in the sync member.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -564,135 +548,121 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database name of the member database in the sync member.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="servername_go">
 <a href="#servername_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Server name of the member database in the sync member{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="syncgroupname_go">
 <a href="#syncgroupname_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the sync group on which the sync member is hosted.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="syncmembername_go">
 <a href="#syncmembername_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Member<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the sync member.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="databasetype_go">
 <a href="#databasetype_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#syncmemberdbtype">Sync<wbr>Member<wbr>Db<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Database type of the sync member.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password of the member database in the sync member.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sqlserverdatabaseid_go">
 <a href="#sqlserverdatabaseid_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Server<wbr>Database<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SQL Server database id of the sync member.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="syncagentid_go">
 <a href="#syncagentid_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Agent<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM resource id of the sync agent in the sync member.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="syncdirection_go">
 <a href="#syncdirection_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#syncdirection">Sync<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}Sync direction of the sync member.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="syncmemberazuredatabaseresourceid_go">
 <a href="#syncmemberazuredatabaseresourceid_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Member<wbr>Azure<wbr>Database<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM resource id of the sync member logical database, for sync members in Azure.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="useprivatelinkconnection_go">
 <a href="#useprivatelinkconnection_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Private<wbr>Link<wbr>Connection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use private link connection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name of the member database in the sync member.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -701,135 +671,121 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database name of the member database in the sync member.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="servername_nodejs">
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Server name of the member database in the sync member{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="syncgroupname_nodejs">
 <a href="#syncgroupname_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the sync group on which the sync member is hosted.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="syncmembername_nodejs">
 <a href="#syncmembername_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Member<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the sync member.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="databasetype_nodejs">
 <a href="#databasetype_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Sync<wbr>Member<wbr>Db<wbr>Type</span>
+        <span class="property-type">string | <a href="#syncmemberdbtype">Sync<wbr>Member<wbr>Db<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Database type of the sync member.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password of the member database in the sync member.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sqlserverdatabaseid_nodejs">
 <a href="#sqlserverdatabaseid_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Server<wbr>Database<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SQL Server database id of the sync member.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="syncagentid_nodejs">
 <a href="#syncagentid_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Agent<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM resource id of the sync agent in the sync member.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="syncdirection_nodejs">
 <a href="#syncdirection_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Sync<wbr>Direction</span>
+        <span class="property-type">string | <a href="#syncdirection">Sync<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}Sync direction of the sync member.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="syncmemberazuredatabaseresourceid_nodejs">
 <a href="#syncmemberazuredatabaseresourceid_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Member<wbr>Azure<wbr>Database<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM resource id of the sync member logical database, for sync members in Azure.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="useprivatelinkconnection_nodejs">
 <a href="#useprivatelinkconnection_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Private<wbr>Link<wbr>Connection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to use private link connection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name of the member database in the sync member.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -838,144 +794,126 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Database name of the member database in the sync member.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="server_name_python">
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Server name of the member database in the sync member{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sync_group_name_python">
 <a href="#sync_group_name_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the sync group on which the sync member is hosted.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sync_member_name_python">
 <a href="#sync_member_name_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>member_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the sync member.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="database_type_python">
 <a href="#database_type_python" style="color: inherit; text-decoration: inherit;">database_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Sync<wbr>Member<wbr>Db<wbr>Type</span>
+        <span class="property-type">str | <a href="#syncmemberdbtype">Sync<wbr>Member<wbr>Db<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Database type of the sync member.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password of the member database in the sync member.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sql_server_database_id_python">
 <a href="#sql_server_database_id_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>server_<wbr>database_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SQL Server database id of the sync member.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sync_agent_id_python">
 <a href="#sync_agent_id_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>agent_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM resource id of the sync agent in the sync member.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sync_direction_python">
 <a href="#sync_direction_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Sync<wbr>Direction</span>
+        <span class="property-type">str | <a href="#syncdirection">Sync<wbr>Direction</a></span>
     </dt>
     <dd>{{% md %}}Sync direction of the sync member.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sync_member_azure_database_resource_id_python">
 <a href="#sync_member_azure_database_resource_id_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>member_<wbr>azure_<wbr>database_<wbr>resource_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM resource id of the sync member logical database, for sync members in Azure.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="use_private_link_connection_python">
 <a href="#use_private_link_connection_python" style="color: inherit; text-decoration: inherit;">use_<wbr>private_<wbr>link_<wbr>connection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use private link connection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="user_name_python">
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User name of the member database in the sync member.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the SyncMember resource produces the following output properties:
-
 
 
 
@@ -986,55 +924,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="privateendpointname_csharp">
 <a href="#privateendpointname_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Private endpoint name of the sync member if use private link connection is enabled, for sync members in Azure.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="syncstate_csharp">
 <a href="#syncstate_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sync state of the sync member.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1043,55 +975,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="privateendpointname_go">
 <a href="#privateendpointname_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Private endpoint name of the sync member if use private link connection is enabled, for sync members in Azure.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="syncstate_go">
 <a href="#syncstate_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sync state of the sync member.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1100,55 +1026,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="privateendpointname_nodejs">
 <a href="#privateendpointname_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Private endpoint name of the sync member if use private link connection is enabled, for sync members in Azure.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="syncstate_nodejs">
 <a href="#syncstate_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sync state of the sync member.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1157,52 +1077,47 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="private_endpoint_name_python">
 <a href="#private_endpoint_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Private endpoint name of the sync member if use private link connection is enabled, for sync members in Azure.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="sync_state_python">
 <a href="#sync_state_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sync state of the sync member.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1212,9 +1127,101 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+## Supporting Types
 
 
 
+<h4 id="syncdirection">Sync<wbr>Direction</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Bidirectional</dt>
+    <dd>Bidirectional</dd>
+    <dt>One<wbr>Way<wbr>Member<wbr>To<wbr>Hub</dt>
+    <dd>OneWayMemberToHub</dd>
+    <dt>One<wbr>Way<wbr>Hub<wbr>To<wbr>Member</dt>
+    <dd>OneWayHubToMember</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Sync<wbr>Direction<wbr>Bidirectional</dt>
+    <dd>Bidirectional</dd>
+    <dt>Sync<wbr>Direction<wbr>One<wbr>Way<wbr>Member<wbr>To<wbr>Hub</dt>
+    <dd>OneWayMemberToHub</dd>
+    <dt>Sync<wbr>Direction<wbr>One<wbr>Way<wbr>Hub<wbr>To<wbr>Member</dt>
+    <dd>OneWayHubToMember</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Bidirectional</dt>
+    <dd>Bidirectional</dd>
+    <dt>One<wbr>Way<wbr>Member<wbr>To<wbr>Hub</dt>
+    <dd>OneWayMemberToHub</dd>
+    <dt>One<wbr>Way<wbr>Hub<wbr>To<wbr>Member</dt>
+    <dd>OneWayHubToMember</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>BIDIRECTIONAL</dt>
+    <dd>Bidirectional</dd>
+    <dt>ONE_WAY_MEMBER_TO_HUB</dt>
+    <dd>OneWayMemberToHub</dd>
+    <dt>ONE_WAY_HUB_TO_MEMBER</dt>
+    <dd>OneWayHubToMember</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="syncmemberdbtype">Sync<wbr>Member<wbr>Db<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Azure<wbr>Sql<wbr>Database</dt>
+    <dd>AzureSqlDatabase</dd>
+    <dt>Sql<wbr>Server<wbr>Database</dt>
+    <dd>SqlServerDatabase</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Sync<wbr>Member<wbr>Db<wbr>Type<wbr>Azure<wbr>Sql<wbr>Database</dt>
+    <dd>AzureSqlDatabase</dd>
+    <dt>Sync<wbr>Member<wbr>Db<wbr>Type<wbr>Sql<wbr>Server<wbr>Database</dt>
+    <dd>SqlServerDatabase</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Azure<wbr>Sql<wbr>Database</dt>
+    <dd>AzureSqlDatabase</dd>
+    <dt>Sql<wbr>Server<wbr>Database</dt>
+    <dd>SqlServerDatabase</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>AZURE_SQL_DATABASE</dt>
+    <dd>AzureSqlDatabase</dd>
+    <dt>SQL_SERVER_DATABASE</dt>
+    <dd>SqlServerDatabase</dd>
+</dl>
+{{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:sql/v20200801preview:SyncMember syncmembercrud-4879 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328/syncGroups/syncgroupcrud-3187/syncMembers/syncmembercrud-4879 
+```
 
 
 

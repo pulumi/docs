@@ -1,8 +1,8 @@
 
 ---
 title: "GuestPolicies"
-title_tag: "Resource GuestPolicies | Module osconfig | Package GCP"
-meta_desc: "Explore the GuestPolicies resource of the osconfig module, including examples, input properties, output properties, lookup functions, and supporting types. An OS Config resource representing a guest configuration policy. These policies represent"
+title_tag: "gcp.osconfig.GuestPolicies"
+meta_desc: "Documentation for the gcp.osconfig.GuestPolicies resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -760,7 +760,7 @@ const guestPolicies = new gcp.osconfig.GuestPolicies("guestPolicies", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/osconfig/#GuestPolicies">GuestPolicies</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/osconfig/#GuestPoliciesArgs">GuestPoliciesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/osconfig/#GuestPolicies">GuestPolicies</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/osconfig/#GuestPoliciesArgs">GuestPoliciesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -768,11 +768,11 @@ const guestPolicies = new gcp.osconfig.GuestPolicies("guestPolicies", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPolicies">NewGuestPolicies</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesArgs">GuestPoliciesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPolicies">GuestPolicies</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPolicies">NewGuestPolicies</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesArgs">GuestPoliciesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPolicies">GuestPolicies</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.GuestPolicies.html">GuestPolicies</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.GuestPoliciesArgs.html">GuestPoliciesArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.GuestPolicies.html">GuestPolicies</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.GuestPoliciesArgs.html">GuestPoliciesArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -783,7 +783,7 @@ const guestPolicies = new gcp.osconfig.GuestPolicies("guestPolicies", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -852,7 +852,7 @@ const guestPolicies = new gcp.osconfig.GuestPolicies("guestPolicies", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -891,7 +891,7 @@ const guestPolicies = new gcp.osconfig.GuestPolicies("guestPolicies", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -932,7 +932,6 @@ The GuestPolicies resource accepts the following [input]({{< relref "/docs/intro
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -940,7 +939,7 @@ The GuestPolicies resource accepts the following [input]({{< relref "/docs/intro
             title="Required">
         <span id="assignment_csharp">
 <a href="#assignment_csharp" style="color: inherit; text-decoration: inherit;">Assignment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesassignment">Guest<wbr>Policies<wbr>Assignment<wbr>Args</a></span>
     </dt>
@@ -953,14 +952,13 @@ For more information, see how the service
 [handles assignment conflicts](https://cloud.google.com/compute/docs/os-config-management/create-guest-policy#handle-conflicts).
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="guestpolicyid_csharp">
 <a href="#guestpolicyid_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The logical name of the guest policy in the project with the following restrictions:
 * Must contain only lowercase letters, numbers, and hyphens.
@@ -969,34 +967,31 @@ Structure is documented below.
 * Must end with a number or a letter.
 * Must be unique within the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the guest policy. Length of the description is limited to 1024 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The etag for this guest policy. If this is provided on update, it must match the server's etag.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="packagerepositories_csharp">
 <a href="#packagerepositories_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Repositories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackagerepository">List&lt;Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Args&gt;</a></span>
     </dt>
@@ -1005,46 +1000,41 @@ This is done before any other configs are applied so they can use these repos.
 Package repositories are only configured if the corresponding package manager(s) are available.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="packages_csharp">
 <a href="#packages_csharp" style="color: inherit; text-decoration: inherit;">Packages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackage">List&lt;Guest<wbr>Policies<wbr>Package<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The software packages to be managed by this policy.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recipes_csharp">
 <a href="#recipes_csharp" style="color: inherit; text-decoration: inherit;">Recipes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipe">List&lt;Guest<wbr>Policies<wbr>Recipe<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Recipes to install on the VM instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1053,7 +1043,7 @@ Structure is documented below.
             title="Required">
         <span id="assignment_go">
 <a href="#assignment_go" style="color: inherit; text-decoration: inherit;">Assignment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesassignment">Guest<wbr>Policies<wbr>Assignment</a></span>
     </dt>
@@ -1066,14 +1056,13 @@ For more information, see how the service
 [handles assignment conflicts](https://cloud.google.com/compute/docs/os-config-management/create-guest-policy#handle-conflicts).
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="guestpolicyid_go">
 <a href="#guestpolicyid_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The logical name of the guest policy in the project with the following restrictions:
 * Must contain only lowercase letters, numbers, and hyphens.
@@ -1082,34 +1071,31 @@ Structure is documented below.
 * Must end with a number or a letter.
 * Must be unique within the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the guest policy. Length of the description is limited to 1024 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The etag for this guest policy. If this is provided on update, it must match the server's etag.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="packagerepositories_go">
 <a href="#packagerepositories_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Repositories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackagerepository">[]Guest<wbr>Policies<wbr>Package<wbr>Repository</a></span>
     </dt>
@@ -1118,46 +1104,41 @@ This is done before any other configs are applied so they can use these repos.
 Package repositories are only configured if the corresponding package manager(s) are available.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="packages_go">
 <a href="#packages_go" style="color: inherit; text-decoration: inherit;">Packages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackage">[]Guest<wbr>Policies<wbr>Package</a></span>
     </dt>
     <dd>{{% md %}}The software packages to be managed by this policy.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recipes_go">
 <a href="#recipes_go" style="color: inherit; text-decoration: inherit;">Recipes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipe">[]Guest<wbr>Policies<wbr>Recipe</a></span>
     </dt>
     <dd>{{% md %}}A list of Recipes to install on the VM instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1166,7 +1147,7 @@ Structure is documented below.
             title="Required">
         <span id="assignment_nodejs">
 <a href="#assignment_nodejs" style="color: inherit; text-decoration: inherit;">assignment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesassignment">Guest<wbr>Policies<wbr>Assignment</a></span>
     </dt>
@@ -1179,14 +1160,13 @@ For more information, see how the service
 [handles assignment conflicts](https://cloud.google.com/compute/docs/os-config-management/create-guest-policy#handle-conflicts).
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="guestpolicyid_nodejs">
 <a href="#guestpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The logical name of the guest policy in the project with the following restrictions:
 * Must contain only lowercase letters, numbers, and hyphens.
@@ -1195,34 +1175,31 @@ Structure is documented below.
 * Must end with a number or a letter.
 * Must be unique within the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the guest policy. Length of the description is limited to 1024 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The etag for this guest policy. If this is provided on update, it must match the server's etag.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="packagerepositories_nodejs">
 <a href="#packagerepositories_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Repositories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackagerepository">Guest<wbr>Policies<wbr>Package<wbr>Repository[]</a></span>
     </dt>
@@ -1231,46 +1208,41 @@ This is done before any other configs are applied so they can use these repos.
 Package repositories are only configured if the corresponding package manager(s) are available.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="packages_nodejs">
 <a href="#packages_nodejs" style="color: inherit; text-decoration: inherit;">packages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackage">Guest<wbr>Policies<wbr>Package[]</a></span>
     </dt>
     <dd>{{% md %}}The software packages to be managed by this policy.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recipes_nodejs">
 <a href="#recipes_nodejs" style="color: inherit; text-decoration: inherit;">recipes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipe">Guest<wbr>Policies<wbr>Recipe[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Recipes to install on the VM instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1279,7 +1251,7 @@ Structure is documented below.
             title="Required">
         <span id="assignment_python">
 <a href="#assignment_python" style="color: inherit; text-decoration: inherit;">assignment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesassignment">Guest<wbr>Policies<wbr>Assignment<wbr>Args</a></span>
     </dt>
@@ -1292,14 +1264,13 @@ For more information, see how the service
 [handles assignment conflicts](https://cloud.google.com/compute/docs/os-config-management/create-guest-policy#handle-conflicts).
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="guest_policy_id_python">
 <a href="#guest_policy_id_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>policy_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The logical name of the guest policy in the project with the following restrictions:
 * Must contain only lowercase letters, numbers, and hyphens.
@@ -1308,34 +1279,31 @@ Structure is documented below.
 * Must end with a number or a letter.
 * Must be unique within the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the guest policy. Length of the description is limited to 1024 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The etag for this guest policy. If this is provided on update, it must match the server's etag.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="package_repositories_python">
 <a href="#package_repositories_python" style="color: inherit; text-decoration: inherit;">package_<wbr>repositories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackagerepository">Sequence[Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Args]</a></span>
     </dt>
@@ -1344,55 +1312,46 @@ This is done before any other configs are applied so they can use these repos.
 Package repositories are only configured if the corresponding package manager(s) are available.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="packages_python">
 <a href="#packages_python" style="color: inherit; text-decoration: inherit;">packages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackage">Sequence[Guest<wbr>Policies<wbr>Package<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The software packages to be managed by this policy.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recipes_python">
 <a href="#recipes_python" style="color: inherit; text-decoration: inherit;">recipes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipe">Sequence[Guest<wbr>Policies<wbr>Recipe<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Recipes to install on the VM instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the GuestPolicies resource produces the following output properties:
-
 
 
 
@@ -1403,53 +1362,48 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="createtime_csharp">
 <a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time this guest policy was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example:
 "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
 Names are also used to identify resources which helps to determine whether guest policies have conflicts.
 This means that requests to create multiple recipes with the same name and version are rejected since they
 could potentially have conflicting assignments.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="updatetime_csharp">
 <a href="#updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last time this guest policy was updated. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example:
 "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1458,53 +1412,48 @@ could potentially have conflicting assignments.
             title="">
         <span id="createtime_go">
 <a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time this guest policy was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example:
 "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
 Names are also used to identify resources which helps to determine whether guest policies have conflicts.
 This means that requests to create multiple recipes with the same name and version are rejected since they
 could potentially have conflicting assignments.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="updatetime_go">
 <a href="#updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last time this guest policy was updated. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example:
 "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1513,53 +1462,48 @@ could potentially have conflicting assignments.
             title="">
         <span id="createtime_nodejs">
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time this guest policy was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example:
 "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
 Names are also used to identify resources which helps to determine whether guest policies have conflicts.
 This means that requests to create multiple recipes with the same name and version are rejected since they
 could potentially have conflicting assignments.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="updatetime_nodejs">
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last time this guest policy was updated. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example:
 "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1568,56 +1512,48 @@ could potentially have conflicting assignments.
             title="">
         <span id="create_time_python">
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time this guest policy was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example:
 "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
 Names are also used to identify resources which helps to determine whether guest policies have conflicts.
 This means that requests to create multiple recipes with the same name and version are rejected since they
 could potentially have conflicting assignments.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="update_time_python">
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last time this guest policy was updated. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example:
 "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1627,7 +1563,7 @@ Get an existing GuestPolicies resource's state with the given name, ID, and opti
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/osconfig/#GuestPoliciesState">GuestPoliciesState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/osconfig/#GuestPolicies">GuestPolicies</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/osconfig/#GuestPoliciesState">GuestPoliciesState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/osconfig/#GuestPolicies">GuestPolicies</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1636,11 +1572,11 @@ Get an existing GuestPolicies resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGuestPolicies<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesState">GuestPoliciesState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPolicies">GuestPolicies</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGuestPolicies<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesState">GuestPoliciesState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPolicies">GuestPolicies</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.GuestPolicies.html">GuestPolicies</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.GuestPoliciesState.html">GuestPoliciesState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.GuestPolicies.html">GuestPolicies</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.GuestPoliciesState.html">GuestPoliciesState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1742,7 +1678,6 @@ Get an existing GuestPolicies resource's state with the given name, ID, and opti
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1750,7 +1685,7 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_assignment_csharp">
 <a href="#state_assignment_csharp" style="color: inherit; text-decoration: inherit;">Assignment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesassignment">Guest<wbr>Policies<wbr>Assignment<wbr>Args</a></span>
     </dt>
@@ -1763,48 +1698,44 @@ For more information, see how the service
 [handles assignment conflicts](https://cloud.google.com/compute/docs/os-config-management/create-guest-policy#handle-conflicts).
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_createtime_csharp">
 <a href="#state_createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time this guest policy was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example:
 "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the guest policy. Length of the description is limited to 1024 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_etag_csharp">
 <a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The etag for this guest policy. If this is provided on update, it must match the server's etag.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_guestpolicyid_csharp">
 <a href="#state_guestpolicyid_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The logical name of the guest policy in the project with the following restrictions:
 * Must contain only lowercase letters, numbers, and hyphens.
@@ -1813,26 +1744,24 @@ Structure is documented below.
 * Must end with a number or a letter.
 * Must be unique within the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
 Names are also used to identify resources which helps to determine whether guest policies have conflicts.
 This means that requests to create multiple recipes with the same name and version are rejected since they
 could potentially have conflicting assignments.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_packagerepositories_csharp">
 <a href="#state_packagerepositories_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Repositories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackagerepository">List&lt;Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Args&gt;</a></span>
     </dt>
@@ -1841,58 +1770,52 @@ This is done before any other configs are applied so they can use these repos.
 Package repositories are only configured if the corresponding package manager(s) are available.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_packages_csharp">
 <a href="#state_packages_csharp" style="color: inherit; text-decoration: inherit;">Packages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackage">List&lt;Guest<wbr>Policies<wbr>Package<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The software packages to be managed by this policy.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_recipes_csharp">
 <a href="#state_recipes_csharp" style="color: inherit; text-decoration: inherit;">Recipes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipe">List&lt;Guest<wbr>Policies<wbr>Recipe<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Recipes to install on the VM instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_csharp">
 <a href="#state_updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last time this guest policy was updated. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example:
 "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1901,7 +1824,7 @@ Structure is documented below.
             title="Optional">
         <span id="state_assignment_go">
 <a href="#state_assignment_go" style="color: inherit; text-decoration: inherit;">Assignment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesassignment">Guest<wbr>Policies<wbr>Assignment</a></span>
     </dt>
@@ -1914,48 +1837,44 @@ For more information, see how the service
 [handles assignment conflicts](https://cloud.google.com/compute/docs/os-config-management/create-guest-policy#handle-conflicts).
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_createtime_go">
 <a href="#state_createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time this guest policy was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example:
 "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the guest policy. Length of the description is limited to 1024 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_etag_go">
 <a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The etag for this guest policy. If this is provided on update, it must match the server's etag.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_guestpolicyid_go">
 <a href="#state_guestpolicyid_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The logical name of the guest policy in the project with the following restrictions:
 * Must contain only lowercase letters, numbers, and hyphens.
@@ -1964,26 +1883,24 @@ Structure is documented below.
 * Must end with a number or a letter.
 * Must be unique within the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
 Names are also used to identify resources which helps to determine whether guest policies have conflicts.
 This means that requests to create multiple recipes with the same name and version are rejected since they
 could potentially have conflicting assignments.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_packagerepositories_go">
 <a href="#state_packagerepositories_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Repositories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackagerepository">[]Guest<wbr>Policies<wbr>Package<wbr>Repository</a></span>
     </dt>
@@ -1992,58 +1909,52 @@ This is done before any other configs are applied so they can use these repos.
 Package repositories are only configured if the corresponding package manager(s) are available.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_packages_go">
 <a href="#state_packages_go" style="color: inherit; text-decoration: inherit;">Packages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackage">[]Guest<wbr>Policies<wbr>Package</a></span>
     </dt>
     <dd>{{% md %}}The software packages to be managed by this policy.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_recipes_go">
 <a href="#state_recipes_go" style="color: inherit; text-decoration: inherit;">Recipes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipe">[]Guest<wbr>Policies<wbr>Recipe</a></span>
     </dt>
     <dd>{{% md %}}A list of Recipes to install on the VM instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_go">
 <a href="#state_updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last time this guest policy was updated. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example:
 "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2052,7 +1963,7 @@ Structure is documented below.
             title="Optional">
         <span id="state_assignment_nodejs">
 <a href="#state_assignment_nodejs" style="color: inherit; text-decoration: inherit;">assignment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesassignment">Guest<wbr>Policies<wbr>Assignment</a></span>
     </dt>
@@ -2065,48 +1976,44 @@ For more information, see how the service
 [handles assignment conflicts](https://cloud.google.com/compute/docs/os-config-management/create-guest-policy#handle-conflicts).
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_createtime_nodejs">
 <a href="#state_createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time this guest policy was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example:
 "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the guest policy. Length of the description is limited to 1024 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_etag_nodejs">
 <a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The etag for this guest policy. If this is provided on update, it must match the server's etag.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_guestpolicyid_nodejs">
 <a href="#state_guestpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The logical name of the guest policy in the project with the following restrictions:
 * Must contain only lowercase letters, numbers, and hyphens.
@@ -2115,26 +2022,24 @@ Structure is documented below.
 * Must end with a number or a letter.
 * Must be unique within the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
 Names are also used to identify resources which helps to determine whether guest policies have conflicts.
 This means that requests to create multiple recipes with the same name and version are rejected since they
 could potentially have conflicting assignments.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_packagerepositories_nodejs">
 <a href="#state_packagerepositories_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Repositories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackagerepository">Guest<wbr>Policies<wbr>Package<wbr>Repository[]</a></span>
     </dt>
@@ -2143,58 +2048,52 @@ This is done before any other configs are applied so they can use these repos.
 Package repositories are only configured if the corresponding package manager(s) are available.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_packages_nodejs">
 <a href="#state_packages_nodejs" style="color: inherit; text-decoration: inherit;">packages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackage">Guest<wbr>Policies<wbr>Package[]</a></span>
     </dt>
     <dd>{{% md %}}The software packages to be managed by this policy.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_recipes_nodejs">
 <a href="#state_recipes_nodejs" style="color: inherit; text-decoration: inherit;">recipes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipe">Guest<wbr>Policies<wbr>Recipe[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Recipes to install on the VM instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_nodejs">
 <a href="#state_updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last time this guest policy was updated. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example:
 "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2203,7 +2102,7 @@ Structure is documented below.
             title="Optional">
         <span id="state_assignment_python">
 <a href="#state_assignment_python" style="color: inherit; text-decoration: inherit;">assignment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesassignment">Guest<wbr>Policies<wbr>Assignment<wbr>Args</a></span>
     </dt>
@@ -2216,48 +2115,44 @@ For more information, see how the service
 [handles assignment conflicts](https://cloud.google.com/compute/docs/os-config-management/create-guest-policy#handle-conflicts).
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_create_time_python">
 <a href="#state_create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time this guest policy was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example:
 "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the guest policy. Length of the description is limited to 1024 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_etag_python">
 <a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The etag for this guest policy. If this is provided on update, it must match the server's etag.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_guest_policy_id_python">
 <a href="#state_guest_policy_id_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>policy_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The logical name of the guest policy in the project with the following restrictions:
 * Must contain only lowercase letters, numbers, and hyphens.
@@ -2266,26 +2161,24 @@ Structure is documented below.
 * Must end with a number or a letter.
 * Must be unique within the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
 Names are also used to identify resources which helps to determine whether guest policies have conflicts.
 This means that requests to create multiple recipes with the same name and version are rejected since they
 could potentially have conflicting assignments.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_package_repositories_python">
 <a href="#state_package_repositories_python" style="color: inherit; text-decoration: inherit;">package_<wbr>repositories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackagerepository">Sequence[Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Args]</a></span>
     </dt>
@@ -2294,55 +2187,50 @@ This is done before any other configs are applied so they can use these repos.
 Package repositories are only configured if the corresponding package manager(s) are available.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_packages_python">
 <a href="#state_packages_python" style="color: inherit; text-decoration: inherit;">packages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackage">Sequence[Guest<wbr>Policies<wbr>Package<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The software packages to be managed by this policy.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_recipes_python">
 <a href="#state_recipes_python" style="color: inherit; text-decoration: inherit;">recipes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipe">Sequence[Guest<wbr>Policies<wbr>Recipe<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Recipes to install on the VM instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_update_time_python">
 <a href="#state_update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last time this guest policy was updated. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example:
 "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -2351,11 +2239,8 @@ Structure is documented below.
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="guestpoliciesassignment">Guest<wbr>Policies<wbr>Assignment</h4>
@@ -2366,11 +2251,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesAssignmentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesAssignmentOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesAssignmentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesAssignment.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2380,7 +2264,7 @@ Structure is documented below.
             title="Optional">
         <span id="grouplabels_csharp">
 <a href="#grouplabels_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesassignmentgrouplabel">List&lt;Guest<wbr>Policies<wbr>Assignment<wbr>Group<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
@@ -2388,28 +2272,26 @@ Structure is documented below.
 for example "env=prod or env=staging".
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancenameprefixes_csharp">
 <a href="#instancenameprefixes_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name<wbr>Prefixes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Targets VM instances whose name starts with one of these prefixes.
 Like labels, this is another way to group VM instances when targeting configs,
 for example prefix="prod-".
 Only supported for project-level policies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instances_csharp">
 <a href="#instances_csharp" style="color: inherit; text-decoration: inherit;">Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Targets any of the instances specified. Instances are specified by their URI in the form
 zones/[ZONE]/instances/[INSTANCE_NAME].
@@ -2417,12 +2299,11 @@ Instance targeting is uncommon and is supported to facilitate the management of 
 by the instance or to target specific VM instances for development and testing.
 Only supported for project-level policies and must reference instances within this project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ostypes_csharp">
 <a href="#ostypes_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesassignmentostype">List&lt;Guest<wbr>Policies<wbr>Assignment<wbr>Os<wbr>Type<wbr>Args&gt;</a></span>
     </dt>
@@ -2430,22 +2311,19 @@ Only supported for project-level policies and must reference instances within th
 VM instances must match all supplied criteria for a given OsType to be included.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zones_csharp">
 <a href="#zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Targets instances in any of these zones. Leave empty to target instances in any zone.
 Zonal targeting is uncommon and is supported to facilitate the management of changes by zone.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2454,7 +2332,7 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
             title="Optional">
         <span id="grouplabels_go">
 <a href="#grouplabels_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesassignmentgrouplabel">[]Guest<wbr>Policies<wbr>Assignment<wbr>Group<wbr>Label</a></span>
     </dt>
@@ -2462,28 +2340,26 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 for example "env=prod or env=staging".
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancenameprefixes_go">
 <a href="#instancenameprefixes_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name<wbr>Prefixes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Targets VM instances whose name starts with one of these prefixes.
 Like labels, this is another way to group VM instances when targeting configs,
 for example prefix="prod-".
 Only supported for project-level policies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instances_go">
 <a href="#instances_go" style="color: inherit; text-decoration: inherit;">Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Targets any of the instances specified. Instances are specified by their URI in the form
 zones/[ZONE]/instances/[INSTANCE_NAME].
@@ -2491,12 +2367,11 @@ Instance targeting is uncommon and is supported to facilitate the management of 
 by the instance or to target specific VM instances for development and testing.
 Only supported for project-level policies and must reference instances within this project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ostypes_go">
 <a href="#ostypes_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesassignmentostype">[]Guest<wbr>Policies<wbr>Assignment<wbr>Os<wbr>Type</a></span>
     </dt>
@@ -2504,22 +2379,19 @@ Only supported for project-level policies and must reference instances within th
 VM instances must match all supplied criteria for a given OsType to be included.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zones_go">
 <a href="#zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Targets instances in any of these zones. Leave empty to target instances in any zone.
 Zonal targeting is uncommon and is supported to facilitate the management of changes by zone.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2528,7 +2400,7 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
             title="Optional">
         <span id="grouplabels_nodejs">
 <a href="#grouplabels_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesassignmentgrouplabel">Guest<wbr>Policies<wbr>Assignment<wbr>Group<wbr>Label[]</a></span>
     </dt>
@@ -2536,28 +2408,26 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 for example "env=prod or env=staging".
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancenameprefixes_nodejs">
 <a href="#instancenameprefixes_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Name<wbr>Prefixes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Targets VM instances whose name starts with one of these prefixes.
 Like labels, this is another way to group VM instances when targeting configs,
 for example prefix="prod-".
 Only supported for project-level policies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instances_nodejs">
 <a href="#instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Targets any of the instances specified. Instances are specified by their URI in the form
 zones/[ZONE]/instances/[INSTANCE_NAME].
@@ -2565,12 +2435,11 @@ Instance targeting is uncommon and is supported to facilitate the management of 
 by the instance or to target specific VM instances for development and testing.
 Only supported for project-level policies and must reference instances within this project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ostypes_nodejs">
 <a href="#ostypes_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesassignmentostype">Guest<wbr>Policies<wbr>Assignment<wbr>Os<wbr>Type[]</a></span>
     </dt>
@@ -2578,22 +2447,19 @@ Only supported for project-level policies and must reference instances within th
 VM instances must match all supplied criteria for a given OsType to be included.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zones_nodejs">
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Targets instances in any of these zones. Leave empty to target instances in any zone.
 Zonal targeting is uncommon and is supported to facilitate the management of changes by zone.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2602,7 +2468,7 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
             title="Optional">
         <span id="group_labels_python">
 <a href="#group_labels_python" style="color: inherit; text-decoration: inherit;">group_<wbr>labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesassignmentgrouplabel">Sequence[Guest<wbr>Policies<wbr>Assignment<wbr>Group<wbr>Label<wbr>Args]</a></span>
     </dt>
@@ -2610,28 +2476,26 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 for example "env=prod or env=staging".
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instance_name_prefixes_python">
 <a href="#instance_name_prefixes_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>name_<wbr>prefixes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Targets VM instances whose name starts with one of these prefixes.
 Like labels, this is another way to group VM instances when targeting configs,
 for example prefix="prod-".
 Only supported for project-level policies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instances_python">
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Targets any of the instances specified. Instances are specified by their URI in the form
 zones/[ZONE]/instances/[INSTANCE_NAME].
@@ -2639,12 +2503,11 @@ Instance targeting is uncommon and is supported to facilitate the management of 
 by the instance or to target specific VM instances for development and testing.
 Only supported for project-level policies and must reference instances within this project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="os_types_python">
 <a href="#os_types_python" style="color: inherit; text-decoration: inherit;">os_<wbr>types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesassignmentostype">Sequence[Guest<wbr>Policies<wbr>Assignment<wbr>Os<wbr>Type<wbr>Args]</a></span>
     </dt>
@@ -2652,25 +2515,19 @@ Only supported for project-level policies and must reference instances within th
 VM instances must match all supplied criteria for a given OsType to be included.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zones_python">
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Targets instances in any of these zones. Leave empty to target instances in any zone.
 Zonal targeting is uncommon and is supported to facilitate the management of changes by zone.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="guestpoliciesassignmentgrouplabel">Guest<wbr>Policies<wbr>Assignment<wbr>Group<wbr>Label</h4>
 {{% choosable language nodejs %}}
@@ -2680,11 +2537,10 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesAssignmentGroupLabelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesAssignmentGroupLabelOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesAssignmentGroupLabelArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesAssignmentGroupLabel.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2694,16 +2550,14 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
             title="Required">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Google Compute Engine instance labels that must be present for an instance to be included in this assignment group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2712,16 +2566,14 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
             title="Required">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Google Compute Engine instance labels that must be present for an instance to be included in this assignment group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2730,16 +2582,14 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
             title="Required">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Google Compute Engine instance labels that must be present for an instance to be included in this assignment group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2748,19 +2598,14 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
             title="Required">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Google Compute Engine instance labels that must be present for an instance to be included in this assignment group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="guestpoliciesassignmentostype">Guest<wbr>Policies<wbr>Assignment<wbr>Os<wbr>Type</h4>
 {{% choosable language nodejs %}}
@@ -2770,11 +2615,10 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesAssignmentOsTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesAssignmentOsTypeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesAssignmentOsTypeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesAssignmentOsType.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2784,38 +2628,34 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
             title="Optional">
         <span id="osarchitecture_csharp">
 <a href="#osarchitecture_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Architecture</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Targets VM instances with OS Inventory enabled and having the following OS architecture.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="osshortname_csharp">
 <a href="#osshortname_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Short<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Targets VM instances with OS Inventory enabled and having the following OS short name, for example "debian" or "windows".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="osversion_csharp">
 <a href="#osversion_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Targets VM instances with OS Inventory enabled and having the following following OS version.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2824,38 +2664,34 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
             title="Optional">
         <span id="osarchitecture_go">
 <a href="#osarchitecture_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Architecture</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Targets VM instances with OS Inventory enabled and having the following OS architecture.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="osshortname_go">
 <a href="#osshortname_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Short<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Targets VM instances with OS Inventory enabled and having the following OS short name, for example "debian" or "windows".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="osversion_go">
 <a href="#osversion_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Targets VM instances with OS Inventory enabled and having the following following OS version.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2864,38 +2700,34 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
             title="Optional">
         <span id="osarchitecture_nodejs">
 <a href="#osarchitecture_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Architecture</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Targets VM instances with OS Inventory enabled and having the following OS architecture.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="osshortname_nodejs">
 <a href="#osshortname_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Short<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Targets VM instances with OS Inventory enabled and having the following OS short name, for example "debian" or "windows".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="osversion_nodejs">
 <a href="#osversion_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Targets VM instances with OS Inventory enabled and having the following following OS version.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2904,41 +2736,34 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
             title="Optional">
         <span id="os_architecture_python">
 <a href="#os_architecture_python" style="color: inherit; text-decoration: inherit;">os_<wbr>architecture</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Targets VM instances with OS Inventory enabled and having the following OS architecture.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="os_short_name_python">
 <a href="#os_short_name_python" style="color: inherit; text-decoration: inherit;">os_<wbr>short_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Targets VM instances with OS Inventory enabled and having the following OS short name, for example "debian" or "windows".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="os_version_python">
 <a href="#os_version_python" style="color: inherit; text-decoration: inherit;">os_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Targets VM instances with OS Inventory enabled and having the following following OS version.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="guestpoliciespackage">Guest<wbr>Policies<wbr>Package</h4>
 {{% choosable language nodejs %}}
@@ -2948,11 +2773,10 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesPackageArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesPackageOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesPackageArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesPackage.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2962,23 +2786,22 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
 Names are also used to identify resources which helps to determine whether guest policies have conflicts.
 This means that requests to create multiple recipes with the same name and version are rejected since they
 could potentially have conflicting assignments.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="desiredstate_csharp">
 <a href="#desiredstate_csharp" style="color: inherit; text-decoration: inherit;">Desired<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default is INSTALLED. The desired state the agent should maintain for this recipe.
 INSTALLED: The software recipe is installed on the instance but won't be updated to new versions.
@@ -2988,14 +2811,13 @@ REMOVE: Remove is unsupported for software recipes and attempts to create or upd
 Default value is `INSTALLED`.
 Possible values are `INSTALLED`, `UPDATED`, and `REMOVED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="manager_csharp">
 <a href="#manager_csharp" style="color: inherit; text-decoration: inherit;">Manager</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of package manager that can be used to install this package. If a system does not have the package manager,
 the package is not installed or removed no error message is returned. By default, or if you specify ANY,
@@ -3005,10 +2827,8 @@ The default behavior is ANY.
 Default value is `ANY`.
 Possible values are `ANY`, `APT`, `YUM`, `ZYPPER`, and `GOO`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3017,23 +2837,22 @@ Possible values are `ANY`, `APT`, `YUM`, `ZYPPER`, and `GOO`.
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
 Names are also used to identify resources which helps to determine whether guest policies have conflicts.
 This means that requests to create multiple recipes with the same name and version are rejected since they
 could potentially have conflicting assignments.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="desiredstate_go">
 <a href="#desiredstate_go" style="color: inherit; text-decoration: inherit;">Desired<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default is INSTALLED. The desired state the agent should maintain for this recipe.
 INSTALLED: The software recipe is installed on the instance but won't be updated to new versions.
@@ -3043,14 +2862,13 @@ REMOVE: Remove is unsupported for software recipes and attempts to create or upd
 Default value is `INSTALLED`.
 Possible values are `INSTALLED`, `UPDATED`, and `REMOVED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="manager_go">
 <a href="#manager_go" style="color: inherit; text-decoration: inherit;">Manager</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of package manager that can be used to install this package. If a system does not have the package manager,
 the package is not installed or removed no error message is returned. By default, or if you specify ANY,
@@ -3060,10 +2878,8 @@ The default behavior is ANY.
 Default value is `ANY`.
 Possible values are `ANY`, `APT`, `YUM`, `ZYPPER`, and `GOO`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3072,23 +2888,22 @@ Possible values are `ANY`, `APT`, `YUM`, `ZYPPER`, and `GOO`.
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
 Names are also used to identify resources which helps to determine whether guest policies have conflicts.
 This means that requests to create multiple recipes with the same name and version are rejected since they
 could potentially have conflicting assignments.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="desiredstate_nodejs">
 <a href="#desiredstate_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default is INSTALLED. The desired state the agent should maintain for this recipe.
 INSTALLED: The software recipe is installed on the instance but won't be updated to new versions.
@@ -3098,14 +2913,13 @@ REMOVE: Remove is unsupported for software recipes and attempts to create or upd
 Default value is `INSTALLED`.
 Possible values are `INSTALLED`, `UPDATED`, and `REMOVED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="manager_nodejs">
 <a href="#manager_nodejs" style="color: inherit; text-decoration: inherit;">manager</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of package manager that can be used to install this package. If a system does not have the package manager,
 the package is not installed or removed no error message is returned. By default, or if you specify ANY,
@@ -3115,10 +2929,8 @@ The default behavior is ANY.
 Default value is `ANY`.
 Possible values are `ANY`, `APT`, `YUM`, `ZYPPER`, and `GOO`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3127,23 +2939,22 @@ Possible values are `ANY`, `APT`, `YUM`, `ZYPPER`, and `GOO`.
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
 Names are also used to identify resources which helps to determine whether guest policies have conflicts.
 This means that requests to create multiple recipes with the same name and version are rejected since they
 could potentially have conflicting assignments.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="desired_state_python">
 <a href="#desired_state_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default is INSTALLED. The desired state the agent should maintain for this recipe.
 INSTALLED: The software recipe is installed on the instance but won't be updated to new versions.
@@ -3153,14 +2964,13 @@ REMOVE: Remove is unsupported for software recipes and attempts to create or upd
 Default value is `INSTALLED`.
 Possible values are `INSTALLED`, `UPDATED`, and `REMOVED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="manager_python">
 <a href="#manager_python" style="color: inherit; text-decoration: inherit;">manager</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of package manager that can be used to install this package. If a system does not have the package manager,
 the package is not installed or removed no error message is returned. By default, or if you specify ANY,
@@ -3170,13 +2980,8 @@ The default behavior is ANY.
 Default value is `ANY`.
 Possible values are `ANY`, `APT`, `YUM`, `ZYPPER`, and `GOO`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="guestpoliciespackagerepository">Guest<wbr>Policies<wbr>Package<wbr>Repository</h4>
 {{% choosable language nodejs %}}
@@ -3186,11 +2991,10 @@ Possible values are `ANY`, `APT`, `YUM`, `ZYPPER`, and `GOO`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesPackageRepositoryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesPackageRepositoryOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesPackageRepositoryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesPackageRepository.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3200,53 +3004,48 @@ Possible values are `ANY`, `APT`, `YUM`, `ZYPPER`, and `GOO`.
             title="Optional">
         <span id="apt_csharp">
 <a href="#apt_csharp" style="color: inherit; text-decoration: inherit;">Apt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackagerepositoryapt">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Apt<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Apt Repository.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="goo_csharp">
 <a href="#goo_csharp" style="color: inherit; text-decoration: inherit;">Goo</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackagerepositorygoo">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Goo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Goo Repository.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="yum_csharp">
 <a href="#yum_csharp" style="color: inherit; text-decoration: inherit;">Yum</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackagerepositoryyum">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Yum<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Yum Repository.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zypper_csharp">
 <a href="#zypper_csharp" style="color: inherit; text-decoration: inherit;">Zypper</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackagerepositoryzypper">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Zypper<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Zypper Repository.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3255,53 +3054,48 @@ Structure is documented below.
             title="Optional">
         <span id="apt_go">
 <a href="#apt_go" style="color: inherit; text-decoration: inherit;">Apt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackagerepositoryapt">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Apt</a></span>
     </dt>
     <dd>{{% md %}}An Apt Repository.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="goo_go">
 <a href="#goo_go" style="color: inherit; text-decoration: inherit;">Goo</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackagerepositorygoo">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Goo</a></span>
     </dt>
     <dd>{{% md %}}A Goo Repository.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="yum_go">
 <a href="#yum_go" style="color: inherit; text-decoration: inherit;">Yum</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackagerepositoryyum">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Yum</a></span>
     </dt>
     <dd>{{% md %}}A Yum Repository.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zypper_go">
 <a href="#zypper_go" style="color: inherit; text-decoration: inherit;">Zypper</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackagerepositoryzypper">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Zypper</a></span>
     </dt>
     <dd>{{% md %}}A Zypper Repository.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3310,53 +3104,48 @@ Structure is documented below.
             title="Optional">
         <span id="apt_nodejs">
 <a href="#apt_nodejs" style="color: inherit; text-decoration: inherit;">apt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackagerepositoryapt">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Apt</a></span>
     </dt>
     <dd>{{% md %}}An Apt Repository.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="goo_nodejs">
 <a href="#goo_nodejs" style="color: inherit; text-decoration: inherit;">goo</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackagerepositorygoo">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Goo</a></span>
     </dt>
     <dd>{{% md %}}A Goo Repository.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="yum_nodejs">
 <a href="#yum_nodejs" style="color: inherit; text-decoration: inherit;">yum</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackagerepositoryyum">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Yum</a></span>
     </dt>
     <dd>{{% md %}}A Yum Repository.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zypper_nodejs">
 <a href="#zypper_nodejs" style="color: inherit; text-decoration: inherit;">zypper</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackagerepositoryzypper">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Zypper</a></span>
     </dt>
     <dd>{{% md %}}A Zypper Repository.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3365,56 +3154,48 @@ Structure is documented below.
             title="Optional">
         <span id="apt_python">
 <a href="#apt_python" style="color: inherit; text-decoration: inherit;">apt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackagerepositoryapt">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Apt<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Apt Repository.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="goo_python">
 <a href="#goo_python" style="color: inherit; text-decoration: inherit;">goo</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackagerepositorygoo">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Goo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Goo Repository.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="yum_python">
 <a href="#yum_python" style="color: inherit; text-decoration: inherit;">yum</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackagerepositoryyum">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Yum<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Yum Repository.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zypper_python">
 <a href="#zypper_python" style="color: inherit; text-decoration: inherit;">zypper</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciespackagerepositoryzypper">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Zypper<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Zypper Repository.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="guestpoliciespackagerepositoryapt">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Apt</h4>
 {{% choosable language nodejs %}}
@@ -3424,11 +3205,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesPackageRepositoryAptArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesPackageRepositoryAptOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesPackageRepositoryAptArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesPackageRepositoryApt.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3438,63 +3218,57 @@ Structure is documented below.
             title="Required">
         <span id="components_csharp">
 <a href="#components_csharp" style="color: inherit; text-decoration: inherit;">Components</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of components for this repository. Must contain at least one item.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="distribution_csharp">
 <a href="#distribution_csharp" style="color: inherit; text-decoration: inherit;">Distribution</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Distribution of this repository.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="uri_csharp">
 <a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="archivetype_csharp">
 <a href="#archivetype_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of archive files in this repository. The default behavior is DEB.
 Default value is `DEB`.
 Possible values are `DEB` and `DEB_SRC`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gpgkey_csharp">
 <a href="#gpgkey_csharp" style="color: inherit; text-decoration: inherit;">Gpg<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the key file for this repository. The agent maintains a keyring at
 /etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg containing all the keys in any applied guest policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3503,63 +3277,57 @@ Possible values are `DEB` and `DEB_SRC`.
             title="Required">
         <span id="components_go">
 <a href="#components_go" style="color: inherit; text-decoration: inherit;">Components</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of components for this repository. Must contain at least one item.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="distribution_go">
 <a href="#distribution_go" style="color: inherit; text-decoration: inherit;">Distribution</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Distribution of this repository.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="uri_go">
 <a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="archivetype_go">
 <a href="#archivetype_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of archive files in this repository. The default behavior is DEB.
 Default value is `DEB`.
 Possible values are `DEB` and `DEB_SRC`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gpgkey_go">
 <a href="#gpgkey_go" style="color: inherit; text-decoration: inherit;">Gpg<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the key file for this repository. The agent maintains a keyring at
 /etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg containing all the keys in any applied guest policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3568,63 +3336,57 @@ Possible values are `DEB` and `DEB_SRC`.
             title="Required">
         <span id="components_nodejs">
 <a href="#components_nodejs" style="color: inherit; text-decoration: inherit;">components</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of components for this repository. Must contain at least one item.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="distribution_nodejs">
 <a href="#distribution_nodejs" style="color: inherit; text-decoration: inherit;">distribution</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Distribution of this repository.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="uri_nodejs">
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="archivetype_nodejs">
 <a href="#archivetype_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of archive files in this repository. The default behavior is DEB.
 Default value is `DEB`.
 Possible values are `DEB` and `DEB_SRC`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gpgkey_nodejs">
 <a href="#gpgkey_nodejs" style="color: inherit; text-decoration: inherit;">gpg<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the key file for this repository. The agent maintains a keyring at
 /etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg containing all the keys in any applied guest policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3633,66 +3395,57 @@ Possible values are `DEB` and `DEB_SRC`.
             title="Required">
         <span id="components_python">
 <a href="#components_python" style="color: inherit; text-decoration: inherit;">components</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of components for this repository. Must contain at least one item.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="distribution_python">
 <a href="#distribution_python" style="color: inherit; text-decoration: inherit;">distribution</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Distribution of this repository.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="uri_python">
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="archive_type_python">
 <a href="#archive_type_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of archive files in this repository. The default behavior is DEB.
 Default value is `DEB`.
 Possible values are `DEB` and `DEB_SRC`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gpg_key_python">
 <a href="#gpg_key_python" style="color: inherit; text-decoration: inherit;">gpg_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of the key file for this repository. The agent maintains a keyring at
 /etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg containing all the keys in any applied guest policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="guestpoliciespackagerepositorygoo">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Goo</h4>
 {{% choosable language nodejs %}}
@@ -3702,11 +3455,10 @@ Possible values are `DEB` and `DEB_SRC`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesPackageRepositoryGooArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesPackageRepositoryGooOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesPackageRepositoryGooArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesPackageRepositoryGoo.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3716,30 +3468,27 @@ Possible values are `DEB` and `DEB_SRC`.
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
 Names are also used to identify resources which helps to determine whether guest policies have conflicts.
 This means that requests to create multiple recipes with the same name and version are rejected since they
 could potentially have conflicting assignments.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The url of the repository.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3748,30 +3497,27 @@ could potentially have conflicting assignments.
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
 Names are also used to identify resources which helps to determine whether guest policies have conflicts.
 This means that requests to create multiple recipes with the same name and version are rejected since they
 could potentially have conflicting assignments.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The url of the repository.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3780,30 +3526,27 @@ could potentially have conflicting assignments.
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
 Names are also used to identify resources which helps to determine whether guest policies have conflicts.
 This means that requests to create multiple recipes with the same name and version are rejected since they
 could potentially have conflicting assignments.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The url of the repository.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3812,33 +3555,27 @@ could potentially have conflicting assignments.
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
 Names are also used to identify resources which helps to determine whether guest policies have conflicts.
 This means that requests to create multiple recipes with the same name and version are rejected since they
 could potentially have conflicting assignments.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The url of the repository.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="guestpoliciespackagerepositoryyum">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Yum</h4>
 {{% choosable language nodejs %}}
@@ -3848,11 +3585,10 @@ could potentially have conflicting assignments.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesPackageRepositoryYumArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesPackageRepositoryYumOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesPackageRepositoryYumArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesPackageRepositoryYum.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3862,50 +3598,45 @@ could potentially have conflicting assignments.
             title="Required">
         <span id="baseurl_csharp">
 <a href="#baseurl_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the repository directory.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the artifact, which the installation and update steps of this recipe can reference.
 Artifacts in a recipe cannot have the same id.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the repository.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gpgkeys_csharp">
 <a href="#gpgkeys_csharp" style="color: inherit; text-decoration: inherit;">Gpg<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}URIs of GPG keys.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3914,50 +3645,45 @@ Artifacts in a recipe cannot have the same id.
             title="Required">
         <span id="baseurl_go">
 <a href="#baseurl_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the repository directory.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the artifact, which the installation and update steps of this recipe can reference.
 Artifacts in a recipe cannot have the same id.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the repository.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gpgkeys_go">
 <a href="#gpgkeys_go" style="color: inherit; text-decoration: inherit;">Gpg<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}URIs of GPG keys.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3966,50 +3692,45 @@ Artifacts in a recipe cannot have the same id.
             title="Required">
         <span id="baseurl_nodejs">
 <a href="#baseurl_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the repository directory.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the artifact, which the installation and update steps of this recipe can reference.
 Artifacts in a recipe cannot have the same id.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the repository.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gpgkeys_nodejs">
 <a href="#gpgkeys_nodejs" style="color: inherit; text-decoration: inherit;">gpg<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}URIs of GPG keys.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4018,53 +3739,45 @@ Artifacts in a recipe cannot have the same id.
             title="Required">
         <span id="base_url_python">
 <a href="#base_url_python" style="color: inherit; text-decoration: inherit;">base_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the repository directory.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of the artifact, which the installation and update steps of this recipe can reference.
 Artifacts in a recipe cannot have the same id.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the repository.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gpg_keys_python">
 <a href="#gpg_keys_python" style="color: inherit; text-decoration: inherit;">gpg_<wbr>keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}URIs of GPG keys.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="guestpoliciespackagerepositoryzypper">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Zypper</h4>
 {{% choosable language nodejs %}}
@@ -4074,11 +3787,10 @@ Artifacts in a recipe cannot have the same id.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesPackageRepositoryZypperArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesPackageRepositoryZypperOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesPackageRepositoryZypperArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesPackageRepositoryZypper.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4088,50 +3800,45 @@ Artifacts in a recipe cannot have the same id.
             title="Required">
         <span id="baseurl_csharp">
 <a href="#baseurl_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the repository directory.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the artifact, which the installation and update steps of this recipe can reference.
 Artifacts in a recipe cannot have the same id.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the repository.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gpgkeys_csharp">
 <a href="#gpgkeys_csharp" style="color: inherit; text-decoration: inherit;">Gpg<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}URIs of GPG keys.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4140,50 +3847,45 @@ Artifacts in a recipe cannot have the same id.
             title="Required">
         <span id="baseurl_go">
 <a href="#baseurl_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the repository directory.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the artifact, which the installation and update steps of this recipe can reference.
 Artifacts in a recipe cannot have the same id.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the repository.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gpgkeys_go">
 <a href="#gpgkeys_go" style="color: inherit; text-decoration: inherit;">Gpg<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}URIs of GPG keys.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4192,50 +3894,45 @@ Artifacts in a recipe cannot have the same id.
             title="Required">
         <span id="baseurl_nodejs">
 <a href="#baseurl_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the repository directory.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the artifact, which the installation and update steps of this recipe can reference.
 Artifacts in a recipe cannot have the same id.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the repository.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gpgkeys_nodejs">
 <a href="#gpgkeys_nodejs" style="color: inherit; text-decoration: inherit;">gpg<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}URIs of GPG keys.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4244,53 +3941,45 @@ Artifacts in a recipe cannot have the same id.
             title="Required">
         <span id="base_url_python">
 <a href="#base_url_python" style="color: inherit; text-decoration: inherit;">base_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the repository directory.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of the artifact, which the installation and update steps of this recipe can reference.
 Artifacts in a recipe cannot have the same id.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the repository.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gpg_keys_python">
 <a href="#gpg_keys_python" style="color: inherit; text-decoration: inherit;">gpg_<wbr>keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}URIs of GPG keys.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="guestpoliciesrecipe">Guest<wbr>Policies<wbr>Recipe</h4>
 {{% choosable language nodejs %}}
@@ -4300,11 +3989,10 @@ Artifacts in a recipe cannot have the same id.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipe.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4314,35 +4002,33 @@ Artifacts in a recipe cannot have the same id.
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
 Names are also used to identify resources which helps to determine whether guest policies have conflicts.
 This means that requests to create multiple recipes with the same name and version are rejected since they
 could potentially have conflicting assignments.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifacts_csharp">
 <a href="#artifacts_csharp" style="color: inherit; text-decoration: inherit;">Artifacts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeartifact">List&lt;Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Resources available to be used in the steps in the recipe.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="desiredstate_csharp">
 <a href="#desiredstate_csharp" style="color: inherit; text-decoration: inherit;">Desired<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default is INSTALLED. The desired state the agent should maintain for this recipe.
 INSTALLED: The software recipe is installed on the instance but won't be updated to new versions.
@@ -4352,12 +4038,11 @@ REMOVE: Remove is unsupported for software recipes and attempts to create or upd
 Default value is `INSTALLED`.
 Possible values are `INSTALLED`, `UPDATED`, and `REMOVED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="installsteps_csharp">
 <a href="#installsteps_csharp" style="color: inherit; text-decoration: inherit;">Install<wbr>Steps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallstep">List&lt;Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Args&gt;</a></span>
     </dt>
@@ -4365,12 +4050,11 @@ Possible values are `INSTALLED`, `UPDATED`, and `REMOVED`.
 Any steps taken (including partially completed steps) are not rolled back.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="updatesteps_csharp">
 <a href="#updatesteps_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Steps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatestep">List&lt;Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Args&gt;</a></span>
     </dt>
@@ -4378,21 +4062,18 @@ Structure is documented below.
 Any steps taken (including partially completed steps) are not rolled back.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of this software recipe. Version can be up to 4 period separated numbers (e.g. 12.34.56.78).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4401,35 +4082,33 @@ Structure is documented below.
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
 Names are also used to identify resources which helps to determine whether guest policies have conflicts.
 This means that requests to create multiple recipes with the same name and version are rejected since they
 could potentially have conflicting assignments.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifacts_go">
 <a href="#artifacts_go" style="color: inherit; text-decoration: inherit;">Artifacts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeartifact">[]Guest<wbr>Policies<wbr>Recipe<wbr>Artifact</a></span>
     </dt>
     <dd>{{% md %}}Resources available to be used in the steps in the recipe.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="desiredstate_go">
 <a href="#desiredstate_go" style="color: inherit; text-decoration: inherit;">Desired<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default is INSTALLED. The desired state the agent should maintain for this recipe.
 INSTALLED: The software recipe is installed on the instance but won't be updated to new versions.
@@ -4439,12 +4118,11 @@ REMOVE: Remove is unsupported for software recipes and attempts to create or upd
 Default value is `INSTALLED`.
 Possible values are `INSTALLED`, `UPDATED`, and `REMOVED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="installsteps_go">
 <a href="#installsteps_go" style="color: inherit; text-decoration: inherit;">Install<wbr>Steps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallstep">[]Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step</a></span>
     </dt>
@@ -4452,12 +4130,11 @@ Possible values are `INSTALLED`, `UPDATED`, and `REMOVED`.
 Any steps taken (including partially completed steps) are not rolled back.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="updatesteps_go">
 <a href="#updatesteps_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Steps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatestep">[]Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step</a></span>
     </dt>
@@ -4465,21 +4142,18 @@ Structure is documented below.
 Any steps taken (including partially completed steps) are not rolled back.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of this software recipe. Version can be up to 4 period separated numbers (e.g. 12.34.56.78).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4488,35 +4162,33 @@ Structure is documented below.
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
 Names are also used to identify resources which helps to determine whether guest policies have conflicts.
 This means that requests to create multiple recipes with the same name and version are rejected since they
 could potentially have conflicting assignments.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifacts_nodejs">
 <a href="#artifacts_nodejs" style="color: inherit; text-decoration: inherit;">artifacts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeartifact">Guest<wbr>Policies<wbr>Recipe<wbr>Artifact[]</a></span>
     </dt>
     <dd>{{% md %}}Resources available to be used in the steps in the recipe.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="desiredstate_nodejs">
 <a href="#desiredstate_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default is INSTALLED. The desired state the agent should maintain for this recipe.
 INSTALLED: The software recipe is installed on the instance but won't be updated to new versions.
@@ -4526,12 +4198,11 @@ REMOVE: Remove is unsupported for software recipes and attempts to create or upd
 Default value is `INSTALLED`.
 Possible values are `INSTALLED`, `UPDATED`, and `REMOVED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="installsteps_nodejs">
 <a href="#installsteps_nodejs" style="color: inherit; text-decoration: inherit;">install<wbr>Steps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallstep">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step[]</a></span>
     </dt>
@@ -4539,12 +4210,11 @@ Possible values are `INSTALLED`, `UPDATED`, and `REMOVED`.
 Any steps taken (including partially completed steps) are not rolled back.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="updatesteps_nodejs">
 <a href="#updatesteps_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Steps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatestep">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step[]</a></span>
     </dt>
@@ -4552,21 +4222,18 @@ Structure is documented below.
 Any steps taken (including partially completed steps) are not rolled back.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of this software recipe. Version can be up to 4 period separated numbers (e.g. 12.34.56.78).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4575,35 +4242,33 @@ Structure is documented below.
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
 Names are also used to identify resources which helps to determine whether guest policies have conflicts.
 This means that requests to create multiple recipes with the same name and version are rejected since they
 could potentially have conflicting assignments.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifacts_python">
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeartifact">Sequence[Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Resources available to be used in the steps in the recipe.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="desired_state_python">
 <a href="#desired_state_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default is INSTALLED. The desired state the agent should maintain for this recipe.
 INSTALLED: The software recipe is installed on the instance but won't be updated to new versions.
@@ -4613,12 +4278,11 @@ REMOVE: Remove is unsupported for software recipes and attempts to create or upd
 Default value is `INSTALLED`.
 Possible values are `INSTALLED`, `UPDATED`, and `REMOVED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="install_steps_python">
 <a href="#install_steps_python" style="color: inherit; text-decoration: inherit;">install_<wbr>steps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallstep">Sequence[Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Args]</a></span>
     </dt>
@@ -4626,12 +4290,11 @@ Possible values are `INSTALLED`, `UPDATED`, and `REMOVED`.
 Any steps taken (including partially completed steps) are not rolled back.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="update_steps_python">
 <a href="#update_steps_python" style="color: inherit; text-decoration: inherit;">update_<wbr>steps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatestep">Sequence[Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Args]</a></span>
     </dt>
@@ -4639,24 +4302,18 @@ Structure is documented below.
 Any steps taken (including partially completed steps) are not rolled back.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of this software recipe. Version can be up to 4 period separated numbers (e.g. 12.34.56.78).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="guestpoliciesrecipeartifact">Guest<wbr>Policies<wbr>Recipe<wbr>Artifact</h4>
 {{% choosable language nodejs %}}
@@ -4666,11 +4323,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeArtifactArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeArtifactOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeArtifactArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeArtifact.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4680,54 +4336,49 @@ Structure is documented below.
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the artifact, which the installation and update steps of this recipe can reference.
 Artifacts in a recipe cannot have the same id.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowinsecure_csharp">
 <a href="#allowinsecure_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Insecure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to false. When false, recipes are subject to validations based on the artifact type:
 Remote: A checksum must be specified, and only protocols with transport-layer security are permitted.
 GCS: An object generation number must be specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gcs_csharp">
 <a href="#gcs_csharp" style="color: inherit; text-decoration: inherit;">Gcs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeartifactgcs">Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Gcs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage artifact.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="remote_csharp">
 <a href="#remote_csharp" style="color: inherit; text-decoration: inherit;">Remote</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeartifactremote">Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Remote<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A generic remote artifact.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4736,54 +4387,49 @@ Structure is documented below.
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the artifact, which the installation and update steps of this recipe can reference.
 Artifacts in a recipe cannot have the same id.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowinsecure_go">
 <a href="#allowinsecure_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Insecure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to false. When false, recipes are subject to validations based on the artifact type:
 Remote: A checksum must be specified, and only protocols with transport-layer security are permitted.
 GCS: An object generation number must be specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gcs_go">
 <a href="#gcs_go" style="color: inherit; text-decoration: inherit;">Gcs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeartifactgcs">Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Gcs</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage artifact.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="remote_go">
 <a href="#remote_go" style="color: inherit; text-decoration: inherit;">Remote</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeartifactremote">Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Remote</a></span>
     </dt>
     <dd>{{% md %}}A generic remote artifact.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4792,54 +4438,49 @@ Structure is documented below.
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the artifact, which the installation and update steps of this recipe can reference.
 Artifacts in a recipe cannot have the same id.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowinsecure_nodejs">
 <a href="#allowinsecure_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Insecure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defaults to false. When false, recipes are subject to validations based on the artifact type:
 Remote: A checksum must be specified, and only protocols with transport-layer security are permitted.
 GCS: An object generation number must be specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gcs_nodejs">
 <a href="#gcs_nodejs" style="color: inherit; text-decoration: inherit;">gcs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeartifactgcs">Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Gcs</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage artifact.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="remote_nodejs">
 <a href="#remote_nodejs" style="color: inherit; text-decoration: inherit;">remote</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeartifactremote">Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Remote</a></span>
     </dt>
     <dd>{{% md %}}A generic remote artifact.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4848,57 +4489,49 @@ Structure is documented below.
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of the artifact, which the installation and update steps of this recipe can reference.
 Artifacts in a recipe cannot have the same id.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allow_insecure_python">
 <a href="#allow_insecure_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>insecure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to false. When false, recipes are subject to validations based on the artifact type:
 Remote: A checksum must be specified, and only protocols with transport-layer security are permitted.
 GCS: An object generation number must be specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gcs_python">
 <a href="#gcs_python" style="color: inherit; text-decoration: inherit;">gcs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeartifactgcs">Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Gcs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage artifact.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="remote_python">
 <a href="#remote_python" style="color: inherit; text-decoration: inherit;">remote</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeartifactremote">Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Remote<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A generic remote artifact.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="guestpoliciesrecipeartifactgcs">Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Gcs</h4>
 {{% choosable language nodejs %}}
@@ -4908,11 +4541,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeArtifactGcsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeArtifactGcsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeArtifactGcsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeArtifactGcs.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4922,41 +4554,37 @@ Structure is documented below.
             title="Optional">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Google Cloud Storage object. Given an example URL: https://storage.googleapis.com/my-bucket/foo/bar#1234567
 this value would be my-bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="generation_csharp">
 <a href="#generation_csharp" style="color: inherit; text-decoration: inherit;">Generation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Must be provided if allowInsecure is false. Generation number of the Google Cloud Storage object.
 https://storage.googleapis.com/my-bucket/foo/bar#1234567 this value would be 1234567.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="object_csharp">
 <a href="#object_csharp" style="color: inherit; text-decoration: inherit;">Object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Google Cloud Storage object. Given an example URL: https://storage.googleapis.com/my-bucket/foo/bar#1234567
 this value would be foo/bar.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4965,41 +4593,37 @@ this value would be foo/bar.
             title="Optional">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Google Cloud Storage object. Given an example URL: https://storage.googleapis.com/my-bucket/foo/bar#1234567
 this value would be my-bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="generation_go">
 <a href="#generation_go" style="color: inherit; text-decoration: inherit;">Generation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Must be provided if allowInsecure is false. Generation number of the Google Cloud Storage object.
 https://storage.googleapis.com/my-bucket/foo/bar#1234567 this value would be 1234567.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="object_go">
 <a href="#object_go" style="color: inherit; text-decoration: inherit;">Object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Google Cloud Storage object. Given an example URL: https://storage.googleapis.com/my-bucket/foo/bar#1234567
 this value would be foo/bar.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5008,41 +4632,37 @@ this value would be foo/bar.
             title="Optional">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Google Cloud Storage object. Given an example URL: https://storage.googleapis.com/my-bucket/foo/bar#1234567
 this value would be my-bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="generation_nodejs">
 <a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Must be provided if allowInsecure is false. Generation number of the Google Cloud Storage object.
 https://storage.googleapis.com/my-bucket/foo/bar#1234567 this value would be 1234567.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="object_nodejs">
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Google Cloud Storage object. Given an example URL: https://storage.googleapis.com/my-bucket/foo/bar#1234567
 this value would be foo/bar.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5051,44 +4671,37 @@ this value would be foo/bar.
             title="Optional">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Bucket of the Google Cloud Storage object. Given an example URL: https://storage.googleapis.com/my-bucket/foo/bar#1234567
 this value would be my-bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="generation_python">
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Must be provided if allowInsecure is false. Generation number of the Google Cloud Storage object.
 https://storage.googleapis.com/my-bucket/foo/bar#1234567 this value would be 1234567.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="object_python">
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Google Cloud Storage object. Given an example URL: https://storage.googleapis.com/my-bucket/foo/bar#1234567
 this value would be foo/bar.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="guestpoliciesrecipeartifactremote">Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Remote</h4>
 {{% choosable language nodejs %}}
@@ -5098,11 +4711,10 @@ this value would be foo/bar.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeArtifactRemoteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeArtifactRemoteOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeArtifactRemoteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeArtifactRemote.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5112,29 +4724,26 @@ this value would be foo/bar.
             title="Optional">
         <span id="checksum_csharp">
 <a href="#checksum_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Sum</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be provided if allowInsecure is false. SHA256 checksum in hex format, to compare to the checksum of the artifact.
 If the checksum is not empty and it doesn't match the artifact then the recipe installation fails before running any
 of the steps.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uri_csharp">
 <a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5143,29 +4752,26 @@ of the steps.
             title="Optional">
         <span id="checksum_go">
 <a href="#checksum_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Sum</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be provided if allowInsecure is false. SHA256 checksum in hex format, to compare to the checksum of the artifact.
 If the checksum is not empty and it doesn't match the artifact then the recipe installation fails before running any
 of the steps.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uri_go">
 <a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5174,29 +4780,26 @@ of the steps.
             title="Optional">
         <span id="checksum_nodejs">
 <a href="#checksum_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Sum</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be provided if allowInsecure is false. SHA256 checksum in hex format, to compare to the checksum of the artifact.
 If the checksum is not empty and it doesn't match the artifact then the recipe installation fails before running any
 of the steps.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uri_nodejs">
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5205,32 +4808,26 @@ of the steps.
             title="Optional">
         <span id="check_sum_python">
 <a href="#check_sum_python" style="color: inherit; text-decoration: inherit;">check_<wbr>sum</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Must be provided if allowInsecure is false. SHA256 checksum in hex format, to compare to the checksum of the artifact.
 If the checksum is not empty and it doesn't match the artifact then the recipe installation fails before running any
 of the steps.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uri_python">
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="guestpoliciesrecipeinstallstep">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step</h4>
 {{% choosable language nodejs %}}
@@ -5240,11 +4837,10 @@ of the steps.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeInstallStepArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeInstallStep.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5254,89 +4850,81 @@ of the steps.
             title="Optional">
         <span id="archiveextraction_csharp">
 <a href="#archiveextraction_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Extraction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallsteparchiveextraction">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Archive<wbr>Extraction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extracts an archive into the specified directory.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dpkginstallation_csharp">
 <a href="#dpkginstallation_csharp" style="color: inherit; text-decoration: inherit;">Dpkg<wbr>Installation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallstepdpkginstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Dpkg<wbr>Installation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Installs a deb file via dpkg.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filecopy_csharp">
 <a href="#filecopy_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Copy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallstepfilecopy">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>File<wbr>Copy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Copies a file onto the instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fileexec_csharp">
 <a href="#fileexec_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Exec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallstepfileexec">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>File<wbr>Exec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Executes an artifact or local file.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="msiinstallation_csharp">
 <a href="#msiinstallation_csharp" style="color: inherit; text-decoration: inherit;">Msi<wbr>Installation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallstepmsiinstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Msi<wbr>Installation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Installs an MSI file.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rpminstallation_csharp">
 <a href="#rpminstallation_csharp" style="color: inherit; text-decoration: inherit;">Rpm<wbr>Installation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallsteprpminstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Rpm<wbr>Installation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Installs an rpm file via the rpm utility.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scriptrun_csharp">
 <a href="#scriptrun_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Run</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallstepscriptrun">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Script<wbr>Run<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Runs commands in a shell.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5345,89 +4933,81 @@ Structure is documented below.
             title="Optional">
         <span id="archiveextraction_go">
 <a href="#archiveextraction_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Extraction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallsteparchiveextraction">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Archive<wbr>Extraction</a></span>
     </dt>
     <dd>{{% md %}}Extracts an archive into the specified directory.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dpkginstallation_go">
 <a href="#dpkginstallation_go" style="color: inherit; text-decoration: inherit;">Dpkg<wbr>Installation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallstepdpkginstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Dpkg<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs a deb file via dpkg.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filecopy_go">
 <a href="#filecopy_go" style="color: inherit; text-decoration: inherit;">File<wbr>Copy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallstepfilecopy">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>File<wbr>Copy</a></span>
     </dt>
     <dd>{{% md %}}Copies a file onto the instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fileexec_go">
 <a href="#fileexec_go" style="color: inherit; text-decoration: inherit;">File<wbr>Exec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallstepfileexec">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>File<wbr>Exec</a></span>
     </dt>
     <dd>{{% md %}}Executes an artifact or local file.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="msiinstallation_go">
 <a href="#msiinstallation_go" style="color: inherit; text-decoration: inherit;">Msi<wbr>Installation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallstepmsiinstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Msi<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs an MSI file.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rpminstallation_go">
 <a href="#rpminstallation_go" style="color: inherit; text-decoration: inherit;">Rpm<wbr>Installation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallsteprpminstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Rpm<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs an rpm file via the rpm utility.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scriptrun_go">
 <a href="#scriptrun_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Run</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallstepscriptrun">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Script<wbr>Run</a></span>
     </dt>
     <dd>{{% md %}}Runs commands in a shell.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5436,89 +5016,81 @@ Structure is documented below.
             title="Optional">
         <span id="archiveextraction_nodejs">
 <a href="#archiveextraction_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Extraction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallsteparchiveextraction">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Archive<wbr>Extraction</a></span>
     </dt>
     <dd>{{% md %}}Extracts an archive into the specified directory.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dpkginstallation_nodejs">
 <a href="#dpkginstallation_nodejs" style="color: inherit; text-decoration: inherit;">dpkg<wbr>Installation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallstepdpkginstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Dpkg<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs a deb file via dpkg.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filecopy_nodejs">
 <a href="#filecopy_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Copy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallstepfilecopy">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>File<wbr>Copy</a></span>
     </dt>
     <dd>{{% md %}}Copies a file onto the instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fileexec_nodejs">
 <a href="#fileexec_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Exec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallstepfileexec">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>File<wbr>Exec</a></span>
     </dt>
     <dd>{{% md %}}Executes an artifact or local file.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="msiinstallation_nodejs">
 <a href="#msiinstallation_nodejs" style="color: inherit; text-decoration: inherit;">msi<wbr>Installation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallstepmsiinstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Msi<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs an MSI file.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rpminstallation_nodejs">
 <a href="#rpminstallation_nodejs" style="color: inherit; text-decoration: inherit;">rpm<wbr>Installation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallsteprpminstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Rpm<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs an rpm file via the rpm utility.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scriptrun_nodejs">
 <a href="#scriptrun_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Run</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallstepscriptrun">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Script<wbr>Run</a></span>
     </dt>
     <dd>{{% md %}}Runs commands in a shell.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5527,92 +5099,81 @@ Structure is documented below.
             title="Optional">
         <span id="archive_extraction_python">
 <a href="#archive_extraction_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>extraction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallsteparchiveextraction">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Archive<wbr>Extraction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extracts an archive into the specified directory.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dpkg_installation_python">
 <a href="#dpkg_installation_python" style="color: inherit; text-decoration: inherit;">dpkg_<wbr>installation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallstepdpkginstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Dpkg<wbr>Installation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Installs a deb file via dpkg.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="file_copy_python">
 <a href="#file_copy_python" style="color: inherit; text-decoration: inherit;">file_<wbr>copy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallstepfilecopy">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>File<wbr>Copy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Copies a file onto the instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="file_exec_python">
 <a href="#file_exec_python" style="color: inherit; text-decoration: inherit;">file_<wbr>exec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallstepfileexec">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>File<wbr>Exec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Executes an artifact or local file.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="msi_installation_python">
 <a href="#msi_installation_python" style="color: inherit; text-decoration: inherit;">msi_<wbr>installation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallstepmsiinstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Msi<wbr>Installation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Installs an MSI file.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rpm_installation_python">
 <a href="#rpm_installation_python" style="color: inherit; text-decoration: inherit;">rpm_<wbr>installation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallsteprpminstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Rpm<wbr>Installation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Installs an rpm file via the rpm utility.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="script_run_python">
 <a href="#script_run_python" style="color: inherit; text-decoration: inherit;">script_<wbr>run</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeinstallstepscriptrun">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Script<wbr>Run<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Runs commands in a shell.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="guestpoliciesrecipeinstallsteparchiveextraction">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Archive<wbr>Extraction</h4>
 {{% choosable language nodejs %}}
@@ -5622,11 +5183,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepArchiveExtractionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepArchiveExtractionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeInstallStepArchiveExtractionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeInstallStepArchiveExtraction.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5636,39 +5196,35 @@ Structure is documented below.
             title="Required">
         <span id="artifactid_csharp">
 <a href="#artifactid_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the archive to extract.
 Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZIP`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destination_csharp">
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5677,39 +5233,35 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
             title="Required">
         <span id="artifactid_go">
 <a href="#artifactid_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the archive to extract.
 Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZIP`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destination_go">
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5718,39 +5270,35 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
             title="Required">
         <span id="artifactid_nodejs">
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the archive to extract.
 Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZIP`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destination_nodejs">
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5759,42 +5307,35 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
             title="Required">
         <span id="artifact_id_python">
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the archive to extract.
 Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZIP`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destination_python">
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="guestpoliciesrecipeinstallstepdpkginstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Dpkg<wbr>Installation</h4>
 {{% choosable language nodejs %}}
@@ -5804,11 +5345,10 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepDpkgInstallationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepDpkgInstallationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeInstallStepDpkgInstallationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeInstallStepDpkgInstallation.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5818,16 +5358,14 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
             title="Required">
         <span id="artifactid_csharp">
 <a href="#artifactid_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5836,16 +5374,14 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
             title="Required">
         <span id="artifactid_go">
 <a href="#artifactid_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5854,16 +5390,14 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
             title="Required">
         <span id="artifactid_nodejs">
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5872,19 +5406,14 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
             title="Required">
         <span id="artifact_id_python">
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="guestpoliciesrecipeinstallstepfilecopy">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>File<wbr>Copy</h4>
 {{% choosable language nodejs %}}
@@ -5894,11 +5423,10 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepFileCopyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepFileCopyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeInstallStepFileCopyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeInstallStepFileCopy.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5908,43 +5436,40 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
             title="Required">
         <span id="artifactid_csharp">
 <a href="#artifactid_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="destination_csharp">
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="overwrite_csharp">
 <a href="#overwrite_csharp" style="color: inherit; text-decoration: inherit;">Overwrite</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow this step to overwrite existing files.If this is false and the file already exists the file
 is not overwritten and the step is considered a success. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="permissions_csharp">
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users
 for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit
@@ -5953,10 +5478,8 @@ bit corresponds to the execute permission. Default behavior is 755.
 Below are some examples of permissions and their associated values:
 read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5965,43 +5488,40 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Required">
         <span id="artifactid_go">
 <a href="#artifactid_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="destination_go">
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="overwrite_go">
 <a href="#overwrite_go" style="color: inherit; text-decoration: inherit;">Overwrite</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow this step to overwrite existing files.If this is false and the file already exists the file
 is not overwritten and the step is considered a success. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="permissions_go">
 <a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users
 for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit
@@ -6010,10 +5530,8 @@ bit corresponds to the execute permission. Default behavior is 755.
 Below are some examples of permissions and their associated values:
 read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6022,43 +5540,40 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Required">
         <span id="artifactid_nodejs">
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="destination_nodejs">
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="overwrite_nodejs">
 <a href="#overwrite_nodejs" style="color: inherit; text-decoration: inherit;">overwrite</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to allow this step to overwrite existing files.If this is false and the file already exists the file
 is not overwritten and the step is considered a success. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="permissions_nodejs">
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users
 for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit
@@ -6067,10 +5582,8 @@ bit corresponds to the execute permission. Default behavior is 755.
 Below are some examples of permissions and their associated values:
 read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6079,43 +5592,40 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Required">
         <span id="artifact_id_python">
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="destination_python">
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="overwrite_python">
 <a href="#overwrite_python" style="color: inherit; text-decoration: inherit;">overwrite</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow this step to overwrite existing files.If this is false and the file already exists the file
 is not overwritten and the step is considered a success. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="permissions_python">
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users
 for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit
@@ -6124,13 +5634,8 @@ bit corresponds to the execute permission. Default behavior is 755.
 Below are some examples of permissions and their associated values:
 read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="guestpoliciesrecipeinstallstepfileexec">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>File<wbr>Exec</h4>
 {{% choosable language nodejs %}}
@@ -6140,11 +5645,10 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepFileExecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepFileExecOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeInstallStepFileExecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeInstallStepFileExec.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -6154,49 +5658,44 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Optional">
         <span id="allowedexitcodes_csharp">
 <a href="#allowedexitcodes_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Exit<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="args_csharp">
 <a href="#args_csharp" style="color: inherit; text-decoration: inherit;">Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Arguments to be passed to the provided executable.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifactid_csharp">
 <a href="#artifactid_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localpath_csharp">
 <a href="#localpath_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The absolute path of the file on the local filesystem.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6205,49 +5704,44 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Optional">
         <span id="allowedexitcodes_go">
 <a href="#allowedexitcodes_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Exit<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="args_go">
 <a href="#args_go" style="color: inherit; text-decoration: inherit;">Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Arguments to be passed to the provided executable.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifactid_go">
 <a href="#artifactid_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localpath_go">
 <a href="#localpath_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The absolute path of the file on the local filesystem.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6256,49 +5750,44 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Optional">
         <span id="allowedexitcodes_nodejs">
 <a href="#allowedexitcodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Exit<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="args_nodejs">
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Arguments to be passed to the provided executable.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifactid_nodejs">
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localpath_nodejs">
 <a href="#localpath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The absolute path of the file on the local filesystem.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6307,52 +5796,44 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Optional">
         <span id="allowed_exit_codes_python">
 <a href="#allowed_exit_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>exit_<wbr>codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="args_python">
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Arguments to be passed to the provided executable.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifact_id_python">
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="local_path_python">
 <a href="#local_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The absolute path of the file on the local filesystem.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="guestpoliciesrecipeinstallstepmsiinstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Msi<wbr>Installation</h4>
 {{% choosable language nodejs %}}
@@ -6362,11 +5843,10 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepMsiInstallationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepMsiInstallationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeInstallStepMsiInstallationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeInstallStepMsiInstallation.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -6376,38 +5856,34 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Required">
         <span id="artifactid_csharp">
 <a href="#artifactid_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedexitcodes_csharp">
 <a href="#allowedexitcodes_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Exit<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
+        <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="flags_csharp">
 <a href="#flags_csharp" style="color: inherit; text-decoration: inherit;">Flags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The flags to use when installing the MSI. Defaults to the install flag.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6416,38 +5892,34 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Required">
         <span id="artifactid_go">
 <a href="#artifactid_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedexitcodes_go">
 <a href="#allowedexitcodes_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Exit<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
+        <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="flags_go">
 <a href="#flags_go" style="color: inherit; text-decoration: inherit;">Flags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The flags to use when installing the MSI. Defaults to the install flag.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6456,38 +5928,34 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Required">
         <span id="artifactid_nodejs">
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedexitcodes_nodejs">
 <a href="#allowedexitcodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Exit<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="flags_nodejs">
 <a href="#flags_nodejs" style="color: inherit; text-decoration: inherit;">flags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The flags to use when installing the MSI. Defaults to the install flag.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6496,41 +5964,34 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Required">
         <span id="artifact_id_python">
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowed_exit_codes_python">
 <a href="#allowed_exit_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>exit_<wbr>codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="flags_python">
 <a href="#flags_python" style="color: inherit; text-decoration: inherit;">flags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The flags to use when installing the MSI. Defaults to the install flag.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="guestpoliciesrecipeinstallsteprpminstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Rpm<wbr>Installation</h4>
 {{% choosable language nodejs %}}
@@ -6540,11 +6001,10 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepRpmInstallationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepRpmInstallationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeInstallStepRpmInstallationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeInstallStepRpmInstallation.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -6554,16 +6014,14 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Required">
         <span id="artifactid_csharp">
 <a href="#artifactid_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6572,16 +6030,14 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Required">
         <span id="artifactid_go">
 <a href="#artifactid_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6590,16 +6046,14 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Required">
         <span id="artifactid_nodejs">
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6608,19 +6062,14 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Required">
         <span id="artifact_id_python">
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="guestpoliciesrecipeinstallstepscriptrun">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Script<wbr>Run</h4>
 {{% choosable language nodejs %}}
@@ -6630,11 +6079,10 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepScriptRunArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeInstallStepScriptRunOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeInstallStepScriptRunArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeInstallStepScriptRun.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -6644,40 +6092,36 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Required">
         <span id="script_csharp">
 <a href="#script_csharp" style="color: inherit; text-decoration: inherit;">Script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shell script to be executed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedexitcodes_csharp">
 <a href="#allowedexitcodes_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Exit<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
+        <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interpreter_csharp">
 <a href="#interpreter_csharp" style="color: inherit; text-decoration: inherit;">Interpreter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script is executed directly,
 which likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6686,40 +6130,36 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Required">
         <span id="script_go">
 <a href="#script_go" style="color: inherit; text-decoration: inherit;">Script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shell script to be executed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedexitcodes_go">
 <a href="#allowedexitcodes_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Exit<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
+        <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interpreter_go">
 <a href="#interpreter_go" style="color: inherit; text-decoration: inherit;">Interpreter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script is executed directly,
 which likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6728,40 +6168,36 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Required">
         <span id="script_nodejs">
 <a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shell script to be executed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedexitcodes_nodejs">
 <a href="#allowedexitcodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Exit<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interpreter_nodejs">
 <a href="#interpreter_nodejs" style="color: inherit; text-decoration: inherit;">interpreter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script is executed directly,
 which likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6770,43 +6206,36 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Required">
         <span id="script_python">
 <a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shell script to be executed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowed_exit_codes_python">
 <a href="#allowed_exit_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>exit_<wbr>codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interpreter_python">
 <a href="#interpreter_python" style="color: inherit; text-decoration: inherit;">interpreter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script is executed directly,
 which likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="guestpoliciesrecipeupdatestep">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step</h4>
 {{% choosable language nodejs %}}
@@ -6816,11 +6245,10 @@ Possible values are `SHELL` and `POWERSHELL`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeUpdateStepArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeUpdateStep.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -6830,89 +6258,81 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Optional">
         <span id="archiveextraction_csharp">
 <a href="#archiveextraction_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Extraction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatesteparchiveextraction">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Archive<wbr>Extraction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extracts an archive into the specified directory.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dpkginstallation_csharp">
 <a href="#dpkginstallation_csharp" style="color: inherit; text-decoration: inherit;">Dpkg<wbr>Installation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatestepdpkginstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Dpkg<wbr>Installation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Installs a deb file via dpkg.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filecopy_csharp">
 <a href="#filecopy_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Copy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatestepfilecopy">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>File<wbr>Copy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Copies a file onto the instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fileexec_csharp">
 <a href="#fileexec_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Exec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatestepfileexec">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>File<wbr>Exec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Executes an artifact or local file.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="msiinstallation_csharp">
 <a href="#msiinstallation_csharp" style="color: inherit; text-decoration: inherit;">Msi<wbr>Installation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatestepmsiinstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Msi<wbr>Installation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Installs an MSI file.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rpminstallation_csharp">
 <a href="#rpminstallation_csharp" style="color: inherit; text-decoration: inherit;">Rpm<wbr>Installation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatesteprpminstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Rpm<wbr>Installation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Installs an rpm file via the rpm utility.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scriptrun_csharp">
 <a href="#scriptrun_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Run</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatestepscriptrun">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Script<wbr>Run<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Runs commands in a shell.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6921,89 +6341,81 @@ Structure is documented below.
             title="Optional">
         <span id="archiveextraction_go">
 <a href="#archiveextraction_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Extraction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatesteparchiveextraction">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Archive<wbr>Extraction</a></span>
     </dt>
     <dd>{{% md %}}Extracts an archive into the specified directory.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dpkginstallation_go">
 <a href="#dpkginstallation_go" style="color: inherit; text-decoration: inherit;">Dpkg<wbr>Installation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatestepdpkginstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Dpkg<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs a deb file via dpkg.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filecopy_go">
 <a href="#filecopy_go" style="color: inherit; text-decoration: inherit;">File<wbr>Copy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatestepfilecopy">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>File<wbr>Copy</a></span>
     </dt>
     <dd>{{% md %}}Copies a file onto the instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fileexec_go">
 <a href="#fileexec_go" style="color: inherit; text-decoration: inherit;">File<wbr>Exec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatestepfileexec">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>File<wbr>Exec</a></span>
     </dt>
     <dd>{{% md %}}Executes an artifact or local file.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="msiinstallation_go">
 <a href="#msiinstallation_go" style="color: inherit; text-decoration: inherit;">Msi<wbr>Installation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatestepmsiinstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Msi<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs an MSI file.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rpminstallation_go">
 <a href="#rpminstallation_go" style="color: inherit; text-decoration: inherit;">Rpm<wbr>Installation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatesteprpminstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Rpm<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs an rpm file via the rpm utility.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scriptrun_go">
 <a href="#scriptrun_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Run</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatestepscriptrun">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Script<wbr>Run</a></span>
     </dt>
     <dd>{{% md %}}Runs commands in a shell.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7012,89 +6424,81 @@ Structure is documented below.
             title="Optional">
         <span id="archiveextraction_nodejs">
 <a href="#archiveextraction_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Extraction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatesteparchiveextraction">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Archive<wbr>Extraction</a></span>
     </dt>
     <dd>{{% md %}}Extracts an archive into the specified directory.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dpkginstallation_nodejs">
 <a href="#dpkginstallation_nodejs" style="color: inherit; text-decoration: inherit;">dpkg<wbr>Installation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatestepdpkginstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Dpkg<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs a deb file via dpkg.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filecopy_nodejs">
 <a href="#filecopy_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Copy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatestepfilecopy">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>File<wbr>Copy</a></span>
     </dt>
     <dd>{{% md %}}Copies a file onto the instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fileexec_nodejs">
 <a href="#fileexec_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Exec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatestepfileexec">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>File<wbr>Exec</a></span>
     </dt>
     <dd>{{% md %}}Executes an artifact or local file.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="msiinstallation_nodejs">
 <a href="#msiinstallation_nodejs" style="color: inherit; text-decoration: inherit;">msi<wbr>Installation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatestepmsiinstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Msi<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs an MSI file.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rpminstallation_nodejs">
 <a href="#rpminstallation_nodejs" style="color: inherit; text-decoration: inherit;">rpm<wbr>Installation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatesteprpminstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Rpm<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs an rpm file via the rpm utility.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scriptrun_nodejs">
 <a href="#scriptrun_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Run</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatestepscriptrun">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Script<wbr>Run</a></span>
     </dt>
     <dd>{{% md %}}Runs commands in a shell.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -7103,92 +6507,81 @@ Structure is documented below.
             title="Optional">
         <span id="archive_extraction_python">
 <a href="#archive_extraction_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>extraction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatesteparchiveextraction">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Archive<wbr>Extraction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extracts an archive into the specified directory.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dpkg_installation_python">
 <a href="#dpkg_installation_python" style="color: inherit; text-decoration: inherit;">dpkg_<wbr>installation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatestepdpkginstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Dpkg<wbr>Installation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Installs a deb file via dpkg.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="file_copy_python">
 <a href="#file_copy_python" style="color: inherit; text-decoration: inherit;">file_<wbr>copy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatestepfilecopy">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>File<wbr>Copy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Copies a file onto the instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="file_exec_python">
 <a href="#file_exec_python" style="color: inherit; text-decoration: inherit;">file_<wbr>exec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatestepfileexec">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>File<wbr>Exec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Executes an artifact or local file.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="msi_installation_python">
 <a href="#msi_installation_python" style="color: inherit; text-decoration: inherit;">msi_<wbr>installation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatestepmsiinstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Msi<wbr>Installation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Installs an MSI file.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rpm_installation_python">
 <a href="#rpm_installation_python" style="color: inherit; text-decoration: inherit;">rpm_<wbr>installation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatesteprpminstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Rpm<wbr>Installation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Installs an rpm file via the rpm utility.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="script_run_python">
 <a href="#script_run_python" style="color: inherit; text-decoration: inherit;">script_<wbr>run</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#guestpoliciesrecipeupdatestepscriptrun">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Script<wbr>Run<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Runs commands in a shell.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="guestpoliciesrecipeupdatesteparchiveextraction">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Archive<wbr>Extraction</h4>
 {{% choosable language nodejs %}}
@@ -7198,11 +6591,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepArchiveExtractionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepArchiveExtractionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeUpdateStepArchiveExtractionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeUpdateStepArchiveExtraction.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -7212,39 +6604,35 @@ Structure is documented below.
             title="Required">
         <span id="artifactid_csharp">
 <a href="#artifactid_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the archive to extract.
 Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZIP`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destination_csharp">
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7253,39 +6641,35 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
             title="Required">
         <span id="artifactid_go">
 <a href="#artifactid_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the archive to extract.
 Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZIP`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destination_go">
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7294,39 +6678,35 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
             title="Required">
         <span id="artifactid_nodejs">
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the archive to extract.
 Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZIP`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destination_nodejs">
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -7335,42 +6715,35 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
             title="Required">
         <span id="artifact_id_python">
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the archive to extract.
 Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZIP`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destination_python">
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="guestpoliciesrecipeupdatestepdpkginstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Dpkg<wbr>Installation</h4>
 {{% choosable language nodejs %}}
@@ -7380,11 +6753,10 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepDpkgInstallationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepDpkgInstallationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeUpdateStepDpkgInstallationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeUpdateStepDpkgInstallation.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -7394,16 +6766,14 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
             title="Required">
         <span id="artifactid_csharp">
 <a href="#artifactid_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7412,16 +6782,14 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
             title="Required">
         <span id="artifactid_go">
 <a href="#artifactid_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7430,16 +6798,14 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
             title="Required">
         <span id="artifactid_nodejs">
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -7448,19 +6814,14 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
             title="Required">
         <span id="artifact_id_python">
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="guestpoliciesrecipeupdatestepfilecopy">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>File<wbr>Copy</h4>
 {{% choosable language nodejs %}}
@@ -7470,11 +6831,10 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepFileCopyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepFileCopyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeUpdateStepFileCopyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeUpdateStepFileCopy.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -7484,43 +6844,40 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
             title="Required">
         <span id="artifactid_csharp">
 <a href="#artifactid_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="destination_csharp">
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="overwrite_csharp">
 <a href="#overwrite_csharp" style="color: inherit; text-decoration: inherit;">Overwrite</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow this step to overwrite existing files.If this is false and the file already exists the file
 is not overwritten and the step is considered a success. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="permissions_csharp">
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users
 for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit
@@ -7529,10 +6886,8 @@ bit corresponds to the execute permission. Default behavior is 755.
 Below are some examples of permissions and their associated values:
 read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7541,43 +6896,40 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Required">
         <span id="artifactid_go">
 <a href="#artifactid_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="destination_go">
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="overwrite_go">
 <a href="#overwrite_go" style="color: inherit; text-decoration: inherit;">Overwrite</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow this step to overwrite existing files.If this is false and the file already exists the file
 is not overwritten and the step is considered a success. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="permissions_go">
 <a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users
 for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit
@@ -7586,10 +6938,8 @@ bit corresponds to the execute permission. Default behavior is 755.
 Below are some examples of permissions and their associated values:
 read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7598,43 +6948,40 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Required">
         <span id="artifactid_nodejs">
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="destination_nodejs">
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="overwrite_nodejs">
 <a href="#overwrite_nodejs" style="color: inherit; text-decoration: inherit;">overwrite</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to allow this step to overwrite existing files.If this is false and the file already exists the file
 is not overwritten and the step is considered a success. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="permissions_nodejs">
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users
 for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit
@@ -7643,10 +6990,8 @@ bit corresponds to the execute permission. Default behavior is 755.
 Below are some examples of permissions and their associated values:
 read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -7655,43 +7000,40 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Required">
         <span id="artifact_id_python">
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="destination_python">
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="overwrite_python">
 <a href="#overwrite_python" style="color: inherit; text-decoration: inherit;">overwrite</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow this step to overwrite existing files.If this is false and the file already exists the file
 is not overwritten and the step is considered a success. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="permissions_python">
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users
 for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit
@@ -7700,13 +7042,8 @@ bit corresponds to the execute permission. Default behavior is 755.
 Below are some examples of permissions and their associated values:
 read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="guestpoliciesrecipeupdatestepfileexec">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>File<wbr>Exec</h4>
 {{% choosable language nodejs %}}
@@ -7716,11 +7053,10 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepFileExecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepFileExecOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeUpdateStepFileExecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeUpdateStepFileExec.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -7730,49 +7066,44 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Optional">
         <span id="allowedexitcodes_csharp">
 <a href="#allowedexitcodes_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Exit<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
+        <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="args_csharp">
 <a href="#args_csharp" style="color: inherit; text-decoration: inherit;">Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Arguments to be passed to the provided executable.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifactid_csharp">
 <a href="#artifactid_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localpath_csharp">
 <a href="#localpath_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The absolute path of the file on the local filesystem.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7781,49 +7112,44 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Optional">
         <span id="allowedexitcodes_go">
 <a href="#allowedexitcodes_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Exit<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
+        <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="args_go">
 <a href="#args_go" style="color: inherit; text-decoration: inherit;">Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Arguments to be passed to the provided executable.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifactid_go">
 <a href="#artifactid_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localpath_go">
 <a href="#localpath_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The absolute path of the file on the local filesystem.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7832,49 +7158,44 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Optional">
         <span id="allowedexitcodes_nodejs">
 <a href="#allowedexitcodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Exit<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="args_nodejs">
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Arguments to be passed to the provided executable.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifactid_nodejs">
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localpath_nodejs">
 <a href="#localpath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The absolute path of the file on the local filesystem.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -7883,52 +7204,44 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Optional">
         <span id="allowed_exit_codes_python">
 <a href="#allowed_exit_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>exit_<wbr>codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="args_python">
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Arguments to be passed to the provided executable.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifact_id_python">
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="local_path_python">
 <a href="#local_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The absolute path of the file on the local filesystem.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="guestpoliciesrecipeupdatestepmsiinstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Msi<wbr>Installation</h4>
 {{% choosable language nodejs %}}
@@ -7938,11 +7251,10 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepMsiInstallationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepMsiInstallationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeUpdateStepMsiInstallationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeUpdateStepMsiInstallation.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -7952,38 +7264,34 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Required">
         <span id="artifactid_csharp">
 <a href="#artifactid_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedexitcodes_csharp">
 <a href="#allowedexitcodes_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Exit<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
+        <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="flags_csharp">
 <a href="#flags_csharp" style="color: inherit; text-decoration: inherit;">Flags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The flags to use when installing the MSI. Defaults to the install flag.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7992,38 +7300,34 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Required">
         <span id="artifactid_go">
 <a href="#artifactid_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedexitcodes_go">
 <a href="#allowedexitcodes_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Exit<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
+        <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="flags_go">
 <a href="#flags_go" style="color: inherit; text-decoration: inherit;">Flags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The flags to use when installing the MSI. Defaults to the install flag.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -8032,38 +7336,34 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Required">
         <span id="artifactid_nodejs">
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedexitcodes_nodejs">
 <a href="#allowedexitcodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Exit<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="flags_nodejs">
 <a href="#flags_nodejs" style="color: inherit; text-decoration: inherit;">flags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The flags to use when installing the MSI. Defaults to the install flag.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -8072,41 +7372,34 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Required">
         <span id="artifact_id_python">
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowed_exit_codes_python">
 <a href="#allowed_exit_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>exit_<wbr>codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="flags_python">
 <a href="#flags_python" style="color: inherit; text-decoration: inherit;">flags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The flags to use when installing the MSI. Defaults to the install flag.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="guestpoliciesrecipeupdatesteprpminstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Rpm<wbr>Installation</h4>
 {{% choosable language nodejs %}}
@@ -8116,11 +7409,10 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepRpmInstallationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepRpmInstallationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeUpdateStepRpmInstallationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeUpdateStepRpmInstallation.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -8130,16 +7422,14 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Required">
         <span id="artifactid_csharp">
 <a href="#artifactid_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -8148,16 +7438,14 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Required">
         <span id="artifactid_go">
 <a href="#artifactid_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -8166,16 +7454,14 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Required">
         <span id="artifactid_nodejs">
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -8184,19 +7470,14 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Required">
         <span id="artifact_id_python">
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="guestpoliciesrecipeupdatestepscriptrun">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Script<wbr>Run</h4>
 {{% choosable language nodejs %}}
@@ -8206,11 +7487,10 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepScriptRunArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#GuestPoliciesRecipeUpdateStepScriptRunOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.GuestPoliciesRecipeUpdateStepScriptRunArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.GuestPoliciesRecipeUpdateStepScriptRun.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -8220,40 +7500,36 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
             title="Required">
         <span id="script_csharp">
 <a href="#script_csharp" style="color: inherit; text-decoration: inherit;">Script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shell script to be executed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedexitcodes_csharp">
 <a href="#allowedexitcodes_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Exit<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
+        <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interpreter_csharp">
 <a href="#interpreter_csharp" style="color: inherit; text-decoration: inherit;">Interpreter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script is executed directly,
 which likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -8262,40 +7538,36 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Required">
         <span id="script_go">
 <a href="#script_go" style="color: inherit; text-decoration: inherit;">Script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shell script to be executed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedexitcodes_go">
 <a href="#allowedexitcodes_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Exit<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
+        <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interpreter_go">
 <a href="#interpreter_go" style="color: inherit; text-decoration: inherit;">Interpreter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script is executed directly,
 which likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -8304,40 +7576,36 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Required">
         <span id="script_nodejs">
 <a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shell script to be executed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedexitcodes_nodejs">
 <a href="#allowedexitcodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Exit<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interpreter_nodejs">
 <a href="#interpreter_nodejs" style="color: inherit; text-decoration: inherit;">interpreter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script is executed directly,
 which likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -8346,48 +7614,36 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Required">
         <span id="script_python">
 <a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shell script to be executed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowed_exit_codes_python">
 <a href="#allowed_exit_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>exit_<wbr>codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interpreter_python">
 <a href="#interpreter_python" style="color: inherit; text-decoration: inherit;">interpreter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script is executed directly,
 which likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 ## Import
 
 

@@ -1,7 +1,7 @@
 
 ---
 title: "ServiceObject"
-title_tag: "Resource ServiceObject | Module pagerduty | Package Datadog"
+title_tag: "datadog.pagerduty.ServiceObject"
 meta_desc: "Explore the ServiceObject resource of the pagerduty module, including examples, input properties, output properties, lookup functions, and supporting types. Provides access to individual Service Objects of Datadog - PagerDuty integrations. Note that the Datadog - PagerDuty integration must be activated in the Datadog UI in order for this resource to be usable."
 ---
 

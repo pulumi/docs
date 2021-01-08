@@ -28,7 +28,9 @@ The MongoDB Atlas provider supports several options for providing access to Mong
 ```javascript
 const mongodbatlas = require("@pulumi/mongodbatlas")
 
-const project = new mongodbatlas.Project("my-demo-project");
+const project = new mongodbatlas.Project("my-demo-project", {
+    orgId: "12345",
+});
 ```
 
 {{% /choosable %}}
@@ -37,7 +39,9 @@ const project = new mongodbatlas.Project("my-demo-project");
 ```typescript
 import * as mongodbatlas from "@pulumi/mongodbatlas";
 
-const project = new mongodbatlas.Project("my-demo-project");
+const project = new mongodbatlas.Project("my-demo-project", {
+    orgId: "12345",
+});
 ```
 
 {{% /choosable %}}
@@ -46,7 +50,7 @@ const project = new mongodbatlas.Project("my-demo-project");
 ```python
 import pulumi_mongodbatlas as mongodbatlas
 
-project = mongodbatlas.Project("my-demo-project")
+project = mongodbatlas.Project("my-demo-project", org_id="12345")
 ```
 
 {{% /choosable %}}
@@ -54,21 +58,22 @@ project = mongodbatlas.Project("my-demo-project")
 
 ```go
 import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-	mongodbatlas "github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+    mongodbatlas "github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas"
 )
 
 func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		project, err := mongodb.NewProject(ctx, "my-demo-project", &mongodb.ProjectArgs{})
-		if err != nil {
-			return err
-		}
-
-		return nil
-	})
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        project, err := mongodb.NewProject(ctx, "my-demo-project", &mongodb.ProjectArgs{
+        OrgId: pulumi.String("12345"),
+    })
+    if err != nil {
+        return err
+    }
+  
+    return nil
+  })
 }
-
 ```
 
 {{% /choosable %}}
@@ -84,7 +89,9 @@ class Program
 {
     static Task Main() =>
         Deployment.Run(() => {
-            project = new Project("my-demo-project", new ProjectArgs{});
+            project = new Project("my-demo-project", new ProjectArgs{
+              OrgId = "12345",
+            });
         });
 }
 ```

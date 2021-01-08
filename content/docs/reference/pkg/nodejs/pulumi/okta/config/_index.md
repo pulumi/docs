@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/okta | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/okta package."
-git_sha: "df38f7a628913e798f4a290274f0158737c3e299"
+git_sha: "d8223ec34121f866677918fc6244e020f13ce023"
 block_external_search_index: true
 ---
 
@@ -22,11 +22,13 @@ block_external_search_index: true
     <li><a href="#apiToken"><span class="symbol api"></span>apiToken</a></li>
     <li><a href="#backoff"><span class="symbol api"></span>backoff</a></li>
     <li><a href="#baseUrl"><span class="symbol api"></span>baseUrl</a></li>
+    <li><a href="#logLevel"><span class="symbol api"></span>logLevel</a></li>
     <li><a href="#maxRetries"><span class="symbol api"></span>maxRetries</a></li>
     <li><a href="#maxWaitSeconds"><span class="symbol api"></span>maxWaitSeconds</a></li>
     <li><a href="#minWaitSeconds"><span class="symbol api"></span>minWaitSeconds</a></li>
     <li><a href="#orgName"><span class="symbol api"></span>orgName</a></li>
     <li><a href="#parallelism"><span class="symbol api"></span>parallelism</a></li>
+    <li><a href="#requestTimeout"><span class="symbol api"></span>requestTimeout</a></li>
 </ul>
 
 
@@ -34,7 +36,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="apiToken" data-link-title="apiToken">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/config/vars.ts#L12">
         let <strong>apiToken</strong>
     </a>
 </h3>
@@ -44,7 +46,7 @@ block_external_search_index: true
 API Token granting privileges to Okta API.
 
 <h3 class="pdoc-module-header" id="backoff" data-link-title="backoff">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/config/vars.ts#L16">
         let <strong>backoff</strong>
     </a>
 </h3>
@@ -54,7 +56,7 @@ API Token granting privileges to Okta API.
 Use exponential back off strategy for rate limits.
 
 <h3 class="pdoc-module-header" id="baseUrl" data-link-title="baseUrl">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/config/vars.ts#L20">
         let <strong>baseUrl</strong>
     </a>
 </h3>
@@ -63,8 +65,18 @@ Use exponential back off strategy for rate limits.
 
 The Okta url. (Use 'oktapreview.com' for Okta testing)
 
+<h3 class="pdoc-module-header" id="logLevel" data-link-title="logLevel">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/config/vars.ts#L24">
+        let <strong>logLevel</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kd'>let</span> logLevel: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;number&gt;(&#34;logLevel&#34;)</span>;</code></pre>
+
+providers log level. Minimum is 1 (TRACE), and maximum is 5 (ERROR)
+
 <h3 class="pdoc-module-header" id="maxRetries" data-link-title="maxRetries">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/config/vars.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/config/vars.ts#L28">
         let <strong>maxRetries</strong>
     </a>
 </h3>
@@ -74,7 +86,7 @@ The Okta url. (Use 'oktapreview.com' for Okta testing)
 maximum number of retries to attempt before erroring out.
 
 <h3 class="pdoc-module-header" id="maxWaitSeconds" data-link-title="maxWaitSeconds">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/config/vars.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/config/vars.ts#L32">
         let <strong>maxWaitSeconds</strong>
     </a>
 </h3>
@@ -84,7 +96,7 @@ maximum number of retries to attempt before erroring out.
 maximum seconds to wait when rate limit is hit. We use exponential backoffs when backoff is enabled.
 
 <h3 class="pdoc-module-header" id="minWaitSeconds" data-link-title="minWaitSeconds">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/config/vars.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/config/vars.ts#L36">
         let <strong>minWaitSeconds</strong>
     </a>
 </h3>
@@ -94,7 +106,7 @@ maximum seconds to wait when rate limit is hit. We use exponential backoffs when
 minimum seconds to wait when rate limit is hit. We use exponential backoffs when backoff is enabled.
 
 <h3 class="pdoc-module-header" id="orgName" data-link-title="orgName">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/config/vars.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/config/vars.ts#L40">
         let <strong>orgName</strong>
     </a>
 </h3>
@@ -104,7 +116,7 @@ minimum seconds to wait when rate limit is hit. We use exponential backoffs when
 The organization to manage in Okta.
 
 <h3 class="pdoc-module-header" id="parallelism" data-link-title="parallelism">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/config/vars.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/config/vars.ts#L45">
         let <strong>parallelism</strong>
     </a>
 </h3>
@@ -113,4 +125,15 @@ The organization to manage in Okta.
 
 Number of concurrent requests to make within a resource where bulk operations are not possible. Take note of
 https://developer.okta.com/docs/api/getting_started/rate-limits.
+
+<h3 class="pdoc-module-header" id="requestTimeout" data-link-title="requestTimeout">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/d8223ec34121f866677918fc6244e020f13ce023/sdk/nodejs/config/vars.ts#L50">
+        let <strong>requestTimeout</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kd'>let</span> requestTimeout: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;number&gt;(&#34;requestTimeout&#34;)</span>;</code></pre>
+
+Timeout for single request (in seconds) which is made to Okta, the default is `0` (means no limit is set). The maximum
+value can be `100`.
 

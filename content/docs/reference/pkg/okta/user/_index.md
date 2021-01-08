@@ -14,12 +14,14 @@ Explore the resources and functions of the user module in the Okta package.
     <li><a href="baseschema" title="BaseSchema"><span class="symbol resource"></span>BaseSchema</a></li>
     <li><a href="schema" title="Schema"><span class="symbol resource"></span>Schema</a></li>
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
+    <li><a href="usertype" title="UserType"><span class="symbol resource"></span>UserType</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
     <li><a href="getuserprofilemappingsource" title="GetUserProfileMappingSource"><span class="symbol function"></span>GetUserProfileMappingSource</a></li>
+    <li><a href="getusertype" title="GetUserType"><span class="symbol function"></span>GetUserType</a></li>
     <li><a href="getusers" title="GetUsers"><span class="symbol function"></span>GetUsers</a></li>
 </ul>
 
@@ -32,7 +34,7 @@ Explore the resources and functions of the user module in the Okta package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).</dd>
 	<dt>Version</dt>
-	<dd>2.6.3</dd>
+	<dd>2.7.1</dd>
 </dl>
 
 

@@ -2,7 +2,7 @@
 ---
 title: "Assessment"
 title_tag: "azure-nextgen.migrate.Assessment"
-meta_desc: "Explore the Assessment resource of the migrate module, including examples, input properties, output properties, lookup functions, and supporting types. An assessment created for a group in the Migration project."
+meta_desc: "Documentation for the azure-nextgen.migrate.Assessment resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -11,7 +11,7 @@ meta_desc: "Explore the Assessment resource of the migrate module, including exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An assessment created for a group in the Migration project.
-
+Latest API Version: 2019-10-01.
 
 {{% examples %}}
 ## Example Usage
@@ -259,7 +259,7 @@ const assessment = new azure_nextgen.migrate.latest.Assessment("assessment", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">AssessmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">AssessmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -267,11 +267,11 @@ const assessment = new azure_nextgen.migrate.latest.Assessment("assessment", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAssessment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">AssessmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Assessment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAssessment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">AssessmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Assessment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">AssessmentArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">AssessmentArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -282,7 +282,7 @@ const assessment = new azure_nextgen.migrate.latest.Assessment("assessment", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -351,7 +351,7 @@ const assessment = new azure_nextgen.migrate.latest.Assessment("assessment", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -390,7 +390,7 @@ const assessment = new azure_nextgen.migrate.latest.Assessment("assessment", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -431,7 +431,6 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -439,65 +438,58 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="assessmentname_csharp">
 <a href="#assessmentname_csharp" style="color: inherit; text-decoration: inherit;">Assessment<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of an assessment within a project.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="groupname_csharp">
 <a href="#groupname_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of a group within a project.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="projectname_csharp">
 <a href="#projectname_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assessmentproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Assessment<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the assessment.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Resource Group that project is part of.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">ETag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For optimistic concurrency control.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -506,65 +498,58 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="assessmentname_go">
 <a href="#assessmentname_go" style="color: inherit; text-decoration: inherit;">Assessment<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of an assessment within a project.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="groupname_go">
 <a href="#groupname_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of a group within a project.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="projectname_go">
 <a href="#projectname_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assessmentproperties">Assessment<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Properties of the assessment.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Resource Group that project is part of.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">ETag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For optimistic concurrency control.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -573,65 +558,58 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="assessmentname_nodejs">
 <a href="#assessmentname_nodejs" style="color: inherit; text-decoration: inherit;">assessment<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of an assessment within a project.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="groupname_nodejs">
 <a href="#groupname_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of a group within a project.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="projectname_nodejs">
 <a href="#projectname_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assessmentproperties">Assessment<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Properties of the assessment.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Resource Group that project is part of.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For optimistic concurrency control.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -640,74 +618,63 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="assessment_name_python">
 <a href="#assessment_name_python" style="color: inherit; text-decoration: inherit;">assessment_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of an assessment within a project.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="group_name_python">
 <a href="#group_name_python" style="color: inherit; text-decoration: inherit;">group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of a group within a project.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="project_name_python">
 <a href="#project_name_python" style="color: inherit; text-decoration: inherit;">project_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assessmentproperties">Assessment<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the assessment.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Resource Group that project is part of.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="e_tag_python">
 <a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For optimistic concurrency control.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Assessment resource produces the following output properties:
-
 
 
 
@@ -718,35 +685,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of an assessment.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the object = [Microsoft.Migrate/assessmentProjects/groups/assessments].{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -755,35 +718,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of an assessment.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the object = [Microsoft.Migrate/assessmentProjects/groups/assessments].{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -792,35 +751,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of an assessment.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the object = [Microsoft.Migrate/assessmentProjects/groups/assessments].{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -829,38 +784,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of an assessment.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the object = [Microsoft.Migrate/assessmentProjects/groups/assessments].{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -871,13 +819,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
 <h4 id="assessmentproperties">Assessment<wbr>Properties</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -886,165 +829,148 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="azuredisktype_csharp">
 <a href="#azuredisktype_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Disk<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Azure<wbr>Disk<wbr>Type</span>
+        <span class="property-type">string | <a href="#azuredisktype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Azure<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Storage type selected for this disk.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurehybridusebenefit_csharp">
 <a href="#azurehybridusebenefit_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Hybrid<wbr>Use<wbr>Benefit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Azure<wbr>Hybrid<wbr>Use<wbr>Benefit</span>
+        <span class="property-type">string | <a href="#azurehybridusebenefit">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Azure<wbr>Hybrid<wbr>Use<wbr>Benefit</a></span>
     </dt>
     <dd>{{% md %}}AHUB discount on windows virtual machines.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurelocation_csharp">
 <a href="#azurelocation_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Azure<wbr>Location</span>
+        <span class="property-type">string | <a href="#azurelocation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Azure<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}Target Azure location for which the machines should be assessed. These enums are the same as used by Compute API.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azureoffercode_csharp">
 <a href="#azureoffercode_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Offer<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Azure<wbr>Offer<wbr>Code</span>
+        <span class="property-type">string | <a href="#azureoffercode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Azure<wbr>Offer<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}Offer code according to which cost estimation is done.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurepricingtier_csharp">
 <a href="#azurepricingtier_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Pricing<wbr>Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Azure<wbr>Pricing<wbr>Tier</span>
+        <span class="property-type">string | <a href="#azurepricingtier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Azure<wbr>Pricing<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Pricing tier for Size evaluation.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurestorageredundancy_csharp">
 <a href="#azurestorageredundancy_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Storage<wbr>Redundancy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Azure<wbr>Storage<wbr>Redundancy</span>
+        <span class="property-type">string | <a href="#azurestorageredundancy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Azure<wbr>Storage<wbr>Redundancy</a></span>
     </dt>
     <dd>{{% md %}}Storage Redundancy type offered by Azure.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurevmfamilies_csharp">
 <a href="#azurevmfamilies_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Vm<wbr>Families</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Azure<wbr>Vm<wbr>Family&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}List of azure VM families.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="currency_csharp">
 <a href="#currency_csharp" style="color: inherit; text-decoration: inherit;">Currency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Currency</span>
+        <span class="property-type">string | <a href="#currency">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Currency</a></span>
     </dt>
     <dd>{{% md %}}Currency to report prices in.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="discountpercentage_csharp">
 <a href="#discountpercentage_csharp" style="color: inherit; text-decoration: inherit;">Discount<wbr>Percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Custom discount percentage to be applied on final costs. Can be in the range [0, 100].{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="percentile_csharp">
 <a href="#percentile_csharp" style="color: inherit; text-decoration: inherit;">Percentile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Percentile</span>
+        <span class="property-type">string | <a href="#percentile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Percentile</a></span>
     </dt>
     <dd>{{% md %}}Percentile of performance data used to recommend Azure size.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="reservedinstance_csharp">
 <a href="#reservedinstance_csharp" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Reserved<wbr>Instance</span>
+        <span class="property-type">string | <a href="#reservedinstance">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Reserved<wbr>Instance</a></span>
     </dt>
     <dd>{{% md %}}Azure reserved instance.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scalingfactor_csharp">
 <a href="#scalingfactor_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Factor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Scaling factor used over utilization data to add a performance buffer for new machines to be created in Azure. Min Value = 1.0, Max value = 1.9, Default = 1.3.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sizingcriterion_csharp">
 <a href="#sizingcriterion_csharp" style="color: inherit; text-decoration: inherit;">Sizing<wbr>Criterion</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Assessment<wbr>Sizing<wbr>Criterion</span>
+        <span class="property-type">string | <a href="#assessmentsizingcriterion">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Assessment<wbr>Sizing<wbr>Criterion</a></span>
     </dt>
     <dd>{{% md %}}Assessment sizing criterion.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="stage_csharp">
 <a href="#stage_csharp" style="color: inherit; text-decoration: inherit;">Stage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Assessment<wbr>Stage</span>
+        <span class="property-type">string | <a href="#assessmentstage">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Assessment<wbr>Stage</a></span>
     </dt>
     <dd>{{% md %}}User configurable setting that describes the status of the assessment.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="timerange_csharp">
 <a href="#timerange_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Time<wbr>Range</span>
+        <span class="property-type">string | <a href="#timerange">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Time<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Time range of performance data used to recommend a size.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vmuptime_csharp">
 <a href="#vmuptime_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Uptime</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vmuptime">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Vm<wbr>Uptime<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify the duration for which the VMs are up in the on-premises environment.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1053,165 +979,148 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="azuredisktype_go">
 <a href="#azuredisktype_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Disk<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#azuredisktype">Azure<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Storage type selected for this disk.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurehybridusebenefit_go">
 <a href="#azurehybridusebenefit_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Hybrid<wbr>Use<wbr>Benefit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#azurehybridusebenefit">Azure<wbr>Hybrid<wbr>Use<wbr>Benefit</a></span>
     </dt>
     <dd>{{% md %}}AHUB discount on windows virtual machines.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurelocation_go">
 <a href="#azurelocation_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#azurelocation">Azure<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}Target Azure location for which the machines should be assessed. These enums are the same as used by Compute API.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azureoffercode_go">
 <a href="#azureoffercode_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Offer<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#azureoffercode">Azure<wbr>Offer<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}Offer code according to which cost estimation is done.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurepricingtier_go">
 <a href="#azurepricingtier_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Pricing<wbr>Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#azurepricingtier">Azure<wbr>Pricing<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Pricing tier for Size evaluation.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurestorageredundancy_go">
 <a href="#azurestorageredundancy_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Storage<wbr>Redundancy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#azurestorageredundancy">Azure<wbr>Storage<wbr>Redundancy</a></span>
     </dt>
     <dd>{{% md %}}Storage Redundancy type offered by Azure.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurevmfamilies_go">
 <a href="#azurevmfamilies_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Vm<wbr>Families</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of azure VM families.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="currency_go">
 <a href="#currency_go" style="color: inherit; text-decoration: inherit;">Currency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#currency">Currency</a></span>
     </dt>
     <dd>{{% md %}}Currency to report prices in.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="discountpercentage_go">
 <a href="#discountpercentage_go" style="color: inherit; text-decoration: inherit;">Discount<wbr>Percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Custom discount percentage to be applied on final costs. Can be in the range [0, 100].{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="percentile_go">
 <a href="#percentile_go" style="color: inherit; text-decoration: inherit;">Percentile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#percentile">Percentile</a></span>
     </dt>
     <dd>{{% md %}}Percentile of performance data used to recommend Azure size.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="reservedinstance_go">
 <a href="#reservedinstance_go" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#reservedinstance">Reserved<wbr>Instance</a></span>
     </dt>
     <dd>{{% md %}}Azure reserved instance.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scalingfactor_go">
 <a href="#scalingfactor_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Factor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Scaling factor used over utilization data to add a performance buffer for new machines to be created in Azure. Min Value = 1.0, Max value = 1.9, Default = 1.3.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sizingcriterion_go">
 <a href="#sizingcriterion_go" style="color: inherit; text-decoration: inherit;">Sizing<wbr>Criterion</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#assessmentsizingcriterion">Assessment<wbr>Sizing<wbr>Criterion</a></span>
     </dt>
     <dd>{{% md %}}Assessment sizing criterion.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="stage_go">
 <a href="#stage_go" style="color: inherit; text-decoration: inherit;">Stage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#assessmentstage">Assessment<wbr>Stage</a></span>
     </dt>
     <dd>{{% md %}}User configurable setting that describes the status of the assessment.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="timerange_go">
 <a href="#timerange_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#timerange">Time<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Time range of performance data used to recommend a size.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vmuptime_go">
 <a href="#vmuptime_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Uptime</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vmuptime">Vm<wbr>Uptime</a></span>
     </dt>
     <dd>{{% md %}}Specify the duration for which the VMs are up in the on-premises environment.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1220,165 +1129,148 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="azuredisktype_nodejs">
 <a href="#azuredisktype_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Disk<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Azure<wbr>Disk<wbr>Type</span>
+        <span class="property-type">string | <a href="#azuredisktype">Azure<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Storage type selected for this disk.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurehybridusebenefit_nodejs">
 <a href="#azurehybridusebenefit_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Hybrid<wbr>Use<wbr>Benefit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Azure<wbr>Hybrid<wbr>Use<wbr>Benefit</span>
+        <span class="property-type">string | <a href="#azurehybridusebenefit">Azure<wbr>Hybrid<wbr>Use<wbr>Benefit</a></span>
     </dt>
     <dd>{{% md %}}AHUB discount on windows virtual machines.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurelocation_nodejs">
 <a href="#azurelocation_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Azure<wbr>Location</span>
+        <span class="property-type">string | <a href="#azurelocation">Azure<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}Target Azure location for which the machines should be assessed. These enums are the same as used by Compute API.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azureoffercode_nodejs">
 <a href="#azureoffercode_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Offer<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Azure<wbr>Offer<wbr>Code</span>
+        <span class="property-type">string | <a href="#azureoffercode">Azure<wbr>Offer<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}Offer code according to which cost estimation is done.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurepricingtier_nodejs">
 <a href="#azurepricingtier_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Pricing<wbr>Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Azure<wbr>Pricing<wbr>Tier</span>
+        <span class="property-type">string | <a href="#azurepricingtier">Azure<wbr>Pricing<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Pricing tier for Size evaluation.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurestorageredundancy_nodejs">
 <a href="#azurestorageredundancy_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Storage<wbr>Redundancy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Azure<wbr>Storage<wbr>Redundancy</span>
+        <span class="property-type">string | <a href="#azurestorageredundancy">Azure<wbr>Storage<wbr>Redundancy</a></span>
     </dt>
     <dd>{{% md %}}Storage Redundancy type offered by Azure.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurevmfamilies_nodejs">
 <a href="#azurevmfamilies_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Vm<wbr>Families</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | enums.<wbr>Azure<wbr>Vm<wbr>Family[]</span>
+        <span class="property-type">string | Azure<wbr>Vm<wbr>Family[]</span>
     </dt>
     <dd>{{% md %}}List of azure VM families.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="currency_nodejs">
 <a href="#currency_nodejs" style="color: inherit; text-decoration: inherit;">currency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Currency</span>
+        <span class="property-type">string | <a href="#currency">Currency</a></span>
     </dt>
     <dd>{{% md %}}Currency to report prices in.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="discountpercentage_nodejs">
 <a href="#discountpercentage_nodejs" style="color: inherit; text-decoration: inherit;">discount<wbr>Percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Custom discount percentage to be applied on final costs. Can be in the range [0, 100].{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="percentile_nodejs">
 <a href="#percentile_nodejs" style="color: inherit; text-decoration: inherit;">percentile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Percentile</span>
+        <span class="property-type">string | <a href="#percentile">Percentile</a></span>
     </dt>
     <dd>{{% md %}}Percentile of performance data used to recommend Azure size.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="reservedinstance_nodejs">
 <a href="#reservedinstance_nodejs" style="color: inherit; text-decoration: inherit;">reserved<wbr>Instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Reserved<wbr>Instance</span>
+        <span class="property-type">string | <a href="#reservedinstance">Reserved<wbr>Instance</a></span>
     </dt>
     <dd>{{% md %}}Azure reserved instance.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scalingfactor_nodejs">
 <a href="#scalingfactor_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Factor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Scaling factor used over utilization data to add a performance buffer for new machines to be created in Azure. Min Value = 1.0, Max value = 1.9, Default = 1.3.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sizingcriterion_nodejs">
 <a href="#sizingcriterion_nodejs" style="color: inherit; text-decoration: inherit;">sizing<wbr>Criterion</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Assessment<wbr>Sizing<wbr>Criterion</span>
+        <span class="property-type">string | <a href="#assessmentsizingcriterion">Assessment<wbr>Sizing<wbr>Criterion</a></span>
     </dt>
     <dd>{{% md %}}Assessment sizing criterion.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="stage_nodejs">
 <a href="#stage_nodejs" style="color: inherit; text-decoration: inherit;">stage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Assessment<wbr>Stage</span>
+        <span class="property-type">string | <a href="#assessmentstage">Assessment<wbr>Stage</a></span>
     </dt>
     <dd>{{% md %}}User configurable setting that describes the status of the assessment.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="timerange_nodejs">
 <a href="#timerange_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Time<wbr>Range</span>
+        <span class="property-type">string | <a href="#timerange">Time<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Time range of performance data used to recommend a size.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vmuptime_nodejs">
 <a href="#vmuptime_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Uptime</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vmuptime">Vm<wbr>Uptime</a></span>
     </dt>
     <dd>{{% md %}}Specify the duration for which the VMs are up in the on-premises environment.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1387,176 +1279,150 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="azure_disk_type_python">
 <a href="#azure_disk_type_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>disk_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Azure<wbr>Disk<wbr>Type</span>
+        <span class="property-type">str | <a href="#azuredisktype">Azure<wbr>Disk<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Storage type selected for this disk.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azure_hybrid_use_benefit_python">
 <a href="#azure_hybrid_use_benefit_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>hybrid_<wbr>use_<wbr>benefit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Azure<wbr>Hybrid<wbr>Use<wbr>Benefit</span>
+        <span class="property-type">str | <a href="#azurehybridusebenefit">Azure<wbr>Hybrid<wbr>Use<wbr>Benefit</a></span>
     </dt>
     <dd>{{% md %}}AHUB discount on windows virtual machines.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azure_location_python">
 <a href="#azure_location_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Azure<wbr>Location</span>
+        <span class="property-type">str | <a href="#azurelocation">Azure<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}Target Azure location for which the machines should be assessed. These enums are the same as used by Compute API.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azure_offer_code_python">
 <a href="#azure_offer_code_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>offer_<wbr>code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Azure<wbr>Offer<wbr>Code</span>
+        <span class="property-type">str | <a href="#azureoffercode">Azure<wbr>Offer<wbr>Code</a></span>
     </dt>
     <dd>{{% md %}}Offer code according to which cost estimation is done.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azure_pricing_tier_python">
 <a href="#azure_pricing_tier_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>pricing_<wbr>tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Azure<wbr>Pricing<wbr>Tier</span>
+        <span class="property-type">str | <a href="#azurepricingtier">Azure<wbr>Pricing<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Pricing tier for Size evaluation.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azure_storage_redundancy_python">
 <a href="#azure_storage_redundancy_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>storage_<wbr>redundancy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Azure<wbr>Storage<wbr>Redundancy</span>
+        <span class="property-type">str | <a href="#azurestorageredundancy">Azure<wbr>Storage<wbr>Redundancy</a></span>
     </dt>
     <dd>{{% md %}}Storage Redundancy type offered by Azure.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azure_vm_families_python">
 <a href="#azure_vm_families_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>vm_<wbr>families</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[str, Azure<wbr>Vm<wbr>Family]]</span>
     </dt>
     <dd>{{% md %}}List of azure VM families.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="currency_python">
 <a href="#currency_python" style="color: inherit; text-decoration: inherit;">currency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Currency</span>
+        <span class="property-type">str | <a href="#currency">Currency</a></span>
     </dt>
     <dd>{{% md %}}Currency to report prices in.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="discount_percentage_python">
 <a href="#discount_percentage_python" style="color: inherit; text-decoration: inherit;">discount_<wbr>percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Custom discount percentage to be applied on final costs. Can be in the range [0, 100].{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="percentile_python">
 <a href="#percentile_python" style="color: inherit; text-decoration: inherit;">percentile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Percentile</span>
+        <span class="property-type">str | <a href="#percentile">Percentile</a></span>
     </dt>
     <dd>{{% md %}}Percentile of performance data used to recommend Azure size.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="reserved_instance_python">
 <a href="#reserved_instance_python" style="color: inherit; text-decoration: inherit;">reserved_<wbr>instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Reserved<wbr>Instance</span>
+        <span class="property-type">str | <a href="#reservedinstance">Reserved<wbr>Instance</a></span>
     </dt>
     <dd>{{% md %}}Azure reserved instance.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scaling_factor_python">
 <a href="#scaling_factor_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>factor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Scaling factor used over utilization data to add a performance buffer for new machines to be created in Azure. Min Value = 1.0, Max value = 1.9, Default = 1.3.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sizing_criterion_python">
 <a href="#sizing_criterion_python" style="color: inherit; text-decoration: inherit;">sizing_<wbr>criterion</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Assessment<wbr>Sizing<wbr>Criterion</span>
+        <span class="property-type">str | <a href="#assessmentsizingcriterion">Assessment<wbr>Sizing<wbr>Criterion</a></span>
     </dt>
     <dd>{{% md %}}Assessment sizing criterion.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="stage_python">
 <a href="#stage_python" style="color: inherit; text-decoration: inherit;">stage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Assessment<wbr>Stage</span>
+        <span class="property-type">str | <a href="#assessmentstage">Assessment<wbr>Stage</a></span>
     </dt>
     <dd>{{% md %}}User configurable setting that describes the status of the assessment.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="time_range_python">
 <a href="#time_range_python" style="color: inherit; text-decoration: inherit;">time_<wbr>range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Time<wbr>Range</span>
+        <span class="property-type">str | <a href="#timerange">Time<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Time range of performance data used to recommend a size.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vm_uptime_python">
 <a href="#vm_uptime_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>uptime</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vmuptime">Vm<wbr>Uptime<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify the duration for which the VMs are up in the on-premises environment.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="assessmentpropertiesresponse">Assessment<wbr>Properties<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1565,305 +1431,274 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="azuredisktype_csharp">
 <a href="#azuredisktype_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Disk<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage type selected for this disk.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurehybridusebenefit_csharp">
 <a href="#azurehybridusebenefit_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Hybrid<wbr>Use<wbr>Benefit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AHUB discount on windows virtual machines.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurelocation_csharp">
 <a href="#azurelocation_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Target Azure location for which the machines should be assessed. These enums are the same as used by Compute API.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azureoffercode_csharp">
 <a href="#azureoffercode_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Offer<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Offer code according to which cost estimation is done.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurepricingtier_csharp">
 <a href="#azurepricingtier_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Pricing<wbr>Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pricing tier for Size evaluation.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurestorageredundancy_csharp">
 <a href="#azurestorageredundancy_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Storage<wbr>Redundancy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage Redundancy type offered by Azure.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurevmfamilies_csharp">
 <a href="#azurevmfamilies_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Vm<wbr>Families</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of azure VM families.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="confidenceratinginpercentage_csharp">
 <a href="#confidenceratinginpercentage_csharp" style="color: inherit; text-decoration: inherit;">Confidence<wbr>Rating<wbr>In<wbr>Percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Confidence rating percentage for assessment. Can be in the range [0, 100].{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="createdtimestamp_csharp">
 <a href="#createdtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time when this project was created. Date-Time represented in ISO-8601 format.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="currency_csharp">
 <a href="#currency_csharp" style="color: inherit; text-decoration: inherit;">Currency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Currency to report prices in.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="discountpercentage_csharp">
 <a href="#discountpercentage_csharp" style="color: inherit; text-decoration: inherit;">Discount<wbr>Percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Custom discount percentage to be applied on final costs. Can be in the range [0, 100].{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="easubscriptionid_csharp">
 <a href="#easubscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Ea<wbr>Subscription<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enterprise agreement subscription arm id.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monthlybandwidthcost_csharp">
 <a href="#monthlybandwidthcost_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Bandwidth<wbr>Cost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Monthly network cost estimate for the machines that are part of this assessment as a group, for a 31-day month.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monthlycomputecost_csharp">
 <a href="#monthlycomputecost_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Compute<wbr>Cost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Monthly compute cost estimate for the machines that are part of this assessment as a group, for a 31-day month.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monthlypremiumstoragecost_csharp">
 <a href="#monthlypremiumstoragecost_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Premium<wbr>Storage<wbr>Cost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Monthly premium storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monthlystandardssdstoragecost_csharp">
 <a href="#monthlystandardssdstoragecost_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Standard<wbr>SSDStorage<wbr>Cost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Monthly standard SSD storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monthlystoragecost_csharp">
 <a href="#monthlystoragecost_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Storage<wbr>Cost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Monthly storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="numberofmachines_csharp">
 <a href="#numberofmachines_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Machines</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of assessed machines part of this assessment.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="percentile_csharp">
 <a href="#percentile_csharp" style="color: inherit; text-decoration: inherit;">Percentile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Percentile of performance data used to recommend Azure size.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="perfdataendtime_csharp">
 <a href="#perfdataendtime_csharp" style="color: inherit; text-decoration: inherit;">Perf<wbr>Data<wbr>End<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}End time to consider performance data for assessment{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="perfdatastarttime_csharp">
 <a href="#perfdatastarttime_csharp" style="color: inherit; text-decoration: inherit;">Perf<wbr>Data<wbr>Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start time to consider performance data for assessment{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="pricestimestamp_csharp">
 <a href="#pricestimestamp_csharp" style="color: inherit; text-decoration: inherit;">Prices<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time when the Azure Prices were queried. Date-Time represented in ISO-8601 format.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="reservedinstance_csharp">
 <a href="#reservedinstance_csharp" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure reserved instance.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scalingfactor_csharp">
 <a href="#scalingfactor_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Factor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Scaling factor used over utilization data to add a performance buffer for new machines to be created in Azure. Min Value = 1.0, Max value = 1.9, Default = 1.3.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sizingcriterion_csharp">
 <a href="#sizingcriterion_csharp" style="color: inherit; text-decoration: inherit;">Sizing<wbr>Criterion</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Assessment sizing criterion.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="stage_csharp">
 <a href="#stage_csharp" style="color: inherit; text-decoration: inherit;">Stage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User configurable setting that describes the status of the assessment.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the assessment has been created and is valid.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="timerange_csharp">
 <a href="#timerange_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time range of performance data used to recommend a size.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="updatedtimestamp_csharp">
 <a href="#updatedtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time when this project was last updated. Date-Time represented in ISO-8601 format.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vmuptime_csharp">
 <a href="#vmuptime_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Uptime</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vmuptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Vm<wbr>Uptime<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify the duration for which the VMs are up in the on-premises environment.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1872,305 +1707,274 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="azuredisktype_go">
 <a href="#azuredisktype_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Disk<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage type selected for this disk.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurehybridusebenefit_go">
 <a href="#azurehybridusebenefit_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Hybrid<wbr>Use<wbr>Benefit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AHUB discount on windows virtual machines.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurelocation_go">
 <a href="#azurelocation_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Target Azure location for which the machines should be assessed. These enums are the same as used by Compute API.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azureoffercode_go">
 <a href="#azureoffercode_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Offer<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Offer code according to which cost estimation is done.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurepricingtier_go">
 <a href="#azurepricingtier_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Pricing<wbr>Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pricing tier for Size evaluation.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurestorageredundancy_go">
 <a href="#azurestorageredundancy_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Storage<wbr>Redundancy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage Redundancy type offered by Azure.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurevmfamilies_go">
 <a href="#azurevmfamilies_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Vm<wbr>Families</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of azure VM families.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="confidenceratinginpercentage_go">
 <a href="#confidenceratinginpercentage_go" style="color: inherit; text-decoration: inherit;">Confidence<wbr>Rating<wbr>In<wbr>Percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Confidence rating percentage for assessment. Can be in the range [0, 100].{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="createdtimestamp_go">
 <a href="#createdtimestamp_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time when this project was created. Date-Time represented in ISO-8601 format.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="currency_go">
 <a href="#currency_go" style="color: inherit; text-decoration: inherit;">Currency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Currency to report prices in.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="discountpercentage_go">
 <a href="#discountpercentage_go" style="color: inherit; text-decoration: inherit;">Discount<wbr>Percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Custom discount percentage to be applied on final costs. Can be in the range [0, 100].{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="easubscriptionid_go">
 <a href="#easubscriptionid_go" style="color: inherit; text-decoration: inherit;">Ea<wbr>Subscription<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enterprise agreement subscription arm id.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monthlybandwidthcost_go">
 <a href="#monthlybandwidthcost_go" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Bandwidth<wbr>Cost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Monthly network cost estimate for the machines that are part of this assessment as a group, for a 31-day month.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monthlycomputecost_go">
 <a href="#monthlycomputecost_go" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Compute<wbr>Cost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Monthly compute cost estimate for the machines that are part of this assessment as a group, for a 31-day month.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monthlypremiumstoragecost_go">
 <a href="#monthlypremiumstoragecost_go" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Premium<wbr>Storage<wbr>Cost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Monthly premium storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monthlystandardssdstoragecost_go">
 <a href="#monthlystandardssdstoragecost_go" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Standard<wbr>SSDStorage<wbr>Cost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Monthly standard SSD storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monthlystoragecost_go">
 <a href="#monthlystoragecost_go" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Storage<wbr>Cost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Monthly storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="numberofmachines_go">
 <a href="#numberofmachines_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Machines</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of assessed machines part of this assessment.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="percentile_go">
 <a href="#percentile_go" style="color: inherit; text-decoration: inherit;">Percentile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Percentile of performance data used to recommend Azure size.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="perfdataendtime_go">
 <a href="#perfdataendtime_go" style="color: inherit; text-decoration: inherit;">Perf<wbr>Data<wbr>End<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}End time to consider performance data for assessment{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="perfdatastarttime_go">
 <a href="#perfdatastarttime_go" style="color: inherit; text-decoration: inherit;">Perf<wbr>Data<wbr>Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start time to consider performance data for assessment{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="pricestimestamp_go">
 <a href="#pricestimestamp_go" style="color: inherit; text-decoration: inherit;">Prices<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time when the Azure Prices were queried. Date-Time represented in ISO-8601 format.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="reservedinstance_go">
 <a href="#reservedinstance_go" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure reserved instance.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scalingfactor_go">
 <a href="#scalingfactor_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Factor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Scaling factor used over utilization data to add a performance buffer for new machines to be created in Azure. Min Value = 1.0, Max value = 1.9, Default = 1.3.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sizingcriterion_go">
 <a href="#sizingcriterion_go" style="color: inherit; text-decoration: inherit;">Sizing<wbr>Criterion</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Assessment sizing criterion.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="stage_go">
 <a href="#stage_go" style="color: inherit; text-decoration: inherit;">Stage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User configurable setting that describes the status of the assessment.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the assessment has been created and is valid.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="timerange_go">
 <a href="#timerange_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time range of performance data used to recommend a size.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="updatedtimestamp_go">
 <a href="#updatedtimestamp_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time when this project was last updated. Date-Time represented in ISO-8601 format.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vmuptime_go">
 <a href="#vmuptime_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Uptime</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vmuptimeresponse">Vm<wbr>Uptime<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specify the duration for which the VMs are up in the on-premises environment.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2179,305 +1983,274 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="azuredisktype_nodejs">
 <a href="#azuredisktype_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Disk<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage type selected for this disk.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurehybridusebenefit_nodejs">
 <a href="#azurehybridusebenefit_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Hybrid<wbr>Use<wbr>Benefit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AHUB discount on windows virtual machines.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurelocation_nodejs">
 <a href="#azurelocation_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Target Azure location for which the machines should be assessed. These enums are the same as used by Compute API.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azureoffercode_nodejs">
 <a href="#azureoffercode_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Offer<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Offer code according to which cost estimation is done.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurepricingtier_nodejs">
 <a href="#azurepricingtier_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Pricing<wbr>Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pricing tier for Size evaluation.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurestorageredundancy_nodejs">
 <a href="#azurestorageredundancy_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Storage<wbr>Redundancy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage Redundancy type offered by Azure.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurevmfamilies_nodejs">
 <a href="#azurevmfamilies_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Vm<wbr>Families</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of azure VM families.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="confidenceratinginpercentage_nodejs">
 <a href="#confidenceratinginpercentage_nodejs" style="color: inherit; text-decoration: inherit;">confidence<wbr>Rating<wbr>In<wbr>Percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Confidence rating percentage for assessment. Can be in the range [0, 100].{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="createdtimestamp_nodejs">
 <a href="#createdtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time when this project was created. Date-Time represented in ISO-8601 format.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="currency_nodejs">
 <a href="#currency_nodejs" style="color: inherit; text-decoration: inherit;">currency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Currency to report prices in.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="discountpercentage_nodejs">
 <a href="#discountpercentage_nodejs" style="color: inherit; text-decoration: inherit;">discount<wbr>Percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Custom discount percentage to be applied on final costs. Can be in the range [0, 100].{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="easubscriptionid_nodejs">
 <a href="#easubscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">ea<wbr>Subscription<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enterprise agreement subscription arm id.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monthlybandwidthcost_nodejs">
 <a href="#monthlybandwidthcost_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Bandwidth<wbr>Cost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Monthly network cost estimate for the machines that are part of this assessment as a group, for a 31-day month.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monthlycomputecost_nodejs">
 <a href="#monthlycomputecost_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Compute<wbr>Cost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Monthly compute cost estimate for the machines that are part of this assessment as a group, for a 31-day month.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monthlypremiumstoragecost_nodejs">
 <a href="#monthlypremiumstoragecost_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Premium<wbr>Storage<wbr>Cost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Monthly premium storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monthlystandardssdstoragecost_nodejs">
 <a href="#monthlystandardssdstoragecost_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Standard<wbr>SSDStorage<wbr>Cost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Monthly standard SSD storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monthlystoragecost_nodejs">
 <a href="#monthlystoragecost_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Storage<wbr>Cost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Monthly storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="numberofmachines_nodejs">
 <a href="#numberofmachines_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Machines</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of assessed machines part of this assessment.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="percentile_nodejs">
 <a href="#percentile_nodejs" style="color: inherit; text-decoration: inherit;">percentile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Percentile of performance data used to recommend Azure size.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="perfdataendtime_nodejs">
 <a href="#perfdataendtime_nodejs" style="color: inherit; text-decoration: inherit;">perf<wbr>Data<wbr>End<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}End time to consider performance data for assessment{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="perfdatastarttime_nodejs">
 <a href="#perfdatastarttime_nodejs" style="color: inherit; text-decoration: inherit;">perf<wbr>Data<wbr>Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start time to consider performance data for assessment{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="pricestimestamp_nodejs">
 <a href="#pricestimestamp_nodejs" style="color: inherit; text-decoration: inherit;">prices<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time when the Azure Prices were queried. Date-Time represented in ISO-8601 format.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="reservedinstance_nodejs">
 <a href="#reservedinstance_nodejs" style="color: inherit; text-decoration: inherit;">reserved<wbr>Instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure reserved instance.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scalingfactor_nodejs">
 <a href="#scalingfactor_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Factor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Scaling factor used over utilization data to add a performance buffer for new machines to be created in Azure. Min Value = 1.0, Max value = 1.9, Default = 1.3.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sizingcriterion_nodejs">
 <a href="#sizingcriterion_nodejs" style="color: inherit; text-decoration: inherit;">sizing<wbr>Criterion</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Assessment sizing criterion.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="stage_nodejs">
 <a href="#stage_nodejs" style="color: inherit; text-decoration: inherit;">stage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User configurable setting that describes the status of the assessment.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the assessment has been created and is valid.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="timerange_nodejs">
 <a href="#timerange_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time range of performance data used to recommend a size.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="updatedtimestamp_nodejs">
 <a href="#updatedtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time when this project was last updated. Date-Time represented in ISO-8601 format.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vmuptime_nodejs">
 <a href="#vmuptime_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Uptime</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vmuptimeresponse">Vm<wbr>Uptime<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specify the duration for which the VMs are up in the on-premises environment.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2486,317 +2259,1811 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="azure_disk_type_python">
 <a href="#azure_disk_type_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>disk_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Storage type selected for this disk.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azure_hybrid_use_benefit_python">
 <a href="#azure_hybrid_use_benefit_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>hybrid_<wbr>use_<wbr>benefit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AHUB discount on windows virtual machines.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azure_location_python">
 <a href="#azure_location_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Target Azure location for which the machines should be assessed. These enums are the same as used by Compute API.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azure_offer_code_python">
 <a href="#azure_offer_code_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>offer_<wbr>code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Offer code according to which cost estimation is done.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azure_pricing_tier_python">
 <a href="#azure_pricing_tier_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>pricing_<wbr>tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pricing tier for Size evaluation.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azure_storage_redundancy_python">
 <a href="#azure_storage_redundancy_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>storage_<wbr>redundancy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Storage Redundancy type offered by Azure.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azure_vm_families_python">
 <a href="#azure_vm_families_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>vm_<wbr>families</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of azure VM families.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="confidence_rating_in_percentage_python">
 <a href="#confidence_rating_in_percentage_python" style="color: inherit; text-decoration: inherit;">confidence_<wbr>rating_<wbr>in_<wbr>percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Confidence rating percentage for assessment. Can be in the range [0, 100].{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="created_timestamp_python">
 <a href="#created_timestamp_python" style="color: inherit; text-decoration: inherit;">created_<wbr>timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time when this project was created. Date-Time represented in ISO-8601 format.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="currency_python">
 <a href="#currency_python" style="color: inherit; text-decoration: inherit;">currency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Currency to report prices in.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="discount_percentage_python">
 <a href="#discount_percentage_python" style="color: inherit; text-decoration: inherit;">discount_<wbr>percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Custom discount percentage to be applied on final costs. Can be in the range [0, 100].{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ea_subscription_id_python">
 <a href="#ea_subscription_id_python" style="color: inherit; text-decoration: inherit;">ea_<wbr>subscription_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enterprise agreement subscription arm id.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monthly_bandwidth_cost_python">
 <a href="#monthly_bandwidth_cost_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>bandwidth_<wbr>cost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Monthly network cost estimate for the machines that are part of this assessment as a group, for a 31-day month.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monthly_compute_cost_python">
 <a href="#monthly_compute_cost_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>compute_<wbr>cost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Monthly compute cost estimate for the machines that are part of this assessment as a group, for a 31-day month.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monthly_premium_storage_cost_python">
 <a href="#monthly_premium_storage_cost_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>premium_<wbr>storage_<wbr>cost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Monthly premium storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monthly_standard_ssd_storage_cost_python">
 <a href="#monthly_standard_ssd_storage_cost_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>standard_<wbr>ssd_<wbr>storage_<wbr>cost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Monthly standard SSD storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monthly_storage_cost_python">
 <a href="#monthly_storage_cost_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>storage_<wbr>cost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Monthly storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="number_of_machines_python">
 <a href="#number_of_machines_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>machines</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of assessed machines part of this assessment.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="percentile_python">
 <a href="#percentile_python" style="color: inherit; text-decoration: inherit;">percentile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Percentile of performance data used to recommend Azure size.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="perf_data_end_time_python">
 <a href="#perf_data_end_time_python" style="color: inherit; text-decoration: inherit;">perf_<wbr>data_<wbr>end_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}End time to consider performance data for assessment{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="perf_data_start_time_python">
 <a href="#perf_data_start_time_python" style="color: inherit; text-decoration: inherit;">perf_<wbr>data_<wbr>start_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Start time to consider performance data for assessment{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="prices_timestamp_python">
 <a href="#prices_timestamp_python" style="color: inherit; text-decoration: inherit;">prices_<wbr>timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time when the Azure Prices were queried. Date-Time represented in ISO-8601 format.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="reserved_instance_python">
 <a href="#reserved_instance_python" style="color: inherit; text-decoration: inherit;">reserved_<wbr>instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure reserved instance.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scaling_factor_python">
 <a href="#scaling_factor_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>factor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Scaling factor used over utilization data to add a performance buffer for new machines to be created in Azure. Min Value = 1.0, Max value = 1.9, Default = 1.3.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sizing_criterion_python">
 <a href="#sizing_criterion_python" style="color: inherit; text-decoration: inherit;">sizing_<wbr>criterion</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Assessment sizing criterion.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="stage_python">
 <a href="#stage_python" style="color: inherit; text-decoration: inherit;">stage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User configurable setting that describes the status of the assessment.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether the assessment has been created and is valid.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="time_range_python">
 <a href="#time_range_python" style="color: inherit; text-decoration: inherit;">time_<wbr>range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time range of performance data used to recommend a size.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="updated_timestamp_python">
 <a href="#updated_timestamp_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time when this project was last updated. Date-Time represented in ISO-8601 format.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vm_uptime_python">
 <a href="#vm_uptime_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>uptime</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vmuptimeresponse">Vm<wbr>Uptime<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify the duration for which the VMs are up in the on-premises environment.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="assessmentsizingcriterion">Assessment<wbr>Sizing<wbr>Criterion</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Performance<wbr>Based</dt>
+    <dd>PerformanceBased</dd>
+    <dt>As<wbr>On<wbr>Premises</dt>
+    <dd>AsOnPremises</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Assessment<wbr>Sizing<wbr>Criterion<wbr>Performance<wbr>Based</dt>
+    <dd>PerformanceBased</dd>
+    <dt>Assessment<wbr>Sizing<wbr>Criterion<wbr>As<wbr>On<wbr>Premises</dt>
+    <dd>AsOnPremises</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Performance<wbr>Based</dt>
+    <dd>PerformanceBased</dd>
+    <dt>As<wbr>On<wbr>Premises</dt>
+    <dd>AsOnPremises</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>PERFORMANCE_BASED</dt>
+    <dd>PerformanceBased</dd>
+    <dt>AS_ON_PREMISES</dt>
+    <dd>AsOnPremises</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="assessmentstage">Assessment<wbr>Stage</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>In<wbr>Progress</dt>
+    <dd>InProgress</dd>
+    <dt>Under<wbr>Review</dt>
+    <dd>UnderReview</dd>
+    <dt>Approved</dt>
+    <dd>Approved</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Assessment<wbr>Stage<wbr>In<wbr>Progress</dt>
+    <dd>InProgress</dd>
+    <dt>Assessment<wbr>Stage<wbr>Under<wbr>Review</dt>
+    <dd>UnderReview</dd>
+    <dt>Assessment<wbr>Stage<wbr>Approved</dt>
+    <dd>Approved</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>In<wbr>Progress</dt>
+    <dd>InProgress</dd>
+    <dt>Under<wbr>Review</dt>
+    <dd>UnderReview</dd>
+    <dt>Approved</dt>
+    <dd>Approved</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>IN_PROGRESS</dt>
+    <dd>InProgress</dd>
+    <dt>UNDER_REVIEW</dt>
+    <dd>UnderReview</dd>
+    <dt>APPROVED</dt>
+    <dd>Approved</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="azuredisktype">Azure<wbr>Disk<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Unknown</dt>
+    <dd>Unknown</dd>
+    <dt>Standard</dt>
+    <dd>Standard</dd>
+    <dt>Premium</dt>
+    <dd>Premium</dd>
+    <dt>Standard<wbr>SSD</dt>
+    <dd>StandardSSD</dd>
+    <dt>Standard<wbr>Or<wbr>Premium</dt>
+    <dd>StandardOrPremium</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Azure<wbr>Disk<wbr>Type<wbr>Unknown</dt>
+    <dd>Unknown</dd>
+    <dt>Azure<wbr>Disk<wbr>Type<wbr>Standard</dt>
+    <dd>Standard</dd>
+    <dt>Azure<wbr>Disk<wbr>Type<wbr>Premium</dt>
+    <dd>Premium</dd>
+    <dt>Azure<wbr>Disk<wbr>Type<wbr>Standard<wbr>SSD</dt>
+    <dd>StandardSSD</dd>
+    <dt>Azure<wbr>Disk<wbr>Type<wbr>Standard<wbr>Or<wbr>Premium</dt>
+    <dd>StandardOrPremium</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Unknown</dt>
+    <dd>Unknown</dd>
+    <dt>Standard</dt>
+    <dd>Standard</dd>
+    <dt>Premium</dt>
+    <dd>Premium</dd>
+    <dt>Standard<wbr>SSD</dt>
+    <dd>StandardSSD</dd>
+    <dt>Standard<wbr>Or<wbr>Premium</dt>
+    <dd>StandardOrPremium</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>UNKNOWN</dt>
+    <dd>Unknown</dd>
+    <dt>STANDARD</dt>
+    <dd>Standard</dd>
+    <dt>PREMIUM</dt>
+    <dd>Premium</dd>
+    <dt>STANDARD_SSD</dt>
+    <dd>StandardSSD</dd>
+    <dt>STANDARD_OR_PREMIUM</dt>
+    <dd>StandardOrPremium</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="azurehybridusebenefit">Azure<wbr>Hybrid<wbr>Use<wbr>Benefit</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Unknown</dt>
+    <dd>Unknown</dd>
+    <dt>Yes</dt>
+    <dd>Yes</dd>
+    <dt>No</dt>
+    <dd>No</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Azure<wbr>Hybrid<wbr>Use<wbr>Benefit<wbr>Unknown</dt>
+    <dd>Unknown</dd>
+    <dt>Azure<wbr>Hybrid<wbr>Use<wbr>Benefit<wbr>Yes</dt>
+    <dd>Yes</dd>
+    <dt>Azure<wbr>Hybrid<wbr>Use<wbr>Benefit<wbr>No</dt>
+    <dd>No</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Unknown</dt>
+    <dd>Unknown</dd>
+    <dt>Yes</dt>
+    <dd>Yes</dd>
+    <dt>No</dt>
+    <dd>No</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>UNKNOWN</dt>
+    <dd>Unknown</dd>
+    <dt>YES</dt>
+    <dd>Yes</dd>
+    <dt>NO</dt>
+    <dd>No</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="azurelocation">Azure<wbr>Location</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Unknown</dt>
+    <dd>Unknown</dd>
+    <dt>East<wbr>Asia</dt>
+    <dd>EastAsia</dd>
+    <dt>Southeast<wbr>Asia</dt>
+    <dd>SoutheastAsia</dd>
+    <dt>Australia<wbr>East</dt>
+    <dd>AustraliaEast</dd>
+    <dt>Australia<wbr>Southeast</dt>
+    <dd>AustraliaSoutheast</dd>
+    <dt>Brazil<wbr>South</dt>
+    <dd>BrazilSouth</dd>
+    <dt>Canada<wbr>Central</dt>
+    <dd>CanadaCentral</dd>
+    <dt>Canada<wbr>East</dt>
+    <dd>CanadaEast</dd>
+    <dt>West<wbr>Europe</dt>
+    <dd>WestEurope</dd>
+    <dt>North<wbr>Europe</dt>
+    <dd>NorthEurope</dd>
+    <dt>Central<wbr>India</dt>
+    <dd>CentralIndia</dd>
+    <dt>South<wbr>India</dt>
+    <dd>SouthIndia</dd>
+    <dt>West<wbr>India</dt>
+    <dd>WestIndia</dd>
+    <dt>Japan<wbr>East</dt>
+    <dd>JapanEast</dd>
+    <dt>Japan<wbr>West</dt>
+    <dd>JapanWest</dd>
+    <dt>Korea<wbr>Central</dt>
+    <dd>KoreaCentral</dd>
+    <dt>Korea<wbr>South</dt>
+    <dd>KoreaSouth</dd>
+    <dt>Uk<wbr>West</dt>
+    <dd>UkWest</dd>
+    <dt>Uk<wbr>South</dt>
+    <dd>UkSouth</dd>
+    <dt>North<wbr>Central<wbr>Us</dt>
+    <dd>NorthCentralUs</dd>
+    <dt>East<wbr>Us</dt>
+    <dd>EastUs</dd>
+    <dt>West<wbr>Us2</dt>
+    <dd>WestUs2</dd>
+    <dt>South<wbr>Central<wbr>Us</dt>
+    <dd>SouthCentralUs</dd>
+    <dt>Central<wbr>Us</dt>
+    <dd>CentralUs</dd>
+    <dt>East<wbr>Us2</dt>
+    <dd>EastUs2</dd>
+    <dt>West<wbr>Us</dt>
+    <dd>WestUs</dd>
+    <dt>West<wbr>Central<wbr>Us</dt>
+    <dd>WestCentralUs</dd>
+    <dt>Germany<wbr>Central</dt>
+    <dd>GermanyCentral</dd>
+    <dt>Germany<wbr>Northeast</dt>
+    <dd>GermanyNortheast</dd>
+    <dt>China<wbr>North</dt>
+    <dd>ChinaNorth</dd>
+    <dt>China<wbr>East</dt>
+    <dd>ChinaEast</dd>
+    <dt>USGov<wbr>Arizona</dt>
+    <dd>USGovArizona</dd>
+    <dt>USGov<wbr>Texas</dt>
+    <dd>USGovTexas</dd>
+    <dt>USGov<wbr>Iowa</dt>
+    <dd>USGovIowa</dd>
+    <dt>USGov<wbr>Virginia</dt>
+    <dd>USGovVirginia</dd>
+    <dt>USDo<wbr>DCentral</dt>
+    <dd>USDoDCentral</dd>
+    <dt>USDo<wbr>DEast</dt>
+    <dd>USDoDEast</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Azure<wbr>Location<wbr>Unknown</dt>
+    <dd>Unknown</dd>
+    <dt>Azure<wbr>Location<wbr>East<wbr>Asia</dt>
+    <dd>EastAsia</dd>
+    <dt>Azure<wbr>Location<wbr>Southeast<wbr>Asia</dt>
+    <dd>SoutheastAsia</dd>
+    <dt>Azure<wbr>Location<wbr>Australia<wbr>East</dt>
+    <dd>AustraliaEast</dd>
+    <dt>Azure<wbr>Location<wbr>Australia<wbr>Southeast</dt>
+    <dd>AustraliaSoutheast</dd>
+    <dt>Azure<wbr>Location<wbr>Brazil<wbr>South</dt>
+    <dd>BrazilSouth</dd>
+    <dt>Azure<wbr>Location<wbr>Canada<wbr>Central</dt>
+    <dd>CanadaCentral</dd>
+    <dt>Azure<wbr>Location<wbr>Canada<wbr>East</dt>
+    <dd>CanadaEast</dd>
+    <dt>Azure<wbr>Location<wbr>West<wbr>Europe</dt>
+    <dd>WestEurope</dd>
+    <dt>Azure<wbr>Location<wbr>North<wbr>Europe</dt>
+    <dd>NorthEurope</dd>
+    <dt>Azure<wbr>Location<wbr>Central<wbr>India</dt>
+    <dd>CentralIndia</dd>
+    <dt>Azure<wbr>Location<wbr>South<wbr>India</dt>
+    <dd>SouthIndia</dd>
+    <dt>Azure<wbr>Location<wbr>West<wbr>India</dt>
+    <dd>WestIndia</dd>
+    <dt>Azure<wbr>Location<wbr>Japan<wbr>East</dt>
+    <dd>JapanEast</dd>
+    <dt>Azure<wbr>Location<wbr>Japan<wbr>West</dt>
+    <dd>JapanWest</dd>
+    <dt>Azure<wbr>Location<wbr>Korea<wbr>Central</dt>
+    <dd>KoreaCentral</dd>
+    <dt>Azure<wbr>Location<wbr>Korea<wbr>South</dt>
+    <dd>KoreaSouth</dd>
+    <dt>Azure<wbr>Location<wbr>Uk<wbr>West</dt>
+    <dd>UkWest</dd>
+    <dt>Azure<wbr>Location<wbr>Uk<wbr>South</dt>
+    <dd>UkSouth</dd>
+    <dt>Azure<wbr>Location<wbr>North<wbr>Central<wbr>Us</dt>
+    <dd>NorthCentralUs</dd>
+    <dt>Azure<wbr>Location<wbr>East<wbr>Us</dt>
+    <dd>EastUs</dd>
+    <dt>Azure<wbr>Location<wbr>West<wbr>Us2</dt>
+    <dd>WestUs2</dd>
+    <dt>Azure<wbr>Location<wbr>South<wbr>Central<wbr>Us</dt>
+    <dd>SouthCentralUs</dd>
+    <dt>Azure<wbr>Location<wbr>Central<wbr>Us</dt>
+    <dd>CentralUs</dd>
+    <dt>Azure<wbr>Location<wbr>East<wbr>Us2</dt>
+    <dd>EastUs2</dd>
+    <dt>Azure<wbr>Location<wbr>West<wbr>Us</dt>
+    <dd>WestUs</dd>
+    <dt>Azure<wbr>Location<wbr>West<wbr>Central<wbr>Us</dt>
+    <dd>WestCentralUs</dd>
+    <dt>Azure<wbr>Location<wbr>Germany<wbr>Central</dt>
+    <dd>GermanyCentral</dd>
+    <dt>Azure<wbr>Location<wbr>Germany<wbr>Northeast</dt>
+    <dd>GermanyNortheast</dd>
+    <dt>Azure<wbr>Location<wbr>China<wbr>North</dt>
+    <dd>ChinaNorth</dd>
+    <dt>Azure<wbr>Location<wbr>China<wbr>East</dt>
+    <dd>ChinaEast</dd>
+    <dt>Azure<wbr>Location<wbr>USGov<wbr>Arizona</dt>
+    <dd>USGovArizona</dd>
+    <dt>Azure<wbr>Location<wbr>USGov<wbr>Texas</dt>
+    <dd>USGovTexas</dd>
+    <dt>Azure<wbr>Location<wbr>USGov<wbr>Iowa</dt>
+    <dd>USGovIowa</dd>
+    <dt>Azure<wbr>Location<wbr>USGov<wbr>Virginia</dt>
+    <dd>USGovVirginia</dd>
+    <dt>Azure<wbr>Location<wbr>USDo<wbr>DCentral</dt>
+    <dd>USDoDCentral</dd>
+    <dt>Azure<wbr>Location<wbr>USDo<wbr>DEast</dt>
+    <dd>USDoDEast</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Unknown</dt>
+    <dd>Unknown</dd>
+    <dt>East<wbr>Asia</dt>
+    <dd>EastAsia</dd>
+    <dt>Southeast<wbr>Asia</dt>
+    <dd>SoutheastAsia</dd>
+    <dt>Australia<wbr>East</dt>
+    <dd>AustraliaEast</dd>
+    <dt>Australia<wbr>Southeast</dt>
+    <dd>AustraliaSoutheast</dd>
+    <dt>Brazil<wbr>South</dt>
+    <dd>BrazilSouth</dd>
+    <dt>Canada<wbr>Central</dt>
+    <dd>CanadaCentral</dd>
+    <dt>Canada<wbr>East</dt>
+    <dd>CanadaEast</dd>
+    <dt>West<wbr>Europe</dt>
+    <dd>WestEurope</dd>
+    <dt>North<wbr>Europe</dt>
+    <dd>NorthEurope</dd>
+    <dt>Central<wbr>India</dt>
+    <dd>CentralIndia</dd>
+    <dt>South<wbr>India</dt>
+    <dd>SouthIndia</dd>
+    <dt>West<wbr>India</dt>
+    <dd>WestIndia</dd>
+    <dt>Japan<wbr>East</dt>
+    <dd>JapanEast</dd>
+    <dt>Japan<wbr>West</dt>
+    <dd>JapanWest</dd>
+    <dt>Korea<wbr>Central</dt>
+    <dd>KoreaCentral</dd>
+    <dt>Korea<wbr>South</dt>
+    <dd>KoreaSouth</dd>
+    <dt>Uk<wbr>West</dt>
+    <dd>UkWest</dd>
+    <dt>Uk<wbr>South</dt>
+    <dd>UkSouth</dd>
+    <dt>North<wbr>Central<wbr>Us</dt>
+    <dd>NorthCentralUs</dd>
+    <dt>East<wbr>Us</dt>
+    <dd>EastUs</dd>
+    <dt>West<wbr>Us2</dt>
+    <dd>WestUs2</dd>
+    <dt>South<wbr>Central<wbr>Us</dt>
+    <dd>SouthCentralUs</dd>
+    <dt>Central<wbr>Us</dt>
+    <dd>CentralUs</dd>
+    <dt>East<wbr>Us2</dt>
+    <dd>EastUs2</dd>
+    <dt>West<wbr>Us</dt>
+    <dd>WestUs</dd>
+    <dt>West<wbr>Central<wbr>Us</dt>
+    <dd>WestCentralUs</dd>
+    <dt>Germany<wbr>Central</dt>
+    <dd>GermanyCentral</dd>
+    <dt>Germany<wbr>Northeast</dt>
+    <dd>GermanyNortheast</dd>
+    <dt>China<wbr>North</dt>
+    <dd>ChinaNorth</dd>
+    <dt>China<wbr>East</dt>
+    <dd>ChinaEast</dd>
+    <dt>USGov<wbr>Arizona</dt>
+    <dd>USGovArizona</dd>
+    <dt>USGov<wbr>Texas</dt>
+    <dd>USGovTexas</dd>
+    <dt>USGov<wbr>Iowa</dt>
+    <dd>USGovIowa</dd>
+    <dt>USGov<wbr>Virginia</dt>
+    <dd>USGovVirginia</dd>
+    <dt>USDo<wbr>DCentral</dt>
+    <dd>USDoDCentral</dd>
+    <dt>USDo<wbr>DEast</dt>
+    <dd>USDoDEast</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>UNKNOWN</dt>
+    <dd>Unknown</dd>
+    <dt>EAST_ASIA</dt>
+    <dd>EastAsia</dd>
+    <dt>SOUTHEAST_ASIA</dt>
+    <dd>SoutheastAsia</dd>
+    <dt>AUSTRALIA_EAST</dt>
+    <dd>AustraliaEast</dd>
+    <dt>AUSTRALIA_SOUTHEAST</dt>
+    <dd>AustraliaSoutheast</dd>
+    <dt>BRAZIL_SOUTH</dt>
+    <dd>BrazilSouth</dd>
+    <dt>CANADA_CENTRAL</dt>
+    <dd>CanadaCentral</dd>
+    <dt>CANADA_EAST</dt>
+    <dd>CanadaEast</dd>
+    <dt>WEST_EUROPE</dt>
+    <dd>WestEurope</dd>
+    <dt>NORTH_EUROPE</dt>
+    <dd>NorthEurope</dd>
+    <dt>CENTRAL_INDIA</dt>
+    <dd>CentralIndia</dd>
+    <dt>SOUTH_INDIA</dt>
+    <dd>SouthIndia</dd>
+    <dt>WEST_INDIA</dt>
+    <dd>WestIndia</dd>
+    <dt>JAPAN_EAST</dt>
+    <dd>JapanEast</dd>
+    <dt>JAPAN_WEST</dt>
+    <dd>JapanWest</dd>
+    <dt>KOREA_CENTRAL</dt>
+    <dd>KoreaCentral</dd>
+    <dt>KOREA_SOUTH</dt>
+    <dd>KoreaSouth</dd>
+    <dt>UK_WEST</dt>
+    <dd>UkWest</dd>
+    <dt>UK_SOUTH</dt>
+    <dd>UkSouth</dd>
+    <dt>NORTH_CENTRAL_US</dt>
+    <dd>NorthCentralUs</dd>
+    <dt>EAST_US</dt>
+    <dd>EastUs</dd>
+    <dt>WEST_US2</dt>
+    <dd>WestUs2</dd>
+    <dt>SOUTH_CENTRAL_US</dt>
+    <dd>SouthCentralUs</dd>
+    <dt>CENTRAL_US</dt>
+    <dd>CentralUs</dd>
+    <dt>EAST_US2</dt>
+    <dd>EastUs2</dd>
+    <dt>WEST_US</dt>
+    <dd>WestUs</dd>
+    <dt>WEST_CENTRAL_US</dt>
+    <dd>WestCentralUs</dd>
+    <dt>GERMANY_CENTRAL</dt>
+    <dd>GermanyCentral</dd>
+    <dt>GERMANY_NORTHEAST</dt>
+    <dd>GermanyNortheast</dd>
+    <dt>CHINA_NORTH</dt>
+    <dd>ChinaNorth</dd>
+    <dt>CHINA_EAST</dt>
+    <dd>ChinaEast</dd>
+    <dt>US_GOV_ARIZONA</dt>
+    <dd>USGovArizona</dd>
+    <dt>US_GOV_TEXAS</dt>
+    <dd>USGovTexas</dd>
+    <dt>US_GOV_IOWA</dt>
+    <dd>USGovIowa</dd>
+    <dt>US_GOV_VIRGINIA</dt>
+    <dd>USGovVirginia</dd>
+    <dt>US_DO_D_CENTRAL</dt>
+    <dd>USDoDCentral</dd>
+    <dt>US_DO_D_EAST</dt>
+    <dd>USDoDEast</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="azureoffercode">Azure<wbr>Offer<wbr>Code</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Unknown</dt>
+    <dd>Unknown</dd>
+    <dt>MSAZR0003P</dt>
+    <dd>MSAZR0003P</dd>
+    <dt>MSAZR0044P</dt>
+    <dd>MSAZR0044P</dd>
+    <dt>MSAZR0059P</dt>
+    <dd>MSAZR0059P</dd>
+    <dt>MSAZR0060P</dt>
+    <dd>MSAZR0060P</dd>
+    <dt>MSAZR0062P</dt>
+    <dd>MSAZR0062P</dd>
+    <dt>MSAZR0063P</dt>
+    <dd>MSAZR0063P</dd>
+    <dt>MSAZR0064P</dt>
+    <dd>MSAZR0064P</dd>
+    <dt>MSAZR0029P</dt>
+    <dd>MSAZR0029P</dd>
+    <dt>MSAZR0022P</dt>
+    <dd>MSAZR0022P</dd>
+    <dt>MSAZR0023P</dt>
+    <dd>MSAZR0023P</dd>
+    <dt>MSAZR0148P</dt>
+    <dd>MSAZR0148P</dd>
+    <dt>MSAZR0025P</dt>
+    <dd>MSAZR0025P</dd>
+    <dt>MSAZR0036P</dt>
+    <dd>MSAZR0036P</dd>
+    <dt>MSAZR0120P</dt>
+    <dd>MSAZR0120P</dd>
+    <dt>MSAZR0121P</dt>
+    <dd>MSAZR0121P</dd>
+    <dt>MSAZR0122P</dt>
+    <dd>MSAZR0122P</dd>
+    <dt>MSAZR0123P</dt>
+    <dd>MSAZR0123P</dd>
+    <dt>MSAZR0124P</dt>
+    <dd>MSAZR0124P</dd>
+    <dt>MSAZR0125P</dt>
+    <dd>MSAZR0125P</dd>
+    <dt>MSAZR0126P</dt>
+    <dd>MSAZR0126P</dd>
+    <dt>MSAZR0127P</dt>
+    <dd>MSAZR0127P</dd>
+    <dt>MSAZR0128P</dt>
+    <dd>MSAZR0128P</dd>
+    <dt>MSAZR0129P</dt>
+    <dd>MSAZR0129P</dd>
+    <dt>MSAZR0130P</dt>
+    <dd>MSAZR0130P</dd>
+    <dt>MSAZR0111P</dt>
+    <dd>MSAZR0111P</dd>
+    <dt>MSAZR0144P</dt>
+    <dd>MSAZR0144P</dd>
+    <dt>MSAZR0149P</dt>
+    <dd>MSAZR0149P</dd>
+    <dt>MSMCAZR0044P</dt>
+    <dd>MSMCAZR0044P</dd>
+    <dt>MSMCAZR0059P</dt>
+    <dd>MSMCAZR0059P</dd>
+    <dt>MSMCAZR0060P</dt>
+    <dd>MSMCAZR0060P</dd>
+    <dt>MSMCAZR0063P</dt>
+    <dd>MSMCAZR0063P</dd>
+    <dt>MSMCAZR0120P</dt>
+    <dd>MSMCAZR0120P</dd>
+    <dt>MSMCAZR0121P</dt>
+    <dd>MSMCAZR0121P</dd>
+    <dt>MSMCAZR0125P</dt>
+    <dd>MSMCAZR0125P</dd>
+    <dt>MSMCAZR0128P</dt>
+    <dd>MSMCAZR0128P</dd>
+    <dt>MSAZRDE0003P</dt>
+    <dd>MSAZRDE0003P</dd>
+    <dt>MSAZRDE0044P</dt>
+    <dd>MSAZRDE0044P</dd>
+    <dt>MSAZRUSGOV0003P</dt>
+    <dd>MSAZRUSGOV0003P</dd>
+    <dt>EA</dt>
+    <dd>EA</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>Unknown</dt>
+    <dd>Unknown</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSAZR0003P</dt>
+    <dd>MSAZR0003P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSAZR0044P</dt>
+    <dd>MSAZR0044P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSAZR0059P</dt>
+    <dd>MSAZR0059P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSAZR0060P</dt>
+    <dd>MSAZR0060P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSAZR0062P</dt>
+    <dd>MSAZR0062P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSAZR0063P</dt>
+    <dd>MSAZR0063P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSAZR0064P</dt>
+    <dd>MSAZR0064P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSAZR0029P</dt>
+    <dd>MSAZR0029P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSAZR0022P</dt>
+    <dd>MSAZR0022P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSAZR0023P</dt>
+    <dd>MSAZR0023P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSAZR0148P</dt>
+    <dd>MSAZR0148P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSAZR0025P</dt>
+    <dd>MSAZR0025P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSAZR0036P</dt>
+    <dd>MSAZR0036P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSAZR0120P</dt>
+    <dd>MSAZR0120P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSAZR0121P</dt>
+    <dd>MSAZR0121P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSAZR0122P</dt>
+    <dd>MSAZR0122P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSAZR0123P</dt>
+    <dd>MSAZR0123P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSAZR0124P</dt>
+    <dd>MSAZR0124P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSAZR0125P</dt>
+    <dd>MSAZR0125P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSAZR0126P</dt>
+    <dd>MSAZR0126P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSAZR0127P</dt>
+    <dd>MSAZR0127P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSAZR0128P</dt>
+    <dd>MSAZR0128P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSAZR0129P</dt>
+    <dd>MSAZR0129P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSAZR0130P</dt>
+    <dd>MSAZR0130P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSAZR0111P</dt>
+    <dd>MSAZR0111P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSAZR0144P</dt>
+    <dd>MSAZR0144P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSAZR0149P</dt>
+    <dd>MSAZR0149P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSMCAZR0044P</dt>
+    <dd>MSMCAZR0044P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSMCAZR0059P</dt>
+    <dd>MSMCAZR0059P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSMCAZR0060P</dt>
+    <dd>MSMCAZR0060P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSMCAZR0063P</dt>
+    <dd>MSMCAZR0063P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSMCAZR0120P</dt>
+    <dd>MSMCAZR0120P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSMCAZR0121P</dt>
+    <dd>MSMCAZR0121P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSMCAZR0125P</dt>
+    <dd>MSMCAZR0125P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSMCAZR0128P</dt>
+    <dd>MSMCAZR0128P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSAZRDE0003P</dt>
+    <dd>MSAZRDE0003P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSAZRDE0044P</dt>
+    <dd>MSAZRDE0044P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>MSAZRUSGOV0003P</dt>
+    <dd>MSAZRUSGOV0003P</dd>
+    <dt>Azure<wbr>Offer<wbr>Code<wbr>EA</dt>
+    <dd>EA</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Unknown</dt>
+    <dd>Unknown</dd>
+    <dt>MSAZR0003P</dt>
+    <dd>MSAZR0003P</dd>
+    <dt>MSAZR0044P</dt>
+    <dd>MSAZR0044P</dd>
+    <dt>MSAZR0059P</dt>
+    <dd>MSAZR0059P</dd>
+    <dt>MSAZR0060P</dt>
+    <dd>MSAZR0060P</dd>
+    <dt>MSAZR0062P</dt>
+    <dd>MSAZR0062P</dd>
+    <dt>MSAZR0063P</dt>
+    <dd>MSAZR0063P</dd>
+    <dt>MSAZR0064P</dt>
+    <dd>MSAZR0064P</dd>
+    <dt>MSAZR0029P</dt>
+    <dd>MSAZR0029P</dd>
+    <dt>MSAZR0022P</dt>
+    <dd>MSAZR0022P</dd>
+    <dt>MSAZR0023P</dt>
+    <dd>MSAZR0023P</dd>
+    <dt>MSAZR0148P</dt>
+    <dd>MSAZR0148P</dd>
+    <dt>MSAZR0025P</dt>
+    <dd>MSAZR0025P</dd>
+    <dt>MSAZR0036P</dt>
+    <dd>MSAZR0036P</dd>
+    <dt>MSAZR0120P</dt>
+    <dd>MSAZR0120P</dd>
+    <dt>MSAZR0121P</dt>
+    <dd>MSAZR0121P</dd>
+    <dt>MSAZR0122P</dt>
+    <dd>MSAZR0122P</dd>
+    <dt>MSAZR0123P</dt>
+    <dd>MSAZR0123P</dd>
+    <dt>MSAZR0124P</dt>
+    <dd>MSAZR0124P</dd>
+    <dt>MSAZR0125P</dt>
+    <dd>MSAZR0125P</dd>
+    <dt>MSAZR0126P</dt>
+    <dd>MSAZR0126P</dd>
+    <dt>MSAZR0127P</dt>
+    <dd>MSAZR0127P</dd>
+    <dt>MSAZR0128P</dt>
+    <dd>MSAZR0128P</dd>
+    <dt>MSAZR0129P</dt>
+    <dd>MSAZR0129P</dd>
+    <dt>MSAZR0130P</dt>
+    <dd>MSAZR0130P</dd>
+    <dt>MSAZR0111P</dt>
+    <dd>MSAZR0111P</dd>
+    <dt>MSAZR0144P</dt>
+    <dd>MSAZR0144P</dd>
+    <dt>MSAZR0149P</dt>
+    <dd>MSAZR0149P</dd>
+    <dt>MSMCAZR0044P</dt>
+    <dd>MSMCAZR0044P</dd>
+    <dt>MSMCAZR0059P</dt>
+    <dd>MSMCAZR0059P</dd>
+    <dt>MSMCAZR0060P</dt>
+    <dd>MSMCAZR0060P</dd>
+    <dt>MSMCAZR0063P</dt>
+    <dd>MSMCAZR0063P</dd>
+    <dt>MSMCAZR0120P</dt>
+    <dd>MSMCAZR0120P</dd>
+    <dt>MSMCAZR0121P</dt>
+    <dd>MSMCAZR0121P</dd>
+    <dt>MSMCAZR0125P</dt>
+    <dd>MSMCAZR0125P</dd>
+    <dt>MSMCAZR0128P</dt>
+    <dd>MSMCAZR0128P</dd>
+    <dt>MSAZRDE0003P</dt>
+    <dd>MSAZRDE0003P</dd>
+    <dt>MSAZRDE0044P</dt>
+    <dd>MSAZRDE0044P</dd>
+    <dt>MSAZRUSGOV0003P</dt>
+    <dd>MSAZRUSGOV0003P</dd>
+    <dt>EA</dt>
+    <dd>EA</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>UNKNOWN</dt>
+    <dd>Unknown</dd>
+    <dt>MSAZR0003_P</dt>
+    <dd>MSAZR0003P</dd>
+    <dt>MSAZR0044_P</dt>
+    <dd>MSAZR0044P</dd>
+    <dt>MSAZR0059_P</dt>
+    <dd>MSAZR0059P</dd>
+    <dt>MSAZR0060_P</dt>
+    <dd>MSAZR0060P</dd>
+    <dt>MSAZR0062_P</dt>
+    <dd>MSAZR0062P</dd>
+    <dt>MSAZR0063_P</dt>
+    <dd>MSAZR0063P</dd>
+    <dt>MSAZR0064_P</dt>
+    <dd>MSAZR0064P</dd>
+    <dt>MSAZR0029_P</dt>
+    <dd>MSAZR0029P</dd>
+    <dt>MSAZR0022_P</dt>
+    <dd>MSAZR0022P</dd>
+    <dt>MSAZR0023_P</dt>
+    <dd>MSAZR0023P</dd>
+    <dt>MSAZR0148_P</dt>
+    <dd>MSAZR0148P</dd>
+    <dt>MSAZR0025_P</dt>
+    <dd>MSAZR0025P</dd>
+    <dt>MSAZR0036_P</dt>
+    <dd>MSAZR0036P</dd>
+    <dt>MSAZR0120_P</dt>
+    <dd>MSAZR0120P</dd>
+    <dt>MSAZR0121_P</dt>
+    <dd>MSAZR0121P</dd>
+    <dt>MSAZR0122_P</dt>
+    <dd>MSAZR0122P</dd>
+    <dt>MSAZR0123_P</dt>
+    <dd>MSAZR0123P</dd>
+    <dt>MSAZR0124_P</dt>
+    <dd>MSAZR0124P</dd>
+    <dt>MSAZR0125_P</dt>
+    <dd>MSAZR0125P</dd>
+    <dt>MSAZR0126_P</dt>
+    <dd>MSAZR0126P</dd>
+    <dt>MSAZR0127_P</dt>
+    <dd>MSAZR0127P</dd>
+    <dt>MSAZR0128_P</dt>
+    <dd>MSAZR0128P</dd>
+    <dt>MSAZR0129_P</dt>
+    <dd>MSAZR0129P</dd>
+    <dt>MSAZR0130_P</dt>
+    <dd>MSAZR0130P</dd>
+    <dt>MSAZR0111_P</dt>
+    <dd>MSAZR0111P</dd>
+    <dt>MSAZR0144_P</dt>
+    <dd>MSAZR0144P</dd>
+    <dt>MSAZR0149_P</dt>
+    <dd>MSAZR0149P</dd>
+    <dt>MSMCAZR0044_P</dt>
+    <dd>MSMCAZR0044P</dd>
+    <dt>MSMCAZR0059_P</dt>
+    <dd>MSMCAZR0059P</dd>
+    <dt>MSMCAZR0060_P</dt>
+    <dd>MSMCAZR0060P</dd>
+    <dt>MSMCAZR0063_P</dt>
+    <dd>MSMCAZR0063P</dd>
+    <dt>MSMCAZR0120_P</dt>
+    <dd>MSMCAZR0120P</dd>
+    <dt>MSMCAZR0121_P</dt>
+    <dd>MSMCAZR0121P</dd>
+    <dt>MSMCAZR0125_P</dt>
+    <dd>MSMCAZR0125P</dd>
+    <dt>MSMCAZR0128_P</dt>
+    <dd>MSMCAZR0128P</dd>
+    <dt>MSAZRDE0003_P</dt>
+    <dd>MSAZRDE0003P</dd>
+    <dt>MSAZRDE0044_P</dt>
+    <dd>MSAZRDE0044P</dd>
+    <dt>MSAZRUSGOV0003_P</dt>
+    <dd>MSAZRUSGOV0003P</dd>
+    <dt>EA</dt>
+    <dd>EA</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="azurepricingtier">Azure<wbr>Pricing<wbr>Tier</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Standard</dt>
+    <dd>Standard</dd>
+    <dt>Basic</dt>
+    <dd>Basic</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Azure<wbr>Pricing<wbr>Tier<wbr>Standard</dt>
+    <dd>Standard</dd>
+    <dt>Azure<wbr>Pricing<wbr>Tier<wbr>Basic</dt>
+    <dd>Basic</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Standard</dt>
+    <dd>Standard</dd>
+    <dt>Basic</dt>
+    <dd>Basic</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>STANDARD</dt>
+    <dd>Standard</dd>
+    <dt>BASIC</dt>
+    <dd>Basic</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="azurestorageredundancy">Azure<wbr>Storage<wbr>Redundancy</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Unknown</dt>
+    <dd>Unknown</dd>
+    <dt>Locally<wbr>Redundant</dt>
+    <dd>LocallyRedundant</dd>
+    <dt>Zone<wbr>Redundant</dt>
+    <dd>ZoneRedundant</dd>
+    <dt>Geo<wbr>Redundant</dt>
+    <dd>GeoRedundant</dd>
+    <dt>Read<wbr>Access<wbr>Geo<wbr>Redundant</dt>
+    <dd>ReadAccessGeoRedundant</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Azure<wbr>Storage<wbr>Redundancy<wbr>Unknown</dt>
+    <dd>Unknown</dd>
+    <dt>Azure<wbr>Storage<wbr>Redundancy<wbr>Locally<wbr>Redundant</dt>
+    <dd>LocallyRedundant</dd>
+    <dt>Azure<wbr>Storage<wbr>Redundancy<wbr>Zone<wbr>Redundant</dt>
+    <dd>ZoneRedundant</dd>
+    <dt>Azure<wbr>Storage<wbr>Redundancy<wbr>Geo<wbr>Redundant</dt>
+    <dd>GeoRedundant</dd>
+    <dt>Azure<wbr>Storage<wbr>Redundancy<wbr>Read<wbr>Access<wbr>Geo<wbr>Redundant</dt>
+    <dd>ReadAccessGeoRedundant</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Unknown</dt>
+    <dd>Unknown</dd>
+    <dt>Locally<wbr>Redundant</dt>
+    <dd>LocallyRedundant</dd>
+    <dt>Zone<wbr>Redundant</dt>
+    <dd>ZoneRedundant</dd>
+    <dt>Geo<wbr>Redundant</dt>
+    <dd>GeoRedundant</dd>
+    <dt>Read<wbr>Access<wbr>Geo<wbr>Redundant</dt>
+    <dd>ReadAccessGeoRedundant</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>UNKNOWN</dt>
+    <dd>Unknown</dd>
+    <dt>LOCALLY_REDUNDANT</dt>
+    <dd>LocallyRedundant</dd>
+    <dt>ZONE_REDUNDANT</dt>
+    <dd>ZoneRedundant</dd>
+    <dt>GEO_REDUNDANT</dt>
+    <dd>GeoRedundant</dd>
+    <dt>READ_ACCESS_GEO_REDUNDANT</dt>
+    <dd>ReadAccessGeoRedundant</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="azurevmfamily">Azure<wbr>Vm<wbr>Family</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Unknown</dt>
+    <dd>Unknown</dd>
+    <dt>Basic_A0_A4</dt>
+    <dd>Basic_A0_A4</dd>
+    <dt>Standard_A0_A7</dt>
+    <dd>Standard_A0_A7</dd>
+    <dt>Standard_A8_A11</dt>
+    <dd>Standard_A8_A11</dd>
+    <dt>Av2_<wbr>series</dt>
+    <dd>Av2_series</dd>
+    <dt>D_<wbr>series</dt>
+    <dd>D_series</dd>
+    <dt>Dv2_<wbr>series</dt>
+    <dd>Dv2_series</dd>
+    <dt>DS_<wbr>series</dt>
+    <dd>DS_series</dd>
+    <dt>DSv2_<wbr>series</dt>
+    <dd>DSv2_series</dd>
+    <dt>F_<wbr>series</dt>
+    <dd>F_series</dd>
+    <dt>Fs_<wbr>series</dt>
+    <dd>Fs_series</dd>
+    <dt>G_<wbr>series</dt>
+    <dd>G_series</dd>
+    <dt>GS_<wbr>series</dt>
+    <dd>GS_series</dd>
+    <dt>H_<wbr>series</dt>
+    <dd>H_series</dd>
+    <dt>Ls_<wbr>series</dt>
+    <dd>Ls_series</dd>
+    <dt>Dsv3_<wbr>series</dt>
+    <dd>Dsv3_series</dd>
+    <dt>Dv3_<wbr>series</dt>
+    <dd>Dv3_series</dd>
+    <dt>Fsv2_<wbr>series</dt>
+    <dd>Fsv2_series</dd>
+    <dt>Ev3_<wbr>series</dt>
+    <dd>Ev3_series</dd>
+    <dt>Esv3_<wbr>series</dt>
+    <dd>Esv3_series</dd>
+    <dt>M_<wbr>series</dt>
+    <dd>M_series</dd>
+    <dt>DC_Series</dt>
+    <dd>DC_Series</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Azure<wbr>Vm<wbr>Family<wbr>Unknown</dt>
+    <dd>Unknown</dd>
+    <dt>Azure<wbr>Vm<wbr>Family_Basic_A0_A4</dt>
+    <dd>Basic_A0_A4</dd>
+    <dt>Azure<wbr>Vm<wbr>Family_Standard_A0_A7</dt>
+    <dd>Standard_A0_A7</dd>
+    <dt>Azure<wbr>Vm<wbr>Family_Standard_A8_A11</dt>
+    <dd>Standard_A8_A11</dd>
+    <dt>Azure<wbr>Vm<wbr>Family_Av2_<wbr>series</dt>
+    <dd>Av2_series</dd>
+    <dt>Azure<wbr>Vm<wbr>Family_D_<wbr>series</dt>
+    <dd>D_series</dd>
+    <dt>Azure<wbr>Vm<wbr>Family_Dv2_<wbr>series</dt>
+    <dd>Dv2_series</dd>
+    <dt>Azure<wbr>Vm<wbr>Family_DS_<wbr>series</dt>
+    <dd>DS_series</dd>
+    <dt>Azure<wbr>Vm<wbr>Family_DSv2_<wbr>series</dt>
+    <dd>DSv2_series</dd>
+    <dt>Azure<wbr>Vm<wbr>Family_F_<wbr>series</dt>
+    <dd>F_series</dd>
+    <dt>Azure<wbr>Vm<wbr>Family_Fs_<wbr>series</dt>
+    <dd>Fs_series</dd>
+    <dt>Azure<wbr>Vm<wbr>Family_G_<wbr>series</dt>
+    <dd>G_series</dd>
+    <dt>Azure<wbr>Vm<wbr>Family_GS_<wbr>series</dt>
+    <dd>GS_series</dd>
+    <dt>Azure<wbr>Vm<wbr>Family_H_<wbr>series</dt>
+    <dd>H_series</dd>
+    <dt>Azure<wbr>Vm<wbr>Family_Ls_<wbr>series</dt>
+    <dd>Ls_series</dd>
+    <dt>Azure<wbr>Vm<wbr>Family_Dsv3_<wbr>series</dt>
+    <dd>Dsv3_series</dd>
+    <dt>Azure<wbr>Vm<wbr>Family_Dv3_<wbr>series</dt>
+    <dd>Dv3_series</dd>
+    <dt>Azure<wbr>Vm<wbr>Family_Fsv2_<wbr>series</dt>
+    <dd>Fsv2_series</dd>
+    <dt>Azure<wbr>Vm<wbr>Family_Ev3_<wbr>series</dt>
+    <dd>Ev3_series</dd>
+    <dt>Azure<wbr>Vm<wbr>Family_Esv3_<wbr>series</dt>
+    <dd>Esv3_series</dd>
+    <dt>Azure<wbr>Vm<wbr>Family_M_<wbr>series</dt>
+    <dd>M_series</dd>
+    <dt>Azure<wbr>Vm<wbr>Family_DC_Series</dt>
+    <dd>DC_Series</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Unknown</dt>
+    <dd>Unknown</dd>
+    <dt>Basic_A0_A4</dt>
+    <dd>Basic_A0_A4</dd>
+    <dt>Standard_A0_A7</dt>
+    <dd>Standard_A0_A7</dd>
+    <dt>Standard_A8_A11</dt>
+    <dd>Standard_A8_A11</dd>
+    <dt>Av2_<wbr>series</dt>
+    <dd>Av2_series</dd>
+    <dt>D_<wbr>series</dt>
+    <dd>D_series</dd>
+    <dt>Dv2_<wbr>series</dt>
+    <dd>Dv2_series</dd>
+    <dt>DS_<wbr>series</dt>
+    <dd>DS_series</dd>
+    <dt>DSv2_<wbr>series</dt>
+    <dd>DSv2_series</dd>
+    <dt>F_<wbr>series</dt>
+    <dd>F_series</dd>
+    <dt>Fs_<wbr>series</dt>
+    <dd>Fs_series</dd>
+    <dt>G_<wbr>series</dt>
+    <dd>G_series</dd>
+    <dt>GS_<wbr>series</dt>
+    <dd>GS_series</dd>
+    <dt>H_<wbr>series</dt>
+    <dd>H_series</dd>
+    <dt>Ls_<wbr>series</dt>
+    <dd>Ls_series</dd>
+    <dt>Dsv3_<wbr>series</dt>
+    <dd>Dsv3_series</dd>
+    <dt>Dv3_<wbr>series</dt>
+    <dd>Dv3_series</dd>
+    <dt>Fsv2_<wbr>series</dt>
+    <dd>Fsv2_series</dd>
+    <dt>Ev3_<wbr>series</dt>
+    <dd>Ev3_series</dd>
+    <dt>Esv3_<wbr>series</dt>
+    <dd>Esv3_series</dd>
+    <dt>M_<wbr>series</dt>
+    <dd>M_series</dd>
+    <dt>DC_Series</dt>
+    <dd>DC_Series</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>UNKNOWN</dt>
+    <dd>Unknown</dd>
+    <dt>BASIC_A0_A4</dt>
+    <dd>Basic_A0_A4</dd>
+    <dt>STANDARD_A0_A7</dt>
+    <dd>Standard_A0_A7</dd>
+    <dt>STANDARD_A8_A11</dt>
+    <dd>Standard_A8_A11</dd>
+    <dt>AV2_SERIES</dt>
+    <dd>Av2_series</dd>
+    <dt>D_SERIES</dt>
+    <dd>D_series</dd>
+    <dt>DV2_SERIES</dt>
+    <dd>Dv2_series</dd>
+    <dt>D_S_SERIES</dt>
+    <dd>DS_series</dd>
+    <dt>D_SV2_SERIES</dt>
+    <dd>DSv2_series</dd>
+    <dt>F_SERIES</dt>
+    <dd>F_series</dd>
+    <dt>FS_SERIES</dt>
+    <dd>Fs_series</dd>
+    <dt>G_SERIES</dt>
+    <dd>G_series</dd>
+    <dt>G_S_SERIES</dt>
+    <dd>GS_series</dd>
+    <dt>H_SERIES</dt>
+    <dd>H_series</dd>
+    <dt>LS_SERIES</dt>
+    <dd>Ls_series</dd>
+    <dt>DSV3_SERIES</dt>
+    <dd>Dsv3_series</dd>
+    <dt>DV3_SERIES</dt>
+    <dd>Dv3_series</dd>
+    <dt>FSV2_SERIES</dt>
+    <dd>Fsv2_series</dd>
+    <dt>EV3_SERIES</dt>
+    <dd>Ev3_series</dd>
+    <dt>ESV3_SERIES</dt>
+    <dd>Esv3_series</dd>
+    <dt>M_SERIES</dt>
+    <dd>M_series</dd>
+    <dt>D_C_SERIES</dt>
+    <dd>DC_Series</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="currency">Currency</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Unknown</dt>
+    <dd>Unknown</dd>
+    <dt>USD</dt>
+    <dd>USD</dd>
+    <dt>DKK</dt>
+    <dd>DKK</dd>
+    <dt>CAD</dt>
+    <dd>CAD</dd>
+    <dt>IDR</dt>
+    <dd>IDR</dd>
+    <dt>JPY</dt>
+    <dd>JPY</dd>
+    <dt>KRW</dt>
+    <dd>KRW</dd>
+    <dt>NZD</dt>
+    <dd>NZD</dd>
+    <dt>NOK</dt>
+    <dd>NOK</dd>
+    <dt>RUB</dt>
+    <dd>RUB</dd>
+    <dt>SAR</dt>
+    <dd>SAR</dd>
+    <dt>ZAR</dt>
+    <dd>ZAR</dd>
+    <dt>SEK</dt>
+    <dd>SEK</dd>
+    <dt>TRY</dt>
+    <dd>TRY</dd>
+    <dt>GBP</dt>
+    <dd>GBP</dd>
+    <dt>MXN</dt>
+    <dd>MXN</dd>
+    <dt>MYR</dt>
+    <dd>MYR</dd>
+    <dt>INR</dt>
+    <dd>INR</dd>
+    <dt>HKD</dt>
+    <dd>HKD</dd>
+    <dt>BRL</dt>
+    <dd>BRL</dd>
+    <dt>TWD</dt>
+    <dd>TWD</dd>
+    <dt>EUR</dt>
+    <dd>EUR</dd>
+    <dt>CHF</dt>
+    <dd>CHF</dd>
+    <dt>ARS</dt>
+    <dd>ARS</dd>
+    <dt>AUD</dt>
+    <dd>AUD</dd>
+    <dt>CNY</dt>
+    <dd>CNY</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Currency<wbr>Unknown</dt>
+    <dd>Unknown</dd>
+    <dt>Currency<wbr>USD</dt>
+    <dd>USD</dd>
+    <dt>Currency<wbr>DKK</dt>
+    <dd>DKK</dd>
+    <dt>Currency<wbr>CAD</dt>
+    <dd>CAD</dd>
+    <dt>Currency<wbr>IDR</dt>
+    <dd>IDR</dd>
+    <dt>Currency<wbr>JPY</dt>
+    <dd>JPY</dd>
+    <dt>Currency<wbr>KRW</dt>
+    <dd>KRW</dd>
+    <dt>Currency<wbr>NZD</dt>
+    <dd>NZD</dd>
+    <dt>Currency<wbr>NOK</dt>
+    <dd>NOK</dd>
+    <dt>Currency<wbr>RUB</dt>
+    <dd>RUB</dd>
+    <dt>Currency<wbr>SAR</dt>
+    <dd>SAR</dd>
+    <dt>Currency<wbr>ZAR</dt>
+    <dd>ZAR</dd>
+    <dt>Currency<wbr>SEK</dt>
+    <dd>SEK</dd>
+    <dt>Currency<wbr>TRY</dt>
+    <dd>TRY</dd>
+    <dt>Currency<wbr>GBP</dt>
+    <dd>GBP</dd>
+    <dt>Currency<wbr>MXN</dt>
+    <dd>MXN</dd>
+    <dt>Currency<wbr>MYR</dt>
+    <dd>MYR</dd>
+    <dt>Currency<wbr>INR</dt>
+    <dd>INR</dd>
+    <dt>Currency<wbr>HKD</dt>
+    <dd>HKD</dd>
+    <dt>Currency<wbr>BRL</dt>
+    <dd>BRL</dd>
+    <dt>Currency<wbr>TWD</dt>
+    <dd>TWD</dd>
+    <dt>Currency<wbr>EUR</dt>
+    <dd>EUR</dd>
+    <dt>Currency<wbr>CHF</dt>
+    <dd>CHF</dd>
+    <dt>Currency<wbr>ARS</dt>
+    <dd>ARS</dd>
+    <dt>Currency<wbr>AUD</dt>
+    <dd>AUD</dd>
+    <dt>Currency<wbr>CNY</dt>
+    <dd>CNY</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Unknown</dt>
+    <dd>Unknown</dd>
+    <dt>USD</dt>
+    <dd>USD</dd>
+    <dt>DKK</dt>
+    <dd>DKK</dd>
+    <dt>CAD</dt>
+    <dd>CAD</dd>
+    <dt>IDR</dt>
+    <dd>IDR</dd>
+    <dt>JPY</dt>
+    <dd>JPY</dd>
+    <dt>KRW</dt>
+    <dd>KRW</dd>
+    <dt>NZD</dt>
+    <dd>NZD</dd>
+    <dt>NOK</dt>
+    <dd>NOK</dd>
+    <dt>RUB</dt>
+    <dd>RUB</dd>
+    <dt>SAR</dt>
+    <dd>SAR</dd>
+    <dt>ZAR</dt>
+    <dd>ZAR</dd>
+    <dt>SEK</dt>
+    <dd>SEK</dd>
+    <dt>TRY</dt>
+    <dd>TRY</dd>
+    <dt>GBP</dt>
+    <dd>GBP</dd>
+    <dt>MXN</dt>
+    <dd>MXN</dd>
+    <dt>MYR</dt>
+    <dd>MYR</dd>
+    <dt>INR</dt>
+    <dd>INR</dd>
+    <dt>HKD</dt>
+    <dd>HKD</dd>
+    <dt>BRL</dt>
+    <dd>BRL</dd>
+    <dt>TWD</dt>
+    <dd>TWD</dd>
+    <dt>EUR</dt>
+    <dd>EUR</dd>
+    <dt>CHF</dt>
+    <dd>CHF</dd>
+    <dt>ARS</dt>
+    <dd>ARS</dd>
+    <dt>AUD</dt>
+    <dd>AUD</dd>
+    <dt>CNY</dt>
+    <dd>CNY</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>UNKNOWN</dt>
+    <dd>Unknown</dd>
+    <dt>USD</dt>
+    <dd>USD</dd>
+    <dt>DKK</dt>
+    <dd>DKK</dd>
+    <dt>CAD</dt>
+    <dd>CAD</dd>
+    <dt>IDR</dt>
+    <dd>IDR</dd>
+    <dt>JPY</dt>
+    <dd>JPY</dd>
+    <dt>KRW</dt>
+    <dd>KRW</dd>
+    <dt>NZD</dt>
+    <dd>NZD</dd>
+    <dt>NOK</dt>
+    <dd>NOK</dd>
+    <dt>RUB</dt>
+    <dd>RUB</dd>
+    <dt>SAR</dt>
+    <dd>SAR</dd>
+    <dt>ZAR</dt>
+    <dd>ZAR</dd>
+    <dt>SEK</dt>
+    <dd>SEK</dd>
+    <dt>TRY_</dt>
+    <dd>TRY</dd>
+    <dt>GBP</dt>
+    <dd>GBP</dd>
+    <dt>MXN</dt>
+    <dd>MXN</dd>
+    <dt>MYR</dt>
+    <dd>MYR</dd>
+    <dt>INR</dt>
+    <dd>INR</dd>
+    <dt>HKD</dt>
+    <dd>HKD</dd>
+    <dt>BRL</dt>
+    <dd>BRL</dd>
+    <dt>TWD</dt>
+    <dd>TWD</dd>
+    <dt>EUR</dt>
+    <dd>EUR</dd>
+    <dt>CHF</dt>
+    <dd>CHF</dd>
+    <dt>ARS</dt>
+    <dd>ARS</dd>
+    <dt>AUD</dt>
+    <dd>AUD</dd>
+    <dt>CNY</dt>
+    <dd>CNY</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="percentile">Percentile</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Percentile50</dt>
+    <dd>Percentile50</dd>
+    <dt>Percentile90</dt>
+    <dd>Percentile90</dd>
+    <dt>Percentile95</dt>
+    <dd>Percentile95</dd>
+    <dt>Percentile99</dt>
+    <dd>Percentile99</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Percentile<wbr>Percentile50</dt>
+    <dd>Percentile50</dd>
+    <dt>Percentile<wbr>Percentile90</dt>
+    <dd>Percentile90</dd>
+    <dt>Percentile<wbr>Percentile95</dt>
+    <dd>Percentile95</dd>
+    <dt>Percentile<wbr>Percentile99</dt>
+    <dd>Percentile99</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Percentile50</dt>
+    <dd>Percentile50</dd>
+    <dt>Percentile90</dt>
+    <dd>Percentile90</dd>
+    <dt>Percentile95</dt>
+    <dd>Percentile95</dd>
+    <dt>Percentile99</dt>
+    <dd>Percentile99</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>PERCENTILE50</dt>
+    <dd>Percentile50</dd>
+    <dt>PERCENTILE90</dt>
+    <dd>Percentile90</dd>
+    <dt>PERCENTILE95</dt>
+    <dd>Percentile95</dd>
+    <dt>PERCENTILE99</dt>
+    <dd>Percentile99</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="reservedinstance">Reserved<wbr>Instance</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>None</dt>
+    <dd>None</dd>
+    <dt>RI1Year</dt>
+    <dd>RI1Year</dd>
+    <dt>RI3Year</dt>
+    <dd>RI3Year</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Reserved<wbr>Instance<wbr>None</dt>
+    <dd>None</dd>
+    <dt>Reserved<wbr>Instance<wbr>RI1Year</dt>
+    <dd>RI1Year</dd>
+    <dt>Reserved<wbr>Instance<wbr>RI3Year</dt>
+    <dd>RI3Year</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>None</dt>
+    <dd>None</dd>
+    <dt>RI1Year</dt>
+    <dd>RI1Year</dd>
+    <dt>RI3Year</dt>
+    <dd>RI3Year</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>NONE</dt>
+    <dd>None</dd>
+    <dt>RI1_YEAR</dt>
+    <dd>RI1Year</dd>
+    <dt>RI3_YEAR</dt>
+    <dd>RI3Year</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="timerange">Time<wbr>Range</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Day</dt>
+    <dd>Day</dd>
+    <dt>Week</dt>
+    <dd>Week</dd>
+    <dt>Month</dt>
+    <dd>Month</dd>
+    <dt>Custom</dt>
+    <dd>Custom</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Time<wbr>Range<wbr>Day</dt>
+    <dd>Day</dd>
+    <dt>Time<wbr>Range<wbr>Week</dt>
+    <dd>Week</dd>
+    <dt>Time<wbr>Range<wbr>Month</dt>
+    <dd>Month</dd>
+    <dt>Time<wbr>Range<wbr>Custom</dt>
+    <dd>Custom</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Day</dt>
+    <dd>Day</dd>
+    <dt>Week</dt>
+    <dd>Week</dd>
+    <dt>Month</dt>
+    <dd>Month</dd>
+    <dt>Custom</dt>
+    <dd>Custom</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>DAY</dt>
+    <dd>Day</dd>
+    <dt>WEEK</dt>
+    <dd>Week</dd>
+    <dt>MONTH</dt>
+    <dd>Month</dd>
+    <dt>CUSTOM</dt>
+    <dd>Custom</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="vmuptime">Vm<wbr>Uptime</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2804,25 +4071,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="dayspermonth_csharp">
 <a href="#dayspermonth_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Per<wbr>Month</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of days in a month for VM uptime.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hoursperday_csharp">
 <a href="#hoursperday_csharp" style="color: inherit; text-decoration: inherit;">Hours<wbr>Per<wbr>Day</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of hours per day for VM uptime.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2831,25 +4095,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="dayspermonth_go">
 <a href="#dayspermonth_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Per<wbr>Month</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of days in a month for VM uptime.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hoursperday_go">
 <a href="#hoursperday_go" style="color: inherit; text-decoration: inherit;">Hours<wbr>Per<wbr>Day</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of hours per day for VM uptime.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2858,25 +4119,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="dayspermonth_nodejs">
 <a href="#dayspermonth_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Per<wbr>Month</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of days in a month for VM uptime.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hoursperday_nodejs">
 <a href="#hoursperday_nodejs" style="color: inherit; text-decoration: inherit;">hours<wbr>Per<wbr>Day</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of hours per day for VM uptime.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2885,37 +4143,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="days_per_month_python">
 <a href="#days_per_month_python" style="color: inherit; text-decoration: inherit;">days_<wbr>per_<wbr>month</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of days in a month for VM uptime.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hours_per_day_python">
 <a href="#hours_per_day_python" style="color: inherit; text-decoration: inherit;">hours_<wbr>per_<wbr>day</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of hours per day for VM uptime.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="vmuptimeresponse">Vm<wbr>Uptime<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2923,25 +4169,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="dayspermonth_csharp">
 <a href="#dayspermonth_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Per<wbr>Month</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of days in a month for VM uptime.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hoursperday_csharp">
 <a href="#hoursperday_csharp" style="color: inherit; text-decoration: inherit;">Hours<wbr>Per<wbr>Day</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of hours per day for VM uptime.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2950,25 +4193,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="dayspermonth_go">
 <a href="#dayspermonth_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Per<wbr>Month</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of days in a month for VM uptime.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hoursperday_go">
 <a href="#hoursperday_go" style="color: inherit; text-decoration: inherit;">Hours<wbr>Per<wbr>Day</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of hours per day for VM uptime.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2977,25 +4217,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="dayspermonth_nodejs">
 <a href="#dayspermonth_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Per<wbr>Month</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of days in a month for VM uptime.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hoursperday_nodejs">
 <a href="#hoursperday_nodejs" style="color: inherit; text-decoration: inherit;">hours<wbr>Per<wbr>Day</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of hours per day for VM uptime.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3004,31 +4241,30 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="days_per_month_python">
 <a href="#days_per_month_python" style="color: inherit; text-decoration: inherit;">days_<wbr>per_<wbr>month</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of days in a month for VM uptime.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hours_per_day_python">
 <a href="#hours_per_day_python" style="color: inherit; text-decoration: inherit;">hours_<wbr>per_<wbr>day</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of hours per day for VM uptime.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+An existing resource can be imported using its type token, name, and identifier, e.g.
 
-
-
-
-
+```sh
+$ pulumi import azure-nextgen:migrate/latest:Assessment assessment_5_14_2019_16_48_47 /subscriptions/6393a73f-8d55-47ef-b6dd-179b3e0c7910/resourceGroups/abgoyal-westeurope/providers/Microsoft.Migrate/assessmentprojects/abgoyalWEselfhostb72bproject/groups/Group2/assessments/assessment_5_14_2019_16_48_47 
+```
 
 
 

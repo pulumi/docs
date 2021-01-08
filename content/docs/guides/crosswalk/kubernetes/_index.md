@@ -78,7 +78,7 @@ clusters and workloads through a new lens.
 </a>
 
 The [Pulumi Kubernetes Operator][k8s-operator] is an [extension pattern][k8s-ext-pattern] that
-enables Kuberentes users to create a `Stack` as a first-class API
+enables Kubernetes users to create a `Stack` as a first-class API
 resource, and use the `StackController` to drive the updates of the Stack until
 success.
 

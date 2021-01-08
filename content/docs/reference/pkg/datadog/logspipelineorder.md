@@ -91,7 +91,7 @@ sample_pipeline_order = datadog.LogsPipelineOrder("samplePipelineOrder",
         datadog_logs_custom_pipeline["sample_pipeline"]["id"],
         datadog_logs_integration_pipeline["python"]["id"],
     ],
-    opts=ResourceOptions(depends_on=[
+    opts=pulumi.ResourceOptions(depends_on=[
             "datadog_logs_custom_pipeline.sample_pipeline",
             "datadog_logs_integration_pipeline.python",
         ]))

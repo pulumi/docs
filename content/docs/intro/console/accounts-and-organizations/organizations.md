@@ -17,17 +17,17 @@ with other developers.
 If you're an admin of a Pulumi organization, you have the
 ability to:
 
-* [Add users]({{< relref "../collaboration/organization-roles/#organization-membership" >}})
+* [Invite users]({{< relref "/docs/intro/console/collaboration/organization-roles#organization-membership" >}})
 * Manage default stack permissions for the organization
-* Create [teams]({{< relref "../collaboration/teams" >}}) and manage their permissions
-* Assign [organization roles]({{< relref "../collaboration/organization-roles" >}}) for role-based access control (RBAC)
+* Create [teams]({{< relref "/docs/intro/console/collaboration/teams" >}}) and manage their permissions
+* Assign [organization roles]({{< relref "/docs/intro/console/collaboration/organization-roles" >}}) for role-based access control (RBAC)
 to your organization's stacks
 
 ## Creating a New Organization
 
 You can create a new Pulumi organization directly from the Pulumi Console.
 
-<a class="btn btn-secondary" href="https://app.pulumi.com/site/organizations/add"
+<a class="btn btn-secondary" href="https://app.pulumi.com/site/trial"
 target="_blank">
     CREATE ORGANIZATION
 </a>
@@ -50,8 +50,8 @@ Similarly, as soon as someone loses access to the GitHub organization, they will
 longer have access to the Pulumi organization it is backing.
 
 {{% notes %}}
-See [Organization Roles]({{< relref "organization-roles" >}}) or
-[Adding New Identities]({{< relref "accounts#adding-new-identities" >}})
+See [Organization Roles]({{< relref "/docs/intro/console/collaboration/organization-roles" >}}) or
+[Adding New Identities]({{< relref "/docs/intro/console/accounts-and-organizations/accounts#adding-new-identities" >}})
 for more information.
 {{% /notes %}}
 
@@ -141,7 +141,7 @@ and Settings tabs.
 
 | Console Tab | Description |
 |--------|--------|
-| Stacks | A searchable list of organization stacks that you can group by project and tag. See [Project and Stack Management]({{< relref "../collaboration/project-and-stack-management">}}) to learn more. |
+| Stacks | A searchable list of organization stacks that you can group by project and tag. See [Project and Stack Management]({{< relref "/docs/intro/console/collaboration/project-and-stack-management">}}) to learn more. |
 | People | A list of active members of the Pulumi organization. |
 | Teams | A [Team Pro]({{< relref "/pricing" >}}) feature that provides a way to assign stack permissions to groups of organization members. |
 | Webhooks | A [Team Pro]({{< relref "/pricing" >}}) feature that allows external services to be notified about events happening on an organization, including events occurring on organization stacks. |
@@ -149,4 +149,4 @@ and Settings tabs.
 
 ## Next Steps
 
-* [Organization Roles]({{< relref "../collaboration/organization-roles" >}})
+* [Organization Roles]({{< relref "/docs/intro/console/collaboration/organization-roles" >}})

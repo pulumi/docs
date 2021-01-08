@@ -84,7 +84,7 @@ import pulumi_datadog as datadog
 sample_index_order = datadog.LogsIndexOrder("sampleIndexOrder",
     name="sample_index_order",
     indexes=[datadog_logs_index["sample_index"]["id"]],
-    opts=ResourceOptions(depends_on=["datadog_logs_index.sample_index"]))
+    opts=pulumi.ResourceOptions(depends_on=["datadog_logs_index.sample_index"]))
 ```
 
 {{% /example %}}

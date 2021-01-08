@@ -2,7 +2,7 @@
 ---
 title: "DataSource"
 title_tag: "azure-nextgen.operationalinsights.DataSource"
-meta_desc: "Explore the DataSource resource of the operationalinsights module, including examples, input properties, output properties, lookup functions, and supporting types. Datasources under OMS Workspace."
+meta_desc: "Documentation for the azure-nextgen.operationalinsights.DataSource resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -11,7 +11,7 @@ meta_desc: "Explore the DataSource resource of the operationalinsights module, i
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Datasources under OMS Workspace.
-
+Latest API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -125,7 +125,7 @@ const dataSource = new azure_nextgen.operationalinsights.latest.DataSource("data
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DataSource</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">DataSourceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DataSource</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">DataSourceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -133,11 +133,11 @@ const dataSource = new azure_nextgen.operationalinsights.latest.DataSource("data
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataSource</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">DataSourceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataSource</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataSource</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">DataSourceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataSource</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DataSource</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">DataSourceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DataSource</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">DataSourceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -148,7 +148,7 @@ const dataSource = new azure_nextgen.operationalinsights.latest.DataSource("data
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -217,7 +217,7 @@ const dataSource = new azure_nextgen.operationalinsights.latest.DataSource("data
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -256,7 +256,7 @@ const dataSource = new azure_nextgen.operationalinsights.latest.DataSource("data
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -297,7 +297,6 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -305,75 +304,67 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="datasourcename_csharp">
 <a href="#datasourcename_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the datasource resource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Data<wbr>Source<wbr>Kind</span>
+        <span class="property-type">string | <a href="#datasourcekind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Data<wbr>Source<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of the DataSource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The data source properties in raw json format, each kind of data source have it's own schema.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="workspacename_csharp">
 <a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ETag of the data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -382,75 +373,67 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="datasourcename_go">
 <a href="#datasourcename_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the datasource resource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#datasourcekind">Data<wbr>Source<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of the DataSource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The data source properties in raw json format, each kind of data source have it's own schema.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="workspacename_go">
 <a href="#workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ETag of the data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -459,75 +442,67 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="datasourcename_nodejs">
 <a href="#datasourcename_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the datasource resource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Data<wbr>Source<wbr>Kind</span>
+        <span class="property-type">string | <a href="#datasourcekind">Data<wbr>Source<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of the DataSource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The data source properties in raw json format, each kind of data source have it's own schema.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="workspacename_nodejs">
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ETag of the data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -536,84 +511,72 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="data_source_name_python">
 <a href="#data_source_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the datasource resource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Data<wbr>Source<wbr>Kind</span>
+        <span class="property-type">str | <a href="#datasourcekind">Data<wbr>Source<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of the DataSource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The data source properties in raw json format, each kind of data source have it's own schema.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="workspace_name_python">
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ETag of the data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the DataSource resource produces the following output properties:
-
 
 
 
@@ -624,35 +587,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -661,35 +620,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -698,35 +653,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -735,32 +686,29 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -770,9 +718,303 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+## Supporting Types
 
 
 
+<h4 id="datasourcekind">Data<wbr>Source<wbr>Kind</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Windows<wbr>Event</dt>
+    <dd>WindowsEvent</dd>
+    <dt>Windows<wbr>Performance<wbr>Counter</dt>
+    <dd>WindowsPerformanceCounter</dd>
+    <dt>IISLogs</dt>
+    <dd>IISLogs</dd>
+    <dt>Linux<wbr>Syslog</dt>
+    <dd>LinuxSyslog</dd>
+    <dt>Linux<wbr>Syslog<wbr>Collection</dt>
+    <dd>LinuxSyslogCollection</dd>
+    <dt>Linux<wbr>Performance<wbr>Object</dt>
+    <dd>LinuxPerformanceObject</dd>
+    <dt>Linux<wbr>Performance<wbr>Collection</dt>
+    <dd>LinuxPerformanceCollection</dd>
+    <dt>Custom<wbr>Log</dt>
+    <dd>CustomLog</dd>
+    <dt>Custom<wbr>Log<wbr>Collection</dt>
+    <dd>CustomLogCollection</dd>
+    <dt>Azure<wbr>Audit<wbr>Log</dt>
+    <dd>AzureAuditLog</dd>
+    <dt>Azure<wbr>Activity<wbr>Log</dt>
+    <dd>AzureActivityLog</dd>
+    <dt>Generic<wbr>Data<wbr>Source</dt>
+    <dd>GenericDataSource</dd>
+    <dt>Change<wbr>Tracking<wbr>Custom<wbr>Path</dt>
+    <dd>ChangeTrackingCustomPath</dd>
+    <dt>Change<wbr>Tracking<wbr>Path</dt>
+    <dd>ChangeTrackingPath</dd>
+    <dt>Change<wbr>Tracking<wbr>Services</dt>
+    <dd>ChangeTrackingServices</dd>
+    <dt>Change<wbr>Tracking<wbr>Data<wbr>Type<wbr>Configuration</dt>
+    <dd>ChangeTrackingDataTypeConfiguration</dd>
+    <dt>Change<wbr>Tracking<wbr>Default<wbr>Registry</dt>
+    <dd>ChangeTrackingDefaultRegistry</dd>
+    <dt>Change<wbr>Tracking<wbr>Registry</dt>
+    <dd>ChangeTrackingRegistry</dd>
+    <dt>Change<wbr>Tracking<wbr>Linux<wbr>Path</dt>
+    <dd>ChangeTrackingLinuxPath</dd>
+    <dt>Linux<wbr>Change<wbr>Tracking<wbr>Path</dt>
+    <dd>LinuxChangeTrackingPath</dd>
+    <dt>Change<wbr>Tracking<wbr>Content<wbr>Location</dt>
+    <dd>ChangeTrackingContentLocation</dd>
+    <dt>Windows<wbr>Telemetry</dt>
+    <dd>WindowsTelemetry</dd>
+    <dt>Office365</dt>
+    <dd>Office365</dd>
+    <dt>Security<wbr>Windows<wbr>Baseline<wbr>Configuration</dt>
+    <dd>SecurityWindowsBaselineConfiguration</dd>
+    <dt>Security<wbr>Center<wbr>Security<wbr>Windows<wbr>Baseline<wbr>Configuration</dt>
+    <dd>SecurityCenterSecurityWindowsBaselineConfiguration</dd>
+    <dt>Security<wbr>Event<wbr>Collection<wbr>Configuration</dt>
+    <dd>SecurityEventCollectionConfiguration</dd>
+    <dt>Security<wbr>Insights<wbr>Security<wbr>Event<wbr>Collection<wbr>Configuration</dt>
+    <dd>SecurityInsightsSecurityEventCollectionConfiguration</dd>
+    <dt>Import<wbr>Computer<wbr>Group</dt>
+    <dd>ImportComputerGroup</dd>
+    <dt>Network<wbr>Monitoring</dt>
+    <dd>NetworkMonitoring</dd>
+    <dt>Itsm</dt>
+    <dd>Itsm</dd>
+    <dt>Dns<wbr>Analytics</dt>
+    <dd>DnsAnalytics</dd>
+    <dt>Application<wbr>Insights</dt>
+    <dd>ApplicationInsights</dd>
+    <dt>Sql<wbr>Data<wbr>Classification</dt>
+    <dd>SqlDataClassification</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Windows<wbr>Event</dt>
+    <dd>WindowsEvent</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Windows<wbr>Performance<wbr>Counter</dt>
+    <dd>WindowsPerformanceCounter</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>IISLogs</dt>
+    <dd>IISLogs</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Linux<wbr>Syslog</dt>
+    <dd>LinuxSyslog</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Linux<wbr>Syslog<wbr>Collection</dt>
+    <dd>LinuxSyslogCollection</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Linux<wbr>Performance<wbr>Object</dt>
+    <dd>LinuxPerformanceObject</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Linux<wbr>Performance<wbr>Collection</dt>
+    <dd>LinuxPerformanceCollection</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Custom<wbr>Log</dt>
+    <dd>CustomLog</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Custom<wbr>Log<wbr>Collection</dt>
+    <dd>CustomLogCollection</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Azure<wbr>Audit<wbr>Log</dt>
+    <dd>AzureAuditLog</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Azure<wbr>Activity<wbr>Log</dt>
+    <dd>AzureActivityLog</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Generic<wbr>Data<wbr>Source</dt>
+    <dd>GenericDataSource</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Change<wbr>Tracking<wbr>Custom<wbr>Path</dt>
+    <dd>ChangeTrackingCustomPath</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Change<wbr>Tracking<wbr>Path</dt>
+    <dd>ChangeTrackingPath</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Change<wbr>Tracking<wbr>Services</dt>
+    <dd>ChangeTrackingServices</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Change<wbr>Tracking<wbr>Data<wbr>Type<wbr>Configuration</dt>
+    <dd>ChangeTrackingDataTypeConfiguration</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Change<wbr>Tracking<wbr>Default<wbr>Registry</dt>
+    <dd>ChangeTrackingDefaultRegistry</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Change<wbr>Tracking<wbr>Registry</dt>
+    <dd>ChangeTrackingRegistry</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Change<wbr>Tracking<wbr>Linux<wbr>Path</dt>
+    <dd>ChangeTrackingLinuxPath</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Linux<wbr>Change<wbr>Tracking<wbr>Path</dt>
+    <dd>LinuxChangeTrackingPath</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Change<wbr>Tracking<wbr>Content<wbr>Location</dt>
+    <dd>ChangeTrackingContentLocation</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Windows<wbr>Telemetry</dt>
+    <dd>WindowsTelemetry</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Office365</dt>
+    <dd>Office365</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Security<wbr>Windows<wbr>Baseline<wbr>Configuration</dt>
+    <dd>SecurityWindowsBaselineConfiguration</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Security<wbr>Center<wbr>Security<wbr>Windows<wbr>Baseline<wbr>Configuration</dt>
+    <dd>SecurityCenterSecurityWindowsBaselineConfiguration</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Security<wbr>Event<wbr>Collection<wbr>Configuration</dt>
+    <dd>SecurityEventCollectionConfiguration</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Security<wbr>Insights<wbr>Security<wbr>Event<wbr>Collection<wbr>Configuration</dt>
+    <dd>SecurityInsightsSecurityEventCollectionConfiguration</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Import<wbr>Computer<wbr>Group</dt>
+    <dd>ImportComputerGroup</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Network<wbr>Monitoring</dt>
+    <dd>NetworkMonitoring</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Itsm</dt>
+    <dd>Itsm</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Dns<wbr>Analytics</dt>
+    <dd>DnsAnalytics</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Application<wbr>Insights</dt>
+    <dd>ApplicationInsights</dd>
+    <dt>Data<wbr>Source<wbr>Kind<wbr>Sql<wbr>Data<wbr>Classification</dt>
+    <dd>SqlDataClassification</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Windows<wbr>Event</dt>
+    <dd>WindowsEvent</dd>
+    <dt>Windows<wbr>Performance<wbr>Counter</dt>
+    <dd>WindowsPerformanceCounter</dd>
+    <dt>IISLogs</dt>
+    <dd>IISLogs</dd>
+    <dt>Linux<wbr>Syslog</dt>
+    <dd>LinuxSyslog</dd>
+    <dt>Linux<wbr>Syslog<wbr>Collection</dt>
+    <dd>LinuxSyslogCollection</dd>
+    <dt>Linux<wbr>Performance<wbr>Object</dt>
+    <dd>LinuxPerformanceObject</dd>
+    <dt>Linux<wbr>Performance<wbr>Collection</dt>
+    <dd>LinuxPerformanceCollection</dd>
+    <dt>Custom<wbr>Log</dt>
+    <dd>CustomLog</dd>
+    <dt>Custom<wbr>Log<wbr>Collection</dt>
+    <dd>CustomLogCollection</dd>
+    <dt>Azure<wbr>Audit<wbr>Log</dt>
+    <dd>AzureAuditLog</dd>
+    <dt>Azure<wbr>Activity<wbr>Log</dt>
+    <dd>AzureActivityLog</dd>
+    <dt>Generic<wbr>Data<wbr>Source</dt>
+    <dd>GenericDataSource</dd>
+    <dt>Change<wbr>Tracking<wbr>Custom<wbr>Path</dt>
+    <dd>ChangeTrackingCustomPath</dd>
+    <dt>Change<wbr>Tracking<wbr>Path</dt>
+    <dd>ChangeTrackingPath</dd>
+    <dt>Change<wbr>Tracking<wbr>Services</dt>
+    <dd>ChangeTrackingServices</dd>
+    <dt>Change<wbr>Tracking<wbr>Data<wbr>Type<wbr>Configuration</dt>
+    <dd>ChangeTrackingDataTypeConfiguration</dd>
+    <dt>Change<wbr>Tracking<wbr>Default<wbr>Registry</dt>
+    <dd>ChangeTrackingDefaultRegistry</dd>
+    <dt>Change<wbr>Tracking<wbr>Registry</dt>
+    <dd>ChangeTrackingRegistry</dd>
+    <dt>Change<wbr>Tracking<wbr>Linux<wbr>Path</dt>
+    <dd>ChangeTrackingLinuxPath</dd>
+    <dt>Linux<wbr>Change<wbr>Tracking<wbr>Path</dt>
+    <dd>LinuxChangeTrackingPath</dd>
+    <dt>Change<wbr>Tracking<wbr>Content<wbr>Location</dt>
+    <dd>ChangeTrackingContentLocation</dd>
+    <dt>Windows<wbr>Telemetry</dt>
+    <dd>WindowsTelemetry</dd>
+    <dt>Office365</dt>
+    <dd>Office365</dd>
+    <dt>Security<wbr>Windows<wbr>Baseline<wbr>Configuration</dt>
+    <dd>SecurityWindowsBaselineConfiguration</dd>
+    <dt>Security<wbr>Center<wbr>Security<wbr>Windows<wbr>Baseline<wbr>Configuration</dt>
+    <dd>SecurityCenterSecurityWindowsBaselineConfiguration</dd>
+    <dt>Security<wbr>Event<wbr>Collection<wbr>Configuration</dt>
+    <dd>SecurityEventCollectionConfiguration</dd>
+    <dt>Security<wbr>Insights<wbr>Security<wbr>Event<wbr>Collection<wbr>Configuration</dt>
+    <dd>SecurityInsightsSecurityEventCollectionConfiguration</dd>
+    <dt>Import<wbr>Computer<wbr>Group</dt>
+    <dd>ImportComputerGroup</dd>
+    <dt>Network<wbr>Monitoring</dt>
+    <dd>NetworkMonitoring</dd>
+    <dt>Itsm</dt>
+    <dd>Itsm</dd>
+    <dt>Dns<wbr>Analytics</dt>
+    <dd>DnsAnalytics</dd>
+    <dt>Application<wbr>Insights</dt>
+    <dd>ApplicationInsights</dd>
+    <dt>Sql<wbr>Data<wbr>Classification</dt>
+    <dd>SqlDataClassification</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>WINDOWS_EVENT</dt>
+    <dd>WindowsEvent</dd>
+    <dt>WINDOWS_PERFORMANCE_COUNTER</dt>
+    <dd>WindowsPerformanceCounter</dd>
+    <dt>IIS_LOGS</dt>
+    <dd>IISLogs</dd>
+    <dt>LINUX_SYSLOG</dt>
+    <dd>LinuxSyslog</dd>
+    <dt>LINUX_SYSLOG_COLLECTION</dt>
+    <dd>LinuxSyslogCollection</dd>
+    <dt>LINUX_PERFORMANCE_OBJECT</dt>
+    <dd>LinuxPerformanceObject</dd>
+    <dt>LINUX_PERFORMANCE_COLLECTION</dt>
+    <dd>LinuxPerformanceCollection</dd>
+    <dt>CUSTOM_LOG</dt>
+    <dd>CustomLog</dd>
+    <dt>CUSTOM_LOG_COLLECTION</dt>
+    <dd>CustomLogCollection</dd>
+    <dt>AZURE_AUDIT_LOG</dt>
+    <dd>AzureAuditLog</dd>
+    <dt>AZURE_ACTIVITY_LOG</dt>
+    <dd>AzureActivityLog</dd>
+    <dt>GENERIC_DATA_SOURCE</dt>
+    <dd>GenericDataSource</dd>
+    <dt>CHANGE_TRACKING_CUSTOM_PATH</dt>
+    <dd>ChangeTrackingCustomPath</dd>
+    <dt>CHANGE_TRACKING_PATH</dt>
+    <dd>ChangeTrackingPath</dd>
+    <dt>CHANGE_TRACKING_SERVICES</dt>
+    <dd>ChangeTrackingServices</dd>
+    <dt>CHANGE_TRACKING_DATA_TYPE_CONFIGURATION</dt>
+    <dd>ChangeTrackingDataTypeConfiguration</dd>
+    <dt>CHANGE_TRACKING_DEFAULT_REGISTRY</dt>
+    <dd>ChangeTrackingDefaultRegistry</dd>
+    <dt>CHANGE_TRACKING_REGISTRY</dt>
+    <dd>ChangeTrackingRegistry</dd>
+    <dt>CHANGE_TRACKING_LINUX_PATH</dt>
+    <dd>ChangeTrackingLinuxPath</dd>
+    <dt>LINUX_CHANGE_TRACKING_PATH</dt>
+    <dd>LinuxChangeTrackingPath</dd>
+    <dt>CHANGE_TRACKING_CONTENT_LOCATION</dt>
+    <dd>ChangeTrackingContentLocation</dd>
+    <dt>WINDOWS_TELEMETRY</dt>
+    <dd>WindowsTelemetry</dd>
+    <dt>OFFICE365</dt>
+    <dd>Office365</dd>
+    <dt>SECURITY_WINDOWS_BASELINE_CONFIGURATION</dt>
+    <dd>SecurityWindowsBaselineConfiguration</dd>
+    <dt>SECURITY_CENTER_SECURITY_WINDOWS_BASELINE_CONFIGURATION</dt>
+    <dd>SecurityCenterSecurityWindowsBaselineConfiguration</dd>
+    <dt>SECURITY_EVENT_COLLECTION_CONFIGURATION</dt>
+    <dd>SecurityEventCollectionConfiguration</dd>
+    <dt>SECURITY_INSIGHTS_SECURITY_EVENT_COLLECTION_CONFIGURATION</dt>
+    <dd>SecurityInsightsSecurityEventCollectionConfiguration</dd>
+    <dt>IMPORT_COMPUTER_GROUP</dt>
+    <dd>ImportComputerGroup</dd>
+    <dt>NETWORK_MONITORING</dt>
+    <dd>NetworkMonitoring</dd>
+    <dt>ITSM</dt>
+    <dd>Itsm</dd>
+    <dt>DNS_ANALYTICS</dt>
+    <dd>DnsAnalytics</dd>
+    <dt>APPLICATION_INSIGHTS</dt>
+    <dd>ApplicationInsights</dd>
+    <dt>SQL_DATA_CLASSIFICATION</dt>
+    <dd>SqlDataClassification</dd>
+</dl>
+{{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:operationalinsights/latest:DataSource AzTestDS774 /subscriptions/00000000-0000-0000-0000-000000000005/resourceGroups/OIAutoRest5123/providers/Microsoft.OperationalInsights/workspaces/AzTest9724/datasources/AzTestDS774 
+```
 
 
 

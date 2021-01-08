@@ -1,13 +1,13 @@
 ---
 # Name of the webinar.
 title: "Introduction to Pulumi"
-meta_desc: In this workshop, you will learn the fundamentals of Infrastructure as Code through a series of guided exercises using Pulumi's Cloud Engineering platform.
+meta_desc: In this bi-monthly workshop, you will learn the fundamentals of Infrastructure as Code through guided exercises using Pulumi's Cloud Engineering platform.
 
 # A featured webinar will display first in the list.
 featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: true
+pre_recorded: false
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -20,7 +20,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: false
+gated: true
 
 # The layout of the landing page.
 type: webinars
@@ -35,6 +35,23 @@ block_external_search_index: false
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
 url_slug: "introduction-to-pulumi"
+
+# Webinar pages support multiple session via the 'multiple' property.
+multiple:
+    - datetime: 2021-01-26T09:00:00-08:00
+      hubspot_form_id: "0c27fc03-737d-4553-bb51-0de998d8ef80"
+
+    - datetime: 2021-02-09T09:00:00-08:00
+      hubspot_form_id: "1db6f936-4622-4d2e-945e-182e0bad133e"
+
+    - datetime: 2021-02-23T09:00:00-08:00
+      hubspot_form_id: "d4feb992-be8d-4ed7-ac0e-448af7d5b7d9"
+
+    - datetime: 2021-03-09T09:00:00-08:00
+      hubspot_form_id: "e53ebeef-8f9b-4705-a137-8cf434b8b0c6"
+
+    - datetime: 2021-03-23T09:00:00-07:00
+      hubspot_form_id: "6a812c24-e2bd-4102-9c3c-c8a9f7178e29"
 
 # The content of the hero section.
 hero:

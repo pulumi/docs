@@ -16,6 +16,7 @@ Explore the resources and functions of the hbase module in the AliCloud package.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getinstancetypes" title="GetInstanceTypes"><span class="symbol function"></span>GetInstanceTypes</a></li>
     <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
     <li><a href="getzones" title="GetZones"><span class="symbol function"></span>GetZones</a></li>
 </ul>
@@ -29,7 +30,7 @@ Explore the resources and functions of the hbase module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.27.0</dd>
+	<dd>2.30.0</dd>
 </dl>
 
 

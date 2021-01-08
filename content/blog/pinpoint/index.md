@@ -11,7 +11,7 @@ tags:
     - Kubernetes
 ---
 
-*This guest blog was contributed by Andrew Kunzel and Michael Goode. Andrew is the Director of Backend Engineering and Michael is a Platform Operations Engineer at Pinpoint.*
+*This guest blog was contributed by [Andrew Kunzel](https://insights.pinpoint.com/developer-spotlight-andrew-kunzel-director-of-backend-engineering) and [Michael Goode](https://insights.pinpoint.com/developer-spotlight-michael-goode-platform-operations-engineer) of [Pinpoint](https://pinpoint.com/). Andrew is the Director of Backend Engineering, and Michael is a Platform Operations Engineer.*
 
 At [Pinpoint](https://pinpoint.com/), Kubernetes is the most powerful tool in our arsenal. It allows us to deploy and rapidly scale our applications with speed and efficiency that continues to delight our customers. In recent years, managed services like AWS EKS have made it easier than ever to leverage the power of Kubernetes in even the smallest of organizations. Yet even with these new conveniences, managing all of this infrastructure can be a daunting task. Right out of the gate, we knew that we wanted to avoid the burden of maintaining repositories full of home-brewed deployment scripts and domain-specific languages like YAML.
 
@@ -116,13 +116,3 @@ As an example, we recently discovered that some versions of the Traefik Helm cha
 This will run the transformation on every manifest used by the chart, fixing our issue in only a few code lines.
 
 Being able to manage all of our infrastructure as code and enhance the behavior of standard Kubernetes deployment tools has dramatically improved our ability to deploy services and maintain our configuration. We look forward to expanding our use of Pulumi as we grow as an organization and empower our developers further.
-
-## About the Pinpoint Team
-
-<iframe style="margin: 0px auto; display: block; border: 0;" title="Andrew Kunzel – Developer Profile" xml="lang" src="https://profile.pinpoint.com/u/9ba7405e227eb0c7" width="600" height="400" scrolling="no"></iframe>
-
-Read more about [Andrew](https://insights.pinpoint.com/developer-spotlight-andrew-kunzel-director-of-backend-engineering) in his Developer Spotlight.
-
-<iframe style="margin: 0px auto; display: block; border: 0;" title="Mike Goode – Developer Profile" xml="lang" src="https://profile.pinpoint.com/u/mike" width="600" height="400" scrolling="no"></iframe>
-
-Read more about [Mike](https://insights.pinpoint.com/developer-spotlight-michael-goode-platform-operations-engineer) in his Developer Spotlight.

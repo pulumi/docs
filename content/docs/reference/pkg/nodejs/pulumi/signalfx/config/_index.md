@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/signalfx | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/signalfx package."
-git_sha: "70b5688a845a4b65de5f2b4d2e0511e5b97ace8b"
+git_sha: "b122344defd7b11ca5db3e56f26bbff73084c8e7"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="apiUrl" data-link-title="apiUrl">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/config/vars.ts#L12">
         let <strong>apiUrl</strong>
     </a>
 </h3>
@@ -40,7 +40,7 @@ block_external_search_index: true
 API URL for your SignalFx org, may include a realm
 
 <h3 class="pdoc-module-header" id="authToken" data-link-title="authToken">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/config/vars.ts#L16">
         let <strong>authToken</strong>
     </a>
 </h3>
@@ -50,7 +50,7 @@ API URL for your SignalFx org, may include a realm
 SignalFx auth token
 
 <h3 class="pdoc-module-header" id="customAppUrl" data-link-title="customAppUrl">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/config/vars.ts#L20">
         let <strong>customAppUrl</strong>
     </a>
 </h3>
@@ -60,7 +60,7 @@ SignalFx auth token
 Application URL for your SignalFx org, often customzied for organizations using SSO
 
 <h3 class="pdoc-module-header" id="timeoutSeconds" data-link-title="timeoutSeconds">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/config/vars.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/config/vars.ts#L24">
         let <strong>timeoutSeconds</strong>
     </a>
 </h3>

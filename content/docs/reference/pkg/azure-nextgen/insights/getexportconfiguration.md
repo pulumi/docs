@@ -47,7 +47,6 @@ meta_desc: "Explore the GetExportConfiguration function of the insights module, 
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -55,35 +54,31 @@ The following arguments are supported:
             title="Required">
         <span id="exportid_csharp">
 <a href="#exportid_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Continuous Export configuration ID. This is unique within a Application Insights component.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -92,35 +87,31 @@ The following arguments are supported:
             title="Required">
         <span id="exportid_go">
 <a href="#exportid_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Continuous Export configuration ID. This is unique within a Application Insights component.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -129,35 +120,31 @@ The following arguments are supported:
             title="Required">
         <span id="exportid_nodejs">
 <a href="#exportid_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Continuous Export configuration ID. This is unique within a Application Insights component.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -166,38 +153,31 @@ The following arguments are supported:
             title="Required">
         <span id="export_id_python">
 <a href="#export_id_python" style="color: inherit; text-decoration: inherit;">export_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Continuous Export configuration ID. This is unique within a Application Insights component.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -208,7 +188,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -216,195 +195,175 @@ The following output properties are available:
             title="">
         <span id="applicationname_csharp">
 <a href="#applicationname_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Application Insights component.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="containername_csharp">
 <a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the destination storage container.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="destinationaccountid_csharp">
 <a href="#destinationaccountid_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of destination account.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="destinationstoragelocationid_csharp">
 <a href="#destinationstoragelocationid_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Storage<wbr>Location<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination account location ID.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="destinationstoragesubscriptionid_csharp">
 <a href="#destinationstoragesubscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Storage<wbr>Subscription<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination storage account subscription ID.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="destinationtype_csharp">
 <a href="#destinationtype_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination type.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="exportid_csharp">
 <a href="#exportid_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID of the export configuration inside an Application Insights component. It is auto generated when the Continuous Export configuration is created.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="exportstatus_csharp">
 <a href="#exportstatus_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This indicates current Continuous Export configuration status. The possible values are 'Preparing', 'Success', 'Failure'.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instrumentationkey_csharp">
 <a href="#instrumentationkey_csharp" style="color: inherit; text-decoration: inherit;">Instrumentation<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instrumentation key of the Application Insights component.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="isuserenabled_csharp">
 <a href="#isuserenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>User<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This will be 'true' if the Continuous Export configuration is enabled, otherwise it will be 'false'.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastgaptime_csharp">
 <a href="#lastgaptime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Gap<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time the Continuous Export configuration started failing.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastsuccesstime_csharp">
 <a href="#lastsuccesstime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Success<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time data was successfully delivered to the destination storage container for this Continuous Export configuration.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastuserupdate_csharp">
 <a href="#lastuserupdate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>User<wbr>Update</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last time the Continuous Export configuration was updated.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="permanenterrorreason_csharp">
 <a href="#permanenterrorreason_csharp" style="color: inherit; text-decoration: inherit;">Permanent<wbr>Error<wbr>Reason</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the reason the Continuous Export configuration started failing. It can be 'AzureStorageNotFound' or 'AzureStorageAccessDenied'.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="resourcegroup_csharp">
 <a href="#resourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group of the Application Insights component.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="storagename_csharp">
 <a href="#storagename_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the destination storage account.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="subscriptionid_csharp">
 <a href="#subscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subscription of the Application Insights component.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="notificationqueueenabled_csharp">
 <a href="#notificationqueueenabled_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Queue<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Deprecated{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="recordtypes_csharp">
 <a href="#recordtypes_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This comma separated list of document types that will be exported. The possible values include 'Requests', 'Event', 'Exceptions', 'Metrics', 'PageViews', 'PageViewPerformance', 'Rdd', 'PerformanceCounters', 'Availability', 'Messages'.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -413,195 +372,175 @@ The following output properties are available:
             title="">
         <span id="applicationname_go">
 <a href="#applicationname_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Application Insights component.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="containername_go">
 <a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the destination storage container.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="destinationaccountid_go">
 <a href="#destinationaccountid_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of destination account.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="destinationstoragelocationid_go">
 <a href="#destinationstoragelocationid_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Storage<wbr>Location<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination account location ID.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="destinationstoragesubscriptionid_go">
 <a href="#destinationstoragesubscriptionid_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Storage<wbr>Subscription<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination storage account subscription ID.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="destinationtype_go">
 <a href="#destinationtype_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination type.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="exportid_go">
 <a href="#exportid_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID of the export configuration inside an Application Insights component. It is auto generated when the Continuous Export configuration is created.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="exportstatus_go">
 <a href="#exportstatus_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This indicates current Continuous Export configuration status. The possible values are 'Preparing', 'Success', 'Failure'.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instrumentationkey_go">
 <a href="#instrumentationkey_go" style="color: inherit; text-decoration: inherit;">Instrumentation<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instrumentation key of the Application Insights component.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="isuserenabled_go">
 <a href="#isuserenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>User<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This will be 'true' if the Continuous Export configuration is enabled, otherwise it will be 'false'.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastgaptime_go">
 <a href="#lastgaptime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Gap<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time the Continuous Export configuration started failing.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastsuccesstime_go">
 <a href="#lastsuccesstime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Success<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time data was successfully delivered to the destination storage container for this Continuous Export configuration.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastuserupdate_go">
 <a href="#lastuserupdate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>User<wbr>Update</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last time the Continuous Export configuration was updated.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="permanenterrorreason_go">
 <a href="#permanenterrorreason_go" style="color: inherit; text-decoration: inherit;">Permanent<wbr>Error<wbr>Reason</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the reason the Continuous Export configuration started failing. It can be 'AzureStorageNotFound' or 'AzureStorageAccessDenied'.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="resourcegroup_go">
 <a href="#resourcegroup_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group of the Application Insights component.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="storagename_go">
 <a href="#storagename_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the destination storage account.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="subscriptionid_go">
 <a href="#subscriptionid_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subscription of the Application Insights component.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="notificationqueueenabled_go">
 <a href="#notificationqueueenabled_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Queue<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Deprecated{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="recordtypes_go">
 <a href="#recordtypes_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This comma separated list of document types that will be exported. The possible values include 'Requests', 'Event', 'Exceptions', 'Metrics', 'PageViews', 'PageViewPerformance', 'Rdd', 'PerformanceCounters', 'Availability', 'Messages'.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -610,195 +549,175 @@ The following output properties are available:
             title="">
         <span id="applicationname_nodejs">
 <a href="#applicationname_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Application Insights component.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="containername_nodejs">
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the destination storage container.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="destinationaccountid_nodejs">
 <a href="#destinationaccountid_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of destination account.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="destinationstoragelocationid_nodejs">
 <a href="#destinationstoragelocationid_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Storage<wbr>Location<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination account location ID.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="destinationstoragesubscriptionid_nodejs">
 <a href="#destinationstoragesubscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Storage<wbr>Subscription<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination storage account subscription ID.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="destinationtype_nodejs">
 <a href="#destinationtype_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination type.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="exportid_nodejs">
 <a href="#exportid_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID of the export configuration inside an Application Insights component. It is auto generated when the Continuous Export configuration is created.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="exportstatus_nodejs">
 <a href="#exportstatus_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This indicates current Continuous Export configuration status. The possible values are 'Preparing', 'Success', 'Failure'.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instrumentationkey_nodejs">
 <a href="#instrumentationkey_nodejs" style="color: inherit; text-decoration: inherit;">instrumentation<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instrumentation key of the Application Insights component.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="isuserenabled_nodejs">
 <a href="#isuserenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>User<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This will be 'true' if the Continuous Export configuration is enabled, otherwise it will be 'false'.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastgaptime_nodejs">
 <a href="#lastgaptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Gap<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time the Continuous Export configuration started failing.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastsuccesstime_nodejs">
 <a href="#lastsuccesstime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Success<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time data was successfully delivered to the destination storage container for this Continuous Export configuration.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastuserupdate_nodejs">
 <a href="#lastuserupdate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>User<wbr>Update</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last time the Continuous Export configuration was updated.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="permanenterrorreason_nodejs">
 <a href="#permanenterrorreason_nodejs" style="color: inherit; text-decoration: inherit;">permanent<wbr>Error<wbr>Reason</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the reason the Continuous Export configuration started failing. It can be 'AzureStorageNotFound' or 'AzureStorageAccessDenied'.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="resourcegroup_nodejs">
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group of the Application Insights component.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="storagename_nodejs">
 <a href="#storagename_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the destination storage account.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="subscriptionid_nodejs">
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subscription of the Application Insights component.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="notificationqueueenabled_nodejs">
 <a href="#notificationqueueenabled_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Queue<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Deprecated{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="recordtypes_nodejs">
 <a href="#recordtypes_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This comma separated list of document types that will be exported. The possible values include 'Requests', 'Event', 'Exceptions', 'Metrics', 'PageViews', 'PageViewPerformance', 'Rdd', 'PerformanceCounters', 'Availability', 'Messages'.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -807,198 +726,175 @@ The following output properties are available:
             title="">
         <span id="application_name_python">
 <a href="#application_name_python" style="color: inherit; text-decoration: inherit;">application_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Application Insights component.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="container_name_python">
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the destination storage container.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="destination_account_id_python">
 <a href="#destination_account_id_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>account_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of destination account.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="destination_storage_location_id_python">
 <a href="#destination_storage_location_id_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>storage_<wbr>location_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The destination account location ID.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="destination_storage_subscription_id_python">
 <a href="#destination_storage_subscription_id_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>storage_<wbr>subscription_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The destination storage account subscription ID.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="destination_type_python">
 <a href="#destination_type_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The destination type.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="export_id_python">
 <a href="#export_id_python" style="color: inherit; text-decoration: inherit;">export_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique ID of the export configuration inside an Application Insights component. It is auto generated when the Continuous Export configuration is created.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="export_status_python">
 <a href="#export_status_python" style="color: inherit; text-decoration: inherit;">export_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This indicates current Continuous Export configuration status. The possible values are 'Preparing', 'Success', 'Failure'.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instrumentation_key_python">
 <a href="#instrumentation_key_python" style="color: inherit; text-decoration: inherit;">instrumentation_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instrumentation key of the Application Insights component.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="is_user_enabled_python">
 <a href="#is_user_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>user_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This will be 'true' if the Continuous Export configuration is enabled, otherwise it will be 'false'.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="last_gap_time_python">
 <a href="#last_gap_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>gap_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last time the Continuous Export configuration started failing.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="last_success_time_python">
 <a href="#last_success_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>success_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last time data was successfully delivered to the destination storage container for this Continuous Export configuration.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="last_user_update_python">
 <a href="#last_user_update_python" style="color: inherit; text-decoration: inherit;">last_<wbr>user_<wbr>update</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last time the Continuous Export configuration was updated.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="permanent_error_reason_python">
 <a href="#permanent_error_reason_python" style="color: inherit; text-decoration: inherit;">permanent_<wbr>error_<wbr>reason</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is the reason the Continuous Export configuration started failing. It can be 'AzureStorageNotFound' or 'AzureStorageAccessDenied'.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="resource_group_python">
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource group of the Application Insights component.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="storage_name_python">
 <a href="#storage_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the destination storage account.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="subscription_id_python">
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The subscription of the Application Insights component.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="notification_queue_enabled_python">
 <a href="#notification_queue_enabled_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>queue_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Deprecated{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="record_types_python">
 <a href="#record_types_python" style="color: inherit; text-decoration: inherit;">record_<wbr>types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This comma separated list of document types that will be exported. The possible values include 'Requests', 'Event', 'Exceptions', 'Metrics', 'PageViews', 'PageViewPerformance', 'Rdd', 'PerformanceCounters', 'Availability', 'Messages'.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
