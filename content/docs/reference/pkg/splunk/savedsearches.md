@@ -1,8 +1,8 @@
 
 ---
 title: "SavedSearches"
-title_tag: "Resource SavedSearches | Package splunk"
-meta_desc: "Explore the SavedSearches resource of the splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.SavedSearches"
+title_tag: "Resource SavedSearches | Package Splunk"
+meta_desc: "Explore the SavedSearches resource of the Splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.SavedSearches"
 ---
 
 

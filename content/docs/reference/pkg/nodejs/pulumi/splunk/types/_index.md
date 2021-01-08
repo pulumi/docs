@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/splunk | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/splunk package."
-git_sha: "402cdc264fccfdcd1ec2fec708dddb3f5710a253"
+git_sha: "39b37550c4f3c485905c5b408488f2215b66da51"
 block_external_search_index: true
 ---
 

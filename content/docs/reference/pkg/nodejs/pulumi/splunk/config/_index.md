@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/splunk | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/splunk package."
-git_sha: "402cdc264fccfdcd1ec2fec708dddb3f5710a253"
+git_sha: "39b37550c4f3c485905c5b408488f2215b66da51"
 block_external_search_index: true
 ---
 
@@ -32,7 +32,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="authToken" data-link-title="authToken">
-    <a href="https://github.com/pulumi/pulumi-splunk/blob/402cdc264fccfdcd1ec2fec708dddb3f5710a253/sdk/nodejs/config/vars.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/config/vars.ts#L13">
         let <strong>authToken</strong>
     </a>
 </h3>
@@ -43,7 +43,7 @@ Authentication tokens, also known as JSON Web Tokens (JWT), are a method for aut
 the Splunk platform
 
 <h3 class="pdoc-module-header" id="insecureSkipVerify" data-link-title="insecureSkipVerify">
-    <a href="https://github.com/pulumi/pulumi-splunk/blob/402cdc264fccfdcd1ec2fec708dddb3f5710a253/sdk/nodejs/config/vars.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/config/vars.ts#L17">
         let <strong>insecureSkipVerify</strong>
     </a>
 </h3>
@@ -53,7 +53,7 @@ the Splunk platform
 insecure skip verification flag
 
 <h3 class="pdoc-module-header" id="password" data-link-title="password">
-    <a href="https://github.com/pulumi/pulumi-splunk/blob/402cdc264fccfdcd1ec2fec708dddb3f5710a253/sdk/nodejs/config/vars.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/config/vars.ts#L21">
         let <strong>password</strong>
     </a>
 </h3>
@@ -63,7 +63,7 @@ insecure skip verification flag
 Splunk instance password
 
 <h3 class="pdoc-module-header" id="timeout" data-link-title="timeout">
-    <a href="https://github.com/pulumi/pulumi-splunk/blob/402cdc264fccfdcd1ec2fec708dddb3f5710a253/sdk/nodejs/config/vars.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/config/vars.ts#L25">
         let <strong>timeout</strong>
     </a>
 </h3>
@@ -73,7 +73,7 @@ Splunk instance password
 Timeout when making calls to Splunk server. Defaults to 60 seconds
 
 <h3 class="pdoc-module-header" id="url" data-link-title="url">
-    <a href="https://github.com/pulumi/pulumi-splunk/blob/402cdc264fccfdcd1ec2fec708dddb3f5710a253/sdk/nodejs/config/vars.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/config/vars.ts#L29">
         let <strong>url</strong>
     </a>
 </h3>
@@ -83,7 +83,7 @@ Timeout when making calls to Splunk server. Defaults to 60 seconds
 Splunk instance URL
 
 <h3 class="pdoc-module-header" id="username" data-link-title="username">
-    <a href="https://github.com/pulumi/pulumi-splunk/blob/402cdc264fccfdcd1ec2fec708dddb3f5710a253/sdk/nodejs/config/vars.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-splunk/blob/39b37550c4f3c485905c5b408488f2215b66da51/sdk/nodejs/config/vars.ts#L33">
         let <strong>username</strong>
     </a>
 </h3>

@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package splunk"
-meta_desc: "Explore the Provider resource of the splunk package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the splunk package. By default, resources use package-wide configuration"
+title_tag: "Resource Provider | Package Splunk"
+meta_desc: "Explore the Provider resource of the Splunk package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the splunk package. By default, resources use package-wide configuration"
 ---
 
 

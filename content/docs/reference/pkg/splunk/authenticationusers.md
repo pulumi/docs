@@ -1,8 +1,8 @@
 
 ---
 title: "AuthenticationUsers"
-title_tag: "Resource AuthenticationUsers | Package splunk"
-meta_desc: "Explore the AuthenticationUsers resource of the splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.AuthenticationUsers"
+title_tag: "Resource AuthenticationUsers | Package Splunk"
+meta_desc: "Explore the AuthenticationUsers resource of the Splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.AuthenticationUsers"
 ---
 
 

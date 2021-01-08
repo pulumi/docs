@@ -1,8 +1,8 @@
 
 ---
 title: "GlobalHttpEventCollector"
-title_tag: "Resource GlobalHttpEventCollector | Package splunk"
-meta_desc: "Explore the GlobalHttpEventCollector resource of the splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.GlobalHttpEventCollector"
+title_tag: "Resource GlobalHttpEventCollector | Package Splunk"
+meta_desc: "Explore the GlobalHttpEventCollector resource of the Splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.GlobalHttpEventCollector"
 ---
 
 

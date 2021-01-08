@@ -1,8 +1,8 @@
 
 ---
 title: "InputsTcpSsl"
-title_tag: "Resource InputsTcpSsl | Package splunk"
-meta_desc: "Explore the InputsTcpSsl resource of the splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.InputsTcpSsl"
+title_tag: "Resource InputsTcpSsl | Package Splunk"
+meta_desc: "Explore the InputsTcpSsl resource of the Splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.InputsTcpSsl"
 ---
 
 

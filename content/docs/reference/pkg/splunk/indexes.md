@@ -1,8 +1,8 @@
 
 ---
 title: "Indexes"
-title_tag: "Resource Indexes | Package splunk"
-meta_desc: "Explore the Indexes resource of the splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.Indexes"
+title_tag: "Resource Indexes | Package Splunk"
+meta_desc: "Explore the Indexes resource of the Splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.Indexes"
 ---
 
 

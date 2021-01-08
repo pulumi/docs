@@ -1,8 +1,8 @@
 
 ---
 title: "InputsScript"
-title_tag: "Resource InputsScript | Package splunk"
-meta_desc: "Explore the InputsScript resource of the splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.InputsScript"
+title_tag: "Resource InputsScript | Package Splunk"
+meta_desc: "Explore the InputsScript resource of the Splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.InputsScript"
 ---
 
 
