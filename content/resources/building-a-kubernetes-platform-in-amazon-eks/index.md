@@ -7,7 +7,7 @@ meta_desc: "In this workshop, you will examine how Pulumi interacts with Kuberne
 featured: true
 
 # If the video is pre-recorded or live.
-pre_recorded: true
+pre_recorded: false
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -20,7 +20,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: false
+gated: true
 
 # The layout of the landing page.
 type: webinars
@@ -56,7 +56,7 @@ main:
     # URL for embedding a URL for ungated webinars.
     youtube_url: "https://www.youtube.com/embed/emUSsZDcu6E"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2020-12-10T17:00:00-08:00
+    sortable_date: 2021-02-24T09:00:00-08:00
     # Duration of the webinar.
     duration: "2 hours"
     # Datetime of the webinar.
@@ -88,4 +88,6 @@ main:
         - How to provision the external-dns add-on to automate DNS entry for Ingress resources
         - How to install cert-manager to automate the creation of TLS certificates for applications
         - Install an example application to show the end-to-end user experience for users.
+form:
+    hubspot_form_id: "013aa0b8-7aac-4de9-912e-c0f22e53eff2"
 ---
