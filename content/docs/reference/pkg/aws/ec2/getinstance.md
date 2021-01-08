@@ -241,7 +241,7 @@ exactly match a pair on the desired Instance.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the Instance.
+    <dd>{{% md %}}A map of tags assigned to the Instance.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -310,7 +310,7 @@ exactly match a pair on the desired Instance.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the Instance.
+    <dd>{{% md %}}A map of tags assigned to the Instance.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -379,7 +379,7 @@ exactly match a pair on the desired Instance.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the Instance.
+    <dd>{{% md %}}A map of tags assigned to the Instance.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -448,7 +448,7 @@ exactly match a pair on the desired Instance.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the Instance.
+    <dd>{{% md %}}A map of tags assigned to the Instance.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -797,7 +797,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the Instance.
+    <dd>{{% md %}}A map of tags assigned to the Instance.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1213,7 +1213,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the Instance.
+    <dd>{{% md %}}A map of tags assigned to the Instance.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1629,7 +1629,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the Instance.
+    <dd>{{% md %}}A map of tags assigned to the Instance.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -2045,7 +2045,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the Instance.
+    <dd>{{% md %}}A map of tags assigned to the Instance.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">

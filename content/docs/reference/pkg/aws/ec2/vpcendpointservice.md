@@ -145,7 +145,7 @@ const example = new aws.ec2.VpcEndpointService("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.VpcEndpointService">VpcEndpointService</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acceptance_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allowed_principals</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">gateway_load_balancer_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">network_load_balancer_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.VpcEndpointService">VpcEndpointService</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acceptance_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allowed_principals</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">gateway_load_balancer_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">network_load_balancer_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">private_dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -358,6 +358,16 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatednsname_csharp">
+<a href="#privatednsname_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private DNS name for the service.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -411,6 +421,16 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatednsname_go">
+<a href="#privatednsname_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private DNS name for the service.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -470,6 +490,16 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatednsname_nodejs">
+<a href="#privatednsname_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private DNS name for the service.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -523,6 +553,16 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="private_dns_name_python">
+<a href="#private_dns_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The private DNS name for the service.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -598,13 +638,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="privatednsname_csharp">
-<a href="#privatednsname_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Name</a>
+        <span id="privatednsnameconfigurations_csharp">
+<a href="#privatednsnameconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Name<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#vpcendpointserviceprivatednsnameconfiguration">List&lt;Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The private DNS name for the service.
+    <dd>{{% md %}}List of objects containing information about the endpoint service private DNS name configuration.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -634,7 +674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the VPC endpoint service.
+    <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -693,13 +733,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="privatednsname_go">
-<a href="#privatednsname_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Name</a>
+        <span id="privatednsnameconfigurations_go">
+<a href="#privatednsnameconfigurations_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Name<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#vpcendpointserviceprivatednsnameconfiguration">[]Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}The private DNS name for the service.
+    <dd>{{% md %}}List of objects containing information about the endpoint service private DNS name configuration.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -729,7 +769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the VPC endpoint service.
+    <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -788,13 +828,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="privatednsname_nodejs">
-<a href="#privatednsname_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns<wbr>Name</a>
+        <span id="privatednsnameconfigurations_nodejs">
+<a href="#privatednsnameconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns<wbr>Name<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#vpcendpointserviceprivatednsnameconfiguration">Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration[]</a></span>
     </dt>
-    <dd>{{% md %}}The private DNS name for the service.
+    <dd>{{% md %}}List of objects containing information about the endpoint service private DNS name configuration.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -824,7 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the VPC endpoint service.
+    <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -883,13 +923,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="private_dns_name_python">
-<a href="#private_dns_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>name</a>
+        <span id="private_dns_name_configurations_python">
+<a href="#private_dns_name_configurations_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>name_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#vpcendpointserviceprivatednsnameconfiguration">Sequence[Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration]</a></span>
     </dt>
-    <dd>{{% md %}}The private DNS name for the service.
+    <dd>{{% md %}}List of objects containing information about the endpoint service private DNS name configuration.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -919,7 +959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The state of the VPC endpoint service.
+    <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -937,7 +977,7 @@ Get an existing VpcEndpointService resource's state with the given name, ID, and
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acceptance_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allowed_principals</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">base_endpoint_dns_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">gateway_load_balancer_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">manages_vpc_endpoints</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_load_balancer_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">private_dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> VpcEndpointService</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acceptance_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allowed_principals</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">base_endpoint_dns_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">gateway_load_balancer_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">manages_vpc_endpoints</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_load_balancer_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">private_dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_dns_name_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpcEndpointServicePrivateDnsNameConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> VpcEndpointService</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1142,6 +1182,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_privatednsnameconfigurations_csharp">
+<a href="#state_privatednsnameconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Name<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpcendpointserviceprivatednsnameconfiguration">List&lt;Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of objects containing information about the endpoint service private DNS name configuration.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_servicename_csharp">
 <a href="#state_servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
 </span>
@@ -1168,7 +1218,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the VPC endpoint service.
+    <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1278,6 +1328,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_privatednsnameconfigurations_go">
+<a href="#state_privatednsnameconfigurations_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Name<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpcendpointserviceprivatednsnameconfiguration">[]Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}List of objects containing information about the endpoint service private DNS name configuration.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_servicename_go">
 <a href="#state_servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
 </span>
@@ -1304,7 +1364,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the VPC endpoint service.
+    <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1414,6 +1474,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_privatednsnameconfigurations_nodejs">
+<a href="#state_privatednsnameconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns<wbr>Name<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpcendpointserviceprivatednsnameconfiguration">Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of objects containing information about the endpoint service private DNS name configuration.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_servicename_nodejs">
 <a href="#state_servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
@@ -1440,7 +1510,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the VPC endpoint service.
+    <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1550,6 +1620,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_private_dns_name_configurations_python">
+<a href="#state_private_dns_name_configurations_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>name_<wbr>configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpcendpointserviceprivatednsnameconfiguration">Sequence[Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of objects containing information about the endpoint service private DNS name configuration.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_service_name_python">
 <a href="#state_service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
@@ -1576,7 +1656,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The state of the VPC endpoint service.
+    <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1595,6 +1675,208 @@ The following state arguments are supported:
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="vpcendpointserviceprivatednsnameconfiguration">Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VpcEndpointServicePrivateDnsNameConfiguration">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#VpcEndpointServicePrivateDnsNameConfigurationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.VpcEndpointServicePrivateDnsNameConfiguration.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the record subdomain the service provider needs to create.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Endpoint service verification type, for example `TXT`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value the service provider adds to the private DNS name domain record before verification.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the record subdomain the service provider needs to create.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Endpoint service verification type, for example `TXT`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value the service provider adds to the private DNS name domain record before verification.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the record subdomain the service provider needs to create.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Endpoint service verification type, for example `TXT`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value the service provider adds to the private DNS name domain record before verification.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the record subdomain the service provider needs to create.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Endpoint service verification type, for example `TXT`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Value the service provider adds to the private DNS name domain record before verification.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 ## Import
 
 

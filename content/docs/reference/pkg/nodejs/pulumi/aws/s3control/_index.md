@@ -3,7 +3,7 @@ title: "Module s3control"
 title_tag: "Module s3control | Package @pulumi/aws | Node.js SDK"
 linktitle: "s3control"
 meta_desc: "Explore members of the s3control module in the @pulumi/aws package."
-git_sha: "6c9e985f93682e9b4056b497c1a31a75fd7884fc"
+git_sha: "6c9e892c504e5708adb0347579e949dcb7a63d45"
 block_external_search_index: true
 ---
 
@@ -36,7 +36,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Bucket" data-link-title="Bucket">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucket.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucket.ts#L32">
         Resource <strong>Bucket</strong>
     </a>
 </h3>
@@ -68,7 +68,7 @@ S3 Control Buckets can be imported using Amazon Resource Name (ARN), e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Bucket-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucket.ts#L83"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucket.ts#L83"> <b>constructor</b></a>
 </h4>
 
 
@@ -82,7 +82,7 @@ Create a Bucket resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Bucket-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucket.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucket.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -93,14 +93,14 @@ Get an existing Bucket resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Bucket-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucket.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucket.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Bucket-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucket.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucket.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -111,7 +111,7 @@ Returns true if the given object is an instance of Bucket.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Bucket-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucket.ts#L63">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucket.ts#L63">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -119,7 +119,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Amazon Resource Name (ARN) of the bucket.
 
 <h4 class="pdoc-member-header" id="Bucket-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucket.ts#L67">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucket.ts#L67">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -127,7 +127,7 @@ Amazon Resource Name (ARN) of the bucket.
 Name of the bucket.
 
 <h4 class="pdoc-member-header" id="Bucket-creationDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucket.ts#L71">property <b>creationDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucket.ts#L71">property <b>creationDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>creationDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -135,7 +135,7 @@ Name of the bucket.
 UTC creation date in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
 
 <h4 class="pdoc-member-header" id="Bucket-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucket.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucket.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -144,7 +144,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Bucket-outpostId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucket.ts#L75">property <b>outpostId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucket.ts#L75">property <b>outpostId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>outpostId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -152,7 +152,7 @@ deployments and may be missing (undefined) during planning phases.
 Identifier of the Outpost to contain this bucket.
 
 <h4 class="pdoc-member-header" id="Bucket-publicAccessBlockEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucket.ts#L79">property <b>publicAccessBlockEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucket.ts#L79">property <b>publicAccessBlockEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>publicAccessBlockEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -160,7 +160,7 @@ Identifier of the Outpost to contain this bucket.
 Boolean whether Public Access Block is enabled.
 
 <h4 class="pdoc-member-header" id="Bucket-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucket.ts#L83">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucket.ts#L83">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -168,7 +168,7 @@ Boolean whether Public Access Block is enabled.
 Key-value map of resource tags.
 
 <h4 class="pdoc-member-header" id="Bucket-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucket.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucket.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -177,7 +177,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="BucketLifecycleConfiguration" data-link-title="BucketLifecycleConfiguration">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucketLifecycleConfiguration.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucketLifecycleConfiguration.ts#L17">
         Resource <strong>BucketLifecycleConfiguration</strong>
     </a>
 </h3>
@@ -193,7 +193,7 @@ S3 Control Bucket Lifecycle Configurations can be imported using the Amazon Reso
 ```
 
 <h4 class="pdoc-member-header" id="BucketLifecycleConfiguration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucketLifecycleConfiguration.ts#L52"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucketLifecycleConfiguration.ts#L52"> <b>constructor</b></a>
 </h4>
 
 
@@ -207,7 +207,7 @@ Create a BucketLifecycleConfiguration resource with the given unique name, argum
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="BucketLifecycleConfiguration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucketLifecycleConfiguration.ts#L27">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucketLifecycleConfiguration.ts#L27">method <b>get</b></a>
 </h4>
 
 
@@ -218,14 +218,14 @@ Get an existing BucketLifecycleConfiguration resource's state with the given nam
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BucketLifecycleConfiguration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucketLifecycleConfiguration.ts#L17">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucketLifecycleConfiguration.ts#L17">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BucketLifecycleConfiguration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucketLifecycleConfiguration.ts#L38">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucketLifecycleConfiguration.ts#L38">method <b>isInstance</b></a>
 </h4>
 
 
@@ -236,7 +236,7 @@ Returns true if the given object is an instance of BucketLifecycleConfiguration.
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BucketLifecycleConfiguration-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucketLifecycleConfiguration.ts#L48">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucketLifecycleConfiguration.ts#L48">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -244,7 +244,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Amazon Resource Name (ARN) of the bucket.
 
 <h4 class="pdoc-member-header" id="BucketLifecycleConfiguration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucketLifecycleConfiguration.ts#L17">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucketLifecycleConfiguration.ts#L17">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -253,7 +253,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BucketLifecycleConfiguration-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucketLifecycleConfiguration.ts#L52">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucketLifecycleConfiguration.ts#L52">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketLifecycleConfigurationRule'>BucketLifecycleConfigurationRule</a>[]&gt;;</code></pre>
@@ -261,7 +261,7 @@ deployments and may be missing (undefined) during planning phases.
 Configuration block(s) containing lifecycle rules for the bucket.
 
 <h4 class="pdoc-member-header" id="BucketLifecycleConfiguration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucketLifecycleConfiguration.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucketLifecycleConfiguration.ts#L17">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -270,7 +270,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="BucketPolicy" data-link-title="BucketPolicy">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucketPolicy.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucketPolicy.ts#L44">
         Resource <strong>BucketPolicy</strong>
     </a>
 </h3>
@@ -314,7 +314,7 @@ S3 Control Bucket Policies can be imported using the Amazon Resource Name (ARN),
 ```
 
 <h4 class="pdoc-member-header" id="BucketPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucketPolicy.ts#L76"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucketPolicy.ts#L76"> <b>constructor</b></a>
 </h4>
 
 
@@ -328,7 +328,7 @@ Create a BucketPolicy resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="BucketPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucketPolicy.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucketPolicy.ts#L54">method <b>get</b></a>
 </h4>
 
 
@@ -339,14 +339,14 @@ Get an existing BucketPolicy resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BucketPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucketPolicy.ts#L44">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucketPolicy.ts#L44">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BucketPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucketPolicy.ts#L65">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucketPolicy.ts#L65">method <b>isInstance</b></a>
 </h4>
 
 
@@ -357,7 +357,7 @@ Returns true if the given object is an instance of BucketPolicy.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BucketPolicy-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucketPolicy.ts#L75">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucketPolicy.ts#L75">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -365,7 +365,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Amazon Resource Name (ARN) of the bucket.
 
 <h4 class="pdoc-member-header" id="BucketPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucketPolicy.ts#L44">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucketPolicy.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -374,12 +374,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BucketPolicy-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucketPolicy.ts#L76">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucketPolicy.ts#L76">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BucketPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucketPolicy.ts#L44">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucketPolicy.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -391,7 +391,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="BucketArgs" data-link-title="BucketArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucket.ts#L162">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucket.ts#L162">
         interface <strong>BucketArgs</strong>
     </a>
 </h3>
@@ -401,7 +401,7 @@ deployments.
 The set of arguments for constructing a Bucket resource.
 
 <h4 class="pdoc-member-header" id="BucketArgs-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucket.ts#L166">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucket.ts#L166">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -409,7 +409,7 @@ The set of arguments for constructing a Bucket resource.
 Name of the bucket.
 
 <h4 class="pdoc-member-header" id="BucketArgs-outpostId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucket.ts#L170">property <b>outpostId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucket.ts#L170">property <b>outpostId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outpostId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -417,7 +417,7 @@ Name of the bucket.
 Identifier of the Outpost to contain this bucket.
 
 <h4 class="pdoc-member-header" id="BucketArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucket.ts#L174">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucket.ts#L174">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -425,7 +425,7 @@ Identifier of the Outpost to contain this bucket.
 Key-value map of resource tags.
 
 <h3 class="pdoc-module-header" id="BucketLifecycleConfigurationArgs" data-link-title="BucketLifecycleConfigurationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucketLifecycleConfiguration.ts#L107">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucketLifecycleConfiguration.ts#L107">
         interface <strong>BucketLifecycleConfigurationArgs</strong>
     </a>
 </h3>
@@ -435,7 +435,7 @@ Key-value map of resource tags.
 The set of arguments for constructing a BucketLifecycleConfiguration resource.
 
 <h4 class="pdoc-member-header" id="BucketLifecycleConfigurationArgs-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucketLifecycleConfiguration.ts#L111">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucketLifecycleConfiguration.ts#L111">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -443,7 +443,7 @@ The set of arguments for constructing a BucketLifecycleConfiguration resource.
 Amazon Resource Name (ARN) of the bucket.
 
 <h4 class="pdoc-member-header" id="BucketLifecycleConfigurationArgs-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucketLifecycleConfiguration.ts#L115">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucketLifecycleConfiguration.ts#L115">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketLifecycleConfigurationRule'>BucketLifecycleConfigurationRule</a>&gt;[]&gt;;</code></pre>
@@ -451,7 +451,7 @@ Amazon Resource Name (ARN) of the bucket.
 Configuration block(s) containing lifecycle rules for the bucket.
 
 <h3 class="pdoc-module-header" id="BucketLifecycleConfigurationState" data-link-title="BucketLifecycleConfigurationState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucketLifecycleConfiguration.ts#L93">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucketLifecycleConfiguration.ts#L93">
         interface <strong>BucketLifecycleConfigurationState</strong>
     </a>
 </h3>
@@ -461,7 +461,7 @@ Configuration block(s) containing lifecycle rules for the bucket.
 Input properties used for looking up and filtering BucketLifecycleConfiguration resources.
 
 <h4 class="pdoc-member-header" id="BucketLifecycleConfigurationState-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucketLifecycleConfiguration.ts#L97">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucketLifecycleConfiguration.ts#L97">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -469,7 +469,7 @@ Input properties used for looking up and filtering BucketLifecycleConfiguration 
 Amazon Resource Name (ARN) of the bucket.
 
 <h4 class="pdoc-member-header" id="BucketLifecycleConfigurationState-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucketLifecycleConfiguration.ts#L101">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucketLifecycleConfiguration.ts#L101">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketLifecycleConfigurationRule'>BucketLifecycleConfigurationRule</a>&gt;[]&gt;;</code></pre>
@@ -477,7 +477,7 @@ Amazon Resource Name (ARN) of the bucket.
 Configuration block(s) containing lifecycle rules for the bucket.
 
 <h3 class="pdoc-module-header" id="BucketPolicyArgs" data-link-title="BucketPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucketPolicy.ts#L128">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucketPolicy.ts#L128">
         interface <strong>BucketPolicyArgs</strong>
     </a>
 </h3>
@@ -487,7 +487,7 @@ Configuration block(s) containing lifecycle rules for the bucket.
 The set of arguments for constructing a BucketPolicy resource.
 
 <h4 class="pdoc-member-header" id="BucketPolicyArgs-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucketPolicy.ts#L132">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucketPolicy.ts#L132">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -495,12 +495,12 @@ The set of arguments for constructing a BucketPolicy resource.
 Amazon Resource Name (ARN) of the bucket.
 
 <h4 class="pdoc-member-header" id="BucketPolicyArgs-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucketPolicy.ts#L133">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucketPolicy.ts#L133">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="BucketPolicyState" data-link-title="BucketPolicyState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucketPolicy.ts#L117">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucketPolicy.ts#L117">
         interface <strong>BucketPolicyState</strong>
     </a>
 </h3>
@@ -510,7 +510,7 @@ Amazon Resource Name (ARN) of the bucket.
 Input properties used for looking up and filtering BucketPolicy resources.
 
 <h4 class="pdoc-member-header" id="BucketPolicyState-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucketPolicy.ts#L121">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucketPolicy.ts#L121">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -518,12 +518,12 @@ Input properties used for looking up and filtering BucketPolicy resources.
 Amazon Resource Name (ARN) of the bucket.
 
 <h4 class="pdoc-member-header" id="BucketPolicyState-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucketPolicy.ts#L122">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucketPolicy.ts#L122">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="BucketState" data-link-title="BucketState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucket.ts#L132">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucket.ts#L132">
         interface <strong>BucketState</strong>
     </a>
 </h3>
@@ -533,7 +533,7 @@ Amazon Resource Name (ARN) of the bucket.
 Input properties used for looking up and filtering Bucket resources.
 
 <h4 class="pdoc-member-header" id="BucketState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucket.ts#L136">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucket.ts#L136">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -541,7 +541,7 @@ Input properties used for looking up and filtering Bucket resources.
 Amazon Resource Name (ARN) of the bucket.
 
 <h4 class="pdoc-member-header" id="BucketState-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucket.ts#L140">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucket.ts#L140">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -549,7 +549,7 @@ Amazon Resource Name (ARN) of the bucket.
 Name of the bucket.
 
 <h4 class="pdoc-member-header" id="BucketState-creationDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucket.ts#L144">property <b>creationDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucket.ts#L144">property <b>creationDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creationDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -557,7 +557,7 @@ Name of the bucket.
 UTC creation date in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
 
 <h4 class="pdoc-member-header" id="BucketState-outpostId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucket.ts#L148">property <b>outpostId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucket.ts#L148">property <b>outpostId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outpostId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -565,7 +565,7 @@ UTC creation date in [RFC3339 format](https://tools.ietf.org/html/rfc3339#sectio
 Identifier of the Outpost to contain this bucket.
 
 <h4 class="pdoc-member-header" id="BucketState-publicAccessBlockEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucket.ts#L152">property <b>publicAccessBlockEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucket.ts#L152">property <b>publicAccessBlockEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicAccessBlockEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -573,7 +573,7 @@ Identifier of the Outpost to contain this bucket.
 Boolean whether Public Access Block is enabled.
 
 <h4 class="pdoc-member-header" id="BucketState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/s3control/bucket.ts#L156">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3control/bucket.ts#L156">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>

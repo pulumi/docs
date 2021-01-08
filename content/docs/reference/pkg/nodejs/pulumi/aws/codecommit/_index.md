@@ -3,7 +3,7 @@ title: "Module codecommit"
 title_tag: "Module codecommit | Package @pulumi/aws | Node.js SDK"
 linktitle: "codecommit"
 meta_desc: "Explore members of the codecommit module in the @pulumi/aws package."
-git_sha: "6c9e985f93682e9b4056b497c1a31a75fd7884fc"
+git_sha: "6c9e892c504e5708adb0347579e949dcb7a63d45"
 block_external_search_index: true
 ---
 
@@ -39,7 +39,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Repository" data-link-title="Repository">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/repository.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/repository.ts#L30">
         Resource <strong>Repository</strong>
     </a>
 </h3>
@@ -69,7 +69,7 @@ Codecommit repository can be imported using repository name, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Repository-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/repository.ts#L89"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/repository.ts#L89"> <b>constructor</b></a>
 </h4>
 
 
@@ -83,7 +83,7 @@ Create a Repository resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Repository-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/repository.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/repository.ts#L40">method <b>get</b></a>
 </h4>
 
 
@@ -94,14 +94,14 @@ Get an existing Repository resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Repository-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/repository.ts#L30">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/repository.ts#L30">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Repository-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/repository.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/repository.ts#L51">method <b>isInstance</b></a>
 </h4>
 
 
@@ -112,7 +112,7 @@ Returns true if the given object is an instance of Repository.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Repository-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/repository.ts#L61">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/repository.ts#L61">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -120,7 +120,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the repository
 
 <h4 class="pdoc-member-header" id="Repository-cloneUrlHttp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/repository.ts#L65">property <b>cloneUrlHttp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/repository.ts#L65">property <b>cloneUrlHttp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cloneUrlHttp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -128,7 +128,7 @@ The ARN of the repository
 The URL to use for cloning the repository over HTTPS.
 
 <h4 class="pdoc-member-header" id="Repository-cloneUrlSsh">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/repository.ts#L69">property <b>cloneUrlSsh</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/repository.ts#L69">property <b>cloneUrlSsh</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cloneUrlSsh: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -136,7 +136,7 @@ The URL to use for cloning the repository over HTTPS.
 The URL to use for cloning the repository over SSH.
 
 <h4 class="pdoc-member-header" id="Repository-defaultBranch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/repository.ts#L73">property <b>defaultBranch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/repository.ts#L73">property <b>defaultBranch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultBranch: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -144,7 +144,7 @@ The URL to use for cloning the repository over SSH.
 The default branch of the repository. The branch specified here needs to exist.
 
 <h4 class="pdoc-member-header" id="Repository-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/repository.ts#L77">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/repository.ts#L77">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -152,7 +152,7 @@ The default branch of the repository. The branch specified here needs to exist.
 The description of the repository. This needs to be less than 1000 characters
 
 <h4 class="pdoc-member-header" id="Repository-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/repository.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/repository.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -161,7 +161,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Repository-repositoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/repository.ts#L81">property <b>repositoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/repository.ts#L81">property <b>repositoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>repositoryId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -169,7 +169,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the repository
 
 <h4 class="pdoc-member-header" id="Repository-repositoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/repository.ts#L85">property <b>repositoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/repository.ts#L85">property <b>repositoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>repositoryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -177,7 +177,7 @@ The ID of the repository
 The name for the repository. This needs to be less than 100 characters.
 
 <h4 class="pdoc-member-header" id="Repository-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/repository.ts#L89">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/repository.ts#L89">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -185,7 +185,7 @@ The name for the repository. This needs to be less than 100 characters.
 Key-value map of resource tags
 
 <h4 class="pdoc-member-header" id="Repository-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/repository.ts#L30">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/repository.ts#L30">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -194,7 +194,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Trigger" data-link-title="Trigger">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/trigger.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/trigger.ts#L28">
         Resource <strong>Trigger</strong>
     </a>
 </h3>
@@ -221,7 +221,7 @@ const testTrigger = new aws.codecommit.Trigger("testTrigger", {
 ```
 
 <h4 class="pdoc-member-header" id="Trigger-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/trigger.ts#L61"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/trigger.ts#L61"> <b>constructor</b></a>
 </h4>
 
 
@@ -235,7 +235,7 @@ Create a Trigger resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Trigger-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/trigger.ts#L38">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/trigger.ts#L38">method <b>get</b></a>
 </h4>
 
 
@@ -246,14 +246,14 @@ Get an existing Trigger resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Trigger-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/trigger.ts#L28">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/trigger.ts#L28">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Trigger-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/trigger.ts#L49">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/trigger.ts#L49">method <b>isInstance</b></a>
 </h4>
 
 
@@ -264,12 +264,12 @@ Returns true if the given object is an instance of Trigger.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Trigger-configurationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/trigger.ts#L56">property <b>configurationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/trigger.ts#L56">property <b>configurationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>configurationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Trigger-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/trigger.ts#L28">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/trigger.ts#L28">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -278,7 +278,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Trigger-repositoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/trigger.ts#L60">property <b>repositoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/trigger.ts#L60">property <b>repositoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>repositoryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -286,12 +286,12 @@ deployments and may be missing (undefined) during planning phases.
 The name for the repository. This needs to be less than 100 characters.
 
 <h4 class="pdoc-member-header" id="Trigger-triggers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/trigger.ts#L61">property <b>triggers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/trigger.ts#L61">property <b>triggers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>triggers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TriggerTrigger'>TriggerTrigger</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Trigger-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/trigger.ts#L28">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/trigger.ts#L28">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -302,7 +302,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getRepository" data-link-title="getRepository">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/getRepository.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/getRepository.ts#L22">
         Function <strong>getRepository</strong>
     </a>
 </h3>
@@ -327,7 +327,7 @@ const test = pulumi.output(aws.codecommit.getRepository({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetRepositoryArgs" data-link-title="GetRepositoryArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/getRepository.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/getRepository.ts#L38">
         interface <strong>GetRepositoryArgs</strong>
     </a>
 </h3>
@@ -337,7 +337,7 @@ const test = pulumi.output(aws.codecommit.getRepository({
 A collection of arguments for invoking getRepository.
 
 <h4 class="pdoc-member-header" id="GetRepositoryArgs-repositoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/getRepository.ts#L42">property <b>repositoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/getRepository.ts#L42">property <b>repositoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repositoryName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -345,7 +345,7 @@ A collection of arguments for invoking getRepository.
 The name for the repository. This needs to be less than 100 characters.
 
 <h3 class="pdoc-module-header" id="GetRepositoryResult" data-link-title="GetRepositoryResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/getRepository.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/getRepository.ts#L48">
         interface <strong>GetRepositoryResult</strong>
     </a>
 </h3>
@@ -355,7 +355,7 @@ The name for the repository. This needs to be less than 100 characters.
 A collection of values returned by getRepository.
 
 <h4 class="pdoc-member-header" id="GetRepositoryResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/getRepository.ts#L52">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/getRepository.ts#L52">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -363,7 +363,7 @@ A collection of values returned by getRepository.
 The ARN of the repository
 
 <h4 class="pdoc-member-header" id="GetRepositoryResult-cloneUrlHttp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/getRepository.ts#L56">property <b>cloneUrlHttp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/getRepository.ts#L56">property <b>cloneUrlHttp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloneUrlHttp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -371,7 +371,7 @@ The ARN of the repository
 The URL to use for cloning the repository over HTTPS.
 
 <h4 class="pdoc-member-header" id="GetRepositoryResult-cloneUrlSsh">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/getRepository.ts#L60">property <b>cloneUrlSsh</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/getRepository.ts#L60">property <b>cloneUrlSsh</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloneUrlSsh: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -379,7 +379,7 @@ The URL to use for cloning the repository over HTTPS.
 The URL to use for cloning the repository over SSH.
 
 <h4 class="pdoc-member-header" id="GetRepositoryResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/getRepository.ts#L64">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/getRepository.ts#L64">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -387,7 +387,7 @@ The URL to use for cloning the repository over SSH.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetRepositoryResult-repositoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/getRepository.ts#L68">property <b>repositoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/getRepository.ts#L68">property <b>repositoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repositoryId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -395,12 +395,12 @@ The provider-assigned unique ID for this managed resource.
 The ID of the repository
 
 <h4 class="pdoc-member-header" id="GetRepositoryResult-repositoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/getRepository.ts#L69">property <b>repositoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/getRepository.ts#L69">property <b>repositoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repositoryName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="RepositoryArgs" data-link-title="RepositoryArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/repository.ts#L177">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/repository.ts#L177">
         interface <strong>RepositoryArgs</strong>
     </a>
 </h3>
@@ -410,7 +410,7 @@ The ID of the repository
 The set of arguments for constructing a Repository resource.
 
 <h4 class="pdoc-member-header" id="RepositoryArgs-defaultBranch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/repository.ts#L181">property <b>defaultBranch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/repository.ts#L181">property <b>defaultBranch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultBranch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -418,7 +418,7 @@ The set of arguments for constructing a Repository resource.
 The default branch of the repository. The branch specified here needs to exist.
 
 <h4 class="pdoc-member-header" id="RepositoryArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/repository.ts#L185">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/repository.ts#L185">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -426,7 +426,7 @@ The default branch of the repository. The branch specified here needs to exist.
 The description of the repository. This needs to be less than 1000 characters
 
 <h4 class="pdoc-member-header" id="RepositoryArgs-repositoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/repository.ts#L189">property <b>repositoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/repository.ts#L189">property <b>repositoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repositoryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -434,7 +434,7 @@ The description of the repository. This needs to be less than 1000 characters
 The name for the repository. This needs to be less than 100 characters.
 
 <h4 class="pdoc-member-header" id="RepositoryArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/repository.ts#L193">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/repository.ts#L193">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -442,7 +442,7 @@ The name for the repository. This needs to be less than 100 characters.
 Key-value map of resource tags
 
 <h3 class="pdoc-module-header" id="RepositoryState" data-link-title="RepositoryState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/repository.ts#L139">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/repository.ts#L139">
         interface <strong>RepositoryState</strong>
     </a>
 </h3>
@@ -452,7 +452,7 @@ Key-value map of resource tags
 Input properties used for looking up and filtering Repository resources.
 
 <h4 class="pdoc-member-header" id="RepositoryState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/repository.ts#L143">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/repository.ts#L143">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -460,7 +460,7 @@ Input properties used for looking up and filtering Repository resources.
 The ARN of the repository
 
 <h4 class="pdoc-member-header" id="RepositoryState-cloneUrlHttp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/repository.ts#L147">property <b>cloneUrlHttp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/repository.ts#L147">property <b>cloneUrlHttp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloneUrlHttp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -468,7 +468,7 @@ The ARN of the repository
 The URL to use for cloning the repository over HTTPS.
 
 <h4 class="pdoc-member-header" id="RepositoryState-cloneUrlSsh">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/repository.ts#L151">property <b>cloneUrlSsh</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/repository.ts#L151">property <b>cloneUrlSsh</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloneUrlSsh?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -476,7 +476,7 @@ The URL to use for cloning the repository over HTTPS.
 The URL to use for cloning the repository over SSH.
 
 <h4 class="pdoc-member-header" id="RepositoryState-defaultBranch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/repository.ts#L155">property <b>defaultBranch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/repository.ts#L155">property <b>defaultBranch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultBranch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -484,7 +484,7 @@ The URL to use for cloning the repository over SSH.
 The default branch of the repository. The branch specified here needs to exist.
 
 <h4 class="pdoc-member-header" id="RepositoryState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/repository.ts#L159">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/repository.ts#L159">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -492,7 +492,7 @@ The default branch of the repository. The branch specified here needs to exist.
 The description of the repository. This needs to be less than 1000 characters
 
 <h4 class="pdoc-member-header" id="RepositoryState-repositoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/repository.ts#L163">property <b>repositoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/repository.ts#L163">property <b>repositoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repositoryId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -500,7 +500,7 @@ The description of the repository. This needs to be less than 1000 characters
 The ID of the repository
 
 <h4 class="pdoc-member-header" id="RepositoryState-repositoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/repository.ts#L167">property <b>repositoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/repository.ts#L167">property <b>repositoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repositoryName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -508,7 +508,7 @@ The ID of the repository
 The name for the repository. This needs to be less than 100 characters.
 
 <h4 class="pdoc-member-header" id="RepositoryState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/repository.ts#L171">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/repository.ts#L171">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -516,7 +516,7 @@ The name for the repository. This needs to be less than 100 characters.
 Key-value map of resource tags
 
 <h3 class="pdoc-module-header" id="TriggerArgs" data-link-title="TriggerArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/trigger.ts#L116">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/trigger.ts#L116">
         interface <strong>TriggerArgs</strong>
     </a>
 </h3>
@@ -526,7 +526,7 @@ Key-value map of resource tags
 The set of arguments for constructing a Trigger resource.
 
 <h4 class="pdoc-member-header" id="TriggerArgs-repositoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/trigger.ts#L120">property <b>repositoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/trigger.ts#L120">property <b>repositoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repositoryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -534,12 +534,12 @@ The set of arguments for constructing a Trigger resource.
 The name for the repository. This needs to be less than 100 characters.
 
 <h4 class="pdoc-member-header" id="TriggerArgs-triggers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/trigger.ts#L121">property <b>triggers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/trigger.ts#L121">property <b>triggers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>triggers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TriggerTrigger'>TriggerTrigger</a>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="TriggerState" data-link-title="TriggerState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/trigger.ts#L104">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/trigger.ts#L104">
         interface <strong>TriggerState</strong>
     </a>
 </h3>
@@ -549,12 +549,12 @@ The name for the repository. This needs to be less than 100 characters.
 Input properties used for looking up and filtering Trigger resources.
 
 <h4 class="pdoc-member-header" id="TriggerState-configurationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/trigger.ts#L105">property <b>configurationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/trigger.ts#L105">property <b>configurationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configurationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TriggerState-repositoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/trigger.ts#L109">property <b>repositoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/trigger.ts#L109">property <b>repositoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repositoryName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -562,7 +562,7 @@ Input properties used for looking up and filtering Trigger resources.
 The name for the repository. This needs to be less than 100 characters.
 
 <h4 class="pdoc-member-header" id="TriggerState-triggers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/codecommit/trigger.ts#L110">property <b>triggers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/codecommit/trigger.ts#L110">property <b>triggers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>triggers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TriggerTrigger'>TriggerTrigger</a>&gt;[]&gt;;</code></pre>

@@ -130,6 +130,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="sns/" title="sns"><span class="symbol module"></span>sns</a></li>
     <li><a href="sqs/" title="sqs"><span class="symbol module"></span>sqs</a></li>
     <li><a href="ssm/" title="ssm"><span class="symbol module"></span>ssm</a></li>
+    <li><a href="ssoadmin/" title="ssoadmin"><span class="symbol module"></span>ssoadmin</a></li>
     <li><a href="storagegateway/" title="storagegateway"><span class="symbol module"></span>storagegateway</a></li>
     <li><a href="swf/" title="swf"><span class="symbol module"></span>swf</a></li>
     <li><a href="transfer/" title="transfer"><span class="symbol module"></span>transfer</a></li>
@@ -174,7 +175,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.22.1</dd>
+	<dd>3.23.0</dd>
 </dl>
 
 

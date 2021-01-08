@@ -20,15 +20,180 @@ Provides a CodeStar Connection.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleConnection = new Aws.CodeStarConnections.Connection("exampleConnection", new Aws.CodeStarConnections.ConnectionArgs
+        {
+            ProviderType = "Bitbucket",
+        });
+        var examplePipeline = new Aws.CodePipeline.Pipeline("examplePipeline", new Aws.CodePipeline.PipelineArgs
+        {
+            RoleArn = aws_iam_role.Codepipeline_role.Arn,
+            ArtifactStore = ,
+            Stages = 
+            {
+                new Aws.CodePipeline.Inputs.PipelineStageArgs
+                {
+                    Name = "Source",
+                    Actions = 
+                    {
+                        new Aws.CodePipeline.Inputs.PipelineStageActionArgs
+                        {
+                            Name = "Source",
+                            Category = "Source",
+                            Owner = "AWS",
+                            Provider = "CodeStarSourceConnection",
+                            Version = "1",
+                            OutputArtifacts = 
+                            {
+                                "source_output",
+                            },
+                            Configuration = 
+                            {
+                                { "Owner", "my-organization" },
+                                { "ConnectionArn", exampleConnection.Arn },
+                                { "Repo", "foo/test" },
+                                { "Branch", "master" },
+                            },
+                        },
+                    },
+                },
+                new Aws.CodePipeline.Inputs.PipelineStageArgs
+                {
+                    Name = "Build",
+                    Actions = 
+                    {
+                        ,
+                    },
+                },
+                new Aws.CodePipeline.Inputs.PipelineStageArgs
+                {
+                    Name = "Deploy",
+                    Actions = 
+                    {
+                        ,
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codestarconnections"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleConnection, err := codestarconnections.NewConnection(ctx, "exampleConnection", &codestarconnections.ConnectionArgs{
+			ProviderType: pulumi.String("Bitbucket"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = codepipeline.NewPipeline(ctx, "examplePipeline", &codepipeline.PipelineArgs{
+			RoleArn:       pulumi.Any(aws_iam_role.Codepipeline_role.Arn),
+			ArtifactStore: nil,
+			Stages: codepipeline.PipelineStageArray{
+				&codepipeline.PipelineStageArgs{
+					Name: pulumi.String("Source"),
+					Actions: codepipeline.PipelineStageActionArray{
+						&codepipeline.PipelineStageActionArgs{
+							Name:     pulumi.String("Source"),
+							Category: pulumi.String("Source"),
+							Owner:    pulumi.String("AWS"),
+							Provider: pulumi.String("CodeStarSourceConnection"),
+							Version:  pulumi.String("1"),
+							OutputArtifacts: pulumi.StringArray{
+								pulumi.String("source_output"),
+							},
+							Configuration: pulumi.StringMap{
+								"Owner":         pulumi.String("my-organization"),
+								"ConnectionArn": exampleConnection.Arn,
+								"Repo":          pulumi.String("foo/test"),
+								"Branch":        pulumi.String("master"),
+							},
+						},
+					},
+				},
+				&codepipeline.PipelineStageArgs{
+					Name: pulumi.String("Build"),
+					Actions: codepipeline.PipelineStageActionArray{
+						nil,
+					},
+				},
+				&codepipeline.PipelineStageArgs{
+					Name: pulumi.String("Deploy"),
+					Actions: codepipeline.PipelineStageActionArray{
+						nil,
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_connection = aws.codestarconnections.Connection("exampleConnection", provider_type="Bitbucket")
+example_pipeline = aws.codepipeline.Pipeline("examplePipeline",
+    role_arn=aws_iam_role["codepipeline_role"]["arn"],
+    artifact_store=aws.codepipeline.PipelineArtifactStoreArgs(),
+    stages=[
+        aws.codepipeline.PipelineStageArgs(
+            name="Source",
+            actions=[aws.codepipeline.PipelineStageActionArgs(
+                name="Source",
+                category="Source",
+                owner="AWS",
+                provider="CodeStarSourceConnection",
+                version="1",
+                output_artifacts=["source_output"],
+                configuration={
+                    "Owner": "my-organization",
+                    "ConnectionArn": example_connection.arn,
+                    "Repo": "foo/test",
+                    "Branch": "master",
+                },
+            )],
+        ),
+        aws.codepipeline.PipelineStageArgs(
+            name="Build",
+            actions=[aws.codepipeline.PipelineStageActionArgs()],
+        ),
+        aws.codepipeline.PipelineStageArgs(
+            name="Deploy",
+            actions=[aws.codepipeline.PipelineStageActionArgs()],
+        ),
+    ])
+```
+
 {{% /example %}}
 
 {{% example typescript %}}
@@ -37,10 +202,7 @@ Coming soon!
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleConnection = new aws.codestarconnections.Connection("exampleConnection", {
-    connectionName: "example-connection",
-    providerType: "Bitbucket",
-});
+const exampleConnection = new aws.codestarconnections.Connection("exampleConnection", {providerType: "Bitbucket"});
 const examplePipeline = new aws.codepipeline.Pipeline("examplePipeline", {
     roleArn: aws_iam_role.codepipeline_role.arn,
     artifactStore: {},

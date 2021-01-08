@@ -143,7 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}(Optional) Key-value map of resource tags for the image recipe.
+    <dd>{{% md %}}Key-value map of resource tags for the image recipe.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -169,7 +169,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}(Optional) Key-value map of resource tags for the image recipe.
+    <dd>{{% md %}}Key-value map of resource tags for the image recipe.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -195,7 +195,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}(Optional) Key-value map of resource tags for the image recipe.
+    <dd>{{% md %}}Key-value map of resource tags for the image recipe.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -221,7 +221,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}(Optional) Key-value map of resource tags for the image recipe.
+    <dd>{{% md %}}Key-value map of resource tags for the image recipe.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -349,13 +349,23 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="workingdirectory_csharp">
+<a href="#workingdirectory_csharp" style="color: inherit; text-decoration: inherit;">Working<wbr>Directory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The working directory used during build and test workflows.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}(Optional) Key-value map of resource tags for the image recipe.
+    <dd>{{% md %}}Key-value map of resource tags for the image recipe.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -474,13 +484,23 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="workingdirectory_go">
+<a href="#workingdirectory_go" style="color: inherit; text-decoration: inherit;">Working<wbr>Directory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The working directory used during build and test workflows.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}(Optional) Key-value map of resource tags for the image recipe.
+    <dd>{{% md %}}Key-value map of resource tags for the image recipe.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -599,13 +619,23 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="workingdirectory_nodejs">
+<a href="#workingdirectory_nodejs" style="color: inherit; text-decoration: inherit;">working<wbr>Directory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The working directory used during build and test workflows.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}(Optional) Key-value map of resource tags for the image recipe.
+    <dd>{{% md %}}Key-value map of resource tags for the image recipe.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -724,13 +754,23 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="working_directory_python">
+<a href="#working_directory_python" style="color: inherit; text-decoration: inherit;">working_<wbr>directory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The working directory used during build and test workflows.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}(Optional) Key-value map of resource tags for the image recipe.
+    <dd>{{% md %}}Key-value map of resource tags for the image recipe.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
