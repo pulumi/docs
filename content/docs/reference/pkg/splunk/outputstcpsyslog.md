@@ -1,8 +1,8 @@
 
 ---
 title: "OutputsTcpSyslog"
-title_tag: "Resource OutputsTcpSyslog | Package splunk"
-meta_desc: "Explore the OutputsTcpSyslog resource of the splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.OutputsTcpSyslog"
+title_tag: "Resource OutputsTcpSyslog | Package Splunk"
+meta_desc: "Explore the OutputsTcpSyslog resource of the Splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.OutputsTcpSyslog"
 ---
 
 

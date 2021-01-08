@@ -1,8 +1,8 @@
 
 ---
 title: "InputsTcpRaw"
-title_tag: "Resource InputsTcpRaw | Package splunk"
-meta_desc: "Explore the InputsTcpRaw resource of the splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.InputsTcpRaw"
+title_tag: "Resource InputsTcpRaw | Package Splunk"
+meta_desc: "Explore the InputsTcpRaw resource of the Splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.InputsTcpRaw"
 ---
 
 

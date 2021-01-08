@@ -1,8 +1,8 @@
 
 ---
 title: "InputsTcpSplunkTcpToken"
-title_tag: "Resource InputsTcpSplunkTcpToken | Package splunk"
-meta_desc: "Explore the InputsTcpSplunkTcpToken resource of the splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.InputsTcpSplunkTcpToken"
+title_tag: "Resource InputsTcpSplunkTcpToken | Package Splunk"
+meta_desc: "Explore the InputsTcpSplunkTcpToken resource of the Splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.InputsTcpSplunkTcpToken"
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "OutputsTcpGroup"
-title_tag: "Resource OutputsTcpGroup | Package splunk"
-meta_desc: "Explore the OutputsTcpGroup resource of the splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.OutputsTcpGroup"
+title_tag: "Resource OutputsTcpGroup | Package Splunk"
+meta_desc: "Explore the OutputsTcpGroup resource of the Splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.OutputsTcpGroup"
 ---
 
 

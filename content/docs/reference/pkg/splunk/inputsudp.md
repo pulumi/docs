@@ -1,8 +1,8 @@
 
 ---
 title: "InputsUdp"
-title_tag: "Resource InputsUdp | Package splunk"
-meta_desc: "Explore the InputsUdp resource of the splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.InputsTcpRaw"
+title_tag: "Resource InputsUdp | Package Splunk"
+meta_desc: "Explore the InputsUdp resource of the Splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.InputsTcpRaw"
 ---
 
 

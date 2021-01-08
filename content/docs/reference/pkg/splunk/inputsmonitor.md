@@ -1,8 +1,8 @@
 
 ---
 title: "InputsMonitor"
-title_tag: "Resource InputsMonitor | Package splunk"
-meta_desc: "Explore the InputsMonitor resource of the splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.InputsMonitor"
+title_tag: "Resource InputsMonitor | Package Splunk"
+meta_desc: "Explore the InputsMonitor resource of the Splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.InputsMonitor"
 ---
 
 

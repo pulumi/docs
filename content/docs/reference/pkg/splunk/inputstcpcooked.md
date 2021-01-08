@@ -1,8 +1,8 @@
 
 ---
 title: "InputsTcpCooked"
-title_tag: "Resource InputsTcpCooked | Package splunk"
-meta_desc: "Explore the InputsTcpCooked resource of the splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.InputsTcpCooked"
+title_tag: "Resource InputsTcpCooked | Package Splunk"
+meta_desc: "Explore the InputsTcpCooked resource of the Splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.InputsTcpCooked"
 ---
 
 

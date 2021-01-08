@@ -1,8 +1,8 @@
 
 ---
 title: "AppsLocal"
-title_tag: "Resource AppsLocal | Package splunk"
-meta_desc: "Explore the AppsLocal resource of the splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.AppsLocal"
+title_tag: "Resource AppsLocal | Package Splunk"
+meta_desc: "Explore the AppsLocal resource of the Splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.AppsLocal"
 ---
 
 

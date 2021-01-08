@@ -1,6 +1,6 @@
 ---
-title: "splunk"
-title_tag: "Module splunk | Package splunk"
+title: "Splunk"
+title_tag: "Module Splunk | Package Splunk"
 meta_desc: "A Pulumi package for creating and managing splunk cloud resources."
 menu:
     reference:
@@ -19,6 +19,7 @@ A Pulumi package for creating and managing splunk cloud resources.
     <li><a href="authenticationusers" title="AuthenticationUsers"><span class="symbol resource"></span>AuthenticationUsers</a></li>
     <li><a href="authorizationroles" title="AuthorizationRoles"><span class="symbol resource"></span>AuthorizationRoles</a></li>
     <li><a href="configsconf" title="ConfigsConf"><span class="symbol resource"></span>ConfigsConf</a></li>
+    <li><a href="datauiviews" title="DataUiViews"><span class="symbol resource"></span>DataUiViews</a></li>
     <li><a href="globalhttpeventcollector" title="GlobalHttpEventCollector"><span class="symbol resource"></span>GlobalHttpEventCollector</a></li>
     <li><a href="indexes" title="Indexes"><span class="symbol resource"></span>Indexes</a></li>
     <li><a href="inputshttpeventcollector" title="InputsHttpEventCollector"><span class="symbol resource"></span>InputsHttpEventCollector</a></li>
@@ -46,7 +47,7 @@ A Pulumi package for creating and managing splunk cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`splunk` Terraform Provider](https://github.com/splunk/terraform-provider-splunk).</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.1.1</dd>
 </dl>
 
 

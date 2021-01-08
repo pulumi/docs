@@ -1,8 +1,8 @@
 
 ---
 title: "OutputsTcpDefault"
-title_tag: "Resource OutputsTcpDefault | Package splunk"
-meta_desc: "Explore the OutputsTcpDefault resource of the splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.OutputsTcpDefault"
+title_tag: "Resource OutputsTcpDefault | Package Splunk"
+meta_desc: "Explore the OutputsTcpDefault resource of the Splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.OutputsTcpDefault"
 ---
 
 
