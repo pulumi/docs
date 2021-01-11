@@ -30,7 +30,7 @@ Fastly Service can be imported using their service ID, e.g.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_fastly/#pulumi_fastly.Servicev1">Servicev1</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acls</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1AclArgs]]</span> = None<span class="p">, </span><span class="nx">activate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BackendArgs]]</span> = None<span class="p">, </span><span class="nx">bigqueryloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BigqueryloggingArgs]]</span> = None<span class="p">, </span><span class="nx">blobstorageloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BlobstorageloggingArgs]]</span> = None<span class="p">, </span><span class="nx">cache_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1CacheSettingArgs]]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1ConditionArgs]]</span> = None<span class="p">, </span><span class="nx">default_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">dictionaries</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DictionaryArgs]]</span> = None<span class="p">, </span><span class="nx">directors</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DirectorArgs]]</span> = None<span class="p">, </span><span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DomainArgs]]</span> = None<span class="p">, </span><span class="nx">dynamicsnippets</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DynamicsnippetArgs]]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gcsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1GcsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">gzips</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1GzipArgs]]</span> = None<span class="p">, </span><span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HeaderArgs]]</span> = None<span class="p">, </span><span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HealthcheckArgs]]</span> = None<span class="p">, </span><span class="nx">httpsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HttpsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">logentries</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LogentryArgs]]</span> = None<span class="p">, </span><span class="nx">logging_cloudfiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingCloudfileArgs]]</span> = None<span class="p">, </span><span class="nx">logging_datadogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingDatadogArgs]]</span> = None<span class="p">, </span><span class="nx">logging_digitaloceans</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingDigitaloceanArgs]]</span> = None<span class="p">, </span><span class="nx">logging_elasticsearches</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingElasticsearchArgs]]</span> = None<span class="p">, </span><span class="nx">logging_ftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingFtpArgs]]</span> = None<span class="p">, </span><span class="nx">logging_googlepubsubs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingGooglepubsubArgs]]</span> = None<span class="p">, </span><span class="nx">logging_heroku</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingHerokuArgs]]</span> = None<span class="p">, </span><span class="nx">logging_honeycombs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingHoneycombArgs]]</span> = None<span class="p">, </span><span class="nx">logging_kafkas</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingKafkaArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logglies</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingLogglyArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logshuttles</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingLogshuttleArgs]]</span> = None<span class="p">, </span><span class="nx">logging_newrelics</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingNewrelicArgs]]</span> = None<span class="p">, </span><span class="nx">logging_openstacks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingOpenstackArgs]]</span> = None<span class="p">, </span><span class="nx">logging_scalyrs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingScalyrArgs]]</span> = None<span class="p">, </span><span class="nx">logging_sftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingSftpArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">papertrails</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1PapertrailArgs]]</span> = None<span class="p">, </span><span class="nx">request_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1RequestSettingArgs]]</span> = None<span class="p">, </span><span class="nx">response_objects</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1ResponseObjectArgs]]</span> = None<span class="p">, </span><span class="nx">s3loggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1S3loggingArgs]]</span> = None<span class="p">, </span><span class="nx">snippets</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SnippetArgs]]</span> = None<span class="p">, </span><span class="nx">splunks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SplunkArgs]]</span> = None<span class="p">, </span><span class="nx">sumologics</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SumologicArgs]]</span> = None<span class="p">, </span><span class="nx">syslogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SyslogArgs]]</span> = None<span class="p">, </span><span class="nx">vcls</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1VclArgs]]</span> = None<span class="p">, </span><span class="nx">version_comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">waf</span><span class="p">:</span> <span class="nx">Optional[Servicev1WafArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_fastly/#pulumi_fastly.Servicev1">Servicev1</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acls</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1AclArgs]]</span> = None<span class="p">, </span><span class="nx">activate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BackendArgs]]</span> = None<span class="p">, </span><span class="nx">bigqueryloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BigqueryloggingArgs]]</span> = None<span class="p">, </span><span class="nx">blobstorageloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BlobstorageloggingArgs]]</span> = None<span class="p">, </span><span class="nx">cache_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1CacheSettingArgs]]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1ConditionArgs]]</span> = None<span class="p">, </span><span class="nx">default_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">dictionaries</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DictionaryArgs]]</span> = None<span class="p">, </span><span class="nx">directors</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DirectorArgs]]</span> = None<span class="p">, </span><span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DomainArgs]]</span> = None<span class="p">, </span><span class="nx">dynamicsnippets</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DynamicsnippetArgs]]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gcsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1GcsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">gzips</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1GzipArgs]]</span> = None<span class="p">, </span><span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HeaderArgs]]</span> = None<span class="p">, </span><span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HealthcheckArgs]]</span> = None<span class="p">, </span><span class="nx">httpsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HttpsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">logentries</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LogentryArgs]]</span> = None<span class="p">, </span><span class="nx">logging_cloudfiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingCloudfileArgs]]</span> = None<span class="p">, </span><span class="nx">logging_datadogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingDatadogArgs]]</span> = None<span class="p">, </span><span class="nx">logging_digitaloceans</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingDigitaloceanArgs]]</span> = None<span class="p">, </span><span class="nx">logging_elasticsearches</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingElasticsearchArgs]]</span> = None<span class="p">, </span><span class="nx">logging_ftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingFtpArgs]]</span> = None<span class="p">, </span><span class="nx">logging_googlepubsubs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingGooglepubsubArgs]]</span> = None<span class="p">, </span><span class="nx">logging_heroku</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingHerokuArgs]]</span> = None<span class="p">, </span><span class="nx">logging_honeycombs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingHoneycombArgs]]</span> = None<span class="p">, </span><span class="nx">logging_kafkas</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingKafkaArgs]]</span> = None<span class="p">, </span><span class="nx">logging_kineses</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingKineseArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logglies</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingLogglyArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logshuttles</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingLogshuttleArgs]]</span> = None<span class="p">, </span><span class="nx">logging_newrelics</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingNewrelicArgs]]</span> = None<span class="p">, </span><span class="nx">logging_openstacks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingOpenstackArgs]]</span> = None<span class="p">, </span><span class="nx">logging_scalyrs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingScalyrArgs]]</span> = None<span class="p">, </span><span class="nx">logging_sftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingSftpArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">papertrails</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1PapertrailArgs]]</span> = None<span class="p">, </span><span class="nx">request_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1RequestSettingArgs]]</span> = None<span class="p">, </span><span class="nx">response_objects</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1ResponseObjectArgs]]</span> = None<span class="p">, </span><span class="nx">s3loggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1S3loggingArgs]]</span> = None<span class="p">, </span><span class="nx">snippets</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SnippetArgs]]</span> = None<span class="p">, </span><span class="nx">splunks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SplunkArgs]]</span> = None<span class="p">, </span><span class="nx">sumologics</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SumologicArgs]]</span> = None<span class="p">, </span><span class="nx">syslogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SyslogArgs]]</span> = None<span class="p">, </span><span class="nx">vcls</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1VclArgs]]</span> = None<span class="p">, </span><span class="nx">version_comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">waf</span><span class="p">:</span> <span class="nx">Optional[Servicev1WafArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -526,6 +526,17 @@ Defined below.
         <span class="property-type"><a href="#servicev1loggingkafka">List&lt;Servicev1Logging<wbr>Kafka<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A Kafka endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loggingkineses_csharp">
+<a href="#loggingkineses_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Kineses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingkinese">List&lt;Servicev1Logging<wbr>Kinese<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A Kinesis endpoint to send streaming logs to.
 Defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1058,6 +1069,17 @@ Defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="loggingkineses_go">
+<a href="#loggingkineses_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Kineses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingkinese">[]Servicev1Logging<wbr>Kinese</a></span>
+    </dt>
+    <dd>{{% md %}}A Kinesis endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="logginglogglies_go">
 <a href="#logginglogglies_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Logglies</a>
 </span>
@@ -1582,6 +1604,17 @@ Defined below.
         <span class="property-type"><a href="#servicev1loggingkafka">Servicev1Logging<wbr>Kafka[]</a></span>
     </dt>
     <dd>{{% md %}}A Kafka endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loggingkineses_nodejs">
+<a href="#loggingkineses_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Kineses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingkinese">Servicev1Logging<wbr>Kinese[]</a></span>
+    </dt>
+    <dd>{{% md %}}A Kinesis endpoint to send streaming logs to.
 Defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -2114,6 +2147,17 @@ Defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="logging_kineses_python">
+<a href="#logging_kineses_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>kineses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingkinese">Sequence[Servicev1Logging<wbr>Kinese<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A Kinesis endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="logging_logglies_python">
 <a href="#logging_logglies_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>logglies</a>
 </span>
@@ -2470,7 +2514,7 @@ Get an existing Servicev1 resource's state with the given name, ID, and optional
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acls</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1AclArgs]]</span> = None<span class="p">, </span><span class="nx">activate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">active_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BackendArgs]]</span> = None<span class="p">, </span><span class="nx">bigqueryloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BigqueryloggingArgs]]</span> = None<span class="p">, </span><span class="nx">blobstorageloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BlobstorageloggingArgs]]</span> = None<span class="p">, </span><span class="nx">cache_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1CacheSettingArgs]]</span> = None<span class="p">, </span><span class="nx">cloned_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1ConditionArgs]]</span> = None<span class="p">, </span><span class="nx">default_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">dictionaries</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DictionaryArgs]]</span> = None<span class="p">, </span><span class="nx">directors</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DirectorArgs]]</span> = None<span class="p">, </span><span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DomainArgs]]</span> = None<span class="p">, </span><span class="nx">dynamicsnippets</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DynamicsnippetArgs]]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gcsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1GcsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">gzips</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1GzipArgs]]</span> = None<span class="p">, </span><span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HeaderArgs]]</span> = None<span class="p">, </span><span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HealthcheckArgs]]</span> = None<span class="p">, </span><span class="nx">httpsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HttpsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">logentries</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LogentryArgs]]</span> = None<span class="p">, </span><span class="nx">logging_cloudfiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingCloudfileArgs]]</span> = None<span class="p">, </span><span class="nx">logging_datadogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingDatadogArgs]]</span> = None<span class="p">, </span><span class="nx">logging_digitaloceans</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingDigitaloceanArgs]]</span> = None<span class="p">, </span><span class="nx">logging_elasticsearches</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingElasticsearchArgs]]</span> = None<span class="p">, </span><span class="nx">logging_ftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingFtpArgs]]</span> = None<span class="p">, </span><span class="nx">logging_googlepubsubs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingGooglepubsubArgs]]</span> = None<span class="p">, </span><span class="nx">logging_heroku</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingHerokuArgs]]</span> = None<span class="p">, </span><span class="nx">logging_honeycombs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingHoneycombArgs]]</span> = None<span class="p">, </span><span class="nx">logging_kafkas</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingKafkaArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logglies</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingLogglyArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logshuttles</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingLogshuttleArgs]]</span> = None<span class="p">, </span><span class="nx">logging_newrelics</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingNewrelicArgs]]</span> = None<span class="p">, </span><span class="nx">logging_openstacks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingOpenstackArgs]]</span> = None<span class="p">, </span><span class="nx">logging_scalyrs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingScalyrArgs]]</span> = None<span class="p">, </span><span class="nx">logging_sftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingSftpArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">papertrails</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1PapertrailArgs]]</span> = None<span class="p">, </span><span class="nx">request_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1RequestSettingArgs]]</span> = None<span class="p">, </span><span class="nx">response_objects</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1ResponseObjectArgs]]</span> = None<span class="p">, </span><span class="nx">s3loggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1S3loggingArgs]]</span> = None<span class="p">, </span><span class="nx">snippets</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SnippetArgs]]</span> = None<span class="p">, </span><span class="nx">splunks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SplunkArgs]]</span> = None<span class="p">, </span><span class="nx">sumologics</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SumologicArgs]]</span> = None<span class="p">, </span><span class="nx">syslogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SyslogArgs]]</span> = None<span class="p">, </span><span class="nx">vcls</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1VclArgs]]</span> = None<span class="p">, </span><span class="nx">version_comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">waf</span><span class="p">:</span> <span class="nx">Optional[Servicev1WafArgs]</span> = None<span class="p">) -&gt;</span> Servicev1</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acls</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1AclArgs]]</span> = None<span class="p">, </span><span class="nx">activate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">active_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BackendArgs]]</span> = None<span class="p">, </span><span class="nx">bigqueryloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BigqueryloggingArgs]]</span> = None<span class="p">, </span><span class="nx">blobstorageloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BlobstorageloggingArgs]]</span> = None<span class="p">, </span><span class="nx">cache_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1CacheSettingArgs]]</span> = None<span class="p">, </span><span class="nx">cloned_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1ConditionArgs]]</span> = None<span class="p">, </span><span class="nx">default_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">dictionaries</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DictionaryArgs]]</span> = None<span class="p">, </span><span class="nx">directors</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DirectorArgs]]</span> = None<span class="p">, </span><span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DomainArgs]]</span> = None<span class="p">, </span><span class="nx">dynamicsnippets</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DynamicsnippetArgs]]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gcsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1GcsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">gzips</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1GzipArgs]]</span> = None<span class="p">, </span><span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HeaderArgs]]</span> = None<span class="p">, </span><span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HealthcheckArgs]]</span> = None<span class="p">, </span><span class="nx">httpsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HttpsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">logentries</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LogentryArgs]]</span> = None<span class="p">, </span><span class="nx">logging_cloudfiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingCloudfileArgs]]</span> = None<span class="p">, </span><span class="nx">logging_datadogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingDatadogArgs]]</span> = None<span class="p">, </span><span class="nx">logging_digitaloceans</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingDigitaloceanArgs]]</span> = None<span class="p">, </span><span class="nx">logging_elasticsearches</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingElasticsearchArgs]]</span> = None<span class="p">, </span><span class="nx">logging_ftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingFtpArgs]]</span> = None<span class="p">, </span><span class="nx">logging_googlepubsubs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingGooglepubsubArgs]]</span> = None<span class="p">, </span><span class="nx">logging_heroku</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingHerokuArgs]]</span> = None<span class="p">, </span><span class="nx">logging_honeycombs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingHoneycombArgs]]</span> = None<span class="p">, </span><span class="nx">logging_kafkas</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingKafkaArgs]]</span> = None<span class="p">, </span><span class="nx">logging_kineses</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingKineseArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logglies</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingLogglyArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logshuttles</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingLogshuttleArgs]]</span> = None<span class="p">, </span><span class="nx">logging_newrelics</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingNewrelicArgs]]</span> = None<span class="p">, </span><span class="nx">logging_openstacks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingOpenstackArgs]]</span> = None<span class="p">, </span><span class="nx">logging_scalyrs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingScalyrArgs]]</span> = None<span class="p">, </span><span class="nx">logging_sftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingSftpArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">papertrails</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1PapertrailArgs]]</span> = None<span class="p">, </span><span class="nx">request_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1RequestSettingArgs]]</span> = None<span class="p">, </span><span class="nx">response_objects</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1ResponseObjectArgs]]</span> = None<span class="p">, </span><span class="nx">s3loggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1S3loggingArgs]]</span> = None<span class="p">, </span><span class="nx">snippets</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SnippetArgs]]</span> = None<span class="p">, </span><span class="nx">splunks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SplunkArgs]]</span> = None<span class="p">, </span><span class="nx">sumologics</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SumologicArgs]]</span> = None<span class="p">, </span><span class="nx">syslogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SyslogArgs]]</span> = None<span class="p">, </span><span class="nx">vcls</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1VclArgs]]</span> = None<span class="p">, </span><span class="nx">version_comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">waf</span><span class="p">:</span> <span class="nx">Optional[Servicev1WafArgs]</span> = None<span class="p">) -&gt;</span> Servicev1</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2928,6 +2972,17 @@ Defined below.
         <span class="property-type"><a href="#servicev1loggingkafka">List&lt;Servicev1Logging<wbr>Kafka<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A Kafka endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_loggingkineses_csharp">
+<a href="#state_loggingkineses_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Kineses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingkinese">List&lt;Servicev1Logging<wbr>Kinese<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A Kinesis endpoint to send streaming logs to.
 Defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -3480,6 +3535,17 @@ Defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_loggingkineses_go">
+<a href="#state_loggingkineses_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Kineses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingkinese">[]Servicev1Logging<wbr>Kinese</a></span>
+    </dt>
+    <dd>{{% md %}}A Kinesis endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_logginglogglies_go">
 <a href="#state_logginglogglies_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Logglies</a>
 </span>
@@ -4028,6 +4094,17 @@ Defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_loggingkineses_nodejs">
+<a href="#state_loggingkineses_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Kineses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingkinese">Servicev1Logging<wbr>Kinese[]</a></span>
+    </dt>
+    <dd>{{% md %}}A Kinesis endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_logginglogglies_nodejs">
 <a href="#state_logginglogglies_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Logglies</a>
 </span>
@@ -4572,6 +4649,17 @@ Defined below.
         <span class="property-type"><a href="#servicev1loggingkafka">Sequence[Servicev1Logging<wbr>Kafka<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Kafka endpoint to send streaming logs to.
+Defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_logging_kineses_python">
+<a href="#state_logging_kineses_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>kineses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicev1loggingkinese">Sequence[Servicev1Logging<wbr>Kinese<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A Kinesis endpoint to send streaming logs to.
 Defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -6018,7 +6106,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
+    <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -6124,7 +6212,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
+    <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -6230,7 +6318,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
+    <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -6336,7 +6424,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
+    <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -8402,7 +8490,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
+    <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -8528,7 +8616,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
+    <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -8654,7 +8742,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
+    <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -8780,7 +8868,7 @@ the items are managed outside of the provider.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
+    <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -11154,7 +11242,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your Cloud File account access key.
+    <dd>{{% md %}}The AWS access key to be used to write to the stream.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -11274,7 +11362,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern Virginia), LON (London), SYD (Sydney), HKG (Hong Kong).
+    <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -11310,7 +11398,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your Cloud File account access key.
+    <dd>{{% md %}}The AWS access key to be used to write to the stream.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -11430,7 +11518,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern Virginia), LON (London), SYD (Sydney), HKG (Hong Kong).
+    <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -11466,7 +11554,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your Cloud File account access key.
+    <dd>{{% md %}}The AWS access key to be used to write to the stream.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -11586,7 +11674,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern Virginia), LON (London), SYD (Sydney), HKG (Hong Kong).
+    <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -11622,7 +11710,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Your Cloud File account access key.
+    <dd>{{% md %}}The AWS access key to be used to write to the stream.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -11742,7 +11830,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern Virginia), LON (London), SYD (Sydney), HKG (Hong Kong).
+    <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -11842,7 +11930,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern Virginia), LON (London), SYD (Sydney), HKG (Hong Kong).
+    <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -11918,7 +12006,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern Virginia), LON (London), SYD (Sydney), HKG (Hong Kong).
+    <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -11994,7 +12082,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern Virginia), LON (London), SYD (Sydney), HKG (Hong Kong).
+    <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -12070,7 +12158,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern Virginia), LON (London), SYD (Sydney), HKG (Hong Kong).
+    <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -12110,7 +12198,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your Cloud File account access key.
+    <dd>{{% md %}}The AWS access key to be used to write to the stream.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -12140,7 +12228,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
+    <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -12266,7 +12354,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your Cloud File account access key.
+    <dd>{{% md %}}The AWS access key to be used to write to the stream.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -12296,7 +12384,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
+    <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -12422,7 +12510,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your Cloud File account access key.
+    <dd>{{% md %}}The AWS access key to be used to write to the stream.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -12452,7 +12540,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
+    <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -12578,7 +12666,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Your Cloud File account access key.
+    <dd>{{% md %}}The AWS access key to be used to write to the stream.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -12608,7 +12696,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
+    <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -14084,7 +14172,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
+    <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -14094,7 +14182,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Kafka topic to send logs to.
+    <dd>{{% md %}}The Kinesis stream name.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -14180,7 +14268,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
+    <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -14190,7 +14278,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Kafka topic to send logs to.
+    <dd>{{% md %}}The Kinesis stream name.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -14276,7 +14364,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
+    <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -14286,7 +14374,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Kafka topic to send logs to.
+    <dd>{{% md %}}The Kinesis stream name.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -14372,7 +14460,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
+    <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -14382,7 +14470,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Kafka topic to send logs to.
+    <dd>{{% md %}}The Kinesis stream name.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -15118,7 +15206,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Kafka topic to send logs to.
+    <dd>{{% md %}}The Kinesis stream name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -15264,7 +15352,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Kafka topic to send logs to.
+    <dd>{{% md %}}The Kinesis stream name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -15410,7 +15498,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Kafka topic to send logs to.
+    <dd>{{% md %}}The Kinesis stream name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -15556,7 +15644,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Kafka topic to send logs to.
+    <dd>{{% md %}}The Kinesis stream name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -15667,6 +15755,404 @@ content. (Does not apply to the `delete` action.)
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use TLS for secure logging. Can be either true or false.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="servicev1loggingkinese">Servicev1Logging<wbr>Kinese</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1LoggingKinese">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1LoggingKinese">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingKineseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#Servicev1LoggingKineseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Inputs.Servicev1LoggingKineseArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.Outputs.Servicev1LoggingKinese.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="accesskey_csharp">
+<a href="#accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS access key to be used to write to the stream.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="secretkey_csharp">
+<a href="#secretkey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS secret access key to authenticate with.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="topic_csharp">
+<a href="#topic_csharp" style="color: inherit; text-decoration: inherit;">Topic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Kinesis stream name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="format_csharp">
+<a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Apache style log formatting.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="formatversion_csharp">
+<a href="#formatversion_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="placement_csharp">
+<a href="#placement_csharp" style="color: inherit; text-decoration: inherit;">Placement</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsecondition_csharp">
+<a href="#responsecondition_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="accesskey_go">
+<a href="#accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS access key to be used to write to the stream.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="secretkey_go">
+<a href="#secretkey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS secret access key to authenticate with.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="topic_go">
+<a href="#topic_go" style="color: inherit; text-decoration: inherit;">Topic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Kinesis stream name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="format_go">
+<a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Apache style log formatting.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="formatversion_go">
+<a href="#formatversion_go" style="color: inherit; text-decoration: inherit;">Format<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="placement_go">
+<a href="#placement_go" style="color: inherit; text-decoration: inherit;">Placement</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsecondition_go">
+<a href="#responsecondition_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="accesskey_nodejs">
+<a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS access key to be used to write to the stream.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="secretkey_nodejs">
+<a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS secret access key to authenticate with.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="topic_nodejs">
+<a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Kinesis stream name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="format_nodejs">
+<a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Apache style log formatting.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="formatversion_nodejs">
+<a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="placement_nodejs">
+<a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsecondition_nodejs">
+<a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="access_key_python">
+<a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The AWS access key to be used to write to the stream.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A unique name to identify this dictionary.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="secret_key_python">
+<a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The AWS secret access key to authenticate with.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="topic_python">
+<a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Kinesis stream name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="format_python">
+<a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Apache style log formatting.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="format_version_python">
+<a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="placement_python">
+<a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="response_condition_python">
+<a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -16570,7 +17056,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your Cloud File account access key.
+    <dd>{{% md %}}The AWS access key to be used to write to the stream.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -16726,7 +17212,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your Cloud File account access key.
+    <dd>{{% md %}}The AWS access key to be used to write to the stream.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -16882,7 +17368,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your Cloud File account access key.
+    <dd>{{% md %}}The AWS access key to be used to write to the stream.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -17038,7 +17524,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Your Cloud File account access key.
+    <dd>{{% md %}}The AWS access key to be used to write to the stream.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -17258,7 +17744,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern Virginia), LON (London), SYD (Sydney), HKG (Hong Kong).
+    <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -17334,7 +17820,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern Virginia), LON (London), SYD (Sydney), HKG (Hong Kong).
+    <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -17410,7 +17896,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern Virginia), LON (London), SYD (Sydney), HKG (Hong Kong).
+    <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -17486,7 +17972,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The region to stream logs to. One of: DFW (Dallas), ORD (Chicago), IAD (Northern Virginia), LON (London), SYD (Sydney), HKG (Hong Kong).
+    <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -17676,7 +18162,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
+    <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -17852,7 +18338,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
+    <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -18028,7 +18514,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
+    <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -18204,7 +18690,7 @@ content. (Does not apply to the `delete` action.)
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
+    <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
