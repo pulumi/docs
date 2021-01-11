@@ -108,7 +108,7 @@
             <ul class="flex flex-wrap justify-center list-none p-0 sm:p-2 resource-list">
 
                 <!-- Loop over the resource items and create the tiles. -->
-                {{ range sort $resourcesWithDate "date" "asc" }}
+                {{ range sort $resourcesWithDate "date" "desc" }}
                     {{ $data := .data }}
 
                     <!-- Create the values for rendering. -->
