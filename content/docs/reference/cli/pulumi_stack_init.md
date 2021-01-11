@@ -35,7 +35,7 @@ To use a cloud secrets provider with any backend, use one of the following:
 `
 A stack can be created based on the configuration of an existing stack by passing the
 `--copy-config-from` flag.
-* `pulumi stack init --copy-config-from dev
+* `pulumi stack init --copy-config-from dev`
 
 ```
 pulumi stack init [<org-name>/]<stack-name> [flags]
