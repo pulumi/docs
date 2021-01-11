@@ -1037,12 +1037,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>active</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When true indicates this downtime is being actively applied</p></li>
 <li><p><strong>disabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When true indicates this downtime is not being applied</p></li>
 <li><p><strong>end</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Optionally specify an end date when this downtime should expire</p></li>
+<li><p><strong>end_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – String representing date and time to end the downtime in RFC3339 format.</p></li>
 <li><p><strong>message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional message to provide when creating the downtime, can include notification handles</p></li>
 <li><p><strong>monitor_id</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – When specified, this downtime will only apply to this monitor</p></li>
 <li><p><strong>monitor_tags</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of monitor tags (up to 25), i.e. tags that are applied directly to monitors to which the downtime applies</p></li>
 <li><p><strong>recurrence</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'DowntimeRecurrenceArgs'</em><em>]</em><em>]</em>) – Optional recurring schedule for this downtime</p></li>
 <li><p><strong>scopes</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – specify the group scope to which this downtime applies. For everything use ‘*’</p></li>
 <li><p><strong>start</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Specify when this downtime should start</p></li>
+<li><p><strong>start_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – String representing date and time to start the downtime in RFC3339 format.</p></li>
 <li><p><strong>timezone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The timezone for the downtime, default UTC</p></li>
 </ul>
 </dd>
@@ -1061,12 +1063,14 @@ properties used to qualify the lookup.</p>
 <li><p><strong>active</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When true indicates this downtime is being actively applied</p></li>
 <li><p><strong>disabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When true indicates this downtime is not being applied</p></li>
 <li><p><strong>end</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Optionally specify an end date when this downtime should expire</p></li>
+<li><p><strong>end_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – String representing date and time to end the downtime in RFC3339 format.</p></li>
 <li><p><strong>message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional message to provide when creating the downtime, can include notification handles</p></li>
 <li><p><strong>monitor_id</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – When specified, this downtime will only apply to this monitor</p></li>
 <li><p><strong>monitor_tags</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of monitor tags (up to 25), i.e. tags that are applied directly to monitors to which the downtime applies</p></li>
 <li><p><strong>recurrence</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'DowntimeRecurrenceArgs'</em><em>]</em><em>]</em>) – Optional recurring schedule for this downtime</p></li>
 <li><p><strong>scopes</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – specify the group scope to which this downtime applies. For everything use ‘*’</p></li>
 <li><p><strong>start</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Specify when this downtime should start</p></li>
+<li><p><strong>start_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – String representing date and time to start the downtime in RFC3339 format.</p></li>
 <li><p><strong>timezone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The timezone for the downtime, default UTC</p></li>
 </ul>
 </dd>
@@ -1089,6 +1093,12 @@ properties used to qualify the lookup.</p>
 <dt id="pulumi_datadog.Downtime.end">
 <em class="property">property </em><code class="sig-name descname">end</code><a class="headerlink" href="#pulumi_datadog.Downtime.end" title="Permalink to this definition">¶</a></dt>
 <dd><p>Optionally specify an end date when this downtime should expire</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.Downtime.end_date">
+<em class="property">property </em><code class="sig-name descname">end_date</code><a class="headerlink" href="#pulumi_datadog.Downtime.end_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>String representing date and time to end the downtime in RFC3339 format.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1125,6 +1135,12 @@ properties used to qualify the lookup.</p>
 <dt id="pulumi_datadog.Downtime.start">
 <em class="property">property </em><code class="sig-name descname">start</code><a class="headerlink" href="#pulumi_datadog.Downtime.start" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specify when this downtime should start</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.Downtime.start_date">
+<em class="property">property </em><code class="sig-name descname">start_date</code><a class="headerlink" href="#pulumi_datadog.Downtime.start_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>String representing date and time to start the downtime in RFC3339 format.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1295,6 +1311,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>azure</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'LogsArchiveAzureArgs'</em><em>]</em><em>]</em>) – Definition of an azure archive.</p></li>
+<li><p><strong>gcs</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'LogsArchiveGcsArgs'</em><em>]</em><em>]</em>) – Definition of a GCS archive.</p></li>
+<li><p><strong>include_tags</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – To store the tags in the archive, set the value <code class="docutils literal notranslate"><span class="pre">true</span></code>. If it is set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, the tags will be dropped when the logs
+are sent to the archive.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your archive name.</p></li>
+<li><p><strong>query</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The archive query/filter. Logs matching this query are included in the archive.</p></li>
+<li><p><strong>rehydration_tags</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – An array of tags to add to rehydrated logs from an archive.</p></li>
+<li><p><strong>s3</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'LogsArchiveS3Args'</em><em>]</em><em>]</em>) – Definition of an s3 archive.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1309,9 +1333,60 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>azure</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'LogsArchiveAzureArgs'</em><em>]</em><em>]</em>) – Definition of an azure archive.</p></li>
+<li><p><strong>gcs</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'LogsArchiveGcsArgs'</em><em>]</em><em>]</em>) – Definition of a GCS archive.</p></li>
+<li><p><strong>include_tags</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – To store the tags in the archive, set the value <code class="docutils literal notranslate"><span class="pre">true</span></code>. If it is set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, the tags will be dropped when the logs
+are sent to the archive.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your archive name.</p></li>
+<li><p><strong>query</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The archive query/filter. Logs matching this query are included in the archive.</p></li>
+<li><p><strong>rehydration_tags</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – An array of tags to add to rehydrated logs from an archive.</p></li>
+<li><p><strong>s3</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'LogsArchiveS3Args'</em><em>]</em><em>]</em>) – Definition of an s3 archive.</p></li>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.LogsArchive.azure">
+<em class="property">property </em><code class="sig-name descname">azure</code><a class="headerlink" href="#pulumi_datadog.LogsArchive.azure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Definition of an azure archive.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.LogsArchive.gcs">
+<em class="property">property </em><code class="sig-name descname">gcs</code><a class="headerlink" href="#pulumi_datadog.LogsArchive.gcs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Definition of a GCS archive.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.LogsArchive.include_tags">
+<em class="property">property </em><code class="sig-name descname">include_tags</code><a class="headerlink" href="#pulumi_datadog.LogsArchive.include_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>To store the tags in the archive, set the value <code class="docutils literal notranslate"><span class="pre">true</span></code>. If it is set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, the tags will be dropped when the logs
+are sent to the archive.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.LogsArchive.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_datadog.LogsArchive.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Your archive name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.LogsArchive.query">
+<em class="property">property </em><code class="sig-name descname">query</code><a class="headerlink" href="#pulumi_datadog.LogsArchive.query" title="Permalink to this definition">¶</a></dt>
+<dd><p>The archive query/filter. Logs matching this query are included in the archive.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.LogsArchive.rehydration_tags">
+<em class="property">property </em><code class="sig-name descname">rehydration_tags</code><a class="headerlink" href="#pulumi_datadog.LogsArchive.rehydration_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>An array of tags to add to rehydrated logs from an archive.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.LogsArchive.s3">
+<em class="property">property </em><code class="sig-name descname">s3</code><a class="headerlink" href="#pulumi_datadog.LogsArchive.s3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Definition of an s3 archive.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1374,6 +1449,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>archive_ids</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If
+<code class="docutils literal notranslate"><span class="pre">archive_ids</span></code> is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it
+will try to update the order.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1388,9 +1466,20 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>archive_ids</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If
+<code class="docutils literal notranslate"><span class="pre">archive_ids</span></code> is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it
+will try to update the order.</p></li>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.LogsArchiveOrder.archive_ids">
+<em class="property">property </em><code class="sig-name descname">archive_ids</code><a class="headerlink" href="#pulumi_datadog.LogsArchiveOrder.archive_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If
+<code class="docutils literal notranslate"><span class="pre">archive_ids</span></code> is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it
+will try to update the order.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1681,6 +1770,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>exclusion_filters</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'LogsIndexExclusionFilterArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – List of exclusion filters.</p></li>
+<li><p><strong>filters</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'LogsIndexFilterArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Logs filter</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the index.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1695,9 +1787,30 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>exclusion_filters</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'LogsIndexExclusionFilterArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – List of exclusion filters.</p></li>
+<li><p><strong>filters</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'LogsIndexFilterArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Logs filter</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the index.</p></li>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.LogsIndex.exclusion_filters">
+<em class="property">property </em><code class="sig-name descname">exclusion_filters</code><a class="headerlink" href="#pulumi_datadog.LogsIndex.exclusion_filters" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of exclusion filters.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.LogsIndex.filters">
+<em class="property">property </em><code class="sig-name descname">filters</code><a class="headerlink" href="#pulumi_datadog.LogsIndex.filters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logs filter</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.LogsIndex.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_datadog.LogsIndex.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the index.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1759,6 +1872,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>indexes</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – The index resource list. Logs are tested against the query filter of each index one by one following the order of the
+list.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique name of the index order resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1773,9 +1889,25 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>indexes</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – The index resource list. Logs are tested against the query filter of each index one by one following the order of the
+list.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique name of the index order resource.</p></li>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.LogsIndexOrder.indexes">
+<em class="property">property </em><code class="sig-name descname">indexes</code><a class="headerlink" href="#pulumi_datadog.LogsIndexOrder.indexes" title="Permalink to this definition">¶</a></dt>
+<dd><p>The index resource list. Logs are tested against the query filter of each index one by one following the order of the
+list.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.LogsIndexOrder.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_datadog.LogsIndexOrder.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unique name of the index order resource.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1835,6 +1967,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>is_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean value to enable your pipeline.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1849,9 +1982,16 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>is_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean value to enable your pipeline.</p></li>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.LogsIntegrationPipeline.is_enabled">
+<em class="property">property </em><code class="sig-name descname">is_enabled</code><a class="headerlink" href="#pulumi_datadog.LogsIntegrationPipeline.is_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean value to enable your pipeline.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1920,6 +2060,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The name attribute in the resource <code class="docutils literal notranslate"><span class="pre">datadog_logs_pipeline_order</span></code> needs to be unique. It’s recommended to use the same
+value as the resource name. No related field is available in <a class="reference external" href="https://docs.datadoghq.com/api/v1/logs-pipelines/#get-pipeline-order">Logs Pipeline
+API</a>.</p>
+</p></li>
+<li><p><strong>pipelines</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – The pipeline IDs list. The order of pipeline IDs in this attribute defines the overall pipeline order for logs.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1934,9 +2079,28 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The name attribute in the resource <code class="docutils literal notranslate"><span class="pre">datadog_logs_pipeline_order</span></code> needs to be unique. It’s recommended to use the same
+value as the resource name. No related field is available in <a class="reference external" href="https://docs.datadoghq.com/api/v1/logs-pipelines/#get-pipeline-order">Logs Pipeline
+API</a>.</p>
+</p></li>
+<li><p><strong>pipelines</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – The pipeline IDs list. The order of pipeline IDs in this attribute defines the overall pipeline order for logs.</p></li>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.LogsPipelineOrder.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_datadog.LogsPipelineOrder.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name attribute in the resource <code class="docutils literal notranslate"><span class="pre">datadog_logs_pipeline_order</span></code> needs to be unique. It’s recommended to use the same
+value as the resource name. No related field is available in <a class="reference external" href="https://docs.datadoghq.com/api/v1/logs-pipelines/#get-pipeline-order">Logs Pipeline
+API</a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.LogsPipelineOrder.pipelines">
+<em class="property">property </em><code class="sig-name descname">pipelines</code><a class="headerlink" href="#pulumi_datadog.LogsPipelineOrder.pipelines" title="Permalink to this definition">¶</a></dt>
+<dd><p>The pipeline IDs list. The order of pipeline IDs in this attribute defines the overall pipeline order for logs.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1998,6 +2162,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the metric.</p></li>
+<li><p><strong>metric</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the metric.</p></li>
+<li><p><strong>per_unit</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Per unit of the metric such as <code class="docutils literal notranslate"><span class="pre">second</span></code> in <code class="docutils literal notranslate"><span class="pre">bytes</span> <span class="pre">per</span> <span class="pre">second</span></code>.</p></li>
+<li><p><strong>short_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A short name of the metric.</p></li>
+<li><p><strong>statsd_interval</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – If applicable, statsd flush interval in seconds for the metric.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of the metric.</p></li>
+<li><p><strong>unit</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Primary unit of the metric such as <code class="docutils literal notranslate"><span class="pre">byte</span></code> or <code class="docutils literal notranslate"><span class="pre">operation</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -2012,9 +2183,58 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the metric.</p></li>
+<li><p><strong>metric</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the metric.</p></li>
+<li><p><strong>per_unit</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Per unit of the metric such as <code class="docutils literal notranslate"><span class="pre">second</span></code> in <code class="docutils literal notranslate"><span class="pre">bytes</span> <span class="pre">per</span> <span class="pre">second</span></code>.</p></li>
+<li><p><strong>short_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A short name of the metric.</p></li>
+<li><p><strong>statsd_interval</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – If applicable, statsd flush interval in seconds for the metric.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of the metric.</p></li>
+<li><p><strong>unit</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Primary unit of the metric such as <code class="docutils literal notranslate"><span class="pre">byte</span></code> or <code class="docutils literal notranslate"><span class="pre">operation</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.MetricMetadata.description">
+<em class="property">property </em><code class="sig-name descname">description</code><a class="headerlink" href="#pulumi_datadog.MetricMetadata.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A description of the metric.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.MetricMetadata.metric">
+<em class="property">property </em><code class="sig-name descname">metric</code><a class="headerlink" href="#pulumi_datadog.MetricMetadata.metric" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the metric.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.MetricMetadata.per_unit">
+<em class="property">property </em><code class="sig-name descname">per_unit</code><a class="headerlink" href="#pulumi_datadog.MetricMetadata.per_unit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Per unit of the metric such as <code class="docutils literal notranslate"><span class="pre">second</span></code> in <code class="docutils literal notranslate"><span class="pre">bytes</span> <span class="pre">per</span> <span class="pre">second</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.MetricMetadata.short_name">
+<em class="property">property </em><code class="sig-name descname">short_name</code><a class="headerlink" href="#pulumi_datadog.MetricMetadata.short_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A short name of the metric.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.MetricMetadata.statsd_interval">
+<em class="property">property </em><code class="sig-name descname">statsd_interval</code><a class="headerlink" href="#pulumi_datadog.MetricMetadata.statsd_interval" title="Permalink to this definition">¶</a></dt>
+<dd><p>If applicable, statsd flush interval in seconds for the metric.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.MetricMetadata.type">
+<em class="property">property </em><code class="sig-name descname">type</code><a class="headerlink" href="#pulumi_datadog.MetricMetadata.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type of the metric.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.MetricMetadata.unit">
+<em class="property">property </em><code class="sig-name descname">unit</code><a class="headerlink" href="#pulumi_datadog.MetricMetadata.unit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Primary unit of the metric such as <code class="docutils literal notranslate"><span class="pre">byte</span></code> or <code class="docutils literal notranslate"><span class="pre">operation</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2070,7 +2290,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">escalation_message</span><span class="o">=</span><span class="s2">&quot;Escalation message @pagerduty&quot;</span><span class="p">,</span>
     <span class="n">query</span><span class="o">=</span><span class="s2">&quot;avg(last_1h):avg:aws.ec2.cpu{environment:foo,host:foo} by </span><span class="si">{host}</span><span class="s2"> &gt; 4&quot;</span><span class="p">,</span>
     <span class="n">thresholds</span><span class="o">=</span><span class="n">datadog</span><span class="o">.</span><span class="n">MonitorThresholdsArgs</span><span class="p">(</span>
-        <span class="n">ok</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
         <span class="n">warning</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
         <span class="n">warning_recovery</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
         <span class="n">critical</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
@@ -2119,20 +2338,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>enable_logs_sample</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether or not to include a list of log values which triggered the alert. Defaults to false. This is only used by log monitors.</p></li>
+<li><p><strong>escalation_message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A message to include with a re-notification. Supports the <code class="docutils literal notranslate"><span class="pre">&#64;username</span></code> notification allowed elsewhere.</p></li>
 <li><p><strong>evaluation_delay</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Time (in seconds) to delay evaluation, as a non-negative integer.</p></li>
 <li><p><strong>force_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. SLO, composite monitor).</p></li>
 <li><p><strong>include_tags</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether notifications from this monitor automatically insert its triggering tags into the title. Defaults to true.</p></li>
 <li><p><strong>locked</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether changes to to this monitor should be restricted to the creator or admins. Defaults to False.</p></li>
+<li><p><strong>message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A message to include with notifications for this monitor. Email notifications can be sent to specific users by using the
+same <code class="docutils literal notranslate"><span class="pre">&#64;username</span></code> notation as events.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of Datadog monitor.</p></li>
 <li><p><strong>new_host_delay</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Time (in seconds) to allow a host to boot and</p></li>
 <li><p><strong>no_data_timeframe</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of minutes before a monitor will notify when data stops reporting. Provider defaults to 10 minutes.</p></li>
 <li><p><strong>notify_audit</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether tagged users will be notified on changes to this monitor.</p></li>
 <li><p><strong>notify_no_data</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether this monitor will notify when data stops reporting. Defaults</p></li>
+<li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Integer from 1 (high) to 5 (low) indicating alert severity.</p></li>
+<li><p><strong>query</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The monitor query to notify on. Note this is not the same query you see in the UI and the syntax is different depending
+on the monitor type, please see the <a class="reference external" href="https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor">API Reference</a> for
+details. Warning: <code class="docutils literal notranslate"><span class="pre">terraform</span> <span class="pre">plan</span></code> won’t perform any validation of the query contents.</p></li>
 <li><p><strong>renotify_interval</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of minutes after the last notification before a monitor will re-notify</p></li>
 <li><p><strong>require_full_window</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether this monitor needs a full window of data before it’s evaluated.</p></li>
-<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>silenced</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Each scope will be muted until the given POSIX timestamp or forever if the value is 0. Use <code class="docutils literal notranslate"><span class="pre">-1</span></code> if you want to unmute the scope. <strong>Deprecated</strong> The <code class="docutils literal notranslate"><span class="pre">silenced</span></code> parameter is being deprecated in favor of the downtime resource. This will be removed in the next major version of the provider Provider.</p></li>
+<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>silenced</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Each scope will be muted until the given POSIX timestamp or forever if the value is 0. Use <code class="docutils literal notranslate"><span class="pre">-1</span></code> if you want to unmute the scope. <strong>Deprecated</strong> The <code class="docutils literal notranslate"><span class="pre">silenced</span></code> parameter is being deprecated in favor of the downtime resource. This will be removed in the next major version of the provider.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of tags to associate with your monitor. This can help you categorize and filter monitors in the manage monitors page of the UI. Note: it’s not currently possible to filter by these tags when querying via the API</p></li>
 <li><p><strong>threshold_windows</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'MonitorThresholdWindowsArgs'</em><em>]</em><em>]</em>) – A mapping containing <code class="docutils literal notranslate"><span class="pre">recovery_window</span></code> and <code class="docutils literal notranslate"><span class="pre">trigger_window</span></code> values, e.g. <code class="docutils literal notranslate"><span class="pre">last_15m</span></code> . Can only be used for, and are required for, anomaly monitors.</p></li>
 <li><p><strong>timeout_h</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of hours of the monitor not reporting data before it will automatically resolve</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the monitor. The mapping from these types to the types found in the Datadog Web UI can be found in the
+Datadog API <a class="reference external" href="https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor">documentation page</a>. The available options
+are below. Note: The monitor type cannot be changed after a monitor is created.</p></li>
 <li><p><strong>validate</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to false, skip the validation call done during <code class="docutils literal notranslate"><span class="pre">plan</span></code> .</p></li>
 </ul>
 </dd>
@@ -2149,20 +2379,33 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>enable_logs_sample</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether or not to include a list of log values which triggered the alert. Defaults to false. This is only used by log monitors.</p></li>
+<li><p><strong>escalation_message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A message to include with a re-notification. Supports the <code class="docutils literal notranslate"><span class="pre">&#64;username</span></code> notification allowed elsewhere.</p></li>
 <li><p><strong>evaluation_delay</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Time (in seconds) to delay evaluation, as a non-negative integer.</p></li>
 <li><p><strong>force_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. SLO, composite monitor).</p></li>
 <li><p><strong>include_tags</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether notifications from this monitor automatically insert its triggering tags into the title. Defaults to true.</p></li>
 <li><p><strong>locked</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether changes to to this monitor should be restricted to the creator or admins. Defaults to False.</p></li>
+<li><p><strong>message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A message to include with notifications for this monitor. Email notifications can be sent to specific users by using the
+same <code class="docutils literal notranslate"><span class="pre">&#64;username</span></code> notation as events.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of Datadog monitor.</p></li>
 <li><p><strong>new_host_delay</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Time (in seconds) to allow a host to boot and</p></li>
 <li><p><strong>no_data_timeframe</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of minutes before a monitor will notify when data stops reporting. Provider defaults to 10 minutes.</p></li>
 <li><p><strong>notify_audit</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether tagged users will be notified on changes to this monitor.</p></li>
 <li><p><strong>notify_no_data</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether this monitor will notify when data stops reporting. Defaults</p></li>
+<li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Integer from 1 (high) to 5 (low) indicating alert severity.</p></li>
+<li><p><strong>query</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The monitor query to notify on. Note this is not the same query you see in the UI and the syntax is different depending
+on the monitor type, please see the <a class="reference external" href="https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor">API Reference</a> for
+details. Warning: <code class="docutils literal notranslate"><span class="pre">terraform</span> <span class="pre">plan</span></code> won’t perform any validation of the query contents.</p>
+</p></li>
 <li><p><strong>renotify_interval</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of minutes after the last notification before a monitor will re-notify</p></li>
 <li><p><strong>require_full_window</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether this monitor needs a full window of data before it’s evaluated.</p></li>
-<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>silenced</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Each scope will be muted until the given POSIX timestamp or forever if the value is 0. Use <code class="docutils literal notranslate"><span class="pre">-1</span></code> if you want to unmute the scope. <strong>Deprecated</strong> The <code class="docutils literal notranslate"><span class="pre">silenced</span></code> parameter is being deprecated in favor of the downtime resource. This will be removed in the next major version of the provider Provider.</p></li>
+<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>silenced</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Each scope will be muted until the given POSIX timestamp or forever if the value is 0. Use <code class="docutils literal notranslate"><span class="pre">-1</span></code> if you want to unmute the scope. <strong>Deprecated</strong> The <code class="docutils literal notranslate"><span class="pre">silenced</span></code> parameter is being deprecated in favor of the downtime resource. This will be removed in the next major version of the provider.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of tags to associate with your monitor. This can help you categorize and filter monitors in the manage monitors page of the UI. Note: it’s not currently possible to filter by these tags when querying via the API</p></li>
 <li><p><strong>threshold_windows</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'MonitorThresholdWindowsArgs'</em><em>]</em><em>]</em>) – A mapping containing <code class="docutils literal notranslate"><span class="pre">recovery_window</span></code> and <code class="docutils literal notranslate"><span class="pre">trigger_window</span></code> values, e.g. <code class="docutils literal notranslate"><span class="pre">last_15m</span></code> . Can only be used for, and are required for, anomaly monitors.</p></li>
 <li><p><strong>timeout_h</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of hours of the monitor not reporting data before it will automatically resolve</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The type of the monitor. The mapping from these types to the types found in the Datadog Web UI can be found in the
+Datadog API <a class="reference external" href="https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor">documentation page</a>. The available options
+are below. Note: The monitor type cannot be changed after a monitor is created.</p>
+</p></li>
 <li><p><strong>validate</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to false, skip the validation call done during <code class="docutils literal notranslate"><span class="pre">plan</span></code> .</p></li>
 </ul>
 </dd>
@@ -2173,6 +2416,12 @@ properties used to qualify the lookup.</p>
 <dt id="pulumi_datadog.Monitor.enable_logs_sample">
 <em class="property">property </em><code class="sig-name descname">enable_logs_sample</code><a class="headerlink" href="#pulumi_datadog.Monitor.enable_logs_sample" title="Permalink to this definition">¶</a></dt>
 <dd><p>A boolean indicating whether or not to include a list of log values which triggered the alert. Defaults to false. This is only used by log monitors.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.Monitor.escalation_message">
+<em class="property">property </em><code class="sig-name descname">escalation_message</code><a class="headerlink" href="#pulumi_datadog.Monitor.escalation_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>A message to include with a re-notification. Supports the <code class="docutils literal notranslate"><span class="pre">&#64;username</span></code> notification allowed elsewhere.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2200,6 +2449,19 @@ properties used to qualify the lookup.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt id="pulumi_datadog.Monitor.message">
+<em class="property">property </em><code class="sig-name descname">message</code><a class="headerlink" href="#pulumi_datadog.Monitor.message" title="Permalink to this definition">¶</a></dt>
+<dd><p>A message to include with notifications for this monitor. Email notifications can be sent to specific users by using the
+same <code class="docutils literal notranslate"><span class="pre">&#64;username</span></code> notation as events.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.Monitor.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_datadog.Monitor.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of Datadog monitor.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pulumi_datadog.Monitor.new_host_delay">
 <em class="property">property </em><code class="sig-name descname">new_host_delay</code><a class="headerlink" href="#pulumi_datadog.Monitor.new_host_delay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Time (in seconds) to allow a host to boot and</p>
@@ -2224,6 +2486,20 @@ properties used to qualify the lookup.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt id="pulumi_datadog.Monitor.priority">
+<em class="property">property </em><code class="sig-name descname">priority</code><a class="headerlink" href="#pulumi_datadog.Monitor.priority" title="Permalink to this definition">¶</a></dt>
+<dd><p>Integer from 1 (high) to 5 (low) indicating alert severity.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.Monitor.query">
+<em class="property">property </em><code class="sig-name descname">query</code><a class="headerlink" href="#pulumi_datadog.Monitor.query" title="Permalink to this definition">¶</a></dt>
+<dd><p>The monitor query to notify on. Note this is not the same query you see in the UI and the syntax is different depending
+on the monitor type, please see the <a class="reference external" href="https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor">API Reference</a> for
+details. Warning: <code class="docutils literal notranslate"><span class="pre">terraform</span> <span class="pre">plan</span></code> won’t perform any validation of the query contents.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pulumi_datadog.Monitor.renotify_interval">
 <em class="property">property </em><code class="sig-name descname">renotify_interval</code><a class="headerlink" href="#pulumi_datadog.Monitor.renotify_interval" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of minutes after the last notification before a monitor will re-notify</p>
@@ -2238,7 +2514,7 @@ properties used to qualify the lookup.</p>
 <dl class="py method">
 <dt id="pulumi_datadog.Monitor.silenced">
 <em class="property">property </em><code class="sig-name descname">silenced</code><a class="headerlink" href="#pulumi_datadog.Monitor.silenced" title="Permalink to this definition">¶</a></dt>
-<dd><p>Each scope will be muted until the given POSIX timestamp or forever if the value is 0. Use <code class="docutils literal notranslate"><span class="pre">-1</span></code> if you want to unmute the scope. <strong>Deprecated</strong> The <code class="docutils literal notranslate"><span class="pre">silenced</span></code> parameter is being deprecated in favor of the downtime resource. This will be removed in the next major version of the provider Provider.</p>
+<dd><p>Each scope will be muted until the given POSIX timestamp or forever if the value is 0. Use <code class="docutils literal notranslate"><span class="pre">-1</span></code> if you want to unmute the scope. <strong>Deprecated</strong> The <code class="docutils literal notranslate"><span class="pre">silenced</span></code> parameter is being deprecated in favor of the downtime resource. This will be removed in the next major version of the provider.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2257,6 +2533,14 @@ properties used to qualify the lookup.</p>
 <dt id="pulumi_datadog.Monitor.timeout_h">
 <em class="property">property </em><code class="sig-name descname">timeout_h</code><a class="headerlink" href="#pulumi_datadog.Monitor.timeout_h" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of hours of the monitor not reporting data before it will automatically resolve</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.Monitor.type">
+<em class="property">property </em><code class="sig-name descname">type</code><a class="headerlink" href="#pulumi_datadog.Monitor.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of the monitor. The mapping from these types to the types found in the Datadog Web UI can be found in the
+Datadog API <a class="reference external" href="https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor">documentation page</a>. The available options
+are below. Note: The monitor type cannot be changed after a monitor is created.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2315,6 +2599,13 @@ construction to achieve fine-grained programmatic control over provider settings
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>api_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Required unless validate is false) Datadog API key. This can also be set via the DD_API_KEY environment variable.</p></li>
+<li><p><strong>api_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API Url. This can be also be set via the DD_HOST environment variable. Note that this URL must not end with the
+/api/ path. For example, <a class="reference external" href="https://api.datadoghq.com/">https://api.datadoghq.com/</a> is a correct value, while <a class="reference external" href="https://api.datadoghq.com/api/">https://api.datadoghq.com/api/</a> is not. And
+if you’re working with “EU” version of Datadog, use <a class="reference external" href="https://api.datadoghq.eu/">https://api.datadoghq.eu/</a>.</p></li>
+<li><p><strong>app_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Required unless validate is false) Datadog APP key. This can also be set via the DD_APP_KEY environment variable.</p></li>
+<li><p><strong>validate</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables validation of the provided API and APP keys during provider initialization. Default is true. When false, api_key
+and app_keywon’t be checked.</p></li>
 </ul>
 </dd>
 </dl>
@@ -2869,6 +3160,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>height</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Height of the screenboard</p></li>
+<li><p><strong>read_only</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The read-only status of the screenboard. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>shared</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the screenboard is shared or not</p></li>
 <li><p><strong>template_variables</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ScreenBoardTemplateVariableArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A list of template variables for using Dashboard templating.</p></li>
 <li><p><strong>title</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the screenboard</p></li>
@@ -2889,6 +3181,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>height</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Height of the screenboard</p></li>
+<li><p><strong>read_only</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The read-only status of the screenboard. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>shared</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the screenboard is shared or not</p></li>
 <li><p><strong>template_variables</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ScreenBoardTemplateVariableArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A list of template variables for using Dashboard templating.</p></li>
 <li><p><strong>title</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the screenboard</p></li>
@@ -2903,6 +3196,12 @@ properties used to qualify the lookup.</p>
 <dt id="pulumi_datadog.ScreenBoard.height">
 <em class="property">property </em><code class="sig-name descname">height</code><a class="headerlink" href="#pulumi_datadog.ScreenBoard.height" title="Permalink to this definition">¶</a></dt>
 <dd><p>Height of the screenboard</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.ScreenBoard.read_only">
+<em class="property">property </em><code class="sig-name descname">read_only</code><a class="headerlink" href="#pulumi_datadog.ScreenBoard.read_only" title="Permalink to this definition">¶</a></dt>
+<dd><p>The read-only status of the screenboard. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3212,6 +3511,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of this service level objective.</p></li>
 <li><p><strong>force_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. dashboards).</p></li>
 </ul>
 </dd>
@@ -3224,8 +3524,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>groups</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A static set of groups to filter monitor-based SLOs</p></li>
 <li><p><strong>monitor_ids</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>int</em><em>]</em><em>]</em><em>]</em>) – A static set of monitor IDs to use as part of the SLO</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of Datadog service level objective</p></li>
 <li><p><strong>query</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceLevelObjectiveQueryArgs'</em><em>]</em><em>]</em>) – The metric query of good / total events</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of tags to associate with your service level objective. This can help you categorize and filter service level objectives in the service level objectives page of the UI. Note: it’s not currently possible to filter by these tags when querying via the API</p></li>
+<li><p><strong>thresholds</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceLevelObjectiveThresholdArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A list of thresholds and targets that define the service level objectives from the provided SLIs.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be
+found in the Datadog API <a class="reference external" href="https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object">documentation
+page</a>. Available options to choose from
+are: <code class="docutils literal notranslate"><span class="pre">metric</span></code> and <code class="docutils literal notranslate"><span class="pre">monitor</span></code>.</p>
+</p></li>
+<li><p><strong>validate</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not to validate the SLO.</p></li>
 </ul>
 </dd>
 </dl>
@@ -3240,6 +3548,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of this service level objective.</p></li>
 <li><p><strong>force_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. dashboards).</p></li>
 </ul>
 </dd>
@@ -3252,11 +3561,25 @@ properties used to qualify the lookup.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>groups</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A static set of groups to filter monitor-based SLOs</p></li>
 <li><p><strong>monitor_ids</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>int</em><em>]</em><em>]</em><em>]</em>) – A static set of monitor IDs to use as part of the SLO</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of Datadog service level objective</p></li>
 <li><p><strong>query</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceLevelObjectiveQueryArgs'</em><em>]</em><em>]</em>) – The metric query of good / total events</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of tags to associate with your service level objective. This can help you categorize and filter service level objectives in the service level objectives page of the UI. Note: it’s not currently possible to filter by these tags when querying via the API</p></li>
+<li><p><strong>thresholds</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceLevelObjectiveThresholdArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A list of thresholds and targets that define the service level objectives from the provided SLIs.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be
+found in the Datadog API <a class="reference external" href="https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object">documentation
+page</a>. Available options to choose from
+are: <code class="docutils literal notranslate"><span class="pre">metric</span></code> and <code class="docutils literal notranslate"><span class="pre">monitor</span></code>.</p>
+</p></li>
+<li><p><strong>validate</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not to validate the SLO.</p></li>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.ServiceLevelObjective.description">
+<em class="property">property </em><code class="sig-name descname">description</code><a class="headerlink" href="#pulumi_datadog.ServiceLevelObjective.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A description of this service level objective.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3281,6 +3604,12 @@ properties used to qualify the lookup.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt id="pulumi_datadog.ServiceLevelObjective.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_datadog.ServiceLevelObjective.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of Datadog service level objective</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pulumi_datadog.ServiceLevelObjective.query">
 <em class="property">property </em><code class="sig-name descname">query</code><a class="headerlink" href="#pulumi_datadog.ServiceLevelObjective.query" title="Permalink to this definition">¶</a></dt>
 <dd><p>The metric query of good / total events</p>
@@ -3290,6 +3619,27 @@ properties used to qualify the lookup.</p>
 <dt id="pulumi_datadog.ServiceLevelObjective.tags">
 <em class="property">property </em><code class="sig-name descname">tags</code><a class="headerlink" href="#pulumi_datadog.ServiceLevelObjective.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of tags to associate with your service level objective. This can help you categorize and filter service level objectives in the service level objectives page of the UI. Note: it’s not currently possible to filter by these tags when querying via the API</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.ServiceLevelObjective.thresholds">
+<em class="property">property </em><code class="sig-name descname">thresholds</code><a class="headerlink" href="#pulumi_datadog.ServiceLevelObjective.thresholds" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of thresholds and targets that define the service level objectives from the provided SLIs.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.ServiceLevelObjective.type">
+<em class="property">property </em><code class="sig-name descname">type</code><a class="headerlink" href="#pulumi_datadog.ServiceLevelObjective.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be
+found in the Datadog API <a class="reference external" href="https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object">documentation
+page</a>. Available options to choose from
+are: <code class="docutils literal notranslate"><span class="pre">metric</span></code> and <code class="docutils literal notranslate"><span class="pre">monitor</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.ServiceLevelObjective.validate">
+<em class="property">property </em><code class="sig-name descname">validate</code><a class="headerlink" href="#pulumi_datadog.ServiceLevelObjective.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether or not to validate the SLO.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3356,6 +3706,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the global variable.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Synthetics global variable name.</p></li>
+<li><p><strong>secure</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Sets the variable as secure. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of tags to associate with your synthetics global variable.</p></li>
+<li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value of the global variable.</p></li>
 </ul>
 </dd>
 </dl>
@@ -3370,9 +3725,44 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the global variable.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Synthetics global variable name.</p></li>
+<li><p><strong>secure</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Sets the variable as secure. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of tags to associate with your synthetics global variable.</p></li>
+<li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value of the global variable.</p></li>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.SyntheticsGlobalVariable.description">
+<em class="property">property </em><code class="sig-name descname">description</code><a class="headerlink" href="#pulumi_datadog.SyntheticsGlobalVariable.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Description of the global variable.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.SyntheticsGlobalVariable.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_datadog.SyntheticsGlobalVariable.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Synthetics global variable name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.SyntheticsGlobalVariable.secure">
+<em class="property">property </em><code class="sig-name descname">secure</code><a class="headerlink" href="#pulumi_datadog.SyntheticsGlobalVariable.secure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the variable as secure. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.SyntheticsGlobalVariable.tags">
+<em class="property">property </em><code class="sig-name descname">tags</code><a class="headerlink" href="#pulumi_datadog.SyntheticsGlobalVariable.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of tags to associate with your synthetics global variable.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.SyntheticsGlobalVariable.value">
+<em class="property">property </em><code class="sig-name descname">value</code><a class="headerlink" href="#pulumi_datadog.SyntheticsGlobalVariable.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value of the global variable.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3438,6 +3828,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the private location.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Synthetics private location name.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of tags to associate with your synthetics private location.</p></li>
 </ul>
 </dd>
 </dl>
@@ -3452,9 +3845,39 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>config</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Configuration skeleton for the private location. See installation instructions of the private location on how to use
+this configuration.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the private location.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Synthetics private location name.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of tags to associate with your synthetics private location.</p></li>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.SyntheticsPrivateLocation.config">
+<em class="property">property </em><code class="sig-name descname">config</code><a class="headerlink" href="#pulumi_datadog.SyntheticsPrivateLocation.config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration skeleton for the private location. See installation instructions of the private location on how to use
+this configuration.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.SyntheticsPrivateLocation.description">
+<em class="property">property </em><code class="sig-name descname">description</code><a class="headerlink" href="#pulumi_datadog.SyntheticsPrivateLocation.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Description of the private location.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.SyntheticsPrivateLocation.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_datadog.SyntheticsPrivateLocation.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Synthetics private location name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.SyntheticsPrivateLocation.tags">
+<em class="property">property </em><code class="sig-name descname">tags</code><a class="headerlink" href="#pulumi_datadog.SyntheticsPrivateLocation.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of tags to associate with your synthetics private location.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3497,7 +3920,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_datadog.SyntheticsTest">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.</code><code class="sig-name descname">SyntheticsTest</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">assertions</span><span class="p">:</span> <span class="n">Union[Sequence[Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T]]], Awaitable[Sequence[Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">device_ids</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">locations</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="p">:</span> <span class="n">Union[SyntheticsTestOptionsArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestOptionsArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options_list</span><span class="p">:</span> <span class="n">Union[SyntheticsTestOptionsListArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestOptionsListArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request</span><span class="p">:</span> <span class="n">Union[SyntheticsTestRequestArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestRequestArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_basicauth</span><span class="p">:</span> <span class="n">Union[SyntheticsTestRequestBasicauthArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestRequestBasicauthArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_client_certificate</span><span class="p">:</span> <span class="n">Union[SyntheticsTestRequestClientCertificateArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestRequestClientCertificateArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_headers</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_query</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">steps</span><span class="p">:</span> <span class="n">Union[Sequence[Union[SyntheticsTestStepArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestStepArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[SyntheticsTestStepArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestStepArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subtype</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">variables</span><span class="p">:</span> <span class="n">Union[Sequence[Union[SyntheticsTestVariableArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestVariableArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[SyntheticsTestVariableArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestVariableArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.SyntheticsTest" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.</code><code class="sig-name descname">SyntheticsTest</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">assertions</span><span class="p">:</span> <span class="n">Union[Sequence[Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T]]], Awaitable[Sequence[Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_variables</span><span class="p">:</span> <span class="n">Union[Sequence[Union[SyntheticsTestBrowserVariableArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestBrowserVariableArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[SyntheticsTestBrowserVariableArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestBrowserVariableArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config_variables</span><span class="p">:</span> <span class="n">Union[Sequence[Union[SyntheticsTestConfigVariableArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestConfigVariableArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[SyntheticsTestConfigVariableArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestConfigVariableArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">device_ids</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">locations</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="p">:</span> <span class="n">Union[SyntheticsTestOptionsArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestOptionsArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options_list</span><span class="p">:</span> <span class="n">Union[SyntheticsTestOptionsListArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestOptionsListArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request</span><span class="p">:</span> <span class="n">Union[SyntheticsTestRequestArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestRequestArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_basicauth</span><span class="p">:</span> <span class="n">Union[SyntheticsTestRequestBasicauthArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestRequestBasicauthArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_client_certificate</span><span class="p">:</span> <span class="n">Union[SyntheticsTestRequestClientCertificateArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestRequestClientCertificateArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_headers</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_query</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">steps</span><span class="p">:</span> <span class="n">Union[Sequence[Union[SyntheticsTestStepArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestStepArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[SyntheticsTestStepArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestStepArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subtype</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">variables</span><span class="p">:</span> <span class="n">Union[Sequence[Union[SyntheticsTestVariableArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestVariableArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[SyntheticsTestVariableArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestVariableArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.SyntheticsTest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Datadog synthetics test resource. This can be used to create and manage Datadog synthetics test.</p>
 <p>Create a new Datadog Synthetics API/HTTP test on <a class="reference external" href="https://www.example.org">https://www.example.org</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
@@ -3660,20 +4083,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
             <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;datadoghq&quot;</span><span class="p">,</span>
         <span class="p">}),</span>
     <span class="p">)],</span>
-    <span class="n">variables</span><span class="o">=</span><span class="p">[</span>
-        <span class="n">datadog</span><span class="o">.</span><span class="n">SyntheticsTestVariableArgs</span><span class="p">(</span>
+    <span class="n">browser_variables</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">datadog</span><span class="o">.</span><span class="n">SyntheticsTestBrowserVariableArgs</span><span class="p">(</span>
             <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span><span class="p">,</span>
             <span class="n">name</span><span class="o">=</span><span class="s2">&quot;MY_PATTERN_VAR&quot;</span><span class="p">,</span>
             <span class="n">pattern</span><span class="o">=</span><span class="s2">&quot;{{numeric(3)}}&quot;</span><span class="p">,</span>
             <span class="n">example</span><span class="o">=</span><span class="s2">&quot;597&quot;</span><span class="p">,</span>
         <span class="p">),</span>
-        <span class="n">datadog</span><span class="o">.</span><span class="n">SyntheticsTestVariableArgs</span><span class="p">(</span>
+        <span class="n">datadog</span><span class="o">.</span><span class="n">SyntheticsTestBrowserVariableArgs</span><span class="p">(</span>
             <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;email&quot;</span><span class="p">,</span>
             <span class="n">name</span><span class="o">=</span><span class="s2">&quot;MY_EMAIL_VAR&quot;</span><span class="p">,</span>
             <span class="n">pattern</span><span class="o">=</span><span class="s2">&quot;jd8-afe-ydv.{{ numeric(10) }}@synthetics.dtdg.co&quot;</span><span class="p">,</span>
             <span class="n">example</span><span class="o">=</span><span class="s2">&quot;jd8-afe-ydv.4546132139@synthetics.dtdg.co&quot;</span><span class="p">,</span>
         <span class="p">),</span>
-        <span class="n">datadog</span><span class="o">.</span><span class="n">SyntheticsTestVariableArgs</span><span class="p">(</span>
+        <span class="n">datadog</span><span class="o">.</span><span class="n">SyntheticsTestBrowserVariableArgs</span><span class="p">(</span>
             <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;global&quot;</span><span class="p">,</span>
             <span class="n">name</span><span class="o">=</span><span class="s2">&quot;MY_GLOBAL_VAR&quot;</span><span class="p">,</span>
             <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;76636cd1-82e2-4aeb-9cfe-51366a8198a2&quot;</span><span class="p">,</span>
@@ -3713,7 +4136,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">{</span>
         <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;lessThan&quot;</span><span class="p">,</span>
         <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;1000&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;responsTime&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;responseTime&quot;</span><span class="p">,</span>
     <span class="p">},</span>
 <span class="p">])</span>
 </pre></div>
@@ -3727,12 +4150,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>Any</strong><strong>]</strong><strong>]</strong><strong>]</strong><strong>] </strong><strong>assertions</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – List of assertions.</p></li>
+<li><p><strong>browser_variables</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'SyntheticsTestBrowserVariableArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Variables used for a browser test steps. Multiple <code class="docutils literal notranslate"><span class="pre">variable</span></code> blocks are allowed with the structure below.</p></li>
+<li><p><strong>config_variables</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'SyntheticsTestConfigVariableArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Variables used for the test configuration. Multiple <code class="docutils literal notranslate"><span class="pre">config_variable</span></code> blocks are allowed with the structure below.</p></li>
+<li><p><strong>device_ids</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – Array with the different device IDs used to run the test. Allowed enum values: <code class="docutils literal notranslate"><span class="pre">laptop_large</span></code>, <code class="docutils literal notranslate"><span class="pre">tablet</span></code>, <code class="docutils literal notranslate"><span class="pre">mobile_small</span></code>
+(only available for <code class="docutils literal notranslate"><span class="pre">browser</span></code> tests).</p></li>
+<li><p><strong>locations</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – Array of locations used to run the test. Refer to <a class="reference external" href="https://docs.datadoghq.com/synthetics/api_test/#request">Datadog
+documentation</a> for available locations (e.g.
+<code class="docutils literal notranslate"><span class="pre">aws:eu-central-1</span></code>).</p></li>
+<li><p><strong>message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A message to include with notifications for this synthetics test. Email notifications can be sent to specific users by
+using the same <code class="docutils literal notranslate"><span class="pre">&#64;username</span></code> notation as events.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of Datadog synthetics test.</p></li>
+<li><p><strong>request</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'SyntheticsTestRequestArgs'</em><em>]</em><em>]</em>) – The synthetics test request. Required if <code class="docutils literal notranslate"><span class="pre">type</span> <span class="pre">=</span> <span class="pre">&quot;api&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">subtype</span> <span class="pre">=</span> <span class="pre">&quot;http&quot;</span></code>.</p></li>
+<li><p><strong>request_basicauth</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'SyntheticsTestRequestBasicauthArgs'</em><em>]</em><em>]</em>) – The HTTP basic authentication credentials. Exactly one nested block is allowed with the structure below.</p></li>
+<li><p><strong>request_client_certificate</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'SyntheticsTestRequestClientCertificateArgs'</em><em>]</em><em>]</em>) – Client certificate to use when performing the test request. Exactly one nested block is allowed with the structure
+below.</p></li>
+<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>request_headers</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Header name and value map.</p></li>
+<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>request_query</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Query arguments name and value map.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Define whether you want to start (<code class="docutils literal notranslate"><span class="pre">live</span></code>) or pause (<code class="docutils literal notranslate"><span class="pre">paused</span></code>) a Synthetic test. Allowed enum values: <code class="docutils literal notranslate"><span class="pre">live</span></code>, <code class="docutils literal notranslate"><span class="pre">paused</span></code></p></li>
+<li><p><strong>steps</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'SyntheticsTestStepArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Steps for browser tests.</p></li>
+<li><p><strong>subtype</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – When <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">api</span></code>, choose from <code class="docutils literal notranslate"><span class="pre">http</span></code>, <code class="docutils literal notranslate"><span class="pre">ssl</span></code>, <code class="docutils literal notranslate"><span class="pre">tcp</span></code> or <code class="docutils literal notranslate"><span class="pre">dns</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">http</span></code>.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of tags to associate with your synthetics test. This can help you categorize and filter tests in the manage
+synthetics page of the UI. Default is an empty list (<code class="docutils literal notranslate"><span class="pre">[]</span></code>).</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Synthetics test type (<code class="docutils literal notranslate"><span class="pre">api</span></code> or <code class="docutils literal notranslate"><span class="pre">browser</span></code>).</p></li>
+<li><p><strong>variables</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'SyntheticsTestVariableArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Variables used for a browser test steps. Multiple <code class="docutils literal notranslate"><span class="pre">browser_variable</span></code> blocks are allowed with the structure below.</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="py method">
 <dt id="pulumi_datadog.SyntheticsTest.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">assertions</span><span class="p">:</span> <span class="n">Union[Sequence[Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T]]], Awaitable[Sequence[Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">device_ids</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">locations</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitor_id</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="p">:</span> <span class="n">Union[SyntheticsTestOptionsArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestOptionsArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options_list</span><span class="p">:</span> <span class="n">Union[SyntheticsTestOptionsListArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestOptionsListArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request</span><span class="p">:</span> <span class="n">Union[SyntheticsTestRequestArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestRequestArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_basicauth</span><span class="p">:</span> <span class="n">Union[SyntheticsTestRequestBasicauthArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestRequestBasicauthArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_client_certificate</span><span class="p">:</span> <span class="n">Union[SyntheticsTestRequestClientCertificateArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestRequestClientCertificateArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_headers</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_query</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">steps</span><span class="p">:</span> <span class="n">Union[Sequence[Union[SyntheticsTestStepArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestStepArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[SyntheticsTestStepArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestStepArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subtype</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">variables</span><span class="p">:</span> <span class="n">Union[Sequence[Union[SyntheticsTestVariableArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestVariableArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[SyntheticsTestVariableArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestVariableArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_datadog.synthetics_test.SyntheticsTest<a class="headerlink" href="#pulumi_datadog.SyntheticsTest.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">assertions</span><span class="p">:</span> <span class="n">Union[Sequence[Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T]]], Awaitable[Sequence[Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_variables</span><span class="p">:</span> <span class="n">Union[Sequence[Union[SyntheticsTestBrowserVariableArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestBrowserVariableArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[SyntheticsTestBrowserVariableArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestBrowserVariableArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config_variables</span><span class="p">:</span> <span class="n">Union[Sequence[Union[SyntheticsTestConfigVariableArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestConfigVariableArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[SyntheticsTestConfigVariableArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestConfigVariableArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">device_ids</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">locations</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitor_id</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="p">:</span> <span class="n">Union[SyntheticsTestOptionsArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestOptionsArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options_list</span><span class="p">:</span> <span class="n">Union[SyntheticsTestOptionsListArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestOptionsListArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request</span><span class="p">:</span> <span class="n">Union[SyntheticsTestRequestArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestRequestArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_basicauth</span><span class="p">:</span> <span class="n">Union[SyntheticsTestRequestBasicauthArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestRequestBasicauthArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_client_certificate</span><span class="p">:</span> <span class="n">Union[SyntheticsTestRequestClientCertificateArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestRequestClientCertificateArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_headers</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_query</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">steps</span><span class="p">:</span> <span class="n">Union[Sequence[Union[SyntheticsTestStepArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestStepArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[SyntheticsTestStepArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestStepArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subtype</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">variables</span><span class="p">:</span> <span class="n">Union[Sequence[Union[SyntheticsTestVariableArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestVariableArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[SyntheticsTestVariableArgs, Mapping[str, Any], Awaitable[Union[SyntheticsTestVariableArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_datadog.synthetics_test.SyntheticsTest<a class="headerlink" href="#pulumi_datadog.SyntheticsTest.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SyntheticsTest resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -3741,9 +4188,155 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>Any</strong><strong>]</strong><strong>]</strong><strong>]</strong><strong>] </strong><strong>assertions</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – List of assertions.</p></li>
+<li><p><strong>browser_variables</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'SyntheticsTestBrowserVariableArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Variables used for a browser test steps. Multiple <code class="docutils literal notranslate"><span class="pre">variable</span></code> blocks are allowed with the structure below.</p></li>
+<li><p><strong>config_variables</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'SyntheticsTestConfigVariableArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Variables used for the test configuration. Multiple <code class="docutils literal notranslate"><span class="pre">config_variable</span></code> blocks are allowed with the structure below.</p></li>
+<li><p><strong>device_ids</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – Array with the different device IDs used to run the test. Allowed enum values: <code class="docutils literal notranslate"><span class="pre">laptop_large</span></code>, <code class="docutils literal notranslate"><span class="pre">tablet</span></code>, <code class="docutils literal notranslate"><span class="pre">mobile_small</span></code>
+(only available for <code class="docutils literal notranslate"><span class="pre">browser</span></code> tests).</p></li>
+<li><p><strong>locations</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – <p>Array of locations used to run the test. Refer to <a class="reference external" href="https://docs.datadoghq.com/synthetics/api_test/#request">Datadog
+documentation</a> for available locations (e.g.
+<code class="docutils literal notranslate"><span class="pre">aws:eu-central-1</span></code>).</p>
+</p></li>
+<li><p><strong>message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A message to include with notifications for this synthetics test. Email notifications can be sent to specific users by
+using the same <code class="docutils literal notranslate"><span class="pre">&#64;username</span></code> notation as events.</p></li>
+<li><p><strong>monitor_id</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – ID of the monitor associated with the Datadog synthetics test.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of Datadog synthetics test.</p></li>
+<li><p><strong>request</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'SyntheticsTestRequestArgs'</em><em>]</em><em>]</em>) – The synthetics test request. Required if <code class="docutils literal notranslate"><span class="pre">type</span> <span class="pre">=</span> <span class="pre">&quot;api&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">subtype</span> <span class="pre">=</span> <span class="pre">&quot;http&quot;</span></code>.</p></li>
+<li><p><strong>request_basicauth</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'SyntheticsTestRequestBasicauthArgs'</em><em>]</em><em>]</em>) – The HTTP basic authentication credentials. Exactly one nested block is allowed with the structure below.</p></li>
+<li><p><strong>request_client_certificate</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'SyntheticsTestRequestClientCertificateArgs'</em><em>]</em><em>]</em>) – Client certificate to use when performing the test request. Exactly one nested block is allowed with the structure
+below.</p></li>
+<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>request_headers</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Header name and value map.</p></li>
+<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>request_query</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Query arguments name and value map.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Define whether you want to start (<code class="docutils literal notranslate"><span class="pre">live</span></code>) or pause (<code class="docutils literal notranslate"><span class="pre">paused</span></code>) a Synthetic test. Allowed enum values: <code class="docutils literal notranslate"><span class="pre">live</span></code>, <code class="docutils literal notranslate"><span class="pre">paused</span></code></p></li>
+<li><p><strong>steps</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'SyntheticsTestStepArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Steps for browser tests.</p></li>
+<li><p><strong>subtype</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – When <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">api</span></code>, choose from <code class="docutils literal notranslate"><span class="pre">http</span></code>, <code class="docutils literal notranslate"><span class="pre">ssl</span></code>, <code class="docutils literal notranslate"><span class="pre">tcp</span></code> or <code class="docutils literal notranslate"><span class="pre">dns</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">http</span></code>.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of tags to associate with your synthetics test. This can help you categorize and filter tests in the manage
+synthetics page of the UI. Default is an empty list (<code class="docutils literal notranslate"><span class="pre">[]</span></code>).</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Synthetics test type (<code class="docutils literal notranslate"><span class="pre">api</span></code> or <code class="docutils literal notranslate"><span class="pre">browser</span></code>).</p></li>
+<li><p><strong>variables</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'SyntheticsTestVariableArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Variables used for a browser test steps. Multiple <code class="docutils literal notranslate"><span class="pre">browser_variable</span></code> blocks are allowed with the structure below.</p></li>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.SyntheticsTest.assertions">
+<em class="property">property </em><code class="sig-name descname">assertions</code><a class="headerlink" href="#pulumi_datadog.SyntheticsTest.assertions" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of assertions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.SyntheticsTest.browser_variables">
+<em class="property">property </em><code class="sig-name descname">browser_variables</code><a class="headerlink" href="#pulumi_datadog.SyntheticsTest.browser_variables" title="Permalink to this definition">¶</a></dt>
+<dd><p>Variables used for a browser test steps. Multiple <code class="docutils literal notranslate"><span class="pre">variable</span></code> blocks are allowed with the structure below.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.SyntheticsTest.config_variables">
+<em class="property">property </em><code class="sig-name descname">config_variables</code><a class="headerlink" href="#pulumi_datadog.SyntheticsTest.config_variables" title="Permalink to this definition">¶</a></dt>
+<dd><p>Variables used for the test configuration. Multiple <code class="docutils literal notranslate"><span class="pre">config_variable</span></code> blocks are allowed with the structure below.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.SyntheticsTest.device_ids">
+<em class="property">property </em><code class="sig-name descname">device_ids</code><a class="headerlink" href="#pulumi_datadog.SyntheticsTest.device_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Array with the different device IDs used to run the test. Allowed enum values: <code class="docutils literal notranslate"><span class="pre">laptop_large</span></code>, <code class="docutils literal notranslate"><span class="pre">tablet</span></code>, <code class="docutils literal notranslate"><span class="pre">mobile_small</span></code>
+(only available for <code class="docutils literal notranslate"><span class="pre">browser</span></code> tests).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.SyntheticsTest.locations">
+<em class="property">property </em><code class="sig-name descname">locations</code><a class="headerlink" href="#pulumi_datadog.SyntheticsTest.locations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Array of locations used to run the test. Refer to <a class="reference external" href="https://docs.datadoghq.com/synthetics/api_test/#request">Datadog
+documentation</a> for available locations (e.g.
+<code class="docutils literal notranslate"><span class="pre">aws:eu-central-1</span></code>).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.SyntheticsTest.message">
+<em class="property">property </em><code class="sig-name descname">message</code><a class="headerlink" href="#pulumi_datadog.SyntheticsTest.message" title="Permalink to this definition">¶</a></dt>
+<dd><p>A message to include with notifications for this synthetics test. Email notifications can be sent to specific users by
+using the same <code class="docutils literal notranslate"><span class="pre">&#64;username</span></code> notation as events.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.SyntheticsTest.monitor_id">
+<em class="property">property </em><code class="sig-name descname">monitor_id</code><a class="headerlink" href="#pulumi_datadog.SyntheticsTest.monitor_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>ID of the monitor associated with the Datadog synthetics test.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.SyntheticsTest.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_datadog.SyntheticsTest.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of Datadog synthetics test.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.SyntheticsTest.request">
+<em class="property">property </em><code class="sig-name descname">request</code><a class="headerlink" href="#pulumi_datadog.SyntheticsTest.request" title="Permalink to this definition">¶</a></dt>
+<dd><p>The synthetics test request. Required if <code class="docutils literal notranslate"><span class="pre">type</span> <span class="pre">=</span> <span class="pre">&quot;api&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">subtype</span> <span class="pre">=</span> <span class="pre">&quot;http&quot;</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.SyntheticsTest.request_basicauth">
+<em class="property">property </em><code class="sig-name descname">request_basicauth</code><a class="headerlink" href="#pulumi_datadog.SyntheticsTest.request_basicauth" title="Permalink to this definition">¶</a></dt>
+<dd><p>The HTTP basic authentication credentials. Exactly one nested block is allowed with the structure below.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.SyntheticsTest.request_client_certificate">
+<em class="property">property </em><code class="sig-name descname">request_client_certificate</code><a class="headerlink" href="#pulumi_datadog.SyntheticsTest.request_client_certificate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Client certificate to use when performing the test request. Exactly one nested block is allowed with the structure
+below.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.SyntheticsTest.request_headers">
+<em class="property">property </em><code class="sig-name descname">request_headers</code><a class="headerlink" href="#pulumi_datadog.SyntheticsTest.request_headers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Header name and value map.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.SyntheticsTest.request_query">
+<em class="property">property </em><code class="sig-name descname">request_query</code><a class="headerlink" href="#pulumi_datadog.SyntheticsTest.request_query" title="Permalink to this definition">¶</a></dt>
+<dd><p>Query arguments name and value map.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.SyntheticsTest.status">
+<em class="property">property </em><code class="sig-name descname">status</code><a class="headerlink" href="#pulumi_datadog.SyntheticsTest.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define whether you want to start (<code class="docutils literal notranslate"><span class="pre">live</span></code>) or pause (<code class="docutils literal notranslate"><span class="pre">paused</span></code>) a Synthetic test. Allowed enum values: <code class="docutils literal notranslate"><span class="pre">live</span></code>, <code class="docutils literal notranslate"><span class="pre">paused</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.SyntheticsTest.steps">
+<em class="property">property </em><code class="sig-name descname">steps</code><a class="headerlink" href="#pulumi_datadog.SyntheticsTest.steps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Steps for browser tests.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.SyntheticsTest.subtype">
+<em class="property">property </em><code class="sig-name descname">subtype</code><a class="headerlink" href="#pulumi_datadog.SyntheticsTest.subtype" title="Permalink to this definition">¶</a></dt>
+<dd><p>When <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">api</span></code>, choose from <code class="docutils literal notranslate"><span class="pre">http</span></code>, <code class="docutils literal notranslate"><span class="pre">ssl</span></code>, <code class="docutils literal notranslate"><span class="pre">tcp</span></code> or <code class="docutils literal notranslate"><span class="pre">dns</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">http</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.SyntheticsTest.tags">
+<em class="property">property </em><code class="sig-name descname">tags</code><a class="headerlink" href="#pulumi_datadog.SyntheticsTest.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of tags to associate with your synthetics test. This can help you categorize and filter tests in the manage
+synthetics page of the UI. Default is an empty list (<code class="docutils literal notranslate"><span class="pre">[]</span></code>).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.SyntheticsTest.type">
+<em class="property">property </em><code class="sig-name descname">type</code><a class="headerlink" href="#pulumi_datadog.SyntheticsTest.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Synthetics test type (<code class="docutils literal notranslate"><span class="pre">api</span></code> or <code class="docutils literal notranslate"><span class="pre">browser</span></code>).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.SyntheticsTest.variables">
+<em class="property">property </em><code class="sig-name descname">variables</code><a class="headerlink" href="#pulumi_datadog.SyntheticsTest.variables" title="Permalink to this definition">¶</a></dt>
+<dd><p>Variables used for a browser test steps. Multiple <code class="docutils literal notranslate"><span class="pre">browser_variable</span></code> blocks are allowed with the structure below.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3798,6 +4391,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the dashboard’s content.</p></li>
 <li><p><strong>graphs</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'TimeBoardGraphArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A list of graph definitions.</p></li>
+<li><p><strong>read_only</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The read-only status of the timeboard. Default is false.</p></li>
 <li><p><strong>template_variables</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'TimeBoardTemplateVariableArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A list of template variables for using Dashboard templating.</p></li>
 <li><p><strong>title</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the dashboard.</p></li>
 </ul>
@@ -3816,6 +4410,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the dashboard’s content.</p></li>
 <li><p><strong>graphs</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'TimeBoardGraphArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A list of graph definitions.</p></li>
+<li><p><strong>read_only</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The read-only status of the timeboard. Default is false.</p></li>
 <li><p><strong>template_variables</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'TimeBoardTemplateVariableArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A list of template variables for using Dashboard templating.</p></li>
 <li><p><strong>title</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the dashboard.</p></li>
 </ul>
@@ -3833,6 +4428,12 @@ properties used to qualify the lookup.</p>
 <dt id="pulumi_datadog.TimeBoard.graphs">
 <em class="property">property </em><code class="sig-name descname">graphs</code><a class="headerlink" href="#pulumi_datadog.TimeBoard.graphs" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of graph definitions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.TimeBoard.read_only">
+<em class="property">property </em><code class="sig-name descname">read_only</code><a class="headerlink" href="#pulumi_datadog.TimeBoard.read_only" title="Permalink to this definition">¶</a></dt>
+<dd><p>The read-only status of the timeboard. Default is false.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3887,7 +4488,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_datadog.User">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.</code><code class="sig-name descname">User</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_role</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">handle</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_admin</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">roles</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.User" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.</code><code class="sig-name descname">User</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_role</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">handle</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_admin</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">roles</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">send_user_invitation</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.User" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Datadog user resource. This can be used to create and manage Datadog users.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_datadog</span> <span class="k">as</span> <span class="nn">datadog</span>
@@ -3908,12 +4509,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Role description for user. Can be <code class="docutils literal notranslate"><span class="pre">st</span></code> (standard user), <code class="docutils literal notranslate"><span class="pre">adm</span></code> (admin user) or <code class="docutils literal notranslate"><span class="pre">ro</span></code> (read-only user). Default is <code class="docutils literal notranslate"><span class="pre">st</span></code>.
+<code class="docutils literal notranslate"><span class="pre">access_role</span></code> is ignored for new users created with this resource. New users have to use the <code class="docutils literal notranslate"><span class="pre">roles</span></code> attribute.</p></li>
+<li><p><strong>disabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the user is disabled.</p></li>
+<li><p><strong>email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Email address for user.</p></li>
+<li><p><strong>handle</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user handle, must be a valid email.</p></li>
+<li><p><strong>is_admin</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the user is an administrator. Warning: the corresponding query parameter is ignored by the Datadog API, thus the
+argument would always trigger an execution plan.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name for user.</p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Role description for user. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument
+would always trigger an execution plan.</p></li>
+<li><p><strong>roles</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list a role IDs to assign to the user.</p></li>
+<li><p><strong>send_user_invitation</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether an invitation email should be sent when the user is created.</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="py method">
 <dt id="pulumi_datadog.User.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_role</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">handle</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_admin</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">roles</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">verified</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_datadog.user.User<a class="headerlink" href="#pulumi_datadog.User.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_role</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">handle</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_admin</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">roles</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">send_user_invitation</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_invitation_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">verified</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_datadog.user.User<a class="headerlink" href="#pulumi_datadog.User.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing User resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -3922,9 +4535,92 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Role description for user. Can be <code class="docutils literal notranslate"><span class="pre">st</span></code> (standard user), <code class="docutils literal notranslate"><span class="pre">adm</span></code> (admin user) or <code class="docutils literal notranslate"><span class="pre">ro</span></code> (read-only user). Default is <code class="docutils literal notranslate"><span class="pre">st</span></code>.
+<code class="docutils literal notranslate"><span class="pre">access_role</span></code> is ignored for new users created with this resource. New users have to use the <code class="docutils literal notranslate"><span class="pre">roles</span></code> attribute.</p></li>
+<li><p><strong>disabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the user is disabled.</p></li>
+<li><p><strong>email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Email address for user.</p></li>
+<li><p><strong>handle</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user handle, must be a valid email.</p></li>
+<li><p><strong>is_admin</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the user is an administrator. Warning: the corresponding query parameter is ignored by the Datadog API, thus the
+argument would always trigger an execution plan.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name for user.</p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Role description for user. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument
+would always trigger an execution plan.</p></li>
+<li><p><strong>roles</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list a role IDs to assign to the user.</p></li>
+<li><p><strong>send_user_invitation</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether an invitation email should be sent when the user is created.</p></li>
+<li><p><strong>user_invitation_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the user invitation that was sent when creating the user.</p></li>
+<li><p><strong>verified</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Returns true if Datadog user is verified.</p></li>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.User.access_role">
+<em class="property">property </em><code class="sig-name descname">access_role</code><a class="headerlink" href="#pulumi_datadog.User.access_role" title="Permalink to this definition">¶</a></dt>
+<dd><p>Role description for user. Can be <code class="docutils literal notranslate"><span class="pre">st</span></code> (standard user), <code class="docutils literal notranslate"><span class="pre">adm</span></code> (admin user) or <code class="docutils literal notranslate"><span class="pre">ro</span></code> (read-only user). Default is <code class="docutils literal notranslate"><span class="pre">st</span></code>.
+<code class="docutils literal notranslate"><span class="pre">access_role</span></code> is ignored for new users created with this resource. New users have to use the <code class="docutils literal notranslate"><span class="pre">roles</span></code> attribute.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.User.disabled">
+<em class="property">property </em><code class="sig-name descname">disabled</code><a class="headerlink" href="#pulumi_datadog.User.disabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the user is disabled.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.User.email">
+<em class="property">property </em><code class="sig-name descname">email</code><a class="headerlink" href="#pulumi_datadog.User.email" title="Permalink to this definition">¶</a></dt>
+<dd><p>Email address for user.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.User.handle">
+<em class="property">property </em><code class="sig-name descname">handle</code><a class="headerlink" href="#pulumi_datadog.User.handle" title="Permalink to this definition">¶</a></dt>
+<dd><p>The user handle, must be a valid email.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.User.is_admin">
+<em class="property">property </em><code class="sig-name descname">is_admin</code><a class="headerlink" href="#pulumi_datadog.User.is_admin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the user is an administrator. Warning: the corresponding query parameter is ignored by the Datadog API, thus the
+argument would always trigger an execution plan.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.User.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_datadog.User.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name for user.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.User.role">
+<em class="property">property </em><code class="sig-name descname">role</code><a class="headerlink" href="#pulumi_datadog.User.role" title="Permalink to this definition">¶</a></dt>
+<dd><p>Role description for user. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument
+would always trigger an execution plan.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.User.roles">
+<em class="property">property </em><code class="sig-name descname">roles</code><a class="headerlink" href="#pulumi_datadog.User.roles" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list a role IDs to assign to the user.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.User.send_user_invitation">
+<em class="property">property </em><code class="sig-name descname">send_user_invitation</code><a class="headerlink" href="#pulumi_datadog.User.send_user_invitation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether an invitation email should be sent when the user is created.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.User.user_invitation_id">
+<em class="property">property </em><code class="sig-name descname">user_invitation_id</code><a class="headerlink" href="#pulumi_datadog.User.user_invitation_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the user invitation that was sent when creating the user.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.User.verified">
+<em class="property">property </em><code class="sig-name descname">verified</code><a class="headerlink" href="#pulumi_datadog.User.verified" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if Datadog user is verified.</p>
 </dd></dl>
 
 <dl class="py method">
