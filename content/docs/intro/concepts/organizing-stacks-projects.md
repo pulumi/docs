@@ -4,12 +4,12 @@ meta_desc: An overview of best practices when organization and structuring cloud
 menu:
   intro:
     parent: concepts
-    weight: 5
+    weight: 9
 
 aliases: ["/docs/reference/organizing-stacks-projects/"]
 ---
 
-[Projects]({{< relref "project" >}}) and [stacks]({{< relref "stack" >}}) are intentionally flexible so that they can accommodate
+[Projects]({{< relref "/docs/intro/concepts/project" >}}) and [stacks]({{< relref "/docs/intro/concepts/stack" >}}) are intentionally flexible so that they can accommodate
 diverse needs across a spectrum of team, application, and infrastructure scenarios. This is very much like how Git
 repos work and, much like Git repos, there are varying approaches to organizing your code within them. That said,
 there are some clear best practices that, when followed, will ensure Pulumi works seamlessly for your situation. This
@@ -84,167 +84,6 @@ Even with this alternative breakdown, it's likely your stack structure will mirr
 each project, you are apt to have multiple environments such as production, staging, testing, etc. And, indeed,
 you may have inter-dependencies between your stacks -- something that Pulumi supports in a first-class manner.
 
-## Inter-Stack Dependencies {#inter-stack-dependencies}
-
-Let's imagine that Acmecorp decides to define its cluster infrastructure in one project and consume it from another.
-Perhaps one project, `infra`, defines the Kubernetes cluster and another, `services`, deploys
-services into it. Let's further imagine we are doing this across three distinct environments, production, staging,
-and testing. In that case, we'll have six distinct stacks, that pair up together:
-
-* `acmecorp/infra/production` provides the cluster used by `acmecorp/services/production`
-* `acmecorp/infra/staging` provides the cluster used by `acmecorp/services/staging`
-* `acmecorp/infra/testing` provides the cluster used by `acmecorp/services/testing`
-
-The way Pulumi programs communicate information for external consumption is by using stack exports. For example,
-our infrastructure stack might export the Kubernetes configuration information needed to deploy into a cluster:
-
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
-
-{{% choosable language javascript %}}
-
-```javascript
-exports.kubeConfig = ... a cluster's output property ...;
-```
-
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
-```typescript
-export const kubeConfig = ... a cluster's output property ...;
-```
-
-{{% /choosable %}}
-{{% choosable language python %}}
-
-```python
-pulumi.export("kubeConfig", ... a cluster's output property ...)
-```
-
-{{% /choosable %}}
-{{% choosable language go %}}
-
-```go
-ctx.Export("kubeConfig", /*...a cluster's output property...*/)
-```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
-
-```csharp
-class ClusterStack : Stack
-{
-    [Output] public Output<string> KubeConfig { get; set; }
-
-    public ClusterStack()
-    {
-        // ... a cluster is created ...
-
-        this.KubeConfig = ... a cluster's output property ...
-    }
-}
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
-The challenge here is that our services project needs to ingest this output during deployment so that it can
-connect to the Kubernetes cluster provisioned in its respective environment.
-
-The Pulumi programming model offers a way to do this with its `StackReference` resource type. For example:
-
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
-
-{{% choosable language javascript %}}
-
-```javascript
-const k8s = require("@pulumi/kubernetes");
-const pulumi = require("@pulumi/pulumi");
-const env = pulumi.getStack();
-const infra = new pulumi.StackReference(`acmecorp/infra/${env}`);
-const provider = new k8s.Provider("k8s", { kubeconfig: infra.getOutput("kubeConfig") });
-const service = new k8s.core.v1.Service(..., { provider: provider });
-```
-
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
-```typescript
-import * as k8s from "@pulumi/kubernetes";
-import * as pulumi from "@pulumi/pulumi";
-const env = pulumi.getStack();
-const infra = new pulumi.StackReference(`acmecorp/infra/${env}`);
-const provider = new k8s.Provider("k8s", { kubeconfig: infra.getOutput("kubeConfig") });
-const service = new k8s.core.v1.Service(..., { provider: provider });
-```
-
-{{% /choosable %}}
-{{% choosable language python %}}
-
-```python
-from pulumi import get_stack, ResourceOptions, StackReference
-from pulumi_kubernetes import Provider, core
-
-env = get_stack()
-infra = StackReference(f"acmecorp/infra/{env}")
-provider = Provider("k8s", kubeconfig=infra.get_output("kubeConfig"))
-service = core.v1.Service(..., ResourceOptions(provider=provider))
-```
-
-{{% /choosable %}}
-{{% choosable language go %}}
-
-```go
-import (
-  "fmt"
-
-  "github.com/pulumi/pulumi/sdk/go/pulumi"
-)
-
-func main() {
-  pulumi.Run(func(ctx *pulumi.Context) error {
-    slug := fmt.Sprintf("acmecorp/infra/%v", ctx.Stack())
-    stackRef, err := pulumi.NewStackReference(ctx, slug, nil)
-
-    kubeConfig := stackRef.GetOutput(pulumi.String("kubeConfig"))
-    // ...
-    return nil
-  }
-}
-```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
-
-```csharp
-using Pulumi;
-using Pulumi.Kubernetes.Core.V1;
-
-class AppStack : Stack
-{
-    public AppStack()
-    {
-        var cluster = new StackReference($"acmecorp/infra/{Deployment.Instance.StackName}");
-        var kubeConfig = cluster.RequireOutput("KubeConfig").Apply(v => v.ToString());
-        var provider = new Provider("k8s", new ProviderArgs { KubeConfig = kubeConfig });
-        var options = new ComponentResourceOptions { Provider = provider };
-        var service = new Service(..., ..., options);
-    }
-}
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
-The `StackReference` constructor takes as input a string of the form `<organization>/<project>/<stack>`, and lets
-you access the outputs of that stack.
-
-In the above example, we construct a stack reference to a specific stack in this project which has the same name
-as our current stack (i.e. when deploying the "staging" stack of the above program, we reference the "staging" stack)
-from the infra project. Once we have that resource, we can fetch the `kubeConfig` output variable with the `getOutput`
-function.  From that point onwards, Pulumi understands the inter-stack dependency for scenarios like cascading updates.
-
 ## Aligning to Git Repos
 
 Because Pulumi is a natural choice for enabling GitOps-style continuous deployment, many users opt to align their
@@ -262,10 +101,8 @@ its associated Pulumi stack. Read more about
 
 ## Tagging Stacks
 
-Stacks have associated metadata in the form of name/value tags. You can assign custom tags to stacks (when logged into the [Pulumi Service backend]({{< relref "state" >}})) to customize how stacks are listed in the [Pulumi Console](https://app.pulumi.com). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom `environment` tag to each stack, assigning a value of `production` to each production stack, `staging` to each staging stack, etc. Then in the Pulumi Console, you'll be able to group stacks by `Tag: environment`. Read more about [how to manage stack tags]({{< relref "stack#stack-tags" >}}).
+Stacks have associated metadata in the form of name/value tags. You can assign custom tags to stacks (when logged into the [Pulumi Service backend]({{< relref "/docs/intro/concepts/state" >}})) to customize how stacks are listed in the [Pulumi Console](https://app.pulumi.com). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom `environment` tag to each stack, assigning a value of `production` to each production stack, `staging` to each staging stack, etc. Then in the Pulumi Console, you'll be able to group stacks by `Tag: environment`. For more information, see [Stack tags]({{< relref "/docs/intro/concepts/stack#stack-tags" >}}).
 
 ## Examples
 
-See also the use of multiple projects and stacks in [Crosswalk for Kubernetes]({{< relref "/docs/guides/crosswalk/kubernetes" >}}), which contains a tutorial, reference architecture, and collection of prod-first code
-examples that demonstrate industry best-practices for **using Kubernetes** in contexts where an
-**organization of people** must ship **production applications.**
+See also the use of multiple projects and stacks in [Crosswalk for Kubernetes]({{< relref "/docs/guides/crosswalk/kubernetes" >}}), which contains a tutorial, reference architecture, and collection of prod-first code examples that demonstrate industry best-practices for **using Kubernetes** in contexts where an **organization of people** must ship **production applications.**

@@ -508,7 +508,7 @@ a preview, when all of these different states are possible. That has the downsid
 catching problems before they get deployed, however. As with many things, this is a tradeoff.
 
 For a more complete overview of `Output<T>`, please see the
-[Pulumi Programming Model documentation]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}).
+[Pulumi Programming Model documentation]({{< relref "/docs/intro/concepts/inputs-outputs" >}}).
 
 ## Next Steps
 

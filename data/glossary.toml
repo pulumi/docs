@@ -1,7 +1,7 @@
 [[entries]]
 term = "Component"
 description = "A Pulumi component is a logical group of resources that contains other components and physical cloud resources."
-link = "/docs/intro/concepts/programming-model#components"
+link = "/docs/intro/concepts/resources#components"
 
 [[entries]]
 term = "Stack"
@@ -11,7 +11,7 @@ link = "/docs/intro/concepts/stack"
 [[entries]]
 term = "Program"
 description = "Pulumi programs are authored in general-purpose programming languages such as JavaScript or Python. You can use any packages supported by the language’s package manager, as well as Pulumi packages."
-link = "/docs/intro/concepts/programming-model#programs"
+link = "/docs/intro/concepts#programmingmodel"
 
 [[entries]]
 term = "Deployment Engine"
@@ -76,17 +76,17 @@ link = "https://en.wikipedia.org/wiki/Software_development_kit"
 [[entries]]
 term = "Resources"
 description = "All resources have a name, which must be unique in the Pulumi program."
-link = "/docs/intro/concepts/programming-model#resources"
+link = "/docs/intro/concepts/resources"
 
 [[entries]]
 term = "Resource Args"
 description = "The args provided to a resource determine what inputs will be used to initialize the resource. These can be either raw values or outputs from other resources."
-link = "/docs/intro/concepts/programming-model#resources"
+link = "/docs/intro/concepts/resources"
 
 [[entries]]
 term = "Outputs"
 description = "Outputs are a key part of how Pulumi tracks dependencies between resources. Because the values of Outputs are not available until resources are created, these are represented using the special Output type."
-link = "/docs/intro/concepts/programming-model#outputs"
+link = "/docs/intro/concepts/inputs-outputs"
 
 [[entries]]
 term = "Secrets"
@@ -96,32 +96,32 @@ link = "/docs/intro/concepts/config"
 [[entries]]
 term = "Stack Output"
 description = "A stack output is a value exported from a stack. A stack’s outputs can be easily retrieved from the Pulumi CLI and are displayed on pulumi.com."
-link = "/docs/intro/concepts/programming-model#stack-outputs"
+link = "/docs/intro/concepts/stack#outputs"
 
 [[entries]]
 term = "Stack Reference"
 description = "Stack references provide a way to access the outputs of one stack from another stack."
-link = "/docs/intro/concepts/programming-model#stack-references"
+link = "/docs/intro/concepts/stack#stack-references"
 
 [[entries]]
 term = "Config"
 description = "Configuration values are always stored as strings, but can be parsed as richly typed values. You may set and get configuration values via the CLI or by using the Config object."
-link = "/docs/intro/concepts/programming-model#config"
+link = "/docs/intro/concepts/config"
 
 [[entries]]
 term = "Dynamic Providers"
 description = "Dynamic Providers are a flexible and low-level mechanism to plug arbitrary code directly into the deployment process. It is currently in preview."
-link = "/docs/intro/concepts/programming-model#dynamic-providers"
+link = "/docs/intro/concepts/resources#dynamic-providers"
 
 [[entries]]
 term = "Packages"
 description = "Pulumi packages are normal NPM or Python packages. They transitively depend on @pulumi/pulumi which defines how resources created by a Pulumi program will be communicated to the Pulumi engine. The ability to register resources with the Pulumi engine is the only difference between a Pulumi package and any other NPM package."
-link = "/docs/intro/concepts/programming-model#packages"
+link = "/docs/reference/pkg"
 
 [[entries]]
 term = "Runtime Code"
 description = "You can create libraries and components that allow the caller to pass in JavaScript callbacks to invoke at runtime."
-link = "/docs/intro/concepts/programming-model#runtime"
+link = "/docs/intro/concepts/runtime-functions"
 
 [[entries]]
 term = "SAML"

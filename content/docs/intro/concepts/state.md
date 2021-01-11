@@ -8,7 +8,7 @@ keywords:
 menu:
   intro:
     parent: concepts
-    weight: 6
+    weight: 5
 
 aliases: ["/docs/reference/state/"]
 ---
@@ -261,7 +261,7 @@ State is stored in your target backend in the form of checkpoints. In the case o
 
 A Pulumi "secret" can be used to store sensitive configuration values like database passwords and cloud tokens, and will always be handled safely. Pulumi understands the transitive usage of that secret in your state and will ensure everything it touches is encrypted, no matter which backend you've chosen.
 
-A secret can be created one of two ways: passing `--secret` to the `pulumi config set` command, or by [creating one programmatically]({{< relref "/docs/intro/concepts/programming-model#secrets" >}}). In both cases, the value is encrypted using your stack's chosen encryption provider. By default with the Pulumi Service, a server-side HMS key is used, but you may customize the encryption provider if you'd like more control over keys, rotation, and so on.
+A secret can be created one of two ways: passing `--secret` to the `pulumi config set` command, or by [creating one programmatically]({{< relref "/docs/intro/concepts/secrets#secrets" >}}). In both cases, the value is encrypted using your stack's chosen encryption provider. By default with the Pulumi Service, a server-side HMS key is used, but you may customize the encryption provider if you'd like more control over keys, rotation, and so on.
 
 To learn more about available encryption providers and how to customize your stack's, see [Configuring Secrets Encryption]({{< relref "config/#configuring-secrets-encryption" >}}).
 

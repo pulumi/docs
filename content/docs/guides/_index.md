@@ -52,7 +52,7 @@ Pulumi’s approach to infrastructure as code is great for continuous delivery, 
                 <a class="btn btn-secondary" href="{{< relref "crosswalk/aws" >}}">View More</a>
             </p>
     </div>
-    <div class="w-1/2 border-solid border-t-2 border-gray-200">
+    <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
         <a href="{{< relref "crosswalk/kubernetes" >}}"><img class="h-auto w-32 center pt-6" src="/images/docs/reference/crosswalk/kubernetes/crosswalk-for-k8s.svg" alt="Pulumi Crosswalk for Kubernetes"></a>
         <p>
         <p>

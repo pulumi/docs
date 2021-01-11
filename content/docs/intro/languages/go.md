@@ -54,4 +54,4 @@ This `go` template is cloud agnostic, and you will need to install additional Go
 
 ## Pulumi Programming Model
 
-The Pulumi programming model includes a core concept of `Input` and `Output` values, which are used to track how outputs of one resource flow in as inputs to another resource.  This concept is important to understand when getting started with Go and Pulumi, and the [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) documentation is recommended to get a feel for how to work with this core part of Pulumi in common cases.
+The Pulumi programming model includes a core concept of `Input` and `Output` values, which are used to track how outputs of one resource flow in as inputs to another resource.  This concept is important to understand when getting started with Go and Pulumi, and the [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) documentation is recommended to get a feel for how to work with this core part of Pulumi in common cases.

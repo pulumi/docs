@@ -1,11 +1,11 @@
 ---
-title: "How Pulumi Works"
+title: "How Pulumi Deploys Infrastructure"
 meta_desc: This page provides an overview of how Pulumi works and interacts with different
            Cloud Providers.
 menu:
   intro:
     parent: concepts
-    weight: 7
+    weight: 6
 
 aliases: ["/docs/reference/how/"]
 ---
@@ -120,7 +120,7 @@ stack mystack
    - aws.s3.Bucket "content-bucket125ce"
 ```
 
-Note the extra suffixes on the end of these bucket names. This is due to a process called [auto-naming]({{< relref "/docs/intro/concepts/programming-model#autonaming" >}}), which Pulumi uses by default in order to allow you to deploy multiple copies of your infrastructure without creating name collisions for resources. This behavior can be disabled if desired.
+Note the extra suffixes on the end of these bucket names. This is due to a process called [auto-naming]({{< relref "/docs/intro/concepts/resources#autonaming" >}}), which Pulumi uses by default in order to allow you to deploy multiple copies of your infrastructure without creating name collisions for resources. This behavior can be disabled if desired.
 
 Now, let's make a change to one of resources and run `pulumi up` again.  Since Pulumi operates on a desired state model, it will use the last deployed state to compute the minimal set of changes needed to update your deployed infrastructure. For example, imagine that we wanted to make the S3 `media-bucket` publicly readable.  We change our program to express this new desired state:
 
@@ -268,6 +268,6 @@ This time, the engine will not need to make any changes to `media-bucket` since 
 
 ## Creation and Deletion Order
 
-Pulumi executes resource operations in parallel whenever possible, but understands that some resources may have dependencies on other resources.  If an [output]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) of one resource is provided as an input to another, the engine records the dependency between these two resources as part of the state and uses these when scheduling operations.  This list can also be augmented by using the [dependsOn]({{< relref "/docs/intro/concepts/programming-model#dependson" >}}) resource option.
+Pulumi executes resource operations in parallel whenever possible, but understands that some resources may have dependencies on other resources.  If an [output]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) of one resource is provided as an input to another, the engine records the dependency between these two resources as part of the state and uses these when scheduling operations.  This list can also be augmented by using the [dependsOn]({{< relref "/docs/intro/concepts/resources#dependson" >}}) resource option.
 
-By default, if a resource must be replaced, Pulumi will attempt to create a new copy of the resource before destroying the old one. This is helpful because it allows updates to infrastructure to happen without downtime. This behavior can be controlled by the [deleteBeforeReplace]({{< relref "/docs/intro/concepts/programming-model#deletebeforereplace" >}}) option. If you have disabled [auto-naming]({{< relref "/docs/intro/concepts/programming-model#autonaming" >}}) by providing a specific name for a resource, it will be treated as if it was marked as `deleteBeforeReplace` automatically (otherwise the create operation for the new version would fail since the name is in use).
+By default, if a resource must be replaced, Pulumi will attempt to create a new copy of the resource before destroying the old one. This is helpful because it allows updates to infrastructure to happen without downtime. This behavior can be controlled by the [deleteBeforeReplace]({{< relref "/docs/intro/concepts/resources#deletebeforereplace" >}}) option. If you have disabled [auto-naming]({{< relref "/docs/intro/concepts/resources#autonaming" >}}) by providing a specific name for a resource, it will be treated as if it was marked as `deleteBeforeReplace` automatically (otherwise the create operation for the new version would fail since the name is in use).

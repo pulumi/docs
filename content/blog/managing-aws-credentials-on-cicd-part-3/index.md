@@ -290,7 +290,7 @@ is safe to check into your source tree, since it cannot be copied/decrypted for 
 Pulumi keeps track of your cloud resources in a something called a [checkpoint file]({{< ref "/docs/intro/concepts/state" >}}),
 and that too might contain sensitive information. For example, a Pulumi resource might have a `"password"` output property.
 
-Pulumi [has support]({{< ref "/docs/intro/concepts/programming-model#additionalsecretoutputs" >}}) to mark that resource
+Pulumi [has support]({{< ref "/docs/intro/concepts/resources#additionalsecretoutputs" >}}) to mark that resource
 output as "secret" and make sure that it is encrypted within the checkpoint file. (So if you were to look at the checkpoint file
 contents via [`pulumi stack export`]({{< ref "/docs/reference/cli/pulumi_stack_export" >}}), you would not be able to recover
 the data.

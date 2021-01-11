@@ -5,7 +5,7 @@ meta_desc: This page provides an overview of the different Cloud Providers suppo
 menu:
   intro:
     identifier: cloud-providers
-    weight: 4
+    weight: 6
 
 aliases: ["/docs/reference/clouds/"]
 ---

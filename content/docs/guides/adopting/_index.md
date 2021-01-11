@@ -43,7 +43,7 @@ Let's say you already have infrastructure provisioned by an existing tool, such 
 
 In these cases, new infrastructure can coexist with old infrastructure in two ways, letting you keep your existing infrastructure as-is while building new infrastructure under Pulumi's management. The following techniques can be used:
 
-* [**Resource Getters**]({{< relref "/docs/intro/concepts/programming-model#resource-get" >}}) available on every resource let you read all the details for a resource from the cloud provider based just on its ID.
+* [**Resource Getters**]({{< relref "/docs/intro/concepts/resources#resource-get" >}}) available on every resource let you read all the details for a resource from the cloud provider based just on its ID.
 
 * [**Stack References**]({{< relref "/docs/intro/concepts/organizing-stacks-projects#inter-stack-dependencies" >}}) let you reference outputs of another Pulumi stack for use as inputs to a stack, which is very useful for [organizing projects and stacks]({{< relref "/docs/intro/concepts/organizing-stacks-projects" >}}).
 
@@ -57,7 +57,7 @@ Pulumi can adopt existing infrastructure so that, going forward, it is under the
 
 In the above coexistence scenarios, Pulumi simply _reads_ your existing infrastructure, but won't assume control of managing it. As such, Pulumi will never modify or delete infrastructure that is still managed outside of Pulumi. In the case of importing infrastructure, on the other hand, that won't be true. After the import process, all resources are entirely managed by Pulumi.
 
-Furthermore, Pulumi doesn't care where the infrastructure originally came from. You could have manually provisioned it in your cloud's console UI, from the CLI, using Terraform, your cloud's built-in templating mechanism, and so on. In all cases, after the import process, you'll be left with a working Pulumi program, and all subequent infrastructure updates can be made with Pulumi. You can then retire the old way of managing your infrastructure. This works even if you've lost the original scripts or templates that created the infrastructure.
+Furthermore, Pulumi doesn't care where the infrastructure originally came from. You could have manually provisioned it in your cloud's console UI, from the CLI, using Terraform, your cloud's built-in templating mechanism, and so on. In all cases, after the import process, you'll be left with a working Pulumi program, and all subsequent infrastructure updates can be made with Pulumi. You can then retire the old way of managing your infrastructure. This works even if you've lost the original scripts or templates that created the infrastructure.
 
 To learn more about how to import resources in this manner, please [refer to this guide on resource adoption]({{< relref "import" >}}).
 

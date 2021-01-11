@@ -23,7 +23,7 @@ infrastructure the same way it would for your application code.
 Pulumi can easily integrate into any continuous integration/continuous deliver (CI/CD) system. If your CI/CD system isn't listed below or you are testing something new, see our guide for using Pulumi
 within a [generic CI/CD system]({{< relref "other" >}}).
 
-> Looking to troubleshoot failures related to running Pulumi in CI/CD? Check out our [CI/CD troubleshooting guide]({{< relref troubleshooting-guide >}}).
+> Looking to troubleshoot failures related to running Pulumi in CI/CD? Check out our [CI/CD troubleshooting guide]({{< relref "/docs/guides/continuous-delivery/troubleshooting-guide" >}}).
 
 <div class="supported-cicd-platforms">
     <a href="{{< relref aws-code-services >}}">

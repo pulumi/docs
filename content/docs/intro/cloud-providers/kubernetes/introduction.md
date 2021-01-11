@@ -62,7 +62,7 @@ Check out [Pulumi: A Better Way to Kubernetes][better-way-to-k8s] for details!
 [aurora]: https://aws.amazon.com/rds/aurora/
 [pulumi-k8s]: https://github.com/pulumi/pulumi-kubernetes
 [better-way-to-k8s]: {{< relref "pulumi-a-better-way-to-kubernetes" >}}
-[create-before-replace]: {{< relref "/docs/intro/concepts/programming-model#autonaming" >}}
+[create-before-replace]: {{< relref "/docs/intro/concepts/resources#autonaming" >}}
 [programming-model]: {{< relref "/docs/intro/concepts/programming-model" >}}
 [cluster-management]: {{< relref "/docs/tutorials/kubernetes#clusters" >}}
 <!-- markdownlint-enable url -->
