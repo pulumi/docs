@@ -290,6 +290,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="readerendpointaddress_csharp">
+<a href="#readerendpointaddress_csharp" style="color: inherit; text-decoration: inherit;">Reader<wbr>Endpoint<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The endpoint of the reader node in this node group (shard).
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="replicationgroupdescription_csharp">
 <a href="#replicationgroupdescription_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Group<wbr>Description</a>
 </span>
@@ -423,6 +433,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint of the primary node in this node group (shard).
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="readerendpointaddress_go">
+<a href="#readerendpointaddress_go" style="color: inherit; text-decoration: inherit;">Reader<wbr>Endpoint<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The endpoint of the reader node in this node group (shard).
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -562,6 +582,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="readerendpointaddress_nodejs">
+<a href="#readerendpointaddress_nodejs" style="color: inherit; text-decoration: inherit;">reader<wbr>Endpoint<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The endpoint of the reader node in this node group (shard).
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="replicationgroupdescription_nodejs">
 <a href="#replicationgroupdescription_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Group<wbr>Description</a>
 </span>
@@ -695,6 +725,16 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint of the primary node in this node group (shard).
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="reader_endpoint_address_python">
+<a href="#reader_endpoint_address_python" style="color: inherit; text-decoration: inherit;">reader_<wbr>endpoint_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The endpoint of the reader node in this node group (shard).
 {{% /md %}}</dd>
     <dt class="property-"
             title="">

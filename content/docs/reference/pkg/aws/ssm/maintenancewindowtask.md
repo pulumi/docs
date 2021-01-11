@@ -732,7 +732,7 @@ The MaintenanceWindowTask resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of task being registered. The only allowed value is `RUN_COMMAND`.
+    <dd>{{% md %}}The type of task being registered. Valid values: `AUTOMATION`, `LAMBDA`, `RUN_COMMAND` or `STEP_FUNCTIONS`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -848,7 +848,7 @@ The MaintenanceWindowTask resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of task being registered. The only allowed value is `RUN_COMMAND`.
+    <dd>{{% md %}}The type of task being registered. Valid values: `AUTOMATION`, `LAMBDA`, `RUN_COMMAND` or `STEP_FUNCTIONS`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -964,7 +964,7 @@ The MaintenanceWindowTask resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of task being registered. The only allowed value is `RUN_COMMAND`.
+    <dd>{{% md %}}The type of task being registered. Valid values: `AUTOMATION`, `LAMBDA`, `RUN_COMMAND` or `STEP_FUNCTIONS`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1080,7 +1080,7 @@ The MaintenanceWindowTask resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of task being registered. The only allowed value is `RUN_COMMAND`.
+    <dd>{{% md %}}The type of task being registered. Valid values: `AUTOMATION`, `LAMBDA`, `RUN_COMMAND` or `STEP_FUNCTIONS`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1426,7 +1426,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of task being registered. The only allowed value is `RUN_COMMAND`.
+    <dd>{{% md %}}The type of task being registered. Valid values: `AUTOMATION`, `LAMBDA`, `RUN_COMMAND` or `STEP_FUNCTIONS`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1542,7 +1542,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of task being registered. The only allowed value is `RUN_COMMAND`.
+    <dd>{{% md %}}The type of task being registered. Valid values: `AUTOMATION`, `LAMBDA`, `RUN_COMMAND` or `STEP_FUNCTIONS`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1658,7 +1658,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of task being registered. The only allowed value is `RUN_COMMAND`.
+    <dd>{{% md %}}The type of task being registered. Valid values: `AUTOMATION`, `LAMBDA`, `RUN_COMMAND` or `STEP_FUNCTIONS`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1774,7 +1774,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of task being registered. The only allowed value is `RUN_COMMAND`.
+    <dd>{{% md %}}The type of task being registered. Valid values: `AUTOMATION`, `LAMBDA`, `RUN_COMMAND` or `STEP_FUNCTIONS`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

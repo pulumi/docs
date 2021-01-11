@@ -25,7 +25,7 @@ deploy the required validation records and wait for validation to complete.
 Domain validation through E-Mail is also supported but should be avoided as it requires a manual step outside
 of this provider.
 
-It's recommended to specify `create_before_destroy = true` in a [lifecycle](https://www.terraform.io/docs/configuration/resources.html#lifecycle) block to replace a certificate
+It's recommended to specify `create_before_destroy = true` in a [lifecycle](https://www.terraform.io/docs/configuration/meta-arguments/lifecycle.html) block to replace a certificate
 which is currently in use (eg, by `aws.lb.Listener`).
 
 {{% examples %}}

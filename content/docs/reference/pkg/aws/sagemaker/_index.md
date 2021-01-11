@@ -14,6 +14,7 @@ Explore the resources and functions of the sagemaker module in the AWS package.
     <li><a href="coderepository" title="CodeRepository"><span class="symbol resource"></span>CodeRepository</a></li>
     <li><a href="endpoint" title="Endpoint"><span class="symbol resource"></span>Endpoint</a></li>
     <li><a href="endpointconfiguration" title="EndpointConfiguration"><span class="symbol resource"></span>EndpointConfiguration</a></li>
+    <li><a href="image" title="Image"><span class="symbol resource"></span>Image</a></li>
     <li><a href="model" title="Model"><span class="symbol resource"></span>Model</a></li>
     <li><a href="notebookinstance" title="NotebookInstance"><span class="symbol resource"></span>NotebookInstance</a></li>
     <li><a href="notebookinstancelifecycleconfiguration" title="NotebookInstanceLifecycleConfiguration"><span class="symbol resource"></span>NotebookInstanceLifecycleConfiguration</a></li>
@@ -33,7 +34,7 @@ Explore the resources and functions of the sagemaker module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.22.1</dd>
+	<dd>3.23.0</dd>
 </dl>
 
 
