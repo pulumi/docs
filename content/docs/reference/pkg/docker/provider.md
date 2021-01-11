@@ -23,7 +23,7 @@ construction to achieve fine-grained programmatic control over provider settings
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#Provider">Provider</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#Provider">Provider</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -31,11 +31,11 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#Provider">NewProvider</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#Provider">Provider</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#Provider">NewProvider</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#Provider">Provider</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Provider.html">Provider</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Pulumi.DockerArgs.html">ProviderArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Provider.html">Provider</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Pulumi.DockerArgs.html">ProviderArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -46,7 +46,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -115,7 +115,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -154,7 +154,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -195,7 +195,6 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -203,70 +202,63 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="camaterial_csharp">
 <a href="#camaterial_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Material</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM-encoded content of Docker host CA certificate
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="certmaterial_csharp">
 <a href="#certmaterial_csharp" style="color: inherit; text-decoration: inherit;">Cert<wbr>Material</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM-encoded content of Docker client certificate
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="certpath_csharp">
 <a href="#certpath_csharp" style="color: inherit; text-decoration: inherit;">Cert<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to directory with Docker TLS config
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Docker daemon address
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keymaterial_csharp">
 <a href="#keymaterial_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Material</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM-encoded content of Docker client private key
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="registryauth_csharp">
 <a href="#registryauth_csharp" style="color: inherit; text-decoration: inherit;">Registry<wbr>Auth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerregistryauth">List&lt;Provider<wbr>Registry<wbr>Auth<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -275,70 +267,63 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="camaterial_go">
 <a href="#camaterial_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Material</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM-encoded content of Docker host CA certificate
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="certmaterial_go">
 <a href="#certmaterial_go" style="color: inherit; text-decoration: inherit;">Cert<wbr>Material</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM-encoded content of Docker client certificate
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="certpath_go">
 <a href="#certpath_go" style="color: inherit; text-decoration: inherit;">Cert<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to directory with Docker TLS config
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Docker daemon address
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keymaterial_go">
 <a href="#keymaterial_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Material</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM-encoded content of Docker client private key
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="registryauth_go">
 <a href="#registryauth_go" style="color: inherit; text-decoration: inherit;">Registry<wbr>Auth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerregistryauth">[]Provider<wbr>Registry<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -347,70 +332,63 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="camaterial_nodejs">
 <a href="#camaterial_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Material</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM-encoded content of Docker host CA certificate
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="certmaterial_nodejs">
 <a href="#certmaterial_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Material</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM-encoded content of Docker client certificate
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="certpath_nodejs">
 <a href="#certpath_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to directory with Docker TLS config
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Docker daemon address
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keymaterial_nodejs">
 <a href="#keymaterial_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Material</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM-encoded content of Docker client private key
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="registryauth_nodejs">
 <a href="#registryauth_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Auth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerregistryauth">Provider<wbr>Registry<wbr>Auth[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -419,79 +397,68 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="ca_material_python">
 <a href="#ca_material_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>material</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM-encoded content of Docker host CA certificate
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cert_material_python">
 <a href="#cert_material_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>material</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM-encoded content of Docker client certificate
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cert_path_python">
 <a href="#cert_path_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to directory with Docker TLS config
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Docker daemon address
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_material_python">
 <a href="#key_material_python" style="color: inherit; text-decoration: inherit;">key_<wbr>material</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM-encoded content of Docker client private key
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="registry_auth_python">
 <a href="#registry_auth_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>auth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerregistryauth">Sequence[Provider<wbr>Registry<wbr>Auth<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Provider resource produces the following output properties:
-
 
 
 
@@ -502,15 +469,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -519,15 +484,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -536,15 +499,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -553,18 +514,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -575,6 +531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
 <h4 id="providerregistryauth">Provider<wbr>Registry<wbr>Auth</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ProviderRegistryAuth">input</a>   API doc for this type.
@@ -583,11 +540,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ProviderRegistryAuthArgs">input</a>   API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ProviderRegistryAuthArgs.html">input</a>   API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -597,55 +553,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configfile_csharp">
 <a href="#configfile_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configfilecontent_csharp">
 <a href="#configfilecontent_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>File<wbr>Content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -654,55 +604,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configfile_go">
 <a href="#configfile_go" style="color: inherit; text-decoration: inherit;">Config<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configfilecontent_go">
 <a href="#configfilecontent_go" style="color: inherit; text-decoration: inherit;">Config<wbr>File<wbr>Content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -711,55 +655,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configfile_nodejs">
 <a href="#configfile_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configfilecontent_nodejs">
 <a href="#configfilecontent_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>File<wbr>Content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -768,63 +706,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="config_file_python">
 <a href="#config_file_python" style="color: inherit; text-decoration: inherit;">config_<wbr>file</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="config_file_content_python">
 <a href="#config_file_content_python" style="color: inherit; text-decoration: inherit;">config_<wbr>file_<wbr>content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>

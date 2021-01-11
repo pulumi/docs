@@ -193,19 +193,19 @@ const ubuntuRemoteImage = new docker.RemoteImage("ubuntu", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#RemoteImage">RemoteImage</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#RemoteImageArgs">RemoteImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#RemoteImage">RemoteImage</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#RemoteImageArgs">RemoteImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_docker/#pulumi_docker.RemoteImage">RemoteImage</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">build</span><span class="p">:</span> <span class="nx">Optional[RemoteImageBuildArgs]</span> = None<span class="p">, </span><span class="nx">keep_locally</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pull_trigger</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pull_triggers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_docker/#pulumi_docker.RemoteImage">RemoteImage</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">build</span><span class="p">:</span> <span class="nx">Optional[RemoteImageBuildArgs]</span> = None<span class="p">, </span><span class="nx">force_remove</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">keep_locally</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pull_trigger</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pull_triggers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#RemoteImage">NewRemoteImage</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#RemoteImageArgs">RemoteImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#RemoteImage">RemoteImage</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#RemoteImage">NewRemoteImage</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#RemoteImageArgs">RemoteImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#RemoteImage">RemoteImage</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.RemoteImage.html">RemoteImage</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.RemoteImageArgs.html">RemoteImageArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.RemoteImage.html">RemoteImage</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.RemoteImageArgs.html">RemoteImageArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -216,7 +216,7 @@ const ubuntuRemoteImage = new docker.RemoteImage("ubuntu", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -285,7 +285,7 @@ const ubuntuRemoteImage = new docker.RemoteImage("ubuntu", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -324,7 +324,7 @@ const ubuntuRemoteImage = new docker.RemoteImage("ubuntu", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -365,7 +365,6 @@ The RemoteImage resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -373,65 +372,69 @@ The RemoteImage resource accepts the following [input]({{< relref "/docs/intro/c
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Docker image, including any tags or SHA256 repo digests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="build_csharp">
 <a href="#build_csharp" style="color: inherit; text-decoration: inherit;">Build</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#remoteimagebuild">Remote<wbr>Image<wbr>Build<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Build below for details.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forceremove_csharp">
+<a href="#forceremove_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Remove</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Force remove the image when the resource is destroyed
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="keeplocally_csharp">
 <a href="#keeplocally_csharp" style="color: inherit; text-decoration: inherit;">Keep<wbr>Locally</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then the Docker image won't be
 deleted on destroy operation. If this is false, it will delete the image from
 the docker local storage on destroy operation.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="pulltrigger_csharp">
 <a href="#pulltrigger_csharp" style="color: inherit; text-decoration: inherit;">Pull<wbr>Trigger</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}**Deprecated**, use `pull_triggers` instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use field pull_triggers instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pulltriggers_csharp">
 <a href="#pulltriggers_csharp" style="color: inherit; text-decoration: inherit;">Pull<wbr>Triggers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of values which cause an
 image pull when changed. This is used to store the image digest from the
 registry when using the `docker.RegistryImage` [data source](https://www.terraform.io/docs/providers/docker/d/registry_image.html)
 to trigger an image update.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -440,65 +443,69 @@ to trigger an image update.
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Docker image, including any tags or SHA256 repo digests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="build_go">
 <a href="#build_go" style="color: inherit; text-decoration: inherit;">Build</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#remoteimagebuild">Remote<wbr>Image<wbr>Build</a></span>
     </dt>
     <dd>{{% md %}}See Build below for details.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forceremove_go">
+<a href="#forceremove_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Remove</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Force remove the image when the resource is destroyed
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="keeplocally_go">
 <a href="#keeplocally_go" style="color: inherit; text-decoration: inherit;">Keep<wbr>Locally</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then the Docker image won't be
 deleted on destroy operation. If this is false, it will delete the image from
 the docker local storage on destroy operation.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="pulltrigger_go">
 <a href="#pulltrigger_go" style="color: inherit; text-decoration: inherit;">Pull<wbr>Trigger</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}**Deprecated**, use `pull_triggers` instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use field pull_triggers instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pulltriggers_go">
 <a href="#pulltriggers_go" style="color: inherit; text-decoration: inherit;">Pull<wbr>Triggers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of values which cause an
 image pull when changed. This is used to store the image digest from the
 registry when using the `docker.RegistryImage` [data source](https://www.terraform.io/docs/providers/docker/d/registry_image.html)
 to trigger an image update.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -507,65 +514,69 @@ to trigger an image update.
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Docker image, including any tags or SHA256 repo digests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="build_nodejs">
 <a href="#build_nodejs" style="color: inherit; text-decoration: inherit;">build</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#remoteimagebuild">Remote<wbr>Image<wbr>Build</a></span>
     </dt>
     <dd>{{% md %}}See Build below for details.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forceremove_nodejs">
+<a href="#forceremove_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Remove</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Force remove the image when the resource is destroyed
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="keeplocally_nodejs">
 <a href="#keeplocally_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>Locally</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, then the Docker image won't be
 deleted on destroy operation. If this is false, it will delete the image from
 the docker local storage on destroy operation.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="pulltrigger_nodejs">
 <a href="#pulltrigger_nodejs" style="color: inherit; text-decoration: inherit;">pull<wbr>Trigger</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}**Deprecated**, use `pull_triggers` instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use field pull_triggers instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pulltriggers_nodejs">
 <a href="#pulltriggers_nodejs" style="color: inherit; text-decoration: inherit;">pull<wbr>Triggers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of values which cause an
 image pull when changed. This is used to store the image digest from the
 registry when using the `docker.RegistryImage` [data source](https://www.terraform.io/docs/providers/docker/d/registry_image.html)
 to trigger an image update.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -574,74 +585,74 @@ to trigger an image update.
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Docker image, including any tags or SHA256 repo digests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="build_python">
 <a href="#build_python" style="color: inherit; text-decoration: inherit;">build</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#remoteimagebuild">Remote<wbr>Image<wbr>Build<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Build below for details.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="force_remove_python">
+<a href="#force_remove_python" style="color: inherit; text-decoration: inherit;">force_<wbr>remove</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Force remove the image when the resource is destroyed
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="keep_locally_python">
 <a href="#keep_locally_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>locally</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then the Docker image won't be
 deleted on destroy operation. If this is false, it will delete the image from
 the docker local storage on destroy operation.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="pull_trigger_python">
 <a href="#pull_trigger_python" style="color: inherit; text-decoration: inherit;">pull_<wbr>trigger</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}**Deprecated**, use `pull_triggers` instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use field pull_triggers instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pull_triggers_python">
 <a href="#pull_triggers_python" style="color: inherit; text-decoration: inherit;">pull_<wbr>triggers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of values which cause an
 image pull when changed. This is used to store the image digest from the
 registry when using the `docker.RegistryImage` [data source](https://www.terraform.io/docs/providers/docker/d/registry_image.html)
 to trigger an image update.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the RemoteImage resource produces the following output properties:
-
 
 
 
@@ -652,35 +663,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="latest_csharp">
 <a href="#latest_csharp" style="color: inherit; text-decoration: inherit;">Latest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="output_csharp">
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -689,35 +696,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="latest_go">
 <a href="#latest_go" style="color: inherit; text-decoration: inherit;">Latest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="output_go">
 <a href="#output_go" style="color: inherit; text-decoration: inherit;">Output</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -726,35 +729,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="latest_nodejs">
 <a href="#latest_nodejs" style="color: inherit; text-decoration: inherit;">latest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="output_nodejs">
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -763,38 +762,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="latest_python">
 <a href="#latest_python" style="color: inherit; text-decoration: inherit;">latest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="output_python">
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -804,20 +796,20 @@ Get an existing RemoteImage resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#RemoteImageState">RemoteImageState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#RemoteImage">RemoteImage</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#RemoteImageState">RemoteImageState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#RemoteImage">RemoteImage</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">build</span><span class="p">:</span> <span class="nx">Optional[RemoteImageBuildArgs]</span> = None<span class="p">, </span><span class="nx">keep_locally</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">latest</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pull_trigger</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pull_triggers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> RemoteImage</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">build</span><span class="p">:</span> <span class="nx">Optional[RemoteImageBuildArgs]</span> = None<span class="p">, </span><span class="nx">force_remove</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">keep_locally</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">latest</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pull_trigger</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pull_triggers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> RemoteImage</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRemoteImage<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#RemoteImageState">RemoteImageState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#RemoteImage">RemoteImage</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRemoteImage<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#RemoteImageState">RemoteImageState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#RemoteImage">RemoteImage</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.RemoteImage.html">RemoteImage</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker..RemoteImageState.html">RemoteImageState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.RemoteImage.html">RemoteImage</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker..RemoteImageState.html">RemoteImageState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -919,7 +911,6 @@ Get an existing RemoteImage resource's state with the given name, ID, and option
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -927,85 +918,87 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_build_csharp">
 <a href="#state_build_csharp" style="color: inherit; text-decoration: inherit;">Build</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#remoteimagebuild">Remote<wbr>Image<wbr>Build<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Build below for details.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_forceremove_csharp">
+<a href="#state_forceremove_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Remove</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Force remove the image when the resource is destroyed
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_keeplocally_csharp">
 <a href="#state_keeplocally_csharp" style="color: inherit; text-decoration: inherit;">Keep<wbr>Locally</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then the Docker image won't be
 deleted on destroy operation. If this is false, it will delete the image from
 the docker local storage on destroy operation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_latest_csharp">
 <a href="#state_latest_csharp" style="color: inherit; text-decoration: inherit;">Latest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Docker image, including any tags or SHA256 repo digests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_output_csharp">
 <a href="#state_output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_pulltrigger_csharp">
 <a href="#state_pulltrigger_csharp" style="color: inherit; text-decoration: inherit;">Pull<wbr>Trigger</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}**Deprecated**, use `pull_triggers` instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use field pull_triggers instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pulltriggers_csharp">
 <a href="#state_pulltriggers_csharp" style="color: inherit; text-decoration: inherit;">Pull<wbr>Triggers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of values which cause an
 image pull when changed. This is used to store the image digest from the
 registry when using the `docker.RegistryImage` [data source](https://www.terraform.io/docs/providers/docker/d/registry_image.html)
 to trigger an image update.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1014,85 +1007,87 @@ to trigger an image update.
             title="Optional">
         <span id="state_build_go">
 <a href="#state_build_go" style="color: inherit; text-decoration: inherit;">Build</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#remoteimagebuild">Remote<wbr>Image<wbr>Build</a></span>
     </dt>
     <dd>{{% md %}}See Build below for details.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_forceremove_go">
+<a href="#state_forceremove_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Remove</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Force remove the image when the resource is destroyed
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_keeplocally_go">
 <a href="#state_keeplocally_go" style="color: inherit; text-decoration: inherit;">Keep<wbr>Locally</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then the Docker image won't be
 deleted on destroy operation. If this is false, it will delete the image from
 the docker local storage on destroy operation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_latest_go">
 <a href="#state_latest_go" style="color: inherit; text-decoration: inherit;">Latest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Docker image, including any tags or SHA256 repo digests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_output_go">
 <a href="#state_output_go" style="color: inherit; text-decoration: inherit;">Output</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_pulltrigger_go">
 <a href="#state_pulltrigger_go" style="color: inherit; text-decoration: inherit;">Pull<wbr>Trigger</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}**Deprecated**, use `pull_triggers` instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use field pull_triggers instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pulltriggers_go">
 <a href="#state_pulltriggers_go" style="color: inherit; text-decoration: inherit;">Pull<wbr>Triggers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of values which cause an
 image pull when changed. This is used to store the image digest from the
 registry when using the `docker.RegistryImage` [data source](https://www.terraform.io/docs/providers/docker/d/registry_image.html)
 to trigger an image update.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1101,85 +1096,87 @@ to trigger an image update.
             title="Optional">
         <span id="state_build_nodejs">
 <a href="#state_build_nodejs" style="color: inherit; text-decoration: inherit;">build</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#remoteimagebuild">Remote<wbr>Image<wbr>Build</a></span>
     </dt>
     <dd>{{% md %}}See Build below for details.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_forceremove_nodejs">
+<a href="#state_forceremove_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Remove</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Force remove the image when the resource is destroyed
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_keeplocally_nodejs">
 <a href="#state_keeplocally_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>Locally</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, then the Docker image won't be
 deleted on destroy operation. If this is false, it will delete the image from
 the docker local storage on destroy operation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_latest_nodejs">
 <a href="#state_latest_nodejs" style="color: inherit; text-decoration: inherit;">latest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Docker image, including any tags or SHA256 repo digests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_output_nodejs">
 <a href="#state_output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_pulltrigger_nodejs">
 <a href="#state_pulltrigger_nodejs" style="color: inherit; text-decoration: inherit;">pull<wbr>Trigger</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}**Deprecated**, use `pull_triggers` instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use field pull_triggers instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pulltriggers_nodejs">
 <a href="#state_pulltriggers_nodejs" style="color: inherit; text-decoration: inherit;">pull<wbr>Triggers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of values which cause an
 image pull when changed. This is used to store the image digest from the
 registry when using the `docker.RegistryImage` [data source](https://www.terraform.io/docs/providers/docker/d/registry_image.html)
 to trigger an image update.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1188,82 +1185,85 @@ to trigger an image update.
             title="Optional">
         <span id="state_build_python">
 <a href="#state_build_python" style="color: inherit; text-decoration: inherit;">build</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#remoteimagebuild">Remote<wbr>Image<wbr>Build<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Build below for details.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_force_remove_python">
+<a href="#state_force_remove_python" style="color: inherit; text-decoration: inherit;">force_<wbr>remove</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Force remove the image when the resource is destroyed
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_keep_locally_python">
 <a href="#state_keep_locally_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>locally</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then the Docker image won't be
 deleted on destroy operation. If this is false, it will delete the image from
 the docker local storage on destroy operation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_latest_python">
 <a href="#state_latest_python" style="color: inherit; text-decoration: inherit;">latest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Docker image, including any tags or SHA256 repo digests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_output_python">
 <a href="#state_output_python" style="color: inherit; text-decoration: inherit;">output</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_pull_trigger_python">
 <a href="#state_pull_trigger_python" style="color: inherit; text-decoration: inherit;">pull_<wbr>trigger</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}**Deprecated**, use `pull_triggers` instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use field pull_triggers instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pull_triggers_python">
 <a href="#state_pull_triggers_python" style="color: inherit; text-decoration: inherit;">pull_<wbr>triggers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of values which cause an
 image pull when changed. This is used to store the image digest from the
 registry when using the `docker.RegistryImage` [data source](https://www.terraform.io/docs/providers/docker/d/registry_image.html)
 to trigger an image update.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1272,11 +1272,8 @@ to trigger an image update.
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="remoteimagebuild">Remote<wbr>Image<wbr>Build</h4>
@@ -1287,11 +1284,10 @@ to trigger an image update.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#RemoteImageBuildArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#RemoteImageBuildOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.RemoteImageBuildArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.RemoteImageBuild.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1301,97 +1297,87 @@ to trigger an image update.
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="buildarg_csharp">
 <a href="#buildarg_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Arg</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dockerfile_csharp">
 <a href="#dockerfile_csharp" style="color: inherit; text-decoration: inherit;">Dockerfile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}default Dockerfile
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forceremove_csharp">
 <a href="#forceremove_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Remove</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nocache_csharp">
 <a href="#nocache_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Cache</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="remove_csharp">
 <a href="#remove_csharp" style="color: inherit; text-decoration: inherit;">Remove</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}default true
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1400,97 +1386,87 @@ to trigger an image update.
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="buildarg_go">
 <a href="#buildarg_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Arg</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dockerfile_go">
 <a href="#dockerfile_go" style="color: inherit; text-decoration: inherit;">Dockerfile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}default Dockerfile
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forceremove_go">
 <a href="#forceremove_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Remove</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nocache_go">
 <a href="#nocache_go" style="color: inherit; text-decoration: inherit;">No<wbr>Cache</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="remove_go">
 <a href="#remove_go" style="color: inherit; text-decoration: inherit;">Remove</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}default true
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1499,97 +1475,87 @@ to trigger an image update.
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="buildarg_nodejs">
 <a href="#buildarg_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Arg</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dockerfile_nodejs">
 <a href="#dockerfile_nodejs" style="color: inherit; text-decoration: inherit;">dockerfile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}default Dockerfile
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forceremove_nodejs">
 <a href="#forceremove_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Remove</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nocache_nodejs">
 <a href="#nocache_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Cache</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="remove_nodejs">
 <a href="#remove_nodejs" style="color: inherit; text-decoration: inherit;">remove</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}default true
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1598,105 +1564,87 @@ to trigger an image update.
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="build_arg_python">
 <a href="#build_arg_python" style="color: inherit; text-decoration: inherit;">build_<wbr>arg</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dockerfile_python">
 <a href="#dockerfile_python" style="color: inherit; text-decoration: inherit;">dockerfile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}default Dockerfile
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="force_remove_python">
 <a href="#force_remove_python" style="color: inherit; text-decoration: inherit;">force_<wbr>remove</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="no_cache_python">
 <a href="#no_cache_python" style="color: inherit; text-decoration: inherit;">no_<wbr>cache</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="remove_python">
 <a href="#remove_python" style="color: inherit; text-decoration: inherit;">remove</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}default true
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>
