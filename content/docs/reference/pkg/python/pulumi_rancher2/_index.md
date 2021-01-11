@@ -605,7 +605,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Deploy the app v2 within project ID (string)</p></li>
 <li><p><strong>repo_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Repo name (string)</p></li>
 <li><p><strong>values</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The app v2 values yaml. Yaml format is required (string)</p></li>
-<li><p><strong>wait</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Wait until app is deployed. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
+<li><p><strong>wait</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Wait until app is deployed. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
 </ul>
 </dd>
 </dl>
@@ -635,7 +635,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Deploy the app v2 within project ID (string)</p></li>
 <li><p><strong>repo_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Repo name (string)</p></li>
 <li><p><strong>values</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The app v2 values yaml. Yaml format is required (string)</p></li>
-<li><p><strong>wait</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Wait until app is deployed. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
+<li><p><strong>wait</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Wait until app is deployed. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
 </ul>
 </dd>
 </dl>
@@ -734,7 +734,7 @@ properties used to qualify the lookup.</p>
 <dl class="py method">
 <dt id="pulumi_rancher2.AppV2.wait">
 <em class="property">property </em><code class="sig-name descname">wait</code><a class="headerlink" href="#pulumi_rancher2.AppV2.wait" title="Permalink to this definition">¶</a></dt>
-<dd><p>Wait until app is deployed. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p>
+<dd><p>Wait until app is deployed. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2646,6 +2646,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_rancher2.AwaitableGetEtcdBackupResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetEtcdBackupResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backup_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filename</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">manual</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetEtcdBackupResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_rancher2.AwaitableGetGlobalDnsProviderResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AwaitableGetGlobalDnsProviderResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">alidns_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloudflare_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_provider</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">root_domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">route53_config</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AwaitableGetGlobalDnsProviderResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -6798,6 +6803,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_rancher2.GetGlobalDnsProviderResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetGlobalDnsProviderResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">alidns_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloudflare_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_provider</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">root_domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">route53_config</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetGlobalDnsProviderResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getGlobalDnsProvider.</p>
+<dl class="py method">
+<dt id="pulumi_rancher2.GetGlobalDnsProviderResult.annotations">
+<em class="property">property </em><code class="sig-name descname">annotations</code><a class="headerlink" href="#pulumi_rancher2.GetGlobalDnsProviderResult.annotations" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) Annotations of the resource (map)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_rancher2.GetGlobalDnsProviderResult.id">
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#pulumi_rancher2.GetGlobalDnsProviderResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_rancher2.GetGlobalDnsProviderResult.labels">
+<em class="property">property </em><code class="sig-name descname">labels</code><a class="headerlink" href="#pulumi_rancher2.GetGlobalDnsProviderResult.labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) Labels of the resource (map)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_rancher2.GetGlobalDnsProviderResult.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_rancher2.GetGlobalDnsProviderResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) The name of the global DNS provider (string)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_rancher2.GetGlobalRoleBindingResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetGlobalRoleBindingResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">global_role_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_principal_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetGlobalRoleBindingResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getGlobalRoleBinding.</p>
@@ -7818,6 +7853,329 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_rancher2.GlobalDns">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GlobalDns</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fqdn</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">multi_cluster_app_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_ids</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GlobalDns" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Rancher V2 Global DNS resource. This can be used to create Global DNS records for Rancher V2.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="c1"># Create a new rancher2 Global DNS Provider</span>
+<span class="n">foo_global_dns_provider</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">GlobalDnsProvider</span><span class="p">(</span><span class="s2">&quot;fooGlobalDnsProvider&quot;</span><span class="p">,</span>
+    <span class="n">root_domain</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
+    <span class="n">route53_config</span><span class="o">=</span><span class="n">rancher2</span><span class="o">.</span><span class="n">GlobalDnsProviderRoute53ConfigArgs</span><span class="p">(</span>
+        <span class="n">access_key</span><span class="o">=</span><span class="s2">&quot;YYYYYYYYYYYYYYYYYYYY&quot;</span><span class="p">,</span>
+        <span class="n">secret_key</span><span class="o">=</span><span class="s2">&quot;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&quot;</span><span class="p">,</span>
+        <span class="n">zone_type</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">,</span>
+        <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-east-1&quot;</span><span class="p">,</span>
+    <span class="p">))</span>
+<span class="c1"># Create a new rancher2 Global DNS using project IDs</span>
+<span class="n">foo_global_dns</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">GlobalDns</span><span class="p">(</span><span class="s2">&quot;fooGlobalDns&quot;</span><span class="p">,</span>
+    <span class="n">fqdn</span><span class="o">=</span><span class="s2">&quot;foo.example.com&quot;</span><span class="p">,</span>
+    <span class="n">provider_id</span><span class="o">=</span><span class="n">foo_global_dns_provider</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">project_ids</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;project1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;project2&quot;</span><span class="p">,</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="c1"># Create a new rancher2 Global DNS Provider</span>
+<span class="n">foo_global_dns_provider</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">GlobalDnsProvider</span><span class="p">(</span><span class="s2">&quot;fooGlobalDnsProvider&quot;</span><span class="p">,</span>
+    <span class="n">root_domain</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
+    <span class="n">route53_config</span><span class="o">=</span><span class="n">rancher2</span><span class="o">.</span><span class="n">GlobalDnsProviderRoute53ConfigArgs</span><span class="p">(</span>
+        <span class="n">access_key</span><span class="o">=</span><span class="s2">&quot;YYYYYYYYYYYYYYYYYYYY&quot;</span><span class="p">,</span>
+        <span class="n">secret_key</span><span class="o">=</span><span class="s2">&quot;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&quot;</span><span class="p">,</span>
+        <span class="n">zone_type</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">,</span>
+        <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-east-1&quot;</span><span class="p">,</span>
+    <span class="p">))</span>
+<span class="c1"># Create a new rancher2 Global DNS using MultiClusterApp ID</span>
+<span class="n">foo_global_dns</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">GlobalDns</span><span class="p">(</span><span class="s2">&quot;fooGlobalDns&quot;</span><span class="p">,</span>
+    <span class="n">fqdn</span><span class="o">=</span><span class="s2">&quot;foo.example.com&quot;</span><span class="p">,</span>
+    <span class="n">provider_id</span><span class="o">=</span><span class="n">foo_global_dns_provider</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">multi_cluster_app_id</span><span class="o">=</span><span class="s2">&quot;&lt;MCA_ID&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Global DNS Entry can be imported using the Rancher Global DNS ID</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import rancher2:index/globalDns:GlobalDns foo &lt;global_dns_id&gt;
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Annotations for Global DNS (map)</p></li>
+<li><p><strong>fqdn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Global DNS record (string)</p></li>
+<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Labels for Global DNS (map)</p></li>
+<li><p><strong>multi_cluster_app_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The MultiCluster App ID to assign to the Global DNS. Conflicts with <code class="docutils literal notranslate"><span class="pre">project_ids</span></code> (string)</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Global DNS (string)</p></li>
+<li><p><strong>project_ids</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of project_ids to assign to the Global DNS. Conflicts with <code class="docutils literal notranslate"><span class="pre">multi_cluster_app_id</span></code> (list(string))</p></li>
+<li><p><strong>provider_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Global DNS provider ID to use (string)</p></li>
+<li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – TTL in seconds for DNS record. Default: <code class="docutils literal notranslate"><span class="pre">300</span></code> (int)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pulumi_rancher2.GlobalDns.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fqdn</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">multi_cluster_app_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_ids</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_rancher2.global_dns.GlobalDns<a class="headerlink" href="#pulumi_rancher2.GlobalDns.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing GlobalDns resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Annotations for Global DNS (map)</p></li>
+<li><p><strong>fqdn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Global DNS record (string)</p></li>
+<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Labels for Global DNS (map)</p></li>
+<li><p><strong>multi_cluster_app_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The MultiCluster App ID to assign to the Global DNS. Conflicts with <code class="docutils literal notranslate"><span class="pre">project_ids</span></code> (string)</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Global DNS (string)</p></li>
+<li><p><strong>project_ids</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of project_ids to assign to the Global DNS. Conflicts with <code class="docutils literal notranslate"><span class="pre">multi_cluster_app_id</span></code> (list(string))</p></li>
+<li><p><strong>provider_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Global DNS provider ID to use (string)</p></li>
+<li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – TTL in seconds for DNS record. Default: <code class="docutils literal notranslate"><span class="pre">300</span></code> (int)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_rancher2.GlobalDns.annotations">
+<em class="property">property </em><code class="sig-name descname">annotations</code><a class="headerlink" href="#pulumi_rancher2.GlobalDns.annotations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Annotations for Global DNS (map)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_rancher2.GlobalDns.fqdn">
+<em class="property">property </em><code class="sig-name descname">fqdn</code><a class="headerlink" href="#pulumi_rancher2.GlobalDns.fqdn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Global DNS record (string)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_rancher2.GlobalDns.labels">
+<em class="property">property </em><code class="sig-name descname">labels</code><a class="headerlink" href="#pulumi_rancher2.GlobalDns.labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Labels for Global DNS (map)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_rancher2.GlobalDns.multi_cluster_app_id">
+<em class="property">property </em><code class="sig-name descname">multi_cluster_app_id</code><a class="headerlink" href="#pulumi_rancher2.GlobalDns.multi_cluster_app_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The MultiCluster App ID to assign to the Global DNS. Conflicts with <code class="docutils literal notranslate"><span class="pre">project_ids</span></code> (string)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_rancher2.GlobalDns.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_rancher2.GlobalDns.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Global DNS (string)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_rancher2.GlobalDns.project_ids">
+<em class="property">property </em><code class="sig-name descname">project_ids</code><a class="headerlink" href="#pulumi_rancher2.GlobalDns.project_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of project_ids to assign to the Global DNS. Conflicts with <code class="docutils literal notranslate"><span class="pre">multi_cluster_app_id</span></code> (list(string))</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_rancher2.GlobalDns.provider_id">
+<em class="property">property </em><code class="sig-name descname">provider_id</code><a class="headerlink" href="#pulumi_rancher2.GlobalDns.provider_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Global DNS provider ID to use (string)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_rancher2.GlobalDns.ttl">
+<em class="property">property </em><code class="sig-name descname">ttl</code><a class="headerlink" href="#pulumi_rancher2.GlobalDns.ttl" title="Permalink to this definition">¶</a></dt>
+<dd><p>TTL in seconds for DNS record. Default: <code class="docutils literal notranslate"><span class="pre">300</span></code> (int)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_rancher2.GlobalDns.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GlobalDns.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_rancher2.GlobalDns.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GlobalDns.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_rancher2.GlobalDnsProvider">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GlobalDnsProvider</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alidns_config</span><span class="p">:</span> <span class="n">Union[GlobalDnsProviderAlidnsConfigArgs, Mapping[str, Any], Awaitable[Union[GlobalDnsProviderAlidnsConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloudflare_config</span><span class="p">:</span> <span class="n">Union[GlobalDnsProviderCloudflareConfigArgs, Mapping[str, Any], Awaitable[Union[GlobalDnsProviderCloudflareConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">root_domain</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">route53_config</span><span class="p">:</span> <span class="n">Union[GlobalDnsProviderRoute53ConfigArgs, Mapping[str, Any], Awaitable[Union[GlobalDnsProviderRoute53ConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GlobalDnsProvider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Rancher V2 Global DNS Provider resource. This can be used to create Global DNS Providers for Rancher V2. Supported Global DNS Providers: <code class="docutils literal notranslate"><span class="pre">alidns,</span> <span class="pre">cloudflare,</span> <span class="pre">route53</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="c1"># Create a new rancher2 Global DNS Provider - alidns</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">GlobalDnsProvider</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">alidns_config</span><span class="o">=</span><span class="n">rancher2</span><span class="o">.</span><span class="n">GlobalDnsProviderAlidnsConfigArgs</span><span class="p">(</span>
+        <span class="n">access_key</span><span class="o">=</span><span class="s2">&quot;YYYYYYYYYYYYYYYYYYYY&quot;</span><span class="p">,</span>
+        <span class="n">secret_key</span><span class="o">=</span><span class="s2">&quot;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&quot;</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="n">root_domain</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="c1"># Create a new rancher2 Global DNS Provider - cloudflare</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">GlobalDnsProvider</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">cloudflare_config</span><span class="o">=</span><span class="n">rancher2</span><span class="o">.</span><span class="n">GlobalDnsProviderCloudflareConfigArgs</span><span class="p">(</span>
+        <span class="n">api_email</span><span class="o">=</span><span class="s2">&quot;test@test.local&quot;</span><span class="p">,</span>
+        <span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&quot;</span><span class="p">,</span>
+        <span class="n">proxy_setting</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="n">root_domain</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="c1"># Create a new rancher2 Global DNS Provider - route53</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">GlobalDnsProvider</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">root_domain</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
+    <span class="n">route53_config</span><span class="o">=</span><span class="n">rancher2</span><span class="o">.</span><span class="n">GlobalDnsProviderRoute53ConfigArgs</span><span class="p">(</span>
+        <span class="n">access_key</span><span class="o">=</span><span class="s2">&quot;YYYYYYYYYYYYYYYYYYYY&quot;</span><span class="p">,</span>
+        <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-east-1&quot;</span><span class="p">,</span>
+        <span class="n">secret_key</span><span class="o">=</span><span class="s2">&quot;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&quot;</span><span class="p">,</span>
+        <span class="n">zone_type</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">,</span>
+    <span class="p">))</span>
+</pre></div>
+</div>
+<p>Global DNS Providers can be imported using the Rancher Global DNS Provider ID</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import rancher2:index/globalDnsProvider:GlobalDnsProvider foo &lt;global_dns_provider_id&gt;
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Annotations for Global DNS Provider (map)</p></li>
+<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Labels for Global DNS Provider (map)</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Global DNS Provider (string)</p></li>
+<li><p><strong>root_domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user ID to assign Global DNS Provider (string)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pulumi_rancher2.GlobalDnsProvider.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alidns_config</span><span class="p">:</span> <span class="n">Union[GlobalDnsProviderAlidnsConfigArgs, Mapping[str, Any], Awaitable[Union[GlobalDnsProviderAlidnsConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloudflare_config</span><span class="p">:</span> <span class="n">Union[GlobalDnsProviderCloudflareConfigArgs, Mapping[str, Any], Awaitable[Union[GlobalDnsProviderCloudflareConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_provider</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">root_domain</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">route53_config</span><span class="p">:</span> <span class="n">Union[GlobalDnsProviderRoute53ConfigArgs, Mapping[str, Any], Awaitable[Union[GlobalDnsProviderRoute53ConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_rancher2.global_dns_provider.GlobalDnsProvider<a class="headerlink" href="#pulumi_rancher2.GlobalDnsProvider.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing GlobalDnsProvider resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Annotations for Global DNS Provider (map)</p></li>
+<li><p><strong>dns_provider</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The Global DNS Provider <code class="docutils literal notranslate"><span class="pre">alidns,</span> <span class="pre">cloudflare,</span> <span class="pre">route53</span></code> (string)</p></li>
+<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Labels for Global DNS Provider (map)</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Global DNS Provider (string)</p></li>
+<li><p><strong>root_domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user ID to assign Global DNS Provider (string)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_rancher2.GlobalDnsProvider.annotations">
+<em class="property">property </em><code class="sig-name descname">annotations</code><a class="headerlink" href="#pulumi_rancher2.GlobalDnsProvider.annotations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Annotations for Global DNS Provider (map)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_rancher2.GlobalDnsProvider.dns_provider">
+<em class="property">property </em><code class="sig-name descname">dns_provider</code><a class="headerlink" href="#pulumi_rancher2.GlobalDnsProvider.dns_provider" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) The Global DNS Provider <code class="docutils literal notranslate"><span class="pre">alidns,</span> <span class="pre">cloudflare,</span> <span class="pre">route53</span></code> (string)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_rancher2.GlobalDnsProvider.labels">
+<em class="property">property </em><code class="sig-name descname">labels</code><a class="headerlink" href="#pulumi_rancher2.GlobalDnsProvider.labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Labels for Global DNS Provider (map)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_rancher2.GlobalDnsProvider.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_rancher2.GlobalDnsProvider.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Global DNS Provider (string)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_rancher2.GlobalDnsProvider.root_domain">
+<em class="property">property </em><code class="sig-name descname">root_domain</code><a class="headerlink" href="#pulumi_rancher2.GlobalDnsProvider.root_domain" title="Permalink to this definition">¶</a></dt>
+<dd><p>The user ID to assign Global DNS Provider (string)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_rancher2.GlobalDnsProvider.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GlobalDnsProvider.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_rancher2.GlobalDnsProvider.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GlobalDnsProvider.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_rancher2.GlobalRoleBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GlobalRoleBinding</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">global_role_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_principal_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GlobalRoleBinding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Global Role Binding resource. This can be used to create Global Role Bindings for Rancher v2 environments and retrieve their information.</p>
@@ -8669,9 +9027,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_rancher2.NodeTemplate">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">NodeTemplate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">amazonec2_config</span><span class="p">:</span> <span class="n">Union[NodeTemplateAmazonec2ConfigArgs, Mapping[str, Any], Awaitable[Union[NodeTemplateAmazonec2ConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auth_certificate_authority</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auth_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">azure_config</span><span class="p">:</span> <span class="n">Union[NodeTemplateAzureConfigArgs, Mapping[str, Any], Awaitable[Union[NodeTemplateAzureConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_credential_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">digitalocean_config</span><span class="p">:</span> <span class="n">Union[NodeTemplateDigitaloceanConfigArgs, Mapping[str, Any], Awaitable[Union[NodeTemplateDigitaloceanConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">driver_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_env</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_insecure_registries</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_install_url</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_label</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_opt</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_registry_mirrors</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_storage_driver</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">linode_config</span><span class="p">:</span> <span class="n">Union[NodeTemplateLinodeConfigArgs, Mapping[str, Any], Awaitable[Union[NodeTemplateLinodeConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opennebula_config</span><span class="p">:</span> <span class="n">Union[NodeTemplateOpennebulaConfigArgs, Mapping[str, Any], Awaitable[Union[NodeTemplateOpennebulaConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">openstack_config</span><span class="p">:</span> <span class="n">Union[NodeTemplateOpenstackConfigArgs, Mapping[str, Any], Awaitable[Union[NodeTemplateOpenstackConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_internal_ip_address</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vsphere_config</span><span class="p">:</span> <span class="n">Union[NodeTemplateVsphereConfigArgs, Mapping[str, Any], Awaitable[Union[NodeTemplateVsphereConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.NodeTemplate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">NodeTemplate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">amazonec2_config</span><span class="p">:</span> <span class="n">Union[NodeTemplateAmazonec2ConfigArgs, Mapping[str, Any], Awaitable[Union[NodeTemplateAmazonec2ConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auth_certificate_authority</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auth_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">azure_config</span><span class="p">:</span> <span class="n">Union[NodeTemplateAzureConfigArgs, Mapping[str, Any], Awaitable[Union[NodeTemplateAzureConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_credential_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">digitalocean_config</span><span class="p">:</span> <span class="n">Union[NodeTemplateDigitaloceanConfigArgs, Mapping[str, Any], Awaitable[Union[NodeTemplateDigitaloceanConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">driver_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_env</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_insecure_registries</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_install_url</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_label</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_opt</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_registry_mirrors</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_storage_driver</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hetzner_config</span><span class="p">:</span> <span class="n">Union[NodeTemplateHetznerConfigArgs, Mapping[str, Any], Awaitable[Union[NodeTemplateHetznerConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">linode_config</span><span class="p">:</span> <span class="n">Union[NodeTemplateLinodeConfigArgs, Mapping[str, Any], Awaitable[Union[NodeTemplateLinodeConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opennebula_config</span><span class="p">:</span> <span class="n">Union[NodeTemplateOpennebulaConfigArgs, Mapping[str, Any], Awaitable[Union[NodeTemplateOpennebulaConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">openstack_config</span><span class="p">:</span> <span class="n">Union[NodeTemplateOpenstackConfigArgs, Mapping[str, Any], Awaitable[Union[NodeTemplateOpenstackConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_internal_ip_address</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vsphere_config</span><span class="p">:</span> <span class="n">Union[NodeTemplateVsphereConfigArgs, Mapping[str, Any], Awaitable[Union[NodeTemplateVsphereConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.NodeTemplate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Node Template resource. This can be used to create Node Template for Rancher v2 and retrieve their information.</p>
-<p>amazonec2, azure, digitalocean, linode, opennebula, openstack, and vsphere drivers are supported for node templates.</p>
+<p>amazonec2, azure, digitalocean, linode, opennebula, openstack, hetzner, and vsphere drivers are supported for node templates.</p>
 <p><strong>Note</strong> If you are upgrading to Rancher v2.3.3, please take a look to final section</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
@@ -8714,6 +9072,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">))</span>
 </pre></div>
 </div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="c1"># Create a new rancher2 Node Template using hetzner node_driver</span>
+<span class="n">hetzner_node_driver</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">NodeDriver</span><span class="p">(</span><span class="s2">&quot;hetznerNodeDriver&quot;</span><span class="p">,</span>
+    <span class="n">active</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">builtin</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">ui_url</span><span class="o">=</span><span class="s2">&quot;https://storage.googleapis.com/hcloud-rancher-v2-ui-driver/component.js&quot;</span><span class="p">,</span>
+    <span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://github.com/JonasProgrammer/docker-machine-driver-hetzner/releases/download/3.0.0/docker-machine-driver-hetzner_3.0.0_linux_amd64.tar.gz&quot;</span><span class="p">,</span>
+    <span class="n">whitelist_domains</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;storage.googleapis.com&quot;</span><span class="p">])</span>
+<span class="n">my_hetzner_node_template</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">NodeTemplate</span><span class="p">(</span><span class="s2">&quot;myHetznerNodeTemplate&quot;</span><span class="p">,</span>
+    <span class="n">driver_id</span><span class="o">=</span><span class="n">hetzner_node_driver</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">hetzner_config</span><span class="o">=</span><span class="n">rancher2</span><span class="o">.</span><span class="n">NodeTemplateHetznerConfigArgs</span><span class="p">(</span>
+        <span class="n">api_token</span><span class="o">=</span><span class="s2">&quot;XXXXXXXXXX&quot;</span><span class="p">,</span>
+        <span class="n">image</span><span class="o">=</span><span class="s2">&quot;ubuntu-18.04&quot;</span><span class="p">,</span>
+        <span class="n">server_location</span><span class="o">=</span><span class="s2">&quot;nbg1&quot;</span><span class="p">,</span>
+        <span class="n">server_type</span><span class="o">=</span><span class="s2">&quot;cx11&quot;</span><span class="p">,</span>
+    <span class="p">))</span>
+</pre></div>
+</div>
 <p>Node Template can be imported using the Rancher Node Template ID</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import rancher2:index/nodeTemplate:NodeTemplate foo <span class="p">&amp;</span>lt<span class="p">;</span>node_template_id<span class="p">&amp;</span>gt<span class="p">;</span>
 </pre></div>
@@ -8739,6 +9117,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>engine_opt</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Engine options for the node template (map)</p></li>
 <li><p><strong>engine_registry_mirrors</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – Engine registry mirror for the node template (list)</p></li>
 <li><p><strong>engine_storage_driver</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Engine storage driver for the node template (string)</p></li>
+<li><p><strong>hetzner_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'NodeTemplateHetznerConfigArgs'</em><em>]</em><em>]</em>) – Hetzner config for the Node Template (list maxitems:1)</p></li>
 <li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Labels for Node Template object (map)</p></li>
 <li><p><strong>linode_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'NodeTemplateLinodeConfigArgs'</em><em>]</em><em>]</em>) – Linode config for the Node Template (list maxitems:1)</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Node Template (string)</p></li>
@@ -8751,7 +9130,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <dl class="py method">
 <dt id="pulumi_rancher2.NodeTemplate.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">amazonec2_config</span><span class="p">:</span> <span class="n">Union[NodeTemplateAmazonec2ConfigArgs, Mapping[str, Any], Awaitable[Union[NodeTemplateAmazonec2ConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auth_certificate_authority</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auth_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">azure_config</span><span class="p">:</span> <span class="n">Union[NodeTemplateAzureConfigArgs, Mapping[str, Any], Awaitable[Union[NodeTemplateAzureConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_credential_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">digitalocean_config</span><span class="p">:</span> <span class="n">Union[NodeTemplateDigitaloceanConfigArgs, Mapping[str, Any], Awaitable[Union[NodeTemplateDigitaloceanConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">driver</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">driver_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_env</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_insecure_registries</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_install_url</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_label</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_opt</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_registry_mirrors</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_storage_driver</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">linode_config</span><span class="p">:</span> <span class="n">Union[NodeTemplateLinodeConfigArgs, Mapping[str, Any], Awaitable[Union[NodeTemplateLinodeConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opennebula_config</span><span class="p">:</span> <span class="n">Union[NodeTemplateOpennebulaConfigArgs, Mapping[str, Any], Awaitable[Union[NodeTemplateOpennebulaConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">openstack_config</span><span class="p">:</span> <span class="n">Union[NodeTemplateOpenstackConfigArgs, Mapping[str, Any], Awaitable[Union[NodeTemplateOpenstackConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_internal_ip_address</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vsphere_config</span><span class="p">:</span> <span class="n">Union[NodeTemplateVsphereConfigArgs, Mapping[str, Any], Awaitable[Union[NodeTemplateVsphereConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_rancher2.node_template.NodeTemplate<a class="headerlink" href="#pulumi_rancher2.NodeTemplate.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">amazonec2_config</span><span class="p">:</span> <span class="n">Union[NodeTemplateAmazonec2ConfigArgs, Mapping[str, Any], Awaitable[Union[NodeTemplateAmazonec2ConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auth_certificate_authority</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auth_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">azure_config</span><span class="p">:</span> <span class="n">Union[NodeTemplateAzureConfigArgs, Mapping[str, Any], Awaitable[Union[NodeTemplateAzureConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_credential_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">digitalocean_config</span><span class="p">:</span> <span class="n">Union[NodeTemplateDigitaloceanConfigArgs, Mapping[str, Any], Awaitable[Union[NodeTemplateDigitaloceanConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">driver</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">driver_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_env</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_insecure_registries</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_install_url</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_label</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_opt</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_registry_mirrors</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine_storage_driver</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hetzner_config</span><span class="p">:</span> <span class="n">Union[NodeTemplateHetznerConfigArgs, Mapping[str, Any], Awaitable[Union[NodeTemplateHetznerConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">linode_config</span><span class="p">:</span> <span class="n">Union[NodeTemplateLinodeConfigArgs, Mapping[str, Any], Awaitable[Union[NodeTemplateLinodeConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opennebula_config</span><span class="p">:</span> <span class="n">Union[NodeTemplateOpennebulaConfigArgs, Mapping[str, Any], Awaitable[Union[NodeTemplateOpennebulaConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">openstack_config</span><span class="p">:</span> <span class="n">Union[NodeTemplateOpenstackConfigArgs, Mapping[str, Any], Awaitable[Union[NodeTemplateOpenstackConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_internal_ip_address</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vsphere_config</span><span class="p">:</span> <span class="n">Union[NodeTemplateVsphereConfigArgs, Mapping[str, Any], Awaitable[Union[NodeTemplateVsphereConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_rancher2.node_template.NodeTemplate<a class="headerlink" href="#pulumi_rancher2.NodeTemplate.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing NodeTemplate resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -8777,6 +9156,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>engine_opt</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Engine options for the node template (map)</p></li>
 <li><p><strong>engine_registry_mirrors</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – Engine registry mirror for the node template (list)</p></li>
 <li><p><strong>engine_storage_driver</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Engine storage driver for the node template (string)</p></li>
+<li><p><strong>hetzner_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'NodeTemplateHetznerConfigArgs'</em><em>]</em><em>]</em>) – Hetzner config for the Node Template (list maxitems:1)</p></li>
 <li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Labels for Node Template object (map)</p></li>
 <li><p><strong>linode_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'NodeTemplateLinodeConfigArgs'</em><em>]</em><em>]</em>) – Linode config for the Node Template (list maxitems:1)</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Node Template (string)</p></li>
@@ -8889,6 +9269,12 @@ properties used to qualify the lookup.</p>
 <dt id="pulumi_rancher2.NodeTemplate.engine_storage_driver">
 <em class="property">property </em><code class="sig-name descname">engine_storage_driver</code><a class="headerlink" href="#pulumi_rancher2.NodeTemplate.engine_storage_driver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Engine storage driver for the node template (string)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_rancher2.NodeTemplate.hetzner_config">
+<em class="property">property </em><code class="sig-name descname">hetzner_config</code><a class="headerlink" href="#pulumi_rancher2.NodeTemplate.hetzner_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hetzner config for the Node Template (list maxitems:1)</p>
 </dd></dl>
 
 <dl class="py method">
@@ -11778,6 +12164,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>cluster_id</strong> (<em>str</em>) – Cluster ID to config Etcd Backup (string)</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – The name of the Etcd Backup (string)</p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_rancher2.get_global_dns_provider">
+<code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_global_dns_provider</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_rancher2.get_global_dns_provider.AwaitableGetGlobalDnsProviderResult<a class="headerlink" href="#pulumi_rancher2.get_global_dns_provider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Rancher V2 Global DNS Provider data source. Use this data source to retrieve information about a Rancher v2 global DNS provider</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_global_dns_provider</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the global DNS provider (string)</p>
 </dd>
 </dl>
 </dd></dl>

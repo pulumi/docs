@@ -41,6 +41,8 @@ A Pulumi package for creating and managing rancher2 resources.
     <li><a href="clustersync" title="ClusterSync"><span class="symbol resource"></span>ClusterSync</a></li>
     <li><a href="clustertemplate" title="ClusterTemplate"><span class="symbol resource"></span>ClusterTemplate</a></li>
     <li><a href="etcdbackup" title="EtcdBackup"><span class="symbol resource"></span>EtcdBackup</a></li>
+    <li><a href="globaldns" title="GlobalDns"><span class="symbol resource"></span>GlobalDns</a></li>
+    <li><a href="globaldnsprovider" title="GlobalDnsProvider"><span class="symbol resource"></span>GlobalDnsProvider</a></li>
     <li><a href="globalrolebinding" title="GlobalRoleBinding"><span class="symbol resource"></span>GlobalRoleBinding</a></li>
     <li><a href="multiclusterapp" title="MultiClusterApp"><span class="symbol resource"></span>MultiClusterApp</a></li>
     <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
@@ -79,6 +81,7 @@ A Pulumi package for creating and managing rancher2 resources.
     <li><a href="getclusterscan" title="GetClusterScan"><span class="symbol function"></span>GetClusterScan</a></li>
     <li><a href="getclustertemplate" title="GetClusterTemplate"><span class="symbol function"></span>GetClusterTemplate</a></li>
     <li><a href="getetcdbackup" title="GetEtcdBackup"><span class="symbol function"></span>GetEtcdBackup</a></li>
+    <li><a href="getglobaldnsprovider" title="GetGlobalDnsProvider"><span class="symbol function"></span>GetGlobalDnsProvider</a></li>
     <li><a href="getglobalrolebinding" title="GetGlobalRoleBinding"><span class="symbol function"></span>GetGlobalRoleBinding</a></li>
     <li><a href="getmulticlusterapp" title="GetMultiClusterApp"><span class="symbol function"></span>GetMultiClusterApp</a></li>
     <li><a href="getnamespace" title="GetNamespace"><span class="symbol function"></span>GetNamespace</a></li>
@@ -109,7 +112,7 @@ A Pulumi package for creating and managing rancher2 resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/rancher/terraform-provider-rancher2).</dd>
 	<dt>Version</dt>
-	<dd>2.5.3</dd>
+	<dd>2.6.0</dd>
 </dl>
 
 
