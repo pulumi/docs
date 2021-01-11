@@ -122,7 +122,6 @@ const foo = pulumi.output(rancher2.getNodeTemplate({
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -130,27 +129,24 @@ The following arguments are supported:
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Node Template (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="useinternalipaddress_csharp">
 <a href="#useinternalipaddress_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Internal<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine storage driver for the node template (bool)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -159,27 +155,24 @@ The following arguments are supported:
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Node Template (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="useinternalipaddress_go">
 <a href="#useinternalipaddress_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Internal<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine storage driver for the node template (bool)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -188,27 +181,24 @@ The following arguments are supported:
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Node Template (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="useinternalipaddress_nodejs">
 <a href="#useinternalipaddress_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Internal<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine storage driver for the node template (bool)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -217,30 +207,24 @@ The following arguments are supported:
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Node Template (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="use_internal_ip_address_python">
 <a href="#use_internal_ip_address_python" style="color: inherit; text-decoration: inherit;">use_<wbr>internal_<wbr>ip_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine storage driver for the node template (bool)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -251,7 +235,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -259,169 +242,153 @@ The following output properties are available:
             title="">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}(Computed) Annotations for Node Template object (map)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="cloudcredentialid_csharp">
 <a href="#cloudcredentialid_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Credential<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Cloud credential ID for the Node Template. Required from Rancher v2.2.x (string)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Description for the Node Template (string)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="driver_csharp">
 <a href="#driver_csharp" style="color: inherit; text-decoration: inherit;">Driver</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The driver of the node template (string)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="engineenv_csharp">
 <a href="#engineenv_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Env</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine environment for the node template (string)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="engineinsecureregistries_csharp">
 <a href="#engineinsecureregistries_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Insecure<wbr>Registries</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}(Computed) Insecure registry for the node template (list)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="engineinstallurl_csharp">
 <a href="#engineinstallurl_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Install<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Docker engine install URL for the node template (string)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="enginelabel_csharp">
 <a href="#enginelabel_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine label for the node template (string)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="engineopt_csharp">
 <a href="#engineopt_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Opt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine options for the node template (map)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="engineregistrymirrors_csharp">
 <a href="#engineregistrymirrors_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Registry<wbr>Mirrors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine registry mirror for the node template (list)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="enginestoragedriver_csharp">
 <a href="#enginestoragedriver_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Storage<wbr>Driver</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine storage driver for the node template (string)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}(Computed) Labels for Node Template object (map)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="useinternalipaddress_csharp">
 <a href="#useinternalipaddress_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Internal<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine storage driver for the node template (bool)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -430,169 +397,153 @@ The following output properties are available:
             title="">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}(Computed) Annotations for Node Template object (map)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="cloudcredentialid_go">
 <a href="#cloudcredentialid_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Credential<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Cloud credential ID for the Node Template. Required from Rancher v2.2.x (string)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Description for the Node Template (string)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="driver_go">
 <a href="#driver_go" style="color: inherit; text-decoration: inherit;">Driver</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The driver of the node template (string)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="engineenv_go">
 <a href="#engineenv_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Env</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine environment for the node template (string)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="engineinsecureregistries_go">
 <a href="#engineinsecureregistries_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Insecure<wbr>Registries</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}(Computed) Insecure registry for the node template (list)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="engineinstallurl_go">
 <a href="#engineinstallurl_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Install<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Docker engine install URL for the node template (string)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="enginelabel_go">
 <a href="#enginelabel_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine label for the node template (string)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="engineopt_go">
 <a href="#engineopt_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Opt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine options for the node template (map)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="engineregistrymirrors_go">
 <a href="#engineregistrymirrors_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Registry<wbr>Mirrors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine registry mirror for the node template (list)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="enginestoragedriver_go">
 <a href="#enginestoragedriver_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Storage<wbr>Driver</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine storage driver for the node template (string)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}(Computed) Labels for Node Template object (map)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="useinternalipaddress_go">
 <a href="#useinternalipaddress_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Internal<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine storage driver for the node template (bool)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -601,169 +552,153 @@ The following output properties are available:
             title="">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}(Computed) Annotations for Node Template object (map)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="cloudcredentialid_nodejs">
 <a href="#cloudcredentialid_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Credential<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Cloud credential ID for the Node Template. Required from Rancher v2.2.x (string)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Description for the Node Template (string)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="driver_nodejs">
 <a href="#driver_nodejs" style="color: inherit; text-decoration: inherit;">driver</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The driver of the node template (string)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="engineenv_nodejs">
 <a href="#engineenv_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Env</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine environment for the node template (string)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="engineinsecureregistries_nodejs">
 <a href="#engineinsecureregistries_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Insecure<wbr>Registries</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}(Computed) Insecure registry for the node template (list)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="engineinstallurl_nodejs">
 <a href="#engineinstallurl_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Install<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Docker engine install URL for the node template (string)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="enginelabel_nodejs">
 <a href="#enginelabel_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine label for the node template (string)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="engineopt_nodejs">
 <a href="#engineopt_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Opt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine options for the node template (map)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="engineregistrymirrors_nodejs">
 <a href="#engineregistrymirrors_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Registry<wbr>Mirrors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine registry mirror for the node template (list)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="enginestoragedriver_nodejs">
 <a href="#enginestoragedriver_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Storage<wbr>Driver</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine storage driver for the node template (string)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}(Computed) Labels for Node Template object (map)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="useinternalipaddress_nodejs">
 <a href="#useinternalipaddress_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Internal<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine storage driver for the node template (bool)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -772,172 +707,153 @@ The following output properties are available:
             title="">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) Annotations for Node Template object (map)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="cloud_credential_id_python">
 <a href="#cloud_credential_id_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>credential_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) Cloud credential ID for the Node Template. Required from Rancher v2.2.x (string)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) Description for the Node Template (string)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="driver_python">
 <a href="#driver_python" style="color: inherit; text-decoration: inherit;">driver</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The driver of the node template (string)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="engine_env_python">
 <a href="#engine_env_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>env</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine environment for the node template (string)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="engine_insecure_registries_python">
 <a href="#engine_insecure_registries_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>insecure_<wbr>registries</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}(Computed) Insecure registry for the node template (list)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="engine_install_url_python">
 <a href="#engine_install_url_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>install_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) Docker engine install URL for the node template (string)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="engine_label_python">
 <a href="#engine_label_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine label for the node template (string)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="engine_opt_python">
 <a href="#engine_opt_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>opt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine options for the node template (map)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="engine_registry_mirrors_python">
 <a href="#engine_registry_mirrors_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>registry_<wbr>mirrors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine registry mirror for the node template (list)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="engine_storage_driver_python">
 <a href="#engine_storage_driver_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>storage_<wbr>driver</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine storage driver for the node template (string)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(Computed) Labels for Node Template object (map)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="use_internal_ip_address_python">
 <a href="#use_internal_ip_address_python" style="color: inherit; text-decoration: inherit;">use_<wbr>internal_<wbr>ip_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Computed) Engine storage driver for the node template (bool)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
