@@ -1501,6 +1501,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="hitsdb_csharp">
+<a href="#hitsdb_csharp" style="color: inherit; text-decoration: inherit;">Hitsdb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="kms_csharp">
 <a href="#kms_csharp" style="color: inherit; text-decoration: inherit;">Kms</a>
 </span>
@@ -2022,6 +2031,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="gpdb_go">
 <a href="#gpdb_go" style="color: inherit; text-decoration: inherit;">Gpdb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hitsdb_go">
+<a href="#hitsdb_go" style="color: inherit; text-decoration: inherit;">Hitsdb</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2557,6 +2575,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="hitsdb_nodejs">
+<a href="#hitsdb_nodejs" style="color: inherit; text-decoration: inherit;">hitsdb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="kms_nodejs">
 <a href="#kms_nodejs" style="color: inherit; text-decoration: inherit;">kms</a>
 </span>
@@ -3078,6 +3105,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="gpdb_python">
 <a href="#gpdb_python" style="color: inherit; text-decoration: inherit;">gpdb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hitsdb_python">
+<a href="#hitsdb_python" style="color: inherit; text-decoration: inherit;">hitsdb</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

@@ -670,6 +670,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="config_csharp">
+<a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The config the instance.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="createtime_csharp">
 <a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
 </span>
@@ -790,6 +800,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="serviceversion_csharp">
+<a href="#serviceversion_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The kafka openSource version of the instance.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="spectype_csharp">
 <a href="#spectype_csharp" style="color: inherit; text-decoration: inherit;">Spec<wbr>Type</a>
 </span>
@@ -844,6 +864,16 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="config_go">
+<a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The config the instance.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="createtime_go">
@@ -966,6 +996,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="serviceversion_go">
+<a href="#serviceversion_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The kafka openSource version of the instance.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="spectype_go">
 <a href="#spectype_go" style="color: inherit; text-decoration: inherit;">Spec<wbr>Type</a>
 </span>
@@ -1020,6 +1060,16 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="config_nodejs">
+<a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The config the instance.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="createtime_nodejs">
@@ -1142,6 +1192,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="serviceversion_nodejs">
+<a href="#serviceversion_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The kafka openSource version of the instance.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="spectype_nodejs">
 <a href="#spectype_nodejs" style="color: inherit; text-decoration: inherit;">spec<wbr>Type</a>
 </span>
@@ -1196,6 +1256,16 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="config_python">
+<a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The config the instance.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="create_time_python">
@@ -1315,6 +1385,16 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The current status of the instance. -1: unknown status, 0: wait deploy, 1: initializing, 2: preparing, 3 starting, 5: in service, 7: wait upgrade, 8: upgrading, 10: released, 15: freeze, 101: deploy error, 102: upgrade error.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="service_version_python">
+<a href="#service_version_python" style="color: inherit; text-decoration: inherit;">service_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The kafka openSource version of the instance.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">

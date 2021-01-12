@@ -67,6 +67,7 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="ros/" title="ros"><span class="symbol module"></span>ros</a></li>
     <li><a href="sag/" title="sag"><span class="symbol module"></span>sag</a></li>
     <li><a href="slb/" title="slb"><span class="symbol module"></span>slb</a></li>
+    <li><a href="tsdb/" title="tsdb"><span class="symbol module"></span>tsdb</a></li>
     <li><a href="vpc/" title="vpc"><span class="symbol module"></span>vpc</a></li>
     <li><a href="vpn/" title="vpn"><span class="symbol module"></span>vpn</a></li>
     <li><a href="waf/" title="waf"><span class="symbol module"></span>waf</a></li>
@@ -96,7 +97,7 @@ A Pulumi package for creating and managing AliCloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.30.0</dd>
+	<dd>2.31.0</dd>
 </dl>
 
 
