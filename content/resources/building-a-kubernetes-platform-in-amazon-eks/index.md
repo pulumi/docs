@@ -85,8 +85,6 @@ main:
     learn:
         - How-to provision a production-ready Amazon EKS cluster with key features enabled using Pulumi
         - Provisioning the aws-load-balancer-controller to automate ingress creation
-        - How to provision the external-dns add-on to automate DNS entry for Ingress resources
-        - How to install cert-manager to automate the creation of TLS certificates for applications
         - Install an example application to show the end-to-end user experience for users.
 form:
     hubspot_form_id: "013aa0b8-7aac-4de9-912e-c0f22e53eff2"
