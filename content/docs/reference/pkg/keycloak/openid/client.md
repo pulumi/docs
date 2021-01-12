@@ -1,8 +1,8 @@
 
 ---
 title: "Client"
-title_tag: "Resource Client | Module openid | Package Keycloak"
-meta_desc: "Explore the Client resource of the openid module, including examples, input properties, output properties, lookup functions, and supporting types. Allows for creating and managing Keycloak clients that use the OpenID Connect protocol."
+title_tag: "keycloak.openid.Client"
+meta_desc: "Documentation for the keycloak.openid.Client resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -142,19 +142,19 @@ const openidClient = new keycloak.openid.Client("openidClient", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/openid/#Client">Client</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/openid/#ClientArgs">ClientArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/openid/#Client">Client</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/openid/#ClientArgs">ClientArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/openid/#pulumi_keycloak.openid.Client">Client</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_token_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authentication_flow_binding_overrides</span><span class="p">:</span> <span class="nx">Optional[ClientAuthenticationFlowBindingOverridesArgs]</span> = None<span class="p">, </span><span class="nx">authorization</span><span class="p">:</span> <span class="nx">Optional[ClientAuthorizationArgs]</span> = None<span class="p">, </span><span class="nx">base_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consent_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">direct_access_grants_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">exclude_session_state_from_auth_response</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">full_scope_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">implicit_flow_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">login_theme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pkce_code_challenge_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_accounts_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">standard_flow_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">valid_redirect_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">web_origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/openid/#pulumi_keycloak.openid.Client">Client</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_token_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authentication_flow_binding_overrides</span><span class="p">:</span> <span class="nx">Optional[ClientAuthenticationFlowBindingOverridesArgs]</span> = None<span class="p">, </span><span class="nx">authorization</span><span class="p">:</span> <span class="nx">Optional[ClientAuthorizationArgs]</span> = None<span class="p">, </span><span class="nx">base_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_offline_session_idle_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_offline_session_max_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_session_idle_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_session_max_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consent_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">direct_access_grants_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">exclude_session_state_from_auth_response</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">full_scope_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">implicit_flow_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">login_theme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pkce_code_challenge_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_accounts_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">standard_flow_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">valid_redirect_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">web_origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#Client">NewClient</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#ClientArgs">ClientArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#Client">Client</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#Client">NewClient</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#ClientArgs">ClientArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#Client">Client</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.Client.html">Client</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.ClientArgs.html">ClientArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.Client.html">Client</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.ClientArgs.html">ClientArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -165,7 +165,7 @@ const openidClient = new keycloak.openid.Client("openidClient", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -234,7 +234,7 @@ const openidClient = new keycloak.openid.Client("openidClient", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -273,7 +273,7 @@ const openidClient = new keycloak.openid.Client("openidClient", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -314,7 +314,6 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -322,271 +321,286 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="accesstype_csharp">
 <a href="#accesstype_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of client, which can be one of the following:
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client ID for this client, referenced in the URI during authentication and in issued tokens.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="realmid_csharp">
 <a href="#realmid_csharp" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this client is attached to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="accesstokenlifespan_csharp">
 <a href="#accesstokenlifespan_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token<wbr>Lifespan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time in seconds before an access token expires. This will override the default for the realm.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adminurl_csharp">
 <a href="#adminurl_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to the admin interface of the client.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authenticationflowbindingoverrides_csharp">
 <a href="#authenticationflowbindingoverrides_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Flow<wbr>Binding<wbr>Overrides</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clientauthenticationflowbindingoverrides">Client<wbr>Authentication<wbr>Flow<wbr>Binding<wbr>Overrides<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Override realm authentication flow bindings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authorization_csharp">
 <a href="#authorization_csharp" style="color: inherit; text-decoration: inherit;">Authorization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clientauthorization">Client<wbr>Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When this block is present, fine-grained authorization will be enabled for this client. The client's `access_type` must be `CONFIDENTIAL`, and `service_accounts_enabled` must be `true`. This block has the following arguments:
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="baseurl_csharp">
 <a href="#baseurl_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default URL to use when the auth server needs to redirect or link back to the client.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientofflinesessionidletimeout_csharp">
+<a href="#clientofflinesessionidletimeout_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Offline<wbr>Session<wbr>Idle<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time a client session is allowed to be idle before it expires. Tokens are invalidated when a client session is expired. If not set it uses the standard SSO Session Idle value.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientofflinesessionmaxlifespan_csharp">
+<a href="#clientofflinesessionmaxlifespan_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Offline<wbr>Session<wbr>Max<wbr>Lifespan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Max time before a client session is expired. Tokens are invalidated when a client session is expired. If not set, it uses the standard SSO Session Max value.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clientsecret_csharp">
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret for clients with an `access_type` of `CONFIDENTIAL` or `BEARER-ONLY`. This value is sensitive and should be treated with the same care as a password. If omitted, this will be generated by Keycloak.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientsessionidletimeout_csharp">
+<a href="#clientsessionidletimeout_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Session<wbr>Idle<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time a client offline session is allowed to be idle before it expires. Offline tokens are invalidated when a client offline session is expired. If not set it uses the Offline Session Idle value.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientsessionmaxlifespan_csharp">
+<a href="#clientsessionmaxlifespan_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Session<wbr>Max<wbr>Lifespan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Max time before a client offline session is expired. Offline tokens are invalidated when a client offline session is expired. If not set, it uses the Offline Session Max value.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="consentrequired_csharp">
 <a href="#consentrequired_csharp" style="color: inherit; text-decoration: inherit;">Consent<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, users have to consent to client access.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this client in the GUI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="directaccessgrantsenabled_csharp">
 <a href="#directaccessgrantsenabled_csharp" style="color: inherit; text-decoration: inherit;">Direct<wbr>Access<wbr>Grants<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Resource Owner Password Grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `false`, this client will not be able to initiate a login or obtain access tokens. Defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="excludesessionstatefromauthresponse_csharp">
 <a href="#excludesessionstatefromauthresponse_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Session<wbr>State<wbr>From<wbr>Auth<wbr>Response</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the parameter `session_state` will not be included in OpenID Connect Authentication Response.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fullscopeallowed_csharp">
 <a href="#fullscopeallowed_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Scope<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow to include all roles mappings in the access token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="implicitflowenabled_csharp">
 <a href="#implicitflowenabled_csharp" style="color: inherit; text-decoration: inherit;">Implicit<wbr>Flow<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Implicit Grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logintheme_csharp">
 <a href="#logintheme_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Theme</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client login theme. This will override the default theme for the realm.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of this client in the GUI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pkcecodechallengemethod_csharp">
 <a href="#pkcecodechallengemethod_csharp" style="color: inherit; text-decoration: inherit;">Pkce<wbr>Code<wbr>Challenge<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The challenge method to use for Proof Key for Code Exchange. Can be either `plain` or `S256` or set to empty value ``.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rooturl_csharp">
 <a href="#rooturl_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When specified, this URL is prepended to any relative URLs found within `valid_redirect_uris`, `web_origins`, and `admin_url`. NOTE: Due to limitations in the Keycloak API, when the `root_url` attribute is used, the `valid_redirect_uris`, `web_origins`, and `admin_url` attributes will be required.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serviceaccountsenabled_csharp">
 <a href="#serviceaccountsenabled_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Accounts<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Client Credentials grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="standardflowenabled_csharp">
 <a href="#standardflowenabled_csharp" style="color: inherit; text-decoration: inherit;">Standard<wbr>Flow<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Authorization Code Grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="validredirecturis_csharp">
 <a href="#validredirecturis_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Redirect<wbr>Uris</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of valid URIs a browser is permitted to redirect to after a successful login or logout. Simple
 wildcards in the form of an asterisk can be used here. This attribute must be set if either `standard_flow_enabled` or `implicit_flow_enabled`
 is set to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weborigins_csharp">
 <a href="#weborigins_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Origins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of allowed CORS origins. `+` can be used to permit all valid redirect URIs, and `*` can be used to permit all origins.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -595,271 +609,286 @@ is set to `true`.
             title="Required">
         <span id="accesstype_go">
 <a href="#accesstype_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of client, which can be one of the following:
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client ID for this client, referenced in the URI during authentication and in issued tokens.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="realmid_go">
 <a href="#realmid_go" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this client is attached to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="accesstokenlifespan_go">
 <a href="#accesstokenlifespan_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token<wbr>Lifespan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time in seconds before an access token expires. This will override the default for the realm.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adminurl_go">
 <a href="#adminurl_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to the admin interface of the client.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authenticationflowbindingoverrides_go">
 <a href="#authenticationflowbindingoverrides_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Flow<wbr>Binding<wbr>Overrides</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clientauthenticationflowbindingoverrides">Client<wbr>Authentication<wbr>Flow<wbr>Binding<wbr>Overrides</a></span>
     </dt>
     <dd>{{% md %}}Override realm authentication flow bindings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authorization_go">
 <a href="#authorization_go" style="color: inherit; text-decoration: inherit;">Authorization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clientauthorization">Client<wbr>Authorization</a></span>
     </dt>
     <dd>{{% md %}}When this block is present, fine-grained authorization will be enabled for this client. The client's `access_type` must be `CONFIDENTIAL`, and `service_accounts_enabled` must be `true`. This block has the following arguments:
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="baseurl_go">
 <a href="#baseurl_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default URL to use when the auth server needs to redirect or link back to the client.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientofflinesessionidletimeout_go">
+<a href="#clientofflinesessionidletimeout_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Offline<wbr>Session<wbr>Idle<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time a client session is allowed to be idle before it expires. Tokens are invalidated when a client session is expired. If not set it uses the standard SSO Session Idle value.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientofflinesessionmaxlifespan_go">
+<a href="#clientofflinesessionmaxlifespan_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Offline<wbr>Session<wbr>Max<wbr>Lifespan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Max time before a client session is expired. Tokens are invalidated when a client session is expired. If not set, it uses the standard SSO Session Max value.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clientsecret_go">
 <a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret for clients with an `access_type` of `CONFIDENTIAL` or `BEARER-ONLY`. This value is sensitive and should be treated with the same care as a password. If omitted, this will be generated by Keycloak.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientsessionidletimeout_go">
+<a href="#clientsessionidletimeout_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Session<wbr>Idle<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time a client offline session is allowed to be idle before it expires. Offline tokens are invalidated when a client offline session is expired. If not set it uses the Offline Session Idle value.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientsessionmaxlifespan_go">
+<a href="#clientsessionmaxlifespan_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Session<wbr>Max<wbr>Lifespan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Max time before a client offline session is expired. Offline tokens are invalidated when a client offline session is expired. If not set, it uses the Offline Session Max value.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="consentrequired_go">
 <a href="#consentrequired_go" style="color: inherit; text-decoration: inherit;">Consent<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, users have to consent to client access.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this client in the GUI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="directaccessgrantsenabled_go">
 <a href="#directaccessgrantsenabled_go" style="color: inherit; text-decoration: inherit;">Direct<wbr>Access<wbr>Grants<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Resource Owner Password Grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `false`, this client will not be able to initiate a login or obtain access tokens. Defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="excludesessionstatefromauthresponse_go">
 <a href="#excludesessionstatefromauthresponse_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Session<wbr>State<wbr>From<wbr>Auth<wbr>Response</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the parameter `session_state` will not be included in OpenID Connect Authentication Response.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fullscopeallowed_go">
 <a href="#fullscopeallowed_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Scope<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow to include all roles mappings in the access token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="implicitflowenabled_go">
 <a href="#implicitflowenabled_go" style="color: inherit; text-decoration: inherit;">Implicit<wbr>Flow<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Implicit Grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logintheme_go">
 <a href="#logintheme_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Theme</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client login theme. This will override the default theme for the realm.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of this client in the GUI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pkcecodechallengemethod_go">
 <a href="#pkcecodechallengemethod_go" style="color: inherit; text-decoration: inherit;">Pkce<wbr>Code<wbr>Challenge<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The challenge method to use for Proof Key for Code Exchange. Can be either `plain` or `S256` or set to empty value ``.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rooturl_go">
 <a href="#rooturl_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When specified, this URL is prepended to any relative URLs found within `valid_redirect_uris`, `web_origins`, and `admin_url`. NOTE: Due to limitations in the Keycloak API, when the `root_url` attribute is used, the `valid_redirect_uris`, `web_origins`, and `admin_url` attributes will be required.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serviceaccountsenabled_go">
 <a href="#serviceaccountsenabled_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Accounts<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Client Credentials grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="standardflowenabled_go">
 <a href="#standardflowenabled_go" style="color: inherit; text-decoration: inherit;">Standard<wbr>Flow<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Authorization Code Grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="validredirecturis_go">
 <a href="#validredirecturis_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Redirect<wbr>Uris</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of valid URIs a browser is permitted to redirect to after a successful login or logout. Simple
 wildcards in the form of an asterisk can be used here. This attribute must be set if either `standard_flow_enabled` or `implicit_flow_enabled`
 is set to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weborigins_go">
 <a href="#weborigins_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Origins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of allowed CORS origins. `+` can be used to permit all valid redirect URIs, and `*` can be used to permit all origins.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -868,271 +897,286 @@ is set to `true`.
             title="Required">
         <span id="accesstype_nodejs">
 <a href="#accesstype_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of client, which can be one of the following:
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client ID for this client, referenced in the URI during authentication and in issued tokens.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="realmid_nodejs">
 <a href="#realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this client is attached to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="accesstokenlifespan_nodejs">
 <a href="#accesstokenlifespan_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token<wbr>Lifespan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time in seconds before an access token expires. This will override the default for the realm.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adminurl_nodejs">
 <a href="#adminurl_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to the admin interface of the client.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authenticationflowbindingoverrides_nodejs">
 <a href="#authenticationflowbindingoverrides_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Flow<wbr>Binding<wbr>Overrides</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clientauthenticationflowbindingoverrides">Client<wbr>Authentication<wbr>Flow<wbr>Binding<wbr>Overrides</a></span>
     </dt>
     <dd>{{% md %}}Override realm authentication flow bindings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authorization_nodejs">
 <a href="#authorization_nodejs" style="color: inherit; text-decoration: inherit;">authorization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clientauthorization">Client<wbr>Authorization</a></span>
     </dt>
     <dd>{{% md %}}When this block is present, fine-grained authorization will be enabled for this client. The client's `access_type` must be `CONFIDENTIAL`, and `service_accounts_enabled` must be `true`. This block has the following arguments:
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="baseurl_nodejs">
 <a href="#baseurl_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default URL to use when the auth server needs to redirect or link back to the client.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientofflinesessionidletimeout_nodejs">
+<a href="#clientofflinesessionidletimeout_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Offline<wbr>Session<wbr>Idle<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time a client session is allowed to be idle before it expires. Tokens are invalidated when a client session is expired. If not set it uses the standard SSO Session Idle value.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientofflinesessionmaxlifespan_nodejs">
+<a href="#clientofflinesessionmaxlifespan_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Offline<wbr>Session<wbr>Max<wbr>Lifespan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Max time before a client session is expired. Tokens are invalidated when a client session is expired. If not set, it uses the standard SSO Session Max value.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clientsecret_nodejs">
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret for clients with an `access_type` of `CONFIDENTIAL` or `BEARER-ONLY`. This value is sensitive and should be treated with the same care as a password. If omitted, this will be generated by Keycloak.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientsessionidletimeout_nodejs">
+<a href="#clientsessionidletimeout_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Session<wbr>Idle<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time a client offline session is allowed to be idle before it expires. Offline tokens are invalidated when a client offline session is expired. If not set it uses the Offline Session Idle value.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientsessionmaxlifespan_nodejs">
+<a href="#clientsessionmaxlifespan_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Session<wbr>Max<wbr>Lifespan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Max time before a client offline session is expired. Offline tokens are invalidated when a client offline session is expired. If not set, it uses the Offline Session Max value.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="consentrequired_nodejs">
 <a href="#consentrequired_nodejs" style="color: inherit; text-decoration: inherit;">consent<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, users have to consent to client access.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this client in the GUI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="directaccessgrantsenabled_nodejs">
 <a href="#directaccessgrantsenabled_nodejs" style="color: inherit; text-decoration: inherit;">direct<wbr>Access<wbr>Grants<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Resource Owner Password Grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `false`, this client will not be able to initiate a login or obtain access tokens. Defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="excludesessionstatefromauthresponse_nodejs">
 <a href="#excludesessionstatefromauthresponse_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Session<wbr>State<wbr>From<wbr>Auth<wbr>Response</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, the parameter `session_state` will not be included in OpenID Connect Authentication Response.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fullscopeallowed_nodejs">
 <a href="#fullscopeallowed_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Scope<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow to include all roles mappings in the access token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="implicitflowenabled_nodejs">
 <a href="#implicitflowenabled_nodejs" style="color: inherit; text-decoration: inherit;">implicit<wbr>Flow<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Implicit Grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logintheme_nodejs">
 <a href="#logintheme_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Theme</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client login theme. This will override the default theme for the realm.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of this client in the GUI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pkcecodechallengemethod_nodejs">
 <a href="#pkcecodechallengemethod_nodejs" style="color: inherit; text-decoration: inherit;">pkce<wbr>Code<wbr>Challenge<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The challenge method to use for Proof Key for Code Exchange. Can be either `plain` or `S256` or set to empty value ``.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rooturl_nodejs">
 <a href="#rooturl_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When specified, this URL is prepended to any relative URLs found within `valid_redirect_uris`, `web_origins`, and `admin_url`. NOTE: Due to limitations in the Keycloak API, when the `root_url` attribute is used, the `valid_redirect_uris`, `web_origins`, and `admin_url` attributes will be required.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serviceaccountsenabled_nodejs">
 <a href="#serviceaccountsenabled_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Accounts<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Client Credentials grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="standardflowenabled_nodejs">
 <a href="#standardflowenabled_nodejs" style="color: inherit; text-decoration: inherit;">standard<wbr>Flow<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Authorization Code Grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="validredirecturis_nodejs">
 <a href="#validredirecturis_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Redirect<wbr>Uris</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of valid URIs a browser is permitted to redirect to after a successful login or logout. Simple
 wildcards in the form of an asterisk can be used here. This attribute must be set if either `standard_flow_enabled` or `implicit_flow_enabled`
 is set to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weborigins_nodejs">
 <a href="#weborigins_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Origins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of allowed CORS origins. `+` can be used to permit all valid redirect URIs, and `*` can be used to permit all origins.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1141,280 +1185,291 @@ is set to `true`.
             title="Required">
         <span id="access_type_python">
 <a href="#access_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of client, which can be one of the following:
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Client ID for this client, referenced in the URI during authentication and in issued tokens.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="realm_id_python">
 <a href="#realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The realm this client is attached to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="access_token_lifespan_python">
 <a href="#access_token_lifespan_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token_<wbr>lifespan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time in seconds before an access token expires. This will override the default for the realm.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="admin_url_python">
 <a href="#admin_url_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL to the admin interface of the client.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authentication_flow_binding_overrides_python">
 <a href="#authentication_flow_binding_overrides_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>flow_<wbr>binding_<wbr>overrides</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clientauthenticationflowbindingoverrides">Client<wbr>Authentication<wbr>Flow<wbr>Binding<wbr>Overrides<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Override realm authentication flow bindings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authorization_python">
 <a href="#authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clientauthorization">Client<wbr>Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When this block is present, fine-grained authorization will be enabled for this client. The client's `access_type` must be `CONFIDENTIAL`, and `service_accounts_enabled` must be `true`. This block has the following arguments:
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="base_url_python">
 <a href="#base_url_python" style="color: inherit; text-decoration: inherit;">base_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default URL to use when the auth server needs to redirect or link back to the client.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="client_offline_session_idle_timeout_python">
+<a href="#client_offline_session_idle_timeout_python" style="color: inherit; text-decoration: inherit;">client_<wbr>offline_<wbr>session_<wbr>idle_<wbr>timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Time a client session is allowed to be idle before it expires. Tokens are invalidated when a client session is expired. If not set it uses the standard SSO Session Idle value.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="client_offline_session_max_lifespan_python">
+<a href="#client_offline_session_max_lifespan_python" style="color: inherit; text-decoration: inherit;">client_<wbr>offline_<wbr>session_<wbr>max_<wbr>lifespan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Max time before a client session is expired. Tokens are invalidated when a client session is expired. If not set, it uses the standard SSO Session Max value.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="client_secret_python">
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secret for clients with an `access_type` of `CONFIDENTIAL` or `BEARER-ONLY`. This value is sensitive and should be treated with the same care as a password. If omitted, this will be generated by Keycloak.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="client_session_idle_timeout_python">
+<a href="#client_session_idle_timeout_python" style="color: inherit; text-decoration: inherit;">client_<wbr>session_<wbr>idle_<wbr>timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Time a client offline session is allowed to be idle before it expires. Offline tokens are invalidated when a client offline session is expired. If not set it uses the Offline Session Idle value.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="client_session_max_lifespan_python">
+<a href="#client_session_max_lifespan_python" style="color: inherit; text-decoration: inherit;">client_<wbr>session_<wbr>max_<wbr>lifespan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Max time before a client offline session is expired. Offline tokens are invalidated when a client offline session is expired. If not set, it uses the Offline Session Max value.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="consent_required_python">
 <a href="#consent_required_python" style="color: inherit; text-decoration: inherit;">consent_<wbr>required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, users have to consent to client access.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of this client in the GUI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="direct_access_grants_enabled_python">
 <a href="#direct_access_grants_enabled_python" style="color: inherit; text-decoration: inherit;">direct_<wbr>access_<wbr>grants_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Resource Owner Password Grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `false`, this client will not be able to initiate a login or obtain access tokens. Defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclude_session_state_from_auth_response_python">
 <a href="#exclude_session_state_from_auth_response_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>session_<wbr>state_<wbr>from_<wbr>auth_<wbr>response</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the parameter `session_state` will not be included in OpenID Connect Authentication Response.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="full_scope_allowed_python">
 <a href="#full_scope_allowed_python" style="color: inherit; text-decoration: inherit;">full_<wbr>scope_<wbr>allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow to include all roles mappings in the access token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="implicit_flow_enabled_python">
 <a href="#implicit_flow_enabled_python" style="color: inherit; text-decoration: inherit;">implicit_<wbr>flow_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Implicit Grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="login_theme_python">
 <a href="#login_theme_python" style="color: inherit; text-decoration: inherit;">login_<wbr>theme</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client login theme. This will override the default theme for the realm.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of this client in the GUI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pkce_code_challenge_method_python">
 <a href="#pkce_code_challenge_method_python" style="color: inherit; text-decoration: inherit;">pkce_<wbr>code_<wbr>challenge_<wbr>method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The challenge method to use for Proof Key for Code Exchange. Can be either `plain` or `S256` or set to empty value ``.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="root_url_python">
 <a href="#root_url_python" style="color: inherit; text-decoration: inherit;">root_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When specified, this URL is prepended to any relative URLs found within `valid_redirect_uris`, `web_origins`, and `admin_url`. NOTE: Due to limitations in the Keycloak API, when the `root_url` attribute is used, the `valid_redirect_uris`, `web_origins`, and `admin_url` attributes will be required.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="service_accounts_enabled_python">
 <a href="#service_accounts_enabled_python" style="color: inherit; text-decoration: inherit;">service_<wbr>accounts_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Client Credentials grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="standard_flow_enabled_python">
 <a href="#standard_flow_enabled_python" style="color: inherit; text-decoration: inherit;">standard_<wbr>flow_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Authorization Code Grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="valid_redirect_uris_python">
 <a href="#valid_redirect_uris_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>redirect_<wbr>uris</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of valid URIs a browser is permitted to redirect to after a successful login or logout. Simple
 wildcards in the form of an asterisk can be used here. This attribute must be set if either `standard_flow_enabled` or `implicit_flow_enabled`
 is set to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="web_origins_python">
 <a href="#web_origins_python" style="color: inherit; text-decoration: inherit;">web_<wbr>origins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of allowed CORS origins. `+` can be used to permit all valid redirect URIs, and `*` can be used to permit all origins.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Client resource produces the following output properties:
-
 
 
 
@@ -1425,37 +1480,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="resourceserverid_csharp">
 <a href="#resourceserverid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Server<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) When authorization is enabled for this client, this attribute is the unique ID for the client (the same value as the `.id` attribute).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="serviceaccountuserid_csharp">
 <a href="#serviceaccountuserid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>User<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) When service accounts are enabled for this client, this attribute is the unique ID for the Keycloak user that represents this service account.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1464,37 +1515,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="resourceserverid_go">
 <a href="#resourceserverid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Server<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) When authorization is enabled for this client, this attribute is the unique ID for the client (the same value as the `.id` attribute).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="serviceaccountuserid_go">
 <a href="#serviceaccountuserid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>User<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) When service accounts are enabled for this client, this attribute is the unique ID for the Keycloak user that represents this service account.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1503,37 +1550,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="resourceserverid_nodejs">
 <a href="#resourceserverid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Server<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) When authorization is enabled for this client, this attribute is the unique ID for the client (the same value as the `.id` attribute).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="serviceaccountuserid_nodejs">
 <a href="#serviceaccountuserid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>User<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) When service accounts are enabled for this client, this attribute is the unique ID for the Keycloak user that represents this service account.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1542,40 +1585,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="resource_server_id_python">
 <a href="#resource_server_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>server_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) When authorization is enabled for this client, this attribute is the unique ID for the client (the same value as the `.id` attribute).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="service_account_user_id_python">
 <a href="#service_account_user_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>user_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) When service accounts are enabled for this client, this attribute is the unique ID for the Keycloak user that represents this service account.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1585,20 +1621,20 @@ Get an existing Client resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/openid/#ClientState">ClientState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/openid/#Client">Client</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/openid/#ClientState">ClientState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/openid/#Client">Client</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_token_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authentication_flow_binding_overrides</span><span class="p">:</span> <span class="nx">Optional[ClientAuthenticationFlowBindingOverridesArgs]</span> = None<span class="p">, </span><span class="nx">authorization</span><span class="p">:</span> <span class="nx">Optional[ClientAuthorizationArgs]</span> = None<span class="p">, </span><span class="nx">base_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consent_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">direct_access_grants_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">exclude_session_state_from_auth_response</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">full_scope_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">implicit_flow_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">login_theme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pkce_code_challenge_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_server_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account_user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_accounts_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">standard_flow_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">valid_redirect_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">web_origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Client</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_token_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authentication_flow_binding_overrides</span><span class="p">:</span> <span class="nx">Optional[ClientAuthenticationFlowBindingOverridesArgs]</span> = None<span class="p">, </span><span class="nx">authorization</span><span class="p">:</span> <span class="nx">Optional[ClientAuthorizationArgs]</span> = None<span class="p">, </span><span class="nx">base_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_offline_session_idle_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_offline_session_max_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_session_idle_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_session_max_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consent_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">direct_access_grants_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">exclude_session_state_from_auth_response</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">full_scope_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">implicit_flow_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">login_theme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pkce_code_challenge_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_server_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account_user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_accounts_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">standard_flow_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">valid_redirect_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">web_origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Client</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClient<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#ClientState">ClientState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#Client">Client</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClient<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#ClientState">ClientState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#Client">Client</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.Client.html">Client</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.ClientState.html">ClientState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.Client.html">Client</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.ClientState.html">ClientState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1700,7 +1736,6 @@ Get an existing Client resource's state with the given name, ID, and optional ex
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1708,293 +1743,306 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_accesstokenlifespan_csharp">
 <a href="#state_accesstokenlifespan_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token<wbr>Lifespan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time in seconds before an access token expires. This will override the default for the realm.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_accesstype_csharp">
 <a href="#state_accesstype_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of client, which can be one of the following:
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_adminurl_csharp">
 <a href="#state_adminurl_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to the admin interface of the client.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authenticationflowbindingoverrides_csharp">
 <a href="#state_authenticationflowbindingoverrides_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Flow<wbr>Binding<wbr>Overrides</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clientauthenticationflowbindingoverrides">Client<wbr>Authentication<wbr>Flow<wbr>Binding<wbr>Overrides<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Override realm authentication flow bindings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authorization_csharp">
 <a href="#state_authorization_csharp" style="color: inherit; text-decoration: inherit;">Authorization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clientauthorization">Client<wbr>Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When this block is present, fine-grained authorization will be enabled for this client. The client's `access_type` must be `CONFIDENTIAL`, and `service_accounts_enabled` must be `true`. This block has the following arguments:
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_baseurl_csharp">
 <a href="#state_baseurl_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default URL to use when the auth server needs to redirect or link back to the client.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_clientid_csharp">
 <a href="#state_clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client ID for this client, referenced in the URI during authentication and in issued tokens.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_clientofflinesessionidletimeout_csharp">
+<a href="#state_clientofflinesessionidletimeout_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Offline<wbr>Session<wbr>Idle<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time a client session is allowed to be idle before it expires. Tokens are invalidated when a client session is expired. If not set it uses the standard SSO Session Idle value.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_clientofflinesessionmaxlifespan_csharp">
+<a href="#state_clientofflinesessionmaxlifespan_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Offline<wbr>Session<wbr>Max<wbr>Lifespan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Max time before a client session is expired. Tokens are invalidated when a client session is expired. If not set, it uses the standard SSO Session Max value.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_clientsecret_csharp">
 <a href="#state_clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret for clients with an `access_type` of `CONFIDENTIAL` or `BEARER-ONLY`. This value is sensitive and should be treated with the same care as a password. If omitted, this will be generated by Keycloak.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_clientsessionidletimeout_csharp">
+<a href="#state_clientsessionidletimeout_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Session<wbr>Idle<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time a client offline session is allowed to be idle before it expires. Offline tokens are invalidated when a client offline session is expired. If not set it uses the Offline Session Idle value.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_clientsessionmaxlifespan_csharp">
+<a href="#state_clientsessionmaxlifespan_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Session<wbr>Max<wbr>Lifespan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Max time before a client offline session is expired. Offline tokens are invalidated when a client offline session is expired. If not set, it uses the Offline Session Max value.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_consentrequired_csharp">
 <a href="#state_consentrequired_csharp" style="color: inherit; text-decoration: inherit;">Consent<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, users have to consent to client access.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this client in the GUI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_directaccessgrantsenabled_csharp">
 <a href="#state_directaccessgrantsenabled_csharp" style="color: inherit; text-decoration: inherit;">Direct<wbr>Access<wbr>Grants<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Resource Owner Password Grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `false`, this client will not be able to initiate a login or obtain access tokens. Defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_excludesessionstatefromauthresponse_csharp">
 <a href="#state_excludesessionstatefromauthresponse_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Session<wbr>State<wbr>From<wbr>Auth<wbr>Response</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the parameter `session_state` will not be included in OpenID Connect Authentication Response.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fullscopeallowed_csharp">
 <a href="#state_fullscopeallowed_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Scope<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow to include all roles mappings in the access token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_implicitflowenabled_csharp">
 <a href="#state_implicitflowenabled_csharp" style="color: inherit; text-decoration: inherit;">Implicit<wbr>Flow<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Implicit Grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_logintheme_csharp">
 <a href="#state_logintheme_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Theme</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client login theme. This will override the default theme for the realm.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of this client in the GUI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pkcecodechallengemethod_csharp">
 <a href="#state_pkcecodechallengemethod_csharp" style="color: inherit; text-decoration: inherit;">Pkce<wbr>Code<wbr>Challenge<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The challenge method to use for Proof Key for Code Exchange. Can be either `plain` or `S256` or set to empty value ``.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_realmid_csharp">
 <a href="#state_realmid_csharp" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this client is attached to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourceserverid_csharp">
 <a href="#state_resourceserverid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Server<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) When authorization is enabled for this client, this attribute is the unique ID for the client (the same value as the `.id` attribute).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rooturl_csharp">
 <a href="#state_rooturl_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When specified, this URL is prepended to any relative URLs found within `valid_redirect_uris`, `web_origins`, and `admin_url`. NOTE: Due to limitations in the Keycloak API, when the `root_url` attribute is used, the `valid_redirect_uris`, `web_origins`, and `admin_url` attributes will be required.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountuserid_csharp">
 <a href="#state_serviceaccountuserid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>User<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) When service accounts are enabled for this client, this attribute is the unique ID for the Keycloak user that represents this service account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountsenabled_csharp">
 <a href="#state_serviceaccountsenabled_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Accounts<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Client Credentials grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_standardflowenabled_csharp">
 <a href="#state_standardflowenabled_csharp" style="color: inherit; text-decoration: inherit;">Standard<wbr>Flow<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Authorization Code Grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_validredirecturis_csharp">
 <a href="#state_validredirecturis_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Redirect<wbr>Uris</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of valid URIs a browser is permitted to redirect to after a successful login or logout. Simple
 wildcards in the form of an asterisk can be used here. This attribute must be set if either `standard_flow_enabled` or `implicit_flow_enabled`
 is set to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_weborigins_csharp">
 <a href="#state_weborigins_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Origins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of allowed CORS origins. `+` can be used to permit all valid redirect URIs, and `*` can be used to permit all origins.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2003,293 +2051,306 @@ is set to `true`.
             title="Optional">
         <span id="state_accesstokenlifespan_go">
 <a href="#state_accesstokenlifespan_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token<wbr>Lifespan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time in seconds before an access token expires. This will override the default for the realm.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_accesstype_go">
 <a href="#state_accesstype_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of client, which can be one of the following:
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_adminurl_go">
 <a href="#state_adminurl_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to the admin interface of the client.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authenticationflowbindingoverrides_go">
 <a href="#state_authenticationflowbindingoverrides_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Flow<wbr>Binding<wbr>Overrides</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clientauthenticationflowbindingoverrides">Client<wbr>Authentication<wbr>Flow<wbr>Binding<wbr>Overrides</a></span>
     </dt>
     <dd>{{% md %}}Override realm authentication flow bindings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authorization_go">
 <a href="#state_authorization_go" style="color: inherit; text-decoration: inherit;">Authorization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clientauthorization">Client<wbr>Authorization</a></span>
     </dt>
     <dd>{{% md %}}When this block is present, fine-grained authorization will be enabled for this client. The client's `access_type` must be `CONFIDENTIAL`, and `service_accounts_enabled` must be `true`. This block has the following arguments:
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_baseurl_go">
 <a href="#state_baseurl_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default URL to use when the auth server needs to redirect or link back to the client.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_clientid_go">
 <a href="#state_clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client ID for this client, referenced in the URI during authentication and in issued tokens.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_clientofflinesessionidletimeout_go">
+<a href="#state_clientofflinesessionidletimeout_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Offline<wbr>Session<wbr>Idle<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time a client session is allowed to be idle before it expires. Tokens are invalidated when a client session is expired. If not set it uses the standard SSO Session Idle value.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_clientofflinesessionmaxlifespan_go">
+<a href="#state_clientofflinesessionmaxlifespan_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Offline<wbr>Session<wbr>Max<wbr>Lifespan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Max time before a client session is expired. Tokens are invalidated when a client session is expired. If not set, it uses the standard SSO Session Max value.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_clientsecret_go">
 <a href="#state_clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret for clients with an `access_type` of `CONFIDENTIAL` or `BEARER-ONLY`. This value is sensitive and should be treated with the same care as a password. If omitted, this will be generated by Keycloak.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_clientsessionidletimeout_go">
+<a href="#state_clientsessionidletimeout_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Session<wbr>Idle<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time a client offline session is allowed to be idle before it expires. Offline tokens are invalidated when a client offline session is expired. If not set it uses the Offline Session Idle value.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_clientsessionmaxlifespan_go">
+<a href="#state_clientsessionmaxlifespan_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Session<wbr>Max<wbr>Lifespan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Max time before a client offline session is expired. Offline tokens are invalidated when a client offline session is expired. If not set, it uses the Offline Session Max value.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_consentrequired_go">
 <a href="#state_consentrequired_go" style="color: inherit; text-decoration: inherit;">Consent<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, users have to consent to client access.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this client in the GUI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_directaccessgrantsenabled_go">
 <a href="#state_directaccessgrantsenabled_go" style="color: inherit; text-decoration: inherit;">Direct<wbr>Access<wbr>Grants<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Resource Owner Password Grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `false`, this client will not be able to initiate a login or obtain access tokens. Defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_excludesessionstatefromauthresponse_go">
 <a href="#state_excludesessionstatefromauthresponse_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Session<wbr>State<wbr>From<wbr>Auth<wbr>Response</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the parameter `session_state` will not be included in OpenID Connect Authentication Response.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fullscopeallowed_go">
 <a href="#state_fullscopeallowed_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Scope<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow to include all roles mappings in the access token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_implicitflowenabled_go">
 <a href="#state_implicitflowenabled_go" style="color: inherit; text-decoration: inherit;">Implicit<wbr>Flow<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Implicit Grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_logintheme_go">
 <a href="#state_logintheme_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Theme</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client login theme. This will override the default theme for the realm.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of this client in the GUI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pkcecodechallengemethod_go">
 <a href="#state_pkcecodechallengemethod_go" style="color: inherit; text-decoration: inherit;">Pkce<wbr>Code<wbr>Challenge<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The challenge method to use for Proof Key for Code Exchange. Can be either `plain` or `S256` or set to empty value ``.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_realmid_go">
 <a href="#state_realmid_go" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this client is attached to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourceserverid_go">
 <a href="#state_resourceserverid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Server<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) When authorization is enabled for this client, this attribute is the unique ID for the client (the same value as the `.id` attribute).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rooturl_go">
 <a href="#state_rooturl_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When specified, this URL is prepended to any relative URLs found within `valid_redirect_uris`, `web_origins`, and `admin_url`. NOTE: Due to limitations in the Keycloak API, when the `root_url` attribute is used, the `valid_redirect_uris`, `web_origins`, and `admin_url` attributes will be required.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountuserid_go">
 <a href="#state_serviceaccountuserid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>User<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) When service accounts are enabled for this client, this attribute is the unique ID for the Keycloak user that represents this service account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountsenabled_go">
 <a href="#state_serviceaccountsenabled_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Accounts<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Client Credentials grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_standardflowenabled_go">
 <a href="#state_standardflowenabled_go" style="color: inherit; text-decoration: inherit;">Standard<wbr>Flow<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Authorization Code Grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_validredirecturis_go">
 <a href="#state_validredirecturis_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Redirect<wbr>Uris</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of valid URIs a browser is permitted to redirect to after a successful login or logout. Simple
 wildcards in the form of an asterisk can be used here. This attribute must be set if either `standard_flow_enabled` or `implicit_flow_enabled`
 is set to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_weborigins_go">
 <a href="#state_weborigins_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Origins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of allowed CORS origins. `+` can be used to permit all valid redirect URIs, and `*` can be used to permit all origins.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2298,293 +2359,306 @@ is set to `true`.
             title="Optional">
         <span id="state_accesstokenlifespan_nodejs">
 <a href="#state_accesstokenlifespan_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token<wbr>Lifespan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time in seconds before an access token expires. This will override the default for the realm.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_accesstype_nodejs">
 <a href="#state_accesstype_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of client, which can be one of the following:
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_adminurl_nodejs">
 <a href="#state_adminurl_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to the admin interface of the client.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authenticationflowbindingoverrides_nodejs">
 <a href="#state_authenticationflowbindingoverrides_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Flow<wbr>Binding<wbr>Overrides</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clientauthenticationflowbindingoverrides">Client<wbr>Authentication<wbr>Flow<wbr>Binding<wbr>Overrides</a></span>
     </dt>
     <dd>{{% md %}}Override realm authentication flow bindings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authorization_nodejs">
 <a href="#state_authorization_nodejs" style="color: inherit; text-decoration: inherit;">authorization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clientauthorization">Client<wbr>Authorization</a></span>
     </dt>
     <dd>{{% md %}}When this block is present, fine-grained authorization will be enabled for this client. The client's `access_type` must be `CONFIDENTIAL`, and `service_accounts_enabled` must be `true`. This block has the following arguments:
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_baseurl_nodejs">
 <a href="#state_baseurl_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default URL to use when the auth server needs to redirect or link back to the client.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_clientid_nodejs">
 <a href="#state_clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client ID for this client, referenced in the URI during authentication and in issued tokens.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_clientofflinesessionidletimeout_nodejs">
+<a href="#state_clientofflinesessionidletimeout_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Offline<wbr>Session<wbr>Idle<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time a client session is allowed to be idle before it expires. Tokens are invalidated when a client session is expired. If not set it uses the standard SSO Session Idle value.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_clientofflinesessionmaxlifespan_nodejs">
+<a href="#state_clientofflinesessionmaxlifespan_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Offline<wbr>Session<wbr>Max<wbr>Lifespan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Max time before a client session is expired. Tokens are invalidated when a client session is expired. If not set, it uses the standard SSO Session Max value.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_clientsecret_nodejs">
 <a href="#state_clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret for clients with an `access_type` of `CONFIDENTIAL` or `BEARER-ONLY`. This value is sensitive and should be treated with the same care as a password. If omitted, this will be generated by Keycloak.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_clientsessionidletimeout_nodejs">
+<a href="#state_clientsessionidletimeout_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Session<wbr>Idle<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time a client offline session is allowed to be idle before it expires. Offline tokens are invalidated when a client offline session is expired. If not set it uses the Offline Session Idle value.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_clientsessionmaxlifespan_nodejs">
+<a href="#state_clientsessionmaxlifespan_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Session<wbr>Max<wbr>Lifespan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Max time before a client offline session is expired. Offline tokens are invalidated when a client offline session is expired. If not set, it uses the Offline Session Max value.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_consentrequired_nodejs">
 <a href="#state_consentrequired_nodejs" style="color: inherit; text-decoration: inherit;">consent<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, users have to consent to client access.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this client in the GUI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_directaccessgrantsenabled_nodejs">
 <a href="#state_directaccessgrantsenabled_nodejs" style="color: inherit; text-decoration: inherit;">direct<wbr>Access<wbr>Grants<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Resource Owner Password Grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `false`, this client will not be able to initiate a login or obtain access tokens. Defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_excludesessionstatefromauthresponse_nodejs">
 <a href="#state_excludesessionstatefromauthresponse_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Session<wbr>State<wbr>From<wbr>Auth<wbr>Response</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, the parameter `session_state` will not be included in OpenID Connect Authentication Response.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fullscopeallowed_nodejs">
 <a href="#state_fullscopeallowed_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Scope<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow to include all roles mappings in the access token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_implicitflowenabled_nodejs">
 <a href="#state_implicitflowenabled_nodejs" style="color: inherit; text-decoration: inherit;">implicit<wbr>Flow<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Implicit Grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_logintheme_nodejs">
 <a href="#state_logintheme_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Theme</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client login theme. This will override the default theme for the realm.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of this client in the GUI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pkcecodechallengemethod_nodejs">
 <a href="#state_pkcecodechallengemethod_nodejs" style="color: inherit; text-decoration: inherit;">pkce<wbr>Code<wbr>Challenge<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The challenge method to use for Proof Key for Code Exchange. Can be either `plain` or `S256` or set to empty value ``.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_realmid_nodejs">
 <a href="#state_realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this client is attached to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourceserverid_nodejs">
 <a href="#state_resourceserverid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Server<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) When authorization is enabled for this client, this attribute is the unique ID for the client (the same value as the `.id` attribute).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rooturl_nodejs">
 <a href="#state_rooturl_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When specified, this URL is prepended to any relative URLs found within `valid_redirect_uris`, `web_origins`, and `admin_url`. NOTE: Due to limitations in the Keycloak API, when the `root_url` attribute is used, the `valid_redirect_uris`, `web_origins`, and `admin_url` attributes will be required.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountuserid_nodejs">
 <a href="#state_serviceaccountuserid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>User<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) When service accounts are enabled for this client, this attribute is the unique ID for the Keycloak user that represents this service account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountsenabled_nodejs">
 <a href="#state_serviceaccountsenabled_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Accounts<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Client Credentials grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_standardflowenabled_nodejs">
 <a href="#state_standardflowenabled_nodejs" style="color: inherit; text-decoration: inherit;">standard<wbr>Flow<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Authorization Code Grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_validredirecturis_nodejs">
 <a href="#state_validredirecturis_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Redirect<wbr>Uris</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of valid URIs a browser is permitted to redirect to after a successful login or logout. Simple
 wildcards in the form of an asterisk can be used here. This attribute must be set if either `standard_flow_enabled` or `implicit_flow_enabled`
 is set to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_weborigins_nodejs">
 <a href="#state_weborigins_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Origins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of allowed CORS origins. `+` can be used to permit all valid redirect URIs, and `*` can be used to permit all origins.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2593,290 +2667,304 @@ is set to `true`.
             title="Optional">
         <span id="state_access_token_lifespan_python">
 <a href="#state_access_token_lifespan_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token_<wbr>lifespan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time in seconds before an access token expires. This will override the default for the realm.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_access_type_python">
 <a href="#state_access_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of client, which can be one of the following:
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_admin_url_python">
 <a href="#state_admin_url_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL to the admin interface of the client.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authentication_flow_binding_overrides_python">
 <a href="#state_authentication_flow_binding_overrides_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>flow_<wbr>binding_<wbr>overrides</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clientauthenticationflowbindingoverrides">Client<wbr>Authentication<wbr>Flow<wbr>Binding<wbr>Overrides<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Override realm authentication flow bindings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authorization_python">
 <a href="#state_authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clientauthorization">Client<wbr>Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When this block is present, fine-grained authorization will be enabled for this client. The client's `access_type` must be `CONFIDENTIAL`, and `service_accounts_enabled` must be `true`. This block has the following arguments:
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_base_url_python">
 <a href="#state_base_url_python" style="color: inherit; text-decoration: inherit;">base_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default URL to use when the auth server needs to redirect or link back to the client.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_client_id_python">
 <a href="#state_client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Client ID for this client, referenced in the URI during authentication and in issued tokens.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_client_offline_session_idle_timeout_python">
+<a href="#state_client_offline_session_idle_timeout_python" style="color: inherit; text-decoration: inherit;">client_<wbr>offline_<wbr>session_<wbr>idle_<wbr>timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Time a client session is allowed to be idle before it expires. Tokens are invalidated when a client session is expired. If not set it uses the standard SSO Session Idle value.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_client_offline_session_max_lifespan_python">
+<a href="#state_client_offline_session_max_lifespan_python" style="color: inherit; text-decoration: inherit;">client_<wbr>offline_<wbr>session_<wbr>max_<wbr>lifespan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Max time before a client session is expired. Tokens are invalidated when a client session is expired. If not set, it uses the standard SSO Session Max value.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_client_secret_python">
 <a href="#state_client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secret for clients with an `access_type` of `CONFIDENTIAL` or `BEARER-ONLY`. This value is sensitive and should be treated with the same care as a password. If omitted, this will be generated by Keycloak.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_client_session_idle_timeout_python">
+<a href="#state_client_session_idle_timeout_python" style="color: inherit; text-decoration: inherit;">client_<wbr>session_<wbr>idle_<wbr>timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Time a client offline session is allowed to be idle before it expires. Offline tokens are invalidated when a client offline session is expired. If not set it uses the Offline Session Idle value.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_client_session_max_lifespan_python">
+<a href="#state_client_session_max_lifespan_python" style="color: inherit; text-decoration: inherit;">client_<wbr>session_<wbr>max_<wbr>lifespan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Max time before a client offline session is expired. Offline tokens are invalidated when a client offline session is expired. If not set, it uses the Offline Session Max value.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_consent_required_python">
 <a href="#state_consent_required_python" style="color: inherit; text-decoration: inherit;">consent_<wbr>required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, users have to consent to client access.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of this client in the GUI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_direct_access_grants_enabled_python">
 <a href="#state_direct_access_grants_enabled_python" style="color: inherit; text-decoration: inherit;">direct_<wbr>access_<wbr>grants_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Resource Owner Password Grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `false`, this client will not be able to initiate a login or obtain access tokens. Defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_exclude_session_state_from_auth_response_python">
 <a href="#state_exclude_session_state_from_auth_response_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>session_<wbr>state_<wbr>from_<wbr>auth_<wbr>response</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the parameter `session_state` will not be included in OpenID Connect Authentication Response.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_full_scope_allowed_python">
 <a href="#state_full_scope_allowed_python" style="color: inherit; text-decoration: inherit;">full_<wbr>scope_<wbr>allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow to include all roles mappings in the access token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_implicit_flow_enabled_python">
 <a href="#state_implicit_flow_enabled_python" style="color: inherit; text-decoration: inherit;">implicit_<wbr>flow_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Implicit Grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_login_theme_python">
 <a href="#state_login_theme_python" style="color: inherit; text-decoration: inherit;">login_<wbr>theme</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client login theme. This will override the default theme for the realm.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of this client in the GUI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pkce_code_challenge_method_python">
 <a href="#state_pkce_code_challenge_method_python" style="color: inherit; text-decoration: inherit;">pkce_<wbr>code_<wbr>challenge_<wbr>method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The challenge method to use for Proof Key for Code Exchange. Can be either `plain` or `S256` or set to empty value ``.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_realm_id_python">
 <a href="#state_realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The realm this client is attached to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resource_server_id_python">
 <a href="#state_resource_server_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>server_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) When authorization is enabled for this client, this attribute is the unique ID for the client (the same value as the `.id` attribute).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_root_url_python">
 <a href="#state_root_url_python" style="color: inherit; text-decoration: inherit;">root_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When specified, this URL is prepended to any relative URLs found within `valid_redirect_uris`, `web_origins`, and `admin_url`. NOTE: Due to limitations in the Keycloak API, when the `root_url` attribute is used, the `valid_redirect_uris`, `web_origins`, and `admin_url` attributes will be required.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_service_account_user_id_python">
 <a href="#state_service_account_user_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>user_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) When service accounts are enabled for this client, this attribute is the unique ID for the Keycloak user that represents this service account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_service_accounts_enabled_python">
 <a href="#state_service_accounts_enabled_python" style="color: inherit; text-decoration: inherit;">service_<wbr>accounts_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Client Credentials grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_standard_flow_enabled_python">
 <a href="#state_standard_flow_enabled_python" style="color: inherit; text-decoration: inherit;">standard_<wbr>flow_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Authorization Code Grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_valid_redirect_uris_python">
 <a href="#state_valid_redirect_uris_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>redirect_<wbr>uris</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of valid URIs a browser is permitted to redirect to after a successful login or logout. Simple
 wildcards in the form of an asterisk can be used here. This attribute must be set if either `standard_flow_enabled` or `implicit_flow_enabled`
 is set to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_web_origins_python">
 <a href="#state_web_origins_python" style="color: inherit; text-decoration: inherit;">web_<wbr>origins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of allowed CORS origins. `+` can be used to permit all valid redirect URIs, and `*` can be used to permit all origins.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -2885,11 +2973,8 @@ is set to `true`.
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="clientauthenticationflowbindingoverrides">Client<wbr>Authentication<wbr>Flow<wbr>Binding<wbr>Overrides</h4>
@@ -2900,11 +2985,10 @@ is set to `true`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#ClientAuthenticationFlowBindingOverridesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#ClientAuthenticationFlowBindingOverridesOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.Inputs.ClientAuthenticationFlowBindingOverridesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.Outputs.ClientAuthenticationFlowBindingOverrides.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2914,27 +2998,24 @@ is set to `true`.
             title="Optional">
         <span id="browserid_csharp">
 <a href="#browserid_csharp" style="color: inherit; text-decoration: inherit;">Browser<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Browser flow id, (flow needs to exist)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="directgrantid_csharp">
 <a href="#directgrantid_csharp" style="color: inherit; text-decoration: inherit;">Direct<wbr>Grant<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Direct grant flow id (flow needs to exist)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2943,27 +3024,24 @@ is set to `true`.
             title="Optional">
         <span id="browserid_go">
 <a href="#browserid_go" style="color: inherit; text-decoration: inherit;">Browser<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Browser flow id, (flow needs to exist)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="directgrantid_go">
 <a href="#directgrantid_go" style="color: inherit; text-decoration: inherit;">Direct<wbr>Grant<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Direct grant flow id (flow needs to exist)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2972,27 +3050,24 @@ is set to `true`.
             title="Optional">
         <span id="browserid_nodejs">
 <a href="#browserid_nodejs" style="color: inherit; text-decoration: inherit;">browser<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Browser flow id, (flow needs to exist)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="directgrantid_nodejs">
 <a href="#directgrantid_nodejs" style="color: inherit; text-decoration: inherit;">direct<wbr>Grant<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Direct grant flow id (flow needs to exist)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3001,30 +3076,24 @@ is set to `true`.
             title="Optional">
         <span id="browser_id_python">
 <a href="#browser_id_python" style="color: inherit; text-decoration: inherit;">browser_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Browser flow id, (flow needs to exist)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="direct_grant_id_python">
 <a href="#direct_grant_id_python" style="color: inherit; text-decoration: inherit;">direct_<wbr>grant_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Direct grant flow id (flow needs to exist)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="clientauthorization">Client<wbr>Authorization</h4>
 {{% choosable language nodejs %}}
@@ -3034,11 +3103,10 @@ is set to `true`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#ClientAuthorizationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/openid?tab=doc#ClientAuthorizationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.Inputs.ClientAuthorizationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.OpenId.Outputs.ClientAuthorization.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3048,38 +3116,44 @@ is set to `true`.
             title="Required">
         <span id="policyenforcementmode_csharp">
 <a href="#policyenforcementmode_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Enforcement<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dictates how policies are enforced when evaluating authorization requests. Can be one of `ENFORCING`, `PERMISSIVE`, or `DISABLED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowremoteresourcemanagement_csharp">
 <a href="#allowremoteresourcemanagement_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Remote<wbr>Resource<wbr>Management</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, resources can be managed remotely by the resource server. Defaults to `false`.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="decisionstrategy_csharp">
+<a href="#decisionstrategy_csharp" style="color: inherit; text-decoration: inherit;">Decision<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Dictates how the policies associated with a given permission are evaluated and how a final decision is obtained. Could be one of `AFFIRMATIVE`, `CONSENSUS`, or `UNANIMOUS`. Applies to permissions.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="keepdefaults_csharp">
 <a href="#keepdefaults_csharp" style="color: inherit; text-decoration: inherit;">Keep<wbr>Defaults</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, defaults set by Keycloak will be respected. Defaults to `false`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3088,38 +3162,44 @@ is set to `true`.
             title="Required">
         <span id="policyenforcementmode_go">
 <a href="#policyenforcementmode_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Enforcement<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dictates how policies are enforced when evaluating authorization requests. Can be one of `ENFORCING`, `PERMISSIVE`, or `DISABLED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowremoteresourcemanagement_go">
 <a href="#allowremoteresourcemanagement_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Remote<wbr>Resource<wbr>Management</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, resources can be managed remotely by the resource server. Defaults to `false`.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="decisionstrategy_go">
+<a href="#decisionstrategy_go" style="color: inherit; text-decoration: inherit;">Decision<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Dictates how the policies associated with a given permission are evaluated and how a final decision is obtained. Could be one of `AFFIRMATIVE`, `CONSENSUS`, or `UNANIMOUS`. Applies to permissions.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="keepdefaults_go">
 <a href="#keepdefaults_go" style="color: inherit; text-decoration: inherit;">Keep<wbr>Defaults</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, defaults set by Keycloak will be respected. Defaults to `false`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3128,38 +3208,44 @@ is set to `true`.
             title="Required">
         <span id="policyenforcementmode_nodejs">
 <a href="#policyenforcementmode_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Enforcement<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dictates how policies are enforced when evaluating authorization requests. Can be one of `ENFORCING`, `PERMISSIVE`, or `DISABLED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowremoteresourcemanagement_nodejs">
 <a href="#allowremoteresourcemanagement_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Remote<wbr>Resource<wbr>Management</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, resources can be managed remotely by the resource server. Defaults to `false`.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="decisionstrategy_nodejs">
+<a href="#decisionstrategy_nodejs" style="color: inherit; text-decoration: inherit;">decision<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Dictates how the policies associated with a given permission are evaluated and how a final decision is obtained. Could be one of `AFFIRMATIVE`, `CONSENSUS`, or `UNANIMOUS`. Applies to permissions.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="keepdefaults_nodejs">
 <a href="#keepdefaults_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>Defaults</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, defaults set by Keycloak will be respected. Defaults to `false`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3168,46 +3254,44 @@ is set to `true`.
             title="Required">
         <span id="policy_enforcement_mode_python">
 <a href="#policy_enforcement_mode_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>enforcement_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Dictates how policies are enforced when evaluating authorization requests. Can be one of `ENFORCING`, `PERMISSIVE`, or `DISABLED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allow_remote_resource_management_python">
 <a href="#allow_remote_resource_management_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>remote_<wbr>resource_<wbr>management</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, resources can be managed remotely by the resource server. Defaults to `false`.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="decision_strategy_python">
+<a href="#decision_strategy_python" style="color: inherit; text-decoration: inherit;">decision_<wbr>strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Dictates how the policies associated with a given permission are evaluated and how a final decision is obtained. Could be one of `AFFIRMATIVE`, `CONSENSUS`, or `UNANIMOUS`. Applies to permissions.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="keep_defaults_python">
 <a href="#keep_defaults_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>defaults</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, defaults set by Keycloak will be respected. Defaults to `false`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 ## Import
 
 

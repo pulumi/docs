@@ -21,6 +21,7 @@ Explore the resources and functions of the openid module in the Keycloak package
     <li><a href="clientgrouppolicy" title="ClientGroupPolicy"><span class="symbol resource"></span>ClientGroupPolicy</a></li>
     <li><a href="clientjspolicy" title="ClientJsPolicy"><span class="symbol resource"></span>ClientJsPolicy</a></li>
     <li><a href="clientoptionalscopes" title="ClientOptionalScopes"><span class="symbol resource"></span>ClientOptionalScopes</a></li>
+    <li><a href="clientpermissions" title="ClientPermissions"><span class="symbol resource"></span>ClientPermissions</a></li>
     <li><a href="clientpolicy" title="ClientPolicy"><span class="symbol resource"></span>ClientPolicy</a></li>
     <li><a href="clientrolepolicy" title="ClientRolePolicy"><span class="symbol resource"></span>ClientRolePolicy</a></li>
     <li><a href="clientscope" title="ClientScope"><span class="symbol resource"></span>ClientScope</a></li>
@@ -32,6 +33,7 @@ Explore the resources and functions of the openid module in the Keycloak package
     <li><a href="groupmembershipprotocolmapper" title="GroupMembershipProtocolMapper"><span class="symbol resource"></span>GroupMembershipProtocolMapper</a></li>
     <li><a href="hardcodedclaimprotocolmapper" title="HardcodedClaimProtocolMapper"><span class="symbol resource"></span>HardcodedClaimProtocolMapper</a></li>
     <li><a href="hardcodedroleprotocolmapper" title="HardcodedRoleProtocolMapper"><span class="symbol resource"></span>HardcodedRoleProtocolMapper</a></li>
+    <li><a href="scriptprotocolmapper" title="ScriptProtocolMapper"><span class="symbol resource"></span>ScriptProtocolMapper</a></li>
     <li><a href="userattributeprotocolmapper" title="UserAttributeProtocolMapper"><span class="symbol resource"></span>UserAttributeProtocolMapper</a></li>
     <li><a href="userclientroleprotocolmapper" title="UserClientRoleProtocolMapper"><span class="symbol resource"></span>UserClientRoleProtocolMapper</a></li>
     <li><a href="userpropertyprotocolmapper" title="UserPropertyProtocolMapper"><span class="symbol resource"></span>UserPropertyProtocolMapper</a></li>
@@ -55,7 +57,7 @@ Explore the resources and functions of the openid module in the Keycloak package
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).</dd>
 	<dt>Version</dt>
-	<dd>3.1.1</dd>
+	<dd>3.2.0</dd>
 </dl>
 
 
