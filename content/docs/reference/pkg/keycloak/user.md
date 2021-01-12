@@ -201,7 +201,7 @@ const userWithInitialPassword = new keycloak.User("userWithInitialPassword", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/#User">User</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/#UserArgs">UserArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/#User">User</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/#UserArgs">UserArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -209,11 +209,11 @@ const userWithInitialPassword = new keycloak.User("userWithInitialPassword", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#User">NewUser</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#UserArgs">UserArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#User">User</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#User">NewUser</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#UserArgs">UserArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#User">User</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.User.html">User</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.UserArgs.html">UserArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.User.html">User</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.UserArgs.html">UserArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -224,7 +224,7 @@ const userWithInitialPassword = new keycloak.User("userWithInitialPassword", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -293,7 +293,7 @@ const userWithInitialPassword = new keycloak.User("userWithInitialPassword", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -332,7 +332,7 @@ const userWithInitialPassword = new keycloak.User("userWithInitialPassword", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -373,7 +373,6 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -381,114 +380,103 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
             title="Required">
         <span id="realmid_csharp">
 <a href="#realmid_csharp" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this user belongs to.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique username of this user.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="attributes_csharp">
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map representing attributes for the user
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="email_csharp">
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user's email.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="emailverified_csharp">
 <a href="#emailverified_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Verified</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the email address was validated or not. Default to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When false, this user cannot log in. Defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="federatedidentities_csharp">
 <a href="#federatedidentities_csharp" style="color: inherit; text-decoration: inherit;">Federated<wbr>Identities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userfederatedidentity">List&lt;User<wbr>Federated<wbr>Identity<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="firstname_csharp">
 <a href="#firstname_csharp" style="color: inherit; text-decoration: inherit;">First<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user's first name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="initialpassword_csharp">
 <a href="#initialpassword_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinitialpassword">User<wbr>Initial<wbr>Password<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When given, the user's initial password will be set. This attribute is only respected during initial user creation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastname_csharp">
 <a href="#lastname_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user's last name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -497,114 +485,103 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
             title="Required">
         <span id="realmid_go">
 <a href="#realmid_go" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this user belongs to.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique username of this user.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="attributes_go">
 <a href="#attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map representing attributes for the user
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="email_go">
 <a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user's email.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="emailverified_go">
 <a href="#emailverified_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Verified</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the email address was validated or not. Default to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When false, this user cannot log in. Defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="federatedidentities_go">
 <a href="#federatedidentities_go" style="color: inherit; text-decoration: inherit;">Federated<wbr>Identities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userfederatedidentity">[]User<wbr>Federated<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="firstname_go">
 <a href="#firstname_go" style="color: inherit; text-decoration: inherit;">First<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user's first name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="initialpassword_go">
 <a href="#initialpassword_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinitialpassword">User<wbr>Initial<wbr>Password</a></span>
     </dt>
     <dd>{{% md %}}When given, the user's initial password will be set. This attribute is only respected during initial user creation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastname_go">
 <a href="#lastname_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user's last name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -613,114 +590,103 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
             title="Required">
         <span id="realmid_nodejs">
 <a href="#realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this user belongs to.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique username of this user.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="attributes_nodejs">
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map representing attributes for the user
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="email_nodejs">
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user's email.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="emailverified_nodejs">
 <a href="#emailverified_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Verified</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the email address was validated or not. Default to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When false, this user cannot log in. Defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="federatedidentities_nodejs">
 <a href="#federatedidentities_nodejs" style="color: inherit; text-decoration: inherit;">federated<wbr>Identities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userfederatedidentity">User<wbr>Federated<wbr>Identity[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="firstname_nodejs">
 <a href="#firstname_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user's first name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="initialpassword_nodejs">
 <a href="#initialpassword_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinitialpassword">User<wbr>Initial<wbr>Password</a></span>
     </dt>
     <dd>{{% md %}}When given, the user's initial password will be set. This attribute is only respected during initial user creation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastname_nodejs">
 <a href="#lastname_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user's last name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -729,123 +695,108 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
             title="Required">
         <span id="realm_id_python">
 <a href="#realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The realm this user belongs to.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique username of this user.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="attributes_python">
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map representing attributes for the user
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="email_python">
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user's email.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="email_verified_python">
 <a href="#email_verified_python" style="color: inherit; text-decoration: inherit;">email_<wbr>verified</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the email address was validated or not. Default to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When false, this user cannot log in. Defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="federated_identities_python">
 <a href="#federated_identities_python" style="color: inherit; text-decoration: inherit;">federated_<wbr>identities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userfederatedidentity">Sequence[User<wbr>Federated<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="first_name_python">
 <a href="#first_name_python" style="color: inherit; text-decoration: inherit;">first_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user's first name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="initial_password_python">
 <a href="#initial_password_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinitialpassword">User<wbr>Initial<wbr>Password<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When given, the user's initial password will be set. This attribute is only respected during initial user creation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_name_python">
 <a href="#last_name_python" style="color: inherit; text-decoration: inherit;">last_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user's last name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the User resource produces the following output properties:
-
 
 
 
@@ -856,15 +807,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -873,15 +822,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -890,15 +837,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -907,18 +852,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -928,7 +868,7 @@ Get an existing User resource's state with the given name, ID, and optional extr
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/#UserState">UserState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/#User">User</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/#UserState">UserState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/#User">User</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -937,11 +877,11 @@ Get an existing User resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUser<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#UserState">UserState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#User">User</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUser<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#UserState">UserState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#User">User</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.User.html">User</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak..UserState.html">UserState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.User.html">User</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak..UserState.html">UserState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1043,7 +983,6 @@ Get an existing User resource's state with the given name, ID, and optional extr
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1051,114 +990,103 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_attributes_csharp">
 <a href="#state_attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map representing attributes for the user
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_email_csharp">
 <a href="#state_email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user's email.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_emailverified_csharp">
 <a href="#state_emailverified_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Verified</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the email address was validated or not. Default to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When false, this user cannot log in. Defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_federatedidentities_csharp">
 <a href="#state_federatedidentities_csharp" style="color: inherit; text-decoration: inherit;">Federated<wbr>Identities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userfederatedidentity">List&lt;User<wbr>Federated<wbr>Identity<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_firstname_csharp">
 <a href="#state_firstname_csharp" style="color: inherit; text-decoration: inherit;">First<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user's first name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_initialpassword_csharp">
 <a href="#state_initialpassword_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinitialpassword">User<wbr>Initial<wbr>Password<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When given, the user's initial password will be set. This attribute is only respected during initial user creation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lastname_csharp">
 <a href="#state_lastname_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user's last name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_realmid_csharp">
 <a href="#state_realmid_csharp" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this user belongs to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_username_csharp">
 <a href="#state_username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique username of this user.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1167,114 +1095,103 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_attributes_go">
 <a href="#state_attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map representing attributes for the user
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_email_go">
 <a href="#state_email_go" style="color: inherit; text-decoration: inherit;">Email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user's email.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_emailverified_go">
 <a href="#state_emailverified_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Verified</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the email address was validated or not. Default to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When false, this user cannot log in. Defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_federatedidentities_go">
 <a href="#state_federatedidentities_go" style="color: inherit; text-decoration: inherit;">Federated<wbr>Identities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userfederatedidentity">[]User<wbr>Federated<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_firstname_go">
 <a href="#state_firstname_go" style="color: inherit; text-decoration: inherit;">First<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user's first name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_initialpassword_go">
 <a href="#state_initialpassword_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinitialpassword">User<wbr>Initial<wbr>Password</a></span>
     </dt>
     <dd>{{% md %}}When given, the user's initial password will be set. This attribute is only respected during initial user creation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lastname_go">
 <a href="#state_lastname_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user's last name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_realmid_go">
 <a href="#state_realmid_go" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this user belongs to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_username_go">
 <a href="#state_username_go" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique username of this user.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1283,114 +1200,103 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_attributes_nodejs">
 <a href="#state_attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map representing attributes for the user
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_email_nodejs">
 <a href="#state_email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user's email.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_emailverified_nodejs">
 <a href="#state_emailverified_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Verified</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the email address was validated or not. Default to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When false, this user cannot log in. Defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_federatedidentities_nodejs">
 <a href="#state_federatedidentities_nodejs" style="color: inherit; text-decoration: inherit;">federated<wbr>Identities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userfederatedidentity">User<wbr>Federated<wbr>Identity[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_firstname_nodejs">
 <a href="#state_firstname_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user's first name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_initialpassword_nodejs">
 <a href="#state_initialpassword_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinitialpassword">User<wbr>Initial<wbr>Password</a></span>
     </dt>
     <dd>{{% md %}}When given, the user's initial password will be set. This attribute is only respected during initial user creation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lastname_nodejs">
 <a href="#state_lastname_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user's last name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_realmid_nodejs">
 <a href="#state_realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this user belongs to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_username_nodejs">
 <a href="#state_username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique username of this user.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1399,111 +1305,101 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_attributes_python">
 <a href="#state_attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map representing attributes for the user
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_email_python">
 <a href="#state_email_python" style="color: inherit; text-decoration: inherit;">email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user's email.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_email_verified_python">
 <a href="#state_email_verified_python" style="color: inherit; text-decoration: inherit;">email_<wbr>verified</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the email address was validated or not. Default to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When false, this user cannot log in. Defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_federated_identities_python">
 <a href="#state_federated_identities_python" style="color: inherit; text-decoration: inherit;">federated_<wbr>identities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userfederatedidentity">Sequence[User<wbr>Federated<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_first_name_python">
 <a href="#state_first_name_python" style="color: inherit; text-decoration: inherit;">first_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user's first name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_initial_password_python">
 <a href="#state_initial_password_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinitialpassword">User<wbr>Initial<wbr>Password<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When given, the user's initial password will be set. This attribute is only respected during initial user creation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_last_name_python">
 <a href="#state_last_name_python" style="color: inherit; text-decoration: inherit;">last_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user's last name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_realm_id_python">
 <a href="#state_realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The realm this user belongs to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_username_python">
 <a href="#state_username_python" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique username of this user.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1512,11 +1408,8 @@ The following state arguments are supported:
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="userfederatedidentity">User<wbr>Federated<wbr>Identity</h4>
@@ -1527,11 +1420,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#UserFederatedIdentityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#UserFederatedIdentityOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Inputs.UserFederatedIdentityArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Outputs.UserFederatedIdentity.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1541,38 +1433,34 @@ The following state arguments are supported:
             title="Required">
         <span id="identityprovider_csharp">
 <a href="#identityprovider_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the identity provider
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="userid_csharp">
 <a href="#userid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user defined in the identity provider
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name of the user defined in the identity provider
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1581,38 +1469,34 @@ The following state arguments are supported:
             title="Required">
         <span id="identityprovider_go">
 <a href="#identityprovider_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the identity provider
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="userid_go">
 <a href="#userid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user defined in the identity provider
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name of the user defined in the identity provider
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1621,38 +1505,34 @@ The following state arguments are supported:
             title="Required">
         <span id="identityprovider_nodejs">
 <a href="#identityprovider_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the identity provider
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="userid_nodejs">
 <a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user defined in the identity provider
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name of the user defined in the identity provider
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1661,41 +1541,34 @@ The following state arguments are supported:
             title="Required">
         <span id="identity_provider_python">
 <a href="#identity_provider_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the identity provider
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="user_id_python">
 <a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the user defined in the identity provider
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="user_name_python">
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user name of the user defined in the identity provider
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="userinitialpassword">User<wbr>Initial<wbr>Password</h4>
 {{% choosable language nodejs %}}
@@ -1705,11 +1578,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#UserInitialPasswordArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#UserInitialPasswordOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Inputs.UserInitialPasswordArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Outputs.UserInitialPassword.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1719,27 +1591,24 @@ The following state arguments are supported:
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The initial password.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="temporary_csharp">
 <a href="#temporary_csharp" style="color: inherit; text-decoration: inherit;">Temporary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the initial password is set up for renewal on first use. Default to `false`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1748,27 +1617,24 @@ The following state arguments are supported:
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The initial password.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="temporary_go">
 <a href="#temporary_go" style="color: inherit; text-decoration: inherit;">Temporary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the initial password is set up for renewal on first use. Default to `false`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1777,27 +1643,24 @@ The following state arguments are supported:
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The initial password.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="temporary_nodejs">
 <a href="#temporary_nodejs" style="color: inherit; text-decoration: inherit;">temporary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the initial password is set up for renewal on first use. Default to `false`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1806,35 +1669,24 @@ The following state arguments are supported:
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The initial password.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="temporary_python">
 <a href="#temporary_python" style="color: inherit; text-decoration: inherit;">temporary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the initial password is set up for renewal on first use. Default to `false`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 ## Import
 
 
