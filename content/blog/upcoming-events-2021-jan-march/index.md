@@ -2,7 +2,7 @@
 title: "Upcoming Workshops and Events"
 date: 2021-01-12
 meta_desc: "Events and workshops to introduce infrastructure as code to new users and advanced practitioners."
-meta_image: meta.png
+meta_image: events.png
 authors:
     - sophia-parafina
 tags:
