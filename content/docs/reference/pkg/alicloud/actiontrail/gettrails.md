@@ -108,7 +108,7 @@ export const trailName = _default.then(_default => _default.trails[0].id);
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_trails(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">include_shadow_trails</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTrailsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_trails(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">include_organization_trail</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">include_shadow_trails</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTrailsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -141,6 +141,16 @@ The following arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of ActionTrail Trail IDs. It is the same as trail name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includeorganizationtrail_csharp">
+<a href="#includeorganizationtrail_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Organization<wbr>Trail</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to show organization tracking. Default to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -199,6 +209,16 @@ The following arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="includeorganizationtrail_go">
+<a href="#includeorganizationtrail_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Organization<wbr>Trail</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to show organization tracking. Default to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="includeshadowtrails_go">
 <a href="#includeshadowtrails_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Shadow<wbr>Trails</a>
 </span>
@@ -254,6 +274,16 @@ The following arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="includeorganizationtrail_nodejs">
+<a href="#includeorganizationtrail_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Organization<wbr>Trail</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to show organization tracking. Default to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="includeshadowtrails_nodejs">
 <a href="#includeshadowtrails_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Shadow<wbr>Trails</a>
 </span>
@@ -306,6 +336,16 @@ The following arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of ActionTrail Trail IDs. It is the same as trail name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="include_organization_trail_python">
+<a href="#include_organization_trail_python" style="color: inherit; text-decoration: inherit;">include_<wbr>organization_<wbr>trail</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to show organization tracking. Default to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -413,6 +453,15 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="includeorganizationtrail_csharp">
+<a href="#includeorganizationtrail_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Organization<wbr>Trail</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="includeshadowtrails_csharp">
 <a href="#includeshadowtrails_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Shadow<wbr>Trails</a>
 </span>
@@ -504,6 +553,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A list of ActionTrail Trails. Each element contains the following attributes:
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="includeorganizationtrail_go">
+<a href="#includeorganizationtrail_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Organization<wbr>Trail</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="includeshadowtrails_go">
@@ -599,6 +657,15 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="includeorganizationtrail_nodejs">
+<a href="#includeorganizationtrail_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Organization<wbr>Trail</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="includeshadowtrails_nodejs">
 <a href="#includeshadowtrails_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Shadow<wbr>Trails</a>
 </span>
@@ -692,6 +759,15 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="include_organization_trail_python">
+<a href="#include_organization_trail_python" style="color: inherit; text-decoration: inherit;">include_<wbr>organization_<wbr>trail</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="include_shadow_trails_python">
 <a href="#include_shadow_trails_python" style="color: inherit; text-decoration: inherit;">include_<wbr>shadow_<wbr>trails</a>
 </span>
@@ -772,6 +848,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the ActionTrail Trail. It is the same as trail name.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="mnstopicarn_csharp">
+<a href="#mnstopicarn_csharp" style="color: inherit; text-decoration: inherit;">Mns<wbr>Topic<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Message Service (MNS) topic to which ActionTrail sends messages.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -881,6 +967,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="mnstopicarn_go">
+<a href="#mnstopicarn_go" style="color: inherit; text-decoration: inherit;">Mns<wbr>Topic<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Message Service (MNS) topic to which ActionTrail sends messages.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="ossbucketname_go">
 <a href="#ossbucketname_go" style="color: inherit; text-decoration: inherit;">Oss<wbr>Bucket<wbr>Name</a>
 </span>
@@ -987,6 +1083,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="mnstopicarn_nodejs">
+<a href="#mnstopicarn_nodejs" style="color: inherit; text-decoration: inherit;">mns<wbr>Topic<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Message Service (MNS) topic to which ActionTrail sends messages.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="ossbucketname_nodejs">
 <a href="#ossbucketname_nodejs" style="color: inherit; text-decoration: inherit;">oss<wbr>Bucket<wbr>Name</a>
 </span>
@@ -1090,6 +1196,16 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the ActionTrail Trail. It is the same as trail name.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="mns_topic_arn_python">
+<a href="#mns_topic_arn_python" style="color: inherit; text-decoration: inherit;">mns_<wbr>topic_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Message Service (MNS) topic to which ActionTrail sends messages.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1213,6 +1329,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="mnstopicarn_csharp">
+<a href="#mnstopicarn_csharp" style="color: inherit; text-decoration: inherit;">Mns<wbr>Topic<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Message Service (MNS) topic to which ActionTrail sends messages.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="ossbucketname_csharp">
 <a href="#ossbucketname_csharp" style="color: inherit; text-decoration: inherit;">Oss<wbr>Bucket<wbr>Name</a>
 </span>
@@ -1316,6 +1442,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the ActionTrail Trail. It is the same as trail name.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="mnstopicarn_go">
+<a href="#mnstopicarn_go" style="color: inherit; text-decoration: inherit;">Mns<wbr>Topic<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Message Service (MNS) topic to which ActionTrail sends messages.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1425,6 +1561,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="mnstopicarn_nodejs">
+<a href="#mnstopicarn_nodejs" style="color: inherit; text-decoration: inherit;">mns<wbr>Topic<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Message Service (MNS) topic to which ActionTrail sends messages.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="ossbucketname_nodejs">
 <a href="#ossbucketname_nodejs" style="color: inherit; text-decoration: inherit;">oss<wbr>Bucket<wbr>Name</a>
 </span>
@@ -1528,6 +1674,16 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the ActionTrail Trail. It is the same as trail name.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="mns_topic_arn_python">
+<a href="#mns_topic_arn_python" style="color: inherit; text-decoration: inherit;">mns_<wbr>topic_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Message Service (MNS) topic to which ActionTrail sends messages.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">

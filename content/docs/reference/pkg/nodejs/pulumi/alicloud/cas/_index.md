@@ -3,7 +3,7 @@ title: "Module cas"
 title_tag: "Module cas | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "cas"
 meta_desc: "Explore members of the cas module in the @pulumi/alicloud package."
-git_sha: "8b0235f54ce04ebef3a63df7ea1100f2c58382cf"
+git_sha: "0f615eee1524d45af80e9cf9d0a968ae1d1b58ae"
 block_external_search_index: true
 ---
 
@@ -36,7 +36,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Certificate" data-link-title="Certificate">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/cas/certificate.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/cas/certificate.ts#L30">
         Resource <strong>Certificate</strong>
     </a>
 </h3>
@@ -66,7 +66,7 @@ const cert = new alicloud.cas.Certificate("cert", {
 ```
 
 <h4 class="pdoc-member-header" id="Certificate-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/cas/certificate.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/cas/certificate.ts#L69"> <b>constructor</b></a>
 </h4>
 
 
@@ -80,7 +80,7 @@ Create a Certificate resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Certificate-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/cas/certificate.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/cas/certificate.ts#L40">method <b>get</b></a>
 </h4>
 
 
@@ -91,14 +91,14 @@ Get an existing Certificate resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Certificate-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/cas/certificate.ts#L30">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/cas/certificate.ts#L30">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Certificate-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/cas/certificate.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/cas/certificate.ts#L51">method <b>isInstance</b></a>
 </h4>
 
 
@@ -109,7 +109,7 @@ Returns true if the given object is an instance of Certificate.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Certificate-cert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/cas/certificate.ts#L61">property <b>cert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/cas/certificate.ts#L61">property <b>cert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cert: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -117,7 +117,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Cert of the Certificate in which the Certificate will add.
 
 <h4 class="pdoc-member-header" id="Certificate-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/cas/certificate.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/cas/certificate.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -126,7 +126,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Certificate-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/cas/certificate.ts#L65">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/cas/certificate.ts#L65">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -134,7 +134,7 @@ deployments and may be missing (undefined) during planning phases.
 Key of the Certificate in which the Certificate will add.
 
 <h4 class="pdoc-member-header" id="Certificate-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/cas/certificate.ts#L69">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/cas/certificate.ts#L69">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -142,7 +142,7 @@ Key of the Certificate in which the Certificate will add.
 Name of the Certificate. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 
 <h4 class="pdoc-member-header" id="Certificate-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/cas/certificate.ts#L30">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/cas/certificate.ts#L30">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -153,7 +153,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getCertificates" data-link-title="getCertificates">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/cas/getCertificates.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/cas/getCertificates.ts#L25">
         Function <strong>getCertificates</strong>
     </a>
 </h3>
@@ -181,7 +181,7 @@ export const cert = certs.certificates[0].id;
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="CertificateArgs" data-link-title="CertificateArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/cas/certificate.ts#L130">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/cas/certificate.ts#L130">
         interface <strong>CertificateArgs</strong>
     </a>
 </h3>
@@ -191,7 +191,7 @@ export const cert = certs.certificates[0].id;
 The set of arguments for constructing a Certificate resource.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-cert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/cas/certificate.ts#L134">property <b>cert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/cas/certificate.ts#L134">property <b>cert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cert: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -199,7 +199,7 @@ The set of arguments for constructing a Certificate resource.
 Cert of the Certificate in which the Certificate will add.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/cas/certificate.ts#L138">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/cas/certificate.ts#L138">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -207,7 +207,7 @@ Cert of the Certificate in which the Certificate will add.
 Key of the Certificate in which the Certificate will add.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/cas/certificate.ts#L142">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/cas/certificate.ts#L142">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -215,7 +215,7 @@ Key of the Certificate in which the Certificate will add.
 Name of the Certificate. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 
 <h3 class="pdoc-module-header" id="CertificateState" data-link-title="CertificateState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/cas/certificate.ts#L112">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/cas/certificate.ts#L112">
         interface <strong>CertificateState</strong>
     </a>
 </h3>
@@ -225,7 +225,7 @@ Name of the Certificate. This name without suffix can have a string of 1 to 63 c
 Input properties used for looking up and filtering Certificate resources.
 
 <h4 class="pdoc-member-header" id="CertificateState-cert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/cas/certificate.ts#L116">property <b>cert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/cas/certificate.ts#L116">property <b>cert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -233,7 +233,7 @@ Input properties used for looking up and filtering Certificate resources.
 Cert of the Certificate in which the Certificate will add.
 
 <h4 class="pdoc-member-header" id="CertificateState-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/cas/certificate.ts#L120">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/cas/certificate.ts#L120">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -241,7 +241,7 @@ Cert of the Certificate in which the Certificate will add.
 Key of the Certificate in which the Certificate will add.
 
 <h4 class="pdoc-member-header" id="CertificateState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/cas/certificate.ts#L124">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/cas/certificate.ts#L124">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -249,7 +249,7 @@ Key of the Certificate in which the Certificate will add.
 Name of the Certificate. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 
 <h3 class="pdoc-module-header" id="GetCertificatesArgs" data-link-title="GetCertificatesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/cas/getCertificates.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/cas/getCertificates.ts#L44">
         interface <strong>GetCertificatesArgs</strong>
     </a>
 </h3>
@@ -259,7 +259,7 @@ Name of the Certificate. This name without suffix can have a string of 1 to 63 c
 A collection of arguments for invoking getCertificates.
 
 <h4 class="pdoc-member-header" id="GetCertificatesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/cas/getCertificates.ts#L48">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/cas/getCertificates.ts#L48">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -267,7 +267,7 @@ A collection of arguments for invoking getCertificates.
 A list of cert IDs.
 
 <h4 class="pdoc-member-header" id="GetCertificatesArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/cas/getCertificates.ts#L52">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/cas/getCertificates.ts#L52">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -275,12 +275,12 @@ A list of cert IDs.
 A regex string to filter results by the certificate name.
 
 <h4 class="pdoc-member-header" id="GetCertificatesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/cas/getCertificates.ts#L53">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/cas/getCertificates.ts#L53">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetCertificatesResult" data-link-title="GetCertificatesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/cas/getCertificates.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/cas/getCertificates.ts#L59">
         interface <strong>GetCertificatesResult</strong>
     </a>
 </h3>
@@ -290,7 +290,7 @@ A regex string to filter results by the certificate name.
 A collection of values returned by getCertificates.
 
 <h4 class="pdoc-member-header" id="GetCertificatesResult-certificates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/cas/getCertificates.ts#L63">property <b>certificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/cas/getCertificates.ts#L63">property <b>certificates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificates: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetCertificatesCertificate'>GetCertificatesCertificate</a>[];</code></pre>
@@ -298,7 +298,7 @@ A collection of values returned by getCertificates.
 A list of apis. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetCertificatesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/cas/getCertificates.ts#L67">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/cas/getCertificates.ts#L67">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -306,7 +306,7 @@ A list of apis. Each element contains the following attributes:
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetCertificatesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/cas/getCertificates.ts#L71">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/cas/getCertificates.ts#L71">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -314,12 +314,12 @@ The provider-assigned unique ID for this managed resource.
 A list of cert IDs.
 
 <h4 class="pdoc-member-header" id="GetCertificatesResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/cas/getCertificates.ts#L72">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/cas/getCertificates.ts#L72">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCertificatesResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/cas/getCertificates.ts#L76">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/cas/getCertificates.ts#L76">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -327,7 +327,7 @@ A list of cert IDs.
 A list of cert names.
 
 <h4 class="pdoc-member-header" id="GetCertificatesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/cas/getCertificates.ts#L77">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/cas/getCertificates.ts#L77">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
