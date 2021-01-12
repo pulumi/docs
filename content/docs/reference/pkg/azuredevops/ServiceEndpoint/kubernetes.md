@@ -1226,6 +1226,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="clusteradmin_csharp">
+<a href="#clusteradmin_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Admin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set this option to allow use cluster admin credentials.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
 </span>
@@ -1299,6 +1309,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure environment refers to whether the public cloud offering or domestic (government) clouds are being used. Currently, only the public cloud is supported. The value must be AzureCloud. This is also the default-value.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusteradmin_go">
+<a href="#clusteradmin_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Admin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set this option to allow use cluster admin credentials.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1378,6 +1398,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="clusteradmin_nodejs">
+<a href="#clusteradmin_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Admin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Set this option to allow use cluster admin credentials.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
@@ -1451,6 +1481,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure environment refers to whether the public cloud offering or domestic (government) clouds are being used. Currently, only the public cloud is supported. The value must be AzureCloud. This is also the default-value.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cluster_admin_python">
+<a href="#cluster_admin_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>admin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set this option to allow use cluster admin credentials.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1854,7 +1894,7 @@ The following state arguments are supported:
 Azure DevOps Service Endpoint Kubernetes can be imported using **projectID/serviceEndpointID** or **projectName/serviceEndpointID**
 
 ```sh
- $ pulumi import azuredevops:ServiceEndpoint/kubernetes:Kubernetes azuredevops_serviceendpoint_kubernetes.serviceendpoint 00000000-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000
+ $ pulumi import azuredevops:ServiceEndpoint/kubernetes:Kubernetes serviceendpoint 00000000-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000
 ```
 
 

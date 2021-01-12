@@ -3,7 +3,7 @@ title: "Module pipeline"
 title_tag: "Module pipeline | Package @pulumi/azuredevops | Node.js SDK"
 linktitle: "pipeline"
 meta_desc: "Explore members of the pipeline module in the @pulumi/azuredevops package."
-git_sha: "5a2704baa4eadd2446006775047639ffb3cd5575"
+git_sha: "8f499c00158ea0335e120f29e31b3f2cfa1e56f5"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="VariableGroup" data-link-title="VariableGroup">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pipeline/variableGroup.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pipeline/variableGroup.ts#L62">
         Resource <strong>VariableGroup</strong>
     </a>
 </h3>
@@ -93,7 +93,7 @@ const variablegroup = new azuredevops.VariableGroup("variablegroup", {
  _Note that for secret variables, the import command retrieve blank value in the tfstate._
 
 <h4 class="pdoc-member-header" id="VariableGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pipeline/variableGroup.ts#L111"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pipeline/variableGroup.ts#L111"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -108,7 +108,7 @@ azuredevops.pipeline.VariableGroup has been deprecated in favor of azuredevops.V
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> VariableGroup(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#VariableGroupArgs'>VariableGroupArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="VariableGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pipeline/variableGroup.ts#L72">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pipeline/variableGroup.ts#L72">method <b>get</b></a>
 </h4>
 
 
@@ -119,14 +119,14 @@ Get an existing VariableGroup resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="VariableGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pipeline/variableGroup.ts#L62">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pipeline/variableGroup.ts#L62">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="VariableGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pipeline/variableGroup.ts#L84">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pipeline/variableGroup.ts#L84">method <b>isInstance</b></a>
 </h4>
 
 
@@ -137,7 +137,7 @@ Returns true if the given object is an instance of VariableGroup.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="VariableGroup-allowAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pipeline/variableGroup.ts#L94">property <b>allowAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pipeline/variableGroup.ts#L94">property <b>allowAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowAccess: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -145,7 +145,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Boolean that indicate if this variable group is shared by all pipelines of this project.
 
 <h4 class="pdoc-member-header" id="VariableGroup-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pipeline/variableGroup.ts#L98">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pipeline/variableGroup.ts#L98">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -153,7 +153,7 @@ Boolean that indicate if this variable group is shared by all pipelines of this 
 The description of the Variable Group.
 
 <h4 class="pdoc-member-header" id="VariableGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pipeline/variableGroup.ts#L62">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pipeline/variableGroup.ts#L62">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -162,12 +162,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="VariableGroup-keyVault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pipeline/variableGroup.ts#L99">property <b>keyVault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pipeline/variableGroup.ts#L99">property <b>keyVault</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyVault: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#VariableGroupKeyVault'>VariableGroupKeyVault</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="VariableGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pipeline/variableGroup.ts#L103">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pipeline/variableGroup.ts#L103">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -175,7 +175,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the Variable Group.
 
 <h4 class="pdoc-member-header" id="VariableGroup-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pipeline/variableGroup.ts#L107">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pipeline/variableGroup.ts#L107">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -183,7 +183,7 @@ The name of the Variable Group.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="VariableGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pipeline/variableGroup.ts#L62">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pipeline/variableGroup.ts#L62">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -192,7 +192,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="VariableGroup-variables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pipeline/variableGroup.ts#L111">property <b>variables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pipeline/variableGroup.ts#L111">property <b>variables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>variables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#VariableGroupVariable'>VariableGroupVariable</a>[]&gt;;</code></pre>
@@ -203,7 +203,7 @@ One or more `variable` blocks as documented below.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="VariableGroupArgs" data-link-title="VariableGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pipeline/variableGroup.ts#L190">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pipeline/variableGroup.ts#L190">
         interface <strong>VariableGroupArgs</strong>
     </a>
 </h3>
@@ -213,7 +213,7 @@ One or more `variable` blocks as documented below.
 The set of arguments for constructing a VariableGroup resource.
 
 <h4 class="pdoc-member-header" id="VariableGroupArgs-allowAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pipeline/variableGroup.ts#L194">property <b>allowAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pipeline/variableGroup.ts#L194">property <b>allowAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -221,7 +221,7 @@ The set of arguments for constructing a VariableGroup resource.
 Boolean that indicate if this variable group is shared by all pipelines of this project.
 
 <h4 class="pdoc-member-header" id="VariableGroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pipeline/variableGroup.ts#L198">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pipeline/variableGroup.ts#L198">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -229,12 +229,12 @@ Boolean that indicate if this variable group is shared by all pipelines of this 
 The description of the Variable Group.
 
 <h4 class="pdoc-member-header" id="VariableGroupArgs-keyVault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pipeline/variableGroup.ts#L199">property <b>keyVault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pipeline/variableGroup.ts#L199">property <b>keyVault</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVault?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#VariableGroupKeyVault'>VariableGroupKeyVault</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="VariableGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pipeline/variableGroup.ts#L203">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pipeline/variableGroup.ts#L203">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -242,7 +242,7 @@ The description of the Variable Group.
 The name of the Variable Group.
 
 <h4 class="pdoc-member-header" id="VariableGroupArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pipeline/variableGroup.ts#L207">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pipeline/variableGroup.ts#L207">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -250,7 +250,7 @@ The name of the Variable Group.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="VariableGroupArgs-variables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pipeline/variableGroup.ts#L211">property <b>variables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pipeline/variableGroup.ts#L211">property <b>variables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>variables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#VariableGroupVariable'>VariableGroupVariable</a>&gt;[]&gt;;</code></pre>
@@ -258,7 +258,7 @@ The project ID or project name.
 One or more `variable` blocks as documented below.
 
 <h3 class="pdoc-module-header" id="VariableGroupState" data-link-title="VariableGroupState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pipeline/variableGroup.ts#L163">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pipeline/variableGroup.ts#L163">
         interface <strong>VariableGroupState</strong>
     </a>
 </h3>
@@ -268,7 +268,7 @@ One or more `variable` blocks as documented below.
 Input properties used for looking up and filtering VariableGroup resources.
 
 <h4 class="pdoc-member-header" id="VariableGroupState-allowAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pipeline/variableGroup.ts#L167">property <b>allowAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pipeline/variableGroup.ts#L167">property <b>allowAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -276,7 +276,7 @@ Input properties used for looking up and filtering VariableGroup resources.
 Boolean that indicate if this variable group is shared by all pipelines of this project.
 
 <h4 class="pdoc-member-header" id="VariableGroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pipeline/variableGroup.ts#L171">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pipeline/variableGroup.ts#L171">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -284,12 +284,12 @@ Boolean that indicate if this variable group is shared by all pipelines of this 
 The description of the Variable Group.
 
 <h4 class="pdoc-member-header" id="VariableGroupState-keyVault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pipeline/variableGroup.ts#L172">property <b>keyVault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pipeline/variableGroup.ts#L172">property <b>keyVault</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVault?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#VariableGroupKeyVault'>VariableGroupKeyVault</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="VariableGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pipeline/variableGroup.ts#L176">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pipeline/variableGroup.ts#L176">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -297,7 +297,7 @@ The description of the Variable Group.
 The name of the Variable Group.
 
 <h4 class="pdoc-member-header" id="VariableGroupState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pipeline/variableGroup.ts#L180">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pipeline/variableGroup.ts#L180">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -305,7 +305,7 @@ The name of the Variable Group.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="VariableGroupState-variables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pipeline/variableGroup.ts#L184">property <b>variables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pipeline/variableGroup.ts#L184">property <b>variables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>variables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#VariableGroupVariable'>VariableGroupVariable</a>&gt;[]&gt;;</code></pre>

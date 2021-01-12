@@ -35,6 +35,7 @@ A Pulumi package for creating and managing Azure DevOps.
     <li><a href="branchpolicyminreviewers" title="BranchPolicyMinReviewers"><span class="symbol resource"></span>BranchPolicyMinReviewers</a></li>
     <li><a href="branchpolicyworkitemlinking" title="BranchPolicyWorkItemLinking"><span class="symbol resource"></span>BranchPolicyWorkItemLinking</a></li>
     <li><a href="builddefinition" title="BuildDefinition"><span class="symbol resource"></span>BuildDefinition</a></li>
+    <li><a href="builddefinitionpermissions" title="BuildDefinitionPermissions"><span class="symbol resource"></span>BuildDefinitionPermissions</a></li>
     <li><a href="git" title="Git"><span class="symbol resource"></span>Git</a></li>
     <li><a href="gitpermissions" title="GitPermissions"><span class="symbol resource"></span>GitPermissions</a></li>
     <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
@@ -54,6 +55,7 @@ A Pulumi package for creating and managing Azure DevOps.
     <li><a href="serviceendpointdockerregistry" title="ServiceEndpointDockerRegistry"><span class="symbol resource"></span>ServiceEndpointDockerRegistry</a></li>
     <li><a href="serviceendpointgithub" title="ServiceEndpointGitHub"><span class="symbol resource"></span>ServiceEndpointGitHub</a></li>
     <li><a href="serviceendpointkubernetes" title="ServiceEndpointKubernetes"><span class="symbol resource"></span>ServiceEndpointKubernetes</a></li>
+    <li><a href="serviceendpointpipeline" title="ServiceEndpointPipeline"><span class="symbol resource"></span>ServiceEndpointPipeline</a></li>
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
     <li><a href="variablegroup" title="VariableGroup"><span class="symbol resource"></span>VariableGroup</a></li>
     <li><a href="workitemquerypermissions" title="WorkItemQueryPermissions"><span class="symbol resource"></span>WorkItemQueryPermissions</a></li>
@@ -84,7 +86,7 @@ A Pulumi package for creating and managing Azure DevOps.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azuredevops` Terraform Provider](https://github.com/microsoft/terraform-provider-azuredevops).</dd>
 	<dt>Version</dt>
-	<dd>1.1.0</dd>
+	<dd>1.1.1</dd>
 </dl>
 
 

@@ -755,7 +755,7 @@ The following state arguments are supported:
 Azure DevOps Agent Pools can be imported using the agent pool ID, e.g.
 
 ```sh
- $ pulumi import azuredevops:index/pool:Pool azuredevops_agent_pool.pool 42
+ $ pulumi import azuredevops:index/pool:Pool pool 42
 ```
 
 

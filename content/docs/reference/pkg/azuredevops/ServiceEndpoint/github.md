@@ -1213,7 +1213,7 @@ The following state arguments are supported:
 Azure DevOps Service Endpoint GitHub can be imported using **projectID/serviceEndpointID** or **projectName/serviceEndpointID**
 
 ```sh
- $ pulumi import azuredevops:ServiceEndpoint/gitHub:GitHub azuredevops_serviceendpoint_github.serviceendpoint 00000000-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000
+ $ pulumi import azuredevops:ServiceEndpoint/gitHub:GitHub serviceendpoint 00000000-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000
 ```
 
 
