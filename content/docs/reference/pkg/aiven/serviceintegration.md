@@ -14,10 +14,9 @@ meta_desc: "Explore the ServiceIntegration resource of the Aiven package, includ
 
 The Service Integration resource allows the creation and management of Aiven Service Integrations.
 
-Service Integration defines an integration between two Aiven services or between Aiven
-service and an external integration endpoint. Integration could be for example sending
-metrics from Kafka service to an InfluxDB service, getting metrics from an InfluxDB
-service to a Grafana service to show dashboards, sending logs from any service to
+Service Integration defines an integration between two Aiven services or between Aiven service and an external
+integration endpoint. Integration could be for example sending metrics from Kafka service to an InfluxDB service,
+getting metrics from an InfluxDB service to a Grafana service to show dashboards, sending logs from any service to
 Elasticsearch, etc.
 
 
@@ -118,7 +117,7 @@ const myintegration = new aiven.ServiceIntegration("myintegration", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aiven/#pulumi_aiven.ServiceIntegration">ServiceIntegration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">destination_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_aws_cloudwatch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationExternalAwsCloudwatchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_elasticsearch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationExternalElasticsearchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_google_cloud_logging_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationExternalGoogleCloudLoggingUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">integration_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kafka_connect_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationKafkaConnectUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aiven/#pulumi_aiven.ServiceIntegration">ServiceIntegration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dashboard_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationDashboardUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">datadog_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationDatadogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">destination_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_aws_cloudwatch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationExternalAwsCloudwatchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_elasticsearch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationExternalElasticsearchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_google_cloud_logging_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationExternalGoogleCloudLoggingUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">integration_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kafka_connect_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationKafkaConnectUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationKafkaLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">m3aggregator_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationM3aggregatorUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">m3coordinator_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationM3coordinatorUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">metrics_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationMetricsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">prometheus_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationPrometheusUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">read_replica_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationReadReplicaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">rsyslog_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationRsyslogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">signalfx_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationSignalfxUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">source_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -297,8 +296,8 @@ The ServiceIntegration resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}identifies the type of integration that is set up. Possible values
-include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
+    <dd>{{% md %}}identifies the type of integration that is set up. Possible values include `dashboard`
+, `datadog`, `logs`, `metrics` and `mirrormaker`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -312,16 +311,36 @@ include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="dashboarduserconfig_csharp">
+<a href="#dashboarduserconfig_csharp" style="color: inherit; text-decoration: inherit;">Dashboard<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationdashboarduserconfig">Service<wbr>Integration<wbr>Dashboard<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Dashboard specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datadoguserconfig_csharp">
+<a href="#datadoguserconfig_csharp" style="color: inherit; text-decoration: inherit;">Datadog<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationdatadoguserconfig">Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Dashboard specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="destinationendpointid_csharp">
 <a href="#destinationendpointid_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Endpoint<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of
-the integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
-service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs
-to be defined using the reference syntax described above to set up the dependency correctly.
+    <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of the integration.
+Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or service name (
+e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs to be defined using the
+reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -375,6 +394,16 @@ to be defined using the reference syntax described above to set up the dependenc
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="kafkalogsuserconfig_csharp">
+<a href="#kafkalogsuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Logs<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationkafkalogsuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Kafka Logs specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="kafkamirrormakeruserconfig_csharp">
 <a href="#kafkamirrormakeruserconfig_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a>
 </span>
@@ -395,6 +424,36 @@ to be defined using the reference syntax described above to set up the dependenc
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="m3aggregatoruserconfig_csharp">
+<a href="#m3aggregatoruserconfig_csharp" style="color: inherit; text-decoration: inherit;">M3aggregator<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationm3aggregatoruserconfig">Service<wbr>Integration<wbr>M3aggregator<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}M3 aggregator specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="m3coordinatoruserconfig_csharp">
+<a href="#m3coordinatoruserconfig_csharp" style="color: inherit; text-decoration: inherit;">M3coordinator<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationm3coordinatoruserconfig">Service<wbr>Integration<wbr>M3coordinator<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}M3 coordinator specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metricsuserconfig_csharp">
+<a href="#metricsuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Metrics<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfig">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Metrics specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="mirrormakeruserconfig_csharp">
 <a href="#mirrormakeruserconfig_csharp" style="color: inherit; text-decoration: inherit;">Mirrormaker<wbr>User<wbr>Config</a>
 </span>
@@ -405,16 +464,56 @@ to be defined using the reference syntax described above to set up the dependenc
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="prometheususerconfig_csharp">
+<a href="#prometheususerconfig_csharp" style="color: inherit; text-decoration: inherit;">Prometheus<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfig">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Prometheus coordinator specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="readreplicauserconfig_csharp">
+<a href="#readreplicauserconfig_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Replica<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationreadreplicauserconfig">Service<wbr>Integration<wbr>Read<wbr>Replica<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}PG Read replica specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rsysloguserconfig_csharp">
+<a href="#rsysloguserconfig_csharp" style="color: inherit; text-decoration: inherit;">Rsyslog<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationrsysloguserconfig">Service<wbr>Integration<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}RSyslog specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signalfxuserconfig_csharp">
+<a href="#signalfxuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Signalfx<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationsignalfxuserconfig">Service<wbr>Integration<wbr>Signalfx<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Signalfx specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sourceendpointid_csharp">
 <a href="#sourceendpointid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Endpoint<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the
-integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
-service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source
-needs to be defined using the reference syntax described above to set up the dependency correctly.
+    <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the integration. Only either
+endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or service name (
+e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source needs to be defined using the
+reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -440,8 +539,8 @@ needs to be defined using the reference syntax described above to set up the dep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}identifies the type of integration that is set up. Possible values
-include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
+    <dd>{{% md %}}identifies the type of integration that is set up. Possible values include `dashboard`
+, `datadog`, `logs`, `metrics` and `mirrormaker`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -455,16 +554,36 @@ include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="dashboarduserconfig_go">
+<a href="#dashboarduserconfig_go" style="color: inherit; text-decoration: inherit;">Dashboard<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationdashboarduserconfig">Service<wbr>Integration<wbr>Dashboard<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Dashboard specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datadoguserconfig_go">
+<a href="#datadoguserconfig_go" style="color: inherit; text-decoration: inherit;">Datadog<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationdatadoguserconfig">Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Dashboard specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="destinationendpointid_go">
 <a href="#destinationendpointid_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Endpoint<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of
-the integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
-service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs
-to be defined using the reference syntax described above to set up the dependency correctly.
+    <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of the integration.
+Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or service name (
+e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs to be defined using the
+reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -518,6 +637,16 @@ to be defined using the reference syntax described above to set up the dependenc
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="kafkalogsuserconfig_go">
+<a href="#kafkalogsuserconfig_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Logs<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationkafkalogsuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Logs<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Kafka Logs specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="kafkamirrormakeruserconfig_go">
 <a href="#kafkamirrormakeruserconfig_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a>
 </span>
@@ -538,6 +667,36 @@ to be defined using the reference syntax described above to set up the dependenc
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="m3aggregatoruserconfig_go">
+<a href="#m3aggregatoruserconfig_go" style="color: inherit; text-decoration: inherit;">M3aggregator<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationm3aggregatoruserconfig">Service<wbr>Integration<wbr>M3aggregator<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}M3 aggregator specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="m3coordinatoruserconfig_go">
+<a href="#m3coordinatoruserconfig_go" style="color: inherit; text-decoration: inherit;">M3coordinator<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationm3coordinatoruserconfig">Service<wbr>Integration<wbr>M3coordinator<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}M3 coordinator specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metricsuserconfig_go">
+<a href="#metricsuserconfig_go" style="color: inherit; text-decoration: inherit;">Metrics<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfig">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Metrics specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="mirrormakeruserconfig_go">
 <a href="#mirrormakeruserconfig_go" style="color: inherit; text-decoration: inherit;">Mirrormaker<wbr>User<wbr>Config</a>
 </span>
@@ -548,16 +707,56 @@ to be defined using the reference syntax described above to set up the dependenc
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="prometheususerconfig_go">
+<a href="#prometheususerconfig_go" style="color: inherit; text-decoration: inherit;">Prometheus<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfig">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Prometheus coordinator specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="readreplicauserconfig_go">
+<a href="#readreplicauserconfig_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Replica<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationreadreplicauserconfig">Service<wbr>Integration<wbr>Read<wbr>Replica<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}PG Read replica specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rsysloguserconfig_go">
+<a href="#rsysloguserconfig_go" style="color: inherit; text-decoration: inherit;">Rsyslog<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationrsysloguserconfig">Service<wbr>Integration<wbr>Rsyslog<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}RSyslog specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signalfxuserconfig_go">
+<a href="#signalfxuserconfig_go" style="color: inherit; text-decoration: inherit;">Signalfx<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationsignalfxuserconfig">Service<wbr>Integration<wbr>Signalfx<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Signalfx specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sourceendpointid_go">
 <a href="#sourceendpointid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Endpoint<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the
-integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
-service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source
-needs to be defined using the reference syntax described above to set up the dependency correctly.
+    <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the integration. Only either
+endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or service name (
+e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source needs to be defined using the
+reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -583,8 +782,8 @@ needs to be defined using the reference syntax described above to set up the dep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}identifies the type of integration that is set up. Possible values
-include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
+    <dd>{{% md %}}identifies the type of integration that is set up. Possible values include `dashboard`
+, `datadog`, `logs`, `metrics` and `mirrormaker`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -598,16 +797,36 @@ include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="dashboarduserconfig_nodejs">
+<a href="#dashboarduserconfig_nodejs" style="color: inherit; text-decoration: inherit;">dashboard<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationdashboarduserconfig">Service<wbr>Integration<wbr>Dashboard<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Dashboard specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datadoguserconfig_nodejs">
+<a href="#datadoguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">datadog<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationdatadoguserconfig">Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Dashboard specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="destinationendpointid_nodejs">
 <a href="#destinationendpointid_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Endpoint<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of
-the integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
-service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs
-to be defined using the reference syntax described above to set up the dependency correctly.
+    <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of the integration.
+Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or service name (
+e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs to be defined using the
+reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -661,6 +880,16 @@ to be defined using the reference syntax described above to set up the dependenc
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="kafkalogsuserconfig_nodejs">
+<a href="#kafkalogsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Logs<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationkafkalogsuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Logs<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Kafka Logs specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="kafkamirrormakeruserconfig_nodejs">
 <a href="#kafkamirrormakeruserconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a>
 </span>
@@ -681,6 +910,36 @@ to be defined using the reference syntax described above to set up the dependenc
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="m3aggregatoruserconfig_nodejs">
+<a href="#m3aggregatoruserconfig_nodejs" style="color: inherit; text-decoration: inherit;">m3aggregator<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationm3aggregatoruserconfig">Service<wbr>Integration<wbr>M3aggregator<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}M3 aggregator specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="m3coordinatoruserconfig_nodejs">
+<a href="#m3coordinatoruserconfig_nodejs" style="color: inherit; text-decoration: inherit;">m3coordinator<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationm3coordinatoruserconfig">Service<wbr>Integration<wbr>M3coordinator<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}M3 coordinator specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metricsuserconfig_nodejs">
+<a href="#metricsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">metrics<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfig">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Metrics specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="mirrormakeruserconfig_nodejs">
 <a href="#mirrormakeruserconfig_nodejs" style="color: inherit; text-decoration: inherit;">mirrormaker<wbr>User<wbr>Config</a>
 </span>
@@ -691,16 +950,56 @@ to be defined using the reference syntax described above to set up the dependenc
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="prometheususerconfig_nodejs">
+<a href="#prometheususerconfig_nodejs" style="color: inherit; text-decoration: inherit;">prometheus<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfig">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Prometheus coordinator specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="readreplicauserconfig_nodejs">
+<a href="#readreplicauserconfig_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Replica<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationreadreplicauserconfig">Service<wbr>Integration<wbr>Read<wbr>Replica<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}PG Read replica specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rsysloguserconfig_nodejs">
+<a href="#rsysloguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">rsyslog<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationrsysloguserconfig">Service<wbr>Integration<wbr>Rsyslog<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}RSyslog specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signalfxuserconfig_nodejs">
+<a href="#signalfxuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">signalfx<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationsignalfxuserconfig">Service<wbr>Integration<wbr>Signalfx<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Signalfx specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sourceendpointid_nodejs">
 <a href="#sourceendpointid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Endpoint<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the
-integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
-service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source
-needs to be defined using the reference syntax described above to set up the dependency correctly.
+    <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the integration. Only either
+endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or service name (
+e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source needs to be defined using the
+reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -726,8 +1025,8 @@ needs to be defined using the reference syntax described above to set up the dep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}identifies the type of integration that is set up. Possible values
-include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
+    <dd>{{% md %}}identifies the type of integration that is set up. Possible values include `dashboard`
+, `datadog`, `logs`, `metrics` and `mirrormaker`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -741,16 +1040,36 @@ include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="dashboard_user_config_python">
+<a href="#dashboard_user_config_python" style="color: inherit; text-decoration: inherit;">dashboard_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationdashboarduserconfig">Service<wbr>Integration<wbr>Dashboard<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Dashboard specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datadog_user_config_python">
+<a href="#datadog_user_config_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationdatadoguserconfig">Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Dashboard specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="destination_endpoint_id_python">
 <a href="#destination_endpoint_id_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>endpoint_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of
-the integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
-service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs
-to be defined using the reference syntax described above to set up the dependency correctly.
+    <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of the integration.
+Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or service name (
+e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs to be defined using the
+reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -804,6 +1123,16 @@ to be defined using the reference syntax described above to set up the dependenc
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="kafka_logs_user_config_python">
+<a href="#kafka_logs_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>logs_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationkafkalogsuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Kafka Logs specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="kafka_mirrormaker_user_config_python">
 <a href="#kafka_mirrormaker_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>mirrormaker_<wbr>user_<wbr>config</a>
 </span>
@@ -824,6 +1153,36 @@ to be defined using the reference syntax described above to set up the dependenc
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="m3aggregator_user_config_python">
+<a href="#m3aggregator_user_config_python" style="color: inherit; text-decoration: inherit;">m3aggregator_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationm3aggregatoruserconfig">Service<wbr>Integration<wbr>M3aggregator<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}M3 aggregator specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="m3coordinator_user_config_python">
+<a href="#m3coordinator_user_config_python" style="color: inherit; text-decoration: inherit;">m3coordinator_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationm3coordinatoruserconfig">Service<wbr>Integration<wbr>M3coordinator<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}M3 coordinator specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metrics_user_config_python">
+<a href="#metrics_user_config_python" style="color: inherit; text-decoration: inherit;">metrics_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfig">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Metrics specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="mirrormaker_user_config_python">
 <a href="#mirrormaker_user_config_python" style="color: inherit; text-decoration: inherit;">mirrormaker_<wbr>user_<wbr>config</a>
 </span>
@@ -834,16 +1193,56 @@ to be defined using the reference syntax described above to set up the dependenc
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="prometheus_user_config_python">
+<a href="#prometheus_user_config_python" style="color: inherit; text-decoration: inherit;">prometheus_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfig">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Prometheus coordinator specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="read_replica_user_config_python">
+<a href="#read_replica_user_config_python" style="color: inherit; text-decoration: inherit;">read_<wbr>replica_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationreadreplicauserconfig">Service<wbr>Integration<wbr>Read<wbr>Replica<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}PG Read replica specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rsyslog_user_config_python">
+<a href="#rsyslog_user_config_python" style="color: inherit; text-decoration: inherit;">rsyslog_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationrsysloguserconfig">Service<wbr>Integration<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}RSyslog specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signalfx_user_config_python">
+<a href="#signalfx_user_config_python" style="color: inherit; text-decoration: inherit;">signalfx_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationsignalfxuserconfig">Service<wbr>Integration<wbr>Signalfx<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Signalfx specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="source_endpoint_id_python">
 <a href="#source_endpoint_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>endpoint_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the
-integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
-service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source
-needs to be defined using the reference syntax described above to set up the dependency correctly.
+    <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the integration. Only either
+endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or service name (
+e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source needs to be defined using the
+reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -938,7 +1337,7 @@ Get an existing ServiceIntegration resource's state with the given name, ID, and
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">destination_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_aws_cloudwatch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationExternalAwsCloudwatchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_elasticsearch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationExternalElasticsearchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_google_cloud_logging_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationExternalGoogleCloudLoggingUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">integration_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kafka_connect_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationKafkaConnectUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ServiceIntegration</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dashboard_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationDashboardUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">datadog_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationDatadogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">destination_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_aws_cloudwatch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationExternalAwsCloudwatchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_elasticsearch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationExternalElasticsearchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_google_cloud_logging_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationExternalGoogleCloudLoggingUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">integration_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kafka_connect_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationKafkaConnectUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationKafkaLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">m3aggregator_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationM3aggregatorUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">m3coordinator_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationM3coordinatorUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">metrics_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationMetricsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">prometheus_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationPrometheusUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">read_replica_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationReadReplicaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">rsyslog_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationRsyslogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">signalfx_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationSignalfxUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">source_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ServiceIntegration</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1053,16 +1452,36 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_dashboarduserconfig_csharp">
+<a href="#state_dashboarduserconfig_csharp" style="color: inherit; text-decoration: inherit;">Dashboard<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationdashboarduserconfig">Service<wbr>Integration<wbr>Dashboard<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Dashboard specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_datadoguserconfig_csharp">
+<a href="#state_datadoguserconfig_csharp" style="color: inherit; text-decoration: inherit;">Datadog<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationdatadoguserconfig">Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Dashboard specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_destinationendpointid_csharp">
 <a href="#state_destinationendpointid_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Endpoint<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of
-the integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
-service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs
-to be defined using the reference syntax described above to set up the dependency correctly.
+    <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of the integration.
+Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or service name (
+e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs to be defined using the
+reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1112,8 +1531,8 @@ to be defined using the reference syntax described above to set up the dependenc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}identifies the type of integration that is set up. Possible values
-include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
+    <dd>{{% md %}}identifies the type of integration that is set up. Possible values include `dashboard`
+, `datadog`, `logs`, `metrics` and `mirrormaker`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1124,6 +1543,16 @@ include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
         <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_kafkalogsuserconfig_csharp">
+<a href="#state_kafkalogsuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Logs<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationkafkalogsuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Kafka Logs specific user configurable settings
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1147,6 +1576,36 @@ include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_m3aggregatoruserconfig_csharp">
+<a href="#state_m3aggregatoruserconfig_csharp" style="color: inherit; text-decoration: inherit;">M3aggregator<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationm3aggregatoruserconfig">Service<wbr>Integration<wbr>M3aggregator<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}M3 aggregator specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_m3coordinatoruserconfig_csharp">
+<a href="#state_m3coordinatoruserconfig_csharp" style="color: inherit; text-decoration: inherit;">M3coordinator<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationm3coordinatoruserconfig">Service<wbr>Integration<wbr>M3coordinator<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}M3 coordinator specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_metricsuserconfig_csharp">
+<a href="#state_metricsuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Metrics<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfig">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Metrics specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_mirrormakeruserconfig_csharp">
 <a href="#state_mirrormakeruserconfig_csharp" style="color: inherit; text-decoration: inherit;">Mirrormaker<wbr>User<wbr>Config</a>
 </span>
@@ -1167,16 +1626,56 @@ include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_prometheususerconfig_csharp">
+<a href="#state_prometheususerconfig_csharp" style="color: inherit; text-decoration: inherit;">Prometheus<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfig">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Prometheus coordinator specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_readreplicauserconfig_csharp">
+<a href="#state_readreplicauserconfig_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Replica<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationreadreplicauserconfig">Service<wbr>Integration<wbr>Read<wbr>Replica<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}PG Read replica specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_rsysloguserconfig_csharp">
+<a href="#state_rsysloguserconfig_csharp" style="color: inherit; text-decoration: inherit;">Rsyslog<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationrsysloguserconfig">Service<wbr>Integration<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}RSyslog specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_signalfxuserconfig_csharp">
+<a href="#state_signalfxuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Signalfx<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationsignalfxuserconfig">Service<wbr>Integration<wbr>Signalfx<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Signalfx specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_sourceendpointid_csharp">
 <a href="#state_sourceendpointid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Endpoint<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the
-integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
-service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source
-needs to be defined using the reference syntax described above to set up the dependency correctly.
+    <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the integration. Only either
+endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or service name (
+e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source needs to be defined using the
+reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1196,16 +1695,36 @@ needs to be defined using the reference syntax described above to set up the dep
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_dashboarduserconfig_go">
+<a href="#state_dashboarduserconfig_go" style="color: inherit; text-decoration: inherit;">Dashboard<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationdashboarduserconfig">Service<wbr>Integration<wbr>Dashboard<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Dashboard specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_datadoguserconfig_go">
+<a href="#state_datadoguserconfig_go" style="color: inherit; text-decoration: inherit;">Datadog<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationdatadoguserconfig">Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Dashboard specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_destinationendpointid_go">
 <a href="#state_destinationendpointid_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Endpoint<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of
-the integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
-service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs
-to be defined using the reference syntax described above to set up the dependency correctly.
+    <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of the integration.
+Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or service name (
+e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs to be defined using the
+reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1255,8 +1774,8 @@ to be defined using the reference syntax described above to set up the dependenc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}identifies the type of integration that is set up. Possible values
-include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
+    <dd>{{% md %}}identifies the type of integration that is set up. Possible values include `dashboard`
+, `datadog`, `logs`, `metrics` and `mirrormaker`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1267,6 +1786,16 @@ include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
         <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_kafkalogsuserconfig_go">
+<a href="#state_kafkalogsuserconfig_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Logs<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationkafkalogsuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Logs<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Kafka Logs specific user configurable settings
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1290,6 +1819,36 @@ include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_m3aggregatoruserconfig_go">
+<a href="#state_m3aggregatoruserconfig_go" style="color: inherit; text-decoration: inherit;">M3aggregator<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationm3aggregatoruserconfig">Service<wbr>Integration<wbr>M3aggregator<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}M3 aggregator specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_m3coordinatoruserconfig_go">
+<a href="#state_m3coordinatoruserconfig_go" style="color: inherit; text-decoration: inherit;">M3coordinator<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationm3coordinatoruserconfig">Service<wbr>Integration<wbr>M3coordinator<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}M3 coordinator specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_metricsuserconfig_go">
+<a href="#state_metricsuserconfig_go" style="color: inherit; text-decoration: inherit;">Metrics<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfig">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Metrics specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_mirrormakeruserconfig_go">
 <a href="#state_mirrormakeruserconfig_go" style="color: inherit; text-decoration: inherit;">Mirrormaker<wbr>User<wbr>Config</a>
 </span>
@@ -1310,16 +1869,56 @@ include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_prometheususerconfig_go">
+<a href="#state_prometheususerconfig_go" style="color: inherit; text-decoration: inherit;">Prometheus<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfig">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Prometheus coordinator specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_readreplicauserconfig_go">
+<a href="#state_readreplicauserconfig_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Replica<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationreadreplicauserconfig">Service<wbr>Integration<wbr>Read<wbr>Replica<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}PG Read replica specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_rsysloguserconfig_go">
+<a href="#state_rsysloguserconfig_go" style="color: inherit; text-decoration: inherit;">Rsyslog<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationrsysloguserconfig">Service<wbr>Integration<wbr>Rsyslog<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}RSyslog specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_signalfxuserconfig_go">
+<a href="#state_signalfxuserconfig_go" style="color: inherit; text-decoration: inherit;">Signalfx<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationsignalfxuserconfig">Service<wbr>Integration<wbr>Signalfx<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Signalfx specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_sourceendpointid_go">
 <a href="#state_sourceendpointid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Endpoint<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the
-integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
-service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source
-needs to be defined using the reference syntax described above to set up the dependency correctly.
+    <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the integration. Only either
+endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or service name (
+e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source needs to be defined using the
+reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1339,16 +1938,36 @@ needs to be defined using the reference syntax described above to set up the dep
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_dashboarduserconfig_nodejs">
+<a href="#state_dashboarduserconfig_nodejs" style="color: inherit; text-decoration: inherit;">dashboard<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationdashboarduserconfig">Service<wbr>Integration<wbr>Dashboard<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Dashboard specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_datadoguserconfig_nodejs">
+<a href="#state_datadoguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">datadog<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationdatadoguserconfig">Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Dashboard specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_destinationendpointid_nodejs">
 <a href="#state_destinationendpointid_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Endpoint<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of
-the integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
-service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs
-to be defined using the reference syntax described above to set up the dependency correctly.
+    <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of the integration.
+Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or service name (
+e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs to be defined using the
+reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1398,8 +2017,8 @@ to be defined using the reference syntax described above to set up the dependenc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}identifies the type of integration that is set up. Possible values
-include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
+    <dd>{{% md %}}identifies the type of integration that is set up. Possible values include `dashboard`
+, `datadog`, `logs`, `metrics` and `mirrormaker`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1410,6 +2029,16 @@ include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
         <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_kafkalogsuserconfig_nodejs">
+<a href="#state_kafkalogsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Logs<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationkafkalogsuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Logs<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Kafka Logs specific user configurable settings
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1433,6 +2062,36 @@ include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_m3aggregatoruserconfig_nodejs">
+<a href="#state_m3aggregatoruserconfig_nodejs" style="color: inherit; text-decoration: inherit;">m3aggregator<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationm3aggregatoruserconfig">Service<wbr>Integration<wbr>M3aggregator<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}M3 aggregator specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_m3coordinatoruserconfig_nodejs">
+<a href="#state_m3coordinatoruserconfig_nodejs" style="color: inherit; text-decoration: inherit;">m3coordinator<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationm3coordinatoruserconfig">Service<wbr>Integration<wbr>M3coordinator<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}M3 coordinator specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_metricsuserconfig_nodejs">
+<a href="#state_metricsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">metrics<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfig">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Metrics specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_mirrormakeruserconfig_nodejs">
 <a href="#state_mirrormakeruserconfig_nodejs" style="color: inherit; text-decoration: inherit;">mirrormaker<wbr>User<wbr>Config</a>
 </span>
@@ -1453,16 +2112,56 @@ include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_prometheususerconfig_nodejs">
+<a href="#state_prometheususerconfig_nodejs" style="color: inherit; text-decoration: inherit;">prometheus<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfig">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Prometheus coordinator specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_readreplicauserconfig_nodejs">
+<a href="#state_readreplicauserconfig_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Replica<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationreadreplicauserconfig">Service<wbr>Integration<wbr>Read<wbr>Replica<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}PG Read replica specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_rsysloguserconfig_nodejs">
+<a href="#state_rsysloguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">rsyslog<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationrsysloguserconfig">Service<wbr>Integration<wbr>Rsyslog<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}RSyslog specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_signalfxuserconfig_nodejs">
+<a href="#state_signalfxuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">signalfx<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationsignalfxuserconfig">Service<wbr>Integration<wbr>Signalfx<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Signalfx specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_sourceendpointid_nodejs">
 <a href="#state_sourceendpointid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Endpoint<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the
-integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
-service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source
-needs to be defined using the reference syntax described above to set up the dependency correctly.
+    <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the integration. Only either
+endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or service name (
+e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source needs to be defined using the
+reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1482,16 +2181,36 @@ needs to be defined using the reference syntax described above to set up the dep
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_dashboard_user_config_python">
+<a href="#state_dashboard_user_config_python" style="color: inherit; text-decoration: inherit;">dashboard_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationdashboarduserconfig">Service<wbr>Integration<wbr>Dashboard<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Dashboard specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_datadog_user_config_python">
+<a href="#state_datadog_user_config_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationdatadoguserconfig">Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Dashboard specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_destination_endpoint_id_python">
 <a href="#state_destination_endpoint_id_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>endpoint_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of
-the integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
-service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs
-to be defined using the reference syntax described above to set up the dependency correctly.
+    <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of the integration.
+Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or service name (
+e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs to be defined using the
+reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1541,8 +2260,8 @@ to be defined using the reference syntax described above to set up the dependenc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}identifies the type of integration that is set up. Possible values
-include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
+    <dd>{{% md %}}identifies the type of integration that is set up. Possible values include `dashboard`
+, `datadog`, `logs`, `metrics` and `mirrormaker`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1553,6 +2272,16 @@ include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
         <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_kafka_logs_user_config_python">
+<a href="#state_kafka_logs_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>logs_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationkafkalogsuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Kafka Logs specific user configurable settings
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1576,6 +2305,36 @@ include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_m3aggregator_user_config_python">
+<a href="#state_m3aggregator_user_config_python" style="color: inherit; text-decoration: inherit;">m3aggregator_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationm3aggregatoruserconfig">Service<wbr>Integration<wbr>M3aggregator<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}M3 aggregator specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_m3coordinator_user_config_python">
+<a href="#state_m3coordinator_user_config_python" style="color: inherit; text-decoration: inherit;">m3coordinator_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationm3coordinatoruserconfig">Service<wbr>Integration<wbr>M3coordinator<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}M3 coordinator specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_metrics_user_config_python">
+<a href="#state_metrics_user_config_python" style="color: inherit; text-decoration: inherit;">metrics_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfig">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Metrics specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_mirrormaker_user_config_python">
 <a href="#state_mirrormaker_user_config_python" style="color: inherit; text-decoration: inherit;">mirrormaker_<wbr>user_<wbr>config</a>
 </span>
@@ -1596,16 +2355,56 @@ include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_prometheus_user_config_python">
+<a href="#state_prometheus_user_config_python" style="color: inherit; text-decoration: inherit;">prometheus_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfig">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Prometheus coordinator specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_read_replica_user_config_python">
+<a href="#state_read_replica_user_config_python" style="color: inherit; text-decoration: inherit;">read_<wbr>replica_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationreadreplicauserconfig">Service<wbr>Integration<wbr>Read<wbr>Replica<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}PG Read replica specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_rsyslog_user_config_python">
+<a href="#state_rsyslog_user_config_python" style="color: inherit; text-decoration: inherit;">rsyslog_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationrsysloguserconfig">Service<wbr>Integration<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}RSyslog specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_signalfx_user_config_python">
+<a href="#state_signalfx_user_config_python" style="color: inherit; text-decoration: inherit;">signalfx_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationsignalfxuserconfig">Service<wbr>Integration<wbr>Signalfx<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Signalfx specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_source_endpoint_id_python">
 <a href="#state_source_endpoint_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>endpoint_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the
-integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
-service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source
-needs to be defined using the reference syntax described above to set up the dependency correctly.
+    <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the integration. Only either
+endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or service name (
+e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source needs to be defined using the
+reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1628,6 +2427,224 @@ needs to be defined using the reference syntax described above to set up the dep
 ## Supporting Types
 
 
+
+<h4 id="serviceintegrationdatadoguserconfig">Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#ServiceIntegrationDatadogUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceIntegrationDatadogUserConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationDatadogUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationDatadogUserConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceIntegrationDatadogUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceIntegrationDatadogUserConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excludeconsumergroups_csharp">
+<a href="#excludeconsumergroups_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Consumer<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excludetopics_csharp">
+<a href="#excludetopics_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Topics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includeconsumergroups_csharp">
+<a href="#includeconsumergroups_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Consumer<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includetopics_csharp">
+<a href="#includetopics_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Topics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafkacustommetrics_csharp">
+<a href="#kafkacustommetrics_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Custom<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excludeconsumergroups_go">
+<a href="#excludeconsumergroups_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Consumer<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excludetopics_go">
+<a href="#excludetopics_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Topics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includeconsumergroups_go">
+<a href="#includeconsumergroups_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Consumer<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includetopics_go">
+<a href="#includetopics_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Topics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafkacustommetrics_go">
+<a href="#kafkacustommetrics_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Custom<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excludeconsumergroups_nodejs">
+<a href="#excludeconsumergroups_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Consumer<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excludetopics_nodejs">
+<a href="#excludetopics_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Topics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includeconsumergroups_nodejs">
+<a href="#includeconsumergroups_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Consumer<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includetopics_nodejs">
+<a href="#includetopics_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Topics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafkacustommetrics_nodejs">
+<a href="#kafkacustommetrics_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Custom<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="exclude_consumer_groups_python">
+<a href="#exclude_consumer_groups_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>consumer_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="exclude_topics_python">
+<a href="#exclude_topics_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>topics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="include_consumer_groups_python">
+<a href="#include_consumer_groups_python" style="color: inherit; text-decoration: inherit;">include_<wbr>consumer_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="include_topics_python">
+<a href="#include_topics_python" style="color: inherit; text-decoration: inherit;">include_<wbr>topics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafka_custom_metrics_python">
+<a href="#kafka_custom_metrics_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>custom_<wbr>metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="serviceintegrationkafkaconnectuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</h4>
 {{% choosable language nodejs %}}
@@ -1885,6 +2902,80 @@ needs to be defined using the reference syntax described above to set up the dep
 </dl>
 {{% /choosable %}}
 
+<h4 id="serviceintegrationkafkalogsuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Logs<wbr>User<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#ServiceIntegrationKafkaLogsUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceIntegrationKafkaLogsUserConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationKafkaLogsUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationKafkaLogsUserConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceIntegrationKafkaLogsUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceIntegrationKafkaLogsUserConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafkatopic_csharp">
+<a href="#kafkatopic_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Topic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafkatopic_go">
+<a href="#kafkatopic_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Topic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafkatopic_nodejs">
+<a href="#kafkatopic_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Topic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafka_topic_python">
+<a href="#kafka_topic_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>topic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="serviceintegrationkafkamirrormakeruserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#ServiceIntegrationKafkaMirrormakerUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceIntegrationKafkaMirrormakerUserConfig">output</a> API doc for this type.
@@ -2069,6 +3160,840 @@ needs to be defined using the reference syntax described above to set up the dep
 </dl>
 {{% /choosable %}}
 
+<h4 id="serviceintegrationmetricsuserconfig">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#ServiceIntegrationMetricsUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceIntegrationMetricsUserConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationMetricsUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationMetricsUserConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceIntegrationMetricsUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceIntegrationMetricsUserConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="database_csharp">
+<a href="#database_csharp" style="color: inherit; text-decoration: inherit;">Database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentiondays_csharp">
+<a href="#retentiondays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rousername_csharp">
+<a href="#rousername_csharp" style="color: inherit; text-decoration: inherit;">Ro<wbr>Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourcemysql_csharp">
+<a href="#sourcemysql_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfigsourcemysql">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="database_go">
+<a href="#database_go" style="color: inherit; text-decoration: inherit;">Database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentiondays_go">
+<a href="#retentiondays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rousername_go">
+<a href="#rousername_go" style="color: inherit; text-decoration: inherit;">Ro<wbr>Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourcemysql_go">
+<a href="#sourcemysql_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfigsourcemysql">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="database_nodejs">
+<a href="#database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentiondays_nodejs">
+<a href="#retentiondays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rousername_nodejs">
+<a href="#rousername_nodejs" style="color: inherit; text-decoration: inherit;">ro<wbr>Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourcemysql_nodejs">
+<a href="#sourcemysql_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfigsourcemysql">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="database_python">
+<a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retention_days_python">
+<a href="#retention_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ro_username_python">
+<a href="#ro_username_python" style="color: inherit; text-decoration: inherit;">ro_<wbr>username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_mysql_python">
+<a href="#source_mysql_python" style="color: inherit; text-decoration: inherit;">source_<wbr>mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfigsourcemysql">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="serviceintegrationmetricsuserconfigsourcemysql">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#ServiceIntegrationMetricsUserConfigSourceMysql">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceIntegrationMetricsUserConfigSourceMysql">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationMetricsUserConfigSourceMysqlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationMetricsUserConfigSourceMysqlOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceIntegrationMetricsUserConfigSourceMysqlArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceIntegrationMetricsUserConfigSourceMysql.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="telegraf_csharp">
+<a href="#telegraf_csharp" style="color: inherit; text-decoration: inherit;">Telegraf</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfigsourcemysqltelegraf">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="telegraf_go">
+<a href="#telegraf_go" style="color: inherit; text-decoration: inherit;">Telegraf</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfigsourcemysqltelegraf">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="telegraf_nodejs">
+<a href="#telegraf_nodejs" style="color: inherit; text-decoration: inherit;">telegraf</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfigsourcemysqltelegraf">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="telegraf_python">
+<a href="#telegraf_python" style="color: inherit; text-decoration: inherit;">telegraf</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfigsourcemysqltelegraf">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="serviceintegrationmetricsuserconfigsourcemysqltelegraf">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#ServiceIntegrationMetricsUserConfigSourceMysqlTelegraf">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceIntegrationMetricsUserConfigSourceMysqlTelegraf">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationMetricsUserConfigSourceMysqlTelegrafArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationMetricsUserConfigSourceMysqlTelegrafOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceIntegrationMetricsUserConfigSourceMysqlTelegrafArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceIntegrationMetricsUserConfigSourceMysqlTelegraf.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gathereventwaits_csharp">
+<a href="#gathereventwaits_csharp" style="color: inherit; text-decoration: inherit;">Gather<wbr>Event<wbr>Waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherfileeventsstats_csharp">
+<a href="#gatherfileeventsstats_csharp" style="color: inherit; text-decoration: inherit;">Gather<wbr>File<wbr>Events<wbr>Stats</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherindexiowaits_csharp">
+<a href="#gatherindexiowaits_csharp" style="color: inherit; text-decoration: inherit;">Gather<wbr>Index<wbr>Io<wbr>Waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherinfoschemaautoinc_csharp">
+<a href="#gatherinfoschemaautoinc_csharp" style="color: inherit; text-decoration: inherit;">Gather<wbr>Info<wbr>Schema<wbr>Auto<wbr>Inc</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherinnodbmetrics_csharp">
+<a href="#gatherinnodbmetrics_csharp" style="color: inherit; text-decoration: inherit;">Gather<wbr>Innodb<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherperfeventsstatements_csharp">
+<a href="#gatherperfeventsstatements_csharp" style="color: inherit; text-decoration: inherit;">Gather<wbr>Perf<wbr>Events<wbr>Statements</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherprocesslist_csharp">
+<a href="#gatherprocesslist_csharp" style="color: inherit; text-decoration: inherit;">Gather<wbr>Process<wbr>List</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherslavestatus_csharp">
+<a href="#gatherslavestatus_csharp" style="color: inherit; text-decoration: inherit;">Gather<wbr>Slave<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gathertableiowaits_csharp">
+<a href="#gathertableiowaits_csharp" style="color: inherit; text-decoration: inherit;">Gather<wbr>Table<wbr>Io<wbr>Waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gathertablelockwaits_csharp">
+<a href="#gathertablelockwaits_csharp" style="color: inherit; text-decoration: inherit;">Gather<wbr>Table<wbr>Lock<wbr>Waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gathertableschema_csharp">
+<a href="#gathertableschema_csharp" style="color: inherit; text-decoration: inherit;">Gather<wbr>Table<wbr>Schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perfeventsstatementsdigesttextlimit_csharp">
+<a href="#perfeventsstatementsdigesttextlimit_csharp" style="color: inherit; text-decoration: inherit;">Perf<wbr>Events<wbr>Statements<wbr>Digest<wbr>Text<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perfeventsstatementslimit_csharp">
+<a href="#perfeventsstatementslimit_csharp" style="color: inherit; text-decoration: inherit;">Perf<wbr>Events<wbr>Statements<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perfeventsstatementstimelimit_csharp">
+<a href="#perfeventsstatementstimelimit_csharp" style="color: inherit; text-decoration: inherit;">Perf<wbr>Events<wbr>Statements<wbr>Time<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gathereventwaits_go">
+<a href="#gathereventwaits_go" style="color: inherit; text-decoration: inherit;">Gather<wbr>Event<wbr>Waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherfileeventsstats_go">
+<a href="#gatherfileeventsstats_go" style="color: inherit; text-decoration: inherit;">Gather<wbr>File<wbr>Events<wbr>Stats</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherindexiowaits_go">
+<a href="#gatherindexiowaits_go" style="color: inherit; text-decoration: inherit;">Gather<wbr>Index<wbr>Io<wbr>Waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherinfoschemaautoinc_go">
+<a href="#gatherinfoschemaautoinc_go" style="color: inherit; text-decoration: inherit;">Gather<wbr>Info<wbr>Schema<wbr>Auto<wbr>Inc</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherinnodbmetrics_go">
+<a href="#gatherinnodbmetrics_go" style="color: inherit; text-decoration: inherit;">Gather<wbr>Innodb<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherperfeventsstatements_go">
+<a href="#gatherperfeventsstatements_go" style="color: inherit; text-decoration: inherit;">Gather<wbr>Perf<wbr>Events<wbr>Statements</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherprocesslist_go">
+<a href="#gatherprocesslist_go" style="color: inherit; text-decoration: inherit;">Gather<wbr>Process<wbr>List</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherslavestatus_go">
+<a href="#gatherslavestatus_go" style="color: inherit; text-decoration: inherit;">Gather<wbr>Slave<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gathertableiowaits_go">
+<a href="#gathertableiowaits_go" style="color: inherit; text-decoration: inherit;">Gather<wbr>Table<wbr>Io<wbr>Waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gathertablelockwaits_go">
+<a href="#gathertablelockwaits_go" style="color: inherit; text-decoration: inherit;">Gather<wbr>Table<wbr>Lock<wbr>Waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gathertableschema_go">
+<a href="#gathertableschema_go" style="color: inherit; text-decoration: inherit;">Gather<wbr>Table<wbr>Schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perfeventsstatementsdigesttextlimit_go">
+<a href="#perfeventsstatementsdigesttextlimit_go" style="color: inherit; text-decoration: inherit;">Perf<wbr>Events<wbr>Statements<wbr>Digest<wbr>Text<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perfeventsstatementslimit_go">
+<a href="#perfeventsstatementslimit_go" style="color: inherit; text-decoration: inherit;">Perf<wbr>Events<wbr>Statements<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perfeventsstatementstimelimit_go">
+<a href="#perfeventsstatementstimelimit_go" style="color: inherit; text-decoration: inherit;">Perf<wbr>Events<wbr>Statements<wbr>Time<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gathereventwaits_nodejs">
+<a href="#gathereventwaits_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Event<wbr>Waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherfileeventsstats_nodejs">
+<a href="#gatherfileeventsstats_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>File<wbr>Events<wbr>Stats</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherindexiowaits_nodejs">
+<a href="#gatherindexiowaits_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Index<wbr>Io<wbr>Waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherinfoschemaautoinc_nodejs">
+<a href="#gatherinfoschemaautoinc_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Info<wbr>Schema<wbr>Auto<wbr>Inc</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherinnodbmetrics_nodejs">
+<a href="#gatherinnodbmetrics_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Innodb<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherperfeventsstatements_nodejs">
+<a href="#gatherperfeventsstatements_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Perf<wbr>Events<wbr>Statements</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherprocesslist_nodejs">
+<a href="#gatherprocesslist_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Process<wbr>List</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherslavestatus_nodejs">
+<a href="#gatherslavestatus_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Slave<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gathertableiowaits_nodejs">
+<a href="#gathertableiowaits_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Table<wbr>Io<wbr>Waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gathertablelockwaits_nodejs">
+<a href="#gathertablelockwaits_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Table<wbr>Lock<wbr>Waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gathertableschema_nodejs">
+<a href="#gathertableschema_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Table<wbr>Schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perfeventsstatementsdigesttextlimit_nodejs">
+<a href="#perfeventsstatementsdigesttextlimit_nodejs" style="color: inherit; text-decoration: inherit;">perf<wbr>Events<wbr>Statements<wbr>Digest<wbr>Text<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perfeventsstatementslimit_nodejs">
+<a href="#perfeventsstatementslimit_nodejs" style="color: inherit; text-decoration: inherit;">perf<wbr>Events<wbr>Statements<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perfeventsstatementstimelimit_nodejs">
+<a href="#perfeventsstatementstimelimit_nodejs" style="color: inherit; text-decoration: inherit;">perf<wbr>Events<wbr>Statements<wbr>Time<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gather_event_waits_python">
+<a href="#gather_event_waits_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>event_<wbr>waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gather_file_events_stats_python">
+<a href="#gather_file_events_stats_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>file_<wbr>events_<wbr>stats</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gather_index_io_waits_python">
+<a href="#gather_index_io_waits_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>index_<wbr>io_<wbr>waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gather_info_schema_auto_inc_python">
+<a href="#gather_info_schema_auto_inc_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>info_<wbr>schema_<wbr>auto_<wbr>inc</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gather_innodb_metrics_python">
+<a href="#gather_innodb_metrics_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>innodb_<wbr>metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gather_perf_events_statements_python">
+<a href="#gather_perf_events_statements_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>perf_<wbr>events_<wbr>statements</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gather_process_list_python">
+<a href="#gather_process_list_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>process_<wbr>list</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gather_slave_status_python">
+<a href="#gather_slave_status_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>slave_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gather_table_io_waits_python">
+<a href="#gather_table_io_waits_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>table_<wbr>io_<wbr>waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gather_table_lock_waits_python">
+<a href="#gather_table_lock_waits_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>table_<wbr>lock_<wbr>waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gather_table_schema_python">
+<a href="#gather_table_schema_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>table_<wbr>schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perf_events_statements_digest_text_limit_python">
+<a href="#perf_events_statements_digest_text_limit_python" style="color: inherit; text-decoration: inherit;">perf_<wbr>events_<wbr>statements_<wbr>digest_<wbr>text_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perf_events_statements_limit_python">
+<a href="#perf_events_statements_limit_python" style="color: inherit; text-decoration: inherit;">perf_<wbr>events_<wbr>statements_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perf_events_statements_time_limit_python">
+<a href="#perf_events_statements_time_limit_python" style="color: inherit; text-decoration: inherit;">perf_<wbr>events_<wbr>statements_<wbr>time_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="serviceintegrationmirrormakeruserconfig">Service<wbr>Integration<wbr>Mirrormaker<wbr>User<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#ServiceIntegrationMirrormakerUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceIntegrationMirrormakerUserConfig">output</a> API doc for this type.
@@ -2135,6 +4060,696 @@ needs to be defined using the reference syntax described above to set up the dep
             title="Optional">
         <span id="mirrormaker_whitelist_python">
 <a href="#mirrormaker_whitelist_python" style="color: inherit; text-decoration: inherit;">mirrormaker_<wbr>whitelist</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="serviceintegrationprometheususerconfig">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#ServiceIntegrationPrometheusUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceIntegrationPrometheusUserConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationPrometheusUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationPrometheusUserConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceIntegrationPrometheusUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceIntegrationPrometheusUserConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourcemysql_csharp">
+<a href="#sourcemysql_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfigsourcemysql">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourcemysql_go">
+<a href="#sourcemysql_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfigsourcemysql">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourcemysql_nodejs">
+<a href="#sourcemysql_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfigsourcemysql">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_mysql_python">
+<a href="#source_mysql_python" style="color: inherit; text-decoration: inherit;">source_<wbr>mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfigsourcemysql">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="serviceintegrationprometheususerconfigsourcemysql">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#ServiceIntegrationPrometheusUserConfigSourceMysql">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceIntegrationPrometheusUserConfigSourceMysql">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationPrometheusUserConfigSourceMysqlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationPrometheusUserConfigSourceMysqlOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceIntegrationPrometheusUserConfigSourceMysqlArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceIntegrationPrometheusUserConfigSourceMysql.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="telegraf_csharp">
+<a href="#telegraf_csharp" style="color: inherit; text-decoration: inherit;">Telegraf</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfigsourcemysqltelegraf">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="telegraf_go">
+<a href="#telegraf_go" style="color: inherit; text-decoration: inherit;">Telegraf</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfigsourcemysqltelegraf">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="telegraf_nodejs">
+<a href="#telegraf_nodejs" style="color: inherit; text-decoration: inherit;">telegraf</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfigsourcemysqltelegraf">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="telegraf_python">
+<a href="#telegraf_python" style="color: inherit; text-decoration: inherit;">telegraf</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfigsourcemysqltelegraf">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="serviceintegrationprometheususerconfigsourcemysqltelegraf">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#ServiceIntegrationPrometheusUserConfigSourceMysqlTelegraf">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceIntegrationPrometheusUserConfigSourceMysqlTelegraf">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationPrometheusUserConfigSourceMysqlTelegrafArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationPrometheusUserConfigSourceMysqlTelegrafOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceIntegrationPrometheusUserConfigSourceMysqlTelegrafArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceIntegrationPrometheusUserConfigSourceMysqlTelegraf.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gathereventwaits_csharp">
+<a href="#gathereventwaits_csharp" style="color: inherit; text-decoration: inherit;">Gather<wbr>Event<wbr>Waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherfileeventsstats_csharp">
+<a href="#gatherfileeventsstats_csharp" style="color: inherit; text-decoration: inherit;">Gather<wbr>File<wbr>Events<wbr>Stats</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherindexiowaits_csharp">
+<a href="#gatherindexiowaits_csharp" style="color: inherit; text-decoration: inherit;">Gather<wbr>Index<wbr>Io<wbr>Waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherinfoschemaautoinc_csharp">
+<a href="#gatherinfoschemaautoinc_csharp" style="color: inherit; text-decoration: inherit;">Gather<wbr>Info<wbr>Schema<wbr>Auto<wbr>Inc</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherinnodbmetrics_csharp">
+<a href="#gatherinnodbmetrics_csharp" style="color: inherit; text-decoration: inherit;">Gather<wbr>Innodb<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherperfeventsstatements_csharp">
+<a href="#gatherperfeventsstatements_csharp" style="color: inherit; text-decoration: inherit;">Gather<wbr>Perf<wbr>Events<wbr>Statements</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherprocesslist_csharp">
+<a href="#gatherprocesslist_csharp" style="color: inherit; text-decoration: inherit;">Gather<wbr>Process<wbr>List</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherslavestatus_csharp">
+<a href="#gatherslavestatus_csharp" style="color: inherit; text-decoration: inherit;">Gather<wbr>Slave<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gathertableiowaits_csharp">
+<a href="#gathertableiowaits_csharp" style="color: inherit; text-decoration: inherit;">Gather<wbr>Table<wbr>Io<wbr>Waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gathertablelockwaits_csharp">
+<a href="#gathertablelockwaits_csharp" style="color: inherit; text-decoration: inherit;">Gather<wbr>Table<wbr>Lock<wbr>Waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gathertableschema_csharp">
+<a href="#gathertableschema_csharp" style="color: inherit; text-decoration: inherit;">Gather<wbr>Table<wbr>Schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perfeventsstatementsdigesttextlimit_csharp">
+<a href="#perfeventsstatementsdigesttextlimit_csharp" style="color: inherit; text-decoration: inherit;">Perf<wbr>Events<wbr>Statements<wbr>Digest<wbr>Text<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perfeventsstatementslimit_csharp">
+<a href="#perfeventsstatementslimit_csharp" style="color: inherit; text-decoration: inherit;">Perf<wbr>Events<wbr>Statements<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perfeventsstatementstimelimit_csharp">
+<a href="#perfeventsstatementstimelimit_csharp" style="color: inherit; text-decoration: inherit;">Perf<wbr>Events<wbr>Statements<wbr>Time<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gathereventwaits_go">
+<a href="#gathereventwaits_go" style="color: inherit; text-decoration: inherit;">Gather<wbr>Event<wbr>Waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherfileeventsstats_go">
+<a href="#gatherfileeventsstats_go" style="color: inherit; text-decoration: inherit;">Gather<wbr>File<wbr>Events<wbr>Stats</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherindexiowaits_go">
+<a href="#gatherindexiowaits_go" style="color: inherit; text-decoration: inherit;">Gather<wbr>Index<wbr>Io<wbr>Waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherinfoschemaautoinc_go">
+<a href="#gatherinfoschemaautoinc_go" style="color: inherit; text-decoration: inherit;">Gather<wbr>Info<wbr>Schema<wbr>Auto<wbr>Inc</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherinnodbmetrics_go">
+<a href="#gatherinnodbmetrics_go" style="color: inherit; text-decoration: inherit;">Gather<wbr>Innodb<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherperfeventsstatements_go">
+<a href="#gatherperfeventsstatements_go" style="color: inherit; text-decoration: inherit;">Gather<wbr>Perf<wbr>Events<wbr>Statements</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherprocesslist_go">
+<a href="#gatherprocesslist_go" style="color: inherit; text-decoration: inherit;">Gather<wbr>Process<wbr>List</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherslavestatus_go">
+<a href="#gatherslavestatus_go" style="color: inherit; text-decoration: inherit;">Gather<wbr>Slave<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gathertableiowaits_go">
+<a href="#gathertableiowaits_go" style="color: inherit; text-decoration: inherit;">Gather<wbr>Table<wbr>Io<wbr>Waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gathertablelockwaits_go">
+<a href="#gathertablelockwaits_go" style="color: inherit; text-decoration: inherit;">Gather<wbr>Table<wbr>Lock<wbr>Waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gathertableschema_go">
+<a href="#gathertableschema_go" style="color: inherit; text-decoration: inherit;">Gather<wbr>Table<wbr>Schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perfeventsstatementsdigesttextlimit_go">
+<a href="#perfeventsstatementsdigesttextlimit_go" style="color: inherit; text-decoration: inherit;">Perf<wbr>Events<wbr>Statements<wbr>Digest<wbr>Text<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perfeventsstatementslimit_go">
+<a href="#perfeventsstatementslimit_go" style="color: inherit; text-decoration: inherit;">Perf<wbr>Events<wbr>Statements<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perfeventsstatementstimelimit_go">
+<a href="#perfeventsstatementstimelimit_go" style="color: inherit; text-decoration: inherit;">Perf<wbr>Events<wbr>Statements<wbr>Time<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gathereventwaits_nodejs">
+<a href="#gathereventwaits_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Event<wbr>Waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherfileeventsstats_nodejs">
+<a href="#gatherfileeventsstats_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>File<wbr>Events<wbr>Stats</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherindexiowaits_nodejs">
+<a href="#gatherindexiowaits_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Index<wbr>Io<wbr>Waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherinfoschemaautoinc_nodejs">
+<a href="#gatherinfoschemaautoinc_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Info<wbr>Schema<wbr>Auto<wbr>Inc</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherinnodbmetrics_nodejs">
+<a href="#gatherinnodbmetrics_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Innodb<wbr>Metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherperfeventsstatements_nodejs">
+<a href="#gatherperfeventsstatements_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Perf<wbr>Events<wbr>Statements</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherprocesslist_nodejs">
+<a href="#gatherprocesslist_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Process<wbr>List</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatherslavestatus_nodejs">
+<a href="#gatherslavestatus_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Slave<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gathertableiowaits_nodejs">
+<a href="#gathertableiowaits_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Table<wbr>Io<wbr>Waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gathertablelockwaits_nodejs">
+<a href="#gathertablelockwaits_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Table<wbr>Lock<wbr>Waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gathertableschema_nodejs">
+<a href="#gathertableschema_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Table<wbr>Schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perfeventsstatementsdigesttextlimit_nodejs">
+<a href="#perfeventsstatementsdigesttextlimit_nodejs" style="color: inherit; text-decoration: inherit;">perf<wbr>Events<wbr>Statements<wbr>Digest<wbr>Text<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perfeventsstatementslimit_nodejs">
+<a href="#perfeventsstatementslimit_nodejs" style="color: inherit; text-decoration: inherit;">perf<wbr>Events<wbr>Statements<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perfeventsstatementstimelimit_nodejs">
+<a href="#perfeventsstatementstimelimit_nodejs" style="color: inherit; text-decoration: inherit;">perf<wbr>Events<wbr>Statements<wbr>Time<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gather_event_waits_python">
+<a href="#gather_event_waits_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>event_<wbr>waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gather_file_events_stats_python">
+<a href="#gather_file_events_stats_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>file_<wbr>events_<wbr>stats</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gather_index_io_waits_python">
+<a href="#gather_index_io_waits_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>index_<wbr>io_<wbr>waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gather_info_schema_auto_inc_python">
+<a href="#gather_info_schema_auto_inc_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>info_<wbr>schema_<wbr>auto_<wbr>inc</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gather_innodb_metrics_python">
+<a href="#gather_innodb_metrics_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>innodb_<wbr>metrics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gather_perf_events_statements_python">
+<a href="#gather_perf_events_statements_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>perf_<wbr>events_<wbr>statements</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gather_process_list_python">
+<a href="#gather_process_list_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>process_<wbr>list</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gather_slave_status_python">
+<a href="#gather_slave_status_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>slave_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gather_table_io_waits_python">
+<a href="#gather_table_io_waits_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>table_<wbr>io_<wbr>waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gather_table_lock_waits_python">
+<a href="#gather_table_lock_waits_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>table_<wbr>lock_<wbr>waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gather_table_schema_python">
+<a href="#gather_table_schema_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>table_<wbr>schema</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perf_events_statements_digest_text_limit_python">
+<a href="#perf_events_statements_digest_text_limit_python" style="color: inherit; text-decoration: inherit;">perf_<wbr>events_<wbr>statements_<wbr>digest_<wbr>text_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perf_events_statements_limit_python">
+<a href="#perf_events_statements_limit_python" style="color: inherit; text-decoration: inherit;">perf_<wbr>events_<wbr>statements_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perf_events_statements_time_limit_python">
+<a href="#perf_events_statements_time_limit_python" style="color: inherit; text-decoration: inherit;">perf_<wbr>events_<wbr>statements_<wbr>time_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

@@ -2284,6 +2284,18 @@ deletion is done.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="m3coordinatorenablegraphitecarboningest_csharp">
+<a href="#m3coordinatorenablegraphitecarboningest_csharp" style="color: inherit; text-decoration: inherit;">M3coordinator<wbr>Enable<wbr>Graphite<wbr>Carbon<wbr>Ingest</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enables access to Graphite Carbon 
+plaintext metrics ingestion. It can be enabled only for services inside VPCs. The
+metrics are written to aggregated namespaces only.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="namespaces_csharp">
 <a href="#namespaces_csharp" style="color: inherit; text-decoration: inherit;">Namespaces</a>
 </span>
@@ -2304,6 +2316,17 @@ deletion is done.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="projecttoforkfrom_csharp">
+<a href="#projecttoforkfrom_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>To<wbr>Fork<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of another project to fork a service from. This has
+effect only when a new service is being created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="publicaccess_csharp">
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
@@ -2311,6 +2334,17 @@ deletion is done.
         <span class="property-type"><a href="#getm3dbm3dbuserconfigpublicaccess">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicetoforkfrom_csharp">
+<a href="#servicetoforkfrom_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>To<wbr>Fork<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of another service to fork from. This has effect only 
+when a new service is being created.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2360,6 +2394,18 @@ deletion is done.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="m3coordinatorenablegraphitecarboningest_go">
+<a href="#m3coordinatorenablegraphitecarboningest_go" style="color: inherit; text-decoration: inherit;">M3coordinator<wbr>Enable<wbr>Graphite<wbr>Carbon<wbr>Ingest</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enables access to Graphite Carbon 
+plaintext metrics ingestion. It can be enabled only for services inside VPCs. The
+metrics are written to aggregated namespaces only.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="namespaces_go">
 <a href="#namespaces_go" style="color: inherit; text-decoration: inherit;">Namespaces</a>
 </span>
@@ -2380,6 +2426,17 @@ deletion is done.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="projecttoforkfrom_go">
+<a href="#projecttoforkfrom_go" style="color: inherit; text-decoration: inherit;">Project<wbr>To<wbr>Fork<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of another project to fork a service from. This has
+effect only when a new service is being created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="publicaccess_go">
 <a href="#publicaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
@@ -2387,6 +2444,17 @@ deletion is done.
         <span class="property-type"><a href="#getm3dbm3dbuserconfigpublicaccess">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicetoforkfrom_go">
+<a href="#servicetoforkfrom_go" style="color: inherit; text-decoration: inherit;">Service<wbr>To<wbr>Fork<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of another service to fork from. This has effect only 
+when a new service is being created.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2436,6 +2504,18 @@ deletion is done.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="m3coordinatorenablegraphitecarboningest_nodejs">
+<a href="#m3coordinatorenablegraphitecarboningest_nodejs" style="color: inherit; text-decoration: inherit;">m3coordinator<wbr>Enable<wbr>Graphite<wbr>Carbon<wbr>Ingest</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enables access to Graphite Carbon 
+plaintext metrics ingestion. It can be enabled only for services inside VPCs. The
+metrics are written to aggregated namespaces only.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="namespaces_nodejs">
 <a href="#namespaces_nodejs" style="color: inherit; text-decoration: inherit;">namespaces</a>
 </span>
@@ -2456,6 +2536,17 @@ deletion is done.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="projecttoforkfrom_nodejs">
+<a href="#projecttoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>To<wbr>Fork<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of another project to fork a service from. This has
+effect only when a new service is being created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="publicaccess_nodejs">
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
@@ -2463,6 +2554,17 @@ deletion is done.
         <span class="property-type"><a href="#getm3dbm3dbuserconfigpublicaccess">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicetoforkfrom_nodejs">
+<a href="#servicetoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>To<wbr>Fork<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of another service to fork from. This has effect only 
+when a new service is being created.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2512,6 +2614,18 @@ deletion is done.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="m3coordinator_enable_graphite_carbon_ingest_python">
+<a href="#m3coordinator_enable_graphite_carbon_ingest_python" style="color: inherit; text-decoration: inherit;">m3coordinator_<wbr>enable_<wbr>graphite_<wbr>carbon_<wbr>ingest</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Enables access to Graphite Carbon 
+plaintext metrics ingestion. It can be enabled only for services inside VPCs. The
+metrics are written to aggregated namespaces only.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="namespaces_python">
 <a href="#namespaces_python" style="color: inherit; text-decoration: inherit;">namespaces</a>
 </span>
@@ -2532,6 +2646,17 @@ deletion is done.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="project_to_fork_from_python">
+<a href="#project_to_fork_from_python" style="color: inherit; text-decoration: inherit;">project_<wbr>to_<wbr>fork_<wbr>from</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of another project to fork a service from. This has
+effect only when a new service is being created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="public_access_python">
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
@@ -2539,6 +2664,17 @@ deletion is done.
         <span class="property-type"><a href="#getm3dbm3dbuserconfigpublicaccess">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="service_to_fork_from_python">
+<a href="#service_to_fork_from_python" style="color: inherit; text-decoration: inherit;">service_<wbr>to_<wbr>fork_<wbr>from</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of another service to fork from. This has effect only 
+when a new service is being created.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

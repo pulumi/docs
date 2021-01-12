@@ -287,8 +287,8 @@ The ServiceUser resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to.
-They should be defined using reference as shown above to set up dependencies correctly.
+    <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to. They should be defined
+using reference as shown above to set up dependencies correctly.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -338,7 +338,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Command category rules
+    <dd>{{% md %}}Redis specific field, defines command category rules.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -348,7 +348,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Rules for individual commands
+    <dd>{{% md %}}Redis specific field, defines rules for individual commands.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -358,7 +358,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key access rules
+    <dd>{{% md %}}Redis specific field, defines key access rules.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -374,8 +374,8 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to.
-They should be defined using reference as shown above to set up dependencies correctly.
+    <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to. They should be defined
+using reference as shown above to set up dependencies correctly.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -425,7 +425,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Command category rules
+    <dd>{{% md %}}Redis specific field, defines command category rules.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -435,7 +435,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Rules for individual commands
+    <dd>{{% md %}}Redis specific field, defines rules for individual commands.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -445,7 +445,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Key access rules
+    <dd>{{% md %}}Redis specific field, defines key access rules.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -461,8 +461,8 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to.
-They should be defined using reference as shown above to set up dependencies correctly.
+    <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to. They should be defined
+using reference as shown above to set up dependencies correctly.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -512,7 +512,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Command category rules
+    <dd>{{% md %}}Redis specific field, defines command category rules.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -522,7 +522,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Rules for individual commands
+    <dd>{{% md %}}Redis specific field, defines rules for individual commands.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -532,7 +532,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Key access rules
+    <dd>{{% md %}}Redis specific field, defines key access rules.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -548,8 +548,8 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to.
-They should be defined using reference as shown above to set up dependencies correctly.
+    <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to. They should be defined
+using reference as shown above to set up dependencies correctly.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -599,7 +599,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Command category rules
+    <dd>{{% md %}}Redis specific field, defines command category rules.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -609,7 +609,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Rules for individual commands
+    <dd>{{% md %}}Redis specific field, defines rules for individual commands.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -619,7 +619,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Key access rules
+    <dd>{{% md %}}Redis specific field, defines key access rules.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -985,8 +985,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to.
-They should be defined using reference as shown above to set up dependencies correctly.
+    <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to. They should be defined
+using reference as shown above to set up dependencies correctly.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -996,7 +996,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Command category rules
+    <dd>{{% md %}}Redis specific field, defines command category rules.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1006,7 +1006,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Rules for individual commands
+    <dd>{{% md %}}Redis specific field, defines rules for individual commands.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1016,7 +1016,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key access rules
+    <dd>{{% md %}}Redis specific field, defines key access rules.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1102,8 +1102,8 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to.
-They should be defined using reference as shown above to set up dependencies correctly.
+    <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to. They should be defined
+using reference as shown above to set up dependencies correctly.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1113,7 +1113,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Command category rules
+    <dd>{{% md %}}Redis specific field, defines command category rules.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1123,7 +1123,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Rules for individual commands
+    <dd>{{% md %}}Redis specific field, defines rules for individual commands.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1133,7 +1133,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Key access rules
+    <dd>{{% md %}}Redis specific field, defines key access rules.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1219,8 +1219,8 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to.
-They should be defined using reference as shown above to set up dependencies correctly.
+    <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to. They should be defined
+using reference as shown above to set up dependencies correctly.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1230,7 +1230,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Command category rules
+    <dd>{{% md %}}Redis specific field, defines command category rules.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1240,7 +1240,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Rules for individual commands
+    <dd>{{% md %}}Redis specific field, defines rules for individual commands.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1250,7 +1250,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Key access rules
+    <dd>{{% md %}}Redis specific field, defines key access rules.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1336,8 +1336,8 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to.
-They should be defined using reference as shown above to set up dependencies correctly.
+    <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to. They should be defined
+using reference as shown above to set up dependencies correctly.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1347,7 +1347,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Command category rules
+    <dd>{{% md %}}Redis specific field, defines command category rules.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1357,7 +1357,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Rules for individual commands
+    <dd>{{% md %}}Redis specific field, defines rules for individual commands.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1367,7 +1367,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Key access rules
+    <dd>{{% md %}}Redis specific field, defines key access rules.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
