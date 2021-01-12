@@ -2418,6 +2418,17 @@ service nodes that are in a project VPC or another type of private network.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="projecttoforkfrom_csharp">
+<a href="#projecttoforkfrom_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>To<wbr>Fork<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of another project to fork a service from. This has
+effect only when a new service is being created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="publicaccess_csharp">
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
@@ -2548,6 +2559,17 @@ service nodes that are in a project VPC or another type of private network.
         <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigprivateaccess">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="projecttoforkfrom_go">
+<a href="#projecttoforkfrom_go" style="color: inherit; text-decoration: inherit;">Project<wbr>To<wbr>Fork<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of another project to fork a service from. This has
+effect only when a new service is being created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2684,6 +2706,17 @@ service nodes that are in a project VPC or another type of private network.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="projecttoforkfrom_nodejs">
+<a href="#projecttoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>To<wbr>Fork<wbr>From</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of another project to fork a service from. This has
+effect only when a new service is being created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="publicaccess_nodejs">
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
@@ -2814,6 +2847,17 @@ service nodes that are in a project VPC or another type of private network.
         <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigprivateaccess">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="project_to_fork_from_python">
+<a href="#project_to_fork_from_python" style="color: inherit; text-decoration: inherit;">project_<wbr>to_<wbr>fork_<wbr>from</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of another project to fork a service from. This has
+effect only when a new service is being created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

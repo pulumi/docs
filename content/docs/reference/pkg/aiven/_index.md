@@ -19,6 +19,7 @@ A Pulumi package for creating and managing Aiven cloud resources.
     <li><a href="accountteam" title="AccountTeam"><span class="symbol resource"></span>AccountTeam</a></li>
     <li><a href="accountteammember" title="AccountTeamMember"><span class="symbol resource"></span>AccountTeamMember</a></li>
     <li><a href="accountteamproject" title="AccountTeamProject"><span class="symbol resource"></span>AccountTeamProject</a></li>
+    <li><a href="billinggroup" title="BillingGroup"><span class="symbol resource"></span>BillingGroup</a></li>
     <li><a href="cassandra" title="Cassandra"><span class="symbol resource"></span>Cassandra</a></li>
     <li><a href="connectionpool" title="ConnectionPool"><span class="symbol resource"></span>ConnectionPool</a></li>
     <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
@@ -101,7 +102,7 @@ A Pulumi package for creating and managing Aiven cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).</dd>
 	<dt>Version</dt>
-	<dd>3.3.1</dd>
+	<dd>3.3.2</dd>
 </dl>
 
 

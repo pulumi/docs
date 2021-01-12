@@ -143,8 +143,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to.
-They should be defined using reference as shown above to set up dependencies correctly.
+    <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to. They should be defined
+using reference as shown above to set up dependencies correctly.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -212,7 +212,8 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Redis specific field, defines command category rules.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="redisaclcommands_csharp">
@@ -221,7 +222,8 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Redis specific field, defines rules for individual commands.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="redisaclkeys_csharp">
@@ -230,7 +232,8 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Redis specific field, defines key access rules.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
@@ -255,8 +258,8 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to.
-They should be defined using reference as shown above to set up dependencies correctly.
+    <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to. They should be defined
+using reference as shown above to set up dependencies correctly.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -324,7 +327,8 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Redis specific field, defines command category rules.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="redisaclcommands_go">
@@ -333,7 +337,8 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Redis specific field, defines rules for individual commands.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="redisaclkeys_go">
@@ -342,7 +347,8 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Redis specific field, defines key access rules.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="type_go">
@@ -367,8 +373,8 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to.
-They should be defined using reference as shown above to set up dependencies correctly.
+    <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to. They should be defined
+using reference as shown above to set up dependencies correctly.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -436,7 +442,8 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Redis specific field, defines command category rules.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="redisaclcommands_nodejs">
@@ -445,7 +452,8 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Redis specific field, defines rules for individual commands.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="redisaclkeys_nodejs">
@@ -454,7 +462,8 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Redis specific field, defines key access rules.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
@@ -479,8 +488,8 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to.
-They should be defined using reference as shown above to set up dependencies correctly.
+    <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to. They should be defined
+using reference as shown above to set up dependencies correctly.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -548,7 +557,8 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Redis specific field, defines command category rules.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="redis_acl_commands_python">
@@ -557,7 +567,8 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Redis specific field, defines rules for individual commands.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="redis_acl_keys_python">
@@ -566,7 +577,8 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Redis specific field, defines key access rules.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="type_python">
@@ -686,7 +698,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Redis specific field, defines command category rules.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="redisaclcommands_csharp">
@@ -695,7 +708,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Redis specific field, defines rules for individual commands.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="redisaclkeys_csharp">
@@ -704,7 +718,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Redis specific field, defines key access rules.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -805,7 +820,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Redis specific field, defines command category rules.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="redisaclcommands_go">
@@ -814,7 +830,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Redis specific field, defines rules for individual commands.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="redisaclkeys_go">
@@ -823,7 +840,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Redis specific field, defines key access rules.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -924,7 +942,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Redis specific field, defines command category rules.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="redisaclcommands_nodejs">
@@ -933,7 +952,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Redis specific field, defines rules for individual commands.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="redisaclkeys_nodejs">
@@ -942,7 +962,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Redis specific field, defines key access rules.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1043,7 +1064,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Redis specific field, defines command category rules.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="redis_acl_commands_python">
@@ -1052,7 +1074,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Redis specific field, defines rules for individual commands.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="redis_acl_keys_python">
@@ -1061,7 +1084,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Redis specific field, defines key access rules.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
