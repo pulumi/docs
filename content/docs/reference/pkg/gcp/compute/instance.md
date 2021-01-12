@@ -29,30 +29,25 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var @default = new Gcp.Compute.Instance("default", new Gcp.Compute.InstanceArgs
+        var defaultAccount = new Gcp.ServiceAccount.Account("defaultAccount", new Gcp.ServiceAccount.AccountArgs
         {
+            AccountId = "service_account_id",
+            DisplayName = "Service Account",
+        });
+        var defaultInstance = new Gcp.Compute.Instance("defaultInstance", new Gcp.Compute.InstanceArgs
+        {
+            MachineType = "e2-medium",
+            Zone = "us-central1-a",
+            Tags = 
+            {
+                "foo",
+                "bar",
+            },
             BootDisk = new Gcp.Compute.Inputs.InstanceBootDiskArgs
             {
                 InitializeParams = new Gcp.Compute.Inputs.InstanceBootDiskInitializeParamsArgs
                 {
                     Image = "debian-cloud/debian-9",
-                },
-            },
-            MachineType = "e2-medium",
-            Metadata = 
-            {
-                { "foo", "bar" },
-            },
-            MetadataStartupScript = "echo hi > /test.txt",
-            NetworkInterfaces = 
-            {
-                new Gcp.Compute.Inputs.InstanceNetworkInterfaceArgs
-                {
-                    AccessConfigs = 
-                    {
-                        ,
-                    },
-                    Network = "default",
                 },
             },
             ScratchDisks = 
@@ -62,21 +57,30 @@ class MyStack : Stack
                     Interface = "SCSI",
                 },
             },
-            ServiceAccount = new Gcp.Compute.Inputs.InstanceServiceAccountArgs
+            NetworkInterfaces = 
             {
-                Scopes = 
+                new Gcp.Compute.Inputs.InstanceNetworkInterfaceArgs
                 {
-                    "userinfo-email",
-                    "compute-ro",
-                    "storage-ro",
+                    Network = "default",
+                    AccessConfigs = 
+                    {
+                        ,
+                    },
                 },
             },
-            Tags = 
+            Metadata = 
             {
-                "foo",
-                "bar",
+                { "foo", "bar" },
             },
-            Zone = "us-central1-a",
+            MetadataStartupScript = "echo hi > /test.txt",
+            ServiceAccount = new Gcp.Compute.Inputs.InstanceServiceAccountArgs
+            {
+                Email = defaultAccount.Email,
+                Scopes = 
+                {
+                    "cloud-platform",
+                },
+            },
         });
     }
 
@@ -91,28 +95,29 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/serviceAccount"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := compute.NewInstance(ctx, "_default", &compute.InstanceArgs{
+		defaultAccount, err := serviceAccount.NewAccount(ctx, "defaultAccount", &serviceAccount.AccountArgs{
+			AccountId:   pulumi.String("service_account_id"),
+			DisplayName: pulumi.String("Service Account"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewInstance(ctx, "defaultInstance", &compute.InstanceArgs{
+			MachineType: pulumi.String("e2-medium"),
+			Zone:        pulumi.String("us-central1-a"),
+			Tags: pulumi.StringArray{
+				pulumi.String("foo"),
+				pulumi.String("bar"),
+			},
 			BootDisk: &compute.InstanceBootDiskArgs{
 				InitializeParams: &compute.InstanceBootDiskInitializeParamsArgs{
 					Image: pulumi.String("debian-cloud/debian-9"),
-				},
-			},
-			MachineType: pulumi.String("e2-medium"),
-			Metadata: pulumi.StringMap{
-				"foo": pulumi.String("bar"),
-			},
-			MetadataStartupScript: pulumi.String("echo hi > /test.txt"),
-			NetworkInterfaces: compute.InstanceNetworkInterfaceArray{
-				&compute.InstanceNetworkInterfaceArgs{
-					AccessConfigs: compute.InstanceNetworkInterfaceAccessConfigArray{
-						nil,
-					},
-					Network: pulumi.String("default"),
 				},
 			},
 			ScratchDisks: compute.InstanceScratchDiskArray{
@@ -120,18 +125,24 @@ func main() {
 					Interface: pulumi.String("SCSI"),
 				},
 			},
-			ServiceAccount: &compute.InstanceServiceAccountArgs{
-				Scopes: pulumi.StringArray{
-					pulumi.String("userinfo-email"),
-					pulumi.String("compute-ro"),
-					pulumi.String("storage-ro"),
+			NetworkInterfaces: compute.InstanceNetworkInterfaceArray{
+				&compute.InstanceNetworkInterfaceArgs{
+					Network: pulumi.String("default"),
+					AccessConfigs: compute.InstanceNetworkInterfaceAccessConfigArray{
+						nil,
+					},
 				},
 			},
-			Tags: pulumi.StringArray{
-				pulumi.String("foo"),
-				pulumi.String("bar"),
+			Metadata: pulumi.StringMap{
+				"foo": pulumi.String("bar"),
 			},
-			Zone: pulumi.String("us-central1-a"),
+			MetadataStartupScript: pulumi.String("echo hi > /test.txt"),
+			ServiceAccount: &compute.InstanceServiceAccountArgs{
+				Email: defaultAccount.Email,
+				Scopes: pulumi.StringArray{
+					pulumi.String("cloud-platform"),
+				},
+			},
 		})
 		if err != nil {
 			return err
@@ -148,36 +159,36 @@ func main() {
 import pulumi
 import pulumi_gcp as gcp
 
-default = gcp.compute.Instance("default",
+default_account = gcp.service_account.Account("defaultAccount",
+    account_id="service_account_id",
+    display_name="Service Account")
+default_instance = gcp.compute.Instance("defaultInstance",
+    machine_type="e2-medium",
+    zone="us-central1-a",
+    tags=[
+        "foo",
+        "bar",
+    ],
     boot_disk=gcp.compute.InstanceBootDiskArgs(
         initialize_params=gcp.compute.InstanceBootDiskInitializeParamsArgs(
             image="debian-cloud/debian-9",
         ),
     ),
-    machine_type="e2-medium",
+    scratch_disks=[gcp.compute.InstanceScratchDiskArgs(
+        interface="SCSI",
+    )],
+    network_interfaces=[gcp.compute.InstanceNetworkInterfaceArgs(
+        network="default",
+        access_configs=[gcp.compute.InstanceNetworkInterfaceAccessConfigArgs()],
+    )],
     metadata={
         "foo": "bar",
     },
     metadata_startup_script="echo hi > /test.txt",
-    network_interfaces=[gcp.compute.InstanceNetworkInterfaceArgs(
-        access_configs=[gcp.compute.InstanceNetworkInterfaceAccessConfigArgs()],
-        network="default",
-    )],
-    scratch_disks=[gcp.compute.InstanceScratchDiskArgs(
-        interface="SCSI",
-    )],
     service_account=gcp.compute.InstanceServiceAccountArgs(
-        scopes=[
-            "userinfo-email",
-            "compute-ro",
-            "storage-ro",
-        ],
-    ),
-    tags=[
-        "foo",
-        "bar",
-    ],
-    zone="us-central1-a")
+        email=default_account.email,
+        scopes=["cloud-platform"],
+    ))
 ```
 
 {{% /example %}}
@@ -188,37 +199,37 @@ default = gcp.compute.Instance("default",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const defaultInstance = new gcp.compute.Instance("default", {
+const defaultAccount = new gcp.serviceAccount.Account("defaultAccount", {
+    accountId: "service_account_id",
+    displayName: "Service Account",
+});
+const defaultInstance = new gcp.compute.Instance("defaultInstance", {
+    machineType: "e2-medium",
+    zone: "us-central1-a",
+    tags: [
+        "foo",
+        "bar",
+    ],
     bootDisk: {
         initializeParams: {
             image: "debian-cloud/debian-9",
         },
     },
-    machineType: "e2-medium",
+    scratchDisks: [{
+        "interface": "SCSI",
+    }],
+    networkInterfaces: [{
+        network: "default",
+        accessConfigs: [{}],
+    }],
     metadata: {
         foo: "bar",
     },
     metadataStartupScript: "echo hi > /test.txt",
-    networkInterfaces: [{
-        accessConfigs: [{}],
-        network: "default",
-    }],
-    // Local SSD disk
-    scratchDisks: [{
-        interface: "SCSI",
-    }],
     serviceAccount: {
-        scopes: [
-            "userinfo-email",
-            "compute-ro",
-            "storage-ro",
-        ],
+        email: defaultAccount.email,
+        scopes: ["cloud-platform"],
     },
-    tags: [
-        "foo",
-        "bar",
-    ],
-    zone: "us-central1-a",
 });
 ```
 
@@ -480,7 +491,7 @@ This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceconfidentialinstanceconfig">Instance<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}) - Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -779,7 +790,7 @@ This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceconfidentialinstanceconfig">Instance<wbr>Confidential<wbr>Instance<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}) - Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1078,7 +1089,7 @@ This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceconfidentialinstanceconfig">Instance<wbr>Confidential<wbr>Instance<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}) - Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1377,7 +1388,7 @@ This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceconfidentialinstanceconfig">Instance<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}) - Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2125,7 +2136,7 @@ This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceconfidentialinstanceconfig">Instance<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}) - Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2494,7 +2505,7 @@ This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceconfidentialinstanceconfig">Instance<wbr>Confidential<wbr>Instance<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}) - Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2863,7 +2874,7 @@ This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceconfidentialinstanceconfig">Instance<wbr>Confidential<wbr>Instance<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}) - Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3232,7 +3243,7 @@ This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceconfidentialinstanceconfig">Instance<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}) - Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4526,7 +4537,7 @@ will inherit the size of its base image.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}) Defines whether the instance should have confidential compute enabled. `on_host_maintenance` has to be set to TERMINATE or this will fail to create the VM.
+    <dd>{{% md %}}Defines whether the instance should have confidential compute enabled. `on_host_maintenance` has to be set to TERMINATE or this will fail to create the VM.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4542,7 +4553,7 @@ will inherit the size of its base image.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}) Defines whether the instance should have confidential compute enabled. `on_host_maintenance` has to be set to TERMINATE or this will fail to create the VM.
+    <dd>{{% md %}}Defines whether the instance should have confidential compute enabled. `on_host_maintenance` has to be set to TERMINATE or this will fail to create the VM.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4558,7 +4569,7 @@ will inherit the size of its base image.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}) Defines whether the instance should have confidential compute enabled. `on_host_maintenance` has to be set to TERMINATE or this will fail to create the VM.
+    <dd>{{% md %}}Defines whether the instance should have confidential compute enabled. `on_host_maintenance` has to be set to TERMINATE or this will fail to create the VM.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4574,7 +4585,7 @@ will inherit the size of its base image.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}) Defines whether the instance should have confidential compute enabled. `on_host_maintenance` has to be set to TERMINATE or this will fail to create the VM.
+    <dd>{{% md %}}Defines whether the instance should have confidential compute enabled. `on_host_maintenance` has to be set to TERMINATE or this will fail to create the VM.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

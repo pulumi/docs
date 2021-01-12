@@ -36,9 +36,6 @@ class MyStack : Stack
     {
         var defaultNetwork = new Gcp.Compute.Network("defaultNetwork", new Gcp.Compute.NetworkArgs
         {
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
         var mirror = new Gcp.Compute.Instance("mirror", new Gcp.Compute.InstanceArgs
         {
@@ -61,17 +58,11 @@ class MyStack : Stack
                     },
                 },
             },
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
         var defaultSubnetwork = new Gcp.Compute.Subnetwork("defaultSubnetwork", new Gcp.Compute.SubnetworkArgs
         {
             Network = defaultNetwork.Id,
             IpCidrRange = "10.2.0.0/16",
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
         var defaultHealthCheck = new Gcp.Compute.HealthCheck("defaultHealthCheck", new Gcp.Compute.HealthCheckArgs
         {
@@ -81,9 +72,6 @@ class MyStack : Stack
             {
                 Port = 80,
             },
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
         var defaultRegionBackendService = new Gcp.Compute.RegionBackendService("defaultRegionBackendService", new Gcp.Compute.RegionBackendServiceArgs
         {
@@ -91,9 +79,6 @@ class MyStack : Stack
             {
                 defaultHealthCheck.Id,
             },
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
         var defaultForwardingRule = new Gcp.Compute.ForwardingRule("defaultForwardingRule", new Gcp.Compute.ForwardingRuleArgs
         {
@@ -107,7 +92,6 @@ class MyStack : Stack
             NetworkTier = "PREMIUM",
         }, new CustomResourceOptions
         {
-            Provider = google_beta,
             DependsOn = 
             {
                 defaultSubnetwork,
@@ -148,10 +132,8 @@ class MyStack : Stack
                 {
                     "0.0.0.0/0",
                 },
+                Direction = "BOTH",
             },
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
     }
 
@@ -171,7 +153,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		defaultNetwork, err := compute.NewNetwork(ctx, "defaultNetwork", nil, pulumi.Provider(google_beta))
+		defaultNetwork, err := compute.NewNetwork(ctx, "defaultNetwork", nil)
 		if err != nil {
 			return err
 		}
@@ -190,14 +172,14 @@ func main() {
 					},
 				},
 			},
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
 		defaultSubnetwork, err := compute.NewSubnetwork(ctx, "defaultSubnetwork", &compute.SubnetworkArgs{
 			Network:     defaultNetwork.ID(),
 			IpCidrRange: pulumi.String("10.2.0.0/16"),
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -207,7 +189,7 @@ func main() {
 			TcpHealthCheck: &compute.HealthCheckTcpHealthCheckArgs{
 				Port: pulumi.Int(80),
 			},
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -215,7 +197,7 @@ func main() {
 			HealthChecks: pulumi.String(pulumi.String{
 				defaultHealthCheck.ID(),
 			}),
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -228,7 +210,7 @@ func main() {
 			Network:              defaultNetwork.ID(),
 			Subnetwork:           defaultSubnetwork.ID(),
 			NetworkTier:          pulumi.String("PREMIUM"),
-		}, pulumi.Provider(google_beta), pulumi.DependsOn([]pulumi.Resource{
+		}, pulumi.DependsOn([]pulumi.Resource{
 			defaultSubnetwork,
 		}))
 		if err != nil {
@@ -259,8 +241,9 @@ func main() {
 				CidrRanges: pulumi.StringArray{
 					pulumi.String("0.0.0.0/0"),
 				},
+				Direction: pulumi.String("BOTH"),
 			},
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -276,7 +259,7 @@ func main() {
 import pulumi
 import pulumi_gcp as gcp
 
-default_network = gcp.compute.Network("defaultNetwork", opts=pulumi.ResourceOptions(provider=google_beta))
+default_network = gcp.compute.Network("defaultNetwork")
 mirror = gcp.compute.Instance("mirror",
     machine_type="e2-medium",
     boot_disk=gcp.compute.InstanceBootDiskArgs(
@@ -287,21 +270,17 @@ mirror = gcp.compute.Instance("mirror",
     network_interfaces=[gcp.compute.InstanceNetworkInterfaceArgs(
         network=default_network.id,
         access_configs=[gcp.compute.InstanceNetworkInterfaceAccessConfigArgs()],
-    )],
-    opts=pulumi.ResourceOptions(provider=google_beta))
+    )])
 default_subnetwork = gcp.compute.Subnetwork("defaultSubnetwork",
     network=default_network.id,
-    ip_cidr_range="10.2.0.0/16",
-    opts=pulumi.ResourceOptions(provider=google_beta))
+    ip_cidr_range="10.2.0.0/16")
 default_health_check = gcp.compute.HealthCheck("defaultHealthCheck",
     check_interval_sec=1,
     timeout_sec=1,
     tcp_health_check=gcp.compute.HealthCheckTcpHealthCheckArgs(
         port=80,
-    ),
-    opts=pulumi.ResourceOptions(provider=google_beta))
-default_region_backend_service = gcp.compute.RegionBackendService("defaultRegionBackendService", health_checks=[default_health_check.id],
-opts=pulumi.ResourceOptions(provider=google_beta))
+    ))
+default_region_backend_service = gcp.compute.RegionBackendService("defaultRegionBackendService", health_checks=[default_health_check.id])
 default_forwarding_rule = gcp.compute.ForwardingRule("defaultForwardingRule",
     is_mirroring_collector=True,
     ip_protocol="TCP",
@@ -311,8 +290,7 @@ default_forwarding_rule = gcp.compute.ForwardingRule("defaultForwardingRule",
     network=default_network.id,
     subnetwork=default_subnetwork.id,
     network_tier="PREMIUM",
-    opts=pulumi.ResourceOptions(provider=google_beta,
-        depends_on=[default_subnetwork]))
+    opts=pulumi.ResourceOptions(depends_on=[default_subnetwork]))
 foobar = gcp.compute.PacketMirroring("foobar",
     description="bar",
     network=gcp.compute.PacketMirroringNetworkArgs(
@@ -330,8 +308,8 @@ foobar = gcp.compute.PacketMirroring("foobar",
     filter=gcp.compute.PacketMirroringFilterArgs(
         ip_protocols=["tcp"],
         cidr_ranges=["0.0.0.0/0"],
-    ),
-    opts=pulumi.ResourceOptions(provider=google_beta))
+        direction="BOTH",
+    ))
 ```
 
 {{% /example %}}
@@ -342,9 +320,7 @@ foobar = gcp.compute.PacketMirroring("foobar",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const defaultNetwork = new gcp.compute.Network("defaultNetwork", {}, {
-    provider: google_beta,
-});
+const defaultNetwork = new gcp.compute.Network("defaultNetwork", {});
 const mirror = new gcp.compute.Instance("mirror", {
     machineType: "e2-medium",
     bootDisk: {
@@ -356,14 +332,10 @@ const mirror = new gcp.compute.Instance("mirror", {
         network: defaultNetwork.id,
         accessConfigs: [{}],
     }],
-}, {
-    provider: google_beta,
 });
 const defaultSubnetwork = new gcp.compute.Subnetwork("defaultSubnetwork", {
     network: defaultNetwork.id,
     ipCidrRange: "10.2.0.0/16",
-}, {
-    provider: google_beta,
 });
 const defaultHealthCheck = new gcp.compute.HealthCheck("defaultHealthCheck", {
     checkIntervalSec: 1,
@@ -371,12 +343,8 @@ const defaultHealthCheck = new gcp.compute.HealthCheck("defaultHealthCheck", {
     tcpHealthCheck: {
         port: "80",
     },
-}, {
-    provider: google_beta,
 });
-const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaultRegionBackendService", {healthChecks: [defaultHealthCheck.id]}, {
-    provider: google_beta,
-});
+const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaultRegionBackendService", {healthChecks: [defaultHealthCheck.id]});
 const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingRule", {
     isMirroringCollector: true,
     ipProtocol: "TCP",
@@ -387,7 +355,6 @@ const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingR
     subnetwork: defaultSubnetwork.id,
     networkTier: "PREMIUM",
 }, {
-    provider: google_beta,
     dependsOn: [defaultSubnetwork],
 });
 const foobar = new gcp.compute.PacketMirroring("foobar", {
@@ -407,9 +374,8 @@ const foobar = new gcp.compute.PacketMirroring("foobar", {
     filter: {
         ipProtocols: ["tcp"],
         cidrRanges: ["0.0.0.0/0"],
+        direction: "BOTH",
     },
-}, {
-    provider: google_beta,
 });
 ```
 
@@ -1774,6 +1740,18 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="direction_csharp">
+<a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Direction of traffic to mirror.
+Default value is `BOTH`.
+Possible values are `INGRESS`, `EGRESS`, and `BOTH`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ipprotocols_csharp">
 <a href="#ipprotocols_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocols</a>
 </span>
@@ -1799,6 +1777,18 @@ Each value may be one of `tcp`, `udp`, and `icmp`.
     </dt>
     <dd>{{% md %}}IP CIDR ranges that apply as a filter on the source (ingress) or
 destination (egress) IP in the IP header. Only IPv4 is supported.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="direction_go">
+<a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Direction of traffic to mirror.
+Default value is `BOTH`.
+Possible values are `INGRESS`, `EGRESS`, and `BOTH`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1830,6 +1820,18 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="direction_nodejs">
+<a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Direction of traffic to mirror.
+Default value is `BOTH`.
+Possible values are `INGRESS`, `EGRESS`, and `BOTH`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ipprotocols_nodejs">
 <a href="#ipprotocols_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocols</a>
 </span>
@@ -1855,6 +1857,18 @@ Each value may be one of `tcp`, `udp`, and `icmp`.
     </dt>
     <dd>{{% md %}}IP CIDR ranges that apply as a filter on the source (ingress) or
 destination (egress) IP in the IP header. Only IPv4 is supported.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="direction_python">
+<a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Direction of traffic to mirror.
+Default value is `BOTH`.
+Possible values are `INGRESS`, `EGRESS`, and `BOTH`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

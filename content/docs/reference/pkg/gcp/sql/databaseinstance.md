@@ -232,9 +232,10 @@ configuration is detailed below.
     </dt>
     <dd>{{% md %}}The MySQL, PostgreSQL or
 SQL Server (beta) version to use. Supported values include `MYSQL_5_6`,
-`MYSQL_5_7`, `POSTGRES_9_6`,`POSTGRES_10`, `POSTGRES_11`, `POSTGRES_12`, `SQLSERVER_2017_STANDARD`,
+`MYSQL_5_7`, `MYSQL_8_0`, `POSTGRES_9_6`,`POSTGRES_10`, `POSTGRES_11`,
+`POSTGRES_12`, `POSTGRES_13`, `SQLSERVER_2017_STANDARD`,
 `SQLSERVER_2017_ENTERPRISE`, `SQLSERVER_2017_EXPRESS`, `SQLSERVER_2017_WEB`.
-[Database Version Policies](https://cloud.google.com/sql/docs/sqlserver/db-versions)
+[Database Version Policies](https://cloud.google.com/sql/docs/db-versions)
 includes an up-to-date reference of supported versions.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -360,9 +361,10 @@ configuration is detailed below.
     </dt>
     <dd>{{% md %}}The MySQL, PostgreSQL or
 SQL Server (beta) version to use. Supported values include `MYSQL_5_6`,
-`MYSQL_5_7`, `POSTGRES_9_6`,`POSTGRES_10`, `POSTGRES_11`, `POSTGRES_12`, `SQLSERVER_2017_STANDARD`,
+`MYSQL_5_7`, `MYSQL_8_0`, `POSTGRES_9_6`,`POSTGRES_10`, `POSTGRES_11`,
+`POSTGRES_12`, `POSTGRES_13`, `SQLSERVER_2017_STANDARD`,
 `SQLSERVER_2017_ENTERPRISE`, `SQLSERVER_2017_EXPRESS`, `SQLSERVER_2017_WEB`.
-[Database Version Policies](https://cloud.google.com/sql/docs/sqlserver/db-versions)
+[Database Version Policies](https://cloud.google.com/sql/docs/db-versions)
 includes an up-to-date reference of supported versions.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -488,9 +490,10 @@ configuration is detailed below.
     </dt>
     <dd>{{% md %}}The MySQL, PostgreSQL or
 SQL Server (beta) version to use. Supported values include `MYSQL_5_6`,
-`MYSQL_5_7`, `POSTGRES_9_6`,`POSTGRES_10`, `POSTGRES_11`, `POSTGRES_12`, `SQLSERVER_2017_STANDARD`,
+`MYSQL_5_7`, `MYSQL_8_0`, `POSTGRES_9_6`,`POSTGRES_10`, `POSTGRES_11`,
+`POSTGRES_12`, `POSTGRES_13`, `SQLSERVER_2017_STANDARD`,
 `SQLSERVER_2017_ENTERPRISE`, `SQLSERVER_2017_EXPRESS`, `SQLSERVER_2017_WEB`.
-[Database Version Policies](https://cloud.google.com/sql/docs/sqlserver/db-versions)
+[Database Version Policies](https://cloud.google.com/sql/docs/db-versions)
 includes an up-to-date reference of supported versions.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -616,9 +619,10 @@ configuration is detailed below.
     </dt>
     <dd>{{% md %}}The MySQL, PostgreSQL or
 SQL Server (beta) version to use. Supported values include `MYSQL_5_6`,
-`MYSQL_5_7`, `POSTGRES_9_6`,`POSTGRES_10`, `POSTGRES_11`, `POSTGRES_12`, `SQLSERVER_2017_STANDARD`,
+`MYSQL_5_7`, `MYSQL_8_0`, `POSTGRES_9_6`,`POSTGRES_10`, `POSTGRES_11`,
+`POSTGRES_12`, `POSTGRES_13`, `SQLSERVER_2017_STANDARD`,
 `SQLSERVER_2017_ENTERPRISE`, `SQLSERVER_2017_EXPRESS`, `SQLSERVER_2017_WEB`.
-[Database Version Policies](https://cloud.google.com/sql/docs/sqlserver/db-versions)
+[Database Version Policies](https://cloud.google.com/sql/docs/db-versions)
 includes an up-to-date reference of supported versions.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1254,9 +1258,10 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
     </dt>
     <dd>{{% md %}}The MySQL, PostgreSQL or
 SQL Server (beta) version to use. Supported values include `MYSQL_5_6`,
-`MYSQL_5_7`, `POSTGRES_9_6`,`POSTGRES_10`, `POSTGRES_11`, `POSTGRES_12`, `SQLSERVER_2017_STANDARD`,
+`MYSQL_5_7`, `MYSQL_8_0`, `POSTGRES_9_6`,`POSTGRES_10`, `POSTGRES_11`,
+`POSTGRES_12`, `POSTGRES_13`, `SQLSERVER_2017_STANDARD`,
 `SQLSERVER_2017_ENTERPRISE`, `SQLSERVER_2017_EXPRESS`, `SQLSERVER_2017_WEB`.
-[Database Version Policies](https://cloud.google.com/sql/docs/sqlserver/db-versions)
+[Database Version Policies](https://cloud.google.com/sql/docs/db-versions)
 includes an up-to-date reference of supported versions.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1462,9 +1467,10 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
     </dt>
     <dd>{{% md %}}The MySQL, PostgreSQL or
 SQL Server (beta) version to use. Supported values include `MYSQL_5_6`,
-`MYSQL_5_7`, `POSTGRES_9_6`,`POSTGRES_10`, `POSTGRES_11`, `POSTGRES_12`, `SQLSERVER_2017_STANDARD`,
+`MYSQL_5_7`, `MYSQL_8_0`, `POSTGRES_9_6`,`POSTGRES_10`, `POSTGRES_11`,
+`POSTGRES_12`, `POSTGRES_13`, `SQLSERVER_2017_STANDARD`,
 `SQLSERVER_2017_ENTERPRISE`, `SQLSERVER_2017_EXPRESS`, `SQLSERVER_2017_WEB`.
-[Database Version Policies](https://cloud.google.com/sql/docs/sqlserver/db-versions)
+[Database Version Policies](https://cloud.google.com/sql/docs/db-versions)
 includes an up-to-date reference of supported versions.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1670,9 +1676,10 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
     </dt>
     <dd>{{% md %}}The MySQL, PostgreSQL or
 SQL Server (beta) version to use. Supported values include `MYSQL_5_6`,
-`MYSQL_5_7`, `POSTGRES_9_6`,`POSTGRES_10`, `POSTGRES_11`, `POSTGRES_12`, `SQLSERVER_2017_STANDARD`,
+`MYSQL_5_7`, `MYSQL_8_0`, `POSTGRES_9_6`,`POSTGRES_10`, `POSTGRES_11`,
+`POSTGRES_12`, `POSTGRES_13`, `SQLSERVER_2017_STANDARD`,
 `SQLSERVER_2017_ENTERPRISE`, `SQLSERVER_2017_EXPRESS`, `SQLSERVER_2017_WEB`.
-[Database Version Policies](https://cloud.google.com/sql/docs/sqlserver/db-versions)
+[Database Version Policies](https://cloud.google.com/sql/docs/db-versions)
 includes an up-to-date reference of supported versions.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1878,9 +1885,10 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
     </dt>
     <dd>{{% md %}}The MySQL, PostgreSQL or
 SQL Server (beta) version to use. Supported values include `MYSQL_5_6`,
-`MYSQL_5_7`, `POSTGRES_9_6`,`POSTGRES_10`, `POSTGRES_11`, `POSTGRES_12`, `SQLSERVER_2017_STANDARD`,
+`MYSQL_5_7`, `MYSQL_8_0`, `POSTGRES_9_6`,`POSTGRES_10`, `POSTGRES_11`,
+`POSTGRES_12`, `POSTGRES_13`, `SQLSERVER_2017_STANDARD`,
 `SQLSERVER_2017_ENTERPRISE`, `SQLSERVER_2017_EXPRESS`, `SQLSERVER_2017_WEB`.
-[Database Version Policies](https://cloud.google.com/sql/docs/sqlserver/db-versions)
+[Database Version Policies](https://cloud.google.com/sql/docs/db-versions)
 includes an up-to-date reference of supported versions.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -3762,7 +3770,8 @@ Cannot be used with Postgres.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region where the backup will be stored
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="pointintimerecoveryenabled_csharp">
@@ -3820,7 +3829,8 @@ Cannot be used with Postgres.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region where the backup will be stored
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="pointintimerecoveryenabled_go">
@@ -3878,7 +3888,8 @@ Cannot be used with Postgres.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region where the backup will be stored
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="pointintimerecoveryenabled_nodejs">
@@ -3936,7 +3947,8 @@ Cannot be used with Postgres.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The region where the backup will be stored
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="point_in_time_recovery_enabled_python">

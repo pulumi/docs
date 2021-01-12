@@ -32,20 +32,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        var @default = new Gcp.ServiceAccount.Account("default", new Gcp.ServiceAccount.AccountArgs
+        {
+            AccountId = "service-account-id",
+            DisplayName = "Service Account",
+        });
         var primary = new Gcp.Container.Cluster("primary", new Gcp.Container.ClusterArgs
         {
             Location = "us-central1",
             RemoveDefaultNodePool = true,
             InitialNodeCount = 1,
-            MasterAuth = new Gcp.Container.Inputs.ClusterMasterAuthArgs
-            {
-                Username = "",
-                Password = "",
-                ClientCertificateConfig = new Gcp.Container.Inputs.ClusterMasterAuthClientCertificateConfigArgs
-                {
-                    IssueClientCertificate = false,
-                },
-            },
         });
         var primaryPreemptibleNodes = new Gcp.Container.NodePool("primaryPreemptibleNodes", new Gcp.Container.NodePoolArgs
         {
@@ -56,10 +52,7 @@ class MyStack : Stack
             {
                 Preemptible = true,
                 MachineType = "e2-medium",
-                Metadata = 
-                {
-                    { "disable-legacy-endpoints", "true" },
-                },
+                ServiceAccount = @default.Email,
                 OauthScopes = 
                 {
                     "https://www.googleapis.com/auth/cloud-platform",
@@ -79,22 +72,23 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/serviceAccount"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := serviceAccount.NewAccount(ctx, "_default", &serviceAccount.AccountArgs{
+			AccountId:   pulumi.String("service-account-id"),
+			DisplayName: pulumi.String("Service Account"),
+		})
+		if err != nil {
+			return err
+		}
 		primary, err := container.NewCluster(ctx, "primary", &container.ClusterArgs{
 			Location:              pulumi.String("us-central1"),
 			RemoveDefaultNodePool: pulumi.Bool(true),
 			InitialNodeCount:      pulumi.Int(1),
-			MasterAuth: &container.ClusterMasterAuthArgs{
-				Username: pulumi.String(""),
-				Password: pulumi.String(""),
-				ClientCertificateConfig: &container.ClusterMasterAuthClientCertificateConfigArgs{
-					IssueClientCertificate: pulumi.Bool(false),
-				},
-			},
 		})
 		if err != nil {
 			return err
@@ -104,11 +98,9 @@ func main() {
 			Cluster:   primary.Name,
 			NodeCount: pulumi.Int(1),
 			NodeConfig: &container.NodePoolNodeConfigArgs{
-				Preemptible: pulumi.Bool(true),
-				MachineType: pulumi.String("e2-medium"),
-				Metadata: pulumi.StringMap{
-					"disable-legacy-endpoints": pulumi.String("true"),
-				},
+				Preemptible:    pulumi.Bool(true),
+				MachineType:    pulumi.String("e2-medium"),
+				ServiceAccount: _default.Email,
 				OauthScopes: pulumi.StringArray{
 					pulumi.String("https://www.googleapis.com/auth/cloud-platform"),
 				},
@@ -129,17 +121,13 @@ func main() {
 import pulumi
 import pulumi_gcp as gcp
 
+default = gcp.service_account.Account("default",
+    account_id="service-account-id",
+    display_name="Service Account")
 primary = gcp.container.Cluster("primary",
     location="us-central1",
     remove_default_node_pool=True,
-    initial_node_count=1,
-    master_auth=gcp.container.ClusterMasterAuthArgs(
-        username="",
-        password="",
-        client_certificate_config=gcp.container.ClusterMasterAuthClientCertificateConfigArgs(
-            issue_client_certificate=False,
-        ),
-    ))
+    initial_node_count=1)
 primary_preemptible_nodes = gcp.container.NodePool("primaryPreemptibleNodes",
     location="us-central1",
     cluster=primary.name,
@@ -147,9 +135,7 @@ primary_preemptible_nodes = gcp.container.NodePool("primaryPreemptibleNodes",
     node_config=gcp.container.NodePoolNodeConfigArgs(
         preemptible=True,
         machine_type="e2-medium",
-        metadata={
-            "disable-legacy-endpoints": "true",
-        },
+        service_account=default.email,
         oauth_scopes=["https://www.googleapis.com/auth/cloud-platform"],
     ))
 ```
@@ -162,17 +148,14 @@ primary_preemptible_nodes = gcp.container.NodePool("primaryPreemptibleNodes",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
+const _default = new gcp.serviceAccount.Account("default", {
+    accountId: "service-account-id",
+    displayName: "Service Account",
+});
 const primary = new gcp.container.Cluster("primary", {
     location: "us-central1",
     removeDefaultNodePool: true,
     initialNodeCount: 1,
-    masterAuth: {
-        username: "",
-        password: "",
-        clientCertificateConfig: {
-            issueClientCertificate: false,
-        },
-    },
 });
 const primaryPreemptibleNodes = new gcp.container.NodePool("primaryPreemptibleNodes", {
     location: "us-central1",
@@ -181,9 +164,7 @@ const primaryPreemptibleNodes = new gcp.container.NodePool("primaryPreemptibleNo
     nodeConfig: {
         preemptible: true,
         machineType: "e2-medium",
-        metadata: {
-            "disable-legacy-endpoints": "true",
-        },
+        serviceAccount: _default.email,
         oauthScopes: ["https://www.googleapis.com/auth/cloud-platform"],
     },
 });
@@ -193,132 +174,15 @@ const primaryPreemptibleNodes = new gcp.container.NodePool("primaryPreemptibleNo
 
 ### With The Default Node Pool
 {{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var primary = new Gcp.Container.Cluster("primary", new Gcp.Container.ClusterArgs
-        {
-            InitialNodeCount = 3,
-            Location = "us-central1-a",
-            MasterAuth = new Gcp.Container.Inputs.ClusterMasterAuthArgs
-            {
-                ClientCertificateConfig = new Gcp.Container.Inputs.ClusterMasterAuthClientCertificateConfigArgs
-                {
-                    IssueClientCertificate = false,
-                },
-                Password = "",
-                Username = "",
-            },
-            NodeConfig = new Gcp.Container.Inputs.ClusterNodeConfigArgs
-            {
-                Labels = 
-                {
-                    { "foo", "bar" },
-                },
-                Metadata = 
-                {
-                    { "disable-legacy-endpoints", "true" },
-                },
-                OauthScopes = 
-                {
-                    "https://www.googleapis.com/auth/cloud-platform",
-                },
-                Tags = 
-                {
-                    "foo",
-                    "bar",
-                },
-            },
-        });
-    }
-
-}
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := container.NewCluster(ctx, "primary", &container.ClusterArgs{
-			InitialNodeCount: pulumi.Int(3),
-			Location:         pulumi.String("us-central1-a"),
-			MasterAuth: &container.ClusterMasterAuthArgs{
-				ClientCertificateConfig: &container.ClusterMasterAuthClientCertificateConfigArgs{
-					IssueClientCertificate: pulumi.Bool(false),
-				},
-				Password: pulumi.String(""),
-				Username: pulumi.String(""),
-			},
-			NodeConfig: &container.ClusterNodeConfigArgs{
-				Labels: pulumi.StringMap{
-					"foo": pulumi.String("bar"),
-				},
-				Metadata: pulumi.StringMap{
-					"disable-legacy-endpoints": pulumi.String("true"),
-				},
-				OauthScopes: pulumi.StringArray{
-					pulumi.String("https://www.googleapis.com/auth/cloud-platform"),
-				},
-				Tags: pulumi.StringArray{
-					pulumi.String("foo"),
-					pulumi.String("bar"),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-primary = gcp.container.Cluster("primary",
-    initial_node_count=3,
-    location="us-central1-a",
-    master_auth=gcp.container.ClusterMasterAuthArgs(
-        client_certificate_config=gcp.container.ClusterMasterAuthClientCertificateConfigArgs(
-            issue_client_certificate=False,
-        ),
-        password="",
-        username="",
-    ),
-    node_config=gcp.container.ClusterNodeConfigArgs(
-        labels={
-            "foo": "bar",
-        },
-        metadata={
-            "disable-legacy-endpoints": "true",
-        },
-        oauth_scopes=["https://www.googleapis.com/auth/cloud-platform"],
-        tags=[
-            "foo",
-            "bar",
-        ],
-    ))
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example typescript %}}
@@ -327,33 +191,29 @@ primary = gcp.container.Cluster("primary",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
+const _default = new gcp.serviceAccount.Account("default", {
+    accountId: "service-account-id",
+    displayName: "Service Account",
+});
 const primary = new gcp.container.Cluster("primary", {
-    initialNodeCount: 3,
     location: "us-central1-a",
-    masterAuth: {
-        clientCertificateConfig: {
-            issueClientCertificate: false,
-        },
-        password: "",
-        username: "",
-    },
+    initialNodeCount: 3,
     nodeConfig: {
+        serviceAccount: _default.email,
+        oauthScopes: ["https://www.googleapis.com/auth/cloud-platform"],
         labels: {
             foo: "bar",
         },
-        metadata: {
-            "disable-legacy-endpoints": "true",
-        },
-        oauthScopes: ["https://www.googleapis.com/auth/cloud-platform"],
         tags: [
             "foo",
             "bar",
         ],
     },
-}, { timeouts: {
-    create: "30m",
-    update: "40m",
-} });
+    timeouts: [{
+        create: "30m",
+        update: "40m",
+    }],
+});
 ```
 
 {{% /example %}}
@@ -813,7 +673,7 @@ Kubernetes master. Some values in this block are only returned by the API if
 your service account has permission to get credentials for your GKE cluster. If
 you see an unexpected diff removing a username/password or unsetting your client
 cert, ensure you have the `container.clusters.getCredentials` permission.
-Structure is documented below.
+Structure is documented below. This has been deprecated as of GKE 1.19.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1376,7 +1236,7 @@ Kubernetes master. Some values in this block are only returned by the API if
 your service account has permission to get credentials for your GKE cluster. If
 you see an unexpected diff removing a username/password or unsetting your client
 cert, ensure you have the `container.clusters.getCredentials` permission.
-Structure is documented below.
+Structure is documented below. This has been deprecated as of GKE 1.19.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1939,7 +1799,7 @@ Kubernetes master. Some values in this block are only returned by the API if
 your service account has permission to get credentials for your GKE cluster. If
 you see an unexpected diff removing a username/password or unsetting your client
 cert, ensure you have the `container.clusters.getCredentials` permission.
-Structure is documented below.
+Structure is documented below. This has been deprecated as of GKE 1.19.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2502,7 +2362,7 @@ Kubernetes master. Some values in this block are only returned by the API if
 your service account has permission to get credentials for your GKE cluster. If
 you see an unexpected diff removing a username/password or unsetting your client
 cert, ensure you have the `container.clusters.getCredentials` permission.
-Structure is documented below.
+Structure is documented below. This has been deprecated as of GKE 1.19.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3634,7 +3494,7 @@ Kubernetes master. Some values in this block are only returned by the API if
 your service account has permission to get credentials for your GKE cluster. If
 you see an unexpected diff removing a username/password or unsetting your client
 cert, ensure you have the `container.clusters.getCredentials` permission.
-Structure is documented below.
+Structure is documented below. This has been deprecated as of GKE 1.19.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4284,7 +4144,7 @@ Kubernetes master. Some values in this block are only returned by the API if
 your service account has permission to get credentials for your GKE cluster. If
 you see an unexpected diff removing a username/password or unsetting your client
 cert, ensure you have the `container.clusters.getCredentials` permission.
-Structure is documented below.
+Structure is documented below. This has been deprecated as of GKE 1.19.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4934,7 +4794,7 @@ Kubernetes master. Some values in this block are only returned by the API if
 your service account has permission to get credentials for your GKE cluster. If
 you see an unexpected diff removing a username/password or unsetting your client
 cert, ensure you have the `container.clusters.getCredentials` permission.
-Structure is documented below.
+Structure is documented below. This has been deprecated as of GKE 1.19.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5584,7 +5444,7 @@ Kubernetes master. Some values in this block are only returned by the API if
 your service account has permission to get credentials for your GKE cluster. If
 you see an unexpected diff removing a username/password or unsetting your client
 cert, ensure you have the `container.clusters.getCredentials` permission.
-Structure is documented below.
+Structure is documented below. This has been deprecated as of GKE 1.19.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -7590,9 +7450,6 @@ Use the "https://www.googleapis.com/auth/cloud-platform" scope to grant access t
     </dt>
     <dd>{{% md %}}The service account to be used by the Node VMs.
 If not specified, the "default" service account is used.
-In order to use the configured `oauth_scopes` for logging and monitoring, the service account being used needs the
-[roles/logging.logWriter](https://cloud.google.com/iam/docs/understanding-roles#stackdriver_logging_roles) and
-[roles/monitoring.metricWriter](https://cloud.google.com/iam/docs/understanding-roles#stackdriver_monitoring_roles) roles.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -7636,9 +7493,6 @@ Use the "https://www.googleapis.com/auth/cloud-platform" scope to grant access t
     </dt>
     <dd>{{% md %}}The service account to be used by the Node VMs.
 If not specified, the "default" service account is used.
-In order to use the configured `oauth_scopes` for logging and monitoring, the service account being used needs the
-[roles/logging.logWriter](https://cloud.google.com/iam/docs/understanding-roles#stackdriver_logging_roles) and
-[roles/monitoring.metricWriter](https://cloud.google.com/iam/docs/understanding-roles#stackdriver_monitoring_roles) roles.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -7682,9 +7536,6 @@ Use the "https://www.googleapis.com/auth/cloud-platform" scope to grant access t
     </dt>
     <dd>{{% md %}}The service account to be used by the Node VMs.
 If not specified, the "default" service account is used.
-In order to use the configured `oauth_scopes` for logging and monitoring, the service account being used needs the
-[roles/logging.logWriter](https://cloud.google.com/iam/docs/understanding-roles#stackdriver_logging_roles) and
-[roles/monitoring.metricWriter](https://cloud.google.com/iam/docs/understanding-roles#stackdriver_monitoring_roles) roles.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -7728,9 +7579,6 @@ Use the "https://www.googleapis.com/auth/cloud-platform" scope to grant access t
     </dt>
     <dd>{{% md %}}The service account to be used by the Node VMs.
 If not specified, the "default" service account is used.
-In order to use the configured `oauth_scopes` for logging and monitoring, the service account being used needs the
-[roles/logging.logWriter](https://cloud.google.com/iam/docs/understanding-roles#stackdriver_logging_roles) and
-[roles/monitoring.metricWriter](https://cloud.google.com/iam/docs/understanding-roles#stackdriver_monitoring_roles) roles.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -9142,7 +8990,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to use for HTTP basic authentication when accessing
-the Kubernetes master endpoint.
+the Kubernetes master endpoint. This has been deprecated as of GKE 1.19.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -9153,7 +9001,7 @@ the Kubernetes master endpoint.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username to use for HTTP basic authentication when accessing
-the Kubernetes master endpoint. If not present basic auth will be disabled.
+the Kubernetes master endpoint. If not present basic auth will be disabled. This has been deprecated as of GKE 1.19.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -9207,7 +9055,7 @@ the Kubernetes master endpoint. If not present basic auth will be disabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to use for HTTP basic authentication when accessing
-the Kubernetes master endpoint.
+the Kubernetes master endpoint. This has been deprecated as of GKE 1.19.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -9218,7 +9066,7 @@ the Kubernetes master endpoint.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username to use for HTTP basic authentication when accessing
-the Kubernetes master endpoint. If not present basic auth will be disabled.
+the Kubernetes master endpoint. If not present basic auth will be disabled. This has been deprecated as of GKE 1.19.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -9272,7 +9120,7 @@ the Kubernetes master endpoint. If not present basic auth will be disabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to use for HTTP basic authentication when accessing
-the Kubernetes master endpoint.
+the Kubernetes master endpoint. This has been deprecated as of GKE 1.19.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -9283,7 +9131,7 @@ the Kubernetes master endpoint.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username to use for HTTP basic authentication when accessing
-the Kubernetes master endpoint. If not present basic auth will be disabled.
+the Kubernetes master endpoint. If not present basic auth will be disabled. This has been deprecated as of GKE 1.19.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -9337,7 +9185,7 @@ the Kubernetes master endpoint. If not present basic auth will be disabled.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password to use for HTTP basic authentication when accessing
-the Kubernetes master endpoint.
+the Kubernetes master endpoint. This has been deprecated as of GKE 1.19.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -9348,7 +9196,7 @@ the Kubernetes master endpoint.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username to use for HTTP basic authentication when accessing
-the Kubernetes master endpoint. If not present basic auth will be disabled.
+the Kubernetes master endpoint. If not present basic auth will be disabled. This has been deprecated as of GKE 1.19.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -9954,9 +9802,6 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The service account to be used by the Node VMs.
 If not specified, the "default" service account is used.
-In order to use the configured `oauth_scopes` for logging and monitoring, the service account being used needs the
-[roles/logging.logWriter](https://cloud.google.com/iam/docs/understanding-roles#stackdriver_logging_roles) and
-[roles/monitoring.metricWriter](https://cloud.google.com/iam/docs/understanding-roles#stackdriver_monitoring_roles) roles.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -10197,9 +10042,6 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The service account to be used by the Node VMs.
 If not specified, the "default" service account is used.
-In order to use the configured `oauth_scopes` for logging and monitoring, the service account being used needs the
-[roles/logging.logWriter](https://cloud.google.com/iam/docs/understanding-roles#stackdriver_logging_roles) and
-[roles/monitoring.metricWriter](https://cloud.google.com/iam/docs/understanding-roles#stackdriver_monitoring_roles) roles.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -10440,9 +10282,6 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The service account to be used by the Node VMs.
 If not specified, the "default" service account is used.
-In order to use the configured `oauth_scopes` for logging and monitoring, the service account being used needs the
-[roles/logging.logWriter](https://cloud.google.com/iam/docs/understanding-roles#stackdriver_logging_roles) and
-[roles/monitoring.metricWriter](https://cloud.google.com/iam/docs/understanding-roles#stackdriver_monitoring_roles) roles.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -10683,9 +10522,6 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The service account to be used by the Node VMs.
 If not specified, the "default" service account is used.
-In order to use the configured `oauth_scopes` for logging and monitoring, the service account being used needs the
-[roles/logging.logWriter](https://cloud.google.com/iam/docs/understanding-roles#stackdriver_logging_roles) and
-[roles/monitoring.metricWriter](https://cloud.google.com/iam/docs/understanding-roles#stackdriver_monitoring_roles) roles.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -12548,9 +12384,6 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The service account to be used by the Node VMs.
 If not specified, the "default" service account is used.
-In order to use the configured `oauth_scopes` for logging and monitoring, the service account being used needs the
-[roles/logging.logWriter](https://cloud.google.com/iam/docs/understanding-roles#stackdriver_logging_roles) and
-[roles/monitoring.metricWriter](https://cloud.google.com/iam/docs/understanding-roles#stackdriver_monitoring_roles) roles.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -12791,9 +12624,6 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The service account to be used by the Node VMs.
 If not specified, the "default" service account is used.
-In order to use the configured `oauth_scopes` for logging and monitoring, the service account being used needs the
-[roles/logging.logWriter](https://cloud.google.com/iam/docs/understanding-roles#stackdriver_logging_roles) and
-[roles/monitoring.metricWriter](https://cloud.google.com/iam/docs/understanding-roles#stackdriver_monitoring_roles) roles.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -13034,9 +12864,6 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The service account to be used by the Node VMs.
 If not specified, the "default" service account is used.
-In order to use the configured `oauth_scopes` for logging and monitoring, the service account being used needs the
-[roles/logging.logWriter](https://cloud.google.com/iam/docs/understanding-roles#stackdriver_logging_roles) and
-[roles/monitoring.metricWriter](https://cloud.google.com/iam/docs/understanding-roles#stackdriver_monitoring_roles) roles.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -13277,9 +13104,6 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The service account to be used by the Node VMs.
 If not specified, the "default" service account is used.
-In order to use the configured `oauth_scopes` for logging and monitoring, the service account being used needs the
-[roles/logging.logWriter](https://cloud.google.com/iam/docs/understanding-roles#stackdriver_logging_roles) and
-[roles/monitoring.metricWriter](https://cloud.google.com/iam/docs/understanding-roles#stackdriver_monitoring_roles) roles.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

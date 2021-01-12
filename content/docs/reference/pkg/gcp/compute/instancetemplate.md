@@ -258,6 +258,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        var defaultAccount = new Gcp.ServiceAccount.Account("defaultAccount", new Gcp.ServiceAccount.AccountArgs
+        {
+            AccountId = "service-account-id",
+            DisplayName = "Service Account",
+        });
         var myImage = Output.Create(Gcp.Compute.GetImage.InvokeAsync(new Gcp.Compute.GetImageArgs
         {
             Family = "debian-9",
@@ -270,7 +275,7 @@ class MyStack : Stack
             Type = "pd-ssd",
             Zone = "us-central1-a",
         });
-        var @default = new Gcp.Compute.InstanceTemplate("default", new Gcp.Compute.InstanceTemplateArgs
+        var defaultInstanceTemplate = new Gcp.Compute.InstanceTemplate("defaultInstanceTemplate", new Gcp.Compute.InstanceTemplateArgs
         {
             Description = "This template is used to create app server instances.",
             Tags = 
@@ -318,11 +323,10 @@ class MyStack : Stack
             },
             ServiceAccount = new Gcp.Compute.Inputs.InstanceTemplateServiceAccountArgs
             {
+                Email = defaultAccount.Email,
                 Scopes = 
                 {
-                    "userinfo-email",
-                    "compute-ro",
-                    "storage-ro",
+                    "cloud-platform",
                 },
             },
         });
@@ -339,11 +343,19 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/serviceAccount"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultAccount, err := serviceAccount.NewAccount(ctx, "defaultAccount", &serviceAccount.AccountArgs{
+			AccountId:   pulumi.String("service-account-id"),
+			DisplayName: pulumi.String("Service Account"),
+		})
+		if err != nil {
+			return err
+		}
 		opt0 := "debian-9"
 		opt1 := "debian-cloud"
 		myImage, err := compute.LookupImage(ctx, &compute.LookupImageArgs{
@@ -362,7 +374,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = compute.NewInstanceTemplate(ctx, "_default", &compute.InstanceTemplateArgs{
+		_, err = compute.NewInstanceTemplate(ctx, "defaultInstanceTemplate", &compute.InstanceTemplateArgs{
 			Description: pulumi.String("This template is used to create app server instances."),
 			Tags: pulumi.StringArray{
 				pulumi.String("foo"),
@@ -399,10 +411,9 @@ func main() {
 				"foo": pulumi.String("bar"),
 			},
 			ServiceAccount: &compute.InstanceTemplateServiceAccountArgs{
+				Email: defaultAccount.Email,
 				Scopes: pulumi.StringArray{
-					pulumi.String("userinfo-email"),
-					pulumi.String("compute-ro"),
-					pulumi.String("storage-ro"),
+					pulumi.String("cloud-platform"),
 				},
 			},
 		})
@@ -421,6 +432,9 @@ func main() {
 import pulumi
 import pulumi_gcp as gcp
 
+default_account = gcp.service_account.Account("defaultAccount",
+    account_id="service-account-id",
+    display_name="Service Account")
 my_image = gcp.compute.get_image(family="debian-9",
     project="debian-cloud")
 foobar = gcp.compute.Disk("foobar",
@@ -428,7 +442,7 @@ foobar = gcp.compute.Disk("foobar",
     size=10,
     type="pd-ssd",
     zone="us-central1-a")
-default = gcp.compute.InstanceTemplate("default",
+default_instance_template = gcp.compute.InstanceTemplate("defaultInstanceTemplate",
     description="This template is used to create app server instances.",
     tags=[
         "foo",
@@ -463,11 +477,8 @@ default = gcp.compute.InstanceTemplate("default",
         "foo": "bar",
     },
     service_account=gcp.compute.InstanceTemplateServiceAccountArgs(
-        scopes=[
-            "userinfo-email",
-            "compute-ro",
-            "storage-ro",
-        ],
+        email=default_account.email,
+        scopes=["cloud-platform"],
     ))
 ```
 
@@ -479,6 +490,10 @@ default = gcp.compute.InstanceTemplate("default",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
+const defaultAccount = new gcp.serviceAccount.Account("defaultAccount", {
+    accountId: "service-account-id",
+    displayName: "Service Account",
+});
 const myImage = gcp.compute.getImage({
     family: "debian-9",
     project: "debian-cloud",
@@ -489,7 +504,7 @@ const foobar = new gcp.compute.Disk("foobar", {
     type: "pd-ssd",
     zone: "us-central1-a",
 });
-const _default = new gcp.compute.InstanceTemplate("default", {
+const defaultInstanceTemplate = new gcp.compute.InstanceTemplate("defaultInstanceTemplate", {
     description: "This template is used to create app server instances.",
     tags: [
         "foo",
@@ -524,11 +539,8 @@ const _default = new gcp.compute.InstanceTemplate("default", {
         foo: "bar",
     },
     serviceAccount: {
-        scopes: [
-            "userinfo-email",
-            "compute-ro",
-            "storage-ro",
-        ],
+        email: defaultAccount.email,
+        scopes: ["cloud-platform"],
     },
 });
 ```
@@ -759,7 +771,7 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}) - Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -998,7 +1010,7 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}) - Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1237,7 +1249,7 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}) - Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1476,7 +1488,7 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}) - Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2003,7 +2015,7 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}) - Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2272,7 +2284,7 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}) - Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2541,7 +2553,7 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}) - Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2810,7 +2822,7 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}) - Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
+    <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3091,7 +3103,7 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}) Defines whether the instance should have confidential compute enabled. `on_host_maintenance` has to be set to TERMINATE or this will fail to create the VM.
+    <dd>{{% md %}}Defines whether the instance should have confidential compute enabled. `on_host_maintenance` has to be set to TERMINATE or this will fail to create the VM.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3107,7 +3119,7 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}) Defines whether the instance should have confidential compute enabled. `on_host_maintenance` has to be set to TERMINATE or this will fail to create the VM.
+    <dd>{{% md %}}Defines whether the instance should have confidential compute enabled. `on_host_maintenance` has to be set to TERMINATE or this will fail to create the VM.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3123,7 +3135,7 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}) Defines whether the instance should have confidential compute enabled. `on_host_maintenance` has to be set to TERMINATE or this will fail to create the VM.
+    <dd>{{% md %}}Defines whether the instance should have confidential compute enabled. `on_host_maintenance` has to be set to TERMINATE or this will fail to create the VM.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3139,7 +3151,7 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}) Defines whether the instance should have confidential compute enabled. `on_host_maintenance` has to be set to TERMINATE or this will fail to create the VM.
+    <dd>{{% md %}}Defines whether the instance should have confidential compute enabled. `on_host_maintenance` has to be set to TERMINATE or this will fail to create the VM.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
