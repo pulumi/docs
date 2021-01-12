@@ -71,79 +71,6 @@
         </p>
     </section>
 
-    <!-- Start AWS re:Invent takeover content -->
-    <section id="workshops" class="container mx-auto text-center mb-12">
-        <p class="text-3xl font-bold">JOIN A WORKSHOP</p>
-        <ul class="flex flex-col lg:flex-row list-none text-left items-center">
-            {{ $webinars := (where $.Site.Pages "Type" "webinars") }}
-
-            {{ $reInventWorkshops := slice }}
-            {{ range $webinars }}
-                {{ if eq .Params.title "Building a Kubernetes Platform in Amazon EKS with Pulumi" }}
-                    {{ $reInventWorkshops = $reInventWorkshops | append . }}
-                {{ else if eq .Params.title "Deploying Microservices with Pulumi and AWS Lambda" }}
-                    {{ $reInventWorkshops = $reInventWorkshops | append . }}
-                {{ else if eq .Params.url_slug "introduction-to-pulumi" }}
-                    {{ $reInventWorkshops = $reInventWorkshops | append . }}
-                {{ end }}
-            {{ end }}
-
-
-            {{ range $reInventWorkshops }}
-                {{ $link := printf "/resources/%s" .Params.url_slug }}
-
-                {{ $displayDate := "" }}
-                {{ if .Params.multiple }}
-                    {{ $displayDate = dateFormat "January 2, 2006" (index (.Params.multiple) 0).datetime }}
-                {{ else }}
-                    {{ $displayDate = dateFormat "January 2, 2006" .Params.main.sortable_date }}
-                {{ end }}
-
-                {{ $tileOptions := (dict "pageContext" $pageContext "external" false "filters" "" "link" $link "icon" "users" "description" .Params.meta_desc "displayDate" $displayDate "data" . ) }}
-                {{ partial "content-tile.html" $tileOptions }}
-            {{ end }}
-        </ul>
-    </section>
-
-    <!-- Pick the blog listings. -->
-    {{ $blog := where $.Site.Pages "Type" "blog" }}
-
-    <section class="container mx-auto text-center mb-24">
-        <p class="text-3xl font-bold mb-16">AWS RE:INVENT NEWS & ANNOUNCEMENTS</p>
-        <div class="flex justify-center">
-            <div class="w-10/12">
-                <!-- This is a bit of hack to avoid listing Azure blogs on the AWS page
-                     during the re:Invent takeover. This section will be removed post re:Invent.
-                -->
-                {{ range first 3 ( where ( where $blog ".Params.title" "ne" "Deploying Minecraft on Azure" ) ".Params.title" "ne" "Get Up and Running with Azure Synapse and Pulumi") }}
-                    <div class="flex flex-col lg:flex-row mb-12">
-                        <div class="w-full lg:w-1/2 mr-8">
-                            <a href="{{ .RelPermalink }}">
-                                <img class="rounded-lg lg:my-8 border-2 border-gray-100"
-                                     src="{{ (.Resources.GetMatch .Params.meta_image).RelPermalink }}"
-                                     alt="{{ .Title }}">
-                            </a>
-                        </div>
-
-                        <div class="w-full lg:w-1/2 text-left flex flex-col justify-center">
-                            <p class="no-anchor text-2xl font-bold"><a data-track="post-{{ .Title | urlize }}" href="{{ .Permalink }}">{{ .Title }}</a></p>
-                            <div class="flex items-center">
-                                <span>
-                                    {{ partial "blog/authors.html" (dict "context" . "authors" .Params.authors ) }}
-                                </span>
-                                <span class="mr-2">∙</span>
-                                <time>
-                                    {{ .Date.Format "Monday, Jan 2, 2006" }}
-                                </time>
-                            </div>
-                        </div>
-                    </div>
-                {{ end }}
-            </div>
-        </div>
-    </section>
-    <!-- End AWS re:invent takeover content -->
-
     <div class="container mx-auto carousel-always-visible mb-24">
         <section class="w-full text-center">
             <div>
@@ -280,6 +207,115 @@
             </div>
         </section>
     </div>
+
+    <!-- Automation API -->
+    <section id="automation-api" class="container mx-auto mb-12">
+        <div class="flex flex-col lg:flex-row">
+            <div class="w-full lg:w-5/12 px-8">
+                <p class="text-3xl font-bold inline-block">Enable Everyone To Do Everything</p>
+                <p>
+                    The Automation API gives you the ability to build bespoke deployment tools that allow
+                    application developers to self-serve their infrastructure, using codified best practices.
+                    No two applications or environments are the same and you can quickly hit edges with tools
+                    trying to be one-size-fits all solution. The Automation API enables you to write tooling that fits
+                    your use cases and works exactly the way you want it to. Everything from complex workflow
+                    orchestration to opinionated full-stack application frameworks is possible with the Automation API.
+                </p>
+                <p class="my-4 mt-8 text-left w-full">
+                    <a class="inline-flex items-center text-gray-700 hover:text-gray-800 font-bold text-xl" href="{{ relref . "/blog/automation-api" }}">
+                        <span class="inline-block w-6 text-orange-300 mr-3">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="sparkles" class="svg-inline--fa fa-sparkles fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g class="fa-group"><path class="fa-secondary" fill="currentColor" d="M423.16 186.58L448 127l59.58-24.84a8 8 0 0 0 0-14.32L448 63 423.16 3.42a8 8 0 0 0-14.32 0L384 63l-59.58 24.84a8 8 0 0 0 0 14.32L384 127l24.84 59.58a8 8 0 0 0 14.32 0zm-14.32 136.84L384 383l-59.58 24.84a8 8 0 0 0 0 14.32L384 447l24.84 59.58a8 8 0 0 0 14.32 0L448 447l59.58-24.84a8 8 0 0 0 0-14.32L448 383l-24.84-59.58a8 8 0 0 0-14.32 0z" opacity="0.4"></path><path class="fa-primary" fill="currentColor" d="M384 254.64a16.06 16.06 0 0 0-8.84-14.33l-112.57-56.39-56.28-112.77c-5.44-10.87-23.19-10.87-28.62 0l-56.28 112.77L8.84 240.31a16 16 0 0 0 0 28.67l112.57 56.39 56.28 112.77a16 16 0 0 0 28.62 0l56.28-112.77L375.16 269a16.07 16.07 0 0 0 8.84-14.36z"></path></g></svg>
+                        </span>
+                        <span class="mr-2 hover:mr-3 transition-all">
+                            Learn More About Automation API
+                        </span>
+                        <span>
+                            &rarr;
+                        </span>
+                    </a>
+                </p>
+            </div>
+
+            <div class="w-full lg:w-7/12">
+                {{ partial "code" (dict "code" .Params.automation_api_code "lang" "js" "mode" "dark" "chrome" true) }}
+            </div>
+        </div>
+    </section>
+
+    <!-- AWSX -->
+    <section id="awsx" class="container mx-auto mb-12">
+        <div class="flex flex-col lg:flex-row">
+            <div class="w-full lg:w-1/2">
+                {{ partial "code" (dict "code" .Params.awsx_code "lang" "js" "mode" "dark" "chrome" true) }}
+            </div>
+
+            <div class="w-full lg:w-1/2 px-8">
+                <p class="text-3xl font-bold inline-block">AWS Crosswalk</p>
+                <p class="mt-0">
+                    Pulumi Crosswalk for AWS is a collection of libraries that use automatic
+                    well-architected best practices to make common infrastructure-as-code
+                    tasks in AWS easier and more secure. Secure and cost-conscious defaults are chosen
+                    so that simple programs automatically use best practices for the underlying
+                    infrastructure, enabling better productivity with confidence.
+                </p>
+
+                <p class="text-lg font-bold">Application and Infrastructure Together</p>
+                <p>
+                    Crosswalk enables you to blur the lines between application and infrastructure code enabling
+                    you to author an entire full stack application in one program. With support for inline Lambda
+                    functions and ease-of-use helper functions, building robust applications on AWS has never
+                    been easier.
+                </p>
+                <p class="my-4 mt-8 text-left w-full">
+                    <a class="inline-flex items-center text-gray-700 hover:text-gray-800 font-bold text-xl" href="{{ relref . "/docs/guides/crosswalk/aws" }}">
+                        <span class="inline-block w-6 text-orange-300 mr-3">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="sparkles" class="svg-inline--fa fa-sparkles fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g class="fa-group"><path class="fa-secondary" fill="currentColor" d="M423.16 186.58L448 127l59.58-24.84a8 8 0 0 0 0-14.32L448 63 423.16 3.42a8 8 0 0 0-14.32 0L384 63l-59.58 24.84a8 8 0 0 0 0 14.32L384 127l24.84 59.58a8 8 0 0 0 14.32 0zm-14.32 136.84L384 383l-59.58 24.84a8 8 0 0 0 0 14.32L384 447l24.84 59.58a8 8 0 0 0 14.32 0L448 447l59.58-24.84a8 8 0 0 0 0-14.32L448 383l-24.84-59.58a8 8 0 0 0-14.32 0z" opacity="0.4"></path><path class="fa-primary" fill="currentColor" d="M384 254.64a16.06 16.06 0 0 0-8.84-14.33l-112.57-56.39-56.28-112.77c-5.44-10.87-23.19-10.87-28.62 0l-56.28 112.77L8.84 240.31a16 16 0 0 0 0 28.67l112.57 56.39 56.28 112.77a16 16 0 0 0 28.62 0l56.28-112.77L375.16 269a16.07 16.07 0 0 0 8.84-14.36z"></path></g></svg>
+                        </span>
+                        <span class="mr-2 hover:mr-3 transition-all">
+                            Learn More About Crosswalk
+                        </span>
+                        <span>
+                            &rarr;
+                        </span>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Start AWS re:Invent takeover content -->
+    <section id="workshops" class="container mx-auto text-center mb-12">
+        <p class="text-3xl font-bold">JOIN A WORKSHOP</p>
+        <ul class="flex flex-col lg:flex-row list-none text-left items-center">
+            {{ $webinars := (where $.Site.Pages "Type" "webinars") }}
+
+            {{ $reInventWorkshops := slice }}
+            {{ range $webinars }}
+                {{ if eq .Params.title "Building a Kubernetes Platform in Amazon EKS with Pulumi" }}
+                    {{ $reInventWorkshops = $reInventWorkshops | append . }}
+                {{ else if eq .Params.title "Deploying Microservices with Pulumi and AWS Lambda" }}
+                    {{ $reInventWorkshops = $reInventWorkshops | append . }}
+                {{ else if eq .Params.url_slug "introduction-to-pulumi" }}
+                    {{ $reInventWorkshops = $reInventWorkshops | append . }}
+                {{ end }}
+            {{ end }}
+
+
+            {{ range $reInventWorkshops }}
+                {{ $link := printf "/resources/%s" .Params.url_slug }}
+
+                {{ $displayDate := "" }}
+                {{ if .Params.multiple }}
+                    {{ $displayDate = dateFormat "January 2, 2006" (index (.Params.multiple) 0).datetime }}
+                {{ else }}
+                    {{ $displayDate = dateFormat "January 2, 2006" .Params.main.sortable_date }}
+                {{ end }}
+
+                {{ $tileOptions := (dict "pageContext" $pageContext "external" false "filters" "" "link" $link "icon" "users" "description" .Params.meta_desc "displayDate" $displayDate "data" . ) }}
+                {{ partial "content-tile.html" $tileOptions }}
+            {{ end }}
+        </ul>
+    </section>
 
     <section class="container mx-auto mb-16">
             <h3 class="mt-12 mb-8 text-center text-4xl font-bold">
