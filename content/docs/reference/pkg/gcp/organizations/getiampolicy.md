@@ -11,11 +11,9 @@ meta_desc: "Explore the GetIAMPolicy function of the organizations module, inclu
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Generates an IAM policy document that may be referenced by and applied to
-other Google Cloud Platform resources, such as the `gcp.organizations.Project` resource.
+other Google Cloud Platform IAM resources, such as the `gcp.projects.IAMPolicy` resource.
 
-**Note:** Several restrictions apply when setting IAM policies through this API.
-See the [setIamPolicy docs](https://cloud.google.com/resource-manager/reference/rest/v1/projects/setIamPolicy)
-for a list of these restrictions.
+**Note:** Please review the documentation of the resource that you will be using the datasource with. Some resources such as `gcp.projects.IAMPolicy` and others have limitations in their API methods which are noted on their respective page.
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -244,7 +242,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicyauditconfig">List&lt;Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A nested configuration block that defines logging additional configuration for your project.
+    <dd>{{% md %}}A nested configuration block that defines logging additional configuration for your project. This field is only supported on `gcp.projects.IAMPolicy`, `gcp.folder.IAMPolicy` and `gcp.organizations.IAMPolicy`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -272,7 +270,7 @@ defining a binding to be included in the policy document. Multiple
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicyauditconfig">[]Get<wbr>IAMPolicy<wbr>Audit<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}A nested configuration block that defines logging additional configuration for your project.
+    <dd>{{% md %}}A nested configuration block that defines logging additional configuration for your project. This field is only supported on `gcp.projects.IAMPolicy`, `gcp.folder.IAMPolicy` and `gcp.organizations.IAMPolicy`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -300,7 +298,7 @@ defining a binding to be included in the policy document. Multiple
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicyauditconfig">Get<wbr>IAMPolicy<wbr>Audit<wbr>Config[]</a></span>
     </dt>
-    <dd>{{% md %}}A nested configuration block that defines logging additional configuration for your project.
+    <dd>{{% md %}}A nested configuration block that defines logging additional configuration for your project. This field is only supported on `gcp.projects.IAMPolicy`, `gcp.folder.IAMPolicy` and `gcp.organizations.IAMPolicy`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -328,7 +326,7 @@ defining a binding to be included in the policy document. Multiple
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicyauditconfig">Sequence[Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A nested configuration block that defines logging additional configuration for your project.
+    <dd>{{% md %}}A nested configuration block that defines logging additional configuration for your project. This field is only supported on `gcp.projects.IAMPolicy`, `gcp.folder.IAMPolicy` and `gcp.organizations.IAMPolicy`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -803,8 +801,8 @@ referencing from a resource that supports IAM.
     </dt>
     <dd>{{% md %}}An array of identities that will be granted the privilege in the `role`. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
 Each entry can have one of the following values:
-* **allUsers**: A special identifier that represents anyone who is on the internet; with or without a Google account. It **can't** be used with the `gcp.organizations.Project` resource.
-* **allAuthenticatedUsers**: A special identifier that represents anyone who is authenticated with a Google account or a service account. It **can't** be used with the `gcp.organizations.Project` resource.
+* **allUsers**: A special identifier that represents anyone who is on the internet; with or without a Google account. Some resources **don't** support this identity.
+* **allAuthenticatedUsers**: A special identifier that represents anyone who is authenticated with a Google account or a service account. Some resources **don't** support this identity.
 * **user:{emailid}**: An email address that represents a specific Google account. For example, alice@gmail.com.
 * **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
 * **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
@@ -848,8 +846,8 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
     </dt>
     <dd>{{% md %}}An array of identities that will be granted the privilege in the `role`. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
 Each entry can have one of the following values:
-* **allUsers**: A special identifier that represents anyone who is on the internet; with or without a Google account. It **can't** be used with the `gcp.organizations.Project` resource.
-* **allAuthenticatedUsers**: A special identifier that represents anyone who is authenticated with a Google account or a service account. It **can't** be used with the `gcp.organizations.Project` resource.
+* **allUsers**: A special identifier that represents anyone who is on the internet; with or without a Google account. Some resources **don't** support this identity.
+* **allAuthenticatedUsers**: A special identifier that represents anyone who is authenticated with a Google account or a service account. Some resources **don't** support this identity.
 * **user:{emailid}**: An email address that represents a specific Google account. For example, alice@gmail.com.
 * **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
 * **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
@@ -893,8 +891,8 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
     </dt>
     <dd>{{% md %}}An array of identities that will be granted the privilege in the `role`. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
 Each entry can have one of the following values:
-* **allUsers**: A special identifier that represents anyone who is on the internet; with or without a Google account. It **can't** be used with the `gcp.organizations.Project` resource.
-* **allAuthenticatedUsers**: A special identifier that represents anyone who is authenticated with a Google account or a service account. It **can't** be used with the `gcp.organizations.Project` resource.
+* **allUsers**: A special identifier that represents anyone who is on the internet; with or without a Google account. Some resources **don't** support this identity.
+* **allAuthenticatedUsers**: A special identifier that represents anyone who is authenticated with a Google account or a service account. Some resources **don't** support this identity.
 * **user:{emailid}**: An email address that represents a specific Google account. For example, alice@gmail.com.
 * **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
 * **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
@@ -938,8 +936,8 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
     </dt>
     <dd>{{% md %}}An array of identities that will be granted the privilege in the `role`. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
 Each entry can have one of the following values:
-* **allUsers**: A special identifier that represents anyone who is on the internet; with or without a Google account. It **can't** be used with the `gcp.organizations.Project` resource.
-* **allAuthenticatedUsers**: A special identifier that represents anyone who is authenticated with a Google account or a service account. It **can't** be used with the `gcp.organizations.Project` resource.
+* **allUsers**: A special identifier that represents anyone who is on the internet; with or without a Google account. Some resources **don't** support this identity.
+* **allAuthenticatedUsers**: A special identifier that represents anyone who is authenticated with a Google account or a service account. Some resources **don't** support this identity.
 * **user:{emailid}**: An email address that represents a specific Google account. For example, alice@gmail.com.
 * **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
 * **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.

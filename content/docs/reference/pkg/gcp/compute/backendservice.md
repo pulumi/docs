@@ -121,6 +121,120 @@ const defaultBackendService = new gcp.compute.BackendService("defaultBackendServ
 
 {{% /example %}}
 
+### Backend Service Cache Simple
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultHttpHealthCheck = new Gcp.Compute.HttpHealthCheck("defaultHttpHealthCheck", new Gcp.Compute.HttpHealthCheckArgs
+        {
+            RequestPath = "/",
+            CheckIntervalSec = 1,
+            TimeoutSec = 1,
+        });
+        var defaultBackendService = new Gcp.Compute.BackendService("defaultBackendService", new Gcp.Compute.BackendServiceArgs
+        {
+            HealthChecks = 
+            {
+                defaultHttpHealthCheck.Id,
+            },
+            EnableCdn = true,
+            CdnPolicy = new Gcp.Compute.Inputs.BackendServiceCdnPolicyArgs
+            {
+                SignedUrlCacheMaxAgeSec = 7200,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultHttpHealthCheck, err := compute.NewHttpHealthCheck(ctx, "defaultHttpHealthCheck", &compute.HttpHealthCheckArgs{
+			RequestPath:      pulumi.String("/"),
+			CheckIntervalSec: pulumi.Int(1),
+			TimeoutSec:       pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewBackendService(ctx, "defaultBackendService", &compute.BackendServiceArgs{
+			HealthChecks: pulumi.String(pulumi.String{
+				defaultHttpHealthCheck.ID(),
+			}),
+			EnableCdn: pulumi.Bool(true),
+			CdnPolicy: &compute.BackendServiceCdnPolicyArgs{
+				SignedUrlCacheMaxAgeSec: pulumi.Int(7200),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_http_health_check = gcp.compute.HttpHealthCheck("defaultHttpHealthCheck",
+    request_path="/",
+    check_interval_sec=1,
+    timeout_sec=1)
+default_backend_service = gcp.compute.BackendService("defaultBackendService",
+    health_checks=[default_http_health_check.id],
+    enable_cdn=True,
+    cdn_policy=gcp.compute.BackendServiceCdnPolicyArgs(
+        signed_url_cache_max_age_sec=7200,
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultHttpHealthCheck = new gcp.compute.HttpHealthCheck("defaultHttpHealthCheck", {
+    requestPath: "/",
+    checkIntervalSec: 1,
+    timeoutSec: 1,
+});
+const defaultBackendService = new gcp.compute.BackendService("defaultBackendService", {
+    healthChecks: [defaultHttpHealthCheck.id],
+    enableCdn: true,
+    cdnPolicy: {
+        signedUrlCacheMaxAgeSec: 7200,
+    },
+});
+```
+
+{{% /example %}}
+
 ### Backend Service Cache
 {{% example csharp %}}
 ```csharp

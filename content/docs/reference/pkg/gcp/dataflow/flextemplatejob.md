@@ -361,7 +361,8 @@ deletion during `pulumi destroy`.  See above note.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key/Value pairs to be passed to the Dataflow job (as
-used in the template).
+used in the template). Additional [pipeline options](https://cloud.google.com/dataflow/docs/guides/specifying-exec-params#setting-other-cloud-dataflow-pipeline-options)
+such as `serviceAccount`, `workerMachineType`, etc can be specified here.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -440,7 +441,8 @@ deletion during `pulumi destroy`.  See above note.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Key/Value pairs to be passed to the Dataflow job (as
-used in the template).
+used in the template). Additional [pipeline options](https://cloud.google.com/dataflow/docs/guides/specifying-exec-params#setting-other-cloud-dataflow-pipeline-options)
+such as `serviceAccount`, `workerMachineType`, etc can be specified here.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -519,7 +521,8 @@ deletion during `pulumi destroy`.  See above note.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key/Value pairs to be passed to the Dataflow job (as
-used in the template).
+used in the template). Additional [pipeline options](https://cloud.google.com/dataflow/docs/guides/specifying-exec-params#setting-other-cloud-dataflow-pipeline-options)
+such as `serviceAccount`, `workerMachineType`, etc can be specified here.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -598,7 +601,8 @@ deletion during `pulumi destroy`.  See above note.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Key/Value pairs to be passed to the Dataflow job (as
-used in the template).
+used in the template). Additional [pipeline options](https://cloud.google.com/dataflow/docs/guides/specifying-exec-params#setting-other-cloud-dataflow-pipeline-options)
+such as `serviceAccount`, `workerMachineType`, etc can be specified here.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -957,7 +961,8 @@ deletion during `pulumi destroy`.  See above note.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key/Value pairs to be passed to the Dataflow job (as
-used in the template).
+used in the template). Additional [pipeline options](https://cloud.google.com/dataflow/docs/guides/specifying-exec-params#setting-other-cloud-dataflow-pipeline-options)
+such as `serviceAccount`, `workerMachineType`, etc can be specified here.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1056,7 +1061,8 @@ deletion during `pulumi destroy`.  See above note.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Key/Value pairs to be passed to the Dataflow job (as
-used in the template).
+used in the template). Additional [pipeline options](https://cloud.google.com/dataflow/docs/guides/specifying-exec-params#setting-other-cloud-dataflow-pipeline-options)
+such as `serviceAccount`, `workerMachineType`, etc can be specified here.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1155,7 +1161,8 @@ deletion during `pulumi destroy`.  See above note.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key/Value pairs to be passed to the Dataflow job (as
-used in the template).
+used in the template). Additional [pipeline options](https://cloud.google.com/dataflow/docs/guides/specifying-exec-params#setting-other-cloud-dataflow-pipeline-options)
+such as `serviceAccount`, `workerMachineType`, etc can be specified here.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1254,7 +1261,8 @@ deletion during `pulumi destroy`.  See above note.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Key/Value pairs to be passed to the Dataflow job (as
-used in the template).
+used in the template). Additional [pipeline options](https://cloud.google.com/dataflow/docs/guides/specifying-exec-params#setting-other-cloud-dataflow-pipeline-options)
+such as `serviceAccount`, `workerMachineType`, etc can be specified here.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

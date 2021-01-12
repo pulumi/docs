@@ -541,7 +541,7 @@ bucket that contains objects, the provider will fail that run.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to the bucket.
+    <dd>{{% md %}}A map of key/value label pairs to assign to the bucket.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -719,7 +719,7 @@ bucket that contains objects, the provider will fail that run.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to the bucket.
+    <dd>{{% md %}}A map of key/value label pairs to assign to the bucket.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -897,7 +897,7 @@ bucket that contains objects, the provider will fail that run.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to the bucket.
+    <dd>{{% md %}}A map of key/value label pairs to assign to the bucket.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1075,7 +1075,7 @@ bucket that contains objects, the provider will fail that run.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to the bucket.
+    <dd>{{% md %}}A map of key/value label pairs to assign to the bucket.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1523,7 +1523,7 @@ bucket that contains objects, the provider will fail that run.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to the bucket.
+    <dd>{{% md %}}A map of key/value label pairs to assign to the bucket.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1721,7 +1721,7 @@ bucket that contains objects, the provider will fail that run.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to the bucket.
+    <dd>{{% md %}}A map of key/value label pairs to assign to the bucket.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1919,7 +1919,7 @@ bucket that contains objects, the provider will fail that run.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to the bucket.
+    <dd>{{% md %}}A map of key/value label pairs to assign to the bucket.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2117,7 +2117,7 @@ bucket that contains objects, the provider will fail that run.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to the bucket.
+    <dd>{{% md %}}A map of key/value label pairs to assign to the bucket.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

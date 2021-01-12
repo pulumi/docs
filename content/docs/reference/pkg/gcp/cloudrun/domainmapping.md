@@ -59,10 +59,6 @@ class MyStack : Stack
             Metadata = new Gcp.CloudRun.Inputs.DomainMappingMetadataArgs
             {
                 Namespace = "my-project-name",
-                Annotations = 
-                {
-                    { "run.googleapis.com/launch-stage", "BETA" },
-                },
             },
             Spec = new Gcp.CloudRun.Inputs.DomainMappingSpecArgs
             {
@@ -109,9 +105,6 @@ func main() {
 			Location: pulumi.String("us-central1"),
 			Metadata: &cloudrun.DomainMappingMetadataArgs{
 				Namespace: pulumi.String("my-project-name"),
-				Annotations: pulumi.StringMap{
-					"run.googleapis.com/launch-stage": pulumi.String("BETA"),
-				},
 			},
 			Spec: &cloudrun.DomainMappingSpecArgs{
 				RouteName: defaultService.Name,
@@ -148,9 +141,6 @@ default_domain_mapping = gcp.cloudrun.DomainMapping("defaultDomainMapping",
     location="us-central1",
     metadata=gcp.cloudrun.DomainMappingMetadataArgs(
         namespace="my-project-name",
-        annotations={
-            "run.googleapis.com/launch-stage": "BETA",
-        },
     ),
     spec=gcp.cloudrun.DomainMappingSpecArgs(
         route_name=default_service.name,
@@ -182,9 +172,6 @@ const defaultDomainMapping = new gcp.cloudrun.DomainMapping("defaultDomainMappin
     location: "us-central1",
     metadata: {
         namespace: "my-project-name",
-        annotations: {
-            "run.googleapis.com/launch-stage": "BETA",
-        },
     },
     spec: {
         routeName: defaultService.name,

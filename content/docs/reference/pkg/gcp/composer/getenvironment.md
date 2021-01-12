@@ -26,7 +26,7 @@ Provides access to Cloud Composer environment configuration in a region for a gi
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_environment(</span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[GetEnvironmentConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetEnvironmentResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_environment(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetEnvironmentResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -62,24 +62,6 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}Name of the environment.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="config_csharp">
-<a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfig">Get<wbr>Environment<wbr>Config<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="labels_csharp">
-<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
@@ -119,24 +101,6 @@ If it is not provided, the provider project is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="config_go">
-<a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfig">Get<wbr>Environment<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="labels_go">
-<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -174,24 +138,6 @@ If it is not provided, the provider project is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="config_nodejs">
-<a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfig">Get<wbr>Environment<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="labels_nodejs">
-<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -227,24 +173,6 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Name of the environment.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="config_python">
-<a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfig">Get<wbr>Environment<wbr>Config<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="labels_python">
-<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
@@ -283,11 +211,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="config_csharp">
-<a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
+        <span id="configs_csharp">
+<a href="#configs_csharp" style="color: inherit; text-decoration: inherit;">Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfig">Get<wbr>Environment<wbr>Config</a></span>
+        <span class="property-type"><a href="#getenvironmentconfig">List&lt;Get<wbr>Environment<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -300,6 +228,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_csharp">
@@ -320,15 +257,6 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="labels_csharp">
-<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
 </span>
@@ -344,11 +272,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="config_go">
-<a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
+        <span id="configs_go">
+<a href="#configs_go" style="color: inherit; text-decoration: inherit;">Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfig">Get<wbr>Environment<wbr>Config</a></span>
+        <span class="property-type"><a href="#getenvironmentconfig">[]Get<wbr>Environment<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -361,6 +289,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_go">
@@ -381,15 +318,6 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="labels_go">
-<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
 </span>
@@ -405,11 +333,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="config_nodejs">
-<a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
+        <span id="configs_nodejs">
+<a href="#configs_nodejs" style="color: inherit; text-decoration: inherit;">configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfig">Get<wbr>Environment<wbr>Config</a></span>
+        <span class="property-type"><a href="#getenvironmentconfig">Get<wbr>Environment<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -422,6 +350,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_nodejs">
@@ -442,15 +379,6 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="labels_nodejs">
-<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
@@ -466,11 +394,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="config_python">
-<a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
+        <span id="configs_python">
+<a href="#configs_python" style="color: inherit; text-decoration: inherit;">configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfig">Get<wbr>Environment<wbr>Config</a></span>
+        <span class="property-type"><a href="#getenvironmentconfig">Sequence[Get<wbr>Environment<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -483,6 +411,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_python">
@@ -499,15 +436,6 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="labels_python">
-<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -530,14 +458,14 @@ The following output properties are available:
 
 <h4 id="getenvironmentconfig">Get<wbr>Environment<wbr>Config</h4>
 {{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GetEnvironmentConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetEnvironmentConfig">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetEnvironmentConfig">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfig">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfig">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Inputs.GetEnvironmentConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.GetEnvironmentConfig.html">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.GetEnvironmentConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -565,11 +493,11 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="databaseconfig_csharp">
-<a href="#databaseconfig_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Config</a>
+        <span id="databaseconfigs_csharp">
+<a href="#databaseconfigs_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigdatabaseconfig">Get<wbr>Environment<wbr>Config<wbr>Database<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigdatabaseconfig">List&lt;Get<wbr>Environment<wbr>Config<wbr>Database<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -583,11 +511,11 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="nodeconfig_csharp">
-<a href="#nodeconfig_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Config</a>
+        <span id="nodeconfigs_csharp">
+<a href="#nodeconfigs_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfignodeconfig">Get<wbr>Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getenvironmentconfignodeconfig">List&lt;Get<wbr>Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -601,38 +529,38 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="privateenvironmentconfig_csharp">
-<a href="#privateenvironmentconfig_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Environment<wbr>Config</a>
+        <span id="privateenvironmentconfigs_csharp">
+<a href="#privateenvironmentconfigs_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Environment<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigprivateenvironmentconfig">Get<wbr>Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigprivateenvironmentconfig">List&lt;Get<wbr>Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="softwareconfig_csharp">
-<a href="#softwareconfig_csharp" style="color: inherit; text-decoration: inherit;">Software<wbr>Config</a>
+        <span id="softwareconfigs_csharp">
+<a href="#softwareconfigs_csharp" style="color: inherit; text-decoration: inherit;">Software<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigsoftwareconfig">Get<wbr>Environment<wbr>Config<wbr>Software<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigsoftwareconfig">List&lt;Get<wbr>Environment<wbr>Config<wbr>Software<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="webserverconfig_csharp">
-<a href="#webserverconfig_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Server<wbr>Config</a>
+        <span id="webserverconfigs_csharp">
+<a href="#webserverconfigs_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Server<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigwebserverconfig">Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigwebserverconfig">List&lt;Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="webservernetworkaccesscontrol_csharp">
-<a href="#webservernetworkaccesscontrol_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a>
+        <span id="webservernetworkaccesscontrols_csharp">
+<a href="#webservernetworkaccesscontrols_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Server<wbr>Network<wbr>Access<wbr>Controls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigwebservernetworkaccesscontrol">Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigwebservernetworkaccesscontrol">List&lt;Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -661,11 +589,11 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="databaseconfig_go">
-<a href="#databaseconfig_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Config</a>
+        <span id="databaseconfigs_go">
+<a href="#databaseconfigs_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigdatabaseconfig">Get<wbr>Environment<wbr>Config<wbr>Database<wbr>Config</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigdatabaseconfig">[]Get<wbr>Environment<wbr>Config<wbr>Database<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -679,11 +607,11 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="nodeconfig_go">
-<a href="#nodeconfig_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Config</a>
+        <span id="nodeconfigs_go">
+<a href="#nodeconfigs_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfignodeconfig">Get<wbr>Environment<wbr>Config<wbr>Node<wbr>Config</a></span>
+        <span class="property-type"><a href="#getenvironmentconfignodeconfig">[]Get<wbr>Environment<wbr>Config<wbr>Node<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -697,38 +625,38 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="privateenvironmentconfig_go">
-<a href="#privateenvironmentconfig_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Environment<wbr>Config</a>
+        <span id="privateenvironmentconfigs_go">
+<a href="#privateenvironmentconfigs_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Environment<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigprivateenvironmentconfig">Get<wbr>Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigprivateenvironmentconfig">[]Get<wbr>Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="softwareconfig_go">
-<a href="#softwareconfig_go" style="color: inherit; text-decoration: inherit;">Software<wbr>Config</a>
+        <span id="softwareconfigs_go">
+<a href="#softwareconfigs_go" style="color: inherit; text-decoration: inherit;">Software<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigsoftwareconfig">Get<wbr>Environment<wbr>Config<wbr>Software<wbr>Config</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigsoftwareconfig">[]Get<wbr>Environment<wbr>Config<wbr>Software<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="webserverconfig_go">
-<a href="#webserverconfig_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Server<wbr>Config</a>
+        <span id="webserverconfigs_go">
+<a href="#webserverconfigs_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Server<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigwebserverconfig">Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigwebserverconfig">[]Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="webservernetworkaccesscontrol_go">
-<a href="#webservernetworkaccesscontrol_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a>
+        <span id="webservernetworkaccesscontrols_go">
+<a href="#webservernetworkaccesscontrols_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Server<wbr>Network<wbr>Access<wbr>Controls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigwebservernetworkaccesscontrol">Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigwebservernetworkaccesscontrol">[]Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -757,11 +685,11 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="databaseconfig_nodejs">
-<a href="#databaseconfig_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Config</a>
+        <span id="databaseconfigs_nodejs">
+<a href="#databaseconfigs_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigdatabaseconfig">Get<wbr>Environment<wbr>Config<wbr>Database<wbr>Config</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigdatabaseconfig">Get<wbr>Environment<wbr>Config<wbr>Database<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -775,11 +703,11 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="nodeconfig_nodejs">
-<a href="#nodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Config</a>
+        <span id="nodeconfigs_nodejs">
+<a href="#nodeconfigs_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfignodeconfig">Get<wbr>Environment<wbr>Config<wbr>Node<wbr>Config</a></span>
+        <span class="property-type"><a href="#getenvironmentconfignodeconfig">Get<wbr>Environment<wbr>Config<wbr>Node<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -793,38 +721,38 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="privateenvironmentconfig_nodejs">
-<a href="#privateenvironmentconfig_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Environment<wbr>Config</a>
+        <span id="privateenvironmentconfigs_nodejs">
+<a href="#privateenvironmentconfigs_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Environment<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigprivateenvironmentconfig">Get<wbr>Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigprivateenvironmentconfig">Get<wbr>Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="softwareconfig_nodejs">
-<a href="#softwareconfig_nodejs" style="color: inherit; text-decoration: inherit;">software<wbr>Config</a>
+        <span id="softwareconfigs_nodejs">
+<a href="#softwareconfigs_nodejs" style="color: inherit; text-decoration: inherit;">software<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigsoftwareconfig">Get<wbr>Environment<wbr>Config<wbr>Software<wbr>Config</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigsoftwareconfig">Get<wbr>Environment<wbr>Config<wbr>Software<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="webserverconfig_nodejs">
-<a href="#webserverconfig_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Server<wbr>Config</a>
+        <span id="webserverconfigs_nodejs">
+<a href="#webserverconfigs_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Server<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigwebserverconfig">Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigwebserverconfig">Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="webservernetworkaccesscontrol_nodejs">
-<a href="#webservernetworkaccesscontrol_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a>
+        <span id="webservernetworkaccesscontrols_nodejs">
+<a href="#webservernetworkaccesscontrols_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Server<wbr>Network<wbr>Access<wbr>Controls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigwebservernetworkaccesscontrol">Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigwebservernetworkaccesscontrol">Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -853,11 +781,11 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="database_config_python">
-<a href="#database_config_python" style="color: inherit; text-decoration: inherit;">database_<wbr>config</a>
+        <span id="database_configs_python">
+<a href="#database_configs_python" style="color: inherit; text-decoration: inherit;">database_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigdatabaseconfig">Get<wbr>Environment<wbr>Config<wbr>Database<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigdatabaseconfig">Sequence[Get<wbr>Environment<wbr>Config<wbr>Database<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -871,11 +799,11 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="node_config_python">
-<a href="#node_config_python" style="color: inherit; text-decoration: inherit;">node_<wbr>config</a>
+        <span id="node_configs_python">
+<a href="#node_configs_python" style="color: inherit; text-decoration: inherit;">node_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfignodeconfig">Get<wbr>Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getenvironmentconfignodeconfig">Sequence[Get<wbr>Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -889,38 +817,38 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="private_environment_config_python">
-<a href="#private_environment_config_python" style="color: inherit; text-decoration: inherit;">private_<wbr>environment_<wbr>config</a>
+        <span id="private_environment_configs_python">
+<a href="#private_environment_configs_python" style="color: inherit; text-decoration: inherit;">private_<wbr>environment_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigprivateenvironmentconfig">Get<wbr>Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigprivateenvironmentconfig">Sequence[Get<wbr>Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="software_config_python">
-<a href="#software_config_python" style="color: inherit; text-decoration: inherit;">software_<wbr>config</a>
+        <span id="software_configs_python">
+<a href="#software_configs_python" style="color: inherit; text-decoration: inherit;">software_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigsoftwareconfig">Get<wbr>Environment<wbr>Config<wbr>Software<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigsoftwareconfig">Sequence[Get<wbr>Environment<wbr>Config<wbr>Software<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="web_server_config_python">
-<a href="#web_server_config_python" style="color: inherit; text-decoration: inherit;">web_<wbr>server_<wbr>config</a>
+        <span id="web_server_configs_python">
+<a href="#web_server_configs_python" style="color: inherit; text-decoration: inherit;">web_<wbr>server_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigwebserverconfig">Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigwebserverconfig">Sequence[Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="web_server_network_access_control_python">
-<a href="#web_server_network_access_control_python" style="color: inherit; text-decoration: inherit;">web_<wbr>server_<wbr>network_<wbr>access_<wbr>control</a>
+        <span id="web_server_network_access_controls_python">
+<a href="#web_server_network_access_controls_python" style="color: inherit; text-decoration: inherit;">web_<wbr>server_<wbr>network_<wbr>access_<wbr>controls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigwebservernetworkaccesscontrol">Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigwebservernetworkaccesscontrol">Sequence[Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -928,14 +856,14 @@ The following output properties are available:
 
 <h4 id="getenvironmentconfigdatabaseconfig">Get<wbr>Environment<wbr>Config<wbr>Database<wbr>Config</h4>
 {{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GetEnvironmentConfigDatabaseConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetEnvironmentConfigDatabaseConfig">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetEnvironmentConfigDatabaseConfig">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigDatabaseConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigDatabaseConfig">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigDatabaseConfig">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Inputs.GetEnvironmentConfigDatabaseConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.GetEnvironmentConfigDatabaseConfig.html">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.GetEnvironmentConfigDatabaseConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1002,14 +930,14 @@ The following output properties are available:
 
 <h4 id="getenvironmentconfignodeconfig">Get<wbr>Environment<wbr>Config<wbr>Node<wbr>Config</h4>
 {{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GetEnvironmentConfigNodeConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetEnvironmentConfigNodeConfig">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetEnvironmentConfigNodeConfig">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigNodeConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigNodeConfig">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigNodeConfig">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Inputs.GetEnvironmentConfigNodeConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.GetEnvironmentConfigNodeConfig.html">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.GetEnvironmentConfigNodeConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1028,11 +956,11 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="ipallocationpolicy_csharp">
-<a href="#ipallocationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Policy</a>
+        <span id="ipallocationpolicies_csharp">
+<a href="#ipallocationpolicies_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfignodeconfigipallocationpolicy">Get<wbr>Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Ip<wbr>Allocation<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#getenvironmentconfignodeconfigipallocationpolicy">List&lt;Get<wbr>Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Ip<wbr>Allocation<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -1073,15 +1001,6 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="zone_csharp">
-<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="subnetwork_csharp">
 <a href="#subnetwork_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
 </span>
@@ -1089,13 +1008,22 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="zone_csharp">
+<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -1115,11 +1043,11 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="ipallocationpolicy_go">
-<a href="#ipallocationpolicy_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Policy</a>
+        <span id="ipallocationpolicies_go">
+<a href="#ipallocationpolicies_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfignodeconfigipallocationpolicy">Get<wbr>Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Ip<wbr>Allocation<wbr>Policy</a></span>
+        <span class="property-type"><a href="#getenvironmentconfignodeconfigipallocationpolicy">[]Get<wbr>Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Ip<wbr>Allocation<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -1160,15 +1088,6 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="zone_go">
-<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="subnetwork_go">
 <a href="#subnetwork_go" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
 </span>
@@ -1176,13 +1095,22 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="zone_go">
+<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -1202,11 +1130,11 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="ipallocationpolicy_nodejs">
-<a href="#ipallocationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Allocation<wbr>Policy</a>
+        <span id="ipallocationpolicies_nodejs">
+<a href="#ipallocationpolicies_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Allocation<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfignodeconfigipallocationpolicy">Get<wbr>Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Ip<wbr>Allocation<wbr>Policy</a></span>
+        <span class="property-type"><a href="#getenvironmentconfignodeconfigipallocationpolicy">Get<wbr>Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Ip<wbr>Allocation<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -1247,15 +1175,6 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="zone_nodejs">
-<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="subnetwork_nodejs">
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
@@ -1263,13 +1182,22 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="zone_nodejs">
+<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -1289,11 +1217,11 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="ip_allocation_policy_python">
-<a href="#ip_allocation_policy_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allocation_<wbr>policy</a>
+        <span id="ip_allocation_policies_python">
+<a href="#ip_allocation_policies_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allocation_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfignodeconfigipallocationpolicy">Get<wbr>Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Ip<wbr>Allocation<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#getenvironmentconfignodeconfigipallocationpolicy">Sequence[Get<wbr>Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Ip<wbr>Allocation<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -1334,15 +1262,6 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="zone_python">
-<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="subnetwork_python">
 <a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
@@ -1350,8 +1269,8 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -1359,19 +1278,28 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="zone_python">
+<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 <h4 id="getenvironmentconfignodeconfigipallocationpolicy">Get<wbr>Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Ip<wbr>Allocation<wbr>Policy</h4>
 {{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GetEnvironmentConfigNodeConfigIpAllocationPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetEnvironmentConfigNodeConfigIpAllocationPolicy">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetEnvironmentConfigNodeConfigIpAllocationPolicy">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigNodeConfigIpAllocationPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigNodeConfigIpAllocationPolicy">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigNodeConfigIpAllocationPolicy">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Inputs.GetEnvironmentConfigNodeConfigIpAllocationPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.GetEnvironmentConfigNodeConfigIpAllocationPolicy.html">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.GetEnvironmentConfigNodeConfigIpAllocationPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1379,6 +1307,42 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="clusteripv4cidrblock_csharp">
+<a href="#clusteripv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="clustersecondaryrangename_csharp">
+<a href="#clustersecondaryrangename_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Secondary<wbr>Range<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="servicesipv4cidrblock_csharp">
+<a href="#servicesipv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Services<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="servicessecondaryrangename_csharp">
+<a href="#servicessecondaryrangename_csharp" style="color: inherit; text-decoration: inherit;">Services<wbr>Secondary<wbr>Range<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="useipaliases_csharp">
@@ -1388,42 +1352,6 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="clusteripv4cidrblock_csharp">
-<a href="#clusteripv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ipv4Cidr<wbr>Block</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="clustersecondaryrangename_csharp">
-<a href="#clustersecondaryrangename_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Secondary<wbr>Range<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="servicesipv4cidrblock_csharp">
-<a href="#servicesipv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Services<wbr>Ipv4Cidr<wbr>Block</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="servicessecondaryrangename_csharp">
-<a href="#servicessecondaryrangename_csharp" style="color: inherit; text-decoration: inherit;">Services<wbr>Secondary<wbr>Range<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1432,15 +1360,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="useipaliases_go">
-<a href="#useipaliases_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Ip<wbr>Aliases</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="clusteripv4cidrblock_go">
 <a href="#clusteripv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
@@ -1448,8 +1367,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="clustersecondaryrangename_go">
 <a href="#clustersecondaryrangename_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Secondary<wbr>Range<wbr>Name</a>
 </span>
@@ -1457,8 +1376,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="servicesipv4cidrblock_go">
 <a href="#servicesipv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Services<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
@@ -1466,13 +1385,22 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="servicessecondaryrangename_go">
 <a href="#servicessecondaryrangename_go" style="color: inherit; text-decoration: inherit;">Services<wbr>Secondary<wbr>Range<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="useipaliases_go">
+<a href="#useipaliases_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Ip<wbr>Aliases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -1483,15 +1411,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="useipaliases_nodejs">
-<a href="#useipaliases_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Ip<wbr>Aliases</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="clusteripv4cidrblock_nodejs">
 <a href="#clusteripv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
@@ -1499,8 +1418,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="clustersecondaryrangename_nodejs">
 <a href="#clustersecondaryrangename_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Secondary<wbr>Range<wbr>Name</a>
 </span>
@@ -1508,8 +1427,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="servicesipv4cidrblock_nodejs">
 <a href="#servicesipv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
@@ -1517,13 +1436,22 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="servicessecondaryrangename_nodejs">
 <a href="#servicessecondaryrangename_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Secondary<wbr>Range<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="useipaliases_nodejs">
+<a href="#useipaliases_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Ip<wbr>Aliases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -1534,15 +1462,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="use_ip_aliases_python">
-<a href="#use_ip_aliases_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ip_<wbr>aliases</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="cluster_ipv4_cidr_block_python">
 <a href="#cluster_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
 </span>
@@ -1550,8 +1469,8 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="cluster_secondary_range_name_python">
 <a href="#cluster_secondary_range_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>secondary_<wbr>range_<wbr>name</a>
 </span>
@@ -1559,8 +1478,8 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="services_ipv4_cidr_block_python">
 <a href="#services_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">services_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
 </span>
@@ -1568,8 +1487,8 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="services_secondary_range_name_python">
 <a href="#services_secondary_range_name_python" style="color: inherit; text-decoration: inherit;">services_<wbr>secondary_<wbr>range_<wbr>name</a>
 </span>
@@ -1577,19 +1496,28 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="use_ip_aliases_python">
+<a href="#use_ip_aliases_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ip_<wbr>aliases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 <h4 id="getenvironmentconfigprivateenvironmentconfig">Get<wbr>Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config</h4>
 {{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GetEnvironmentConfigPrivateEnvironmentConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetEnvironmentConfigPrivateEnvironmentConfig">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetEnvironmentConfigPrivateEnvironmentConfig">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigPrivateEnvironmentConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigPrivateEnvironmentConfig">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigPrivateEnvironmentConfig">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Inputs.GetEnvironmentConfigPrivateEnvironmentConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.GetEnvironmentConfigPrivateEnvironmentConfig.html">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.GetEnvironmentConfigPrivateEnvironmentConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1608,15 +1536,6 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="webserveripv4cidrblock_csharp">
-<a href="#webserveripv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Server<wbr>Ipv4Cidr<wbr>Block</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="enableprivateendpoint_csharp">
 <a href="#enableprivateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Private<wbr>Endpoint</a>
 </span>
@@ -1624,10 +1543,19 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="masteripv4cidrblock_csharp">
 <a href="#masteripv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="webserveripv4cidrblock_csharp">
+<a href="#webserveripv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Server<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1650,15 +1578,6 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="webserveripv4cidrblock_go">
-<a href="#webserveripv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Server<wbr>Ipv4Cidr<wbr>Block</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="enableprivateendpoint_go">
 <a href="#enableprivateendpoint_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Private<wbr>Endpoint</a>
 </span>
@@ -1666,10 +1585,19 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="masteripv4cidrblock_go">
 <a href="#masteripv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="webserveripv4cidrblock_go">
+<a href="#webserveripv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Server<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1692,15 +1620,6 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="webserveripv4cidrblock_nodejs">
-<a href="#webserveripv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Server<wbr>Ipv4Cidr<wbr>Block</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="enableprivateendpoint_nodejs">
 <a href="#enableprivateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Private<wbr>Endpoint</a>
 </span>
@@ -1708,10 +1627,19 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="masteripv4cidrblock_nodejs">
 <a href="#masteripv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="webserveripv4cidrblock_nodejs">
+<a href="#webserveripv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Server<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1734,15 +1662,6 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="web_server_ipv4_cidr_block_python">
-<a href="#web_server_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">web_<wbr>server_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="enable_private_endpoint_python">
 <a href="#enable_private_endpoint_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>private_<wbr>endpoint</a>
 </span>
@@ -1750,10 +1669,19 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="master_ipv4_cidr_block_python">
 <a href="#master_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">master_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="web_server_ipv4_cidr_block_python">
+<a href="#web_server_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">web_<wbr>server_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1764,14 +1692,14 @@ The following output properties are available:
 
 <h4 id="getenvironmentconfigsoftwareconfig">Get<wbr>Environment<wbr>Config<wbr>Software<wbr>Config</h4>
 {{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GetEnvironmentConfigSoftwareConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetEnvironmentConfigSoftwareConfig">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetEnvironmentConfigSoftwareConfig">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigSoftwareConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigSoftwareConfig">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigSoftwareConfig">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Inputs.GetEnvironmentConfigSoftwareConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.GetEnvironmentConfigSoftwareConfig.html">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.GetEnvironmentConfigSoftwareConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1779,6 +1707,24 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="airflowconfigoverrides_csharp">
+<a href="#airflowconfigoverrides_csharp" style="color: inherit; text-decoration: inherit;">Airflow<wbr>Config<wbr>Overrides</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="envvariables_csharp">
+<a href="#envvariables_csharp" style="color: inherit; text-decoration: inherit;">Env<wbr>Variables</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="imageversion_csharp">
@@ -1790,38 +1736,20 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="pythonversion_csharp">
-<a href="#pythonversion_csharp" style="color: inherit; text-decoration: inherit;">Python<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="airflowconfigoverrides_csharp">
-<a href="#airflowconfigoverrides_csharp" style="color: inherit; text-decoration: inherit;">Airflow<wbr>Config<wbr>Overrides</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="envvariables_csharp">
-<a href="#envvariables_csharp" style="color: inherit; text-decoration: inherit;">Env<wbr>Variables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="pypipackages_csharp">
 <a href="#pypipackages_csharp" style="color: inherit; text-decoration: inherit;">Pypi<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="pythonversion_csharp">
+<a href="#pythonversion_csharp" style="color: inherit; text-decoration: inherit;">Python<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -1830,6 +1758,24 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="airflowconfigoverrides_go">
+<a href="#airflowconfigoverrides_go" style="color: inherit; text-decoration: inherit;">Airflow<wbr>Config<wbr>Overrides</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="envvariables_go">
+<a href="#envvariables_go" style="color: inherit; text-decoration: inherit;">Env<wbr>Variables</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="imageversion_go">
@@ -1841,38 +1787,20 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="pythonversion_go">
-<a href="#pythonversion_go" style="color: inherit; text-decoration: inherit;">Python<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="airflowconfigoverrides_go">
-<a href="#airflowconfigoverrides_go" style="color: inherit; text-decoration: inherit;">Airflow<wbr>Config<wbr>Overrides</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="envvariables_go">
-<a href="#envvariables_go" style="color: inherit; text-decoration: inherit;">Env<wbr>Variables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="pypipackages_go">
 <a href="#pypipackages_go" style="color: inherit; text-decoration: inherit;">Pypi<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="pythonversion_go">
+<a href="#pythonversion_go" style="color: inherit; text-decoration: inherit;">Python<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -1881,6 +1809,24 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="airflowconfigoverrides_nodejs">
+<a href="#airflowconfigoverrides_nodejs" style="color: inherit; text-decoration: inherit;">airflow<wbr>Config<wbr>Overrides</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="envvariables_nodejs">
+<a href="#envvariables_nodejs" style="color: inherit; text-decoration: inherit;">env<wbr>Variables</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="imageversion_nodejs">
@@ -1892,38 +1838,20 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="pythonversion_nodejs">
-<a href="#pythonversion_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="airflowconfigoverrides_nodejs">
-<a href="#airflowconfigoverrides_nodejs" style="color: inherit; text-decoration: inherit;">airflow<wbr>Config<wbr>Overrides</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="envvariables_nodejs">
-<a href="#envvariables_nodejs" style="color: inherit; text-decoration: inherit;">env<wbr>Variables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="pypipackages_nodejs">
 <a href="#pypipackages_nodejs" style="color: inherit; text-decoration: inherit;">pypi<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="pythonversion_nodejs">
+<a href="#pythonversion_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -1932,6 +1860,24 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="airflow_config_overrides_python">
+<a href="#airflow_config_overrides_python" style="color: inherit; text-decoration: inherit;">airflow_<wbr>config_<wbr>overrides</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="env_variables_python">
+<a href="#env_variables_python" style="color: inherit; text-decoration: inherit;">env_<wbr>variables</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="image_version_python">
@@ -1943,33 +1889,6 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="python_version_python">
-<a href="#python_version_python" style="color: inherit; text-decoration: inherit;">python_<wbr>version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="airflow_config_overrides_python">
-<a href="#airflow_config_overrides_python" style="color: inherit; text-decoration: inherit;">airflow_<wbr>config_<wbr>overrides</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="env_variables_python">
-<a href="#env_variables_python" style="color: inherit; text-decoration: inherit;">env_<wbr>variables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="pypi_packages_python">
 <a href="#pypi_packages_python" style="color: inherit; text-decoration: inherit;">pypi_<wbr>packages</a>
 </span>
@@ -1977,19 +1896,28 @@ The following output properties are available:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="python_version_python">
+<a href="#python_version_python" style="color: inherit; text-decoration: inherit;">python_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 <h4 id="getenvironmentconfigwebserverconfig">Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config</h4>
 {{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GetEnvironmentConfigWebServerConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetEnvironmentConfigWebServerConfig">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetEnvironmentConfigWebServerConfig">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigWebServerConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigWebServerConfig">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigWebServerConfig">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Inputs.GetEnvironmentConfigWebServerConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.GetEnvironmentConfigWebServerConfig.html">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.GetEnvironmentConfigWebServerConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2056,14 +1984,14 @@ The following output properties are available:
 
 <h4 id="getenvironmentconfigwebservernetworkaccesscontrol">Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</h4>
 {{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GetEnvironmentConfigWebServerNetworkAccessControl">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetEnvironmentConfigWebServerNetworkAccessControl">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetEnvironmentConfigWebServerNetworkAccessControl">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigWebServerNetworkAccessControlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigWebServerNetworkAccessControl">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigWebServerNetworkAccessControl">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Inputs.GetEnvironmentConfigWebServerNetworkAccessControlArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.GetEnvironmentConfigWebServerNetworkAccessControl.html">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.GetEnvironmentConfigWebServerNetworkAccessControl.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2130,14 +2058,14 @@ The following output properties are available:
 
 <h4 id="getenvironmentconfigwebservernetworkaccesscontrolallowediprange">Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Allowed<wbr>Ip<wbr>Range</h4>
 {{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Inputs.GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange.html">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2147,17 +2075,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="value_csharp">
-<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="description_csharp">
-<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2171,17 +2099,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="value_go">
-<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="description_go">
-<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2195,17 +2123,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="value_nodejs">
-<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="description_nodejs">
-<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2219,17 +2147,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="value_python">
-<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="description_python">
-<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

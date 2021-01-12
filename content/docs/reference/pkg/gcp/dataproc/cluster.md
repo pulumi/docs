@@ -99,42 +99,42 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        var @default = new Gcp.ServiceAccount.Account("default", new Gcp.ServiceAccount.AccountArgs
+        {
+            AccountId = "service-account-id",
+            DisplayName = "Service Account",
+        });
         var mycluster = new Gcp.Dataproc.Cluster("mycluster", new Gcp.Dataproc.ClusterArgs
         {
+            Region = "us-central1",
+            GracefulDecommissionTimeout = "120s",
+            Labels = 
+            {
+                { "foo", "bar" },
+            },
             ClusterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigArgs
             {
-                GceClusterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs
-                {
-                    ServiceAccountScopes = 
-                    {
-                        "https://www.googleapis.com/auth/monitoring",
-                        "useraccounts-ro",
-                        "storage-rw",
-                        "logging-write",
-                    },
-                    Tags = 
-                    {
-                        "foo",
-                        "bar",
-                    },
-                },
-                InitializationActions = 
-                {
-                    new Gcp.Dataproc.Inputs.ClusterClusterConfigInitializationActionArgs
-                    {
-                        Script = "gs://dataproc-initialization-actions/stackdriver/stackdriver.sh",
-                        TimeoutSec = 500,
-                    },
-                },
+                StagingBucket = "dataproc-staging-bucket",
                 MasterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigArgs
                 {
+                    NumInstances = 1,
+                    MachineType = "e2-medium",
                     DiskConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigDiskConfigArgs
                     {
-                        BootDiskSizeGb = 15,
                         BootDiskType = "pd-ssd",
+                        BootDiskSizeGb = 15,
                     },
+                },
+                WorkerConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigWorkerConfigArgs
+                {
+                    NumInstances = 2,
                     MachineType = "e2-medium",
-                    NumInstances = 1,
+                    MinCpuPlatform = "Intel Skylake",
+                    DiskConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigWorkerConfigDiskConfigArgs
+                    {
+                        BootDiskSizeGb = 15,
+                        NumLocalSsds = 1,
+                    },
                 },
                 PreemptibleWorkerConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigPreemptibleWorkerConfigArgs
                 {
@@ -148,25 +148,28 @@ class MyStack : Stack
                         { "dataproc:dataproc.allow.zero.workers", "true" },
                     },
                 },
-                StagingBucket = "dataproc-staging-bucket",
-                WorkerConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigWorkerConfigArgs
+                GceClusterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs
                 {
-                    DiskConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigWorkerConfigDiskConfigArgs
+                    Tags = 
                     {
-                        BootDiskSizeGb = 15,
-                        NumLocalSsds = 1,
+                        "foo",
+                        "bar",
                     },
-                    MachineType = "e2-medium",
-                    MinCpuPlatform = "Intel Skylake",
-                    NumInstances = 2,
+                    ServiceAccount = @default.Email,
+                    ServiceAccountScopes = 
+                    {
+                        "cloud-platform",
+                    },
+                },
+                InitializationActions = 
+                {
+                    new Gcp.Dataproc.Inputs.ClusterClusterConfigInitializationActionArgs
+                    {
+                        Script = "gs://dataproc-initialization-actions/stackdriver/stackdriver.sh",
+                        TimeoutSec = 500,
+                    },
                 },
             },
-            GracefulDecommissionTimeout = "120s",
-            Labels = 
-            {
-                { "foo", "bar" },
-            },
-            Region = "us-central1",
         });
     }
 
@@ -181,38 +184,43 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/serviceAccount"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := dataproc.NewCluster(ctx, "mycluster", &dataproc.ClusterArgs{
+		_, err := serviceAccount.NewAccount(ctx, "_default", &serviceAccount.AccountArgs{
+			AccountId:   pulumi.String("service-account-id"),
+			DisplayName: pulumi.String("Service Account"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = dataproc.NewCluster(ctx, "mycluster", &dataproc.ClusterArgs{
+			Region:                      pulumi.String("us-central1"),
+			GracefulDecommissionTimeout: pulumi.String("120s"),
+			Labels: pulumi.StringMap{
+				"foo": pulumi.String("bar"),
+			},
 			ClusterConfig: &dataproc.ClusterClusterConfigArgs{
-				GceClusterConfig: &dataproc.ClusterClusterConfigGceClusterConfigArgs{
-					ServiceAccountScopes: pulumi.StringArray{
-						pulumi.String("https://www.googleapis.com/auth/monitoring"),
-						pulumi.String("useraccounts-ro"),
-						pulumi.String("storage-rw"),
-						pulumi.String("logging-write"),
-					},
-					Tags: pulumi.StringArray{
-						pulumi.String("foo"),
-						pulumi.String("bar"),
-					},
-				},
-				InitializationActions: dataproc.ClusterClusterConfigInitializationActionArray{
-					&dataproc.ClusterClusterConfigInitializationActionArgs{
-						Script:     pulumi.String("gs://dataproc-initialization-actions/stackdriver/stackdriver.sh"),
-						TimeoutSec: pulumi.Int(500),
-					},
-				},
+				StagingBucket: pulumi.String("dataproc-staging-bucket"),
 				MasterConfig: &dataproc.ClusterClusterConfigMasterConfigArgs{
-					DiskConfig: &dataproc.ClusterClusterConfigMasterConfigDiskConfigArgs{
-						BootDiskSizeGb: pulumi.Int(15),
-						BootDiskType:   pulumi.String("pd-ssd"),
-					},
-					MachineType:  pulumi.String("e2-medium"),
 					NumInstances: pulumi.Int(1),
+					MachineType:  pulumi.String("e2-medium"),
+					DiskConfig: &dataproc.ClusterClusterConfigMasterConfigDiskConfigArgs{
+						BootDiskType:   pulumi.String("pd-ssd"),
+						BootDiskSizeGb: pulumi.Int(15),
+					},
+				},
+				WorkerConfig: &dataproc.ClusterClusterConfigWorkerConfigArgs{
+					NumInstances:   pulumi.Int(2),
+					MachineType:    pulumi.String("e2-medium"),
+					MinCpuPlatform: pulumi.String("Intel Skylake"),
+					DiskConfig: &dataproc.ClusterClusterConfigWorkerConfigDiskConfigArgs{
+						BootDiskSizeGb: pulumi.Int(15),
+						NumLocalSsds:   pulumi.Int(1),
+					},
 				},
 				PreemptibleWorkerConfig: &dataproc.ClusterClusterConfigPreemptibleWorkerConfigArgs{
 					NumInstances: pulumi.Int(0),
@@ -223,22 +231,23 @@ func main() {
 						"dataproc:dataproc.allow.zero.workers": pulumi.String("true"),
 					},
 				},
-				StagingBucket: pulumi.String("dataproc-staging-bucket"),
-				WorkerConfig: &dataproc.ClusterClusterConfigWorkerConfigArgs{
-					DiskConfig: &dataproc.ClusterClusterConfigWorkerConfigDiskConfigArgs{
-						BootDiskSizeGb: pulumi.Int(15),
-						NumLocalSsds:   pulumi.Int(1),
+				GceClusterConfig: &dataproc.ClusterClusterConfigGceClusterConfigArgs{
+					Tags: pulumi.StringArray{
+						pulumi.String("foo"),
+						pulumi.String("bar"),
 					},
-					MachineType:    pulumi.String("e2-medium"),
-					MinCpuPlatform: pulumi.String("Intel Skylake"),
-					NumInstances:   pulumi.Int(2),
+					ServiceAccount: _default.Email,
+					ServiceAccountScopes: pulumi.StringArray{
+						pulumi.String("cloud-platform"),
+					},
+				},
+				InitializationActions: dataproc.ClusterClusterConfigInitializationActionArray{
+					&dataproc.ClusterClusterConfigInitializationActionArgs{
+						Script:     pulumi.String("gs://dataproc-initialization-actions/stackdriver/stackdriver.sh"),
+						TimeoutSec: pulumi.Int(500),
+					},
 				},
 			},
-			GracefulDecommissionTimeout: pulumi.String("120s"),
-			Labels: pulumi.StringMap{
-				"foo": pulumi.String("bar"),
-			},
-			Region: pulumi.String("us-central1"),
 		})
 		if err != nil {
 			return err
@@ -255,32 +264,34 @@ func main() {
 import pulumi
 import pulumi_gcp as gcp
 
+default = gcp.service_account.Account("default",
+    account_id="service-account-id",
+    display_name="Service Account")
 mycluster = gcp.dataproc.Cluster("mycluster",
+    region="us-central1",
+    graceful_decommission_timeout="120s",
+    labels={
+        "foo": "bar",
+    },
     cluster_config=gcp.dataproc.ClusterClusterConfigArgs(
-        gce_cluster_config=gcp.dataproc.ClusterClusterConfigGceClusterConfigArgs(
-            service_account_scopes=[
-                "https://www.googleapis.com/auth/monitoring",
-                "useraccounts-ro",
-                "storage-rw",
-                "logging-write",
-            ],
-            tags=[
-                "foo",
-                "bar",
-            ],
-        ),
-        initialization_actions=[gcp.dataproc.ClusterClusterConfigInitializationActionArgs(
-            script="gs://dataproc-initialization-actions/stackdriver/stackdriver.sh",
-            timeout_sec=500,
-        )],
+        staging_bucket="dataproc-staging-bucket",
         master_config=gcp.dataproc.ClusterClusterConfigMasterConfigArgs(
-            disk_config=gcp.dataproc.ClusterClusterConfigMasterConfigDiskConfigArgs(
-                boot_disk_size_gb=15,
-                boot_disk_type="pd-ssd",
-            ),
-            machine_type="e2-medium",
             num_instances=1,
+            machine_type="e2-medium",
+            disk_config=gcp.dataproc.ClusterClusterConfigMasterConfigDiskConfigArgs(
+                boot_disk_type="pd-ssd",
+                boot_disk_size_gb=15,
+            ),
         ),
+        worker_config={
+            "numInstances": 2,
+            "machine_type": "e2-medium",
+            "min_cpu_platform": "Intel Skylake",
+            "diskConfig": {
+                "boot_disk_size_gb": 15,
+                "numLocalSsds": 1,
+            },
+        },
         preemptible_worker_config=gcp.dataproc.ClusterClusterConfigPreemptibleWorkerConfigArgs(
             num_instances=0,
         ),
@@ -290,22 +301,19 @@ mycluster = gcp.dataproc.Cluster("mycluster",
                 "dataproc:dataproc.allow.zero.workers": "true",
             },
         ),
-        staging_bucket="dataproc-staging-bucket",
-        worker_config={
-            "diskConfig": {
-                "boot_disk_size_gb": 15,
-                "numLocalSsds": 1,
-            },
-            "machine_type": "e2-medium",
-            "min_cpu_platform": "Intel Skylake",
-            "numInstances": 2,
-        },
-    ),
-    graceful_decommission_timeout="120s",
-    labels={
-        "foo": "bar",
-    },
-    region="us-central1")
+        gce_cluster_config=gcp.dataproc.ClusterClusterConfigGceClusterConfigArgs(
+            tags=[
+                "foo",
+                "bar",
+            ],
+            service_account=default.email,
+            service_account_scopes=["cloud-platform"],
+        ),
+        initialization_actions=[gcp.dataproc.ClusterClusterConfigInitializationActionArgs(
+            script="gs://dataproc-initialization-actions/stackdriver/stackdriver.sh",
+            timeout_sec=500,
+        )],
+    ))
 ```
 
 {{% /example %}}
@@ -316,59 +324,57 @@ mycluster = gcp.dataproc.Cluster("mycluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
+const _default = new gcp.serviceAccount.Account("default", {
+    accountId: "service-account-id",
+    displayName: "Service Account",
+});
 const mycluster = new gcp.dataproc.Cluster("mycluster", {
+    region: "us-central1",
+    gracefulDecommissionTimeout: "120s",
+    labels: {
+        foo: "bar",
+    },
     clusterConfig: {
-        gceClusterConfig: {
-            serviceAccountScopes: [
-                "https://www.googleapis.com/auth/monitoring",
-                "useraccounts-ro",
-                "storage-rw",
-                "logging-write",
-            ],
-            tags: [
-                "foo",
-                "bar",
-            ],
-        },
-        // You can define multiple initialization_action blocks
-        initializationActions: [{
-            script: "gs://dataproc-initialization-actions/stackdriver/stackdriver.sh",
-            timeoutSec: 500,
-        }],
+        stagingBucket: "dataproc-staging-bucket",
         masterConfig: {
+            numInstances: 1,
+            machineType: "e2-medium",
+            diskConfig: {
+                bootDiskType: "pd-ssd",
+                bootDiskSizeGb: 15,
+            },
+        },
+        workerConfig: {
+            numInstances: 2,
+            machineType: "e2-medium",
+            minCpuPlatform: "Intel Skylake",
             diskConfig: {
                 bootDiskSizeGb: 15,
-                bootDiskType: "pd-ssd",
+                numLocalSsds: 1,
             },
-            machineType: "e2-medium",
-            numInstances: 1,
         },
         preemptibleWorkerConfig: {
             numInstances: 0,
         },
-        // Override or set some custom properties
         softwareConfig: {
             imageVersion: "1.3.7-deb9",
             overrideProperties: {
                 "dataproc:dataproc.allow.zero.workers": "true",
             },
         },
-        stagingBucket: "dataproc-staging-bucket",
-        workerConfig: {
-            diskConfig: {
-                bootDiskSizeGb: 15,
-                numLocalSsds: 1,
-            },
-            machineType: "e2-medium",
-            minCpuPlatform: "Intel Skylake",
-            numInstances: 2,
+        gceClusterConfig: {
+            tags: [
+                "foo",
+                "bar",
+            ],
+            serviceAccount: _default.email,
+            serviceAccountScopes: ["cloud-platform"],
         },
+        initializationActions: [{
+            script: "gs://dataproc-initialization-actions/stackdriver/stackdriver.sh",
+            timeoutSec: 500,
+        }],
     },
-    gracefulDecommissionTimeout: "120s",
-    labels: {
-        foo: "bar",
-    },
-    region: "us-central1",
 });
 ```
 
@@ -2442,9 +2448,9 @@ If not specified, the "default" service account is used.
     </dt>
     <dd>{{% md %}}The set of Google API scopes
 to be made available on all of the node VMs under the `service_account`
-specified. These can be	either FQDNs, or scope aliases. The following scopes
-must be set if any other scopes are set. They're necessary to ensure the
-correct functioning ofthe cluster, and are set automatically by the API:
+specified. Both OAuth2 URLs and gcloud
+short names are supported. To allow full access to all Cloud APIs, use the
+`cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2548,9 +2554,9 @@ If not specified, the "default" service account is used.
     </dt>
     <dd>{{% md %}}The set of Google API scopes
 to be made available on all of the node VMs under the `service_account`
-specified. These can be	either FQDNs, or scope aliases. The following scopes
-must be set if any other scopes are set. They're necessary to ensure the
-correct functioning ofthe cluster, and are set automatically by the API:
+specified. Both OAuth2 URLs and gcloud
+short names are supported. To allow full access to all Cloud APIs, use the
+`cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2654,9 +2660,9 @@ If not specified, the "default" service account is used.
     </dt>
     <dd>{{% md %}}The set of Google API scopes
 to be made available on all of the node VMs under the `service_account`
-specified. These can be	either FQDNs, or scope aliases. The following scopes
-must be set if any other scopes are set. They're necessary to ensure the
-correct functioning ofthe cluster, and are set automatically by the API:
+specified. Both OAuth2 URLs and gcloud
+short names are supported. To allow full access to all Cloud APIs, use the
+`cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2760,9 +2766,9 @@ If not specified, the "default" service account is used.
     </dt>
     <dd>{{% md %}}The set of Google API scopes
 to be made available on all of the node VMs under the `service_account`
-specified. These can be	either FQDNs, or scope aliases. The following scopes
-must be set if any other scopes are set. They're necessary to ensure the
-correct functioning ofthe cluster, and are set automatically by the API:
+specified. Both OAuth2 URLs and gcloud
+short names are supported. To allow full access to all Cloud APIs, use the
+`cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

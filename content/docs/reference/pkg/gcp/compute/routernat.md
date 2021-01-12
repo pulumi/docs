@@ -398,7 +398,7 @@ const natManual = new gcp.compute.RouterNat("natManual", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.RouterNat">RouterNat</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">drain_nat_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">icmp_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[RouterNatLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">min_ports_per_vm</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_ip_allocate_option</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_subnetwork_ip_ranges_to_nat</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetworks</span><span class="p">:</span> <span class="nx">Optional[Sequence[RouterNatSubnetworkArgs]]</span> = None<span class="p">, </span><span class="nx">tcp_established_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tcp_transitory_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">udp_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.RouterNat">RouterNat</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">drain_nat_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">enable_endpoint_independent_mapping</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">icmp_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[RouterNatLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">min_ports_per_vm</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_ip_allocate_option</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_subnetwork_ip_ranges_to_nat</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetworks</span><span class="p">:</span> <span class="nx">Optional[Sequence[RouterNatSubnetworkArgs]]</span> = None<span class="p">, </span><span class="nx">tcp_established_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tcp_transitory_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">udp_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -625,6 +625,17 @@ valid static external IPs that have been assigned to the NAT.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enableendpointindependentmapping_csharp">
+<a href="#enableendpointindependentmapping_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Endpoint<wbr>Independent<wbr>Mapping</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if endpoint independent mapping is enabled. This is enabled by default. For more information
+see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="icmpidletimeoutsec_csharp">
 <a href="#icmpidletimeoutsec_csharp" style="color: inherit; text-decoration: inherit;">Icmp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
 </span>
@@ -799,6 +810,17 @@ Possible values are `ALL_SUBNETWORKS_ALL_IP_RANGES`, `ALL_SUBNETWORKS_ALL_PRIMAR
     </dt>
     <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be
 valid static external IPs that have been assigned to the NAT.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enableendpointindependentmapping_go">
+<a href="#enableendpointindependentmapping_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Endpoint<wbr>Independent<wbr>Mapping</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if endpoint independent mapping is enabled. This is enabled by default. For more information
+see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -979,6 +1001,17 @@ valid static external IPs that have been assigned to the NAT.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enableendpointindependentmapping_nodejs">
+<a href="#enableendpointindependentmapping_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Endpoint<wbr>Independent<wbr>Mapping</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies if endpoint independent mapping is enabled. This is enabled by default. For more information
+see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="icmpidletimeoutsec_nodejs">
 <a href="#icmpidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">icmp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
 </span>
@@ -1153,6 +1186,17 @@ Possible values are `ALL_SUBNETWORKS_ALL_IP_RANGES`, `ALL_SUBNETWORKS_ALL_PRIMAR
     </dt>
     <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be
 valid static external IPs that have been assigned to the NAT.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_endpoint_independent_mapping_python">
+<a href="#enable_endpoint_independent_mapping_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>endpoint_<wbr>independent_<wbr>mapping</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if endpoint independent mapping is enabled. This is enabled by default. For more information
+see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1354,7 +1398,7 @@ Get an existing RouterNat resource's state with the given name, ID, and optional
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">drain_nat_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">icmp_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[RouterNatLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">min_ports_per_vm</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_ip_allocate_option</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_subnetwork_ip_ranges_to_nat</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetworks</span><span class="p">:</span> <span class="nx">Optional[Sequence[RouterNatSubnetworkArgs]]</span> = None<span class="p">, </span><span class="nx">tcp_established_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tcp_transitory_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">udp_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> RouterNat</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">drain_nat_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">enable_endpoint_independent_mapping</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">icmp_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[RouterNatLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">min_ports_per_vm</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_ip_allocate_option</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_subnetwork_ip_ranges_to_nat</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetworks</span><span class="p">:</span> <span class="nx">Optional[Sequence[RouterNatSubnetworkArgs]]</span> = None<span class="p">, </span><span class="nx">tcp_established_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tcp_transitory_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">udp_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> RouterNat</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1477,6 +1521,17 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be
 valid static external IPs that have been assigned to the NAT.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enableendpointindependentmapping_csharp">
+<a href="#state_enableendpointindependentmapping_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Endpoint<wbr>Independent<wbr>Mapping</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if endpoint independent mapping is enabled. This is enabled by default. For more information
+see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1657,6 +1712,17 @@ valid static external IPs that have been assigned to the NAT.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_enableendpointindependentmapping_go">
+<a href="#state_enableendpointindependentmapping_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Endpoint<wbr>Independent<wbr>Mapping</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if endpoint independent mapping is enabled. This is enabled by default. For more information
+see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_icmpidletimeoutsec_go">
 <a href="#state_icmpidletimeoutsec_go" style="color: inherit; text-decoration: inherit;">Icmp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
 </span>
@@ -1834,6 +1900,17 @@ valid static external IPs that have been assigned to the NAT.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_enableendpointindependentmapping_nodejs">
+<a href="#state_enableendpointindependentmapping_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Endpoint<wbr>Independent<wbr>Mapping</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies if endpoint independent mapping is enabled. This is enabled by default. For more information
+see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_icmpidletimeoutsec_nodejs">
 <a href="#state_icmpidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">icmp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
 </span>
@@ -2008,6 +2085,17 @@ Defaults to 30s if not set.
     </dt>
     <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be
 valid static external IPs that have been assigned to the NAT.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enable_endpoint_independent_mapping_python">
+<a href="#state_enable_endpoint_independent_mapping_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>endpoint_<wbr>independent_<wbr>mapping</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if endpoint independent mapping is enabled. This is enabled by default. For more information
+see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

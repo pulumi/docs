@@ -61,7 +61,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The scopes the new credential should have (e.g. `["storage-ro", "cloud-platform"]`)
+    <dd>{{% md %}}The scopes the new credential should have (e.g. `["cloud-platform"]`)
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -107,7 +107,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The scopes the new credential should have (e.g. `["storage-ro", "cloud-platform"]`)
+    <dd>{{% md %}}The scopes the new credential should have (e.g. `["cloud-platform"]`)
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -153,7 +153,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The scopes the new credential should have (e.g. `["storage-ro", "cloud-platform"]`)
+    <dd>{{% md %}}The scopes the new credential should have (e.g. `["cloud-platform"]`)
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -199,7 +199,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The scopes the new credential should have (e.g. `["storage-ro", "cloud-platform"]`)
+    <dd>{{% md %}}The scopes the new credential should have (e.g. `["cloud-platform"]`)
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
