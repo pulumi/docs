@@ -409,7 +409,8 @@ The ShareFile resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The storage share directory that you would like the file placed into. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
@@ -504,7 +505,8 @@ The ShareFile resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The storage share directory that you would like the file placed into. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="source_go">
@@ -599,7 +601,8 @@ The ShareFile resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The storage share directory that you would like the file placed into. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
@@ -694,7 +697,8 @@ The ShareFile resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The storage share directory that you would like the file placed into. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="source_python">
@@ -969,7 +973,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The storage share directory that you would like the file placed into. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_source_csharp">
@@ -1064,7 +1069,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The storage share directory that you would like the file placed into. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_source_go">
@@ -1159,7 +1165,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The storage share directory that you would like the file placed into. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_source_nodejs">
@@ -1254,7 +1261,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The storage share directory that you would like the file placed into. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_source_python">

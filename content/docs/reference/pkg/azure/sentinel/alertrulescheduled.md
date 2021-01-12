@@ -160,7 +160,7 @@ const exampleAlertRuleScheduled = new azure.sentinel.AlertRuleScheduled("example
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/sentinel/#pulumi_azure.sentinel.AlertRuleScheduled">AlertRuleScheduled</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_analytics_workspace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">suppression_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">suppression_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tactics</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">trigger_operator</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trigger_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/sentinel/#pulumi_azure.sentinel.AlertRuleScheduled">AlertRuleScheduled</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alert_rule_template_guid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">incident_configuration</span><span class="p">:</span> <span class="nx">Optional[AlertRuleScheduledIncidentConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">log_analytics_workspace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">suppression_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">suppression_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tactics</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">trigger_operator</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trigger_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -373,6 +373,16 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="alertruletemplateguid_csharp">
+<a href="#alertruletemplateguid_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Rule<wbr>Template<wbr>Guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GUID of the alert rule template which is used for this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -390,6 +400,16 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Sentinel Scheduled Alert Rule be enabled? Defaults to `true`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="incidentconfiguration_csharp">
+<a href="#incidentconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Incident<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertrulescheduledincidentconfiguration">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `incident_configuration` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -519,6 +539,16 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="alertruletemplateguid_go">
+<a href="#alertruletemplateguid_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Rule<wbr>Template<wbr>Guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GUID of the alert rule template which is used for this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -536,6 +566,16 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Sentinel Scheduled Alert Rule be enabled? Defaults to `true`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="incidentconfiguration_go">
+<a href="#incidentconfiguration_go" style="color: inherit; text-decoration: inherit;">Incident<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertrulescheduledincidentconfiguration">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}A `incident_configuration` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -665,6 +705,16 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="alertruletemplateguid_nodejs">
+<a href="#alertruletemplateguid_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Rule<wbr>Template<wbr>Guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GUID of the alert rule template which is used for this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -682,6 +732,16 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the Sentinel Scheduled Alert Rule be enabled? Defaults to `true`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="incidentconfiguration_nodejs">
+<a href="#incidentconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">incident<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertrulescheduledincidentconfiguration">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}A `incident_configuration` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -811,6 +871,16 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="alert_rule_template_guid_python">
+<a href="#alert_rule_template_guid_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>rule_<wbr>template_<wbr>guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The GUID of the alert rule template which is used for this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -828,6 +898,16 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Sentinel Scheduled Alert Rule be enabled? Defaults to `true`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="incident_configuration_python">
+<a href="#incident_configuration_python" style="color: inherit; text-decoration: inherit;">incident_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertrulescheduledincidentconfiguration">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `incident_configuration` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -992,7 +1072,7 @@ Get an existing AlertRuleScheduled resource's state with the given name, ID, and
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_analytics_workspace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">suppression_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">suppression_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tactics</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">trigger_operator</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trigger_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> AlertRuleScheduled</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alert_rule_template_guid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">incident_configuration</span><span class="p">:</span> <span class="nx">Optional[AlertRuleScheduledIncidentConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">log_analytics_workspace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">suppression_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">suppression_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tactics</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">trigger_operator</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trigger_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> AlertRuleScheduled</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1107,6 +1187,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_alertruletemplateguid_csharp">
+<a href="#state_alertruletemplateguid_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Rule<wbr>Template<wbr>Guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GUID of the alert rule template which is used for this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -1134,6 +1224,16 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Sentinel Scheduled Alert Rule be enabled? Defaults to `true`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_incidentconfiguration_csharp">
+<a href="#state_incidentconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Incident<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertrulescheduledincidentconfiguration">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `incident_configuration` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1253,6 +1353,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_alertruletemplateguid_go">
+<a href="#state_alertruletemplateguid_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Rule<wbr>Template<wbr>Guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GUID of the alert rule template which is used for this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -1280,6 +1390,16 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Sentinel Scheduled Alert Rule be enabled? Defaults to `true`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_incidentconfiguration_go">
+<a href="#state_incidentconfiguration_go" style="color: inherit; text-decoration: inherit;">Incident<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertrulescheduledincidentconfiguration">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}A `incident_configuration` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1399,6 +1519,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_alertruletemplateguid_nodejs">
+<a href="#state_alertruletemplateguid_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Rule<wbr>Template<wbr>Guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GUID of the alert rule template which is used for this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -1426,6 +1556,16 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the Sentinel Scheduled Alert Rule be enabled? Defaults to `true`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_incidentconfiguration_nodejs">
+<a href="#state_incidentconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">incident<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertrulescheduledincidentconfiguration">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}A `incident_configuration` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1545,6 +1685,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_alert_rule_template_guid_python">
+<a href="#state_alert_rule_template_guid_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>rule_<wbr>template_<wbr>guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The GUID of the alert rule template which is used for this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -1572,6 +1722,16 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Sentinel Scheduled Alert Rule be enabled? Defaults to `true`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_incident_configuration_python">
+<a href="#state_incident_configuration_python" style="color: inherit; text-decoration: inherit;">incident_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertrulescheduledincidentconfiguration">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `incident_configuration` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1690,6 +1850,366 @@ The following state arguments are supported:
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="alertrulescheduledincidentconfiguration">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AlertRuleScheduledIncidentConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AlertRuleScheduledIncidentConfiguration">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/sentinel?tab=doc#AlertRuleScheduledIncidentConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/sentinel?tab=doc#AlertRuleScheduledIncidentConfigurationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Sentinel.Inputs.AlertRuleScheduledIncidentConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Sentinel.Outputs.AlertRuleScheduledIncidentConfiguration.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="createincident_csharp">
+<a href="#createincident_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Incident</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to create an incident from alerts triggered by this Sentinel Scheduled Alert Rule?
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="grouping_csharp">
+<a href="#grouping_csharp" style="color: inherit; text-decoration: inherit;">Grouping</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertrulescheduledincidentconfigurationgrouping">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration<wbr>Grouping<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `grouping` block as defined below.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="createincident_go">
+<a href="#createincident_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Incident</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to create an incident from alerts triggered by this Sentinel Scheduled Alert Rule?
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="grouping_go">
+<a href="#grouping_go" style="color: inherit; text-decoration: inherit;">Grouping</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertrulescheduledincidentconfigurationgrouping">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration<wbr>Grouping</a></span>
+    </dt>
+    <dd>{{% md %}}A `grouping` block as defined below.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="createincident_nodejs">
+<a href="#createincident_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Incident</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to create an incident from alerts triggered by this Sentinel Scheduled Alert Rule?
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="grouping_nodejs">
+<a href="#grouping_nodejs" style="color: inherit; text-decoration: inherit;">grouping</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertrulescheduledincidentconfigurationgrouping">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration<wbr>Grouping</a></span>
+    </dt>
+    <dd>{{% md %}}A `grouping` block as defined below.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="create_incident_python">
+<a href="#create_incident_python" style="color: inherit; text-decoration: inherit;">create_<wbr>incident</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to create an incident from alerts triggered by this Sentinel Scheduled Alert Rule?
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="grouping_python">
+<a href="#grouping_python" style="color: inherit; text-decoration: inherit;">grouping</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertrulescheduledincidentconfigurationgrouping">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration<wbr>Grouping<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `grouping` block as defined below.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="alertrulescheduledincidentconfigurationgrouping">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration<wbr>Grouping</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AlertRuleScheduledIncidentConfigurationGrouping">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AlertRuleScheduledIncidentConfigurationGrouping">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/sentinel?tab=doc#AlertRuleScheduledIncidentConfigurationGroupingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/sentinel?tab=doc#AlertRuleScheduledIncidentConfigurationGroupingOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Sentinel.Inputs.AlertRuleScheduledIncidentConfigurationGroupingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Sentinel.Outputs.AlertRuleScheduledIncidentConfigurationGrouping.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable grouping incidents created from alerts triggered by this Sentinel Scheduled Alert Rule. Defaults to `true`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="entitymatchingmethod_csharp">
+<a href="#entitymatchingmethod_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Matching<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The method used to group incidents. Possible values are `All`, `Custom` and `None`. Defaults to `None`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="groupbies_csharp">
+<a href="#groupbies_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Bies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of entity types to group by, only when the `entity_matching_method` is `Custom`. Possible values are `Account`, `Host`, `Url`, `Ip`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lookbackduration_csharp">
+<a href="#lookbackduration_csharp" style="color: inherit; text-decoration: inherit;">Lookback<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Limit the group to alerts created within the lookback duration (in ISO 8601 duration format). Defaults to `PT5M`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="reopenclosedincidents_csharp">
+<a href="#reopenclosedincidents_csharp" style="color: inherit; text-decoration: inherit;">Reopen<wbr>Closed<wbr>Incidents</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to re-open closed matching incidents? Defaults to `false`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable grouping incidents created from alerts triggered by this Sentinel Scheduled Alert Rule. Defaults to `true`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="entitymatchingmethod_go">
+<a href="#entitymatchingmethod_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Matching<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The method used to group incidents. Possible values are `All`, `Custom` and `None`. Defaults to `None`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="groupbies_go">
+<a href="#groupbies_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Bies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of entity types to group by, only when the `entity_matching_method` is `Custom`. Possible values are `Account`, `Host`, `Url`, `Ip`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lookbackduration_go">
+<a href="#lookbackduration_go" style="color: inherit; text-decoration: inherit;">Lookback<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Limit the group to alerts created within the lookback duration (in ISO 8601 duration format). Defaults to `PT5M`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="reopenclosedincidents_go">
+<a href="#reopenclosedincidents_go" style="color: inherit; text-decoration: inherit;">Reopen<wbr>Closed<wbr>Incidents</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to re-open closed matching incidents? Defaults to `false`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable grouping incidents created from alerts triggered by this Sentinel Scheduled Alert Rule. Defaults to `true`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="entitymatchingmethod_nodejs">
+<a href="#entitymatchingmethod_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Matching<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The method used to group incidents. Possible values are `All`, `Custom` and `None`. Defaults to `None`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="groupbies_nodejs">
+<a href="#groupbies_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Bies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of entity types to group by, only when the `entity_matching_method` is `Custom`. Possible values are `Account`, `Host`, `Url`, `Ip`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lookbackduration_nodejs">
+<a href="#lookbackduration_nodejs" style="color: inherit; text-decoration: inherit;">lookback<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Limit the group to alerts created within the lookback duration (in ISO 8601 duration format). Defaults to `PT5M`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="reopenclosedincidents_nodejs">
+<a href="#reopenclosedincidents_nodejs" style="color: inherit; text-decoration: inherit;">reopen<wbr>Closed<wbr>Incidents</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to re-open closed matching incidents? Defaults to `false`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable grouping incidents created from alerts triggered by this Sentinel Scheduled Alert Rule. Defaults to `true`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="entity_matching_method_python">
+<a href="#entity_matching_method_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>matching_<wbr>method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The method used to group incidents. Possible values are `All`, `Custom` and `None`. Defaults to `None`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="group_bies_python">
+<a href="#group_bies_python" style="color: inherit; text-decoration: inherit;">group_<wbr>bies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of entity types to group by, only when the `entity_matching_method` is `Custom`. Possible values are `Account`, `Host`, `Url`, `Ip`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lookback_duration_python">
+<a href="#lookback_duration_python" style="color: inherit; text-decoration: inherit;">lookback_<wbr>duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Limit the group to alerts created within the lookback duration (in ISO 8601 duration format). Defaults to `PT5M`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="reopen_closed_incidents_python">
+<a href="#reopen_closed_incidents_python" style="color: inherit; text-decoration: inherit;">reopen_<wbr>closed_<wbr>incidents</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to re-open closed matching incidents? Defaults to `false`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 ## Import
 
 
