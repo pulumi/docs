@@ -153,7 +153,7 @@ const exampleLinkedServiceAzureFileStorage = new azure.datafactory.LinkedService
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/datafactory/#pulumi_azure.datafactory.LinkedServiceAzureFileStorage">LinkedServiceAzureFileStorage</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/datafactory/#pulumi_azure.datafactory.LinkedServiceAzureFileStorage">LinkedServiceAzureFileStorage</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file_share</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -386,6 +386,16 @@ The LinkedServiceAzureFileStorage resource accepts the following [input]({{< rel
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="fileshare_csharp">
+<a href="#fileshare_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Share</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the file share.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
 </span>
@@ -506,6 +516,16 @@ The LinkedServiceAzureFileStorage resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description for the Data Factory Linked Service.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fileshare_go">
+<a href="#fileshare_go" style="color: inherit; text-decoration: inherit;">File<wbr>Share</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the file share.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -632,6 +652,16 @@ The LinkedServiceAzureFileStorage resource accepts the following [input]({{< rel
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="fileshare_nodejs">
+<a href="#fileshare_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Share</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the file share.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
@@ -752,6 +782,16 @@ The LinkedServiceAzureFileStorage resource accepts the following [input]({{< rel
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description for the Data Factory Linked Service.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="file_share_python">
+<a href="#file_share_python" style="color: inherit; text-decoration: inherit;">file_<wbr>share</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the file share.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -893,7 +933,7 @@ Get an existing LinkedServiceAzureFileStorage resource's state with the given na
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> LinkedServiceAzureFileStorage</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file_share</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> LinkedServiceAzureFileStorage</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1058,6 +1098,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_fileshare_csharp">
+<a href="#state_fileshare_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Share</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the file share.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_host_csharp">
 <a href="#state_host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
 </span>
@@ -1178,6 +1228,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description for the Data Factory Linked Service.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_fileshare_go">
+<a href="#state_fileshare_go" style="color: inherit; text-decoration: inherit;">File<wbr>Share</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the file share.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1304,6 +1364,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_fileshare_nodejs">
+<a href="#state_fileshare_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Share</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the file share.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_host_nodejs">
 <a href="#state_host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
@@ -1424,6 +1494,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description for the Data Factory Linked Service.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_file_share_python">
+<a href="#state_file_share_python" style="color: inherit; text-decoration: inherit;">file_<wbr>share</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the file share.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

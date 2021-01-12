@@ -369,7 +369,7 @@ class MyStack : Stack
         {
             Location = exampleResourceGroup.Location,
             ResourceGroupName = exampleResourceGroup.Name,
-            Kind = "FunctionApp",
+            Kind = "Linux",
             Reserved = true,
             Sku = new Azure.AppService.Inputs.PlanSkuArgs
             {
@@ -424,7 +424,7 @@ func main() {
 		examplePlan, err := appservice.NewPlan(ctx, "examplePlan", &appservice.PlanArgs{
 			Location:          exampleResourceGroup.Location,
 			ResourceGroupName: exampleResourceGroup.Name,
-			Kind:              pulumi.String("FunctionApp"),
+			Kind:              pulumi.String("Linux"),
 			Reserved:          pulumi.Bool(true),
 			Sku: &appservice.PlanSkuArgs{
 				Tier: pulumi.String("Dynamic"),
@@ -466,7 +466,7 @@ example_account = azure.storage.Account("exampleAccount",
 example_plan = azure.appservice.Plan("examplePlan",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
-    kind="FunctionApp",
+    kind="Linux",
     reserved=True,
     sku=azure.appservice.PlanSkuArgs(
         tier="Dynamic",
@@ -499,7 +499,7 @@ const exampleAccount = new azure.storage.Account("exampleAccount", {
 const examplePlan = new azure.appservice.Plan("examplePlan", {
     location: exampleResourceGroup.location,
     resourceGroupName: exampleResourceGroup.name,
-    kind: "FunctionApp",
+    kind: "Linux",
     reserved: true,
     sku: {
         tier: "Dynamic",
@@ -5602,6 +5602,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, the priority is set to 65000 if not specified.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicetag_csharp">
+<a href="#servicetag_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Service Tag used for this IP Restriction.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="subnetid_csharp">
@@ -5666,6 +5676,16 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, the priority is set to 65000 if not specified.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicetag_go">
+<a href="#servicetag_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Service Tag used for this IP Restriction.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -5732,6 +5752,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, the priority is set to 65000 if not specified.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicetag_nodejs">
+<a href="#servicetag_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Service Tag used for this IP Restriction.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="subnetid_nodejs">
@@ -5796,6 +5826,16 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, the priority is set to 65000 if not specified.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="service_tag_python">
+<a href="#service_tag_python" style="color: inherit; text-decoration: inherit;">service_<wbr>tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Service Tag used for this IP Restriction.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -5876,6 +5916,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicetag_csharp">
+<a href="#servicetag_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Service Tag used for this IP Restriction.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="subnetid_csharp">
@@ -5940,6 +5990,16 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicetag_go">
+<a href="#servicetag_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Service Tag used for this IP Restriction.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -6006,6 +6066,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicetag_nodejs">
+<a href="#servicetag_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Service Tag used for this IP Restriction.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="subnetid_nodejs">
@@ -6070,6 +6140,16 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="service_tag_python">
+<a href="#service_tag_python" style="color: inherit; text-decoration: inherit;">service_<wbr>tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Service Tag used for this IP Restriction.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">

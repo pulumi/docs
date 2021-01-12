@@ -370,7 +370,8 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Integration runtime description.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="edition_csharp">
@@ -505,7 +506,8 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Integration runtime description.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="edition_go">
@@ -640,7 +642,8 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Integration runtime description.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="edition_nodejs">
@@ -775,7 +778,8 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Integration runtime description.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="edition_python">
@@ -1080,7 +1084,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Integration runtime description.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_edition_csharp">
@@ -1215,7 +1220,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Integration runtime description.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_edition_go">
@@ -1350,7 +1356,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Integration runtime description.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_edition_nodejs">
@@ -1485,7 +1492,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Integration runtime description.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_edition_python">

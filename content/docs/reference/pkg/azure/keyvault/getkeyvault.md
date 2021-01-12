@@ -355,16 +355,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Name of the SKU used for this Key Vault.
 {{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="softdeleteenabled_csharp">
 <a href="#softdeleteenabled_csharp" style="color: inherit; text-decoration: inherit;">Soft<wbr>Delete<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is soft delete enabled on this Key Vault?
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Azure has removed support for disabling Soft Delete as of 2020-12-15, as such this field will always return &#39;true&#39; and will be removed in version 3.0 of the Azure Provider.{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="tags_csharp">
@@ -508,16 +507,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Name of the SKU used for this Key Vault.
 {{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="softdeleteenabled_go">
 <a href="#softdeleteenabled_go" style="color: inherit; text-decoration: inherit;">Soft<wbr>Delete<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is soft delete enabled on this Key Vault?
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Azure has removed support for disabling Soft Delete as of 2020-12-15, as such this field will always return &#39;true&#39; and will be removed in version 3.0 of the Azure Provider.{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="tags_go">
@@ -661,16 +659,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Name of the SKU used for this Key Vault.
 {{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="softdeleteenabled_nodejs">
 <a href="#softdeleteenabled_nodejs" style="color: inherit; text-decoration: inherit;">soft<wbr>Delete<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Is soft delete enabled on this Key Vault?
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Azure has removed support for disabling Soft Delete as of 2020-12-15, as such this field will always return &#39;true&#39; and will be removed in version 3.0 of the Azure Provider.{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="tags_nodejs">
@@ -814,16 +811,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Name of the SKU used for this Key Vault.
 {{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="soft_delete_enabled_python">
 <a href="#soft_delete_enabled_python" style="color: inherit; text-decoration: inherit;">soft_<wbr>delete_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is soft delete enabled on this Key Vault?
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Azure has removed support for disabling Soft Delete as of 2020-12-15, as such this field will always return &#39;true&#39; and will be removed in version 3.0 of the Azure Provider.{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="tags_python">

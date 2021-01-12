@@ -208,7 +208,7 @@ const exampleWorkspace = new azure.synapse.Workspace("exampleWorkspace", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/synapse/#pulumi_azure.synapse.Workspace">Workspace</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aad_admin</span><span class="p">:</span> <span class="nx">Optional[WorkspaceAadAdminArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_virtual_network_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_data_lake_gen2_filesystem_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/synapse/#pulumi_azure.synapse.Workspace">Workspace</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aad_admin</span><span class="p">:</span> <span class="nx">Optional[WorkspaceAadAdminArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_virtual_network_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_data_lake_gen2_filesystem_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -441,6 +441,16 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="managedresourcegroupname_csharp">
+<a href="#managedresourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Resource<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Workspace managed resource group.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="managedvirtualnetworkenabled_csharp">
 <a href="#managedvirtualnetworkenabled_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Virtual<wbr>Network<wbr>Enabled</a>
 </span>
@@ -534,6 +544,16 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the synapse Workspace should exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="managedresourcegroupname_go">
+<a href="#managedresourcegroupname_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Resource<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Workspace managed resource group.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -633,6 +653,16 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="managedresourcegroupname_nodejs">
+<a href="#managedresourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Resource<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Workspace managed resource group.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="managedvirtualnetworkenabled_nodejs">
 <a href="#managedvirtualnetworkenabled_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Virtual<wbr>Network<wbr>Enabled</a>
 </span>
@@ -729,6 +759,16 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="managed_resource_group_name_python">
+<a href="#managed_resource_group_name_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>resource_<wbr>group_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Workspace managed resource group.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="managed_virtual_network_enabled_python">
 <a href="#managed_virtual_network_enabled_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>virtual_<wbr>network_<wbr>enabled</a>
 </span>
@@ -799,16 +839,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}An `identity` block as defined below, which contains the Managed Service Identity information for this Synapse Workspace.
 {{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="managedresourcegroupname_csharp">
-<a href="#managedresourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Resource<wbr>Group<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Workspace managed resource group.
-{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -843,16 +873,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#workspaceidentity">[]Workspace<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below, which contains the Managed Service Identity information for this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="managedresourcegroupname_go">
-<a href="#managedresourcegroupname_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Resource<wbr>Group<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Workspace managed resource group.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -889,16 +909,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}An `identity` block as defined below, which contains the Managed Service Identity information for this Synapse Workspace.
 {{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="managedresourcegroupname_nodejs">
-<a href="#managedresourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Resource<wbr>Group<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Workspace managed resource group.
-{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -933,16 +943,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#workspaceidentity">Sequence[Workspace<wbr>Identity]</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below, which contains the Managed Service Identity information for this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="managed_resource_group_name_python">
-<a href="#managed_resource_group_name_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>resource_<wbr>group_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Workspace managed resource group.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

@@ -16,6 +16,7 @@ Explore the resources and functions of the compute module in the Azure package.
     <li><a href="datadiskattachment" title="DataDiskAttachment"><span class="symbol resource"></span>DataDiskAttachment</a></li>
     <li><a href="dedicatedhost" title="DedicatedHost"><span class="symbol resource"></span>DedicatedHost</a></li>
     <li><a href="dedicatedhostgroup" title="DedicatedHostGroup"><span class="symbol resource"></span>DedicatedHostGroup</a></li>
+    <li><a href="diskaccess" title="DiskAccess"><span class="symbol resource"></span>DiskAccess</a></li>
     <li><a href="diskencryptionset" title="DiskEncryptionSet"><span class="symbol resource"></span>DiskEncryptionSet</a></li>
     <li><a href="extension" title="Extension"><span class="symbol resource"></span>Extension</a></li>
     <li><a href="image" title="Image"><span class="symbol resource"></span>Image</a></li>
@@ -28,6 +29,7 @@ Explore the resources and functions of the compute module in the Azure package.
     <li><a href="sharedimagegallery" title="SharedImageGallery"><span class="symbol resource"></span>SharedImageGallery</a></li>
     <li><a href="sharedimageversion" title="SharedImageVersion"><span class="symbol resource"></span>SharedImageVersion</a></li>
     <li><a href="snapshot" title="Snapshot"><span class="symbol resource"></span>Snapshot</a></li>
+    <li><a href="sshpublickey" title="SshPublicKey"><span class="symbol resource"></span>SshPublicKey</a></li>
     <li><a href="virtualmachine" title="VirtualMachine"><span class="symbol resource"></span>VirtualMachine</a></li>
     <li><a href="virtualmachinescalesetextension" title="VirtualMachineScaleSetExtension"><span class="symbol resource"></span>VirtualMachineScaleSetExtension</a></li>
     <li><a href="windowsvirtualmachine" title="WindowsVirtualMachine"><span class="symbol resource"></span>WindowsVirtualMachine</a></li>
@@ -39,6 +41,7 @@ Explore the resources and functions of the compute module in the Azure package.
     <li><a href="getavailabilityset" title="GetAvailabilitySet"><span class="symbol function"></span>GetAvailabilitySet</a></li>
     <li><a href="getdedicatedhost" title="GetDedicatedHost"><span class="symbol function"></span>GetDedicatedHost</a></li>
     <li><a href="getdedicatedhostgroup" title="GetDedicatedHostGroup"><span class="symbol function"></span>GetDedicatedHostGroup</a></li>
+    <li><a href="getdiskaccess" title="GetDiskAccess"><span class="symbol function"></span>GetDiskAccess</a></li>
     <li><a href="getdiskencryptionset" title="GetDiskEncryptionSet"><span class="symbol function"></span>GetDiskEncryptionSet</a></li>
     <li><a href="getimage" title="GetImage"><span class="symbol function"></span>GetImage</a></li>
     <li><a href="getimages" title="GetImages"><span class="symbol function"></span>GetImages</a></li>
@@ -49,6 +52,7 @@ Explore the resources and functions of the compute module in the Azure package.
     <li><a href="getsharedimageversion" title="GetSharedImageVersion"><span class="symbol function"></span>GetSharedImageVersion</a></li>
     <li><a href="getsharedimageversions" title="GetSharedImageVersions"><span class="symbol function"></span>GetSharedImageVersions</a></li>
     <li><a href="getsnapshot" title="GetSnapshot"><span class="symbol function"></span>GetSnapshot</a></li>
+    <li><a href="getsshpublickey" title="GetSshPublicKey"><span class="symbol function"></span>GetSshPublicKey</a></li>
     <li><a href="getvirtualmachine" title="GetVirtualMachine"><span class="symbol function"></span>GetVirtualMachine</a></li>
     <li><a href="getvirtualmachinescaleset" title="GetVirtualMachineScaleSet"><span class="symbol function"></span>GetVirtualMachineScaleSet</a></li>
 </ul>
@@ -62,7 +66,7 @@ Explore the resources and functions of the compute module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.41.1</dd>
+	<dd>3.42.0</dd>
 </dl>
 
 

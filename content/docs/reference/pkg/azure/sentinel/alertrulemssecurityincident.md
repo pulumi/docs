@@ -151,7 +151,7 @@ const exampleAlertRuleMsSecurityIncident = new azure.sentinel.AlertRuleMsSecurit
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/sentinel/#pulumi_azure.sentinel.AlertRuleMsSecurityIncident">AlertRuleMsSecurityIncident</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_analytics_workspace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">product_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">severity_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">text_whitelists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/sentinel/#pulumi_azure.sentinel.AlertRuleMsSecurityIncident">AlertRuleMsSecurityIncident</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alert_rule_template_guid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name_exclude_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">display_name_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_analytics_workspace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">product_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">severity_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">text_whitelists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -364,6 +364,16 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="alertruletemplateguid_csharp">
+<a href="#alertruletemplateguid_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Rule<wbr>Template<wbr>Guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GUID of the alert rule template which is used to create this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -371,6 +381,16 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this Sentinel MS Security Incident Alert Rule.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="displaynameexcludefilters_csharp">
+<a href="#displaynameexcludefilters_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name<wbr>Exclude<wbr>Filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Only create incidents when the alert display name doesn't contain text from this list.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -459,6 +479,16 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="alertruletemplateguid_go">
+<a href="#alertruletemplateguid_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Rule<wbr>Template<wbr>Guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GUID of the alert rule template which is used to create this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -466,6 +496,16 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this Sentinel MS Security Incident Alert Rule.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="displaynameexcludefilters_go">
+<a href="#displaynameexcludefilters_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name<wbr>Exclude<wbr>Filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Only create incidents when the alert display name doesn't contain text from this list.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -554,6 +594,16 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="alertruletemplateguid_nodejs">
+<a href="#alertruletemplateguid_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Rule<wbr>Template<wbr>Guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GUID of the alert rule template which is used to create this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -561,6 +611,16 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this Sentinel MS Security Incident Alert Rule.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="displaynameexcludefilters_nodejs">
+<a href="#displaynameexcludefilters_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name<wbr>Exclude<wbr>Filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Only create incidents when the alert display name doesn't contain text from this list.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -649,6 +709,16 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="alert_rule_template_guid_python">
+<a href="#alert_rule_template_guid_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>rule_<wbr>template_<wbr>guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The GUID of the alert rule template which is used to create this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -656,6 +726,16 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of this Sentinel MS Security Incident Alert Rule.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="display_name_exclude_filters_python">
+<a href="#display_name_exclude_filters_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name_<wbr>exclude_<wbr>filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Only create incidents when the alert display name doesn't contain text from this list.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -779,7 +859,7 @@ Get an existing AlertRuleMsSecurityIncident resource's state with the given name
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_analytics_workspace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">product_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">severity_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">text_whitelists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> AlertRuleMsSecurityIncident</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alert_rule_template_guid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name_exclude_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">display_name_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_analytics_workspace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">product_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">severity_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">text_whitelists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> AlertRuleMsSecurityIncident</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -894,6 +974,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_alertruletemplateguid_csharp">
+<a href="#state_alertruletemplateguid_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Rule<wbr>Template<wbr>Guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GUID of the alert rule template which is used to create this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -911,6 +1001,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name of this Sentinel MS Security Incident Alert Rule.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_displaynameexcludefilters_csharp">
+<a href="#state_displaynameexcludefilters_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name<wbr>Exclude<wbr>Filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Only create incidents when the alert display name doesn't contain text from this list.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -989,6 +1089,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_alertruletemplateguid_go">
+<a href="#state_alertruletemplateguid_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Rule<wbr>Template<wbr>Guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GUID of the alert rule template which is used to create this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -1006,6 +1116,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name of this Sentinel MS Security Incident Alert Rule.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_displaynameexcludefilters_go">
+<a href="#state_displaynameexcludefilters_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name<wbr>Exclude<wbr>Filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Only create incidents when the alert display name doesn't contain text from this list.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1084,6 +1204,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_alertruletemplateguid_nodejs">
+<a href="#state_alertruletemplateguid_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Rule<wbr>Template<wbr>Guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GUID of the alert rule template which is used to create this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -1101,6 +1231,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name of this Sentinel MS Security Incident Alert Rule.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_displaynameexcludefilters_nodejs">
+<a href="#state_displaynameexcludefilters_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name<wbr>Exclude<wbr>Filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Only create incidents when the alert display name doesn't contain text from this list.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1179,6 +1319,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_alert_rule_template_guid_python">
+<a href="#state_alert_rule_template_guid_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>rule_<wbr>template_<wbr>guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The GUID of the alert rule template which is used to create this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -1196,6 +1346,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The friendly name of this Sentinel MS Security Incident Alert Rule.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_display_name_exclude_filters_python">
+<a href="#state_display_name_exclude_filters_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name_<wbr>exclude_<wbr>filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Only create incidents when the alert display name doesn't contain text from this list.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

@@ -33,6 +33,7 @@ Explore the resources and functions of the datafactory module in the Azure packa
     <li><a href="linkedservicepostgresql" title="LinkedServicePostgresql"><span class="symbol resource"></span>LinkedServicePostgresql</a></li>
     <li><a href="linkedservicesftp" title="LinkedServiceSftp"><span class="symbol resource"></span>LinkedServiceSftp</a></li>
     <li><a href="linkedservicesqlserver" title="LinkedServiceSqlServer"><span class="symbol resource"></span>LinkedServiceSqlServer</a></li>
+    <li><a href="linkedservicesynapse" title="LinkedServiceSynapse"><span class="symbol resource"></span>LinkedServiceSynapse</a></li>
     <li><a href="linkedserviceweb" title="LinkedServiceWeb"><span class="symbol resource"></span>LinkedServiceWeb</a></li>
     <li><a href="pipeline" title="Pipeline"><span class="symbol resource"></span>Pipeline</a></li>
     <li><a href="triggerschedule" title="TriggerSchedule"><span class="symbol resource"></span>TriggerSchedule</a></li>
@@ -52,7 +53,7 @@ Explore the resources and functions of the datafactory module in the Azure packa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.41.1</dd>
+	<dd>3.42.0</dd>
 </dl>
 
 

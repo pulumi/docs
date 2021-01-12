@@ -2539,6 +2539,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="publicaddressprovisioningtype_csharp">
+<a href="#publicaddressprovisioningtype_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Address<wbr>Provisioning<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of public IP address provisioning. Supported values are `BatchManaged`, `UserManaged` and `NoPublicIPAddresses`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="publicips_csharp">
 <a href="#publicips_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ips</a>
 </span>
@@ -2572,6 +2582,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#poolnetworkconfigurationendpointconfiguration">[]Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A list of inbound NAT pools that can be used to address specific ports on an individual compute node externally. Set as documented in the inbound_nat_pools block below. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicaddressprovisioningtype_go">
+<a href="#publicaddressprovisioningtype_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Address<wbr>Provisioning<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of public IP address provisioning. Supported values are `BatchManaged`, `UserManaged` and `NoPublicIPAddresses`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2611,6 +2631,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="publicaddressprovisioningtype_nodejs">
+<a href="#publicaddressprovisioningtype_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Address<wbr>Provisioning<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of public IP address provisioning. Supported values are `BatchManaged`, `UserManaged` and `NoPublicIPAddresses`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="publicips_nodejs">
 <a href="#publicips_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ips</a>
 </span>
@@ -2644,6 +2674,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#poolnetworkconfigurationendpointconfiguration">Sequence[Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of inbound NAT pools that can be used to address specific ports on an individual compute node externally. Set as documented in the inbound_nat_pools block below. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="public_address_provisioning_type_python">
+<a href="#public_address_provisioning_type_python" style="color: inherit; text-decoration: inherit;">public_<wbr>address_<wbr>provisioning_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of public IP address provisioning. Supported values are `BatchManaged`, `UserManaged` and `NoPublicIPAddresses`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

@@ -308,6 +308,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="kafkarestproxyendpoint_csharp">
+<a href="#kafkarestproxyendpoint_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Rest<wbr>Proxy<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Kafka Rest Proxy Endpoint for this HDInsight Cluster.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
@@ -449,6 +459,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="kafkarestproxyendpoint_go">
+<a href="#kafkarestproxyendpoint_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Rest<wbr>Proxy<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Kafka Rest Proxy Endpoint for this HDInsight Cluster.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -596,6 +616,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="kafkarestproxyendpoint_nodejs">
+<a href="#kafkarestproxyendpoint_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Rest<wbr>Proxy<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Kafka Rest Proxy Endpoint for this HDInsight Cluster.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
@@ -737,6 +767,16 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="kafka_rest_proxy_endpoint_python">
+<a href="#kafka_rest_proxy_endpoint_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>rest_<wbr>proxy_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Kafka Rest Proxy Endpoint for this HDInsight Cluster.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">

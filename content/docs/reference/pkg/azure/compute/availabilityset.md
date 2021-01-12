@@ -346,7 +346,7 @@ The AvailabilitySet resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of fault domains that are used. Defaults to `3`.
+    <dd>{{% md %}}Specifies the number of fault domains that are used. Defaults to `3`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -356,7 +356,7 @@ The AvailabilitySet resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of update domains that are used. Defaults to `5`.
+    <dd>{{% md %}}Specifies the number of update domains that are used. Defaults to `5`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -366,7 +366,7 @@ The AvailabilitySet resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
+    <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -432,7 +432,7 @@ The AvailabilitySet resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of fault domains that are used. Defaults to `3`.
+    <dd>{{% md %}}Specifies the number of fault domains that are used. Defaults to `3`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -442,7 +442,7 @@ The AvailabilitySet resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of update domains that are used. Defaults to `5`.
+    <dd>{{% md %}}Specifies the number of update domains that are used. Defaults to `5`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -452,7 +452,7 @@ The AvailabilitySet resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
+    <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -518,7 +518,7 @@ The AvailabilitySet resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of fault domains that are used. Defaults to `3`.
+    <dd>{{% md %}}Specifies the number of fault domains that are used. Defaults to `3`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -528,7 +528,7 @@ The AvailabilitySet resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of update domains that are used. Defaults to `5`.
+    <dd>{{% md %}}Specifies the number of update domains that are used. Defaults to `5`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -538,7 +538,7 @@ The AvailabilitySet resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
+    <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -604,7 +604,7 @@ The AvailabilitySet resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of fault domains that are used. Defaults to `3`.
+    <dd>{{% md %}}Specifies the number of fault domains that are used. Defaults to `3`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -614,7 +614,7 @@ The AvailabilitySet resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of update domains that are used. Defaults to `5`.
+    <dd>{{% md %}}Specifies the number of update domains that are used. Defaults to `5`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -624,7 +624,7 @@ The AvailabilitySet resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
+    <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -870,7 +870,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of fault domains that are used. Defaults to `3`.
+    <dd>{{% md %}}Specifies the number of fault domains that are used. Defaults to `3`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -880,7 +880,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of update domains that are used. Defaults to `5`.
+    <dd>{{% md %}}Specifies the number of update domains that are used. Defaults to `5`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -890,7 +890,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
+    <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -956,7 +956,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of fault domains that are used. Defaults to `3`.
+    <dd>{{% md %}}Specifies the number of fault domains that are used. Defaults to `3`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -966,7 +966,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of update domains that are used. Defaults to `5`.
+    <dd>{{% md %}}Specifies the number of update domains that are used. Defaults to `5`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -976,7 +976,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
+    <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1042,7 +1042,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of fault domains that are used. Defaults to `3`.
+    <dd>{{% md %}}Specifies the number of fault domains that are used. Defaults to `3`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1052,7 +1052,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of update domains that are used. Defaults to `5`.
+    <dd>{{% md %}}Specifies the number of update domains that are used. Defaults to `5`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1062,7 +1062,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
+    <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1128,7 +1128,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of fault domains that are used. Defaults to `3`.
+    <dd>{{% md %}}Specifies the number of fault domains that are used. Defaults to `3`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1138,7 +1138,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of update domains that are used. Defaults to `5`.
+    <dd>{{% md %}}Specifies the number of update domains that are used. Defaults to `5`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1148,7 +1148,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
+    <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

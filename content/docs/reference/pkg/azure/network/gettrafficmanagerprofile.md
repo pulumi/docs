@@ -109,7 +109,7 @@ export const trafficRoutingMethod = data.azurerm_traffic_manager_profile.traffic
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_traffic_manager_profile(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTrafficManagerProfileResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_traffic_manager_profile(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">traffic_view_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTrafficManagerProfileResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -164,6 +164,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trafficviewenabled_csharp">
+<a href="#trafficviewenabled_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>View<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether Traffic View is enabled for the Traffic Manager profile.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -198,6 +208,16 @@ The following arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trafficviewenabled_go">
+<a href="#trafficviewenabled_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>View<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether Traffic View is enabled for the Traffic Manager profile.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -234,6 +254,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trafficviewenabled_nodejs">
+<a href="#trafficviewenabled_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>View<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether Traffic View is enabled for the Traffic Manager profile.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -268,6 +298,16 @@ The following arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="traffic_view_enabled_python">
+<a href="#traffic_view_enabled_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>view_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether Traffic View is enabled for the Traffic Manager profile.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -373,6 +413,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="trafficviewenabled_csharp">
+<a href="#trafficviewenabled_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>View<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether Traffic View is enabled for the Traffic Manager profile.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -467,6 +517,16 @@ The following output properties are available:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="trafficviewenabled_go">
+<a href="#trafficviewenabled_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>View<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether Traffic View is enabled for the Traffic Manager profile.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -563,6 +623,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="trafficviewenabled_nodejs">
+<a href="#trafficviewenabled_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>View<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether Traffic View is enabled for the Traffic Manager profile.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -657,6 +727,16 @@ The following output properties are available:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="traffic_view_enabled_python">
+<a href="#traffic_view_enabled_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>view_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether Traffic View is enabled for the Traffic Manager profile.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

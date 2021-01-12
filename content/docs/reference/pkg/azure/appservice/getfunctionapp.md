@@ -2124,6 +2124,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="servicetag_csharp">
+<a href="#servicetag_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Service Tag used for this IP Restriction.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
 </span>
@@ -2186,6 +2196,16 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="servicetag_go">
+<a href="#servicetag_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Service Tag used for this IP Restriction.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -2254,6 +2274,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="servicetag_nodejs">
+<a href="#servicetag_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Service Tag used for this IP Restriction.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
@@ -2316,6 +2346,16 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="service_tag_python">
+<a href="#service_tag_python" style="color: inherit; text-decoration: inherit;">service_<wbr>tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Service Tag used for this IP Restriction.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -2398,6 +2438,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="servicetag_csharp">
+<a href="#servicetag_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Service Tag used for this IP Restriction.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
 </span>
@@ -2460,6 +2510,16 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="servicetag_go">
+<a href="#servicetag_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Service Tag used for this IP Restriction.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -2528,6 +2588,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="servicetag_nodejs">
+<a href="#servicetag_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Service Tag used for this IP Restriction.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
@@ -2590,6 +2660,16 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="service_tag_python">
+<a href="#service_tag_python" style="color: inherit; text-decoration: inherit;">service_<wbr>tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Service Tag used for this IP Restriction.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">

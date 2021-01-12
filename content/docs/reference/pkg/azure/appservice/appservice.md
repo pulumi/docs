@@ -4788,6 +4788,26 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="detailederrormessagesenabled_csharp">
+<a href="#detailederrormessagesenabled_csharp" style="color: inherit; text-decoration: inherit;">Detailed<wbr>Error<wbr>Messages<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should `Detailed error messages` be enabled on this App Service? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="failedrequesttracingenabled_csharp">
+<a href="#failedrequesttracingenabled_csharp" style="color: inherit; text-decoration: inherit;">Failed<wbr>Request<wbr>Tracing<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should `Failed request tracing` be enabled on this App Service? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="httplogs_csharp">
 <a href="#httplogs_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Logs</a>
 </span>
@@ -4811,6 +4831,26 @@ The following state arguments are supported:
         <span class="property-type"><a href="#appservicelogsapplicationlogs">App<wbr>Service<wbr>Logs<wbr>Application<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}An `application_logs` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="detailederrormessagesenabled_go">
+<a href="#detailederrormessagesenabled_go" style="color: inherit; text-decoration: inherit;">Detailed<wbr>Error<wbr>Messages<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should `Detailed error messages` be enabled on this App Service? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="failedrequesttracingenabled_go">
+<a href="#failedrequesttracingenabled_go" style="color: inherit; text-decoration: inherit;">Failed<wbr>Request<wbr>Tracing<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should `Failed request tracing` be enabled on this App Service? Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4840,6 +4880,26 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="detailederrormessagesenabled_nodejs">
+<a href="#detailederrormessagesenabled_nodejs" style="color: inherit; text-decoration: inherit;">detailed<wbr>Error<wbr>Messages<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Should `Detailed error messages` be enabled on this App Service? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="failedrequesttracingenabled_nodejs">
+<a href="#failedrequesttracingenabled_nodejs" style="color: inherit; text-decoration: inherit;">failed<wbr>Request<wbr>Tracing<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Should `Failed request tracing` be enabled on this App Service? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="httplogs_nodejs">
 <a href="#httplogs_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Logs</a>
 </span>
@@ -4863,6 +4923,26 @@ The following state arguments are supported:
         <span class="property-type"><a href="#appservicelogsapplicationlogs">App<wbr>Service<wbr>Logs<wbr>Application<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `application_logs` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="detailed_error_messages_enabled_python">
+<a href="#detailed_error_messages_enabled_python" style="color: inherit; text-decoration: inherit;">detailed_<wbr>error_<wbr>messages_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should `Detailed error messages` be enabled on this App Service? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="failed_request_tracing_enabled_python">
+<a href="#failed_request_tracing_enabled_python" style="color: inherit; text-decoration: inherit;">failed_<wbr>request_<wbr>tracing_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should `Failed request tracing` be enabled on this App Service? Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6792,6 +6872,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicetag_csharp">
+<a href="#servicetag_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Service Tag used for this IP Restriction.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="subnetid_csharp">
@@ -6856,6 +6946,16 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicetag_go">
+<a href="#servicetag_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Service Tag used for this IP Restriction.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -6922,6 +7022,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicetag_nodejs">
+<a href="#servicetag_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Service Tag used for this IP Restriction.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="subnetid_nodejs">
@@ -6986,6 +7096,16 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="service_tag_python">
+<a href="#service_tag_python" style="color: inherit; text-decoration: inherit;">service_<wbr>tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Service Tag used for this IP Restriction.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -7066,6 +7186,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicetag_csharp">
+<a href="#servicetag_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Service Tag used for this IP Restriction.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="subnetid_csharp">
@@ -7130,6 +7260,16 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicetag_go">
+<a href="#servicetag_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Service Tag used for this IP Restriction.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -7196,6 +7336,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicetag_nodejs">
+<a href="#servicetag_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Service Tag used for this IP Restriction.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="subnetid_nodejs">
@@ -7260,6 +7410,16 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="service_tag_python">
+<a href="#service_tag_python" style="color: inherit; text-decoration: inherit;">service_<wbr>tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Service Tag used for this IP Restriction.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">

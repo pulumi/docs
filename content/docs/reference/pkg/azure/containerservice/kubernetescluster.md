@@ -6125,6 +6125,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="networkmode_csharp">
+<a href="#networkmode_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Network mode to be used with Azure CNI. Possible values are `bridge` or `transparent`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="networkpolicy_csharp">
 <a href="#networkpolicy_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Policy</a>
 </span>
@@ -6218,6 +6228,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the SKU of the Load Balancer used for this Kubernetes Cluster. Possible values are `Basic` and `Standard`. Defaults to `Standard`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkmode_go">
+<a href="#networkmode_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Network mode to be used with Azure CNI. Possible values are `bridge` or `transparent`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6317,6 +6337,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="networkmode_nodejs">
+<a href="#networkmode_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Network mode to be used with Azure CNI. Possible values are `bridge` or `transparent`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="networkpolicy_nodejs">
 <a href="#networkpolicy_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Policy</a>
 </span>
@@ -6410,6 +6440,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the SKU of the Load Balancer used for this Kubernetes Cluster. Possible values are `Basic` and `Standard`. Defaults to `Standard`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="network_mode_python">
+<a href="#network_mode_python" style="color: inherit; text-decoration: inherit;">network_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Network mode to be used with Azure CNI. Possible values are `bridge` or `transparent`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
