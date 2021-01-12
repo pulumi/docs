@@ -2,7 +2,7 @@
 title: "Automation API: Supercharged Cloud Tooling"
 date: 2021-01-14
 meta_desc: "Pulumi's Automation API enables you to build cloud toos to increase developer productivity."
-meta_image: meta.png
+meta_image: automation_api_v2.png
 authors:
     - sophia-parafina
 tags:
@@ -20,7 +20,7 @@ Infrastructure as code enables you to build tools and environments to automate r
 
 Automation API is a programming interface overlaid on the Pulumi engine for deploying infrastructure. Instead of using the Pulumi CLI to deploy infrastructure, you can directly call the engine to run code from your chosen language. With the Automation API, your Pulumi programs and stacks are strongly-typed and composable infrastructure building blocks. You can fully embed Pulumi inside your software projects, which means your code can power a wide range of cloud automation projects without the Pulumi CLI and a reduced human-in-the-loop footprint.
 
-{% notes type="info" %}}
+{{% notes type="info" %}}
 This alpha release of Automation API currently supports Node.js and go. Python and .NET (C#) will be released soon.
 {{% /notes %}}
 
