@@ -15,6 +15,7 @@ Explore the resources and functions of the billing module in the GCP package.
     <li><a href="accountiammember" title="AccountIamMember"><span class="symbol resource"></span>AccountIamMember</a></li>
     <li><a href="accountiampolicy" title="AccountIamPolicy"><span class="symbol resource"></span>AccountIamPolicy</a></li>
     <li><a href="budget" title="Budget"><span class="symbol resource"></span>Budget</a></li>
+    <li><a href="subaccount" title="SubAccount"><span class="symbol resource"></span>SubAccount</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -26,7 +27,7 @@ Explore the resources and functions of the billing module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.6.0</dd>
+	<dd>4.7.0</dd>
 </dl>
 
 

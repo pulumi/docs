@@ -57,12 +57,9 @@ class MyStack : Stack
             InstanceName = instance.Name,
             Table = table.Name,
             ColumnFamily = "name",
-            MaxAges = 
+            MaxAge = new Gcp.BigTable.Inputs.GCPolicyMaxAgeArgs
             {
-                new Gcp.BigTable.Inputs.GCPolicyMaxAgeArgs
-                {
-                    Days = 7,
-                },
+                Duration = "168h",
             },
         });
     }
@@ -111,10 +108,8 @@ func main() {
 			InstanceName: instance.Name,
 			Table:        table.Name,
 			ColumnFamily: pulumi.String("name"),
-			MaxAges: bigtable.GCPolicyMaxAgeArray{
-				&bigtable.GCPolicyMaxAgeArgs{
-					Days: pulumi.Int(7),
-				},
+			MaxAge: &bigtable.GCPolicyMaxAgeArgs{
+				Duration: pulumi.String("168h"),
 			},
 		})
 		if err != nil {
@@ -147,9 +142,9 @@ policy = gcp.bigtable.GCPolicy("policy",
     instance_name=instance.name,
     table=table.name,
     column_family="name",
-    max_ages=[gcp.bigtable.GCPolicyMaxAgeArgs(
-        days=7,
-    )])
+    max_age=gcp.bigtable.GCPolicyMaxAgeArgs(
+        duration="168h",
+    ))
 ```
 
 {{% /example %}}
@@ -176,9 +171,9 @@ const policy = new gcp.bigtable.GCPolicy("policy", {
     instanceName: instance.name,
     table: table.name,
     columnFamily: "name",
-    maxAges: [{
-        days: 7,
-    }],
+    maxAge: {
+        duration: "168h",
+    },
 });
 ```
 
@@ -196,7 +191,7 @@ const policy = new gcp.bigtable.GCPolicy("policy", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigtable/#pulumi_gcp.bigtable.GCPolicy">GCPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">column_family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_ages</span><span class="p">:</span> <span class="nx">Optional[Sequence[GCPolicyMaxAgeArgs]]</span> = None<span class="p">, </span><span class="nx">max_versions</span><span class="p">:</span> <span class="nx">Optional[Sequence[GCPolicyMaxVersionArgs]]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigtable/#pulumi_gcp.bigtable.GCPolicy">GCPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">column_family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_age</span><span class="p">:</span> <span class="nx">Optional[GCPolicyMaxAgeArgs]</span> = None<span class="p">, </span><span class="nx">max_versions</span><span class="p">:</span> <span class="nx">Optional[Sequence[GCPolicyMaxVersionArgs]]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -399,11 +394,11 @@ The GCPolicy resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="maxages_csharp">
-<a href="#maxages_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ages</a>
+        <span id="maxage_csharp">
+<a href="#maxage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcpolicymaxage">List&lt;GCPolicy<wbr>Max<wbr>Age<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#gcpolicymaxage">GCPolicy<wbr>Max<wbr>Age<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all cells older than the given age.
 {{% /md %}}</dd>
@@ -475,11 +470,11 @@ The GCPolicy resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="maxages_go">
-<a href="#maxages_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ages</a>
+        <span id="maxage_go">
+<a href="#maxage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcpolicymaxage">[]GCPolicy<wbr>Max<wbr>Age</a></span>
+        <span class="property-type"><a href="#gcpolicymaxage">GCPolicy<wbr>Max<wbr>Age</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all cells older than the given age.
 {{% /md %}}</dd>
@@ -551,11 +546,11 @@ The GCPolicy resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="maxages_nodejs">
-<a href="#maxages_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ages</a>
+        <span id="maxage_nodejs">
+<a href="#maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcpolicymaxage">GCPolicy<wbr>Max<wbr>Age[]</a></span>
+        <span class="property-type"><a href="#gcpolicymaxage">GCPolicy<wbr>Max<wbr>Age</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all cells older than the given age.
 {{% /md %}}</dd>
@@ -627,11 +622,11 @@ The GCPolicy resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="max_ages_python">
-<a href="#max_ages_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ages</a>
+        <span id="max_age_python">
+<a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcpolicymaxage">Sequence[GCPolicy<wbr>Max<wbr>Age<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gcpolicymaxage">GCPolicy<wbr>Max<wbr>Age<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all cells older than the given age.
 {{% /md %}}</dd>
@@ -748,7 +743,7 @@ Get an existing GCPolicy resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">column_family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_ages</span><span class="p">:</span> <span class="nx">Optional[Sequence[GCPolicyMaxAgeArgs]]</span> = None<span class="p">, </span><span class="nx">max_versions</span><span class="p">:</span> <span class="nx">Optional[Sequence[GCPolicyMaxVersionArgs]]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> GCPolicy</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">column_family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_age</span><span class="p">:</span> <span class="nx">Optional[GCPolicyMaxAgeArgs]</span> = None<span class="p">, </span><span class="nx">max_versions</span><span class="p">:</span> <span class="nx">Optional[Sequence[GCPolicyMaxVersionArgs]]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> GCPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -883,11 +878,11 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="state_maxages_csharp">
-<a href="#state_maxages_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ages</a>
+        <span id="state_maxage_csharp">
+<a href="#state_maxage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcpolicymaxage">List&lt;GCPolicy<wbr>Max<wbr>Age<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#gcpolicymaxage">GCPolicy<wbr>Max<wbr>Age<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all cells older than the given age.
 {{% /md %}}</dd>
@@ -959,11 +954,11 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="state_maxages_go">
-<a href="#state_maxages_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ages</a>
+        <span id="state_maxage_go">
+<a href="#state_maxage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcpolicymaxage">[]GCPolicy<wbr>Max<wbr>Age</a></span>
+        <span class="property-type"><a href="#gcpolicymaxage">GCPolicy<wbr>Max<wbr>Age</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all cells older than the given age.
 {{% /md %}}</dd>
@@ -1035,11 +1030,11 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="state_maxages_nodejs">
-<a href="#state_maxages_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ages</a>
+        <span id="state_maxage_nodejs">
+<a href="#state_maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcpolicymaxage">GCPolicy<wbr>Max<wbr>Age[]</a></span>
+        <span class="property-type"><a href="#gcpolicymaxage">GCPolicy<wbr>Max<wbr>Age</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all cells older than the given age.
 {{% /md %}}</dd>
@@ -1111,11 +1106,11 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="state_max_ages_python">
-<a href="#state_max_ages_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ages</a>
+        <span id="state_max_age_python">
+<a href="#state_max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcpolicymaxage">Sequence[GCPolicy<wbr>Max<wbr>Age<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gcpolicymaxage">GCPolicy<wbr>Max<wbr>Age<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all cells older than the given age.
 {{% /md %}}</dd>
@@ -1188,8 +1183,8 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="days_csharp">
 <a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
 </span>
@@ -1197,6 +1192,16 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of days before applying GC policy.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of duration{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="duration_csharp">
+<a href="#duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Duration before applying GC policy (ex. "8h"). This is required when `days` isn't set
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1204,8 +1209,8 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="days_go">
 <a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
 </span>
@@ -1213,6 +1218,16 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of days before applying GC policy.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of duration{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="duration_go">
+<a href="#duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Duration before applying GC policy (ex. "8h"). This is required when `days` isn't set
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1220,8 +1235,8 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="days_nodejs">
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
@@ -1229,6 +1244,16 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of days before applying GC policy.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of duration{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="duration_nodejs">
+<a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Duration before applying GC policy (ex. "8h"). This is required when `days` isn't set
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1236,8 +1261,8 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="days_python">
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
@@ -1245,6 +1270,16 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of days before applying GC policy.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of duration{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="duration_python">
+<a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Duration before applying GC policy (ex. "8h"). This is required when `days` isn't set
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

@@ -22,7 +22,7 @@ To get more information about Environments, see:
     * [Configuring Shared VPC for Composer Environments](https://cloud.google.com/composer/docs/how-to/managing/configuring-shared-vpc)
 * [Apache Airflow Documentation](http://airflow.apache.org/)
 
-> **Warning:** We **STRONGLY** recommend  you read the [GCP guides](https://cloud.google.com/composer/docs/how-to)
+> **Warning:** We **STRONGLY** recommend you read the [GCP guides](https://cloud.google.com/composer/docs/how-to)
   as the Environment resource requires a long deployment process and involves several layers of GCP infrastructure,
   including a Kubernetes Engine cluster, Cloud Storage, and Compute networking resources. Due to limitations of the API,
   This provider will not be able to automatically find or manage many of these underlying resources. In particular:
@@ -32,6 +32,7 @@ To get more information about Environments, see:
     against GCP Cloud Composer before filing bugs against this provider.
   * **Environments create Google Cloud Storage buckets that do not get cleaned up automatically** on environment
     deletion. [More about Composer's use of Cloud Storage](https://cloud.google.com/composer/docs/concepts/cloud-storage).
+  * Please review the [known issues](https://cloud.google.com/composer/docs/known-issues) for Composer if you are having problems.
 
 {{% examples %}}
 ## Example Usage
@@ -129,11 +130,6 @@ class MyStack : Stack
             AccountId = "composer-env-account",
             DisplayName = "Test Service Account for Composer Environment",
         });
-        var composer_worker = new Gcp.Projects.IAMMember("composer-worker", new Gcp.Projects.IAMMemberArgs
-        {
-            Role = "roles/composer.worker",
-            Member = testAccount.Email.Apply(email => $"serviceAccount:{email}"),
-        });
         var testEnvironment = new Gcp.Composer.Environment("testEnvironment", new Gcp.Composer.EnvironmentArgs
         {
             Region = "us-central1",
@@ -149,12 +145,11 @@ class MyStack : Stack
                     ServiceAccount = testAccount.Name,
                 },
             },
-        }, new CustomResourceOptions
+        });
+        var composer_worker = new Gcp.Projects.IAMMember("composer-worker", new Gcp.Projects.IAMMemberArgs
         {
-            DependsOn = 
-            {
-                composer_worker,
-            },
+            Role = "roles/composer.worker",
+            Member = testAccount.Email.Apply(email => $"serviceAccount:{email}"),
         });
     }
 
@@ -200,15 +195,6 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = projects.NewIAMMember(ctx, "composer_worker", &projects.IAMMemberArgs{
-			Role: pulumi.String("roles/composer.worker"),
-			Member: testAccount.Email.ApplyT(func(email string) (string, error) {
-				return fmt.Sprintf("%v%v", "serviceAccount:", email), nil
-			}).(pulumi.StringOutput),
-		})
-		if err != nil {
-			return err
-		}
 		_, err = composer.NewEnvironment(ctx, "testEnvironment", &composer.EnvironmentArgs{
 			Region: pulumi.String("us-central1"),
 			Config: &composer.EnvironmentConfigArgs{
@@ -221,9 +207,16 @@ func main() {
 					ServiceAccount: testAccount.Name,
 				},
 			},
-		}, pulumi.DependsOn([]pulumi.Resource{
-			composer_worker,
-		}))
+		})
+		if err != nil {
+			return err
+		}
+		_, err = projects.NewIAMMember(ctx, "composer_worker", &projects.IAMMemberArgs{
+			Role: pulumi.String("roles/composer.worker"),
+			Member: testAccount.Email.ApplyT(func(email string) (string, error) {
+				return fmt.Sprintf("%v%v", "serviceAccount:", email), nil
+			}).(pulumi.StringOutput),
+		})
 		if err != nil {
 			return err
 		}
@@ -247,9 +240,6 @@ test_subnetwork = gcp.compute.Subnetwork("testSubnetwork",
 test_account = gcp.service_account.Account("testAccount",
     account_id="composer-env-account",
     display_name="Test Service Account for Composer Environment")
-composer_worker = gcp.projects.IAMMember("composer-worker",
-    role="roles/composer.worker",
-    member=test_account.email.apply(lambda email: f"serviceAccount:{email}"))
 test_environment = gcp.composer.Environment("testEnvironment",
     region="us-central1",
     config=gcp.composer.EnvironmentConfigArgs(
@@ -261,8 +251,10 @@ test_environment = gcp.composer.Environment("testEnvironment",
             "subnetwork": test_subnetwork.id,
             "service_account": test_account.name,
         },
-    ),
-    opts=pulumi.ResourceOptions(depends_on=[composer_worker]))
+    ))
+composer_worker = gcp.projects.IAMMember("composer-worker",
+    role="roles/composer.worker",
+    member=test_account.email.apply(lambda email: f"serviceAccount:{email}"))
 ```
 
 {{% /example %}}
@@ -283,10 +275,6 @@ const testAccount = new gcp.serviceAccount.Account("testAccount", {
     accountId: "composer-env-account",
     displayName: "Test Service Account for Composer Environment",
 });
-const composer_worker = new gcp.projects.IAMMember("composer-worker", {
-    role: "roles/composer.worker",
-    member: pulumi.interpolate`serviceAccount:${testAccount.email}`,
-});
 const testEnvironment = new gcp.composer.Environment("testEnvironment", {
     region: "us-central1",
     config: {
@@ -299,8 +287,10 @@ const testEnvironment = new gcp.composer.Environment("testEnvironment", {
             serviceAccount: testAccount.name,
         },
     },
-}, {
-    dependsOn: [composer_worker],
+});
+const composer_worker = new gcp.projects.IAMMember("composer-worker", {
+    role: "roles/composer.worker",
+    member: pulumi.interpolate`serviceAccount:${testAccount.email}`,
 });
 ```
 

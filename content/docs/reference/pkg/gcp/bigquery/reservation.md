@@ -34,12 +34,9 @@ class MyStack : Stack
     {
         var reservation = new Gcp.BigQuery.Reservation("reservation", new Gcp.BigQuery.ReservationArgs
         {
+            IgnoreIdleSlots = false,
             Location = "asia-northeast1",
             SlotCapacity = 0,
-            IgnoreIdleSlots = false,
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
     }
 
@@ -60,10 +57,10 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := bigquery.NewReservation(ctx, "reservation", &bigquery.ReservationArgs{
+			IgnoreIdleSlots: pulumi.Bool(false),
 			Location:        pulumi.String("asia-northeast1"),
 			SlotCapacity:    pulumi.Int(0),
-			IgnoreIdleSlots: pulumi.Bool(false),
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -80,10 +77,9 @@ import pulumi
 import pulumi_gcp as gcp
 
 reservation = gcp.bigquery.Reservation("reservation",
-    location="asia-northeast1",
-    slot_capacity=0,
     ignore_idle_slots=False,
-    opts=pulumi.ResourceOptions(provider=google_beta))
+    location="asia-northeast1",
+    slot_capacity=0)
 ```
 
 {{% /example %}}
@@ -95,11 +91,11 @@ import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
 const reservation = new gcp.bigquery.Reservation("reservation", {
-    location: "asia-northeast1",
-    slotCapacity: 0,
     ignoreIdleSlots: false,
-}, {
-    provider: google_beta,
+    location: "asia-northeast1",
+    // Set to 0 for testing purposes
+    // In reality this would be larger than zero
+    slotCapacity: 0,
 });
 ```
 

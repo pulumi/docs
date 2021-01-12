@@ -3,7 +3,7 @@ title: "Module identityplatform"
 title_tag: "Module identityplatform | Package @pulumi/gcp | Node.js SDK"
 linktitle: "identityplatform"
 meta_desc: "Explore members of the identityplatform module in the @pulumi/gcp package."
-git_sha: "190d8b0982043d566daf0a0e22d4f73afa046cc7"
+git_sha: "dfe9026b26f6964561903cdecab78324e4f204a6"
 block_external_search_index: true
 ---
 
@@ -48,7 +48,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="DefaultSupportedIdpConfig" data-link-title="DefaultSupportedIdpConfig">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L45">
         Resource <strong>DefaultSupportedIdpConfig</strong>
     </a>
 </h3>
@@ -62,9 +62,38 @@ You must enable the
 the marketplace prior to using this resource.
 
 #### Example Usage
+##### Identity Platform Default Supported Idp Config Basic
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const idpConfig = new gcp.identityplatform.DefaultSupportedIdpConfig("idp_config", {
+    clientId: "client-id",
+    clientSecret: "secret",
+    enabled: true,
+    idpId: "playgames.google.com",
+});
+```
+
+#### Import
+
+DefaultSupportedIdpConfig can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:identityplatform/defaultSupportedIdpConfig:DefaultSupportedIdpConfig default projects/{{project}}/defaultSupportedIdpConfigs/{{idp_id}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/defaultSupportedIdpConfig:DefaultSupportedIdpConfig default {{project}}/{{idp_id}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/defaultSupportedIdpConfig:DefaultSupportedIdpConfig default {{idp_id}}
+```
 
 <h4 class="pdoc-member-header" id="DefaultSupportedIdpConfig-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L78"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L107"> <b>constructor</b></a>
 </h4>
 
 
@@ -78,7 +107,7 @@ Create a DefaultSupportedIdpConfig resource with the given unique name, argument
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DefaultSupportedIdpConfig-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L55">method <b>get</b></a>
 </h4>
 
 
@@ -89,14 +118,14 @@ Get an existing DefaultSupportedIdpConfig resource's state with the given name, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DefaultSupportedIdpConfig-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L45">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DefaultSupportedIdpConfig-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L66">method <b>isInstance</b></a>
 </h4>
 
 
@@ -107,7 +136,7 @@ Returns true if the given object is an instance of DefaultSupportedIdpConfig.  T
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DefaultSupportedIdpConfig-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L47">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L76">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -115,7 +144,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 OAuth client ID
 
 <h4 class="pdoc-member-header" id="DefaultSupportedIdpConfig-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L51">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L80">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -123,7 +152,7 @@ OAuth client ID
 OAuth client secret
 
 <h4 class="pdoc-member-header" id="DefaultSupportedIdpConfig-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L55">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L84">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -131,7 +160,7 @@ OAuth client secret
 If this IDP allows the user to sign in
 
 <h4 class="pdoc-member-header" id="DefaultSupportedIdpConfig-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L45">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -140,7 +169,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DefaultSupportedIdpConfig-idpId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L69">property <b>idpId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L98">property <b>idpId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>idpId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -158,7 +187,7 @@ ID of the IDP. Possible values include:
 * `yahoo.com`
 
 <h4 class="pdoc-member-header" id="DefaultSupportedIdpConfig-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L73">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L102">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -166,7 +195,7 @@ ID of the IDP. Possible values include:
 The name of the DefaultSupportedIdpConfig resource
 
 <h4 class="pdoc-member-header" id="DefaultSupportedIdpConfig-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L78">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L107">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -175,7 +204,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="DefaultSupportedIdpConfig-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L45">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -184,7 +213,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="InboundSamlConfig" data-link-title="InboundSamlConfig">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L56">
         Resource <strong>InboundSamlConfig</strong>
     </a>
 </h3>
@@ -198,9 +227,48 @@ You must enable the
 the marketplace prior to using this resource.
 
 #### Example Usage
+##### Identity Platform Inbound Saml Config Basic
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const samlConfig = new gcp.identityplatform.InboundSamlConfig("samlConfig", {
+    displayName: "Display Name",
+    idpConfig: {
+        idpEntityId: "tf-idp",
+        signRequest: true,
+        ssoUrl: "https://example.com",
+        idpCertificates: [{
+            x509Certificate: fs.readFileSync("test-fixtures/rsa_cert.pem"),
+        }],
+    },
+    spConfig: {
+        spEntityId: "tf-sp",
+        callbackUri: "https://example.com",
+    },
+});
+```
+
+#### Import
+
+InboundSamlConfig can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:identityplatform/inboundSamlConfig:InboundSamlConfig default projects/{{project}}/inboundSamlConfigs/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/inboundSamlConfig:InboundSamlConfig default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/inboundSamlConfig:InboundSamlConfig default {{name}}
+```
 
 <h4 class="pdoc-member-header" id="InboundSamlConfig-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L75"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L113"> <b>constructor</b></a>
 </h4>
 
 
@@ -214,7 +282,7 @@ Create a InboundSamlConfig resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="InboundSamlConfig-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L28">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L66">method <b>get</b></a>
 </h4>
 
 
@@ -225,14 +293,14 @@ Get an existing InboundSamlConfig resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="InboundSamlConfig-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L18">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L56">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="InboundSamlConfig-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L39">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L77">method <b>isInstance</b></a>
 </h4>
 
 
@@ -243,7 +311,7 @@ Returns true if the given object is an instance of InboundSamlConfig.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="InboundSamlConfig-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L49">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L87">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -251,7 +319,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Human friendly display name.
 
 <h4 class="pdoc-member-header" id="InboundSamlConfig-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L53">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L91">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -259,7 +327,7 @@ Human friendly display name.
 If this config allows users to sign in with the provider.
 
 <h4 class="pdoc-member-header" id="InboundSamlConfig-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L18">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L56">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -268,7 +336,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="InboundSamlConfig-idpConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L58">property <b>idpConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L96">property <b>idpConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>idpConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InboundSamlConfigIdpConfig'>InboundSamlConfigIdpConfig</a>&gt;;</code></pre>
@@ -277,7 +345,7 @@ SAML IdP configuration when the project acts as the relying party
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="InboundSamlConfig-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L64">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L102">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -287,7 +355,7 @@ hyphens, underscores or periods. The part after 'saml.' must also start with a l
 alphanumeric character, and have at least 2 characters.
 
 <h4 class="pdoc-member-header" id="InboundSamlConfig-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L69">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L107">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -296,7 +364,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="InboundSamlConfig-spConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L75">property <b>spConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L113">property <b>spConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InboundSamlConfigSpConfig'>InboundSamlConfigSpConfig</a>&gt;;</code></pre>
@@ -306,7 +374,7 @@ and accept an authentication assertion issued by a SAML identity provider.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="InboundSamlConfig-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L18">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L56">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -315,7 +383,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="OauthIdpConfig" data-link-title="OauthIdpConfig">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L46">
         Resource <strong>OauthIdpConfig</strong>
     </a>
 </h3>
@@ -329,9 +397,39 @@ You must enable the
 the marketplace prior to using this resource.
 
 #### Example Usage
+##### Identity Platform Oauth Idp Config Basic
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const oauthIdpConfig = new gcp.identityplatform.OauthIdpConfig("oauth_idp_config", {
+    clientId: "client-id",
+    clientSecret: "secret",
+    displayName: "Display Name",
+    enabled: true,
+    issuer: "issuer",
+});
+```
+
+#### Import
+
+OauthIdpConfig can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:identityplatform/oauthIdpConfig:OauthIdpConfig default projects/{{project}}/oauthIdpConfigs/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/oauthIdpConfig:OauthIdpConfig default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/oauthIdpConfig:OauthIdpConfig default {{name}}
+```
 
 <h4 class="pdoc-member-header" id="OauthIdpConfig-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L72"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L102"> <b>constructor</b></a>
 </h4>
 
 
@@ -345,7 +443,7 @@ Create a OauthIdpConfig resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="OauthIdpConfig-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L56">method <b>get</b></a>
 </h4>
 
 
@@ -356,14 +454,14 @@ Get an existing OauthIdpConfig resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="OauthIdpConfig-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L46">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="OauthIdpConfig-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L67">method <b>isInstance</b></a>
 </h4>
 
 
@@ -374,7 +472,7 @@ Returns true if the given object is an instance of OauthIdpConfig.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="OauthIdpConfig-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L47">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L77">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -382,7 +480,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The client id of an OAuth client.
 
 <h4 class="pdoc-member-header" id="OauthIdpConfig-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L51">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L81">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -390,7 +488,7 @@ The client id of an OAuth client.
 The client secret of the OAuth client, to enable OIDC code flow.
 
 <h4 class="pdoc-member-header" id="OauthIdpConfig-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L55">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L85">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -398,7 +496,7 @@ The client secret of the OAuth client, to enable OIDC code flow.
 Human friendly display name.
 
 <h4 class="pdoc-member-header" id="OauthIdpConfig-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L59">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L89">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -406,7 +504,7 @@ Human friendly display name.
 If this config allows users to sign in with the provider.
 
 <h4 class="pdoc-member-header" id="OauthIdpConfig-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L46">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -415,7 +513,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="OauthIdpConfig-issuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L63">property <b>issuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L93">property <b>issuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>issuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -423,7 +521,7 @@ deployments and may be missing (undefined) during planning phases.
 For OIDC Idps, the issuer identifier.
 
 <h4 class="pdoc-member-header" id="OauthIdpConfig-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L67">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L97">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -431,7 +529,7 @@ For OIDC Idps, the issuer identifier.
 The name of the OauthIdpConfig. Must start with `oidc.`.
 
 <h4 class="pdoc-member-header" id="OauthIdpConfig-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L72">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L102">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -440,7 +538,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="OauthIdpConfig-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L46">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -449,7 +547,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Tenant" data-link-title="Tenant">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenant.ts#L19">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenant.ts#L46">
         Resource <strong>Tenant</strong>
     </a>
 </h3>
@@ -466,9 +564,36 @@ You must [enable multi-tenancy](https://cloud.google.com/identity-platform/docs/
 the Cloud Console prior to creating tenants.
 
 #### Example Usage
+##### Identity Platform Tenant Basic
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const tenant = new gcp.identityplatform.Tenant("tenant", {
+    allowPasswordSignup: true,
+    displayName: "tenant",
+});
+```
+
+#### Import
+
+Tenant can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:identityplatform/tenant:Tenant default projects/{{project}}/tenants/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/tenant:Tenant default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/tenant:Tenant default {{name}}
+```
 
 <h4 class="pdoc-member-header" id="Tenant-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenant.ts#L73"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenant.ts#L100"> <b>constructor</b></a>
 </h4>
 
 
@@ -482,7 +607,7 @@ Create a Tenant resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Tenant-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenant.ts#L29">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenant.ts#L56">method <b>get</b></a>
 </h4>
 
 
@@ -493,14 +618,14 @@ Get an existing Tenant resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Tenant-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenant.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenant.ts#L46">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Tenant-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenant.ts#L40">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenant.ts#L67">method <b>isInstance</b></a>
 </h4>
 
 
@@ -511,7 +636,7 @@ Returns true if the given object is an instance of Tenant.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Tenant-allowPasswordSignup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenant.ts#L50">property <b>allowPasswordSignup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenant.ts#L77">property <b>allowPasswordSignup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowPasswordSignup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -519,7 +644,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Whether to allow email/password user authentication.
 
 <h4 class="pdoc-member-header" id="Tenant-disableAuth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenant.ts#L56">property <b>disableAuth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenant.ts#L83">property <b>disableAuth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>disableAuth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -529,7 +654,7 @@ the disabled tenant are not allowed to sign-in. Admins of the disabled tenant
 are not able to manage its users.
 
 <h4 class="pdoc-member-header" id="Tenant-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenant.ts#L60">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenant.ts#L87">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -537,7 +662,7 @@ are not able to manage its users.
 Human friendly display name of the tenant.
 
 <h4 class="pdoc-member-header" id="Tenant-enableEmailLinkSignin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenant.ts#L64">property <b>enableEmailLinkSignin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenant.ts#L91">property <b>enableEmailLinkSignin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableEmailLinkSignin: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -545,7 +670,7 @@ Human friendly display name of the tenant.
 Whether to enable email link user authentication.
 
 <h4 class="pdoc-member-header" id="Tenant-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenant.ts#L19">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenant.ts#L46">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -554,7 +679,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Tenant-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenant.ts#L68">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenant.ts#L95">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -562,7 +687,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the tenant that is generated by the server
 
 <h4 class="pdoc-member-header" id="Tenant-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenant.ts#L73">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenant.ts#L100">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -571,7 +696,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Tenant-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenant.ts#L19">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenant.ts#L46">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -580,7 +705,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="TenantDefaultSupportedIdpConfig" data-link-title="TenantDefaultSupportedIdpConfig">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L47">
         Resource <strong>TenantDefaultSupportedIdpConfig</strong>
     </a>
 </h3>
@@ -594,9 +719,40 @@ You must enable the
 the marketplace prior to using this resource.
 
 #### Example Usage
+##### Identity Platform Tenant Default Supported Idp Config Basic
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const tenant = new gcp.identityplatform.Tenant("tenant", {displayName: "tenant"});
+const idpConfig = new gcp.identityplatform.TenantDefaultSupportedIdpConfig("idpConfig", {
+    enabled: true,
+    tenant: tenant.name,
+    idpId: "playgames.google.com",
+    clientId: "my-client-id",
+    clientSecret: "secret",
+});
+```
+
+#### Import
+
+TenantDefaultSupportedIdpConfig can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:identityplatform/tenantDefaultSupportedIdpConfig:TenantDefaultSupportedIdpConfig default projects/{{project}}/tenants/{{tenant}}/defaultSupportedIdpConfigs/{{idp_id}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/tenantDefaultSupportedIdpConfig:TenantDefaultSupportedIdpConfig default {{project}}/{{tenant}}/{{idp_id}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/tenantDefaultSupportedIdpConfig:TenantDefaultSupportedIdpConfig default {{tenant}}/{{idp_id}}
+```
 
 <h4 class="pdoc-member-header" id="TenantDefaultSupportedIdpConfig-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L82"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L113"> <b>constructor</b></a>
 </h4>
 
 
@@ -610,7 +766,7 @@ Create a TenantDefaultSupportedIdpConfig resource with the given unique name, ar
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="TenantDefaultSupportedIdpConfig-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L57">method <b>get</b></a>
 </h4>
 
 
@@ -621,14 +777,14 @@ Get an existing TenantDefaultSupportedIdpConfig resource's state with the given 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="TenantDefaultSupportedIdpConfig-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L47">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TenantDefaultSupportedIdpConfig-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L68">method <b>isInstance</b></a>
 </h4>
 
 
@@ -639,7 +795,7 @@ Returns true if the given object is an instance of TenantDefaultSupportedIdpConf
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="TenantDefaultSupportedIdpConfig-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L47">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L78">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -647,7 +803,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 OAuth client ID
 
 <h4 class="pdoc-member-header" id="TenantDefaultSupportedIdpConfig-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L51">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L82">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -655,7 +811,7 @@ OAuth client ID
 OAuth client secret
 
 <h4 class="pdoc-member-header" id="TenantDefaultSupportedIdpConfig-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L55">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L86">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -663,7 +819,7 @@ OAuth client secret
 If this IDP allows the user to sign in
 
 <h4 class="pdoc-member-header" id="TenantDefaultSupportedIdpConfig-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L47">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -672,7 +828,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="TenantDefaultSupportedIdpConfig-idpId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L69">property <b>idpId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L100">property <b>idpId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>idpId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -690,7 +846,7 @@ ID of the IDP. Possible values include:
 * `yahoo.com`
 
 <h4 class="pdoc-member-header" id="TenantDefaultSupportedIdpConfig-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L73">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L104">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -698,7 +854,7 @@ ID of the IDP. Possible values include:
 The name of the default supported IDP config resource
 
 <h4 class="pdoc-member-header" id="TenantDefaultSupportedIdpConfig-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L78">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L109">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -707,7 +863,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="TenantDefaultSupportedIdpConfig-tenant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L82">property <b>tenant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L113">property <b>tenant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tenant: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -715,7 +871,7 @@ If it is not provided, the provider project is used.
 The name of the tenant where this DefaultSupportedIdpConfig resource exists
 
 <h4 class="pdoc-member-header" id="TenantDefaultSupportedIdpConfig-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L47">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -724,7 +880,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="TenantInboundSamlConfig" data-link-title="TenantInboundSamlConfig">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L58">
         Resource <strong>TenantInboundSamlConfig</strong>
     </a>
 </h3>
@@ -738,9 +894,50 @@ You must enable the
 the marketplace prior to using this resource.
 
 #### Example Usage
+##### Identity Platform Tenant Inbound Saml Config Basic
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const tenant = new gcp.identityplatform.Tenant("tenant", {displayName: "tenant"});
+const tenantSamlConfig = new gcp.identityplatform.TenantInboundSamlConfig("tenantSamlConfig", {
+    displayName: "Display Name",
+    tenant: tenant.name,
+    idpConfig: {
+        idpEntityId: "tf-idp",
+        signRequest: true,
+        ssoUrl: "https://example.com",
+        idpCertificates: [{
+            x509Certificate: fs.readFileSync("test-fixtures/rsa_cert.pem"),
+        }],
+    },
+    spConfig: {
+        spEntityId: "tf-sp",
+        callbackUri: "https://example.com",
+    },
+});
+```
+
+#### Import
+
+TenantInboundSamlConfig can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:identityplatform/tenantInboundSamlConfig:TenantInboundSamlConfig default projects/{{project}}/tenants/{{tenant}}/inboundSamlConfigs/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/tenantInboundSamlConfig:TenantInboundSamlConfig default {{project}}/{{tenant}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/tenantInboundSamlConfig:TenantInboundSamlConfig default {{tenant}}/{{name}}
+```
 
 <h4 class="pdoc-member-header" id="TenantInboundSamlConfig-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L79"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L119"> <b>constructor</b></a>
 </h4>
 
 
@@ -754,7 +951,7 @@ Create a TenantInboundSamlConfig resource with the given unique name, arguments,
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="TenantInboundSamlConfig-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L28">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L68">method <b>get</b></a>
 </h4>
 
 
@@ -765,14 +962,14 @@ Get an existing TenantInboundSamlConfig resource's state with the given name, ID
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="TenantInboundSamlConfig-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L18">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L58">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TenantInboundSamlConfig-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L39">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L79">method <b>isInstance</b></a>
 </h4>
 
 
@@ -783,7 +980,7 @@ Returns true if the given object is an instance of TenantInboundSamlConfig.  Thi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="TenantInboundSamlConfig-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L49">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L89">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -791,7 +988,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Human friendly display name.
 
 <h4 class="pdoc-member-header" id="TenantInboundSamlConfig-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L53">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L93">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -799,7 +996,7 @@ Human friendly display name.
 If this config allows users to sign in with the provider.
 
 <h4 class="pdoc-member-header" id="TenantInboundSamlConfig-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L18">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L58">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -808,7 +1005,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="TenantInboundSamlConfig-idpConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L58">property <b>idpConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L98">property <b>idpConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>idpConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TenantInboundSamlConfigIdpConfig'>TenantInboundSamlConfigIdpConfig</a>&gt;;</code></pre>
@@ -817,7 +1014,7 @@ SAML IdP configuration when the project acts as the relying party
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="TenantInboundSamlConfig-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L64">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L104">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -827,7 +1024,7 @@ hyphens, underscores or periods. The part after 'saml.' must also start with a l
 alphanumeric character, and have at least 2 characters.
 
 <h4 class="pdoc-member-header" id="TenantInboundSamlConfig-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L69">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L109">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -836,7 +1033,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="TenantInboundSamlConfig-spConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L75">property <b>spConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L115">property <b>spConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TenantInboundSamlConfigSpConfig'>TenantInboundSamlConfigSpConfig</a>&gt;;</code></pre>
@@ -846,7 +1043,7 @@ and accept an authentication assertion issued by a SAML identity provider.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="TenantInboundSamlConfig-tenant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L79">property <b>tenant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L119">property <b>tenant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tenant: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -854,7 +1051,7 @@ Structure is documented below.
 The name of the tenant where this inbound SAML config resource exists
 
 <h4 class="pdoc-member-header" id="TenantInboundSamlConfig-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L18">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L58">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -863,7 +1060,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="TenantOauthIdpConfig" data-link-title="TenantOauthIdpConfig">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L48">
         Resource <strong>TenantOauthIdpConfig</strong>
     </a>
 </h3>
@@ -877,9 +1074,41 @@ You must enable the
 the marketplace prior to using this resource.
 
 #### Example Usage
+##### Identity Platform Tenant Oauth Idp Config Basic
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const tenant = new gcp.identityplatform.Tenant("tenant", {displayName: "tenant"});
+const tenantOauthIdpConfig = new gcp.identityplatform.TenantOauthIdpConfig("tenantOauthIdpConfig", {
+    tenant: tenant.name,
+    displayName: "Display Name",
+    clientId: "client-id",
+    issuer: "issuer",
+    enabled: true,
+    clientSecret: "secret",
+});
+```
+
+#### Import
+
+TenantOauthIdpConfig can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:identityplatform/tenantOauthIdpConfig:TenantOauthIdpConfig default projects/{{project}}/tenants/{{tenant}}/oauthIdpConfigs/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/tenantOauthIdpConfig:TenantOauthIdpConfig default {{project}}/{{tenant}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/tenantOauthIdpConfig:TenantOauthIdpConfig default {{tenant}}/{{name}}
+```
 
 <h4 class="pdoc-member-header" id="TenantOauthIdpConfig-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L76"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L108"> <b>constructor</b></a>
 </h4>
 
 
@@ -893,7 +1122,7 @@ Create a TenantOauthIdpConfig resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="TenantOauthIdpConfig-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L58">method <b>get</b></a>
 </h4>
 
 
@@ -904,14 +1133,14 @@ Get an existing TenantOauthIdpConfig resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="TenantOauthIdpConfig-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L48">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TenantOauthIdpConfig-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L69">method <b>isInstance</b></a>
 </h4>
 
 
@@ -922,7 +1151,7 @@ Returns true if the given object is an instance of TenantOauthIdpConfig.  This i
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="TenantOauthIdpConfig-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L47">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L79">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -930,7 +1159,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The client id of an OAuth client.
 
 <h4 class="pdoc-member-header" id="TenantOauthIdpConfig-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L51">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L83">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -938,7 +1167,7 @@ The client id of an OAuth client.
 The client secret of the OAuth client, to enable OIDC code flow.
 
 <h4 class="pdoc-member-header" id="TenantOauthIdpConfig-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L55">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L87">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -946,7 +1175,7 @@ The client secret of the OAuth client, to enable OIDC code flow.
 Human friendly display name.
 
 <h4 class="pdoc-member-header" id="TenantOauthIdpConfig-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L59">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L91">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -954,7 +1183,7 @@ Human friendly display name.
 If this config allows users to sign in with the provider.
 
 <h4 class="pdoc-member-header" id="TenantOauthIdpConfig-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L48">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -963,7 +1192,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="TenantOauthIdpConfig-issuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L63">property <b>issuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L95">property <b>issuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>issuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -971,7 +1200,7 @@ deployments and may be missing (undefined) during planning phases.
 For OIDC Idps, the issuer identifier.
 
 <h4 class="pdoc-member-header" id="TenantOauthIdpConfig-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L67">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L99">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -979,7 +1208,7 @@ For OIDC Idps, the issuer identifier.
 The name of the OauthIdpConfig. Must start with `oidc.`.
 
 <h4 class="pdoc-member-header" id="TenantOauthIdpConfig-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L72">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L104">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -988,7 +1217,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="TenantOauthIdpConfig-tenant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L76">property <b>tenant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L108">property <b>tenant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tenant: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -996,7 +1225,7 @@ If it is not provided, the provider project is used.
 The name of the tenant where this OIDC IDP configuration resource exists
 
 <h4 class="pdoc-member-header" id="TenantOauthIdpConfig-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L48">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1008,7 +1237,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="DefaultSupportedIdpConfigArgs" data-link-title="DefaultSupportedIdpConfigArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L171">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L200">
         interface <strong>DefaultSupportedIdpConfigArgs</strong>
     </a>
 </h3>
@@ -1018,7 +1247,7 @@ deployments.
 The set of arguments for constructing a DefaultSupportedIdpConfig resource.
 
 <h4 class="pdoc-member-header" id="DefaultSupportedIdpConfigArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L175">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L204">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1026,7 +1255,7 @@ The set of arguments for constructing a DefaultSupportedIdpConfig resource.
 OAuth client ID
 
 <h4 class="pdoc-member-header" id="DefaultSupportedIdpConfigArgs-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L179">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L208">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1034,7 +1263,7 @@ OAuth client ID
 OAuth client secret
 
 <h4 class="pdoc-member-header" id="DefaultSupportedIdpConfigArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L183">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L212">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1042,7 +1271,7 @@ OAuth client secret
 If this IDP allows the user to sign in
 
 <h4 class="pdoc-member-header" id="DefaultSupportedIdpConfigArgs-idpId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L197">property <b>idpId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L226">property <b>idpId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>idpId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1060,7 +1289,7 @@ ID of the IDP. Possible values include:
 * `yahoo.com`
 
 <h4 class="pdoc-member-header" id="DefaultSupportedIdpConfigArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L202">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L231">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1069,7 +1298,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="DefaultSupportedIdpConfigState" data-link-title="DefaultSupportedIdpConfigState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L130">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L159">
         interface <strong>DefaultSupportedIdpConfigState</strong>
     </a>
 </h3>
@@ -1079,7 +1308,7 @@ If it is not provided, the provider project is used.
 Input properties used for looking up and filtering DefaultSupportedIdpConfig resources.
 
 <h4 class="pdoc-member-header" id="DefaultSupportedIdpConfigState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L134">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L163">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1087,7 +1316,7 @@ Input properties used for looking up and filtering DefaultSupportedIdpConfig res
 OAuth client ID
 
 <h4 class="pdoc-member-header" id="DefaultSupportedIdpConfigState-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L138">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L167">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1095,7 +1324,7 @@ OAuth client ID
 OAuth client secret
 
 <h4 class="pdoc-member-header" id="DefaultSupportedIdpConfigState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L142">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L171">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1103,7 +1332,7 @@ OAuth client secret
 If this IDP allows the user to sign in
 
 <h4 class="pdoc-member-header" id="DefaultSupportedIdpConfigState-idpId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L156">property <b>idpId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L185">property <b>idpId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>idpId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1121,7 +1350,7 @@ ID of the IDP. Possible values include:
 * `yahoo.com`
 
 <h4 class="pdoc-member-header" id="DefaultSupportedIdpConfigState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L160">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L189">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1129,7 +1358,7 @@ ID of the IDP. Possible values include:
 The name of the DefaultSupportedIdpConfig resource
 
 <h4 class="pdoc-member-header" id="DefaultSupportedIdpConfigState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L165">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/defaultSupportedIdpConfig.ts#L194">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1138,7 +1367,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="InboundSamlConfigArgs" data-link-title="InboundSamlConfigArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L163">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L201">
         interface <strong>InboundSamlConfigArgs</strong>
     </a>
 </h3>
@@ -1148,7 +1377,7 @@ If it is not provided, the provider project is used.
 The set of arguments for constructing a InboundSamlConfig resource.
 
 <h4 class="pdoc-member-header" id="InboundSamlConfigArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L167">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L205">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1156,7 +1385,7 @@ The set of arguments for constructing a InboundSamlConfig resource.
 Human friendly display name.
 
 <h4 class="pdoc-member-header" id="InboundSamlConfigArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L171">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L209">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1164,7 +1393,7 @@ Human friendly display name.
 If this config allows users to sign in with the provider.
 
 <h4 class="pdoc-member-header" id="InboundSamlConfigArgs-idpConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L176">property <b>idpConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L214">property <b>idpConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>idpConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InboundSamlConfigIdpConfig'>InboundSamlConfigIdpConfig</a>&gt;;</code></pre>
@@ -1173,7 +1402,7 @@ SAML IdP configuration when the project acts as the relying party
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="InboundSamlConfigArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L182">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L220">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1183,7 +1412,7 @@ hyphens, underscores or periods. The part after 'saml.' must also start with a l
 alphanumeric character, and have at least 2 characters.
 
 <h4 class="pdoc-member-header" id="InboundSamlConfigArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L187">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L225">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1192,7 +1421,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="InboundSamlConfigArgs-spConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L193">property <b>spConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L231">property <b>spConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InboundSamlConfigSpConfig'>InboundSamlConfigSpConfig</a>&gt;;</code></pre>
@@ -1202,7 +1431,7 @@ and accept an authentication assertion issued by a SAML identity provider.
 Structure is documented below.
 
 <h3 class="pdoc-module-header" id="InboundSamlConfigState" data-link-title="InboundSamlConfigState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L127">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L165">
         interface <strong>InboundSamlConfigState</strong>
     </a>
 </h3>
@@ -1212,7 +1441,7 @@ Structure is documented below.
 Input properties used for looking up and filtering InboundSamlConfig resources.
 
 <h4 class="pdoc-member-header" id="InboundSamlConfigState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L131">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L169">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1220,7 +1449,7 @@ Input properties used for looking up and filtering InboundSamlConfig resources.
 Human friendly display name.
 
 <h4 class="pdoc-member-header" id="InboundSamlConfigState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L135">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L173">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1228,7 +1457,7 @@ Human friendly display name.
 If this config allows users to sign in with the provider.
 
 <h4 class="pdoc-member-header" id="InboundSamlConfigState-idpConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L140">property <b>idpConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L178">property <b>idpConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>idpConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InboundSamlConfigIdpConfig'>InboundSamlConfigIdpConfig</a>&gt;;</code></pre>
@@ -1237,7 +1466,7 @@ SAML IdP configuration when the project acts as the relying party
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="InboundSamlConfigState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L146">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L184">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1247,7 +1476,7 @@ hyphens, underscores or periods. The part after 'saml.' must also start with a l
 alphanumeric character, and have at least 2 characters.
 
 <h4 class="pdoc-member-header" id="InboundSamlConfigState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L151">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L189">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1256,7 +1485,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="InboundSamlConfigState-spConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L157">property <b>spConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/inboundSamlConfig.ts#L195">property <b>spConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InboundSamlConfigSpConfig'>InboundSamlConfigSpConfig</a>&gt;;</code></pre>
@@ -1266,7 +1495,7 @@ and accept an authentication assertion issued by a SAML identity provider.
 Structure is documented below.
 
 <h3 class="pdoc-module-header" id="OauthIdpConfigArgs" data-link-title="OauthIdpConfigArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L158">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L188">
         interface <strong>OauthIdpConfigArgs</strong>
     </a>
 </h3>
@@ -1276,7 +1505,7 @@ Structure is documented below.
 The set of arguments for constructing a OauthIdpConfig resource.
 
 <h4 class="pdoc-member-header" id="OauthIdpConfigArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L162">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L192">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1284,7 +1513,7 @@ The set of arguments for constructing a OauthIdpConfig resource.
 The client id of an OAuth client.
 
 <h4 class="pdoc-member-header" id="OauthIdpConfigArgs-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L166">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L196">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1292,7 +1521,7 @@ The client id of an OAuth client.
 The client secret of the OAuth client, to enable OIDC code flow.
 
 <h4 class="pdoc-member-header" id="OauthIdpConfigArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L170">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L200">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1300,7 +1529,7 @@ The client secret of the OAuth client, to enable OIDC code flow.
 Human friendly display name.
 
 <h4 class="pdoc-member-header" id="OauthIdpConfigArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L174">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L204">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1308,7 +1537,7 @@ Human friendly display name.
 If this config allows users to sign in with the provider.
 
 <h4 class="pdoc-member-header" id="OauthIdpConfigArgs-issuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L178">property <b>issuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L208">property <b>issuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1316,7 +1545,7 @@ If this config allows users to sign in with the provider.
 For OIDC Idps, the issuer identifier.
 
 <h4 class="pdoc-member-header" id="OauthIdpConfigArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L182">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L212">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1324,7 +1553,7 @@ For OIDC Idps, the issuer identifier.
 The name of the OauthIdpConfig. Must start with `oidc.`.
 
 <h4 class="pdoc-member-header" id="OauthIdpConfigArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L187">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L217">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1333,7 +1562,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="OauthIdpConfigState" data-link-title="OauthIdpConfigState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L123">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L153">
         interface <strong>OauthIdpConfigState</strong>
     </a>
 </h3>
@@ -1343,7 +1572,7 @@ If it is not provided, the provider project is used.
 Input properties used for looking up and filtering OauthIdpConfig resources.
 
 <h4 class="pdoc-member-header" id="OauthIdpConfigState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L127">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L157">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1351,7 +1580,7 @@ Input properties used for looking up and filtering OauthIdpConfig resources.
 The client id of an OAuth client.
 
 <h4 class="pdoc-member-header" id="OauthIdpConfigState-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L131">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L161">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1359,7 +1588,7 @@ The client id of an OAuth client.
 The client secret of the OAuth client, to enable OIDC code flow.
 
 <h4 class="pdoc-member-header" id="OauthIdpConfigState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L135">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L165">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1367,7 +1596,7 @@ The client secret of the OAuth client, to enable OIDC code flow.
 Human friendly display name.
 
 <h4 class="pdoc-member-header" id="OauthIdpConfigState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L139">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L169">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1375,7 +1604,7 @@ Human friendly display name.
 If this config allows users to sign in with the provider.
 
 <h4 class="pdoc-member-header" id="OauthIdpConfigState-issuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L143">property <b>issuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L173">property <b>issuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1383,7 +1612,7 @@ If this config allows users to sign in with the provider.
 For OIDC Idps, the issuer identifier.
 
 <h4 class="pdoc-member-header" id="OauthIdpConfigState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L147">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L177">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1391,7 +1620,7 @@ For OIDC Idps, the issuer identifier.
 The name of the OauthIdpConfig. Must start with `oidc.`.
 
 <h4 class="pdoc-member-header" id="OauthIdpConfigState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L152">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/oauthIdpConfig.ts#L182">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1400,7 +1629,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="TenantArgs" data-link-title="TenantArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenant.ts#L152">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenant.ts#L179">
         interface <strong>TenantArgs</strong>
     </a>
 </h3>
@@ -1410,7 +1639,7 @@ If it is not provided, the provider project is used.
 The set of arguments for constructing a Tenant resource.
 
 <h4 class="pdoc-member-header" id="TenantArgs-allowPasswordSignup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenant.ts#L156">property <b>allowPasswordSignup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenant.ts#L183">property <b>allowPasswordSignup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowPasswordSignup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1418,7 +1647,7 @@ The set of arguments for constructing a Tenant resource.
 Whether to allow email/password user authentication.
 
 <h4 class="pdoc-member-header" id="TenantArgs-disableAuth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenant.ts#L162">property <b>disableAuth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenant.ts#L189">property <b>disableAuth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableAuth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1428,7 +1657,7 @@ the disabled tenant are not allowed to sign-in. Admins of the disabled tenant
 are not able to manage its users.
 
 <h4 class="pdoc-member-header" id="TenantArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenant.ts#L166">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenant.ts#L193">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1436,7 +1665,7 @@ are not able to manage its users.
 Human friendly display name of the tenant.
 
 <h4 class="pdoc-member-header" id="TenantArgs-enableEmailLinkSignin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenant.ts#L170">property <b>enableEmailLinkSignin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenant.ts#L197">property <b>enableEmailLinkSignin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableEmailLinkSignin?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1444,7 +1673,7 @@ Human friendly display name of the tenant.
 Whether to enable email link user authentication.
 
 <h4 class="pdoc-member-header" id="TenantArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenant.ts#L175">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenant.ts#L202">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1453,7 +1682,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="TenantDefaultSupportedIdpConfigArgs" data-link-title="TenantDefaultSupportedIdpConfigArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L184">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L215">
         interface <strong>TenantDefaultSupportedIdpConfigArgs</strong>
     </a>
 </h3>
@@ -1463,7 +1692,7 @@ If it is not provided, the provider project is used.
 The set of arguments for constructing a TenantDefaultSupportedIdpConfig resource.
 
 <h4 class="pdoc-member-header" id="TenantDefaultSupportedIdpConfigArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L188">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L219">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1471,7 +1700,7 @@ The set of arguments for constructing a TenantDefaultSupportedIdpConfig resource
 OAuth client ID
 
 <h4 class="pdoc-member-header" id="TenantDefaultSupportedIdpConfigArgs-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L192">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L223">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1479,7 +1708,7 @@ OAuth client ID
 OAuth client secret
 
 <h4 class="pdoc-member-header" id="TenantDefaultSupportedIdpConfigArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L196">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L227">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1487,7 +1716,7 @@ OAuth client secret
 If this IDP allows the user to sign in
 
 <h4 class="pdoc-member-header" id="TenantDefaultSupportedIdpConfigArgs-idpId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L210">property <b>idpId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L241">property <b>idpId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>idpId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1505,7 +1734,7 @@ ID of the IDP. Possible values include:
 * `yahoo.com`
 
 <h4 class="pdoc-member-header" id="TenantDefaultSupportedIdpConfigArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L215">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L246">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1514,7 +1743,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="TenantDefaultSupportedIdpConfigArgs-tenant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L219">property <b>tenant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L250">property <b>tenant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenant: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1522,7 +1751,7 @@ If it is not provided, the provider project is used.
 The name of the tenant where this DefaultSupportedIdpConfig resource exists
 
 <h3 class="pdoc-module-header" id="TenantDefaultSupportedIdpConfigState" data-link-title="TenantDefaultSupportedIdpConfigState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L139">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L170">
         interface <strong>TenantDefaultSupportedIdpConfigState</strong>
     </a>
 </h3>
@@ -1532,7 +1761,7 @@ The name of the tenant where this DefaultSupportedIdpConfig resource exists
 Input properties used for looking up and filtering TenantDefaultSupportedIdpConfig resources.
 
 <h4 class="pdoc-member-header" id="TenantDefaultSupportedIdpConfigState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L143">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L174">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1540,7 +1769,7 @@ Input properties used for looking up and filtering TenantDefaultSupportedIdpConf
 OAuth client ID
 
 <h4 class="pdoc-member-header" id="TenantDefaultSupportedIdpConfigState-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L147">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L178">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1548,7 +1777,7 @@ OAuth client ID
 OAuth client secret
 
 <h4 class="pdoc-member-header" id="TenantDefaultSupportedIdpConfigState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L151">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L182">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1556,7 +1785,7 @@ OAuth client secret
 If this IDP allows the user to sign in
 
 <h4 class="pdoc-member-header" id="TenantDefaultSupportedIdpConfigState-idpId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L165">property <b>idpId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L196">property <b>idpId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>idpId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1574,7 +1803,7 @@ ID of the IDP. Possible values include:
 * `yahoo.com`
 
 <h4 class="pdoc-member-header" id="TenantDefaultSupportedIdpConfigState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L169">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L200">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1582,7 +1811,7 @@ ID of the IDP. Possible values include:
 The name of the default supported IDP config resource
 
 <h4 class="pdoc-member-header" id="TenantDefaultSupportedIdpConfigState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L174">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L205">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1591,7 +1820,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="TenantDefaultSupportedIdpConfigState-tenant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L178">property <b>tenant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantDefaultSupportedIdpConfig.ts#L209">property <b>tenant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenant?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1599,7 +1828,7 @@ If it is not provided, the provider project is used.
 The name of the tenant where this DefaultSupportedIdpConfig resource exists
 
 <h3 class="pdoc-module-header" id="TenantInboundSamlConfigArgs" data-link-title="TenantInboundSamlConfigArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L176">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L216">
         interface <strong>TenantInboundSamlConfigArgs</strong>
     </a>
 </h3>
@@ -1609,7 +1838,7 @@ The name of the tenant where this DefaultSupportedIdpConfig resource exists
 The set of arguments for constructing a TenantInboundSamlConfig resource.
 
 <h4 class="pdoc-member-header" id="TenantInboundSamlConfigArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L180">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L220">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1617,7 +1846,7 @@ The set of arguments for constructing a TenantInboundSamlConfig resource.
 Human friendly display name.
 
 <h4 class="pdoc-member-header" id="TenantInboundSamlConfigArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L184">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L224">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1625,7 +1854,7 @@ Human friendly display name.
 If this config allows users to sign in with the provider.
 
 <h4 class="pdoc-member-header" id="TenantInboundSamlConfigArgs-idpConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L189">property <b>idpConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L229">property <b>idpConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>idpConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TenantInboundSamlConfigIdpConfig'>TenantInboundSamlConfigIdpConfig</a>&gt;;</code></pre>
@@ -1634,7 +1863,7 @@ SAML IdP configuration when the project acts as the relying party
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="TenantInboundSamlConfigArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L195">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L235">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1644,7 +1873,7 @@ hyphens, underscores or periods. The part after 'saml.' must also start with a l
 alphanumeric character, and have at least 2 characters.
 
 <h4 class="pdoc-member-header" id="TenantInboundSamlConfigArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L200">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L240">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1653,7 +1882,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="TenantInboundSamlConfigArgs-spConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L206">property <b>spConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L246">property <b>spConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TenantInboundSamlConfigSpConfig'>TenantInboundSamlConfigSpConfig</a>&gt;;</code></pre>
@@ -1663,7 +1892,7 @@ and accept an authentication assertion issued by a SAML identity provider.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="TenantInboundSamlConfigArgs-tenant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L210">property <b>tenant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L250">property <b>tenant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenant: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1671,7 +1900,7 @@ Structure is documented below.
 The name of the tenant where this inbound SAML config resource exists
 
 <h3 class="pdoc-module-header" id="TenantInboundSamlConfigState" data-link-title="TenantInboundSamlConfigState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L136">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L176">
         interface <strong>TenantInboundSamlConfigState</strong>
     </a>
 </h3>
@@ -1681,7 +1910,7 @@ The name of the tenant where this inbound SAML config resource exists
 Input properties used for looking up and filtering TenantInboundSamlConfig resources.
 
 <h4 class="pdoc-member-header" id="TenantInboundSamlConfigState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L140">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L180">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1689,7 +1918,7 @@ Input properties used for looking up and filtering TenantInboundSamlConfig resou
 Human friendly display name.
 
 <h4 class="pdoc-member-header" id="TenantInboundSamlConfigState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L144">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L184">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1697,7 +1926,7 @@ Human friendly display name.
 If this config allows users to sign in with the provider.
 
 <h4 class="pdoc-member-header" id="TenantInboundSamlConfigState-idpConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L149">property <b>idpConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L189">property <b>idpConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>idpConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TenantInboundSamlConfigIdpConfig'>TenantInboundSamlConfigIdpConfig</a>&gt;;</code></pre>
@@ -1706,7 +1935,7 @@ SAML IdP configuration when the project acts as the relying party
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="TenantInboundSamlConfigState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L155">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L195">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1716,7 +1945,7 @@ hyphens, underscores or periods. The part after 'saml.' must also start with a l
 alphanumeric character, and have at least 2 characters.
 
 <h4 class="pdoc-member-header" id="TenantInboundSamlConfigState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L160">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L200">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1725,7 +1954,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="TenantInboundSamlConfigState-spConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L166">property <b>spConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L206">property <b>spConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TenantInboundSamlConfigSpConfig'>TenantInboundSamlConfigSpConfig</a>&gt;;</code></pre>
@@ -1735,7 +1964,7 @@ and accept an authentication assertion issued by a SAML identity provider.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="TenantInboundSamlConfigState-tenant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L170">property <b>tenant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantInboundSamlConfig.ts#L210">property <b>tenant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenant?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1743,7 +1972,7 @@ Structure is documented below.
 The name of the tenant where this inbound SAML config resource exists
 
 <h3 class="pdoc-module-header" id="TenantOauthIdpConfigArgs" data-link-title="TenantOauthIdpConfigArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L174">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L206">
         interface <strong>TenantOauthIdpConfigArgs</strong>
     </a>
 </h3>
@@ -1753,7 +1982,7 @@ The name of the tenant where this inbound SAML config resource exists
 The set of arguments for constructing a TenantOauthIdpConfig resource.
 
 <h4 class="pdoc-member-header" id="TenantOauthIdpConfigArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L178">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L210">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1761,7 +1990,7 @@ The set of arguments for constructing a TenantOauthIdpConfig resource.
 The client id of an OAuth client.
 
 <h4 class="pdoc-member-header" id="TenantOauthIdpConfigArgs-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L182">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L214">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1769,7 +1998,7 @@ The client id of an OAuth client.
 The client secret of the OAuth client, to enable OIDC code flow.
 
 <h4 class="pdoc-member-header" id="TenantOauthIdpConfigArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L186">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L218">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1777,7 +2006,7 @@ The client secret of the OAuth client, to enable OIDC code flow.
 Human friendly display name.
 
 <h4 class="pdoc-member-header" id="TenantOauthIdpConfigArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L190">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L222">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1785,7 +2014,7 @@ Human friendly display name.
 If this config allows users to sign in with the provider.
 
 <h4 class="pdoc-member-header" id="TenantOauthIdpConfigArgs-issuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L194">property <b>issuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L226">property <b>issuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1793,7 +2022,7 @@ If this config allows users to sign in with the provider.
 For OIDC Idps, the issuer identifier.
 
 <h4 class="pdoc-member-header" id="TenantOauthIdpConfigArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L198">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L230">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1801,7 +2030,7 @@ For OIDC Idps, the issuer identifier.
 The name of the OauthIdpConfig. Must start with `oidc.`.
 
 <h4 class="pdoc-member-header" id="TenantOauthIdpConfigArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L203">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L235">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1810,7 +2039,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="TenantOauthIdpConfigArgs-tenant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L207">property <b>tenant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L239">property <b>tenant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenant: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1818,7 +2047,7 @@ If it is not provided, the provider project is used.
 The name of the tenant where this OIDC IDP configuration resource exists
 
 <h3 class="pdoc-module-header" id="TenantOauthIdpConfigState" data-link-title="TenantOauthIdpConfigState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L135">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L167">
         interface <strong>TenantOauthIdpConfigState</strong>
     </a>
 </h3>
@@ -1828,7 +2057,7 @@ The name of the tenant where this OIDC IDP configuration resource exists
 Input properties used for looking up and filtering TenantOauthIdpConfig resources.
 
 <h4 class="pdoc-member-header" id="TenantOauthIdpConfigState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L139">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L171">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1836,7 +2065,7 @@ Input properties used for looking up and filtering TenantOauthIdpConfig resource
 The client id of an OAuth client.
 
 <h4 class="pdoc-member-header" id="TenantOauthIdpConfigState-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L143">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L175">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1844,7 +2073,7 @@ The client id of an OAuth client.
 The client secret of the OAuth client, to enable OIDC code flow.
 
 <h4 class="pdoc-member-header" id="TenantOauthIdpConfigState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L147">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L179">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1852,7 +2081,7 @@ The client secret of the OAuth client, to enable OIDC code flow.
 Human friendly display name.
 
 <h4 class="pdoc-member-header" id="TenantOauthIdpConfigState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L151">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L183">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1860,7 +2089,7 @@ Human friendly display name.
 If this config allows users to sign in with the provider.
 
 <h4 class="pdoc-member-header" id="TenantOauthIdpConfigState-issuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L155">property <b>issuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L187">property <b>issuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1868,7 +2097,7 @@ If this config allows users to sign in with the provider.
 For OIDC Idps, the issuer identifier.
 
 <h4 class="pdoc-member-header" id="TenantOauthIdpConfigState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L159">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L191">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1876,7 +2105,7 @@ For OIDC Idps, the issuer identifier.
 The name of the OauthIdpConfig. Must start with `oidc.`.
 
 <h4 class="pdoc-member-header" id="TenantOauthIdpConfigState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L164">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L196">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1885,7 +2114,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="TenantOauthIdpConfigState-tenant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L168">property <b>tenant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenantOauthIdpConfig.ts#L200">property <b>tenant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenant?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1893,7 +2122,7 @@ If it is not provided, the provider project is used.
 The name of the tenant where this OIDC IDP configuration resource exists
 
 <h3 class="pdoc-module-header" id="TenantState" data-link-title="TenantState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenant.ts#L119">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenant.ts#L146">
         interface <strong>TenantState</strong>
     </a>
 </h3>
@@ -1903,7 +2132,7 @@ The name of the tenant where this OIDC IDP configuration resource exists
 Input properties used for looking up and filtering Tenant resources.
 
 <h4 class="pdoc-member-header" id="TenantState-allowPasswordSignup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenant.ts#L123">property <b>allowPasswordSignup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenant.ts#L150">property <b>allowPasswordSignup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowPasswordSignup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1911,7 +2140,7 @@ Input properties used for looking up and filtering Tenant resources.
 Whether to allow email/password user authentication.
 
 <h4 class="pdoc-member-header" id="TenantState-disableAuth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenant.ts#L129">property <b>disableAuth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenant.ts#L156">property <b>disableAuth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableAuth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1921,7 +2150,7 @@ the disabled tenant are not allowed to sign-in. Admins of the disabled tenant
 are not able to manage its users.
 
 <h4 class="pdoc-member-header" id="TenantState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenant.ts#L133">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenant.ts#L160">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1929,7 +2158,7 @@ are not able to manage its users.
 Human friendly display name of the tenant.
 
 <h4 class="pdoc-member-header" id="TenantState-enableEmailLinkSignin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenant.ts#L137">property <b>enableEmailLinkSignin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenant.ts#L164">property <b>enableEmailLinkSignin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableEmailLinkSignin?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1937,7 +2166,7 @@ Human friendly display name of the tenant.
 Whether to enable email link user authentication.
 
 <h4 class="pdoc-member-header" id="TenantState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenant.ts#L141">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenant.ts#L168">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1945,7 +2174,7 @@ Whether to enable email link user authentication.
 The name of the tenant that is generated by the server
 
 <h4 class="pdoc-member-header" id="TenantState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/identityplatform/tenant.ts#L146">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfe9026b26f6964561903cdecab78324e4f204a6/sdk/nodejs/identityplatform/tenant.ts#L173">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

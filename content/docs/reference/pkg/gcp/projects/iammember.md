@@ -19,9 +19,12 @@ Four different resources help you manage your IAM policy for a project. Each of 
 
 > **Note:** `gcp.projects.IAMPolicy` **cannot** be used in conjunction with `gcp.projects.IAMBinding`, `gcp.projects.IAMMember`, or `gcp.projects.IAMAuditConfig` or they will fight over what your policy should be.
 
+> **Note:** `gcp.projects.IAMPolicy` **cannot** be used in conjunction with `gcp.projects.IAMBinding`, `gcp.projects.IAMMember`, or `gcp.projects.IAMAuditConfig` or they will fight over what your policy should be.
+
 > **Note:** `gcp.projects.IAMBinding` resources **can be** used in conjunction with `gcp.projects.IAMMember` resources **only if** they do not grant privilege to the same role.
 
-> **Note:** It is not possible to grant the `roles/owner` role using any of these resources due to this being disallowed by the underlying `projects.setIamPolicy` API method. See the method [documentation](https://cloud.google.com/resource-manager/reference/rest/v1/projects/setIamPolicy) for full details. It is, however, possible to remove all owners from the project by passing in an empty `members = []` list to the `gcp.projects.IAMBinding` resource. This is useful for removing the owner role from a project upon creation, however, precautions should be taken to avoid inadvertently locking oneself out of a project such as by granting additional roles to alternate entities.
+> **Note:** The underlying API method `projects.setIamPolicy` has a lot of constraints which are documented [here](https://cloud.google.com/resource-manager/reference/rest/v1/projects/setIamPolicy). In addition to these constraints,
+   IAM Conditions cannot be used with Basic Roles such as Owner. Violating these constraints will result in the API returning 400 error code so please review these if you encounter errors with this resource.
 
 ## google\_project\_iam\_policy
 
@@ -141,7 +144,7 @@ const admin = pulumi.output(gcp.organizations.getIAMPolicy({
             title: "expires_after_2019_12_31",
         },
         members: ["user:jane@example.com"],
-        role: "roles/editor",
+        role: "roles/compute.admin",
     }],
 }, { async: true }));
 const project = new gcp.projects.IAMPolicy("project", {
@@ -160,7 +163,7 @@ admin = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolic
         title="expires_after_2019_12_31",
     ),
     members=["user:jane@example.com"],
-    role="roles/editor",
+    role="roles/compute.admin",
 )])
 project = gcp.projects.IAMPolicy("project",
     policy_data=admin.policy_data,
@@ -190,7 +193,7 @@ class MyStack : Stack
                     {
                         "user:jane@example.com",
                     },
-                    Role = "roles/editor",
+                    Role = "roles/compute.admin",
                 },
             },
         }));
@@ -225,7 +228,7 @@ func main() {
 					Members: []string{
 						"user:jane@example.com",
 					},
-					Role: "roles/editor",
+					Role: "roles/compute.admin",
 				},
 			},
 		}, nil)
@@ -325,7 +328,7 @@ const project = new gcp.projects.IAMBinding("project", {
     },
     members: ["user:jane@example.com"],
     project: "your-project-id",
-    role: "roles/editor",
+    role: "roles/container.admin",
 });
 ```
 ```python
@@ -340,7 +343,7 @@ project = gcp.projects.IAMBinding("project",
     ),
     members=["user:jane@example.com"],
     project="your-project-id",
-    role="roles/editor")
+    role="roles/container.admin")
 ```
 ```csharp
 using Pulumi;
@@ -363,7 +366,7 @@ class MyStack : Stack
                 "user:jane@example.com",
             },
             Project = "your-project-id",
-            Role = "roles/editor",
+            Role = "roles/container.admin",
         });
     }
 
@@ -389,7 +392,7 @@ func main() {
 				pulumi.String("user:jane@example.com"),
 			},
 			Project: pulumi.String("your-project-id"),
-			Role:    pulumi.String("roles/editor"),
+			Role:    pulumi.String("roles/container.admin"),
 		})
 		if err != nil {
 			return err
@@ -475,7 +478,7 @@ const project = new gcp.projects.IAMMember("project", {
     },
     member: "user:jane@example.com",
     project: "your-project-id",
-    role: "roles/editor",
+    role: "roles/firebase.admin",
 });
 ```
 ```python
@@ -490,7 +493,7 @@ project = gcp.projects.IAMMember("project",
     ),
     member="user:jane@example.com",
     project="your-project-id",
-    role="roles/editor")
+    role="roles/firebase.admin")
 ```
 ```csharp
 using Pulumi;
@@ -510,7 +513,7 @@ class MyStack : Stack
             },
             Member = "user:jane@example.com",
             Project = "your-project-id",
-            Role = "roles/editor",
+            Role = "roles/firebase.admin",
         });
     }
 
@@ -534,7 +537,7 @@ func main() {
 			},
 			Member:  pulumi.String("user:jane@example.com"),
 			Project: pulumi.String("your-project-id"),
-			Role:    pulumi.String("roles/editor"),
+			Role:    pulumi.String("roles/firebase.admin"),
 		})
 		if err != nil {
 			return err
