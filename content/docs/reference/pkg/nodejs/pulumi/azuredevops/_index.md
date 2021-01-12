@@ -3,7 +3,7 @@ title: "Package @pulumi/azuredevops"
 title_tag: "Package @pulumi/azuredevops | Node.js SDK"
 linktitle: "@pulumi/azuredevops"
 meta_desc: "Explore members of the @pulumi/azuredevops package."
-git_sha: "5a2704baa4eadd2446006775047639ffb3cd5575"
+git_sha: "8f499c00158ea0335e120f29e31b3f2cfa1e56f5"
 block_external_search_index: true
 ---
 
@@ -63,6 +63,7 @@ import * as azuredevops from "@pulumi/azuredevops";
     <li><a href="#BranchPolicyMinReviewers"><span class="symbol resource"></span>BranchPolicyMinReviewers</a></li>
     <li><a href="#BranchPolicyWorkItemLinking"><span class="symbol resource"></span>BranchPolicyWorkItemLinking</a></li>
     <li><a href="#BuildDefinition"><span class="symbol resource"></span>BuildDefinition</a></li>
+    <li><a href="#BuildDefinitionPermissions"><span class="symbol resource"></span>BuildDefinitionPermissions</a></li>
     <li><a href="#Git"><span class="symbol resource"></span>Git</a></li>
     <li><a href="#GitPermissions"><span class="symbol resource"></span>GitPermissions</a></li>
     <li><a href="#Group"><span class="symbol resource"></span>Group</a></li>
@@ -82,6 +83,7 @@ import * as azuredevops from "@pulumi/azuredevops";
     <li><a href="#ServiceEndpointDockerRegistry"><span class="symbol resource"></span>ServiceEndpointDockerRegistry</a></li>
     <li><a href="#ServiceEndpointGitHub"><span class="symbol resource"></span>ServiceEndpointGitHub</a></li>
     <li><a href="#ServiceEndpointKubernetes"><span class="symbol resource"></span>ServiceEndpointKubernetes</a></li>
+    <li><a href="#ServiceEndpointPipeline"><span class="symbol resource"></span>ServiceEndpointPipeline</a></li>
     <li><a href="#User"><span class="symbol resource"></span>User</a></li>
     <li><a href="#VariableGroup"><span class="symbol resource"></span>VariableGroup</a></li>
     <li><a href="#WorkItemQueryPermissions"><span class="symbol resource"></span>WorkItemQueryPermissions</a></li>
@@ -118,6 +120,8 @@ import * as azuredevops from "@pulumi/azuredevops";
     <li><a href="#BranchPolicyWorkItemLinkingArgs"><span class="symbol api"></span>BranchPolicyWorkItemLinkingArgs</a></li>
     <li><a href="#BranchPolicyWorkItemLinkingState"><span class="symbol api"></span>BranchPolicyWorkItemLinkingState</a></li>
     <li><a href="#BuildDefinitionArgs"><span class="symbol api"></span>BuildDefinitionArgs</a></li>
+    <li><a href="#BuildDefinitionPermissionsArgs"><span class="symbol api"></span>BuildDefinitionPermissionsArgs</a></li>
+    <li><a href="#BuildDefinitionPermissionsState"><span class="symbol api"></span>BuildDefinitionPermissionsState</a></li>
     <li><a href="#BuildDefinitionState"><span class="symbol api"></span>BuildDefinitionState</a></li>
     <li><a href="#GetAgentQueueArgs"><span class="symbol api"></span>GetAgentQueueArgs</a></li>
     <li><a href="#GetAgentQueueResult"><span class="symbol api"></span>GetAgentQueueResult</a></li>
@@ -182,6 +186,8 @@ import * as azuredevops from "@pulumi/azuredevops";
     <li><a href="#ServiceEndpointGitHubState"><span class="symbol api"></span>ServiceEndpointGitHubState</a></li>
     <li><a href="#ServiceEndpointKubernetesArgs"><span class="symbol api"></span>ServiceEndpointKubernetesArgs</a></li>
     <li><a href="#ServiceEndpointKubernetesState"><span class="symbol api"></span>ServiceEndpointKubernetesState</a></li>
+    <li><a href="#ServiceEndpointPipelineArgs"><span class="symbol api"></span>ServiceEndpointPipelineArgs</a></li>
+    <li><a href="#ServiceEndpointPipelineState"><span class="symbol api"></span>ServiceEndpointPipelineState</a></li>
     <li><a href="#UserArgs"><span class="symbol api"></span>UserArgs</a></li>
     <li><a href="#UserState"><span class="symbol api"></span>UserState</a></li>
     <li><a href="#VariableGroupArgs"><span class="symbol api"></span>VariableGroupArgs</a></li>
@@ -193,7 +199,7 @@ import * as azuredevops from "@pulumi/azuredevops";
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AreaPermissions" data-link-title="AreaPermissions">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/areaPermissions.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/areaPermissions.ts#L57">
         Resource <strong>AreaPermissions</strong>
     </a>
 </h3>
@@ -250,7 +256,7 @@ const root_permissions = new azuredevops.AreaPermissions("root-permissions", {
 The resource does not support import.
 
 <h4 class="pdoc-member-header" id="AreaPermissions-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/areaPermissions.ts#L104"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/areaPermissions.ts#L104"> <b>constructor</b></a>
 </h4>
 
 
@@ -264,7 +270,7 @@ Create a AreaPermissions resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AreaPermissions-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/areaPermissions.ts#L67">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/areaPermissions.ts#L67">method <b>get</b></a>
 </h4>
 
 
@@ -275,14 +281,14 @@ Get an existing AreaPermissions resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AreaPermissions-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/areaPermissions.ts#L57">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/areaPermissions.ts#L57">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AreaPermissions-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/areaPermissions.ts#L78">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/areaPermissions.ts#L78">method <b>isInstance</b></a>
 </h4>
 
 
@@ -293,7 +299,7 @@ Returns true if the given object is an instance of AreaPermissions.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AreaPermissions-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/areaPermissions.ts#L57">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/areaPermissions.ts#L57">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -302,7 +308,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AreaPermissions-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/areaPermissions.ts#L88">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/areaPermissions.ts#L88">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -310,7 +316,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the branch to assign the permissions.
 
 <h4 class="pdoc-member-header" id="AreaPermissions-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/areaPermissions.ts#L92">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/areaPermissions.ts#L92">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
@@ -318,7 +324,7 @@ The name of the branch to assign the permissions.
 the permissions to assign. The following permissions are available.
 
 <h4 class="pdoc-member-header" id="AreaPermissions-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/areaPermissions.ts#L96">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/areaPermissions.ts#L96">property <b>principal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>principal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -326,7 +332,7 @@ the permissions to assign. The following permissions are available.
 The **group** principal to assign the permissions.
 
 <h4 class="pdoc-member-header" id="AreaPermissions-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/areaPermissions.ts#L100">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/areaPermissions.ts#L100">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -334,7 +340,7 @@ The **group** principal to assign the permissions.
 The ID of the project to assign the permissions.
 
 <h4 class="pdoc-member-header" id="AreaPermissions-replace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/areaPermissions.ts#L104">property <b>replace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/areaPermissions.ts#L104">property <b>replace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -342,7 +348,7 @@ The ID of the project to assign the permissions.
 Replace (`true`) or merge (`false`) the permissions. Default: `true`.
 
 <h4 class="pdoc-member-header" id="AreaPermissions-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/areaPermissions.ts#L57">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/areaPermissions.ts#L57">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -351,7 +357,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="BranchPolicyAutoReviewers" data-link-title="BranchPolicyAutoReviewers">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyAutoReviewers.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyAutoReviewers.ts#L57">
         Resource <strong>BranchPolicyAutoReviewers</strong>
     </a>
 </h3>
@@ -403,11 +409,11 @@ const branchPolicyAutoReviewers = new azuredevops.BranchPolicyAutoReviewers("bra
 Azure DevOps Branch Policies can be imported using the project ID and policy configuration ID
 
 ```sh
- $ pulumi import azuredevops:index/branchPolicyAutoReviewers:BranchPolicyAutoReviewers p aa4a9756-8a86-4588-86d7-b3ee2d88b033/60
+ $ pulumi import azuredevops:index/branchPolicyAutoReviewers:BranchPolicyAutoReviewers p 00000000-0000-0000-0000-000000000000/0
 ```
 
 <h4 class="pdoc-member-header" id="BranchPolicyAutoReviewers-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyAutoReviewers.ts#L100"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyAutoReviewers.ts#L100"> <b>constructor</b></a>
 </h4>
 
 
@@ -421,7 +427,7 @@ Create a BranchPolicyAutoReviewers resource with the given unique name, argument
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="BranchPolicyAutoReviewers-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyAutoReviewers.ts#L67">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyAutoReviewers.ts#L67">method <b>get</b></a>
 </h4>
 
 
@@ -432,14 +438,14 @@ Get an existing BranchPolicyAutoReviewers resource's state with the given name, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BranchPolicyAutoReviewers-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyAutoReviewers.ts#L57">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyAutoReviewers.ts#L57">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BranchPolicyAutoReviewers-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyAutoReviewers.ts#L78">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyAutoReviewers.ts#L78">method <b>isInstance</b></a>
 </h4>
 
 
@@ -450,7 +456,7 @@ Returns true if the given object is an instance of BranchPolicyAutoReviewers.  T
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BranchPolicyAutoReviewers-blocking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyAutoReviewers.ts#L88">property <b>blocking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyAutoReviewers.ts#L88">property <b>blocking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>blocking: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -458,7 +464,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A flag indicating if the policy should be blocking. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyAutoReviewers-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyAutoReviewers.ts#L92">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyAutoReviewers.ts#L92">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -466,7 +472,7 @@ A flag indicating if the policy should be blocking. Defaults to `true`.
 A flag indicating if the policy should be enabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyAutoReviewers-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyAutoReviewers.ts#L57">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyAutoReviewers.ts#L57">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -475,7 +481,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BranchPolicyAutoReviewers-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyAutoReviewers.ts#L96">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyAutoReviewers.ts#L96">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -483,7 +489,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the project in which the policy will be created.
 
 <h4 class="pdoc-member-header" id="BranchPolicyAutoReviewers-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyAutoReviewers.ts#L100">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyAutoReviewers.ts#L100">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#BranchPolicyAutoReviewersSettings'>BranchPolicyAutoReviewersSettings</a>&gt;;</code></pre>
@@ -491,7 +497,7 @@ The ID of the project in which the policy will be created.
 Configuration for the policy. This block must be defined exactly once.
 
 <h4 class="pdoc-member-header" id="BranchPolicyAutoReviewers-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyAutoReviewers.ts#L57">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyAutoReviewers.ts#L57">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -500,7 +506,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="BranchPolicyBuildValidation" data-link-title="BranchPolicyBuildValidation">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyBuildValidation.ts#L72">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyBuildValidation.ts#L72">
         Resource <strong>BranchPolicyBuildValidation</strong>
     </a>
 </h3>
@@ -567,11 +573,11 @@ const branchPolicyBuildValidation = new azuredevops.BranchPolicyBuildValidation(
 Azure DevOps Branch Policies can be imported using the project ID and policy configuration ID
 
 ```sh
- $ pulumi import azuredevops:index/branchPolicyBuildValidation:BranchPolicyBuildValidation p aa4a9756-8a86-4588-86d7-b3ee2d88b033/60
+ $ pulumi import azuredevops:index/branchPolicyBuildValidation:BranchPolicyBuildValidation p 00000000-0000-0000-0000-000000000000/0
 ```
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyBuildValidation.ts#L115"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyBuildValidation.ts#L115"> <b>constructor</b></a>
 </h4>
 
 
@@ -585,7 +591,7 @@ Create a BranchPolicyBuildValidation resource with the given unique name, argume
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidation-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyBuildValidation.ts#L82">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyBuildValidation.ts#L82">method <b>get</b></a>
 </h4>
 
 
@@ -596,14 +602,14 @@ Get an existing BranchPolicyBuildValidation resource's state with the given name
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidation-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyBuildValidation.ts#L72">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyBuildValidation.ts#L72">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyBuildValidation.ts#L93">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyBuildValidation.ts#L93">method <b>isInstance</b></a>
 </h4>
 
 
@@ -614,7 +620,7 @@ Returns true if the given object is an instance of BranchPolicyBuildValidation. 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidation-blocking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyBuildValidation.ts#L103">property <b>blocking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyBuildValidation.ts#L103">property <b>blocking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>blocking: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -622,7 +628,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A flag indicating if the policy should be blocking. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidation-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyBuildValidation.ts#L107">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyBuildValidation.ts#L107">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -630,7 +636,7 @@ A flag indicating if the policy should be blocking. Defaults to `true`.
 A flag indicating if the policy should be enabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyBuildValidation.ts#L72">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyBuildValidation.ts#L72">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -639,7 +645,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidation-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyBuildValidation.ts#L111">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyBuildValidation.ts#L111">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -647,7 +653,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the project in which the policy will be created.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidation-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyBuildValidation.ts#L115">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyBuildValidation.ts#L115">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#BranchPolicyBuildValidationSettings'>BranchPolicyBuildValidationSettings</a>&gt;;</code></pre>
@@ -655,7 +661,7 @@ The ID of the project in which the policy will be created.
 Configuration for the policy. This block must be defined exactly once.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidation-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyBuildValidation.ts#L72">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyBuildValidation.ts#L72">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -664,7 +670,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="BranchPolicyCommentResolution" data-link-title="BranchPolicyCommentResolution">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyCommentResolution.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyCommentResolution.ts#L56">
         Resource <strong>BranchPolicyCommentResolution</strong>
     </a>
 </h3>
@@ -719,7 +725,7 @@ Azure DevOps Branch Policies can be imported using the project ID and policy con
 ```
 
 <h4 class="pdoc-member-header" id="BranchPolicyCommentResolution-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyCommentResolution.ts#L99"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyCommentResolution.ts#L99"> <b>constructor</b></a>
 </h4>
 
 
@@ -733,7 +739,7 @@ Create a BranchPolicyCommentResolution resource with the given unique name, argu
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="BranchPolicyCommentResolution-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyCommentResolution.ts#L66">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyCommentResolution.ts#L66">method <b>get</b></a>
 </h4>
 
 
@@ -744,14 +750,14 @@ Get an existing BranchPolicyCommentResolution resource's state with the given na
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BranchPolicyCommentResolution-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyCommentResolution.ts#L56">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyCommentResolution.ts#L56">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BranchPolicyCommentResolution-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyCommentResolution.ts#L77">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyCommentResolution.ts#L77">method <b>isInstance</b></a>
 </h4>
 
 
@@ -762,7 +768,7 @@ Returns true if the given object is an instance of BranchPolicyCommentResolution
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BranchPolicyCommentResolution-blocking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyCommentResolution.ts#L87">property <b>blocking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyCommentResolution.ts#L87">property <b>blocking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>blocking: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -770,7 +776,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A flag indicating if the policy should be blocking. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyCommentResolution-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyCommentResolution.ts#L91">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyCommentResolution.ts#L91">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -778,7 +784,7 @@ A flag indicating if the policy should be blocking. Defaults to `true`.
 A flag indicating if the policy should be enabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyCommentResolution-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyCommentResolution.ts#L56">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyCommentResolution.ts#L56">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -787,7 +793,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BranchPolicyCommentResolution-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyCommentResolution.ts#L95">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyCommentResolution.ts#L95">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -795,7 +801,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the project in which the policy will be created.
 
 <h4 class="pdoc-member-header" id="BranchPolicyCommentResolution-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyCommentResolution.ts#L99">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyCommentResolution.ts#L99">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#BranchPolicyCommentResolutionSettings'>BranchPolicyCommentResolutionSettings</a>&gt;;</code></pre>
@@ -803,7 +809,7 @@ The ID of the project in which the policy will be created.
 Configuration for the policy. This block must be defined exactly once.
 
 <h4 class="pdoc-member-header" id="BranchPolicyCommentResolution-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyCommentResolution.ts#L56">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyCommentResolution.ts#L56">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -812,7 +818,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="BranchPolicyMinReviewers" data-link-title="BranchPolicyMinReviewers">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyMinReviewers.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyMinReviewers.ts#L58">
         Resource <strong>BranchPolicyMinReviewers</strong>
     </a>
 </h3>
@@ -865,11 +871,11 @@ const branchPolicyMinReviewers = new azuredevops.BranchPolicyMinReviewers("branc
 Azure DevOps Branch Policies can be imported using the project ID and policy configuration ID
 
 ```sh
- $ pulumi import azuredevops:index/branchPolicyMinReviewers:BranchPolicyMinReviewers p aa4a9756-8a86-4588-86d7-b3ee2d88b033/60
+ $ pulumi import azuredevops:index/branchPolicyMinReviewers:BranchPolicyMinReviewers p 00000000-0000-0000-0000-000000000000/0
 ```
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewers-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyMinReviewers.ts#L101"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyMinReviewers.ts#L101"> <b>constructor</b></a>
 </h4>
 
 
@@ -883,7 +889,7 @@ Create a BranchPolicyMinReviewers resource with the given unique name, arguments
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewers-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyMinReviewers.ts#L68">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyMinReviewers.ts#L68">method <b>get</b></a>
 </h4>
 
 
@@ -894,14 +900,14 @@ Get an existing BranchPolicyMinReviewers resource's state with the given name, I
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewers-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyMinReviewers.ts#L58">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyMinReviewers.ts#L58">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewers-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyMinReviewers.ts#L79">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyMinReviewers.ts#L79">method <b>isInstance</b></a>
 </h4>
 
 
@@ -912,7 +918,7 @@ Returns true if the given object is an instance of BranchPolicyMinReviewers.  Th
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewers-blocking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyMinReviewers.ts#L89">property <b>blocking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyMinReviewers.ts#L89">property <b>blocking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>blocking: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -920,7 +926,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A flag indicating if the policy should be blocking. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewers-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyMinReviewers.ts#L93">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyMinReviewers.ts#L93">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -928,7 +934,7 @@ A flag indicating if the policy should be blocking. Defaults to `true`.
 A flag indicating if the policy should be enabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewers-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyMinReviewers.ts#L58">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyMinReviewers.ts#L58">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -937,7 +943,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewers-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyMinReviewers.ts#L97">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyMinReviewers.ts#L97">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -945,7 +951,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the project in which the policy will be created.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewers-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyMinReviewers.ts#L101">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyMinReviewers.ts#L101">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#BranchPolicyMinReviewersSettings'>BranchPolicyMinReviewersSettings</a>&gt;;</code></pre>
@@ -953,7 +959,7 @@ The ID of the project in which the policy will be created.
 Configuration for the policy. This block must be defined exactly once.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewers-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyMinReviewers.ts#L58">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyMinReviewers.ts#L58">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -962,7 +968,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="BranchPolicyWorkItemLinking" data-link-title="BranchPolicyWorkItemLinking">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyWorkItemLinking.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyWorkItemLinking.ts#L56">
         Resource <strong>BranchPolicyWorkItemLinking</strong>
     </a>
 </h3>
@@ -1017,7 +1023,7 @@ Azure DevOps Branch Policies can be imported using the project ID and policy con
 ```
 
 <h4 class="pdoc-member-header" id="BranchPolicyWorkItemLinking-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyWorkItemLinking.ts#L99"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyWorkItemLinking.ts#L99"> <b>constructor</b></a>
 </h4>
 
 
@@ -1031,7 +1037,7 @@ Create a BranchPolicyWorkItemLinking resource with the given unique name, argume
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="BranchPolicyWorkItemLinking-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyWorkItemLinking.ts#L66">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyWorkItemLinking.ts#L66">method <b>get</b></a>
 </h4>
 
 
@@ -1042,14 +1048,14 @@ Get an existing BranchPolicyWorkItemLinking resource's state with the given name
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BranchPolicyWorkItemLinking-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyWorkItemLinking.ts#L56">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyWorkItemLinking.ts#L56">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BranchPolicyWorkItemLinking-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyWorkItemLinking.ts#L77">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyWorkItemLinking.ts#L77">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1060,7 +1066,7 @@ Returns true if the given object is an instance of BranchPolicyWorkItemLinking. 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BranchPolicyWorkItemLinking-blocking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyWorkItemLinking.ts#L87">property <b>blocking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyWorkItemLinking.ts#L87">property <b>blocking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>blocking: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1068,7 +1074,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A flag indicating if the policy should be blocking. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyWorkItemLinking-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyWorkItemLinking.ts#L91">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyWorkItemLinking.ts#L91">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1076,7 +1082,7 @@ A flag indicating if the policy should be blocking. Defaults to `true`.
 A flag indicating if the policy should be enabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyWorkItemLinking-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyWorkItemLinking.ts#L56">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyWorkItemLinking.ts#L56">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1085,7 +1091,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BranchPolicyWorkItemLinking-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyWorkItemLinking.ts#L95">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyWorkItemLinking.ts#L95">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1093,7 +1099,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the project in which the policy will be created.
 
 <h4 class="pdoc-member-header" id="BranchPolicyWorkItemLinking-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyWorkItemLinking.ts#L99">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyWorkItemLinking.ts#L99">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#BranchPolicyWorkItemLinkingSettings'>BranchPolicyWorkItemLinkingSettings</a>&gt;;</code></pre>
@@ -1101,7 +1107,7 @@ The ID of the project in which the policy will be created.
 Configuration for the policy. This block must be defined exactly once.
 
 <h4 class="pdoc-member-header" id="BranchPolicyWorkItemLinking-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyWorkItemLinking.ts#L56">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyWorkItemLinking.ts#L56">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1110,7 +1116,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="BuildDefinition" data-link-title="BuildDefinition">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L102">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L102">
         Resource <strong>BuildDefinition</strong>
     </a>
 </h3>
@@ -1211,7 +1217,7 @@ Azure DevOps Build Definitions can be imported using the project name/definition
 ```
 
 <h4 class="pdoc-member-header" id="BuildDefinition-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L169"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L169"> <b>constructor</b></a>
 </h4>
 
 
@@ -1225,7 +1231,7 @@ Create a BuildDefinition resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="BuildDefinition-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L112">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L112">method <b>get</b></a>
 </h4>
 
 
@@ -1236,14 +1242,14 @@ Get an existing BuildDefinition resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BuildDefinition-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L102">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L102">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BuildDefinition-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L123">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L123">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1254,7 +1260,7 @@ Returns true if the given object is an instance of BuildDefinition.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BuildDefinition-agentPoolName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L133">property <b>agentPoolName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L133">property <b>agentPoolName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>agentPoolName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1262,7 +1268,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The agent pool that should execute the build.
 
 <h4 class="pdoc-member-header" id="BuildDefinition-ciTrigger">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L137">property <b>ciTrigger</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L137">property <b>ciTrigger</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ciTrigger: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#BuildDefinitionCiTrigger'>BuildDefinitionCiTrigger</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1270,7 +1276,7 @@ The agent pool that should execute the build.
 Continuous Integration trigger.
 
 <h4 class="pdoc-member-header" id="BuildDefinition-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L102">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1279,7 +1285,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BuildDefinition-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L141">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L141">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1287,7 +1293,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the build definition.
 
 <h4 class="pdoc-member-header" id="BuildDefinition-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L145">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L145">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1295,7 +1301,7 @@ The name of the build definition.
 The folder path of the build definition.
 
 <h4 class="pdoc-member-header" id="BuildDefinition-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L149">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L149">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1303,7 +1309,7 @@ The folder path of the build definition.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="BuildDefinition-pullRequestTrigger">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L153">property <b>pullRequestTrigger</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L153">property <b>pullRequestTrigger</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pullRequestTrigger: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#BuildDefinitionPullRequestTrigger'>BuildDefinitionPullRequestTrigger</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1311,7 +1317,7 @@ The project ID or project name.
 Pull Request Integration Integration trigger.
 
 <h4 class="pdoc-member-header" id="BuildDefinition-repository">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L157">property <b>repository</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L157">property <b>repository</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>repository: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#BuildDefinitionRepository'>BuildDefinitionRepository</a>&gt;;</code></pre>
@@ -1319,7 +1325,7 @@ Pull Request Integration Integration trigger.
 A `repository` block as documented below.
 
 <h4 class="pdoc-member-header" id="BuildDefinition-revision">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L161">property <b>revision</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L161">property <b>revision</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>revision: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1327,7 +1333,7 @@ A `repository` block as documented below.
 The revision of the build definition
 
 <h4 class="pdoc-member-header" id="BuildDefinition-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L102">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L102">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1336,7 +1342,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="BuildDefinition-variableGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L165">property <b>variableGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L165">property <b>variableGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>variableGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1344,15 +1350,187 @@ deployments.
 A list of variable group IDs (integers) to link to the build definition.
 
 <h4 class="pdoc-member-header" id="BuildDefinition-variables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L169">property <b>variables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L169">property <b>variables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>variables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#BuildDefinitionVariable'>BuildDefinitionVariable</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A list of `variable` blocks, as documented below.
 
+<h3 class="pdoc-module-header" id="BuildDefinitionPermissions" data-link-title="BuildDefinitionPermissions">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinitionPermissions.ts#L71">
+        Resource <strong>BuildDefinitionPermissions</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>BuildDefinitionPermissions</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+Manages permissions for a Build Definition
+
+> **Note** Permissions can be assigned to group principals and not to single user principals.
+
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azuredevops from "@pulumi/azuredevops";
+
+const project = new azuredevops.Project("project", {
+    workItemTemplate: "Agile",
+    versionControl: "Git",
+    visibility: "private",
+    description: "Managed by Terraform",
+});
+const project-readers = project.id.apply(id => azuredevops.getGroup({
+    projectId: id,
+    name: "Readers",
+}));
+const repository = new azuredevops.Git("repository", {
+    projectId: project.id,
+    initialization: {
+        initType: "Clean",
+    },
+});
+const build = new azuredevops.BuildDefinition("build", {
+    projectId: project.id,
+    path: "\\ExampleFolder",
+    ciTrigger: {
+        useYaml: true,
+    },
+    repository: {
+        repoType: "TfsGit",
+        repoId: repository.id,
+        branchName: repository.defaultBranch,
+        ymlPath: "azure-pipelines.yml",
+    },
+});
+const permissions = new azuredevops.BuildDefinitionPermissions("permissions", {
+    projectId: project.id,
+    principal: project_readers.id,
+    buildDefinitionId: build.id,
+    permissions: {
+        ViewBuilds: "Allow",
+        EditBuildQuality: "Deny",
+        DeleteBuilds: "Deny",
+        StopBuilds: "Allow",
+    },
+});
+```
+#### Relevant Links
+
+* [Azure DevOps Service REST API 5.1 - Security](https://docs.microsoft.com/en-us/rest/api/azure/devops/security/?view=azure-devops-rest-5.1)
+
+#### PAT Permissions Required
+
+- **Project & Team**: vso.security_manage - Grants the ability to read, write, and manage security permissions.
+
+#### Import
+
+The resource does not support import.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionPermissions-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinitionPermissions.ts#L118"> <b>constructor</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> BuildDefinitionPermissions(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#BuildDefinitionPermissionsArgs'>BuildDefinitionPermissionsArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
+
+
+Create a BuildDefinitionPermissions resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionPermissions-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinitionPermissions.ts#L81">method <b>get</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#BuildDefinitionPermissionsState'>BuildDefinitionPermissionsState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#BuildDefinitionPermissions'>BuildDefinitionPermissions</a></code></pre>
+
+
+Get an existing BuildDefinitionPermissions resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionPermissions-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinitionPermissions.ts#L71">method <b>getProvider</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+
+<h4 class="pdoc-member-header" id="BuildDefinitionPermissions-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinitionPermissions.ts#L92">method <b>isInstance</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is BuildDefinitionPermissions</code></pre>
+
+
+Returns true if the given object is an instance of BuildDefinitionPermissions.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionPermissions-buildDefinitionId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinitionPermissions.ts#L102">property <b>buildDefinitionId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>buildDefinitionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The id of the build definition to assign the permissions.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionPermissions-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinitionPermissions.ts#L71">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionPermissions-permissions">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinitionPermissions.ts#L106">property <b>permissions</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
+
+the permissions to assign. The following permissions are available.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionPermissions-principal">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinitionPermissions.ts#L110">property <b>principal</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>principal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The **group** principal to assign the permissions.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionPermissions-projectId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinitionPermissions.ts#L114">property <b>projectId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the project to assign the permissions.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionPermissions-replace">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinitionPermissions.ts#L118">property <b>replace</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>replace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Replace (`true`) or merge (`false`) the permissions. Default: `true`.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionPermissions-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinitionPermissions.ts#L71">property <b>urn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
 <h3 class="pdoc-module-header" id="Git" data-link-title="Git">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L63">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L63">
         Resource <strong>Git</strong>
     </a>
 </h3>
@@ -1414,7 +1592,7 @@ const repo = new azuredevops.Git("repo", {
 - [Azure DevOps Service REST API 5.1 - Git Repositories](https://docs.microsoft.com/en-us/rest/api/azure/devops/git/repositories?view=azure-devops-rest-5.1)
 
 <h4 class="pdoc-member-header" id="Git-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L134"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L134"> <b>constructor</b></a>
 </h4>
 
 
@@ -1428,7 +1606,7 @@ Create a Git resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Git-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L73">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L73">method <b>get</b></a>
 </h4>
 
 
@@ -1439,14 +1617,14 @@ Get an existing Git resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Git-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L63">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L63">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Git-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L84">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L84">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1457,7 +1635,7 @@ Returns true if the given object is an instance of Git.  This is designed to wor
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Git-defaultBranch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L94">property <b>defaultBranch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L94">property <b>defaultBranch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultBranch: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1465,7 +1643,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ref of the default branch. Will be used as the branch name for initialized repositories.
 
 <h4 class="pdoc-member-header" id="Git-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L63">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L63">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1474,7 +1652,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Git-initialization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L98">property <b>initialization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L98">property <b>initialization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>initialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#GitInitialization'>GitInitialization</a>&gt;;</code></pre>
@@ -1482,7 +1660,7 @@ deployments and may be missing (undefined) during planning phases.
 An `initialization` block as documented below.
 
 <h4 class="pdoc-member-header" id="Git-isFork">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L102">property <b>isFork</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L102">property <b>isFork</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isFork: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1490,7 +1668,7 @@ An `initialization` block as documented below.
 True if the repository was created as a fork.
 
 <h4 class="pdoc-member-header" id="Git-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L106">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L106">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1498,7 +1676,7 @@ True if the repository was created as a fork.
 The name of the git repository.
 
 <h4 class="pdoc-member-header" id="Git-parentRepositoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L110">property <b>parentRepositoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L110">property <b>parentRepositoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parentRepositoryId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1506,7 +1684,7 @@ The name of the git repository.
 The ID of a Git project from which a fork is to be created.
 
 <h4 class="pdoc-member-header" id="Git-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L114">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L114">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1514,7 +1692,7 @@ The ID of a Git project from which a fork is to be created.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="Git-remoteUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L118">property <b>remoteUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L118">property <b>remoteUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>remoteUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1522,7 +1700,7 @@ The project ID or project name.
 Git HTTPS URL of the repository
 
 <h4 class="pdoc-member-header" id="Git-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L122">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L122">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1530,7 +1708,7 @@ Git HTTPS URL of the repository
 Size in bytes.
 
 <h4 class="pdoc-member-header" id="Git-sshUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L126">property <b>sshUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L126">property <b>sshUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sshUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1538,7 +1716,7 @@ Size in bytes.
 Git SSH URL of the repository.
 
 <h4 class="pdoc-member-header" id="Git-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L130">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L130">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1546,7 +1724,7 @@ Git SSH URL of the repository.
 REST API URL of the repository.
 
 <h4 class="pdoc-member-header" id="Git-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L63">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L63">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1555,7 +1733,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Git-webUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L134">property <b>webUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L134">property <b>webUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>webUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1563,7 +1741,7 @@ deployments.
 Web link to the repository.
 
 <h3 class="pdoc-module-header" id="GitPermissions" data-link-title="GitPermissions">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/gitPermissions.ts#L157">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/gitPermissions.ts#L157">
         Resource <strong>GitPermissions</strong>
     </a>
 </h3>
@@ -1720,7 +1898,7 @@ const project_git_branch_permissions = new azuredevops.GitPermissions("project-g
 The resource does not support import.
 
 <h4 class="pdoc-member-header" id="GitPermissions-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/gitPermissions.ts#L208"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/gitPermissions.ts#L208"> <b>constructor</b></a>
 </h4>
 
 
@@ -1734,7 +1912,7 @@ Create a GitPermissions resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="GitPermissions-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/gitPermissions.ts#L167">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/gitPermissions.ts#L167">method <b>get</b></a>
 </h4>
 
 
@@ -1745,14 +1923,14 @@ Get an existing GitPermissions resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GitPermissions-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/gitPermissions.ts#L157">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/gitPermissions.ts#L157">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GitPermissions-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/gitPermissions.ts#L178">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/gitPermissions.ts#L178">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1763,7 +1941,7 @@ Returns true if the given object is an instance of GitPermissions.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GitPermissions-branchName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/gitPermissions.ts#L188">property <b>branchName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/gitPermissions.ts#L188">property <b>branchName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>branchName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1771,7 +1949,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the branch to assign the permissions.
 
 <h4 class="pdoc-member-header" id="GitPermissions-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/gitPermissions.ts#L157">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/gitPermissions.ts#L157">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1780,7 +1958,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GitPermissions-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/gitPermissions.ts#L192">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/gitPermissions.ts#L192">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
@@ -1788,7 +1966,7 @@ deployments and may be missing (undefined) during planning phases.
 the permissions to assign. The follwing permissions are available
 
 <h4 class="pdoc-member-header" id="GitPermissions-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/gitPermissions.ts#L196">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/gitPermissions.ts#L196">property <b>principal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>principal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1796,7 +1974,7 @@ the permissions to assign. The follwing permissions are available
 The **group** principal to assign the permissions.
 
 <h4 class="pdoc-member-header" id="GitPermissions-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/gitPermissions.ts#L200">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/gitPermissions.ts#L200">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1804,7 +1982,7 @@ The **group** principal to assign the permissions.
 The ID of the project to assign the permissions.
 
 <h4 class="pdoc-member-header" id="GitPermissions-replace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/gitPermissions.ts#L204">property <b>replace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/gitPermissions.ts#L204">property <b>replace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1812,7 +1990,7 @@ The ID of the project to assign the permissions.
 Replace (`true`) or merge (`false`) the permissions. Default: `true`
 
 <h4 class="pdoc-member-header" id="GitPermissions-repositoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/gitPermissions.ts#L208">property <b>repositoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/gitPermissions.ts#L208">property <b>repositoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>repositoryId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1820,7 +1998,7 @@ Replace (`true`) or merge (`false`) the permissions. Default: `true`
 The ID of the GIT repository to assign the permissions
 
 <h4 class="pdoc-member-header" id="GitPermissions-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/gitPermissions.ts#L157">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/gitPermissions.ts#L157">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1829,7 +2007,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Group" data-link-title="Group">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L51">
         Resource <strong>Group</strong>
     </a>
 </h3>
@@ -1880,7 +2058,7 @@ Azure DevOps Projects can be imported using the group identity descriptor, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Group-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L126"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L126"> <b>constructor</b></a>
 </h4>
 
 
@@ -1894,7 +2072,7 @@ Create a Group resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Group-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L61">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L61">method <b>get</b></a>
 </h4>
 
 
@@ -1905,14 +2083,14 @@ Get an existing Group resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Group-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L51">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L51">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Group-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L72">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L72">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1923,7 +2101,7 @@ Returns true if the given object is an instance of Group.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Group-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L82">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L82">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1931,7 +2109,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Description of the Project.
 
 <h4 class="pdoc-member-header" id="Group-descriptor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L86">property <b>descriptor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L86">property <b>descriptor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>descriptor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1939,7 +2117,7 @@ The Description of the Project.
 The identity (subject) descriptor of the Group.
 
 <h4 class="pdoc-member-header" id="Group-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L90">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L90">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1947,7 +2125,7 @@ The identity (subject) descriptor of the Group.
 The name of a new Azure DevOps group that is not backed by an external provider. The `originId` and `mail` arguments cannot be used simultaneously with `displayName`.
 
 <h4 class="pdoc-member-header" id="Group-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L94">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L94">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1955,7 +2133,7 @@ The name of a new Azure DevOps group that is not backed by an external provider.
 This represents the name of the container of origin for a graph member.
 
 <h4 class="pdoc-member-header" id="Group-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L51">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L51">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1964,7 +2142,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Group-mail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L98">property <b>mail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L98">property <b>mail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1972,7 +2150,7 @@ deployments and may be missing (undefined) during planning phases.
 The mail address as a reference to an existing group from an external AD or AAD backed provider. The `scope`, `originId` and `displayName` arguments cannot be used simultaneously with `mail`.
 
 <h4 class="pdoc-member-header" id="Group-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L102">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L102">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1980,7 +2158,7 @@ The mail address as a reference to an existing group from an external AD or AAD 
 > NOTE: It's possible to define group members both within the `azuredevops.Group` resource via the members block and by using the `azuredevops.GroupMembership` resource. However it's not possible to use both methods to manage group members, since there'll be conflicts.
 
 <h4 class="pdoc-member-header" id="Group-origin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L106">property <b>origin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L106">property <b>origin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>origin: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1988,7 +2166,7 @@ The mail address as a reference to an existing group from an external AD or AAD 
 The type of source provider for the origin identifier (ex:AD, AAD, MSA)
 
 <h4 class="pdoc-member-header" id="Group-originId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L110">property <b>originId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L110">property <b>originId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>originId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1996,7 +2174,7 @@ The type of source provider for the origin identifier (ex:AD, AAD, MSA)
 The OriginID as a reference to a group from an external AD or AAD backed provider. The `scope`, `mail` and `displayName` arguments cannot be used simultaneously with `originId`.
 
 <h4 class="pdoc-member-header" id="Group-principalName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L114">property <b>principalName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L114">property <b>principalName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>principalName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2004,7 +2182,7 @@ The OriginID as a reference to a group from an external AD or AAD backed provide
 This is the PrincipalName of this graph member from the source provider.
 
 <h4 class="pdoc-member-header" id="Group-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L118">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L118">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2012,7 +2190,7 @@ This is the PrincipalName of this graph member from the source provider.
 The scope of the group. A descriptor referencing the scope (collection, project) in which the group should be created. If omitted, will be created in the scope of the enclosing account or organization.x
 
 <h4 class="pdoc-member-header" id="Group-subjectKind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L122">property <b>subjectKind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L122">property <b>subjectKind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subjectKind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2020,7 +2198,7 @@ The scope of the group. A descriptor referencing the scope (collection, project)
 This field identifies the type of the graph subject (ex: Group, Scope, User).
 
 <h4 class="pdoc-member-header" id="Group-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L126">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L126">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2028,7 +2206,7 @@ This field identifies the type of the graph subject (ex: Group, Scope, User).
 This url is the full route to the source resource of this graph subject.
 
 <h4 class="pdoc-member-header" id="Group-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L51">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L51">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2037,7 +2215,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="GroupMembership" data-link-title="GroupMembership">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/groupMembership.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/groupMembership.ts#L39">
         Resource <strong>GroupMembership</strong>
     </a>
 </h3>
@@ -2076,7 +2254,7 @@ const membership = new azuredevops.GroupMembership("membership", {
 Not supported.
 
 <h4 class="pdoc-member-header" id="GroupMembership-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/groupMembership.ts#L82"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/groupMembership.ts#L82"> <b>constructor</b></a>
 </h4>
 
 
@@ -2090,7 +2268,7 @@ Create a GroupMembership resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="GroupMembership-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/groupMembership.ts#L49">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/groupMembership.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -2101,14 +2279,14 @@ Get an existing GroupMembership resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GroupMembership-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/groupMembership.ts#L39">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/groupMembership.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GroupMembership-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/groupMembership.ts#L60">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/groupMembership.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2119,7 +2297,7 @@ Returns true if the given object is an instance of GroupMembership.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GroupMembership-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/groupMembership.ts#L70">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/groupMembership.ts#L70">property <b>group</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>group: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2127,7 +2305,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The descriptor of the group being managed.
 
 <h4 class="pdoc-member-header" id="GroupMembership-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/groupMembership.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/groupMembership.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2136,7 +2314,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GroupMembership-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/groupMembership.ts#L75">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/groupMembership.ts#L75">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -2145,7 +2323,7 @@ A list of user or group descriptors that will become members of the group.
 > NOTE: It's possible to define group members both within the `azuredevops.GroupMembership resource` via the members block and by using the `azuredevops.Group` resource. However it's not possible to use both methods to manage group members, since there'll be conflicts.
 
 <h4 class="pdoc-member-header" id="GroupMembership-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/groupMembership.ts#L82">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/groupMembership.ts#L82">property <b>mode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2156,7 +2334,7 @@ The mode how the resource manages group members.
 > NOTE: To clear all members from a group, specify an empty list of descriptors in the `members` attribute and set the `mode` member to `overwrite`.
 
 <h4 class="pdoc-member-header" id="GroupMembership-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/groupMembership.ts#L39">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/groupMembership.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2165,7 +2343,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="IterativePermissions" data-link-title="IterativePermissions">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/iterativePermissions.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/iterativePermissions.ts#L65">
         Resource <strong>IterativePermissions</strong>
     </a>
 </h3>
@@ -2230,7 +2408,7 @@ const iteration_permissions = new azuredevops.IterativePermissions("iteration-pe
 The resource does not support import.
 
 <h4 class="pdoc-member-header" id="IterativePermissions-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/iterativePermissions.ts#L112"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/iterativePermissions.ts#L112"> <b>constructor</b></a>
 </h4>
 
 
@@ -2244,7 +2422,7 @@ Create a IterativePermissions resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="IterativePermissions-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/iterativePermissions.ts#L75">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/iterativePermissions.ts#L75">method <b>get</b></a>
 </h4>
 
 
@@ -2255,14 +2433,14 @@ Get an existing IterativePermissions resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="IterativePermissions-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/iterativePermissions.ts#L65">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/iterativePermissions.ts#L65">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="IterativePermissions-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/iterativePermissions.ts#L86">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/iterativePermissions.ts#L86">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2273,7 +2451,7 @@ Returns true if the given object is an instance of IterativePermissions.  This i
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="IterativePermissions-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/iterativePermissions.ts#L65">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/iterativePermissions.ts#L65">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2282,7 +2460,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="IterativePermissions-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/iterativePermissions.ts#L96">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/iterativePermissions.ts#L96">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2290,7 +2468,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the branch to assign the permissions.
 
 <h4 class="pdoc-member-header" id="IterativePermissions-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/iterativePermissions.ts#L100">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/iterativePermissions.ts#L100">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
@@ -2298,7 +2476,7 @@ The name of the branch to assign the permissions.
 the permissions to assign. The following permissions are available.
 
 <h4 class="pdoc-member-header" id="IterativePermissions-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/iterativePermissions.ts#L104">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/iterativePermissions.ts#L104">property <b>principal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>principal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2306,7 +2484,7 @@ the permissions to assign. The following permissions are available.
 The **group** principal to assign the permissions.
 
 <h4 class="pdoc-member-header" id="IterativePermissions-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/iterativePermissions.ts#L108">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/iterativePermissions.ts#L108">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2314,7 +2492,7 @@ The **group** principal to assign the permissions.
 The ID of the project to assign the permissions.
 
 <h4 class="pdoc-member-header" id="IterativePermissions-replace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/iterativePermissions.ts#L112">property <b>replace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/iterativePermissions.ts#L112">property <b>replace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2322,7 +2500,7 @@ The ID of the project to assign the permissions.
 Replace (`true`) or merge (`false`) the permissions. Default: `true`
 
 <h4 class="pdoc-member-header" id="IterativePermissions-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/iterativePermissions.ts#L65">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/iterativePermissions.ts#L65">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2331,7 +2509,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Pool" data-link-title="Pool">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pool.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pool.ts#L32">
         Resource <strong>Pool</strong>
     </a>
 </h3>
@@ -2359,11 +2537,11 @@ const pool = new azuredevops.Pool("pool", {
 Azure DevOps Agent Pools can be imported using the agent pool ID, e.g.
 
 ```sh
- $ pulumi import azuredevops:index/pool:Pool azuredevops_agent_pool.pool 42
+ $ pulumi import azuredevops:index/pool:Pool pool 42
 ```
 
 <h4 class="pdoc-member-header" id="Pool-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pool.ts#L71"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pool.ts#L71"> <b>constructor</b></a>
 </h4>
 
 
@@ -2377,7 +2555,7 @@ Create a Pool resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Pool-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pool.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pool.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -2388,14 +2566,14 @@ Get an existing Pool resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Pool-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pool.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pool.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Pool-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pool.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pool.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2406,7 +2584,7 @@ Returns true if the given object is an instance of Pool.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Pool-autoProvision">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pool.ts#L63">property <b>autoProvision</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pool.ts#L63">property <b>autoProvision</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoProvision: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2414,7 +2592,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies whether or not a queue should be automatically provisioned for each project collection. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="Pool-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pool.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pool.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2423,7 +2601,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Pool-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pool.ts#L67">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pool.ts#L67">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2431,7 +2609,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the agent pool.
 
 <h4 class="pdoc-member-header" id="Pool-poolType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pool.ts#L71">property <b>poolType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pool.ts#L71">property <b>poolType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>poolType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2439,7 +2617,7 @@ The name of the agent pool.
 Specifies whether the agent pool type is Automation or Deployment. Defaults to `automation`.
 
 <h4 class="pdoc-member-header" id="Pool-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pool.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pool.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2448,7 +2626,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Project" data-link-title="Project">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/project.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/project.ts#L49">
         Resource <strong>Project</strong>
     </a>
 </h3>
@@ -2497,7 +2675,7 @@ Azure DevOps Projects can be imported using the project name or by the project G
 ```
 
 <h4 class="pdoc-member-header" id="Project-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/project.ts#L105"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/project.ts#L105"> <b>constructor</b></a>
 </h4>
 
 
@@ -2511,7 +2689,7 @@ Create a Project resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Project-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/project.ts#L59">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/project.ts#L59">method <b>get</b></a>
 </h4>
 
 
@@ -2522,14 +2700,14 @@ Get an existing Project resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Project-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/project.ts#L49">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/project.ts#L49">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Project-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/project.ts#L70">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/project.ts#L70">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2540,7 +2718,7 @@ Returns true if the given object is an instance of Project.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Project-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/project.ts#L80">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/project.ts#L80">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2548,7 +2726,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Description of the Project.
 
 <h4 class="pdoc-member-header" id="Project-features">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/project.ts#L85">property <b>features</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/project.ts#L85">property <b>features</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>features: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2557,7 +2735,7 @@ Defines the status (`enabled`, `disabled`) of the project features.
 Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
 
 <h4 class="pdoc-member-header" id="Project-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/project.ts#L49">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/project.ts#L49">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2566,7 +2744,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Project-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/project.ts#L89">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/project.ts#L89">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2574,7 +2752,7 @@ deployments and may be missing (undefined) during planning phases.
 The Project Name.
 
 <h4 class="pdoc-member-header" id="Project-processTemplateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/project.ts#L93">property <b>processTemplateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/project.ts#L93">property <b>processTemplateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>processTemplateId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2582,7 +2760,7 @@ The Project Name.
 The Process Template ID used by the Project.
 
 <h4 class="pdoc-member-header" id="Project-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/project.ts#L49">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/project.ts#L49">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2591,7 +2769,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Project-versionControl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/project.ts#L97">property <b>versionControl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/project.ts#L97">property <b>versionControl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>versionControl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2599,7 +2777,7 @@ deployments.
 Specifies the version control system. Valid values: `Git` or `Tfvc`. Defaults to `Git`.
 
 <h4 class="pdoc-member-header" id="Project-visibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/project.ts#L101">property <b>visibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/project.ts#L101">property <b>visibility</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>visibility: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2607,7 +2785,7 @@ Specifies the version control system. Valid values: `Git` or `Tfvc`. Defaults to
 Specifies the visibility of the Project. Valid values: `private` or `public`. Defaults to `private`.
 
 <h4 class="pdoc-member-header" id="Project-workItemTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/project.ts#L105">property <b>workItemTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/project.ts#L105">property <b>workItemTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workItemTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2615,7 +2793,7 @@ Specifies the visibility of the Project. Valid values: `private` or `public`. De
 Specifies the work item template. Defaults to `Agile`.
 
 <h3 class="pdoc-module-header" id="ProjectFeatures" data-link-title="ProjectFeatures">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectFeatures.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectFeatures.ts#L43">
         Resource <strong>ProjectFeatures</strong>
     </a>
 </h3>
@@ -2654,11 +2832,11 @@ No official documentation available
 Azure DevOps feature settings can be imported using the project id, e.g.
 
 ```sh
- $ pulumi import azuredevops:index/projectFeatures:ProjectFeatures project_id 2785562e-8f45-4534-a10e-b9ca1666b17e
+ $ pulumi import azuredevops:index/projectFeatures:ProjectFeatures project_id 00000000-0000-0000-0000-000000000000
 ```
 
 <h4 class="pdoc-member-header" id="ProjectFeatures-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectFeatures.ts#L76"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectFeatures.ts#L76"> <b>constructor</b></a>
 </h4>
 
 
@@ -2672,7 +2850,7 @@ Create a ProjectFeatures resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ProjectFeatures-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectFeatures.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectFeatures.ts#L53">method <b>get</b></a>
 </h4>
 
 
@@ -2683,14 +2861,14 @@ Get an existing ProjectFeatures resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ProjectFeatures-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectFeatures.ts#L43">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectFeatures.ts#L43">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ProjectFeatures-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectFeatures.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectFeatures.ts#L64">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2701,7 +2879,7 @@ Returns true if the given object is an instance of ProjectFeatures.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ProjectFeatures-features">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectFeatures.ts#L75">property <b>features</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectFeatures.ts#L75">property <b>features</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>features: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
@@ -2710,7 +2888,7 @@ Defines the status (`enabled`, `disabled`) of the project features.
 Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
 
 <h4 class="pdoc-member-header" id="ProjectFeatures-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectFeatures.ts#L43">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectFeatures.ts#L43">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2719,12 +2897,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ProjectFeatures-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectFeatures.ts#L76">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectFeatures.ts#L76">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProjectFeatures-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectFeatures.ts#L43">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectFeatures.ts#L43">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2733,7 +2911,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ProjectPermissions" data-link-title="ProjectPermissions">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectPermissions.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectPermissions.ts#L51">
         Resource <strong>ProjectPermissions</strong>
     </a>
 </h3>
@@ -2784,7 +2962,7 @@ const project_perm = new azuredevops.ProjectPermissions("project-perm", {
 The resource does not support import.
 
 <h4 class="pdoc-member-header" id="ProjectPermissions-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectPermissions.ts#L94"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectPermissions.ts#L94"> <b>constructor</b></a>
 </h4>
 
 
@@ -2798,7 +2976,7 @@ Create a ProjectPermissions resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ProjectPermissions-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectPermissions.ts#L61">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectPermissions.ts#L61">method <b>get</b></a>
 </h4>
 
 
@@ -2809,14 +2987,14 @@ Get an existing ProjectPermissions resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ProjectPermissions-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectPermissions.ts#L51">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectPermissions.ts#L51">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ProjectPermissions-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectPermissions.ts#L72">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectPermissions.ts#L72">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2827,7 +3005,7 @@ Returns true if the given object is an instance of ProjectPermissions.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ProjectPermissions-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectPermissions.ts#L51">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectPermissions.ts#L51">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2836,7 +3014,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ProjectPermissions-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectPermissions.ts#L82">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectPermissions.ts#L82">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
@@ -2844,7 +3022,7 @@ deployments and may be missing (undefined) during planning phases.
 the permissions to assign. The following permissions are available
 
 <h4 class="pdoc-member-header" id="ProjectPermissions-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectPermissions.ts#L86">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectPermissions.ts#L86">property <b>principal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>principal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2852,7 +3030,7 @@ the permissions to assign. The following permissions are available
 The **group** principal to assign the permissions.
 
 <h4 class="pdoc-member-header" id="ProjectPermissions-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectPermissions.ts#L90">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectPermissions.ts#L90">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2860,7 +3038,7 @@ The **group** principal to assign the permissions.
 The ID of the project to assign the permissions.
 
 <h4 class="pdoc-member-header" id="ProjectPermissions-replace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectPermissions.ts#L94">property <b>replace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectPermissions.ts#L94">property <b>replace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2868,7 +3046,7 @@ The ID of the project to assign the permissions.
 Replace (`true`) or merge (`false`) the permissions. Default: `true`
 
 <h4 class="pdoc-member-header" id="ProjectPermissions-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectPermissions.ts#L51">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectPermissions.ts#L51">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2877,7 +3055,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Provider" data-link-title="Provider">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/provider.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/provider.ts#L13">
         Resource <strong>Provider</strong>
     </a>
 </h3>
@@ -2890,7 +3068,7 @@ construction to achieve fine-grained programmatic control over provider settings
 [documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
 <h4 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
 </h4>
 
 
@@ -2904,14 +3082,14 @@ Create a Provider resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2922,14 +3100,14 @@ Returns true if the given object is an instance of Provider.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Provider-register">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>static </span>register(provider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2938,7 +3116,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2947,7 +3125,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Queue" data-link-title="Queue">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/queue.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/queue.ts#L48">
         Resource <strong>Queue</strong>
     </a>
 </h3>
@@ -2991,11 +3169,11 @@ const auth = new azuredevops.ResourceAuthorization("auth", {
 Azure DevOps Agent Pools can be imported using the project ID and agent queue ID, e.g.
 
 ```sh
- $ pulumi import azuredevops:index/queue:Queue q 44cbf614-4dfd-4032-9fae-87b0da3bec30/1381
+ $ pulumi import azuredevops:index/queue:Queue q 00000000-0000-0000-0000-000000000000/0
 ```
 
 <h4 class="pdoc-member-header" id="Queue-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/queue.ts#L83"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/queue.ts#L83"> <b>constructor</b></a>
 </h4>
 
 
@@ -3009,7 +3187,7 @@ Create a Queue resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Queue-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/queue.ts#L58">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/queue.ts#L58">method <b>get</b></a>
 </h4>
 
 
@@ -3020,14 +3198,14 @@ Get an existing Queue resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Queue-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/queue.ts#L48">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/queue.ts#L48">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Queue-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/queue.ts#L69">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/queue.ts#L69">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3038,7 +3216,7 @@ Returns true if the given object is an instance of Queue.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Queue-agentPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/queue.ts#L79">property <b>agentPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/queue.ts#L79">property <b>agentPoolId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>agentPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3046,7 +3224,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the organization agent pool.
 
 <h4 class="pdoc-member-header" id="Queue-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/queue.ts#L48">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/queue.ts#L48">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3055,7 +3233,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Queue-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/queue.ts#L83">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/queue.ts#L83">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3063,7 +3241,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the project in which to create the resource.
 
 <h4 class="pdoc-member-header" id="Queue-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/queue.ts#L48">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/queue.ts#L48">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3072,7 +3250,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ResourceAuthorization" data-link-title="ResourceAuthorization">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/resourceAuthorization.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/resourceAuthorization.ts#L36">
         Resource <strong>ResourceAuthorization</strong>
     </a>
 </h3>
@@ -3108,7 +3286,7 @@ const auth = new azuredevops.ResourceAuthorization("auth", {
 - [Azure DevOps Service REST API 5.1 - Authorize Definition Resource](https://docs.microsoft.com/en-us/rest/api/azure/devops/build/resources/authorize%20definition%20resources?view=azure-devops-rest-5.1)
 
 <h4 class="pdoc-member-header" id="ResourceAuthorization-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/resourceAuthorization.ts#L83"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/resourceAuthorization.ts#L83"> <b>constructor</b></a>
 </h4>
 
 
@@ -3122,7 +3300,7 @@ Create a ResourceAuthorization resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ResourceAuthorization-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/resourceAuthorization.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/resourceAuthorization.ts#L46">method <b>get</b></a>
 </h4>
 
 
@@ -3133,14 +3311,14 @@ Get an existing ResourceAuthorization resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ResourceAuthorization-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/resourceAuthorization.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/resourceAuthorization.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ResourceAuthorization-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/resourceAuthorization.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/resourceAuthorization.ts#L57">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3151,7 +3329,7 @@ Returns true if the given object is an instance of ResourceAuthorization.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ResourceAuthorization-authorized">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/resourceAuthorization.ts#L67">property <b>authorized</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/resourceAuthorization.ts#L67">property <b>authorized</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorized: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3159,7 +3337,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Set to true to allow public access in the project. Type: boolean.
 
 <h4 class="pdoc-member-header" id="ResourceAuthorization-definitionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/resourceAuthorization.ts#L71">property <b>definitionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/resourceAuthorization.ts#L71">property <b>definitionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>definitionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3167,7 +3345,7 @@ Set to true to allow public access in the project. Type: boolean.
 The ID of the build definition to authorize. Type: string.
 
 <h4 class="pdoc-member-header" id="ResourceAuthorization-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/resourceAuthorization.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/resourceAuthorization.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3176,7 +3354,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ResourceAuthorization-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/resourceAuthorization.ts#L75">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/resourceAuthorization.ts#L75">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3184,7 +3362,7 @@ deployments and may be missing (undefined) during planning phases.
 The project ID or project name. Type: string.
 
 <h4 class="pdoc-member-header" id="ResourceAuthorization-resourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/resourceAuthorization.ts#L79">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/resourceAuthorization.ts#L79">property <b>resourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3192,7 +3370,7 @@ The project ID or project name. Type: string.
 The ID of the resource to authorize. Type: string.
 
 <h4 class="pdoc-member-header" id="ResourceAuthorization-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/resourceAuthorization.ts#L83">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/resourceAuthorization.ts#L83">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3200,7 +3378,7 @@ The ID of the resource to authorize. Type: string.
 The type of the resource to authorize. Type: string. Valid values: `endpoint`, `queue`, `variablegroup`. Default value: `endpoint`.
 
 <h4 class="pdoc-member-header" id="ResourceAuthorization-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/resourceAuthorization.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/resourceAuthorization.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3209,7 +3387,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ServiceEndpointAws" data-link-title="ServiceEndpointAws">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L42">
         Resource <strong>ServiceEndpointAws</strong>
     </a>
 </h3>
@@ -3251,7 +3429,7 @@ Azure DevOps Service Endpoint AWS can be imported using **projectID/serviceEndpo
 ```
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAws-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L111"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L111"> <b>constructor</b></a>
 </h4>
 
 
@@ -3265,7 +3443,7 @@ Create a ServiceEndpointAws resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAws-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L52">method <b>get</b></a>
 </h4>
 
 
@@ -3276,14 +3454,14 @@ Get an existing ServiceEndpointAws resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAws-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L42">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L42">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAws-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L63">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3294,7 +3472,7 @@ Returns true if the given object is an instance of ServiceEndpointAws.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAws-accessKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L73">property <b>accessKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L73">property <b>accessKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3302,17 +3480,17 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The AWS access key ID for signing programmatic requests.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAws-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L74">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L74">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointAws-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L75">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L75">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointAws-externalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L79">property <b>externalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L79">property <b>externalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>externalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3320,7 +3498,7 @@ The AWS access key ID for signing programmatic requests.
 A unique identifier that is used by third parties when assuming roles in their customers' accounts, aka cross-account role access.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAws-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L42">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L42">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3329,7 +3507,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAws-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L83">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L83">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3337,7 +3515,7 @@ deployments and may be missing (undefined) during planning phases.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAws-roleSessionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L87">property <b>roleSessionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L87">property <b>roleSessionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleSessionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3345,7 +3523,7 @@ The project ID or project name.
 Optional identifier for the assumed role session.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAws-roleToAssume">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L91">property <b>roleToAssume</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L91">property <b>roleToAssume</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleToAssume: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3353,7 +3531,7 @@ Optional identifier for the assumed role session.
 The Amazon Resource Name (ARN) of the role to assume.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAws-secretAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L95">property <b>secretAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L95">property <b>secretAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secretAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3361,7 +3539,7 @@ The Amazon Resource Name (ARN) of the role to assume.
 The AWS secret access key for signing programmatic requests.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAws-secretAccessKeyHash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L99">property <b>secretAccessKeyHash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L99">property <b>secretAccessKeyHash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secretAccessKeyHash: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3369,7 +3547,7 @@ The AWS secret access key for signing programmatic requests.
 A bcrypted hash of the attribute 'secret_access_key'
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAws-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L103">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L103">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceEndpointName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3377,7 +3555,7 @@ A bcrypted hash of the attribute 'secret_access_key'
 The Service Endpoint name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAws-sessionToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L107">property <b>sessionToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L107">property <b>sessionToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sessionToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3385,7 +3563,7 @@ The Service Endpoint name.
 The AWS session token for signing programmatic requests.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAws-sessionTokenHash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L111">property <b>sessionTokenHash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L111">property <b>sessionTokenHash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sessionTokenHash: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3393,7 +3571,7 @@ The AWS session token for signing programmatic requests.
 A bcrypted hash of the attribute 'session_token'
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAws-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L42">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L42">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3402,7 +3580,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ServiceEndpointAzureEcr" data-link-title="ServiceEndpointAzureEcr">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L45">
         Resource <strong>ServiceEndpointAzureEcr</strong>
     </a>
 </h3>
@@ -3443,11 +3621,11 @@ const azurecr = new azuredevops.ServiceEndpointAzureEcr("azurecr", {
 Azure DevOps Service Endpoint Azure Container Registry can be imported using **projectID/serviceEndpointID** or **projectName/serviceEndpointID**
 
 ```sh
- $ pulumi import azuredevops:index/serviceEndpointAzureEcr:ServiceEndpointAzureEcr azuredevops_serviceendpoint_azurecr.serviceendpoint 00000000-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000
+ $ pulumi import azuredevops:index/serviceEndpointAzureEcr:ServiceEndpointAzureEcr serviceendpoint 00000000-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000
 ```
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcr-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L105"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L105"> <b>constructor</b></a>
 </h4>
 
 
@@ -3461,7 +3639,7 @@ Create a ServiceEndpointAzureEcr resource with the given unique name, arguments,
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcr-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L55">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L55">method <b>get</b></a>
 </h4>
 
 
@@ -3472,14 +3650,14 @@ Get an existing ServiceEndpointAzureEcr resource's state with the given name, ID
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcr-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L45">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L45">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcr-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L66">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L66">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3490,12 +3668,12 @@ Returns true if the given object is an instance of ServiceEndpointAzureEcr.  Thi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcr-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L73">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L73">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcr-azurecrName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L77">property <b>azurecrName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L77">property <b>azurecrName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>azurecrName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3503,7 +3681,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Azure container registry name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcr-azurecrSpnTenantid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L81">property <b>azurecrSpnTenantid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L81">property <b>azurecrSpnTenantid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>azurecrSpnTenantid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3511,7 +3689,7 @@ The Azure container registry name.
 The tenant id of the service principal.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcr-azurecrSubscriptionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L85">property <b>azurecrSubscriptionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L85">property <b>azurecrSubscriptionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>azurecrSubscriptionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3519,7 +3697,7 @@ The tenant id of the service principal.
 The subscription id of the Azure targets.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcr-azurecrSubscriptionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L89">property <b>azurecrSubscriptionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L89">property <b>azurecrSubscriptionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>azurecrSubscriptionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3527,7 +3705,7 @@ The subscription id of the Azure targets.
 The subscription name of the Azure targets.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcr-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L93">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L93">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3535,7 +3713,7 @@ The subscription name of the Azure targets.
 The name you will use to refer to this service connection in task inputs.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcr-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L45">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L45">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3544,7 +3722,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcr-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L97">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L97">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3552,7 +3730,7 @@ deployments and may be missing (undefined) during planning phases.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcr-resourceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L101">property <b>resourceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L101">property <b>resourceGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3560,7 +3738,7 @@ The project ID or project name.
 The resource group to which the container registry belongs.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcr-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L105">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L105">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceEndpointName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3568,7 +3746,7 @@ The resource group to which the container registry belongs.
 The name you will use to refer to this service connection in task inputs.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcr-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L45">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L45">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3577,7 +3755,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ServiceEndpointAzureRM" data-link-title="ServiceEndpointAzureRM">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L74">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L74">
         Resource <strong>ServiceEndpointAzureRM</strong>
     </a>
 </h3>
@@ -3646,11 +3824,11 @@ const endpointazure = new azuredevops.ServiceEndpointAzureRM("endpointazure", {
 Azure DevOps Service Endpoint Azure Resource Manage can be imported using **projectID/serviceEndpointID** or **projectName/serviceEndpointID**
 
 ```sh
- $ pulumi import azuredevops:index/serviceEndpointAzureRM:ServiceEndpointAzureRM azuredevops_serviceendpoint_azurerm.serviceendpoint 00000000-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000
+ $ pulumi import azuredevops:index/serviceEndpointAzureRM:ServiceEndpointAzureRM serviceendpoint 00000000-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000
 ```
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRM-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L134"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L134"> <b>constructor</b></a>
 </h4>
 
 
@@ -3664,7 +3842,7 @@ Create a ServiceEndpointAzureRM resource with the given unique name, arguments, 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRM-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L84">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L84">method <b>get</b></a>
 </h4>
 
 
@@ -3675,14 +3853,14 @@ Get an existing ServiceEndpointAzureRM resource's state with the given name, ID,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRM-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L74">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L74">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRM-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L95">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L95">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3693,12 +3871,12 @@ Returns true if the given object is an instance of ServiceEndpointAzureRM.  This
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRM-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L102">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L102">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRM-azurermSpnTenantid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L106">property <b>azurermSpnTenantid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L106">property <b>azurermSpnTenantid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>azurermSpnTenantid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3706,7 +3884,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The tenant id if the service principal.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRM-azurermSubscriptionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L110">property <b>azurermSubscriptionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L110">property <b>azurermSubscriptionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>azurermSubscriptionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3714,7 +3892,7 @@ The tenant id if the service principal.
 The subscription Id of the Azure targets.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRM-azurermSubscriptionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L114">property <b>azurermSubscriptionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L114">property <b>azurermSubscriptionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>azurermSubscriptionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3722,7 +3900,7 @@ The subscription Id of the Azure targets.
 The subscription Name of the targets.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRM-credentials">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L118">property <b>credentials</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L118">property <b>credentials</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>credentials: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#ServiceEndpointAzureRMCredentials'>ServiceEndpointAzureRMCredentials</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3730,7 +3908,7 @@ The subscription Name of the targets.
 A `credentials` block.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRM-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L122">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L122">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3738,7 +3916,7 @@ A `credentials` block.
 Service connection description.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRM-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L74">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L74">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3747,7 +3925,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRM-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L126">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L126">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3755,7 +3933,7 @@ deployments and may be missing (undefined) during planning phases.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRM-resourceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L130">property <b>resourceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L130">property <b>resourceGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3763,7 +3941,7 @@ The project ID or project name.
 The resource group used for scope of automatic service endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRM-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L134">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L134">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceEndpointName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3771,7 +3949,7 @@ The resource group used for scope of automatic service endpoint.
 The Service Endpoint name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRM-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L74">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L74">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3780,7 +3958,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ServiceEndpointBitBucket" data-link-title="ServiceEndpointBitBucket">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointBitBucket.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointBitBucket.ts#L41">
         Resource <strong>ServiceEndpointBitBucket</strong>
     </a>
 </h3>
@@ -3817,11 +3995,11 @@ const serviceendpoint = new azuredevops.ServiceEndpointBitBucket("serviceendpoin
 Azure DevOps Service Endpoint Bitbucket can be imported using **projectID/serviceEndpointID** or **projectName/serviceEndpointID**
 
 ```sh
- $ pulumi import azuredevops:index/serviceEndpointBitBucket:ServiceEndpointBitBucket azuredevops_serviceendpoint_bitbucket.serviceendpoint 00000000-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000
+ $ pulumi import azuredevops:index/serviceEndpointBitBucket:ServiceEndpointBitBucket serviceendpoint 00000000-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000
 ```
 
 <h4 class="pdoc-member-header" id="ServiceEndpointBitBucket-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointBitBucket.ts#L90"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointBitBucket.ts#L90"> <b>constructor</b></a>
 </h4>
 
 
@@ -3835,7 +4013,7 @@ Create a ServiceEndpointBitBucket resource with the given unique name, arguments
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointBitBucket-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointBitBucket.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointBitBucket.ts#L51">method <b>get</b></a>
 </h4>
 
 
@@ -3846,14 +4024,14 @@ Get an existing ServiceEndpointBitBucket resource's state with the given name, I
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointBitBucket-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointBitBucket.ts#L41">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointBitBucket.ts#L41">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ServiceEndpointBitBucket-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointBitBucket.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointBitBucket.ts#L62">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3864,17 +4042,17 @@ Returns true if the given object is an instance of ServiceEndpointBitBucket.  Th
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointBitBucket-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointBitBucket.ts#L69">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointBitBucket.ts#L69">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointBitBucket-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointBitBucket.ts#L70">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointBitBucket.ts#L70">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointBitBucket-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointBitBucket.ts#L41">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointBitBucket.ts#L41">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3883,7 +4061,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointBitBucket-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointBitBucket.ts#L74">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointBitBucket.ts#L74">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3891,7 +4069,7 @@ deployments and may be missing (undefined) during planning phases.
 Bitbucket account password.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointBitBucket-passwordHash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointBitBucket.ts#L78">property <b>passwordHash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointBitBucket.ts#L78">property <b>passwordHash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>passwordHash: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3899,7 +4077,7 @@ Bitbucket account password.
 A bcrypted hash of the attribute 'password'
 
 <h4 class="pdoc-member-header" id="ServiceEndpointBitBucket-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointBitBucket.ts#L82">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointBitBucket.ts#L82">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3907,7 +4085,7 @@ A bcrypted hash of the attribute 'password'
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointBitBucket-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointBitBucket.ts#L86">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointBitBucket.ts#L86">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceEndpointName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3915,7 +4093,7 @@ The project ID or project name.
 The Service Endpoint name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointBitBucket-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointBitBucket.ts#L41">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointBitBucket.ts#L41">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3924,7 +4102,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointBitBucket-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointBitBucket.ts#L90">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointBitBucket.ts#L90">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3932,7 +4110,7 @@ deployments.
 Bitbucket account username.
 
 <h3 class="pdoc-module-header" id="ServiceEndpointDockerRegistry" data-link-title="ServiceEndpointDockerRegistry">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L53">
         Resource <strong>ServiceEndpointDockerRegistry</strong>
     </a>
 </h3>
@@ -3981,11 +4159,11 @@ const otherregistry = new azuredevops.ServiceEndpointDockerRegistry("otherregist
 Azure DevOps Service Endpoint Docker Registry can be imported using **projectID/serviceEndpointID** or **projectName/serviceEndpointID**
 
 ```sh
- $ pulumi import azuredevops:index/serviceEndpointDockerRegistry:ServiceEndpointDockerRegistry azuredevops_serviceendpoint_dockerregistry.serviceendpoint 00000000-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000
+ $ pulumi import azuredevops:index/serviceEndpointDockerRegistry:ServiceEndpointDockerRegistry serviceendpoint 00000000-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000
 ```
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistry-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L117"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L117"> <b>constructor</b></a>
 </h4>
 
 
@@ -3999,7 +4177,7 @@ Create a ServiceEndpointDockerRegistry resource with the given unique name, argu
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistry-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L63">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L63">method <b>get</b></a>
 </h4>
 
 
@@ -4010,14 +4188,14 @@ Get an existing ServiceEndpointDockerRegistry resource's state with the given na
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistry-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L53">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L53">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistry-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L74">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L74">method <b>isInstance</b></a>
 </h4>
 
 
@@ -4028,12 +4206,12 @@ Returns true if the given object is an instance of ServiceEndpointDockerRegistry
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistry-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L81">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L81">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistry-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L85">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L85">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4041,7 +4219,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name you will use to refer to this service connection in task inputs.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistry-dockerEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L89">property <b>dockerEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L89">property <b>dockerEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dockerEmail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4049,7 +4227,7 @@ The name you will use to refer to this service connection in task inputs.
 The email for Docker account user.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistry-dockerPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L93">property <b>dockerPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L93">property <b>dockerPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dockerPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4057,7 +4235,7 @@ The email for Docker account user.
 The password for the account user identified above.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistry-dockerPasswordHash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L97">property <b>dockerPasswordHash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L97">property <b>dockerPasswordHash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dockerPasswordHash: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4065,7 +4243,7 @@ The password for the account user identified above.
 A bcrypted hash of the attribute 'docker_password'
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistry-dockerRegistry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L101">property <b>dockerRegistry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L101">property <b>dockerRegistry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dockerRegistry: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4073,7 +4251,7 @@ A bcrypted hash of the attribute 'docker_password'
 The URL of the Docker registry. (Default: "https://index.docker.io/v1/")
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistry-dockerUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L105">property <b>dockerUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L105">property <b>dockerUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dockerUsername: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4081,7 +4259,7 @@ The URL of the Docker registry. (Default: "https://index.docker.io/v1/")
 The identifier of the Docker account user.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistry-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L53">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L53">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -4090,7 +4268,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistry-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L109">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L109">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4098,7 +4276,7 @@ deployments and may be missing (undefined) during planning phases.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistry-registryType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L113">property <b>registryType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L113">property <b>registryType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>registryType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4106,7 +4284,7 @@ The project ID or project name.
 Can be "DockerHub" or "Others" (Default "DockerHub")
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistry-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L117">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L117">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceEndpointName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4114,7 +4292,7 @@ Can be "DockerHub" or "Others" (Default "DockerHub")
 The name you will use to refer to this service connection in task inputs.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistry-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L53">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L53">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -4123,7 +4301,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ServiceEndpointGitHub" data-link-title="ServiceEndpointGitHub">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointGitHub.ts#L66">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointGitHub.ts#L66">
         Resource <strong>ServiceEndpointGitHub</strong>
     </a>
 </h3>
@@ -4184,11 +4362,11 @@ const serviceendpointGh3 = new azuredevops.ServiceEndpointGitHub("serviceendpoin
 Azure DevOps Service Endpoint GitHub can be imported using **projectID/serviceEndpointID** or **projectName/serviceEndpointID**
 
 ```sh
- $ pulumi import azuredevops:index/serviceEndpointGitHub:ServiceEndpointGitHub azuredevops_serviceendpoint_github.serviceendpoint 00000000-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000
+ $ pulumi import azuredevops:index/serviceEndpointGitHub:ServiceEndpointGitHub serviceendpoint 00000000-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000
 ```
 
 <h4 class="pdoc-member-header" id="ServiceEndpointGitHub-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointGitHub.ts#L111"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointGitHub.ts#L111"> <b>constructor</b></a>
 </h4>
 
 
@@ -4202,7 +4380,7 @@ Create a ServiceEndpointGitHub resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointGitHub-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointGitHub.ts#L76">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointGitHub.ts#L76">method <b>get</b></a>
 </h4>
 
 
@@ -4213,14 +4391,14 @@ Get an existing ServiceEndpointGitHub resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointGitHub-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointGitHub.ts#L66">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointGitHub.ts#L66">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ServiceEndpointGitHub-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointGitHub.ts#L87">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointGitHub.ts#L87">method <b>isInstance</b></a>
 </h4>
 
 
@@ -4231,7 +4409,7 @@ Returns true if the given object is an instance of ServiceEndpointGitHub.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointGitHub-authOauth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointGitHub.ts#L97">property <b>authOauth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointGitHub.ts#L97">property <b>authOauth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authOauth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#ServiceEndpointGitHubAuthOauth'>ServiceEndpointGitHubAuthOauth</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4239,7 +4417,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 An `authOauth` block as documented below. Allows connecting using an Oauth token.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointGitHub-authPersonal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointGitHub.ts#L101">property <b>authPersonal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointGitHub.ts#L101">property <b>authPersonal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authPersonal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#ServiceEndpointGitHubAuthPersonal'>ServiceEndpointGitHubAuthPersonal</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4247,17 +4425,17 @@ An `authOauth` block as documented below. Allows connecting using an Oauth token
 An `authPersonal` block as documented below. Allows connecting using a personal access token.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointGitHub-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointGitHub.ts#L102">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointGitHub.ts#L102">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointGitHub-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointGitHub.ts#L103">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointGitHub.ts#L103">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointGitHub-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointGitHub.ts#L66">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointGitHub.ts#L66">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -4266,7 +4444,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointGitHub-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointGitHub.ts#L107">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointGitHub.ts#L107">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4274,7 +4452,7 @@ deployments and may be missing (undefined) during planning phases.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointGitHub-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointGitHub.ts#L111">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointGitHub.ts#L111">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceEndpointName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4282,7 +4460,7 @@ The project ID or project name.
 The Service Endpoint name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointGitHub-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointGitHub.ts#L66">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointGitHub.ts#L66">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -4291,7 +4469,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ServiceEndpointKubernetes" data-link-title="ServiceEndpointKubernetes">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L23">
         Resource <strong>ServiceEndpointKubernetes</strong>
     </a>
 </h3>
@@ -4309,11 +4487,11 @@ Manages a Kubernetes service endpoint within Azure DevOps.
 Azure DevOps Service Endpoint Kubernetes can be imported using **projectID/serviceEndpointID** or **projectName/serviceEndpointID**
 
 ```sh
- $ pulumi import azuredevops:index/serviceEndpointKubernetes:ServiceEndpointKubernetes azuredevops_serviceendpoint_kubernetes.serviceendpoint 00000000-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000
+ $ pulumi import azuredevops:index/serviceEndpointKubernetes:ServiceEndpointKubernetes serviceendpoint 00000000-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000
 ```
 
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetes-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L80"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L80"> <b>constructor</b></a>
 </h4>
 
 
@@ -4327,7 +4505,7 @@ Create a ServiceEndpointKubernetes resource with the given unique name, argument
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetes-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L33">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L33">method <b>get</b></a>
 </h4>
 
 
@@ -4338,14 +4516,14 @@ Get an existing ServiceEndpointKubernetes resource's state with the given name, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetes-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L23">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L23">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetes-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L44">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L44">method <b>isInstance</b></a>
 </h4>
 
 
@@ -4356,7 +4534,7 @@ Returns true if the given object is an instance of ServiceEndpointKubernetes.  T
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetes-apiserverUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L54">property <b>apiserverUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L54">property <b>apiserverUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiserverUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4364,12 +4542,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Service Endpoint description.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetes-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L55">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L55">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetes-authorizationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L59">property <b>authorizationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L59">property <b>authorizationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorizationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4377,7 +4555,7 @@ The Service Endpoint description.
 The authentication method used to authenticate on the Kubernetes cluster. The value should be one of AzureSubscription, Kubeconfig, ServiceAccount.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetes-azureSubscriptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L63">property <b>azureSubscriptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L63">property <b>azureSubscriptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>azureSubscriptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#ServiceEndpointKubernetesAzureSubscription'>ServiceEndpointKubernetesAzureSubscription</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4385,12 +4563,12 @@ The authentication method used to authenticate on the Kubernetes cluster. The va
 The configuration for authorization_type="AzureSubscription".
 
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetes-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L64">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L64">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetes-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L23">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L23">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -4399,7 +4577,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetes-kubeconfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L68">property <b>kubeconfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L68">property <b>kubeconfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kubeconfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#ServiceEndpointKubernetesKubeconfig'>ServiceEndpointKubernetesKubeconfig</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4407,7 +4585,7 @@ deployments and may be missing (undefined) during planning phases.
 The configuration for authorization_type="Kubeconfig".
 
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetes-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L72">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L72">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4415,7 +4593,7 @@ The configuration for authorization_type="Kubeconfig".
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetes-serviceAccounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L76">property <b>serviceAccounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L76">property <b>serviceAccounts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#ServiceEndpointKubernetesServiceAccount'>ServiceEndpointKubernetesServiceAccount</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4423,7 +4601,7 @@ The project ID or project name.
 The configuration for authorization_type="ServiceAccount". This type uses the credentials of a service account currently deployed to the cluster.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetes-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L80">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L80">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceEndpointName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4431,7 +4609,153 @@ The configuration for authorization_type="ServiceAccount". This type uses the cr
 The Service Endpoint name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetes-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L23">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L23">property <b>urn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h3 class="pdoc-module-header" id="ServiceEndpointPipeline" data-link-title="ServiceEndpointPipeline">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointPipeline.ts#L44">
+        Resource <strong>ServiceEndpointPipeline</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>ServiceEndpointPipeline</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+Manages a Azure DevOps Service Connection service endpoint within Azure DevOps. Allows to run downstream pipelines, monitoring their execution, collecting and consolidating artefacts produced in the delegate pipelines (yaml block `task: RunPipelines@1`). More details on Marketplace page: [RunPipelines](https://marketplace.visualstudio.com/items?itemName=CSE-DevOps.RunPipelines)
+
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azuredevops from "@pulumi/azuredevops";
+
+const project = new azuredevops.Project("project", {
+    visibility: "private",
+    versionControl: "Git",
+    workItemTemplate: "Agile",
+});
+const serviceendpoint = new azuredevops.ServiceEndpointPipeline("serviceendpoint", {
+    projectId: project.id,
+    serviceEndpointName: "Sample Pipeline Runner",
+    organizationName: "MyOrganization",
+    authPersonal: {
+        personalAccessToken: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    },
+    description: "Managed by Terraform",
+});
+```
+#### Relevant Links
+
+- [Azure DevOps Service REST API 5.1 - Agent Pools](https://docs.microsoft.com/en-us/rest/api/azure/devops/serviceendpoint/endpoints?view=azure-devops-rest-5.1)
+
+#### Import
+
+Azure DevOps Service Endpoint can be imported using the `project id`, `service connection id`, e.g.
+
+```sh
+ $ pulumi import azuredevops:index/serviceEndpointPipeline:ServiceEndpointPipeline serviceendpoint projectID/00000000-0000-0000-0000-000000000000
+```
+
+<h4 class="pdoc-member-header" id="ServiceEndpointPipeline-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointPipeline.ts#L89"> <b>constructor</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> ServiceEndpointPipeline(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ServiceEndpointPipelineArgs'>ServiceEndpointPipelineArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
+
+
+Create a ServiceEndpointPipeline resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h4 class="pdoc-member-header" id="ServiceEndpointPipeline-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointPipeline.ts#L54">method <b>get</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ServiceEndpointPipelineState'>ServiceEndpointPipelineState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ServiceEndpointPipeline'>ServiceEndpointPipeline</a></code></pre>
+
+
+Get an existing ServiceEndpointPipeline resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h4 class="pdoc-member-header" id="ServiceEndpointPipeline-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointPipeline.ts#L44">method <b>getProvider</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+
+<h4 class="pdoc-member-header" id="ServiceEndpointPipeline-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointPipeline.ts#L65">method <b>isInstance</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ServiceEndpointPipeline</code></pre>
+
+
+Returns true if the given object is an instance of ServiceEndpointPipeline.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h4 class="pdoc-member-header" id="ServiceEndpointPipeline-authPersonal">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointPipeline.ts#L75">property <b>authPersonal</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>authPersonal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#ServiceEndpointPipelineAuthPersonal'>ServiceEndpointPipelineAuthPersonal</a>&gt;;</code></pre>
+
+An `authPersonal` block as documented below. Allows connecting using a personal access token.
+
+<h4 class="pdoc-member-header" id="ServiceEndpointPipeline-authorization">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointPipeline.ts#L76">property <b>authorization</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>authorization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="ServiceEndpointPipeline-description">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointPipeline.ts#L77">property <b>description</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="ServiceEndpointPipeline-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointPipeline.ts#L44">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h4 class="pdoc-member-header" id="ServiceEndpointPipeline-organizationName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointPipeline.ts#L81">property <b>organizationName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>organizationName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The organization name used for `Organization Url` and `Release API Url` fields.
+
+<h4 class="pdoc-member-header" id="ServiceEndpointPipeline-projectId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointPipeline.ts#L85">property <b>projectId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The project ID or project name.
+
+<h4 class="pdoc-member-header" id="ServiceEndpointPipeline-serviceEndpointName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointPipeline.ts#L89">property <b>serviceEndpointName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>serviceEndpointName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The Service Endpoint name.
+
+<h4 class="pdoc-member-header" id="ServiceEndpointPipeline-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointPipeline.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -4440,7 +4764,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="User" data-link-title="User">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/user.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/user.ts#L32">
         Resource <strong>User</strong>
     </a>
 </h3>
@@ -4472,7 +4796,7 @@ const user = new azuredevops.User("user", {
 The resources allows the import via the UUID of a user entitlement or by using the principal name of a user owning an entitlement.
 
 <h4 class="pdoc-member-header" id="User-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/user.ts#L83"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/user.ts#L83"> <b>constructor</b></a>
 </h4>
 
 
@@ -4486,7 +4810,7 @@ Create a User resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="User-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/user.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/user.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -4497,14 +4821,14 @@ Get an existing User resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="User-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/user.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/user.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="User-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/user.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/user.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -4515,7 +4839,7 @@ Returns true if the given object is an instance of User.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="User-accountLicenseType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/user.ts#L63">property <b>accountLicenseType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/user.ts#L63">property <b>accountLicenseType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountLicenseType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4523,7 +4847,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Type of Account License. Valid values: `advanced`, `earlyAdopter`, `express`, `none`, `professional`, or `stakeholder`. Defaults to `express`. In addition the value `basic` is allowed which is an alias for `express` and reflects the name of the `express` license used in the Azure DevOps web interface.
 
 <h4 class="pdoc-member-header" id="User-descriptor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/user.ts#L67">property <b>descriptor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/user.ts#L67">property <b>descriptor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>descriptor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4531,7 +4855,7 @@ Type of Account License. Valid values: `advanced`, `earlyAdopter`, `express`, `n
 The descriptor is the primary way to reference the graph subject while the system is running. This field will uniquely identify the user graph subject.
 
 <h4 class="pdoc-member-header" id="User-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/user.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/user.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -4540,7 +4864,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="User-licensingSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/user.ts#L71">property <b>licensingSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/user.ts#L71">property <b>licensingSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>licensingSource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4548,7 +4872,7 @@ deployments and may be missing (undefined) during planning phases.
 The source of the licensing (e.g. Account. MSDN etc.) Valid values: `account` (Default), `auto`, `msdn`, `none`, `profile`, `trail`
 
 <h4 class="pdoc-member-header" id="User-origin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/user.ts#L75">property <b>origin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/user.ts#L75">property <b>origin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>origin: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4556,7 +4880,7 @@ The source of the licensing (e.g. Account. MSDN etc.) Valid values: `account` (D
 The type of source provider for the origin identifier.
 
 <h4 class="pdoc-member-header" id="User-originId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/user.ts#L79">property <b>originId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/user.ts#L79">property <b>originId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>originId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4564,7 +4888,7 @@ The type of source provider for the origin identifier.
 The unique identifier from the system of origin. Typically a sid, object id or Guid. e.g. Used for member of other tenant on Azure Active Directory.
 
 <h4 class="pdoc-member-header" id="User-principalName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/user.ts#L83">property <b>principalName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/user.ts#L83">property <b>principalName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>principalName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4572,7 +4896,7 @@ The unique identifier from the system of origin. Typically a sid, object id or G
 The principal name is the PrincipalName of a graph member from the source provider. Usually, e-mail address.
 
 <h4 class="pdoc-member-header" id="User-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/user.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/user.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -4581,7 +4905,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="VariableGroup" data-link-title="VariableGroup">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/variableGroup.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/variableGroup.ts#L60">
         Resource <strong>VariableGroup</strong>
     </a>
 </h3>
@@ -4640,7 +4964,7 @@ const variablegroup = new azuredevops.VariableGroup("variablegroup", {
  _Note that for secret variables, the import command retrieve blank value in the tfstate._
 
 <h4 class="pdoc-member-header" id="VariableGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/variableGroup.ts#L108"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/variableGroup.ts#L108"> <b>constructor</b></a>
 </h4>
 
 
@@ -4654,7 +4978,7 @@ Create a VariableGroup resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="VariableGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/variableGroup.ts#L70">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/variableGroup.ts#L70">method <b>get</b></a>
 </h4>
 
 
@@ -4665,14 +4989,14 @@ Get an existing VariableGroup resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="VariableGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/variableGroup.ts#L60">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/variableGroup.ts#L60">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="VariableGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/variableGroup.ts#L81">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/variableGroup.ts#L81">method <b>isInstance</b></a>
 </h4>
 
 
@@ -4683,7 +5007,7 @@ Returns true if the given object is an instance of VariableGroup.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="VariableGroup-allowAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/variableGroup.ts#L91">property <b>allowAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/variableGroup.ts#L91">property <b>allowAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowAccess: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4691,7 +5015,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Boolean that indicate if this variable group is shared by all pipelines of this project.
 
 <h4 class="pdoc-member-header" id="VariableGroup-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/variableGroup.ts#L95">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/variableGroup.ts#L95">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4699,7 +5023,7 @@ Boolean that indicate if this variable group is shared by all pipelines of this 
 The description of the Variable Group.
 
 <h4 class="pdoc-member-header" id="VariableGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/variableGroup.ts#L60">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/variableGroup.ts#L60">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -4708,12 +5032,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="VariableGroup-keyVault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/variableGroup.ts#L96">property <b>keyVault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/variableGroup.ts#L96">property <b>keyVault</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyVault: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#VariableGroupKeyVault'>VariableGroupKeyVault</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="VariableGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/variableGroup.ts#L100">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/variableGroup.ts#L100">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4721,7 +5045,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the Variable Group.
 
 <h4 class="pdoc-member-header" id="VariableGroup-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/variableGroup.ts#L104">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/variableGroup.ts#L104">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4729,7 +5053,7 @@ The name of the Variable Group.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="VariableGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/variableGroup.ts#L60">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/variableGroup.ts#L60">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -4738,7 +5062,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="VariableGroup-variables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/variableGroup.ts#L108">property <b>variables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/variableGroup.ts#L108">property <b>variables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>variables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#VariableGroupVariable'>VariableGroupVariable</a>[]&gt;;</code></pre>
@@ -4746,7 +5070,7 @@ deployments.
 One or more `variable` blocks as documented below.
 
 <h3 class="pdoc-module-header" id="WorkItemQueryPermissions" data-link-title="WorkItemQueryPermissions">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/workItemQueryPermissions.ts#L114">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/workItemQueryPermissions.ts#L114">
         Resource <strong>WorkItemQueryPermissions</strong>
     </a>
 </h3>
@@ -4860,7 +5184,7 @@ const wiq_sharedqueries_permissions = new azuredevops.WorkItemQueryPermissions("
 The resource does not support import.
 
 <h4 class="pdoc-member-header" id="WorkItemQueryPermissions-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/workItemQueryPermissions.ts#L161"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/workItemQueryPermissions.ts#L161"> <b>constructor</b></a>
 </h4>
 
 
@@ -4874,7 +5198,7 @@ Create a WorkItemQueryPermissions resource with the given unique name, arguments
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="WorkItemQueryPermissions-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/workItemQueryPermissions.ts#L124">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/workItemQueryPermissions.ts#L124">method <b>get</b></a>
 </h4>
 
 
@@ -4885,14 +5209,14 @@ Get an existing WorkItemQueryPermissions resource's state with the given name, I
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="WorkItemQueryPermissions-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/workItemQueryPermissions.ts#L114">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/workItemQueryPermissions.ts#L114">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="WorkItemQueryPermissions-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/workItemQueryPermissions.ts#L135">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/workItemQueryPermissions.ts#L135">method <b>isInstance</b></a>
 </h4>
 
 
@@ -4903,7 +5227,7 @@ Returns true if the given object is an instance of WorkItemQueryPermissions.  Th
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="WorkItemQueryPermissions-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/workItemQueryPermissions.ts#L114">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/workItemQueryPermissions.ts#L114">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -4912,7 +5236,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="WorkItemQueryPermissions-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/workItemQueryPermissions.ts#L145">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/workItemQueryPermissions.ts#L145">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4920,7 +5244,7 @@ deployments and may be missing (undefined) during planning phases.
 Path to a query or folder beneath `Shared Queries`
 
 <h4 class="pdoc-member-header" id="WorkItemQueryPermissions-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/workItemQueryPermissions.ts#L149">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/workItemQueryPermissions.ts#L149">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
@@ -4928,7 +5252,7 @@ Path to a query or folder beneath `Shared Queries`
 the permissions to assign. The following permissions are available
 
 <h4 class="pdoc-member-header" id="WorkItemQueryPermissions-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/workItemQueryPermissions.ts#L153">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/workItemQueryPermissions.ts#L153">property <b>principal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>principal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4936,7 +5260,7 @@ the permissions to assign. The following permissions are available
 The **group** principal to assign the permissions.
 
 <h4 class="pdoc-member-header" id="WorkItemQueryPermissions-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/workItemQueryPermissions.ts#L157">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/workItemQueryPermissions.ts#L157">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4944,7 +5268,7 @@ The **group** principal to assign the permissions.
 The ID of the project to assign the permissions.
 
 <h4 class="pdoc-member-header" id="WorkItemQueryPermissions-replace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/workItemQueryPermissions.ts#L161">property <b>replace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/workItemQueryPermissions.ts#L161">property <b>replace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4952,7 +5276,7 @@ The ID of the project to assign the permissions.
 Replace (`true`) or merge (`false`) the permissions. Default: `true`
 
 <h4 class="pdoc-member-header" id="WorkItemQueryPermissions-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/workItemQueryPermissions.ts#L114">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/workItemQueryPermissions.ts#L114">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -4963,7 +5287,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getAgentQueue" data-link-title="getAgentQueue">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getAgentQueue.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getAgentQueue.ts#L35">
         Function <strong>getAgentQueue</strong>
     </a>
 </h3>
@@ -4999,7 +5323,7 @@ export const poolId = queue.agentPoolId;
 - [Azure DevOps Service REST API 5.1 - Agent Queues - Get](https://docs.microsoft.com/en-us/rest/api/azure/devops/distributedtask/queues/get?view=azure-devops-rest-5.1)
 
 <h3 class="pdoc-module-header" id="getArea" data-link-title="getArea">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getArea.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getArea.ts#L39">
         Function <strong>getArea</strong>
     </a>
 </h3>
@@ -5039,7 +5363,7 @@ const area = project.id.apply(id => azuredevops.getArea({
 - **Project & Team**: vso.work - Grants the ability to read work items, queries, boards, area and iterations paths, and other work item tracking related metadata. Also grants the ability to execute queries, search work items and to receive notifications about work item events via service hooks.
 
 <h3 class="pdoc-module-header" id="getClientConfig" data-link-title="getClientConfig">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getClientConfig.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getClientConfig.ts#L21">
         Function <strong>getClientConfig</strong>
     </a>
 </h3>
@@ -5061,7 +5385,7 @@ export const orgUrl = clientConfig.then(clientConfig => clientConfig.organizatio
 ```
 
 <h3 class="pdoc-module-header" id="getGitRepository" data-link-title="getGitRepository">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getGitRepository.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getGitRepository.ts#L30">
         Function <strong>getGitRepository</strong>
     </a>
 </h3>
@@ -5092,7 +5416,7 @@ const singleRepo = project.then(project => azuredevops.getGitRepository({
 - [Azure DevOps Service REST API 5.1 - Git API](https://docs.microsoft.com/en-us/rest/api/azure/devops/git/?view=azure-devops-rest-5.1)
 
 <h3 class="pdoc-module-header" id="getGroup" data-link-title="getGroup">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getGroup.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getGroup.ts#L36">
         Function <strong>getGroup</strong>
     </a>
 </h3>
@@ -5129,7 +5453,7 @@ export const collectionGroupDescriptor = test_collection_group.then(test_collect
 - [Azure DevOps Service REST API 5.1 - Groups - Get](https://docs.microsoft.com/en-us/rest/api/azure/devops/graph/groups/get?view=azure-devops-rest-5.1)
 
 <h3 class="pdoc-module-header" id="getIteration" data-link-title="getIteration">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getIteration.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getIteration.ts#L42">
         Function <strong>getIteration</strong>
     </a>
 </h3>
@@ -5172,7 +5496,7 @@ const child-iteration = project.id.apply(id => azuredevops.getIteration({
 - **Project & Team**: vso.work - Grants the ability to read work items, queries, boards, area and iterations paths, and other work item tracking related metadata. Also grants the ability to execute queries, search work items and to receive notifications about work item events via service hooks.
 
 <h3 class="pdoc-module-header" id="getPool" data-link-title="getPool">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getPool.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getPool.ts#L28">
         Function <strong>getPool</strong>
     </a>
 </h3>
@@ -5201,7 +5525,7 @@ export const autoProvision = pool.then(pool => pool.autoProvision);
 - [Azure DevOps Service REST API 5.1 - Agent Pools - Get](https://docs.microsoft.com/en-us/rest/api/azure/devops/distributedtask/pools/get?view=azure-devops-rest-5.1)
 
 <h3 class="pdoc-module-header" id="getPools" data-link-title="getPools">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getPools.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getPools.ts#L26">
         Function <strong>getPools</strong>
     </a>
 </h3>
@@ -5228,7 +5552,7 @@ export const poolType = pools.then(pools => pools.agentPools.map(__item => __ite
 - [Azure DevOps Service REST API 5.1 - Agent Pools - Get](https://docs.microsoft.com/en-us/rest/api/azure/devops/distributedtask/pools/get?view=azure-devops-rest-5.1)
 
 <h3 class="pdoc-module-header" id="getProject" data-link-title="getProject">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getProject.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getProject.ts#L31">
         Function <strong>getProject</strong>
     </a>
 </h3>
@@ -5260,7 +5584,7 @@ export const processTemplateId = project.then(project => project.processTemplate
 - [Azure DevOps Service REST API 5.1 - Projects - Get](https://docs.microsoft.com/en-us/rest/api/azure/devops/core/projects/get?view=azure-devops-rest-5.1)
 
 <h3 class="pdoc-module-header" id="getProjects" data-link-title="getProjects">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getProjects.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getProjects.ts#L30">
         Function <strong>getProjects</strong>
     </a>
 </h3>
@@ -5291,7 +5615,7 @@ export const state = test.then(test => test.projects.map(__item => __item.state)
 - [Azure DevOps Service REST API 5.1 - Projects - Get](https://docs.microsoft.com/en-us/rest/api/azure/devops/core/projects/get?view=azure-devops-rest-5.1)
 
 <h3 class="pdoc-module-header" id="getRepositories" data-link-title="getRepositories">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getRepositories.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getRepositories.ts#L34">
         Function <strong>getRepositories</strong>
     </a>
 </h3>
@@ -5326,7 +5650,7 @@ const singleRepo = project.then(project => azuredevops.getRepositories({
 - [Azure DevOps Service REST API 5.1 - Git API](https://docs.microsoft.com/en-us/rest/api/azure/devops/git/?view=azure-devops-rest-5.1)
 
 <h3 class="pdoc-module-header" id="getUsers" data-link-title="getUsers">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getUsers.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getUsers.ts#L44">
         Function <strong>getUsers</strong>
     </a>
 </h3>
@@ -5373,7 +5697,7 @@ const all_from_origin_id = pulumi.output(azuredevops.getUsers({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AreaPermissionsArgs" data-link-title="AreaPermissionsArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/areaPermissions.ts#L180">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/areaPermissions.ts#L180">
         interface <strong>AreaPermissionsArgs</strong>
     </a>
 </h3>
@@ -5383,7 +5707,7 @@ const all_from_origin_id = pulumi.output(azuredevops.getUsers({
 The set of arguments for constructing a AreaPermissions resource.
 
 <h4 class="pdoc-member-header" id="AreaPermissionsArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/areaPermissions.ts#L184">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/areaPermissions.ts#L184">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5391,7 +5715,7 @@ The set of arguments for constructing a AreaPermissions resource.
 The name of the branch to assign the permissions.
 
 <h4 class="pdoc-member-header" id="AreaPermissionsArgs-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/areaPermissions.ts#L188">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/areaPermissions.ts#L188">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -5399,7 +5723,7 @@ The name of the branch to assign the permissions.
 the permissions to assign. The following permissions are available.
 
 <h4 class="pdoc-member-header" id="AreaPermissionsArgs-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/areaPermissions.ts#L192">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/areaPermissions.ts#L192">property <b>principal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5407,7 +5731,7 @@ the permissions to assign. The following permissions are available.
 The **group** principal to assign the permissions.
 
 <h4 class="pdoc-member-header" id="AreaPermissionsArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/areaPermissions.ts#L196">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/areaPermissions.ts#L196">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5415,7 +5739,7 @@ The **group** principal to assign the permissions.
 The ID of the project to assign the permissions.
 
 <h4 class="pdoc-member-header" id="AreaPermissionsArgs-replace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/areaPermissions.ts#L200">property <b>replace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/areaPermissions.ts#L200">property <b>replace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5423,7 +5747,7 @@ The ID of the project to assign the permissions.
 Replace (`true`) or merge (`false`) the permissions. Default: `true`.
 
 <h3 class="pdoc-module-header" id="AreaPermissionsState" data-link-title="AreaPermissionsState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/areaPermissions.ts#L154">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/areaPermissions.ts#L154">
         interface <strong>AreaPermissionsState</strong>
     </a>
 </h3>
@@ -5433,7 +5757,7 @@ Replace (`true`) or merge (`false`) the permissions. Default: `true`.
 Input properties used for looking up and filtering AreaPermissions resources.
 
 <h4 class="pdoc-member-header" id="AreaPermissionsState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/areaPermissions.ts#L158">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/areaPermissions.ts#L158">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5441,7 +5765,7 @@ Input properties used for looking up and filtering AreaPermissions resources.
 The name of the branch to assign the permissions.
 
 <h4 class="pdoc-member-header" id="AreaPermissionsState-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/areaPermissions.ts#L162">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/areaPermissions.ts#L162">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -5449,7 +5773,7 @@ The name of the branch to assign the permissions.
 the permissions to assign. The following permissions are available.
 
 <h4 class="pdoc-member-header" id="AreaPermissionsState-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/areaPermissions.ts#L166">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/areaPermissions.ts#L166">property <b>principal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5457,7 +5781,7 @@ the permissions to assign. The following permissions are available.
 The **group** principal to assign the permissions.
 
 <h4 class="pdoc-member-header" id="AreaPermissionsState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/areaPermissions.ts#L170">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/areaPermissions.ts#L170">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5465,7 +5789,7 @@ The **group** principal to assign the permissions.
 The ID of the project to assign the permissions.
 
 <h4 class="pdoc-member-header" id="AreaPermissionsState-replace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/areaPermissions.ts#L174">property <b>replace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/areaPermissions.ts#L174">property <b>replace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5473,7 +5797,7 @@ The ID of the project to assign the permissions.
 Replace (`true`) or merge (`false`) the permissions. Default: `true`.
 
 <h3 class="pdoc-module-header" id="BranchPolicyAutoReviewersArgs" data-link-title="BranchPolicyAutoReviewersArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyAutoReviewers.ts#L167">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyAutoReviewers.ts#L167">
         interface <strong>BranchPolicyAutoReviewersArgs</strong>
     </a>
 </h3>
@@ -5483,7 +5807,7 @@ Replace (`true`) or merge (`false`) the permissions. Default: `true`.
 The set of arguments for constructing a BranchPolicyAutoReviewers resource.
 
 <h4 class="pdoc-member-header" id="BranchPolicyAutoReviewersArgs-blocking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyAutoReviewers.ts#L171">property <b>blocking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyAutoReviewers.ts#L171">property <b>blocking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blocking?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5491,7 +5815,7 @@ The set of arguments for constructing a BranchPolicyAutoReviewers resource.
 A flag indicating if the policy should be blocking. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyAutoReviewersArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyAutoReviewers.ts#L175">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyAutoReviewers.ts#L175">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5499,7 +5823,7 @@ A flag indicating if the policy should be blocking. Defaults to `true`.
 A flag indicating if the policy should be enabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyAutoReviewersArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyAutoReviewers.ts#L179">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyAutoReviewers.ts#L179">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5507,7 +5831,7 @@ A flag indicating if the policy should be enabled. Defaults to `true`.
 The ID of the project in which the policy will be created.
 
 <h4 class="pdoc-member-header" id="BranchPolicyAutoReviewersArgs-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyAutoReviewers.ts#L183">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyAutoReviewers.ts#L183">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BranchPolicyAutoReviewersSettings'>BranchPolicyAutoReviewersSettings</a>&gt;;</code></pre>
@@ -5515,7 +5839,7 @@ The ID of the project in which the policy will be created.
 Configuration for the policy. This block must be defined exactly once.
 
 <h3 class="pdoc-module-header" id="BranchPolicyAutoReviewersState" data-link-title="BranchPolicyAutoReviewersState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyAutoReviewers.ts#L145">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyAutoReviewers.ts#L145">
         interface <strong>BranchPolicyAutoReviewersState</strong>
     </a>
 </h3>
@@ -5525,7 +5849,7 @@ Configuration for the policy. This block must be defined exactly once.
 Input properties used for looking up and filtering BranchPolicyAutoReviewers resources.
 
 <h4 class="pdoc-member-header" id="BranchPolicyAutoReviewersState-blocking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyAutoReviewers.ts#L149">property <b>blocking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyAutoReviewers.ts#L149">property <b>blocking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blocking?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5533,7 +5857,7 @@ Input properties used for looking up and filtering BranchPolicyAutoReviewers res
 A flag indicating if the policy should be blocking. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyAutoReviewersState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyAutoReviewers.ts#L153">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyAutoReviewers.ts#L153">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5541,7 +5865,7 @@ A flag indicating if the policy should be blocking. Defaults to `true`.
 A flag indicating if the policy should be enabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyAutoReviewersState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyAutoReviewers.ts#L157">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyAutoReviewers.ts#L157">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5549,7 +5873,7 @@ A flag indicating if the policy should be enabled. Defaults to `true`.
 The ID of the project in which the policy will be created.
 
 <h4 class="pdoc-member-header" id="BranchPolicyAutoReviewersState-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyAutoReviewers.ts#L161">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyAutoReviewers.ts#L161">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BranchPolicyAutoReviewersSettings'>BranchPolicyAutoReviewersSettings</a>&gt;;</code></pre>
@@ -5557,7 +5881,7 @@ The ID of the project in which the policy will be created.
 Configuration for the policy. This block must be defined exactly once.
 
 <h3 class="pdoc-module-header" id="BranchPolicyBuildValidationArgs" data-link-title="BranchPolicyBuildValidationArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyBuildValidation.ts#L184">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyBuildValidation.ts#L184">
         interface <strong>BranchPolicyBuildValidationArgs</strong>
     </a>
 </h3>
@@ -5567,7 +5891,7 @@ Configuration for the policy. This block must be defined exactly once.
 The set of arguments for constructing a BranchPolicyBuildValidation resource.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidationArgs-blocking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyBuildValidation.ts#L188">property <b>blocking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyBuildValidation.ts#L188">property <b>blocking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blocking?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5575,7 +5899,7 @@ The set of arguments for constructing a BranchPolicyBuildValidation resource.
 A flag indicating if the policy should be blocking. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidationArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyBuildValidation.ts#L192">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyBuildValidation.ts#L192">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5583,7 +5907,7 @@ A flag indicating if the policy should be blocking. Defaults to `true`.
 A flag indicating if the policy should be enabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidationArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyBuildValidation.ts#L196">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyBuildValidation.ts#L196">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5591,7 +5915,7 @@ A flag indicating if the policy should be enabled. Defaults to `true`.
 The ID of the project in which the policy will be created.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidationArgs-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyBuildValidation.ts#L200">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyBuildValidation.ts#L200">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BranchPolicyBuildValidationSettings'>BranchPolicyBuildValidationSettings</a>&gt;;</code></pre>
@@ -5599,7 +5923,7 @@ The ID of the project in which the policy will be created.
 Configuration for the policy. This block must be defined exactly once.
 
 <h3 class="pdoc-module-header" id="BranchPolicyBuildValidationState" data-link-title="BranchPolicyBuildValidationState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyBuildValidation.ts#L162">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyBuildValidation.ts#L162">
         interface <strong>BranchPolicyBuildValidationState</strong>
     </a>
 </h3>
@@ -5609,7 +5933,7 @@ Configuration for the policy. This block must be defined exactly once.
 Input properties used for looking up and filtering BranchPolicyBuildValidation resources.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidationState-blocking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyBuildValidation.ts#L166">property <b>blocking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyBuildValidation.ts#L166">property <b>blocking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blocking?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5617,7 +5941,7 @@ Input properties used for looking up and filtering BranchPolicyBuildValidation r
 A flag indicating if the policy should be blocking. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidationState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyBuildValidation.ts#L170">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyBuildValidation.ts#L170">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5625,7 +5949,7 @@ A flag indicating if the policy should be blocking. Defaults to `true`.
 A flag indicating if the policy should be enabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidationState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyBuildValidation.ts#L174">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyBuildValidation.ts#L174">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5633,7 +5957,7 @@ A flag indicating if the policy should be enabled. Defaults to `true`.
 The ID of the project in which the policy will be created.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidationState-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyBuildValidation.ts#L178">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyBuildValidation.ts#L178">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BranchPolicyBuildValidationSettings'>BranchPolicyBuildValidationSettings</a>&gt;;</code></pre>
@@ -5641,7 +5965,7 @@ The ID of the project in which the policy will be created.
 Configuration for the policy. This block must be defined exactly once.
 
 <h3 class="pdoc-module-header" id="BranchPolicyCommentResolutionArgs" data-link-title="BranchPolicyCommentResolutionArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyCommentResolution.ts#L166">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyCommentResolution.ts#L166">
         interface <strong>BranchPolicyCommentResolutionArgs</strong>
     </a>
 </h3>
@@ -5651,7 +5975,7 @@ Configuration for the policy. This block must be defined exactly once.
 The set of arguments for constructing a BranchPolicyCommentResolution resource.
 
 <h4 class="pdoc-member-header" id="BranchPolicyCommentResolutionArgs-blocking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyCommentResolution.ts#L170">property <b>blocking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyCommentResolution.ts#L170">property <b>blocking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blocking?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5659,7 +5983,7 @@ The set of arguments for constructing a BranchPolicyCommentResolution resource.
 A flag indicating if the policy should be blocking. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyCommentResolutionArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyCommentResolution.ts#L174">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyCommentResolution.ts#L174">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5667,7 +5991,7 @@ A flag indicating if the policy should be blocking. Defaults to `true`.
 A flag indicating if the policy should be enabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyCommentResolutionArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyCommentResolution.ts#L178">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyCommentResolution.ts#L178">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5675,7 +5999,7 @@ A flag indicating if the policy should be enabled. Defaults to `true`.
 The ID of the project in which the policy will be created.
 
 <h4 class="pdoc-member-header" id="BranchPolicyCommentResolutionArgs-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyCommentResolution.ts#L182">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyCommentResolution.ts#L182">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BranchPolicyCommentResolutionSettings'>BranchPolicyCommentResolutionSettings</a>&gt;;</code></pre>
@@ -5683,7 +6007,7 @@ The ID of the project in which the policy will be created.
 Configuration for the policy. This block must be defined exactly once.
 
 <h3 class="pdoc-module-header" id="BranchPolicyCommentResolutionState" data-link-title="BranchPolicyCommentResolutionState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyCommentResolution.ts#L144">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyCommentResolution.ts#L144">
         interface <strong>BranchPolicyCommentResolutionState</strong>
     </a>
 </h3>
@@ -5693,7 +6017,7 @@ Configuration for the policy. This block must be defined exactly once.
 Input properties used for looking up and filtering BranchPolicyCommentResolution resources.
 
 <h4 class="pdoc-member-header" id="BranchPolicyCommentResolutionState-blocking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyCommentResolution.ts#L148">property <b>blocking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyCommentResolution.ts#L148">property <b>blocking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blocking?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5701,7 +6025,7 @@ Input properties used for looking up and filtering BranchPolicyCommentResolution
 A flag indicating if the policy should be blocking. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyCommentResolutionState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyCommentResolution.ts#L152">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyCommentResolution.ts#L152">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5709,7 +6033,7 @@ A flag indicating if the policy should be blocking. Defaults to `true`.
 A flag indicating if the policy should be enabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyCommentResolutionState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyCommentResolution.ts#L156">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyCommentResolution.ts#L156">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5717,7 +6041,7 @@ A flag indicating if the policy should be enabled. Defaults to `true`.
 The ID of the project in which the policy will be created.
 
 <h4 class="pdoc-member-header" id="BranchPolicyCommentResolutionState-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyCommentResolution.ts#L160">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyCommentResolution.ts#L160">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BranchPolicyCommentResolutionSettings'>BranchPolicyCommentResolutionSettings</a>&gt;;</code></pre>
@@ -5725,7 +6049,7 @@ The ID of the project in which the policy will be created.
 Configuration for the policy. This block must be defined exactly once.
 
 <h3 class="pdoc-module-header" id="BranchPolicyMinReviewersArgs" data-link-title="BranchPolicyMinReviewersArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyMinReviewers.ts#L170">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyMinReviewers.ts#L170">
         interface <strong>BranchPolicyMinReviewersArgs</strong>
     </a>
 </h3>
@@ -5735,7 +6059,7 @@ Configuration for the policy. This block must be defined exactly once.
 The set of arguments for constructing a BranchPolicyMinReviewers resource.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewersArgs-blocking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyMinReviewers.ts#L174">property <b>blocking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyMinReviewers.ts#L174">property <b>blocking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blocking?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5743,7 +6067,7 @@ The set of arguments for constructing a BranchPolicyMinReviewers resource.
 A flag indicating if the policy should be blocking. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewersArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyMinReviewers.ts#L178">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyMinReviewers.ts#L178">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5751,7 +6075,7 @@ A flag indicating if the policy should be blocking. Defaults to `true`.
 A flag indicating if the policy should be enabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewersArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyMinReviewers.ts#L182">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyMinReviewers.ts#L182">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5759,7 +6083,7 @@ A flag indicating if the policy should be enabled. Defaults to `true`.
 The ID of the project in which the policy will be created.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewersArgs-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyMinReviewers.ts#L186">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyMinReviewers.ts#L186">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BranchPolicyMinReviewersSettings'>BranchPolicyMinReviewersSettings</a>&gt;;</code></pre>
@@ -5767,7 +6091,7 @@ The ID of the project in which the policy will be created.
 Configuration for the policy. This block must be defined exactly once.
 
 <h3 class="pdoc-module-header" id="BranchPolicyMinReviewersState" data-link-title="BranchPolicyMinReviewersState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyMinReviewers.ts#L148">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyMinReviewers.ts#L148">
         interface <strong>BranchPolicyMinReviewersState</strong>
     </a>
 </h3>
@@ -5777,7 +6101,7 @@ Configuration for the policy. This block must be defined exactly once.
 Input properties used for looking up and filtering BranchPolicyMinReviewers resources.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewersState-blocking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyMinReviewers.ts#L152">property <b>blocking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyMinReviewers.ts#L152">property <b>blocking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blocking?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5785,7 +6109,7 @@ Input properties used for looking up and filtering BranchPolicyMinReviewers reso
 A flag indicating if the policy should be blocking. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewersState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyMinReviewers.ts#L156">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyMinReviewers.ts#L156">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5793,7 +6117,7 @@ A flag indicating if the policy should be blocking. Defaults to `true`.
 A flag indicating if the policy should be enabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewersState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyMinReviewers.ts#L160">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyMinReviewers.ts#L160">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5801,7 +6125,7 @@ A flag indicating if the policy should be enabled. Defaults to `true`.
 The ID of the project in which the policy will be created.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewersState-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyMinReviewers.ts#L164">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyMinReviewers.ts#L164">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BranchPolicyMinReviewersSettings'>BranchPolicyMinReviewersSettings</a>&gt;;</code></pre>
@@ -5809,7 +6133,7 @@ The ID of the project in which the policy will be created.
 Configuration for the policy. This block must be defined exactly once.
 
 <h3 class="pdoc-module-header" id="BranchPolicyWorkItemLinkingArgs" data-link-title="BranchPolicyWorkItemLinkingArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyWorkItemLinking.ts#L166">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyWorkItemLinking.ts#L166">
         interface <strong>BranchPolicyWorkItemLinkingArgs</strong>
     </a>
 </h3>
@@ -5819,7 +6143,7 @@ Configuration for the policy. This block must be defined exactly once.
 The set of arguments for constructing a BranchPolicyWorkItemLinking resource.
 
 <h4 class="pdoc-member-header" id="BranchPolicyWorkItemLinkingArgs-blocking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyWorkItemLinking.ts#L170">property <b>blocking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyWorkItemLinking.ts#L170">property <b>blocking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blocking?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5827,7 +6151,7 @@ The set of arguments for constructing a BranchPolicyWorkItemLinking resource.
 A flag indicating if the policy should be blocking. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyWorkItemLinkingArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyWorkItemLinking.ts#L174">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyWorkItemLinking.ts#L174">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5835,7 +6159,7 @@ A flag indicating if the policy should be blocking. Defaults to `true`.
 A flag indicating if the policy should be enabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyWorkItemLinkingArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyWorkItemLinking.ts#L178">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyWorkItemLinking.ts#L178">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5843,7 +6167,7 @@ A flag indicating if the policy should be enabled. Defaults to `true`.
 The ID of the project in which the policy will be created.
 
 <h4 class="pdoc-member-header" id="BranchPolicyWorkItemLinkingArgs-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyWorkItemLinking.ts#L182">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyWorkItemLinking.ts#L182">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BranchPolicyWorkItemLinkingSettings'>BranchPolicyWorkItemLinkingSettings</a>&gt;;</code></pre>
@@ -5851,7 +6175,7 @@ The ID of the project in which the policy will be created.
 Configuration for the policy. This block must be defined exactly once.
 
 <h3 class="pdoc-module-header" id="BranchPolicyWorkItemLinkingState" data-link-title="BranchPolicyWorkItemLinkingState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyWorkItemLinking.ts#L144">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyWorkItemLinking.ts#L144">
         interface <strong>BranchPolicyWorkItemLinkingState</strong>
     </a>
 </h3>
@@ -5861,7 +6185,7 @@ Configuration for the policy. This block must be defined exactly once.
 Input properties used for looking up and filtering BranchPolicyWorkItemLinking resources.
 
 <h4 class="pdoc-member-header" id="BranchPolicyWorkItemLinkingState-blocking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyWorkItemLinking.ts#L148">property <b>blocking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyWorkItemLinking.ts#L148">property <b>blocking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blocking?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5869,7 +6193,7 @@ Input properties used for looking up and filtering BranchPolicyWorkItemLinking r
 A flag indicating if the policy should be blocking. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyWorkItemLinkingState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyWorkItemLinking.ts#L152">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyWorkItemLinking.ts#L152">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5877,7 +6201,7 @@ A flag indicating if the policy should be blocking. Defaults to `true`.
 A flag indicating if the policy should be enabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyWorkItemLinkingState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyWorkItemLinking.ts#L156">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyWorkItemLinking.ts#L156">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5885,7 +6209,7 @@ A flag indicating if the policy should be enabled. Defaults to `true`.
 The ID of the project in which the policy will be created.
 
 <h4 class="pdoc-member-header" id="BranchPolicyWorkItemLinkingState-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/branchPolicyWorkItemLinking.ts#L160">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/branchPolicyWorkItemLinking.ts#L160">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BranchPolicyWorkItemLinkingSettings'>BranchPolicyWorkItemLinkingSettings</a>&gt;;</code></pre>
@@ -5893,7 +6217,7 @@ The ID of the project in which the policy will be created.
 Configuration for the policy. This block must be defined exactly once.
 
 <h3 class="pdoc-module-header" id="BuildDefinitionArgs" data-link-title="BuildDefinitionArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L274">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L274">
         interface <strong>BuildDefinitionArgs</strong>
     </a>
 </h3>
@@ -5903,7 +6227,7 @@ Configuration for the policy. This block must be defined exactly once.
 The set of arguments for constructing a BuildDefinition resource.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionArgs-agentPoolName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L278">property <b>agentPoolName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L278">property <b>agentPoolName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>agentPoolName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5911,7 +6235,7 @@ The set of arguments for constructing a BuildDefinition resource.
 The agent pool that should execute the build.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionArgs-ciTrigger">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L282">property <b>ciTrigger</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L282">property <b>ciTrigger</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ciTrigger?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BuildDefinitionCiTrigger'>BuildDefinitionCiTrigger</a>&gt;;</code></pre>
@@ -5919,7 +6243,7 @@ The agent pool that should execute the build.
 Continuous Integration trigger.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L286">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L286">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5927,7 +6251,7 @@ Continuous Integration trigger.
 The name of the build definition.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L290">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L290">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5935,7 +6259,7 @@ The name of the build definition.
 The folder path of the build definition.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L294">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L294">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5943,7 +6267,7 @@ The folder path of the build definition.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionArgs-pullRequestTrigger">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L298">property <b>pullRequestTrigger</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L298">property <b>pullRequestTrigger</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pullRequestTrigger?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BuildDefinitionPullRequestTrigger'>BuildDefinitionPullRequestTrigger</a>&gt;;</code></pre>
@@ -5951,7 +6275,7 @@ The project ID or project name.
 Pull Request Integration Integration trigger.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionArgs-repository">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L302">property <b>repository</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L302">property <b>repository</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repository: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BuildDefinitionRepository'>BuildDefinitionRepository</a>&gt;;</code></pre>
@@ -5959,7 +6283,7 @@ Pull Request Integration Integration trigger.
 A `repository` block as documented below.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionArgs-variableGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L306">property <b>variableGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L306">property <b>variableGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>variableGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
@@ -5967,15 +6291,115 @@ A `repository` block as documented below.
 A list of variable group IDs (integers) to link to the build definition.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionArgs-variables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L310">property <b>variables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L310">property <b>variables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>variables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BuildDefinitionVariable'>BuildDefinitionVariable</a>&gt;[]&gt;;</code></pre>
 
 A list of `variable` blocks, as documented below.
 
+<h3 class="pdoc-module-header" id="BuildDefinitionPermissionsArgs" data-link-title="BuildDefinitionPermissionsArgs">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinitionPermissions.ts#L197">
+        interface <strong>BuildDefinitionPermissionsArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BuildDefinitionPermissionsArgs</span></code></pre>
+
+The set of arguments for constructing a BuildDefinitionPermissions resource.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionPermissionsArgs-buildDefinitionId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinitionPermissions.ts#L201">property <b>buildDefinitionId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>buildDefinitionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The id of the build definition to assign the permissions.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionPermissionsArgs-permissions">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinitionPermissions.ts#L205">property <b>permissions</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
+
+the permissions to assign. The following permissions are available.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionPermissionsArgs-principal">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinitionPermissions.ts#L209">property <b>principal</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>principal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The **group** principal to assign the permissions.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionPermissionsArgs-projectId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinitionPermissions.ts#L213">property <b>projectId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the project to assign the permissions.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionPermissionsArgs-replace">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinitionPermissions.ts#L217">property <b>replace</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>replace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Replace (`true`) or merge (`false`) the permissions. Default: `true`.
+
+<h3 class="pdoc-module-header" id="BuildDefinitionPermissionsState" data-link-title="BuildDefinitionPermissionsState">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinitionPermissions.ts#L171">
+        interface <strong>BuildDefinitionPermissionsState</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BuildDefinitionPermissionsState</span></code></pre>
+
+Input properties used for looking up and filtering BuildDefinitionPermissions resources.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionPermissionsState-buildDefinitionId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinitionPermissions.ts#L175">property <b>buildDefinitionId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>buildDefinitionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The id of the build definition to assign the permissions.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionPermissionsState-permissions">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinitionPermissions.ts#L179">property <b>permissions</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
+
+the permissions to assign. The following permissions are available.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionPermissionsState-principal">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinitionPermissions.ts#L183">property <b>principal</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>principal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The **group** principal to assign the permissions.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionPermissionsState-projectId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinitionPermissions.ts#L187">property <b>projectId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the project to assign the permissions.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionPermissionsState-replace">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinitionPermissions.ts#L191">property <b>replace</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>replace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Replace (`true`) or merge (`false`) the permissions. Default: `true`.
+
 <h3 class="pdoc-module-header" id="BuildDefinitionState" data-link-title="BuildDefinitionState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L228">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L228">
         interface <strong>BuildDefinitionState</strong>
     </a>
 </h3>
@@ -5985,7 +6409,7 @@ A list of `variable` blocks, as documented below.
 Input properties used for looking up and filtering BuildDefinition resources.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionState-agentPoolName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L232">property <b>agentPoolName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L232">property <b>agentPoolName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>agentPoolName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5993,7 +6417,7 @@ Input properties used for looking up and filtering BuildDefinition resources.
 The agent pool that should execute the build.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionState-ciTrigger">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L236">property <b>ciTrigger</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L236">property <b>ciTrigger</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ciTrigger?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BuildDefinitionCiTrigger'>BuildDefinitionCiTrigger</a>&gt;;</code></pre>
@@ -6001,7 +6425,7 @@ The agent pool that should execute the build.
 Continuous Integration trigger.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L240">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L240">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6009,7 +6433,7 @@ Continuous Integration trigger.
 The name of the build definition.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L244">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L244">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6017,7 +6441,7 @@ The name of the build definition.
 The folder path of the build definition.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L248">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L248">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6025,7 +6449,7 @@ The folder path of the build definition.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionState-pullRequestTrigger">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L252">property <b>pullRequestTrigger</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L252">property <b>pullRequestTrigger</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pullRequestTrigger?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BuildDefinitionPullRequestTrigger'>BuildDefinitionPullRequestTrigger</a>&gt;;</code></pre>
@@ -6033,7 +6457,7 @@ The project ID or project name.
 Pull Request Integration Integration trigger.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionState-repository">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L256">property <b>repository</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L256">property <b>repository</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repository?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BuildDefinitionRepository'>BuildDefinitionRepository</a>&gt;;</code></pre>
@@ -6041,7 +6465,7 @@ Pull Request Integration Integration trigger.
 A `repository` block as documented below.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionState-revision">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L260">property <b>revision</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L260">property <b>revision</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>revision?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6049,7 +6473,7 @@ A `repository` block as documented below.
 The revision of the build definition
 
 <h4 class="pdoc-member-header" id="BuildDefinitionState-variableGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L264">property <b>variableGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L264">property <b>variableGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>variableGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
@@ -6057,7 +6481,7 @@ The revision of the build definition
 A list of variable group IDs (integers) to link to the build definition.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionState-variables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/buildDefinition.ts#L268">property <b>variables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/buildDefinition.ts#L268">property <b>variables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>variables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BuildDefinitionVariable'>BuildDefinitionVariable</a>&gt;[]&gt;;</code></pre>
@@ -6065,7 +6489,7 @@ A list of variable group IDs (integers) to link to the build definition.
 A list of `variable` blocks, as documented below.
 
 <h3 class="pdoc-module-header" id="GetAgentQueueArgs" data-link-title="GetAgentQueueArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getAgentQueue.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getAgentQueue.ts#L52">
         interface <strong>GetAgentQueueArgs</strong>
     </a>
 </h3>
@@ -6075,7 +6499,7 @@ A list of `variable` blocks, as documented below.
 A collection of arguments for invoking getAgentQueue.
 
 <h4 class="pdoc-member-header" id="GetAgentQueueArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getAgentQueue.ts#L56">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getAgentQueue.ts#L56">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6083,7 +6507,7 @@ A collection of arguments for invoking getAgentQueue.
 Name of the Agent Queue.
 
 <h4 class="pdoc-member-header" id="GetAgentQueueArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getAgentQueue.ts#L60">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getAgentQueue.ts#L60">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6091,7 +6515,7 @@ Name of the Agent Queue.
 The Project Id.
 
 <h3 class="pdoc-module-header" id="GetAgentQueueResult" data-link-title="GetAgentQueueResult">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getAgentQueue.ts#L66">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getAgentQueue.ts#L66">
         interface <strong>GetAgentQueueResult</strong>
     </a>
 </h3>
@@ -6101,7 +6525,7 @@ The Project Id.
 A collection of values returned by getAgentQueue.
 
 <h4 class="pdoc-member-header" id="GetAgentQueueResult-agentPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getAgentQueue.ts#L70">property <b>agentPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getAgentQueue.ts#L70">property <b>agentPoolId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>agentPoolId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -6109,7 +6533,7 @@ A collection of values returned by getAgentQueue.
 Agent pool identifier to which the agent queue belongs.
 
 <h4 class="pdoc-member-header" id="GetAgentQueueResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getAgentQueue.ts#L74">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getAgentQueue.ts#L74">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6117,7 +6541,7 @@ Agent pool identifier to which the agent queue belongs.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAgentQueueResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getAgentQueue.ts#L78">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getAgentQueue.ts#L78">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6125,7 +6549,7 @@ The provider-assigned unique ID for this managed resource.
 The name of the agent queue.
 
 <h4 class="pdoc-member-header" id="GetAgentQueueResult-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getAgentQueue.ts#L82">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getAgentQueue.ts#L82">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6133,7 +6557,7 @@ The name of the agent queue.
 Project identifier to which the agent queue belongs.
 
 <h3 class="pdoc-module-header" id="GetAreaArgs" data-link-title="GetAreaArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getArea.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getArea.ts#L57">
         interface <strong>GetAreaArgs</strong>
     </a>
 </h3>
@@ -6143,7 +6567,7 @@ Project identifier to which the agent queue belongs.
 A collection of arguments for invoking getArea.
 
 <h4 class="pdoc-member-header" id="GetAreaArgs-fetchChildren">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getArea.ts#L61">property <b>fetchChildren</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getArea.ts#L61">property <b>fetchChildren</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fetchChildren?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -6151,7 +6575,7 @@ A collection of arguments for invoking getArea.
 Read children nodes, _Depth_: 1, _Default_: `true`
 
 <h4 class="pdoc-member-header" id="GetAreaArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getArea.ts#L65">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getArea.ts#L65">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6159,7 +6583,7 @@ Read children nodes, _Depth_: 1, _Default_: `true`
 The path to the Area; _Format_: URL relative; if omitted, or value `"/"` is used, the root Area will be returned
 
 <h4 class="pdoc-member-header" id="GetAreaArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getArea.ts#L69">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getArea.ts#L69">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6167,7 +6591,7 @@ The path to the Area; _Format_: URL relative; if omitted, or value `"/"` is used
 The project ID.
 
 <h3 class="pdoc-module-header" id="GetAreaResult" data-link-title="GetAreaResult">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getArea.ts#L75">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getArea.ts#L75">
         interface <strong>GetAreaResult</strong>
     </a>
 </h3>
@@ -6177,7 +6601,7 @@ The project ID.
 A collection of values returned by getArea.
 
 <h4 class="pdoc-member-header" id="GetAreaResult-childrens">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getArea.ts#L79">property <b>childrens</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getArea.ts#L79">property <b>childrens</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>childrens: <a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#GetAreaChildren'>GetAreaChildren</a>[];</code></pre>
@@ -6185,12 +6609,12 @@ A collection of values returned by getArea.
 A list of `children` blocks as defined below, empty if `hasChildren == false`
 
 <h4 class="pdoc-member-header" id="GetAreaResult-fetchChildren">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getArea.ts#L80">property <b>fetchChildren</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getArea.ts#L80">property <b>fetchChildren</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fetchChildren?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAreaResult-hasChildren">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getArea.ts#L84">property <b>hasChildren</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getArea.ts#L84">property <b>hasChildren</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hasChildren: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -6198,7 +6622,7 @@ A list of `children` blocks as defined below, empty if `hasChildren == false`
 Indicator if the child Area node has child nodes
 
 <h4 class="pdoc-member-header" id="GetAreaResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getArea.ts#L88">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getArea.ts#L88">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6206,7 +6630,7 @@ Indicator if the child Area node has child nodes
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAreaResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getArea.ts#L92">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getArea.ts#L92">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6214,7 +6638,7 @@ The provider-assigned unique ID for this managed resource.
 The name of the child Area node
 
 <h4 class="pdoc-member-header" id="GetAreaResult-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getArea.ts#L96">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getArea.ts#L96">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6222,7 +6646,7 @@ The name of the child Area node
 The complete path (in relative URL format) of the child Area
 
 <h4 class="pdoc-member-header" id="GetAreaResult-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getArea.ts#L100">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getArea.ts#L100">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6230,7 +6654,7 @@ The complete path (in relative URL format) of the child Area
 The project ID of the child Area node
 
 <h3 class="pdoc-module-header" id="GetClientConfigResult" data-link-title="GetClientConfigResult">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getClientConfig.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getClientConfig.ts#L36">
         interface <strong>GetClientConfigResult</strong>
     </a>
 </h3>
@@ -6240,7 +6664,7 @@ The project ID of the child Area node
 A collection of values returned by getClientConfig.
 
 <h4 class="pdoc-member-header" id="GetClientConfigResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getClientConfig.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getClientConfig.ts#L40">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6248,12 +6672,12 @@ A collection of values returned by getClientConfig.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetClientConfigResult-organizationUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getClientConfig.ts#L41">property <b>organizationUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getClientConfig.ts#L41">property <b>organizationUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>organizationUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="getEnv" data-link-title="getEnv">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/utilities.ts#L5">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/utilities.ts#L5">
         function <strong>getEnv</strong>
     </a>
 </h3>
@@ -6262,7 +6686,7 @@ The provider-assigned unique ID for this managed resource.
 <pre class="highlight"><code><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvBoolean" data-link-title="getEnvBoolean">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/utilities.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/utilities.ts#L15">
         function <strong>getEnvBoolean</strong>
     </a>
 </h3>
@@ -6271,7 +6695,7 @@ The provider-assigned unique ID for this managed resource.
 <pre class="highlight"><code><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvNumber" data-link-title="getEnvNumber">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/utilities.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/utilities.ts#L30">
         function <strong>getEnvNumber</strong>
     </a>
 </h3>
@@ -6280,7 +6704,7 @@ The provider-assigned unique ID for this managed resource.
 <pre class="highlight"><code><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="GetGitRepositoryArgs" data-link-title="GetGitRepositoryArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getGitRepository.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getGitRepository.ts#L47">
         interface <strong>GetGitRepositoryArgs</strong>
     </a>
 </h3>
@@ -6290,7 +6714,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getGitRepository.
 
 <h4 class="pdoc-member-header" id="GetGitRepositoryArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getGitRepository.ts#L51">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getGitRepository.ts#L51">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6298,7 +6722,7 @@ A collection of arguments for invoking getGitRepository.
 Name of the Git repository to retrieve
 
 <h4 class="pdoc-member-header" id="GetGitRepositoryArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getGitRepository.ts#L55">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getGitRepository.ts#L55">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6306,7 +6730,7 @@ Name of the Git repository to retrieve
 ID of project to list Git repositories
 
 <h3 class="pdoc-module-header" id="GetGitRepositoryResult" data-link-title="GetGitRepositoryResult">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getGitRepository.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getGitRepository.ts#L61">
         interface <strong>GetGitRepositoryResult</strong>
     </a>
 </h3>
@@ -6316,7 +6740,7 @@ ID of project to list Git repositories
 A collection of values returned by getGitRepository.
 
 <h4 class="pdoc-member-header" id="GetGitRepositoryResult-defaultBranch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getGitRepository.ts#L65">property <b>defaultBranch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getGitRepository.ts#L65">property <b>defaultBranch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultBranch: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6324,7 +6748,7 @@ A collection of values returned by getGitRepository.
 The ref of the default branch.
 
 <h4 class="pdoc-member-header" id="GetGitRepositoryResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getGitRepository.ts#L69">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getGitRepository.ts#L69">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6332,12 +6756,12 @@ The ref of the default branch.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetGitRepositoryResult-isFork">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getGitRepository.ts#L70">property <b>isFork</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getGitRepository.ts#L70">property <b>isFork</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isFork: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetGitRepositoryResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getGitRepository.ts#L74">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getGitRepository.ts#L74">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6345,7 +6769,7 @@ The provider-assigned unique ID for this managed resource.
 Git repository name.
 
 <h4 class="pdoc-member-header" id="GetGitRepositoryResult-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getGitRepository.ts#L78">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getGitRepository.ts#L78">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6353,7 +6777,7 @@ Git repository name.
 Project identifier to which the Git repository belongs.
 
 <h4 class="pdoc-member-header" id="GetGitRepositoryResult-remoteUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getGitRepository.ts#L82">property <b>remoteUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getGitRepository.ts#L82">property <b>remoteUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>remoteUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6361,7 +6785,7 @@ Project identifier to which the Git repository belongs.
 HTTPS Url to clone the Git repository
 
 <h4 class="pdoc-member-header" id="GetGitRepositoryResult-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getGitRepository.ts#L86">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getGitRepository.ts#L86">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -6369,7 +6793,7 @@ HTTPS Url to clone the Git repository
 Compressed size (bytes) of the repository.
 
 <h4 class="pdoc-member-header" id="GetGitRepositoryResult-sshUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getGitRepository.ts#L90">property <b>sshUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getGitRepository.ts#L90">property <b>sshUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sshUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6377,7 +6801,7 @@ Compressed size (bytes) of the repository.
 SSH Url to clone the Git repository
 
 <h4 class="pdoc-member-header" id="GetGitRepositoryResult-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getGitRepository.ts#L94">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getGitRepository.ts#L94">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6385,7 +6809,7 @@ SSH Url to clone the Git repository
 Details REST API endpoint for the Git Repository.
 
 <h4 class="pdoc-member-header" id="GetGitRepositoryResult-webUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getGitRepository.ts#L98">property <b>webUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getGitRepository.ts#L98">property <b>webUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>webUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6393,7 +6817,7 @@ Details REST API endpoint for the Git Repository.
 Url of the Git repository web view
 
 <h3 class="pdoc-module-header" id="GetGroupArgs" data-link-title="GetGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getGroup.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getGroup.ts#L53">
         interface <strong>GetGroupArgs</strong>
     </a>
 </h3>
@@ -6403,7 +6827,7 @@ Url of the Git repository web view
 A collection of arguments for invoking getGroup.
 
 <h4 class="pdoc-member-header" id="GetGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getGroup.ts#L57">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getGroup.ts#L57">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6411,7 +6835,7 @@ A collection of arguments for invoking getGroup.
 The Group Name.
 
 <h4 class="pdoc-member-header" id="GetGroupArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getGroup.ts#L61">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getGroup.ts#L61">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6419,7 +6843,7 @@ The Group Name.
 The Project ID. If no project ID is specified the project collection groups will be searched.
 
 <h3 class="pdoc-module-header" id="GetGroupResult" data-link-title="GetGroupResult">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getGroup.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getGroup.ts#L67">
         interface <strong>GetGroupResult</strong>
     </a>
 </h3>
@@ -6429,7 +6853,7 @@ The Project ID. If no project ID is specified the project collection groups will
 A collection of values returned by getGroup.
 
 <h4 class="pdoc-member-header" id="GetGroupResult-descriptor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getGroup.ts#L71">property <b>descriptor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getGroup.ts#L71">property <b>descriptor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>descriptor: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6437,7 +6861,7 @@ A collection of values returned by getGroup.
 The Descriptor is the primary way to reference the graph subject. This field will uniquely identify the same graph subject across both Accounts and Organizations.
 
 <h4 class="pdoc-member-header" id="GetGroupResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getGroup.ts#L75">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getGroup.ts#L75">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6445,12 +6869,12 @@ The Descriptor is the primary way to reference the graph subject. This field wil
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetGroupResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getGroup.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getGroup.ts#L76">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetGroupResult-origin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getGroup.ts#L80">property <b>origin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getGroup.ts#L80">property <b>origin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>origin: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6458,7 +6882,7 @@ The provider-assigned unique ID for this managed resource.
 The type of source provider for the origin identifier (ex:AD, AAD, MSA)
 
 <h4 class="pdoc-member-header" id="GetGroupResult-originId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getGroup.ts#L84">property <b>originId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getGroup.ts#L84">property <b>originId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>originId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6466,12 +6890,12 @@ The type of source provider for the origin identifier (ex:AD, AAD, MSA)
 The unique identifier from the system of origin. Typically a sid, object id or Guid. Linking and unlinking operations can cause this value to change for a user because the user is not backed by a different provider and has a different unique id in the new provider.
 
 <h4 class="pdoc-member-header" id="GetGroupResult-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getGroup.ts#L85">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getGroup.ts#L85">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetIterationArgs" data-link-title="GetIterationArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getIteration.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getIteration.ts#L60">
         interface <strong>GetIterationArgs</strong>
     </a>
 </h3>
@@ -6481,7 +6905,7 @@ The unique identifier from the system of origin. Typically a sid, object id or G
 A collection of arguments for invoking getIteration.
 
 <h4 class="pdoc-member-header" id="GetIterationArgs-fetchChildren">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getIteration.ts#L64">property <b>fetchChildren</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getIteration.ts#L64">property <b>fetchChildren</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fetchChildren?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -6489,7 +6913,7 @@ A collection of arguments for invoking getIteration.
 Read children nodes, _Depth_: 1, _Default_: `true`
 
 <h4 class="pdoc-member-header" id="GetIterationArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getIteration.ts#L68">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getIteration.ts#L68">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6497,7 +6921,7 @@ Read children nodes, _Depth_: 1, _Default_: `true`
 The path to the Iteration, _Format_: URL relative; if omitted, or value `"/"` is used, the root Iteration will be returned
 
 <h4 class="pdoc-member-header" id="GetIterationArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getIteration.ts#L72">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getIteration.ts#L72">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6505,7 +6929,7 @@ The path to the Iteration, _Format_: URL relative; if omitted, or value `"/"` is
 The project ID.
 
 <h3 class="pdoc-module-header" id="GetIterationResult" data-link-title="GetIterationResult">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getIteration.ts#L78">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getIteration.ts#L78">
         interface <strong>GetIterationResult</strong>
     </a>
 </h3>
@@ -6515,7 +6939,7 @@ The project ID.
 A collection of values returned by getIteration.
 
 <h4 class="pdoc-member-header" id="GetIterationResult-childrens">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getIteration.ts#L82">property <b>childrens</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getIteration.ts#L82">property <b>childrens</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>childrens: <a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#GetIterationChildren'>GetIterationChildren</a>[];</code></pre>
@@ -6523,12 +6947,12 @@ A collection of values returned by getIteration.
 A list of `children` blocks as defined below, empty if `hasChildren == false`
 
 <h4 class="pdoc-member-header" id="GetIterationResult-fetchChildren">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getIteration.ts#L83">property <b>fetchChildren</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getIteration.ts#L83">property <b>fetchChildren</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fetchChildren?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetIterationResult-hasChildren">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getIteration.ts#L87">property <b>hasChildren</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getIteration.ts#L87">property <b>hasChildren</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hasChildren: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -6536,7 +6960,7 @@ A list of `children` blocks as defined below, empty if `hasChildren == false`
 Indicator if the child Iteration node has child nodes
 
 <h4 class="pdoc-member-header" id="GetIterationResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getIteration.ts#L91">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getIteration.ts#L91">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6544,7 +6968,7 @@ Indicator if the child Iteration node has child nodes
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetIterationResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getIteration.ts#L95">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getIteration.ts#L95">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6552,7 +6976,7 @@ The provider-assigned unique ID for this managed resource.
 The name of the child Iteration node
 
 <h4 class="pdoc-member-header" id="GetIterationResult-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getIteration.ts#L99">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getIteration.ts#L99">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6560,7 +6984,7 @@ The name of the child Iteration node
 The complete path (in relative URL format) of the child Iteration
 
 <h4 class="pdoc-member-header" id="GetIterationResult-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getIteration.ts#L103">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getIteration.ts#L103">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6568,7 +6992,7 @@ The complete path (in relative URL format) of the child Iteration
 The project ID of the child Iteration node
 
 <h3 class="pdoc-module-header" id="GetPoolArgs" data-link-title="GetPoolArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getPool.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getPool.ts#L44">
         interface <strong>GetPoolArgs</strong>
     </a>
 </h3>
@@ -6578,7 +7002,7 @@ The project ID of the child Iteration node
 A collection of arguments for invoking getPool.
 
 <h4 class="pdoc-member-header" id="GetPoolArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getPool.ts#L48">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getPool.ts#L48">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6586,7 +7010,7 @@ A collection of arguments for invoking getPool.
 Name of the Agent Pool.
 
 <h3 class="pdoc-module-header" id="GetPoolResult" data-link-title="GetPoolResult">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getPool.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getPool.ts#L54">
         interface <strong>GetPoolResult</strong>
     </a>
 </h3>
@@ -6596,12 +7020,12 @@ Name of the Agent Pool.
 A collection of values returned by getPool.
 
 <h4 class="pdoc-member-header" id="GetPoolResult-autoProvision">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getPool.ts#L55">property <b>autoProvision</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getPool.ts#L55">property <b>autoProvision</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoProvision: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPoolResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getPool.ts#L59">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getPool.ts#L59">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6609,17 +7033,17 @@ A collection of values returned by getPool.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetPoolResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getPool.ts#L60">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getPool.ts#L60">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPoolResult-poolType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getPool.ts#L61">property <b>poolType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getPool.ts#L61">property <b>poolType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>poolType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetPoolsResult" data-link-title="GetPoolsResult">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getPools.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getPools.ts#L41">
         interface <strong>GetPoolsResult</strong>
     </a>
 </h3>
@@ -6629,7 +7053,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of values returned by getPools.
 
 <h4 class="pdoc-member-header" id="GetPoolsResult-agentPools">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getPools.ts#L45">property <b>agentPools</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getPools.ts#L45">property <b>agentPools</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>agentPools: <a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#GetPoolsAgentPool'>GetPoolsAgentPool</a>[];</code></pre>
@@ -6637,7 +7061,7 @@ A collection of values returned by getPools.
 A list of existing agent pools in your Azure DevOps Organization with the following details about every agent pool:
 
 <h4 class="pdoc-member-header" id="GetPoolsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getPools.ts#L49">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getPools.ts#L49">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6645,7 +7069,7 @@ A list of existing agent pools in your Azure DevOps Organization with the follow
 The provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-module-header" id="GetProjectArgs" data-link-title="GetProjectArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getProject.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getProject.ts#L49">
         interface <strong>GetProjectArgs</strong>
     </a>
 </h3>
@@ -6655,7 +7079,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getProject.
 
 <h4 class="pdoc-member-header" id="GetProjectArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getProject.ts#L53">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getProject.ts#L53">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6663,7 +7087,7 @@ A collection of arguments for invoking getProject.
 Name of the Project.
 
 <h4 class="pdoc-member-header" id="GetProjectArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getProject.ts#L57">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getProject.ts#L57">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6671,7 +7095,7 @@ Name of the Project.
 ID of the Project.
 
 <h3 class="pdoc-module-header" id="GetProjectResult" data-link-title="GetProjectResult">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getProject.ts#L63">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getProject.ts#L63">
         interface <strong>GetProjectResult</strong>
     </a>
 </h3>
@@ -6681,17 +7105,17 @@ ID of the Project.
 A collection of values returned by getProject.
 
 <h4 class="pdoc-member-header" id="GetProjectResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getProject.ts#L64">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getProject.ts#L64">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProjectResult-features">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getProject.ts#L65">property <b>features</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getProject.ts#L65">property <b>features</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>features: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetProjectResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getProject.ts#L69">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getProject.ts#L69">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6699,37 +7123,37 @@ A collection of values returned by getProject.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetProjectResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getProject.ts#L70">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getProject.ts#L70">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProjectResult-processTemplateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getProject.ts#L71">property <b>processTemplateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getProject.ts#L71">property <b>processTemplateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>processTemplateId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProjectResult-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getProject.ts#L72">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getProject.ts#L72">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProjectResult-versionControl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getProject.ts#L73">property <b>versionControl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getProject.ts#L73">property <b>versionControl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionControl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProjectResult-visibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getProject.ts#L74">property <b>visibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getProject.ts#L74">property <b>visibility</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>visibility: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProjectResult-workItemTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getProject.ts#L75">property <b>workItemTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getProject.ts#L75">property <b>workItemTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workItemTemplate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetProjectsArgs" data-link-title="GetProjectsArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getProjects.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getProjects.ts#L48">
         interface <strong>GetProjectsArgs</strong>
     </a>
 </h3>
@@ -6739,7 +7163,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getProjects.
 
 <h4 class="pdoc-member-header" id="GetProjectsArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getProjects.ts#L52">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getProjects.ts#L52">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6747,7 +7171,7 @@ A collection of arguments for invoking getProjects.
 Name of the Project, if not specified all projects will be returned.
 
 <h4 class="pdoc-member-header" id="GetProjectsArgs-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getProjects.ts#L56">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getProjects.ts#L56">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6755,7 +7179,7 @@ Name of the Project, if not specified all projects will be returned.
 State of the Project, if not specified all projects will be returned. Valid values are `all`, `deleting`, `new`, `wellFormed`, `createPending`, `unchanged`,`deleted`.
 
 <h3 class="pdoc-module-header" id="GetProjectsResult" data-link-title="GetProjectsResult">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getProjects.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getProjects.ts#L62">
         interface <strong>GetProjectsResult</strong>
     </a>
 </h3>
@@ -6765,7 +7189,7 @@ State of the Project, if not specified all projects will be returned. Valid valu
 A collection of values returned by getProjects.
 
 <h4 class="pdoc-member-header" id="GetProjectsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getProjects.ts#L66">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getProjects.ts#L66">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6773,7 +7197,7 @@ A collection of values returned by getProjects.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetProjectsResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getProjects.ts#L70">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getProjects.ts#L70">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6781,7 +7205,7 @@ The provider-assigned unique ID for this managed resource.
 Project name.
 
 <h4 class="pdoc-member-header" id="GetProjectsResult-projects">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getProjects.ts#L74">property <b>projects</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getProjects.ts#L74">property <b>projects</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projects: <a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#GetProjectsProject'>GetProjectsProject</a>[];</code></pre>
@@ -6789,7 +7213,7 @@ Project name.
 A list of existing projects in your Azure DevOps Organization with details about every project which includes:
 
 <h4 class="pdoc-member-header" id="GetProjectsResult-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getProjects.ts#L78">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getProjects.ts#L78">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6797,7 +7221,7 @@ A list of existing projects in your Azure DevOps Organization with details about
 Project state.
 
 <h3 class="pdoc-module-header" id="GetRepositoriesArgs" data-link-title="GetRepositoriesArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getRepositories.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getRepositories.ts#L53">
         interface <strong>GetRepositoriesArgs</strong>
     </a>
 </h3>
@@ -6807,12 +7231,12 @@ Project state.
 A collection of arguments for invoking getRepositories.
 
 <h4 class="pdoc-member-header" id="GetRepositoriesArgs-includeHidden">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getRepositories.ts#L54">property <b>includeHidden</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getRepositories.ts#L54">property <b>includeHidden</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includeHidden?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRepositoriesArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getRepositories.ts#L58">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getRepositories.ts#L58">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6820,7 +7244,7 @@ A collection of arguments for invoking getRepositories.
 Name of the Git repository to retrieve; requires `projectId` to be specified as well
 
 <h4 class="pdoc-member-header" id="GetRepositoriesArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getRepositories.ts#L62">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getRepositories.ts#L62">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6828,7 +7252,7 @@ Name of the Git repository to retrieve; requires `projectId` to be specified as 
 ID of project to list Git repositories
 
 <h3 class="pdoc-module-header" id="GetRepositoriesResult" data-link-title="GetRepositoriesResult">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getRepositories.ts#L68">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getRepositories.ts#L68">
         interface <strong>GetRepositoriesResult</strong>
     </a>
 </h3>
@@ -6838,7 +7262,7 @@ ID of project to list Git repositories
 A collection of values returned by getRepositories.
 
 <h4 class="pdoc-member-header" id="GetRepositoriesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getRepositories.ts#L72">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getRepositories.ts#L72">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6846,12 +7270,12 @@ A collection of values returned by getRepositories.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetRepositoriesResult-includeHidden">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getRepositories.ts#L73">property <b>includeHidden</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getRepositories.ts#L73">property <b>includeHidden</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includeHidden?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRepositoriesResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getRepositories.ts#L77">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getRepositories.ts#L77">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6859,7 +7283,7 @@ The provider-assigned unique ID for this managed resource.
 Git repository name.
 
 <h4 class="pdoc-member-header" id="GetRepositoriesResult-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getRepositories.ts#L81">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getRepositories.ts#L81">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6867,7 +7291,7 @@ Git repository name.
 Project identifier to which the Git repository belongs.
 
 <h4 class="pdoc-member-header" id="GetRepositoriesResult-repositories">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getRepositories.ts#L85">property <b>repositories</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getRepositories.ts#L85">property <b>repositories</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repositories: <a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#GetRepositoriesRepository'>GetRepositoriesRepository</a>[];</code></pre>
@@ -6875,7 +7299,7 @@ Project identifier to which the Git repository belongs.
 A list of existing projects in your Azure DevOps Organization with details about every project which includes:
 
 <h3 class="pdoc-module-header" id="GetUsersArgs" data-link-title="GetUsersArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getUsers.ts#L64">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getUsers.ts#L64">
         interface <strong>GetUsersArgs</strong>
     </a>
 </h3>
@@ -6885,7 +7309,7 @@ A list of existing projects in your Azure DevOps Organization with details about
 A collection of arguments for invoking getUsers.
 
 <h4 class="pdoc-member-header" id="GetUsersArgs-origin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getUsers.ts#L68">property <b>origin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getUsers.ts#L68">property <b>origin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>origin?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6893,7 +7317,7 @@ A collection of arguments for invoking getUsers.
 The type of source provider for the `originId` parameter (ex:AD, AAD, MSA) The supported origins are listed below.
 
 <h4 class="pdoc-member-header" id="GetUsersArgs-originId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getUsers.ts#L72">property <b>originId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getUsers.ts#L72">property <b>originId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>originId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6901,7 +7325,7 @@ The type of source provider for the `originId` parameter (ex:AD, AAD, MSA) The s
 The unique identifier from the system of origin.
 
 <h4 class="pdoc-member-header" id="GetUsersArgs-principalName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getUsers.ts#L76">property <b>principalName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getUsers.ts#L76">property <b>principalName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principalName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6909,7 +7333,7 @@ The unique identifier from the system of origin.
 The PrincipalName of this graph member from the source provider.
 
 <h4 class="pdoc-member-header" id="GetUsersArgs-subjectTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getUsers.ts#L80">property <b>subjectTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getUsers.ts#L80">property <b>subjectTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectTypes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -6917,7 +7341,7 @@ The PrincipalName of this graph member from the source provider.
 A list of user subject subtypes to reduce the retrieved results, e.g. `msa`, `aad`, `svc` (service identity), `imp` (imported identity), etc. The supported subject types are listed below.
 
 <h3 class="pdoc-module-header" id="GetUsersResult" data-link-title="GetUsersResult">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getUsers.ts#L86">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getUsers.ts#L86">
         interface <strong>GetUsersResult</strong>
     </a>
 </h3>
@@ -6927,7 +7351,7 @@ A list of user subject subtypes to reduce the retrieved results, e.g. `msa`, `aa
 A collection of values returned by getUsers.
 
 <h4 class="pdoc-member-header" id="GetUsersResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getUsers.ts#L90">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getUsers.ts#L90">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6935,7 +7359,7 @@ A collection of values returned by getUsers.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetUsersResult-origin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getUsers.ts#L94">property <b>origin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getUsers.ts#L94">property <b>origin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>origin?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6943,7 +7367,7 @@ The provider-assigned unique ID for this managed resource.
 The type of source provider for the origin identifier (ex:AD, AAD, MSA)
 
 <h4 class="pdoc-member-header" id="GetUsersResult-originId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getUsers.ts#L98">property <b>originId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getUsers.ts#L98">property <b>originId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>originId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6951,7 +7375,7 @@ The type of source provider for the origin identifier (ex:AD, AAD, MSA)
 The unique identifier from the system of origin. Typically a sid, object id or Guid. Linking and unlinking operations can cause this value to change for a user because the user is not backed by a different provider and has a different unique id in the new provider.
 
 <h4 class="pdoc-member-header" id="GetUsersResult-principalName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getUsers.ts#L102">property <b>principalName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getUsers.ts#L102">property <b>principalName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principalName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6959,12 +7383,12 @@ The unique identifier from the system of origin. Typically a sid, object id or G
 This is the PrincipalName of this graph member from the source provider. The source provider may change this field over time and it is not guaranteed to be immutable for the life of the graph member by VSTS.
 
 <h4 class="pdoc-member-header" id="GetUsersResult-subjectTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getUsers.ts#L103">property <b>subjectTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getUsers.ts#L103">property <b>subjectTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectTypes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetUsersResult-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/getUsers.ts#L107">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/getUsers.ts#L107">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>users: <a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#GetUsersUser'>GetUsersUser</a>[];</code></pre>
@@ -6972,7 +7396,7 @@ This is the PrincipalName of this graph member from the source provider. The sou
 A list of existing users in your Azure DevOps Organization with details about every single user which includes:
 
 <h3 class="pdoc-module-header" id="getVersion" data-link-title="getVersion">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/utilities.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/utilities.ts#L41">
         function <strong>getVersion</strong>
     </a>
 </h3>
@@ -6981,7 +7405,7 @@ A list of existing users in your Azure DevOps Organization with details about ev
 <pre class="highlight"><code><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="GitArgs" data-link-title="GitArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L245">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L245">
         interface <strong>GitArgs</strong>
     </a>
 </h3>
@@ -6991,7 +7415,7 @@ A list of existing users in your Azure DevOps Organization with details about ev
 The set of arguments for constructing a Git resource.
 
 <h4 class="pdoc-member-header" id="GitArgs-defaultBranch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L249">property <b>defaultBranch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L249">property <b>defaultBranch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultBranch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6999,7 +7423,7 @@ The set of arguments for constructing a Git resource.
 The ref of the default branch. Will be used as the branch name for initialized repositories.
 
 <h4 class="pdoc-member-header" id="GitArgs-initialization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L253">property <b>initialization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L253">property <b>initialization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>initialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#GitInitialization'>GitInitialization</a>&gt;;</code></pre>
@@ -7007,7 +7431,7 @@ The ref of the default branch. Will be used as the branch name for initialized r
 An `initialization` block as documented below.
 
 <h4 class="pdoc-member-header" id="GitArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L257">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L257">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7015,7 +7439,7 @@ An `initialization` block as documented below.
 The name of the git repository.
 
 <h4 class="pdoc-member-header" id="GitArgs-parentRepositoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L261">property <b>parentRepositoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L261">property <b>parentRepositoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentRepositoryId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7023,7 +7447,7 @@ The name of the git repository.
 The ID of a Git project from which a fork is to be created.
 
 <h4 class="pdoc-member-header" id="GitArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L265">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L265">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7031,7 +7455,7 @@ The ID of a Git project from which a fork is to be created.
 The project ID or project name.
 
 <h3 class="pdoc-module-header" id="GitPermissionsArgs" data-link-title="GitPermissionsArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/gitPermissions.ts#L290">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/gitPermissions.ts#L290">
         interface <strong>GitPermissionsArgs</strong>
     </a>
 </h3>
@@ -7041,7 +7465,7 @@ The project ID or project name.
 The set of arguments for constructing a GitPermissions resource.
 
 <h4 class="pdoc-member-header" id="GitPermissionsArgs-branchName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/gitPermissions.ts#L294">property <b>branchName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/gitPermissions.ts#L294">property <b>branchName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>branchName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7049,7 +7473,7 @@ The set of arguments for constructing a GitPermissions resource.
 The name of the branch to assign the permissions.
 
 <h4 class="pdoc-member-header" id="GitPermissionsArgs-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/gitPermissions.ts#L298">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/gitPermissions.ts#L298">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -7057,7 +7481,7 @@ The name of the branch to assign the permissions.
 the permissions to assign. The follwing permissions are available
 
 <h4 class="pdoc-member-header" id="GitPermissionsArgs-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/gitPermissions.ts#L302">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/gitPermissions.ts#L302">property <b>principal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7065,7 +7489,7 @@ the permissions to assign. The follwing permissions are available
 The **group** principal to assign the permissions.
 
 <h4 class="pdoc-member-header" id="GitPermissionsArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/gitPermissions.ts#L306">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/gitPermissions.ts#L306">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7073,7 +7497,7 @@ The **group** principal to assign the permissions.
 The ID of the project to assign the permissions.
 
 <h4 class="pdoc-member-header" id="GitPermissionsArgs-replace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/gitPermissions.ts#L310">property <b>replace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/gitPermissions.ts#L310">property <b>replace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7081,7 +7505,7 @@ The ID of the project to assign the permissions.
 Replace (`true`) or merge (`false`) the permissions. Default: `true`
 
 <h4 class="pdoc-member-header" id="GitPermissionsArgs-repositoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/gitPermissions.ts#L314">property <b>repositoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/gitPermissions.ts#L314">property <b>repositoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repositoryId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7089,7 +7513,7 @@ Replace (`true`) or merge (`false`) the permissions. Default: `true`
 The ID of the GIT repository to assign the permissions
 
 <h3 class="pdoc-module-header" id="GitPermissionsState" data-link-title="GitPermissionsState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/gitPermissions.ts#L260">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/gitPermissions.ts#L260">
         interface <strong>GitPermissionsState</strong>
     </a>
 </h3>
@@ -7099,7 +7523,7 @@ The ID of the GIT repository to assign the permissions
 Input properties used for looking up and filtering GitPermissions resources.
 
 <h4 class="pdoc-member-header" id="GitPermissionsState-branchName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/gitPermissions.ts#L264">property <b>branchName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/gitPermissions.ts#L264">property <b>branchName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>branchName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7107,7 +7531,7 @@ Input properties used for looking up and filtering GitPermissions resources.
 The name of the branch to assign the permissions.
 
 <h4 class="pdoc-member-header" id="GitPermissionsState-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/gitPermissions.ts#L268">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/gitPermissions.ts#L268">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -7115,7 +7539,7 @@ The name of the branch to assign the permissions.
 the permissions to assign. The follwing permissions are available
 
 <h4 class="pdoc-member-header" id="GitPermissionsState-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/gitPermissions.ts#L272">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/gitPermissions.ts#L272">property <b>principal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7123,7 +7547,7 @@ the permissions to assign. The follwing permissions are available
 The **group** principal to assign the permissions.
 
 <h4 class="pdoc-member-header" id="GitPermissionsState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/gitPermissions.ts#L276">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/gitPermissions.ts#L276">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7131,7 +7555,7 @@ The **group** principal to assign the permissions.
 The ID of the project to assign the permissions.
 
 <h4 class="pdoc-member-header" id="GitPermissionsState-replace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/gitPermissions.ts#L280">property <b>replace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/gitPermissions.ts#L280">property <b>replace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7139,7 +7563,7 @@ The ID of the project to assign the permissions.
 Replace (`true`) or merge (`false`) the permissions. Default: `true`
 
 <h4 class="pdoc-member-header" id="GitPermissionsState-repositoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/gitPermissions.ts#L284">property <b>repositoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/gitPermissions.ts#L284">property <b>repositoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repositoryId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7147,7 +7571,7 @@ Replace (`true`) or merge (`false`) the permissions. Default: `true`
 The ID of the GIT repository to assign the permissions
 
 <h3 class="pdoc-module-header" id="GitState" data-link-title="GitState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L195">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L195">
         interface <strong>GitState</strong>
     </a>
 </h3>
@@ -7157,7 +7581,7 @@ The ID of the GIT repository to assign the permissions
 Input properties used for looking up and filtering Git resources.
 
 <h4 class="pdoc-member-header" id="GitState-defaultBranch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L199">property <b>defaultBranch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L199">property <b>defaultBranch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultBranch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7165,7 +7589,7 @@ Input properties used for looking up and filtering Git resources.
 The ref of the default branch. Will be used as the branch name for initialized repositories.
 
 <h4 class="pdoc-member-header" id="GitState-initialization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L203">property <b>initialization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L203">property <b>initialization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>initialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#GitInitialization'>GitInitialization</a>&gt;;</code></pre>
@@ -7173,7 +7597,7 @@ The ref of the default branch. Will be used as the branch name for initialized r
 An `initialization` block as documented below.
 
 <h4 class="pdoc-member-header" id="GitState-isFork">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L207">property <b>isFork</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L207">property <b>isFork</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isFork?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7181,7 +7605,7 @@ An `initialization` block as documented below.
 True if the repository was created as a fork.
 
 <h4 class="pdoc-member-header" id="GitState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L211">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L211">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7189,7 +7613,7 @@ True if the repository was created as a fork.
 The name of the git repository.
 
 <h4 class="pdoc-member-header" id="GitState-parentRepositoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L215">property <b>parentRepositoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L215">property <b>parentRepositoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentRepositoryId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7197,7 +7621,7 @@ The name of the git repository.
 The ID of a Git project from which a fork is to be created.
 
 <h4 class="pdoc-member-header" id="GitState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L219">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L219">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7205,7 +7629,7 @@ The ID of a Git project from which a fork is to be created.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="GitState-remoteUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L223">property <b>remoteUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L223">property <b>remoteUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>remoteUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7213,7 +7637,7 @@ The project ID or project name.
 Git HTTPS URL of the repository
 
 <h4 class="pdoc-member-header" id="GitState-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L227">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L227">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7221,7 +7645,7 @@ Git HTTPS URL of the repository
 Size in bytes.
 
 <h4 class="pdoc-member-header" id="GitState-sshUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L231">property <b>sshUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L231">property <b>sshUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sshUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7229,7 +7653,7 @@ Size in bytes.
 Git SSH URL of the repository.
 
 <h4 class="pdoc-member-header" id="GitState-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L235">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L235">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7237,7 +7661,7 @@ Git SSH URL of the repository.
 REST API URL of the repository.
 
 <h4 class="pdoc-member-header" id="GitState-webUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/git.ts#L239">property <b>webUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/git.ts#L239">property <b>webUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>webUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7245,7 +7669,7 @@ REST API URL of the repository.
 Web link to the repository.
 
 <h3 class="pdoc-module-header" id="GroupArgs" data-link-title="GroupArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L237">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L237">
         interface <strong>GroupArgs</strong>
     </a>
 </h3>
@@ -7255,7 +7679,7 @@ Web link to the repository.
 The set of arguments for constructing a Group resource.
 
 <h4 class="pdoc-member-header" id="GroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L241">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L241">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7263,7 +7687,7 @@ The set of arguments for constructing a Group resource.
 The Description of the Project.
 
 <h4 class="pdoc-member-header" id="GroupArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L245">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L245">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7271,7 +7695,7 @@ The Description of the Project.
 The name of a new Azure DevOps group that is not backed by an external provider. The `originId` and `mail` arguments cannot be used simultaneously with `displayName`.
 
 <h4 class="pdoc-member-header" id="GroupArgs-mail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L249">property <b>mail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L249">property <b>mail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7279,7 +7703,7 @@ The name of a new Azure DevOps group that is not backed by an external provider.
 The mail address as a reference to an existing group from an external AD or AAD backed provider. The `scope`, `originId` and `displayName` arguments cannot be used simultaneously with `mail`.
 
 <h4 class="pdoc-member-header" id="GroupArgs-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L253">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L253">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -7287,7 +7711,7 @@ The mail address as a reference to an existing group from an external AD or AAD 
 > NOTE: It's possible to define group members both within the `azuredevops.Group` resource via the members block and by using the `azuredevops.GroupMembership` resource. However it's not possible to use both methods to manage group members, since there'll be conflicts.
 
 <h4 class="pdoc-member-header" id="GroupArgs-originId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L257">property <b>originId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L257">property <b>originId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>originId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7295,7 +7719,7 @@ The mail address as a reference to an existing group from an external AD or AAD 
 The OriginID as a reference to a group from an external AD or AAD backed provider. The `scope`, `mail` and `displayName` arguments cannot be used simultaneously with `originId`.
 
 <h4 class="pdoc-member-header" id="GroupArgs-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L261">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L261">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7303,7 +7727,7 @@ The OriginID as a reference to a group from an external AD or AAD backed provide
 The scope of the group. A descriptor referencing the scope (collection, project) in which the group should be created. If omitted, will be created in the scope of the enclosing account or organization.x
 
 <h3 class="pdoc-module-header" id="GroupMembershipArgs" data-link-title="GroupMembershipArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/groupMembership.ts#L149">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/groupMembership.ts#L149">
         interface <strong>GroupMembershipArgs</strong>
     </a>
 </h3>
@@ -7313,7 +7737,7 @@ The scope of the group. A descriptor referencing the scope (collection, project)
 The set of arguments for constructing a GroupMembership resource.
 
 <h4 class="pdoc-member-header" id="GroupMembershipArgs-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/groupMembership.ts#L153">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/groupMembership.ts#L153">property <b>group</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>group: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7321,7 +7745,7 @@ The set of arguments for constructing a GroupMembership resource.
 The descriptor of the group being managed.
 
 <h4 class="pdoc-member-header" id="GroupMembershipArgs-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/groupMembership.ts#L158">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/groupMembership.ts#L158">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -7330,7 +7754,7 @@ A list of user or group descriptors that will become members of the group.
 > NOTE: It's possible to define group members both within the `azuredevops.GroupMembership resource` via the members block and by using the `azuredevops.Group` resource. However it's not possible to use both methods to manage group members, since there'll be conflicts.
 
 <h4 class="pdoc-member-header" id="GroupMembershipArgs-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/groupMembership.ts#L165">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/groupMembership.ts#L165">property <b>mode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7341,7 +7765,7 @@ The mode how the resource manages group members.
 > NOTE: To clear all members from a group, specify an empty list of descriptors in the `members` attribute and set the `mode` member to `overwrite`.
 
 <h3 class="pdoc-module-header" id="GroupMembershipState" data-link-title="GroupMembershipState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/groupMembership.ts#L127">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/groupMembership.ts#L127">
         interface <strong>GroupMembershipState</strong>
     </a>
 </h3>
@@ -7351,7 +7775,7 @@ The mode how the resource manages group members.
 Input properties used for looking up and filtering GroupMembership resources.
 
 <h4 class="pdoc-member-header" id="GroupMembershipState-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/groupMembership.ts#L131">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/groupMembership.ts#L131">property <b>group</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>group?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7359,7 +7783,7 @@ Input properties used for looking up and filtering GroupMembership resources.
 The descriptor of the group being managed.
 
 <h4 class="pdoc-member-header" id="GroupMembershipState-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/groupMembership.ts#L136">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/groupMembership.ts#L136">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -7368,7 +7792,7 @@ A list of user or group descriptors that will become members of the group.
 > NOTE: It's possible to define group members both within the `azuredevops.GroupMembership resource` via the members block and by using the `azuredevops.Group` resource. However it's not possible to use both methods to manage group members, since there'll be conflicts.
 
 <h4 class="pdoc-member-header" id="GroupMembershipState-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/groupMembership.ts#L143">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/groupMembership.ts#L143">property <b>mode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7379,7 +7803,7 @@ The mode how the resource manages group members.
 > NOTE: To clear all members from a group, specify an empty list of descriptors in the `members` attribute and set the `mode` member to `overwrite`.
 
 <h3 class="pdoc-module-header" id="GroupState" data-link-title="GroupState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L183">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L183">
         interface <strong>GroupState</strong>
     </a>
 </h3>
@@ -7389,7 +7813,7 @@ The mode how the resource manages group members.
 Input properties used for looking up and filtering Group resources.
 
 <h4 class="pdoc-member-header" id="GroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L187">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L187">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7397,7 +7821,7 @@ Input properties used for looking up and filtering Group resources.
 The Description of the Project.
 
 <h4 class="pdoc-member-header" id="GroupState-descriptor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L191">property <b>descriptor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L191">property <b>descriptor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>descriptor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7405,7 +7829,7 @@ The Description of the Project.
 The identity (subject) descriptor of the Group.
 
 <h4 class="pdoc-member-header" id="GroupState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L195">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L195">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7413,7 +7837,7 @@ The identity (subject) descriptor of the Group.
 The name of a new Azure DevOps group that is not backed by an external provider. The `originId` and `mail` arguments cannot be used simultaneously with `displayName`.
 
 <h4 class="pdoc-member-header" id="GroupState-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L199">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L199">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7421,7 +7845,7 @@ The name of a new Azure DevOps group that is not backed by an external provider.
 This represents the name of the container of origin for a graph member.
 
 <h4 class="pdoc-member-header" id="GroupState-mail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L203">property <b>mail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L203">property <b>mail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7429,7 +7853,7 @@ This represents the name of the container of origin for a graph member.
 The mail address as a reference to an existing group from an external AD or AAD backed provider. The `scope`, `originId` and `displayName` arguments cannot be used simultaneously with `mail`.
 
 <h4 class="pdoc-member-header" id="GroupState-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L207">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L207">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -7437,7 +7861,7 @@ The mail address as a reference to an existing group from an external AD or AAD 
 > NOTE: It's possible to define group members both within the `azuredevops.Group` resource via the members block and by using the `azuredevops.GroupMembership` resource. However it's not possible to use both methods to manage group members, since there'll be conflicts.
 
 <h4 class="pdoc-member-header" id="GroupState-origin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L211">property <b>origin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L211">property <b>origin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>origin?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7445,7 +7869,7 @@ The mail address as a reference to an existing group from an external AD or AAD 
 The type of source provider for the origin identifier (ex:AD, AAD, MSA)
 
 <h4 class="pdoc-member-header" id="GroupState-originId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L215">property <b>originId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L215">property <b>originId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>originId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7453,7 +7877,7 @@ The type of source provider for the origin identifier (ex:AD, AAD, MSA)
 The OriginID as a reference to a group from an external AD or AAD backed provider. The `scope`, `mail` and `displayName` arguments cannot be used simultaneously with `originId`.
 
 <h4 class="pdoc-member-header" id="GroupState-principalName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L219">property <b>principalName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L219">property <b>principalName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principalName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7461,7 +7885,7 @@ The OriginID as a reference to a group from an external AD or AAD backed provide
 This is the PrincipalName of this graph member from the source provider.
 
 <h4 class="pdoc-member-header" id="GroupState-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L223">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L223">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7469,7 +7893,7 @@ This is the PrincipalName of this graph member from the source provider.
 The scope of the group. A descriptor referencing the scope (collection, project) in which the group should be created. If omitted, will be created in the scope of the enclosing account or organization.x
 
 <h4 class="pdoc-member-header" id="GroupState-subjectKind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L227">property <b>subjectKind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L227">property <b>subjectKind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectKind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7477,7 +7901,7 @@ The scope of the group. A descriptor referencing the scope (collection, project)
 This field identifies the type of the graph subject (ex: Group, Scope, User).
 
 <h4 class="pdoc-member-header" id="GroupState-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/group.ts#L231">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/group.ts#L231">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7485,7 +7909,7 @@ This field identifies the type of the graph subject (ex: Group, Scope, User).
 This url is the full route to the source resource of this graph subject.
 
 <h3 class="pdoc-module-header" id="IterativePermissionsArgs" data-link-title="IterativePermissionsArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/iterativePermissions.ts#L188">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/iterativePermissions.ts#L188">
         interface <strong>IterativePermissionsArgs</strong>
     </a>
 </h3>
@@ -7495,7 +7919,7 @@ This url is the full route to the source resource of this graph subject.
 The set of arguments for constructing a IterativePermissions resource.
 
 <h4 class="pdoc-member-header" id="IterativePermissionsArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/iterativePermissions.ts#L192">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/iterativePermissions.ts#L192">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7503,7 +7927,7 @@ The set of arguments for constructing a IterativePermissions resource.
 The name of the branch to assign the permissions.
 
 <h4 class="pdoc-member-header" id="IterativePermissionsArgs-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/iterativePermissions.ts#L196">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/iterativePermissions.ts#L196">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -7511,7 +7935,7 @@ The name of the branch to assign the permissions.
 the permissions to assign. The following permissions are available.
 
 <h4 class="pdoc-member-header" id="IterativePermissionsArgs-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/iterativePermissions.ts#L200">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/iterativePermissions.ts#L200">property <b>principal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7519,7 +7943,7 @@ the permissions to assign. The following permissions are available.
 The **group** principal to assign the permissions.
 
 <h4 class="pdoc-member-header" id="IterativePermissionsArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/iterativePermissions.ts#L204">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/iterativePermissions.ts#L204">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7527,7 +7951,7 @@ The **group** principal to assign the permissions.
 The ID of the project to assign the permissions.
 
 <h4 class="pdoc-member-header" id="IterativePermissionsArgs-replace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/iterativePermissions.ts#L208">property <b>replace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/iterativePermissions.ts#L208">property <b>replace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7535,7 +7959,7 @@ The ID of the project to assign the permissions.
 Replace (`true`) or merge (`false`) the permissions. Default: `true`
 
 <h3 class="pdoc-module-header" id="IterativePermissionsState" data-link-title="IterativePermissionsState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/iterativePermissions.ts#L162">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/iterativePermissions.ts#L162">
         interface <strong>IterativePermissionsState</strong>
     </a>
 </h3>
@@ -7545,7 +7969,7 @@ Replace (`true`) or merge (`false`) the permissions. Default: `true`
 Input properties used for looking up and filtering IterativePermissions resources.
 
 <h4 class="pdoc-member-header" id="IterativePermissionsState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/iterativePermissions.ts#L166">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/iterativePermissions.ts#L166">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7553,7 +7977,7 @@ Input properties used for looking up and filtering IterativePermissions resource
 The name of the branch to assign the permissions.
 
 <h4 class="pdoc-member-header" id="IterativePermissionsState-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/iterativePermissions.ts#L170">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/iterativePermissions.ts#L170">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -7561,7 +7985,7 @@ The name of the branch to assign the permissions.
 the permissions to assign. The following permissions are available.
 
 <h4 class="pdoc-member-header" id="IterativePermissionsState-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/iterativePermissions.ts#L174">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/iterativePermissions.ts#L174">property <b>principal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7569,7 +7993,7 @@ the permissions to assign. The following permissions are available.
 The **group** principal to assign the permissions.
 
 <h4 class="pdoc-member-header" id="IterativePermissionsState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/iterativePermissions.ts#L178">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/iterativePermissions.ts#L178">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7577,7 +8001,7 @@ The **group** principal to assign the permissions.
 The ID of the project to assign the permissions.
 
 <h4 class="pdoc-member-header" id="IterativePermissionsState-replace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/iterativePermissions.ts#L182">property <b>replace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/iterativePermissions.ts#L182">property <b>replace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7585,7 +8009,7 @@ The ID of the project to assign the permissions.
 Replace (`true`) or merge (`false`) the permissions. Default: `true`
 
 <h3 class="pdoc-module-header" id="PoolArgs" data-link-title="PoolArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pool.ts#L128">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pool.ts#L128">
         interface <strong>PoolArgs</strong>
     </a>
 </h3>
@@ -7595,7 +8019,7 @@ Replace (`true`) or merge (`false`) the permissions. Default: `true`
 The set of arguments for constructing a Pool resource.
 
 <h4 class="pdoc-member-header" id="PoolArgs-autoProvision">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pool.ts#L132">property <b>autoProvision</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pool.ts#L132">property <b>autoProvision</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoProvision?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7603,7 +8027,7 @@ The set of arguments for constructing a Pool resource.
 Specifies whether or not a queue should be automatically provisioned for each project collection. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="PoolArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pool.ts#L136">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pool.ts#L136">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7611,7 +8035,7 @@ Specifies whether or not a queue should be automatically provisioned for each pr
 The name of the agent pool.
 
 <h4 class="pdoc-member-header" id="PoolArgs-poolType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pool.ts#L140">property <b>poolType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pool.ts#L140">property <b>poolType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>poolType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7619,7 +8043,7 @@ The name of the agent pool.
 Specifies whether the agent pool type is Automation or Deployment. Defaults to `automation`.
 
 <h3 class="pdoc-module-header" id="PoolState" data-link-title="PoolState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pool.ts#L110">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pool.ts#L110">
         interface <strong>PoolState</strong>
     </a>
 </h3>
@@ -7629,7 +8053,7 @@ Specifies whether the agent pool type is Automation or Deployment. Defaults to `
 Input properties used for looking up and filtering Pool resources.
 
 <h4 class="pdoc-member-header" id="PoolState-autoProvision">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pool.ts#L114">property <b>autoProvision</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pool.ts#L114">property <b>autoProvision</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoProvision?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7637,7 +8061,7 @@ Input properties used for looking up and filtering Pool resources.
 Specifies whether or not a queue should be automatically provisioned for each project collection. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="PoolState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pool.ts#L118">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pool.ts#L118">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7645,7 +8069,7 @@ Specifies whether or not a queue should be automatically provisioned for each pr
 The name of the agent pool.
 
 <h4 class="pdoc-member-header" id="PoolState-poolType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/pool.ts#L122">property <b>poolType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/pool.ts#L122">property <b>poolType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>poolType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7653,7 +8077,7 @@ The name of the agent pool.
 Specifies whether the agent pool type is Automation or Deployment. Defaults to `automation`.
 
 <h3 class="pdoc-module-header" id="ProjectArgs" data-link-title="ProjectArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/project.ts#L187">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/project.ts#L187">
         interface <strong>ProjectArgs</strong>
     </a>
 </h3>
@@ -7663,7 +8087,7 @@ Specifies whether the agent pool type is Automation or Deployment. Defaults to `
 The set of arguments for constructing a Project resource.
 
 <h4 class="pdoc-member-header" id="ProjectArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/project.ts#L191">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/project.ts#L191">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7671,7 +8095,7 @@ The set of arguments for constructing a Project resource.
 The Description of the Project.
 
 <h4 class="pdoc-member-header" id="ProjectArgs-features">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/project.ts#L196">property <b>features</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/project.ts#L196">property <b>features</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>features?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -7680,7 +8104,7 @@ Defines the status (`enabled`, `disabled`) of the project features.
 Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
 
 <h4 class="pdoc-member-header" id="ProjectArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/project.ts#L200">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/project.ts#L200">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7688,7 +8112,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
 The Project Name.
 
 <h4 class="pdoc-member-header" id="ProjectArgs-versionControl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/project.ts#L204">property <b>versionControl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/project.ts#L204">property <b>versionControl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionControl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7696,7 +8120,7 @@ The Project Name.
 Specifies the version control system. Valid values: `Git` or `Tfvc`. Defaults to `Git`.
 
 <h4 class="pdoc-member-header" id="ProjectArgs-visibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/project.ts#L208">property <b>visibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/project.ts#L208">property <b>visibility</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>visibility?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7704,7 +8128,7 @@ Specifies the version control system. Valid values: `Git` or `Tfvc`. Defaults to
 Specifies the visibility of the Project. Valid values: `private` or `public`. Defaults to `private`.
 
 <h4 class="pdoc-member-header" id="ProjectArgs-workItemTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/project.ts#L212">property <b>workItemTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/project.ts#L212">property <b>workItemTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workItemTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7712,7 +8136,7 @@ Specifies the visibility of the Project. Valid values: `private` or `public`. De
 Specifies the work item template. Defaults to `Agile`.
 
 <h3 class="pdoc-module-header" id="ProjectFeaturesArgs" data-link-title="ProjectFeaturesArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectFeatures.ts#L131">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectFeatures.ts#L131">
         interface <strong>ProjectFeaturesArgs</strong>
     </a>
 </h3>
@@ -7722,7 +8146,7 @@ Specifies the work item template. Defaults to `Agile`.
 The set of arguments for constructing a ProjectFeatures resource.
 
 <h4 class="pdoc-member-header" id="ProjectFeaturesArgs-features">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectFeatures.ts#L136">property <b>features</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectFeatures.ts#L136">property <b>features</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>features: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -7731,12 +8155,12 @@ Defines the status (`enabled`, `disabled`) of the project features.
 Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
 
 <h4 class="pdoc-member-header" id="ProjectFeaturesArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectFeatures.ts#L137">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectFeatures.ts#L137">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ProjectFeaturesState" data-link-title="ProjectFeaturesState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectFeatures.ts#L119">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectFeatures.ts#L119">
         interface <strong>ProjectFeaturesState</strong>
     </a>
 </h3>
@@ -7746,7 +8170,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
 Input properties used for looking up and filtering ProjectFeatures resources.
 
 <h4 class="pdoc-member-header" id="ProjectFeaturesState-features">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectFeatures.ts#L124">property <b>features</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectFeatures.ts#L124">property <b>features</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>features?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -7755,12 +8179,12 @@ Defines the status (`enabled`, `disabled`) of the project features.
 Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
 
 <h4 class="pdoc-member-header" id="ProjectFeaturesState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectFeatures.ts#L125">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectFeatures.ts#L125">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ProjectPermissionsArgs" data-link-title="ProjectPermissionsArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectPermissions.ts#L164">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectPermissions.ts#L164">
         interface <strong>ProjectPermissionsArgs</strong>
     </a>
 </h3>
@@ -7770,7 +8194,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
 The set of arguments for constructing a ProjectPermissions resource.
 
 <h4 class="pdoc-member-header" id="ProjectPermissionsArgs-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectPermissions.ts#L168">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectPermissions.ts#L168">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -7778,7 +8202,7 @@ The set of arguments for constructing a ProjectPermissions resource.
 the permissions to assign. The following permissions are available
 
 <h4 class="pdoc-member-header" id="ProjectPermissionsArgs-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectPermissions.ts#L172">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectPermissions.ts#L172">property <b>principal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7786,7 +8210,7 @@ the permissions to assign. The following permissions are available
 The **group** principal to assign the permissions.
 
 <h4 class="pdoc-member-header" id="ProjectPermissionsArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectPermissions.ts#L176">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectPermissions.ts#L176">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7794,7 +8218,7 @@ The **group** principal to assign the permissions.
 The ID of the project to assign the permissions.
 
 <h4 class="pdoc-member-header" id="ProjectPermissionsArgs-replace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectPermissions.ts#L180">property <b>replace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectPermissions.ts#L180">property <b>replace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7802,7 +8226,7 @@ The ID of the project to assign the permissions.
 Replace (`true`) or merge (`false`) the permissions. Default: `true`
 
 <h3 class="pdoc-module-header" id="ProjectPermissionsState" data-link-title="ProjectPermissionsState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectPermissions.ts#L142">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectPermissions.ts#L142">
         interface <strong>ProjectPermissionsState</strong>
     </a>
 </h3>
@@ -7812,7 +8236,7 @@ Replace (`true`) or merge (`false`) the permissions. Default: `true`
 Input properties used for looking up and filtering ProjectPermissions resources.
 
 <h4 class="pdoc-member-header" id="ProjectPermissionsState-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectPermissions.ts#L146">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectPermissions.ts#L146">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -7820,7 +8244,7 @@ Input properties used for looking up and filtering ProjectPermissions resources.
 the permissions to assign. The following permissions are available
 
 <h4 class="pdoc-member-header" id="ProjectPermissionsState-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectPermissions.ts#L150">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectPermissions.ts#L150">property <b>principal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7828,7 +8252,7 @@ the permissions to assign. The following permissions are available
 The **group** principal to assign the permissions.
 
 <h4 class="pdoc-member-header" id="ProjectPermissionsState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectPermissions.ts#L154">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectPermissions.ts#L154">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7836,7 +8260,7 @@ The **group** principal to assign the permissions.
 The ID of the project to assign the permissions.
 
 <h4 class="pdoc-member-header" id="ProjectPermissionsState-replace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/projectPermissions.ts#L158">property <b>replace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/projectPermissions.ts#L158">property <b>replace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7844,7 +8268,7 @@ The ID of the project to assign the permissions.
 Replace (`true`) or merge (`false`) the permissions. Default: `true`
 
 <h3 class="pdoc-module-header" id="ProjectState" data-link-title="ProjectState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/project.ts#L152">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/project.ts#L152">
         interface <strong>ProjectState</strong>
     </a>
 </h3>
@@ -7854,7 +8278,7 @@ Replace (`true`) or merge (`false`) the permissions. Default: `true`
 Input properties used for looking up and filtering Project resources.
 
 <h4 class="pdoc-member-header" id="ProjectState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/project.ts#L156">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/project.ts#L156">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7862,7 +8286,7 @@ Input properties used for looking up and filtering Project resources.
 The Description of the Project.
 
 <h4 class="pdoc-member-header" id="ProjectState-features">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/project.ts#L161">property <b>features</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/project.ts#L161">property <b>features</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>features?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -7871,7 +8295,7 @@ Defines the status (`enabled`, `disabled`) of the project features.
 Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
 
 <h4 class="pdoc-member-header" id="ProjectState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/project.ts#L165">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/project.ts#L165">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7879,7 +8303,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
 The Project Name.
 
 <h4 class="pdoc-member-header" id="ProjectState-processTemplateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/project.ts#L169">property <b>processTemplateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/project.ts#L169">property <b>processTemplateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>processTemplateId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7887,7 +8311,7 @@ The Project Name.
 The Process Template ID used by the Project.
 
 <h4 class="pdoc-member-header" id="ProjectState-versionControl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/project.ts#L173">property <b>versionControl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/project.ts#L173">property <b>versionControl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionControl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7895,7 +8319,7 @@ The Process Template ID used by the Project.
 Specifies the version control system. Valid values: `Git` or `Tfvc`. Defaults to `Git`.
 
 <h4 class="pdoc-member-header" id="ProjectState-visibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/project.ts#L177">property <b>visibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/project.ts#L177">property <b>visibility</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>visibility?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7903,7 +8327,7 @@ Specifies the version control system. Valid values: `Git` or `Tfvc`. Defaults to
 Specifies the visibility of the Project. Valid values: `private` or `public`. Defaults to `private`.
 
 <h4 class="pdoc-member-header" id="ProjectState-workItemTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/project.ts#L181">property <b>workItemTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/project.ts#L181">property <b>workItemTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workItemTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7911,7 +8335,7 @@ Specifies the visibility of the Project. Valid values: `private` or `public`. De
 Specifies the work item template. Defaults to `Agile`.
 
 <h3 class="pdoc-module-header" id="ProviderArgs" data-link-title="ProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/provider.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/provider.ts#L56">
         interface <strong>ProviderArgs</strong>
     </a>
 </h3>
@@ -7921,7 +8345,7 @@ Specifies the work item template. Defaults to `Agile`.
 The set of arguments for constructing a Provider resource.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-orgServiceUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/provider.ts#L60">property <b>orgServiceUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/provider.ts#L60">property <b>orgServiceUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>orgServiceUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7929,7 +8353,7 @@ The set of arguments for constructing a Provider resource.
 The url of the Azure DevOps instance which should be used.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-personalAccessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/provider.ts#L64">property <b>personalAccessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/provider.ts#L64">property <b>personalAccessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>personalAccessToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7937,7 +8361,7 @@ The url of the Azure DevOps instance which should be used.
 The personal access token which should be used.
 
 <h3 class="pdoc-module-header" id="QueueArgs" data-link-title="QueueArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/queue.ts#L140">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/queue.ts#L140">
         interface <strong>QueueArgs</strong>
     </a>
 </h3>
@@ -7947,7 +8371,7 @@ The personal access token which should be used.
 The set of arguments for constructing a Queue resource.
 
 <h4 class="pdoc-member-header" id="QueueArgs-agentPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/queue.ts#L144">property <b>agentPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/queue.ts#L144">property <b>agentPoolId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>agentPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7955,7 +8379,7 @@ The set of arguments for constructing a Queue resource.
 The ID of the organization agent pool.
 
 <h4 class="pdoc-member-header" id="QueueArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/queue.ts#L148">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/queue.ts#L148">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7963,7 +8387,7 @@ The ID of the organization agent pool.
 The ID of the project in which to create the resource.
 
 <h3 class="pdoc-module-header" id="QueueState" data-link-title="QueueState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/queue.ts#L126">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/queue.ts#L126">
         interface <strong>QueueState</strong>
     </a>
 </h3>
@@ -7973,7 +8397,7 @@ The ID of the project in which to create the resource.
 Input properties used for looking up and filtering Queue resources.
 
 <h4 class="pdoc-member-header" id="QueueState-agentPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/queue.ts#L130">property <b>agentPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/queue.ts#L130">property <b>agentPoolId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>agentPoolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7981,7 +8405,7 @@ Input properties used for looking up and filtering Queue resources.
 The ID of the organization agent pool.
 
 <h4 class="pdoc-member-header" id="QueueState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/queue.ts#L134">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/queue.ts#L134">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7989,7 +8413,7 @@ The ID of the organization agent pool.
 The ID of the project in which to create the resource.
 
 <h3 class="pdoc-module-header" id="ResourceAuthorizationArgs" data-link-title="ResourceAuthorizationArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/resourceAuthorization.ts#L161">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/resourceAuthorization.ts#L161">
         interface <strong>ResourceAuthorizationArgs</strong>
     </a>
 </h3>
@@ -7999,7 +8423,7 @@ The ID of the project in which to create the resource.
 The set of arguments for constructing a ResourceAuthorization resource.
 
 <h4 class="pdoc-member-header" id="ResourceAuthorizationArgs-authorized">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/resourceAuthorization.ts#L165">property <b>authorized</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/resourceAuthorization.ts#L165">property <b>authorized</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorized: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8007,7 +8431,7 @@ The set of arguments for constructing a ResourceAuthorization resource.
 Set to true to allow public access in the project. Type: boolean.
 
 <h4 class="pdoc-member-header" id="ResourceAuthorizationArgs-definitionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/resourceAuthorization.ts#L169">property <b>definitionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/resourceAuthorization.ts#L169">property <b>definitionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>definitionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -8015,7 +8439,7 @@ Set to true to allow public access in the project. Type: boolean.
 The ID of the build definition to authorize. Type: string.
 
 <h4 class="pdoc-member-header" id="ResourceAuthorizationArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/resourceAuthorization.ts#L173">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/resourceAuthorization.ts#L173">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8023,7 +8447,7 @@ The ID of the build definition to authorize. Type: string.
 The project ID or project name. Type: string.
 
 <h4 class="pdoc-member-header" id="ResourceAuthorizationArgs-resourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/resourceAuthorization.ts#L177">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/resourceAuthorization.ts#L177">property <b>resourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8031,7 +8455,7 @@ The project ID or project name. Type: string.
 The ID of the resource to authorize. Type: string.
 
 <h4 class="pdoc-member-header" id="ResourceAuthorizationArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/resourceAuthorization.ts#L181">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/resourceAuthorization.ts#L181">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8039,7 +8463,7 @@ The ID of the resource to authorize. Type: string.
 The type of the resource to authorize. Type: string. Valid values: `endpoint`, `queue`, `variablegroup`. Default value: `endpoint`.
 
 <h3 class="pdoc-module-header" id="ResourceAuthorizationState" data-link-title="ResourceAuthorizationState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/resourceAuthorization.ts#L135">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/resourceAuthorization.ts#L135">
         interface <strong>ResourceAuthorizationState</strong>
     </a>
 </h3>
@@ -8049,7 +8473,7 @@ The type of the resource to authorize. Type: string. Valid values: `endpoint`, `
 Input properties used for looking up and filtering ResourceAuthorization resources.
 
 <h4 class="pdoc-member-header" id="ResourceAuthorizationState-authorized">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/resourceAuthorization.ts#L139">property <b>authorized</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/resourceAuthorization.ts#L139">property <b>authorized</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorized?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8057,7 +8481,7 @@ Input properties used for looking up and filtering ResourceAuthorization resourc
 Set to true to allow public access in the project. Type: boolean.
 
 <h4 class="pdoc-member-header" id="ResourceAuthorizationState-definitionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/resourceAuthorization.ts#L143">property <b>definitionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/resourceAuthorization.ts#L143">property <b>definitionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>definitionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -8065,7 +8489,7 @@ Set to true to allow public access in the project. Type: boolean.
 The ID of the build definition to authorize. Type: string.
 
 <h4 class="pdoc-member-header" id="ResourceAuthorizationState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/resourceAuthorization.ts#L147">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/resourceAuthorization.ts#L147">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8073,7 +8497,7 @@ The ID of the build definition to authorize. Type: string.
 The project ID or project name. Type: string.
 
 <h4 class="pdoc-member-header" id="ResourceAuthorizationState-resourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/resourceAuthorization.ts#L151">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/resourceAuthorization.ts#L151">property <b>resourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8081,7 +8505,7 @@ The project ID or project name. Type: string.
 The ID of the resource to authorize. Type: string.
 
 <h4 class="pdoc-member-header" id="ResourceAuthorizationState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/resourceAuthorization.ts#L155">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/resourceAuthorization.ts#L155">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8089,7 +8513,7 @@ The ID of the resource to authorize. Type: string.
 The type of the resource to authorize. Type: string. Valid values: `endpoint`, `queue`, `variablegroup`. Default value: `endpoint`.
 
 <h3 class="pdoc-module-header" id="ServiceEndpointAwsArgs" data-link-title="ServiceEndpointAwsArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L226">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L226">
         interface <strong>ServiceEndpointAwsArgs</strong>
     </a>
 </h3>
@@ -8099,7 +8523,7 @@ The type of the resource to authorize. Type: string. Valid values: `endpoint`, `
 The set of arguments for constructing a ServiceEndpointAws resource.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAwsArgs-accessKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L230">property <b>accessKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L230">property <b>accessKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8107,17 +8531,17 @@ The set of arguments for constructing a ServiceEndpointAws resource.
 The AWS access key ID for signing programmatic requests.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAwsArgs-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L231">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L231">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointAwsArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L232">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L232">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointAwsArgs-externalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L236">property <b>externalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L236">property <b>externalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8125,7 +8549,7 @@ The AWS access key ID for signing programmatic requests.
 A unique identifier that is used by third parties when assuming roles in their customers' accounts, aka cross-account role access.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAwsArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L240">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L240">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8133,7 +8557,7 @@ A unique identifier that is used by third parties when assuming roles in their c
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAwsArgs-roleSessionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L244">property <b>roleSessionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L244">property <b>roleSessionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleSessionName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8141,7 +8565,7 @@ The project ID or project name.
 Optional identifier for the assumed role session.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAwsArgs-roleToAssume">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L248">property <b>roleToAssume</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L248">property <b>roleToAssume</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleToAssume?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8149,7 +8573,7 @@ Optional identifier for the assumed role session.
 The Amazon Resource Name (ARN) of the role to assume.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAwsArgs-secretAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L252">property <b>secretAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L252">property <b>secretAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8157,7 +8581,7 @@ The Amazon Resource Name (ARN) of the role to assume.
 The AWS secret access key for signing programmatic requests.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAwsArgs-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L256">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L256">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceEndpointName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8165,7 +8589,7 @@ The AWS secret access key for signing programmatic requests.
 The Service Endpoint name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAwsArgs-sessionToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L260">property <b>sessionToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L260">property <b>sessionToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sessionToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8173,7 +8597,7 @@ The Service Endpoint name.
 The AWS session token for signing programmatic requests.
 
 <h3 class="pdoc-module-header" id="ServiceEndpointAwsState" data-link-title="ServiceEndpointAwsState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L178">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L178">
         interface <strong>ServiceEndpointAwsState</strong>
     </a>
 </h3>
@@ -8183,7 +8607,7 @@ The AWS session token for signing programmatic requests.
 Input properties used for looking up and filtering ServiceEndpointAws resources.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAwsState-accessKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L182">property <b>accessKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L182">property <b>accessKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8191,17 +8615,17 @@ Input properties used for looking up and filtering ServiceEndpointAws resources.
 The AWS access key ID for signing programmatic requests.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAwsState-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L183">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L183">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointAwsState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L184">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L184">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointAwsState-externalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L188">property <b>externalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L188">property <b>externalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8209,7 +8633,7 @@ The AWS access key ID for signing programmatic requests.
 A unique identifier that is used by third parties when assuming roles in their customers' accounts, aka cross-account role access.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAwsState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L192">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L192">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8217,7 +8641,7 @@ A unique identifier that is used by third parties when assuming roles in their c
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAwsState-roleSessionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L196">property <b>roleSessionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L196">property <b>roleSessionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleSessionName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8225,7 +8649,7 @@ The project ID or project name.
 Optional identifier for the assumed role session.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAwsState-roleToAssume">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L200">property <b>roleToAssume</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L200">property <b>roleToAssume</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleToAssume?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8233,7 +8657,7 @@ Optional identifier for the assumed role session.
 The Amazon Resource Name (ARN) of the role to assume.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAwsState-secretAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L204">property <b>secretAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L204">property <b>secretAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8241,7 +8665,7 @@ The Amazon Resource Name (ARN) of the role to assume.
 The AWS secret access key for signing programmatic requests.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAwsState-secretAccessKeyHash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L208">property <b>secretAccessKeyHash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L208">property <b>secretAccessKeyHash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretAccessKeyHash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8249,7 +8673,7 @@ The AWS secret access key for signing programmatic requests.
 A bcrypted hash of the attribute 'secret_access_key'
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAwsState-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L212">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L212">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceEndpointName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8257,7 +8681,7 @@ A bcrypted hash of the attribute 'secret_access_key'
 The Service Endpoint name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAwsState-sessionToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L216">property <b>sessionToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L216">property <b>sessionToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sessionToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8265,7 +8689,7 @@ The Service Endpoint name.
 The AWS session token for signing programmatic requests.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAwsState-sessionTokenHash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAws.ts#L220">property <b>sessionTokenHash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAws.ts#L220">property <b>sessionTokenHash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sessionTokenHash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8273,7 +8697,7 @@ The AWS session token for signing programmatic requests.
 A bcrypted hash of the attribute 'session_token'
 
 <h3 class="pdoc-module-header" id="ServiceEndpointAzureEcrArgs" data-link-title="ServiceEndpointAzureEcrArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L214">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L214">
         interface <strong>ServiceEndpointAzureEcrArgs</strong>
     </a>
 </h3>
@@ -8283,12 +8707,12 @@ A bcrypted hash of the attribute 'session_token'
 The set of arguments for constructing a ServiceEndpointAzureEcr resource.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcrArgs-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L215">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L215">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcrArgs-azurecrName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L219">property <b>azurecrName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L219">property <b>azurecrName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azurecrName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8296,7 +8720,7 @@ The set of arguments for constructing a ServiceEndpointAzureEcr resource.
 The Azure container registry name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcrArgs-azurecrSpnTenantid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L223">property <b>azurecrSpnTenantid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L223">property <b>azurecrSpnTenantid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azurecrSpnTenantid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8304,7 +8728,7 @@ The Azure container registry name.
 The tenant id of the service principal.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcrArgs-azurecrSubscriptionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L227">property <b>azurecrSubscriptionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L227">property <b>azurecrSubscriptionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azurecrSubscriptionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8312,7 +8736,7 @@ The tenant id of the service principal.
 The subscription id of the Azure targets.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcrArgs-azurecrSubscriptionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L231">property <b>azurecrSubscriptionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L231">property <b>azurecrSubscriptionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azurecrSubscriptionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8320,7 +8744,7 @@ The subscription id of the Azure targets.
 The subscription name of the Azure targets.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcrArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L235">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L235">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8328,7 +8752,7 @@ The subscription name of the Azure targets.
 The name you will use to refer to this service connection in task inputs.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcrArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L239">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L239">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8336,7 +8760,7 @@ The name you will use to refer to this service connection in task inputs.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcrArgs-resourceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L243">property <b>resourceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L243">property <b>resourceGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8344,7 +8768,7 @@ The project ID or project name.
 The resource group to which the container registry belongs.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcrArgs-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L247">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L247">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceEndpointName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8352,7 +8776,7 @@ The resource group to which the container registry belongs.
 The name you will use to refer to this service connection in task inputs.
 
 <h3 class="pdoc-module-header" id="ServiceEndpointAzureEcrState" data-link-title="ServiceEndpointAzureEcrState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L175">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L175">
         interface <strong>ServiceEndpointAzureEcrState</strong>
     </a>
 </h3>
@@ -8362,12 +8786,12 @@ The name you will use to refer to this service connection in task inputs.
 Input properties used for looking up and filtering ServiceEndpointAzureEcr resources.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcrState-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L176">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L176">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcrState-azurecrName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L180">property <b>azurecrName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L180">property <b>azurecrName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azurecrName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8375,7 +8799,7 @@ Input properties used for looking up and filtering ServiceEndpointAzureEcr resou
 The Azure container registry name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcrState-azurecrSpnTenantid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L184">property <b>azurecrSpnTenantid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L184">property <b>azurecrSpnTenantid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azurecrSpnTenantid?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8383,7 +8807,7 @@ The Azure container registry name.
 The tenant id of the service principal.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcrState-azurecrSubscriptionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L188">property <b>azurecrSubscriptionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L188">property <b>azurecrSubscriptionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azurecrSubscriptionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8391,7 +8815,7 @@ The tenant id of the service principal.
 The subscription id of the Azure targets.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcrState-azurecrSubscriptionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L192">property <b>azurecrSubscriptionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L192">property <b>azurecrSubscriptionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azurecrSubscriptionName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8399,7 +8823,7 @@ The subscription id of the Azure targets.
 The subscription name of the Azure targets.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcrState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L196">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L196">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8407,7 +8831,7 @@ The subscription name of the Azure targets.
 The name you will use to refer to this service connection in task inputs.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcrState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L200">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L200">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8415,7 +8839,7 @@ The name you will use to refer to this service connection in task inputs.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcrState-resourceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L204">property <b>resourceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L204">property <b>resourceGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8423,7 +8847,7 @@ The project ID or project name.
 The resource group to which the container registry belongs.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureEcrState-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureEcr.ts#L208">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureEcr.ts#L208">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceEndpointName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8431,7 +8855,7 @@ The resource group to which the container registry belongs.
 The name you will use to refer to this service connection in task inputs.
 
 <h3 class="pdoc-module-header" id="ServiceEndpointAzureRMArgs" data-link-title="ServiceEndpointAzureRMArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L239">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L239">
         interface <strong>ServiceEndpointAzureRMArgs</strong>
     </a>
 </h3>
@@ -8441,12 +8865,12 @@ The name you will use to refer to this service connection in task inputs.
 The set of arguments for constructing a ServiceEndpointAzureRM resource.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRMArgs-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L240">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L240">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRMArgs-azurermSpnTenantid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L244">property <b>azurermSpnTenantid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L244">property <b>azurermSpnTenantid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azurermSpnTenantid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8454,7 +8878,7 @@ The set of arguments for constructing a ServiceEndpointAzureRM resource.
 The tenant id if the service principal.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRMArgs-azurermSubscriptionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L248">property <b>azurermSubscriptionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L248">property <b>azurermSubscriptionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azurermSubscriptionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8462,7 +8886,7 @@ The tenant id if the service principal.
 The subscription Id of the Azure targets.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRMArgs-azurermSubscriptionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L252">property <b>azurermSubscriptionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L252">property <b>azurermSubscriptionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azurermSubscriptionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8470,7 +8894,7 @@ The subscription Id of the Azure targets.
 The subscription Name of the targets.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRMArgs-credentials">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L256">property <b>credentials</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L256">property <b>credentials</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>credentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#ServiceEndpointAzureRMCredentials'>ServiceEndpointAzureRMCredentials</a>&gt;;</code></pre>
@@ -8478,7 +8902,7 @@ The subscription Name of the targets.
 A `credentials` block.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRMArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L260">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L260">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8486,7 +8910,7 @@ A `credentials` block.
 Service connection description.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRMArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L264">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L264">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8494,7 +8918,7 @@ Service connection description.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRMArgs-resourceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L268">property <b>resourceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L268">property <b>resourceGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8502,7 +8926,7 @@ The project ID or project name.
 The resource group used for scope of automatic service endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRMArgs-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L272">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L272">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceEndpointName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8510,7 +8934,7 @@ The resource group used for scope of automatic service endpoint.
 The Service Endpoint name.
 
 <h3 class="pdoc-module-header" id="ServiceEndpointAzureRMState" data-link-title="ServiceEndpointAzureRMState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L200">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L200">
         interface <strong>ServiceEndpointAzureRMState</strong>
     </a>
 </h3>
@@ -8520,12 +8944,12 @@ The Service Endpoint name.
 Input properties used for looking up and filtering ServiceEndpointAzureRM resources.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRMState-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L201">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L201">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRMState-azurermSpnTenantid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L205">property <b>azurermSpnTenantid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L205">property <b>azurermSpnTenantid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azurermSpnTenantid?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8533,7 +8957,7 @@ Input properties used for looking up and filtering ServiceEndpointAzureRM resour
 The tenant id if the service principal.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRMState-azurermSubscriptionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L209">property <b>azurermSubscriptionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L209">property <b>azurermSubscriptionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azurermSubscriptionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8541,7 +8965,7 @@ The tenant id if the service principal.
 The subscription Id of the Azure targets.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRMState-azurermSubscriptionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L213">property <b>azurermSubscriptionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L213">property <b>azurermSubscriptionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azurermSubscriptionName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8549,7 +8973,7 @@ The subscription Id of the Azure targets.
 The subscription Name of the targets.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRMState-credentials">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L217">property <b>credentials</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L217">property <b>credentials</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>credentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#ServiceEndpointAzureRMCredentials'>ServiceEndpointAzureRMCredentials</a>&gt;;</code></pre>
@@ -8557,7 +8981,7 @@ The subscription Name of the targets.
 A `credentials` block.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRMState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L221">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L221">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8565,7 +8989,7 @@ A `credentials` block.
 Service connection description.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRMState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L225">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L225">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8573,7 +8997,7 @@ Service connection description.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRMState-resourceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L229">property <b>resourceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L229">property <b>resourceGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8581,7 +9005,7 @@ The project ID or project name.
 The resource group used for scope of automatic service endpoint.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointAzureRMState-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointAzureRM.ts#L233">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointAzureRM.ts#L233">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceEndpointName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8589,7 +9013,7 @@ The resource group used for scope of automatic service endpoint.
 The Service Endpoint name.
 
 <h3 class="pdoc-module-header" id="ServiceEndpointBitBucketArgs" data-link-title="ServiceEndpointBitBucketArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointBitBucket.ts#L177">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointBitBucket.ts#L177">
         interface <strong>ServiceEndpointBitBucketArgs</strong>
     </a>
 </h3>
@@ -8599,17 +9023,17 @@ The Service Endpoint name.
 The set of arguments for constructing a ServiceEndpointBitBucket resource.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointBitBucketArgs-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointBitBucket.ts#L178">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointBitBucket.ts#L178">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointBitBucketArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointBitBucket.ts#L179">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointBitBucket.ts#L179">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointBitBucketArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointBitBucket.ts#L183">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointBitBucket.ts#L183">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8617,7 +9041,7 @@ The set of arguments for constructing a ServiceEndpointBitBucket resource.
 Bitbucket account password.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointBitBucketArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointBitBucket.ts#L187">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointBitBucket.ts#L187">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8625,7 +9049,7 @@ Bitbucket account password.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointBitBucketArgs-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointBitBucket.ts#L191">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointBitBucket.ts#L191">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceEndpointName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8633,7 +9057,7 @@ The project ID or project name.
 The Service Endpoint name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointBitBucketArgs-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointBitBucket.ts#L195">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointBitBucket.ts#L195">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8641,7 +9065,7 @@ The Service Endpoint name.
 Bitbucket account username.
 
 <h3 class="pdoc-module-header" id="ServiceEndpointBitBucketState" data-link-title="ServiceEndpointBitBucketState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointBitBucket.ts#L149">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointBitBucket.ts#L149">
         interface <strong>ServiceEndpointBitBucketState</strong>
     </a>
 </h3>
@@ -8651,17 +9075,17 @@ Bitbucket account username.
 Input properties used for looking up and filtering ServiceEndpointBitBucket resources.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointBitBucketState-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointBitBucket.ts#L150">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointBitBucket.ts#L150">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointBitBucketState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointBitBucket.ts#L151">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointBitBucket.ts#L151">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointBitBucketState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointBitBucket.ts#L155">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointBitBucket.ts#L155">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8669,7 +9093,7 @@ Input properties used for looking up and filtering ServiceEndpointBitBucket reso
 Bitbucket account password.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointBitBucketState-passwordHash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointBitBucket.ts#L159">property <b>passwordHash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointBitBucket.ts#L159">property <b>passwordHash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordHash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8677,7 +9101,7 @@ Bitbucket account password.
 A bcrypted hash of the attribute 'password'
 
 <h4 class="pdoc-member-header" id="ServiceEndpointBitBucketState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointBitBucket.ts#L163">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointBitBucket.ts#L163">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8685,7 +9109,7 @@ A bcrypted hash of the attribute 'password'
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointBitBucketState-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointBitBucket.ts#L167">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointBitBucket.ts#L167">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceEndpointName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8693,7 +9117,7 @@ The project ID or project name.
 The Service Endpoint name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointBitBucketState-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointBitBucket.ts#L171">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointBitBucket.ts#L171">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8701,7 +9125,7 @@ The Service Endpoint name.
 Bitbucket account username.
 
 <h3 class="pdoc-module-header" id="ServiceEndpointDockerRegistryArgs" data-link-title="ServiceEndpointDockerRegistryArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L225">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L225">
         interface <strong>ServiceEndpointDockerRegistryArgs</strong>
     </a>
 </h3>
@@ -8711,12 +9135,12 @@ Bitbucket account username.
 The set of arguments for constructing a ServiceEndpointDockerRegistry resource.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistryArgs-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L226">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L226">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistryArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L230">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L230">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8724,7 +9148,7 @@ The set of arguments for constructing a ServiceEndpointDockerRegistry resource.
 The name you will use to refer to this service connection in task inputs.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistryArgs-dockerEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L234">property <b>dockerEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L234">property <b>dockerEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8732,7 +9156,7 @@ The name you will use to refer to this service connection in task inputs.
 The email for Docker account user.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistryArgs-dockerPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L238">property <b>dockerPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L238">property <b>dockerPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8740,7 +9164,7 @@ The email for Docker account user.
 The password for the account user identified above.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistryArgs-dockerRegistry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L242">property <b>dockerRegistry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L242">property <b>dockerRegistry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerRegistry: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8748,7 +9172,7 @@ The password for the account user identified above.
 The URL of the Docker registry. (Default: "https://index.docker.io/v1/")
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistryArgs-dockerUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L246">property <b>dockerUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L246">property <b>dockerUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerUsername?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8756,7 +9180,7 @@ The URL of the Docker registry. (Default: "https://index.docker.io/v1/")
 The identifier of the Docker account user.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistryArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L250">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L250">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8764,7 +9188,7 @@ The identifier of the Docker account user.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistryArgs-registryType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L254">property <b>registryType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L254">property <b>registryType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>registryType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8772,7 +9196,7 @@ The project ID or project name.
 Can be "DockerHub" or "Others" (Default "DockerHub")
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistryArgs-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L258">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L258">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceEndpointName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8780,7 +9204,7 @@ Can be "DockerHub" or "Others" (Default "DockerHub")
 The name you will use to refer to this service connection in task inputs.
 
 <h3 class="pdoc-module-header" id="ServiceEndpointDockerRegistryState" data-link-title="ServiceEndpointDockerRegistryState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L182">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L182">
         interface <strong>ServiceEndpointDockerRegistryState</strong>
     </a>
 </h3>
@@ -8790,12 +9214,12 @@ The name you will use to refer to this service connection in task inputs.
 Input properties used for looking up and filtering ServiceEndpointDockerRegistry resources.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistryState-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L183">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L183">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistryState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L187">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L187">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8803,7 +9227,7 @@ Input properties used for looking up and filtering ServiceEndpointDockerRegistry
 The name you will use to refer to this service connection in task inputs.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistryState-dockerEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L191">property <b>dockerEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L191">property <b>dockerEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8811,7 +9235,7 @@ The name you will use to refer to this service connection in task inputs.
 The email for Docker account user.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistryState-dockerPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L195">property <b>dockerPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L195">property <b>dockerPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8819,7 +9243,7 @@ The email for Docker account user.
 The password for the account user identified above.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistryState-dockerPasswordHash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L199">property <b>dockerPasswordHash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L199">property <b>dockerPasswordHash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerPasswordHash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8827,7 +9251,7 @@ The password for the account user identified above.
 A bcrypted hash of the attribute 'docker_password'
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistryState-dockerRegistry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L203">property <b>dockerRegistry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L203">property <b>dockerRegistry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerRegistry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8835,7 +9259,7 @@ A bcrypted hash of the attribute 'docker_password'
 The URL of the Docker registry. (Default: "https://index.docker.io/v1/")
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistryState-dockerUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L207">property <b>dockerUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L207">property <b>dockerUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerUsername?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8843,7 +9267,7 @@ The URL of the Docker registry. (Default: "https://index.docker.io/v1/")
 The identifier of the Docker account user.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistryState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L211">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L211">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8851,7 +9275,7 @@ The identifier of the Docker account user.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistryState-registryType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L215">property <b>registryType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L215">property <b>registryType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>registryType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8859,7 +9283,7 @@ The project ID or project name.
 Can be "DockerHub" or "Others" (Default "DockerHub")
 
 <h4 class="pdoc-member-header" id="ServiceEndpointDockerRegistryState-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointDockerRegistry.ts#L219">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointDockerRegistry.ts#L219">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceEndpointName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8867,7 +9291,7 @@ Can be "DockerHub" or "Others" (Default "DockerHub")
 The name you will use to refer to this service connection in task inputs.
 
 <h3 class="pdoc-module-header" id="ServiceEndpointGitHubArgs" data-link-title="ServiceEndpointGitHubArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointGitHub.ts#L186">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointGitHub.ts#L186">
         interface <strong>ServiceEndpointGitHubArgs</strong>
     </a>
 </h3>
@@ -8877,7 +9301,7 @@ The name you will use to refer to this service connection in task inputs.
 The set of arguments for constructing a ServiceEndpointGitHub resource.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointGitHubArgs-authOauth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointGitHub.ts#L190">property <b>authOauth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointGitHub.ts#L190">property <b>authOauth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authOauth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#ServiceEndpointGitHubAuthOauth'>ServiceEndpointGitHubAuthOauth</a>&gt;;</code></pre>
@@ -8885,7 +9309,7 @@ The set of arguments for constructing a ServiceEndpointGitHub resource.
 An `authOauth` block as documented below. Allows connecting using an Oauth token.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointGitHubArgs-authPersonal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointGitHub.ts#L194">property <b>authPersonal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointGitHub.ts#L194">property <b>authPersonal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authPersonal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#ServiceEndpointGitHubAuthPersonal'>ServiceEndpointGitHubAuthPersonal</a>&gt;;</code></pre>
@@ -8893,17 +9317,17 @@ An `authOauth` block as documented below. Allows connecting using an Oauth token
 An `authPersonal` block as documented below. Allows connecting using a personal access token.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointGitHubArgs-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointGitHub.ts#L195">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointGitHub.ts#L195">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointGitHubArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointGitHub.ts#L196">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointGitHub.ts#L196">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointGitHubArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointGitHub.ts#L200">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointGitHub.ts#L200">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8911,7 +9335,7 @@ An `authPersonal` block as documented below. Allows connecting using a personal 
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointGitHubArgs-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointGitHub.ts#L204">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointGitHub.ts#L204">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceEndpointName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8919,7 +9343,7 @@ The project ID or project name.
 The Service Endpoint name.
 
 <h3 class="pdoc-module-header" id="ServiceEndpointGitHubState" data-link-title="ServiceEndpointGitHubState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointGitHub.ts#L162">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointGitHub.ts#L162">
         interface <strong>ServiceEndpointGitHubState</strong>
     </a>
 </h3>
@@ -8929,7 +9353,7 @@ The Service Endpoint name.
 Input properties used for looking up and filtering ServiceEndpointGitHub resources.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointGitHubState-authOauth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointGitHub.ts#L166">property <b>authOauth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointGitHub.ts#L166">property <b>authOauth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authOauth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#ServiceEndpointGitHubAuthOauth'>ServiceEndpointGitHubAuthOauth</a>&gt;;</code></pre>
@@ -8937,7 +9361,7 @@ Input properties used for looking up and filtering ServiceEndpointGitHub resourc
 An `authOauth` block as documented below. Allows connecting using an Oauth token.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointGitHubState-authPersonal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointGitHub.ts#L170">property <b>authPersonal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointGitHub.ts#L170">property <b>authPersonal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authPersonal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#ServiceEndpointGitHubAuthPersonal'>ServiceEndpointGitHubAuthPersonal</a>&gt;;</code></pre>
@@ -8945,17 +9369,17 @@ An `authOauth` block as documented below. Allows connecting using an Oauth token
 An `authPersonal` block as documented below. Allows connecting using a personal access token.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointGitHubState-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointGitHub.ts#L171">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointGitHub.ts#L171">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointGitHubState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointGitHub.ts#L172">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointGitHub.ts#L172">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointGitHubState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointGitHub.ts#L176">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointGitHub.ts#L176">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8963,7 +9387,7 @@ An `authPersonal` block as documented below. Allows connecting using a personal 
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointGitHubState-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointGitHub.ts#L180">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointGitHub.ts#L180">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceEndpointName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8971,7 +9395,7 @@ The project ID or project name.
 The Service Endpoint name.
 
 <h3 class="pdoc-module-header" id="ServiceEndpointKubernetesArgs" data-link-title="ServiceEndpointKubernetesArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L179">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L179">
         interface <strong>ServiceEndpointKubernetesArgs</strong>
     </a>
 </h3>
@@ -8981,7 +9405,7 @@ The Service Endpoint name.
 The set of arguments for constructing a ServiceEndpointKubernetes resource.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetesArgs-apiserverUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L183">property <b>apiserverUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L183">property <b>apiserverUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiserverUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8989,12 +9413,12 @@ The set of arguments for constructing a ServiceEndpointKubernetes resource.
 The Service Endpoint description.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetesArgs-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L184">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L184">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetesArgs-authorizationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L188">property <b>authorizationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L188">property <b>authorizationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9002,7 +9426,7 @@ The Service Endpoint description.
 The authentication method used to authenticate on the Kubernetes cluster. The value should be one of AzureSubscription, Kubeconfig, ServiceAccount.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetesArgs-azureSubscriptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L192">property <b>azureSubscriptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L192">property <b>azureSubscriptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureSubscriptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#ServiceEndpointKubernetesAzureSubscription'>ServiceEndpointKubernetesAzureSubscription</a>&gt;[]&gt;;</code></pre>
@@ -9010,12 +9434,12 @@ The authentication method used to authenticate on the Kubernetes cluster. The va
 The configuration for authorization_type="AzureSubscription".
 
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetesArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L193">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L193">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetesArgs-kubeconfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L197">property <b>kubeconfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L197">property <b>kubeconfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubeconfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#ServiceEndpointKubernetesKubeconfig'>ServiceEndpointKubernetesKubeconfig</a>&gt;[]&gt;;</code></pre>
@@ -9023,7 +9447,7 @@ The configuration for authorization_type="AzureSubscription".
 The configuration for authorization_type="Kubeconfig".
 
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetesArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L201">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L201">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9031,7 +9455,7 @@ The configuration for authorization_type="Kubeconfig".
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetesArgs-serviceAccounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L205">property <b>serviceAccounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L205">property <b>serviceAccounts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#ServiceEndpointKubernetesServiceAccount'>ServiceEndpointKubernetesServiceAccount</a>&gt;[]&gt;;</code></pre>
@@ -9039,7 +9463,7 @@ The project ID or project name.
 The configuration for authorization_type="ServiceAccount". This type uses the credentials of a service account currently deployed to the cluster.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetesArgs-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L209">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L209">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceEndpointName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9047,7 +9471,7 @@ The configuration for authorization_type="ServiceAccount". This type uses the cr
 The Service Endpoint name.
 
 <h3 class="pdoc-module-header" id="ServiceEndpointKubernetesState" data-link-title="ServiceEndpointKubernetesState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L143">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L143">
         interface <strong>ServiceEndpointKubernetesState</strong>
     </a>
 </h3>
@@ -9057,7 +9481,7 @@ The Service Endpoint name.
 Input properties used for looking up and filtering ServiceEndpointKubernetes resources.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetesState-apiserverUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L147">property <b>apiserverUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L147">property <b>apiserverUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiserverUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9065,12 +9489,12 @@ Input properties used for looking up and filtering ServiceEndpointKubernetes res
 The Service Endpoint description.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetesState-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L148">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L148">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetesState-authorizationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L152">property <b>authorizationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L152">property <b>authorizationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9078,7 +9502,7 @@ The Service Endpoint description.
 The authentication method used to authenticate on the Kubernetes cluster. The value should be one of AzureSubscription, Kubeconfig, ServiceAccount.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetesState-azureSubscriptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L156">property <b>azureSubscriptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L156">property <b>azureSubscriptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureSubscriptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#ServiceEndpointKubernetesAzureSubscription'>ServiceEndpointKubernetesAzureSubscription</a>&gt;[]&gt;;</code></pre>
@@ -9086,12 +9510,12 @@ The authentication method used to authenticate on the Kubernetes cluster. The va
 The configuration for authorization_type="AzureSubscription".
 
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetesState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L157">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L157">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetesState-kubeconfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L161">property <b>kubeconfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L161">property <b>kubeconfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubeconfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#ServiceEndpointKubernetesKubeconfig'>ServiceEndpointKubernetesKubeconfig</a>&gt;[]&gt;;</code></pre>
@@ -9099,7 +9523,7 @@ The configuration for authorization_type="AzureSubscription".
 The configuration for authorization_type="Kubeconfig".
 
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetesState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L165">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L165">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9107,7 +9531,7 @@ The configuration for authorization_type="Kubeconfig".
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetesState-serviceAccounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L169">property <b>serviceAccounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L169">property <b>serviceAccounts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#ServiceEndpointKubernetesServiceAccount'>ServiceEndpointKubernetesServiceAccount</a>&gt;[]&gt;;</code></pre>
@@ -9115,7 +9539,111 @@ The project ID or project name.
 The configuration for authorization_type="ServiceAccount". This type uses the credentials of a service account currently deployed to the cluster.
 
 <h4 class="pdoc-member-header" id="ServiceEndpointKubernetesState-serviceEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/serviceEndpointKubernetes.ts#L173">property <b>serviceEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointKubernetes.ts#L173">property <b>serviceEndpointName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>serviceEndpointName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The Service Endpoint name.
+
+<h3 class="pdoc-module-header" id="ServiceEndpointPipelineArgs" data-link-title="ServiceEndpointPipelineArgs">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointPipeline.ts#L168">
+        interface <strong>ServiceEndpointPipelineArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceEndpointPipelineArgs</span></code></pre>
+
+The set of arguments for constructing a ServiceEndpointPipeline resource.
+
+<h4 class="pdoc-member-header" id="ServiceEndpointPipelineArgs-authPersonal">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointPipeline.ts#L172">property <b>authPersonal</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>authPersonal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#ServiceEndpointPipelineAuthPersonal'>ServiceEndpointPipelineAuthPersonal</a>&gt;;</code></pre>
+
+An `authPersonal` block as documented below. Allows connecting using a personal access token.
+
+<h4 class="pdoc-member-header" id="ServiceEndpointPipelineArgs-authorization">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointPipeline.ts#L173">property <b>authorization</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>authorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="ServiceEndpointPipelineArgs-description">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointPipeline.ts#L174">property <b>description</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="ServiceEndpointPipelineArgs-organizationName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointPipeline.ts#L178">property <b>organizationName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>organizationName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The organization name used for `Organization Url` and `Release API Url` fields.
+
+<h4 class="pdoc-member-header" id="ServiceEndpointPipelineArgs-projectId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointPipeline.ts#L182">property <b>projectId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The project ID or project name.
+
+<h4 class="pdoc-member-header" id="ServiceEndpointPipelineArgs-serviceEndpointName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointPipeline.ts#L186">property <b>serviceEndpointName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>serviceEndpointName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The Service Endpoint name.
+
+<h3 class="pdoc-module-header" id="ServiceEndpointPipelineState" data-link-title="ServiceEndpointPipelineState">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointPipeline.ts#L144">
+        interface <strong>ServiceEndpointPipelineState</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceEndpointPipelineState</span></code></pre>
+
+Input properties used for looking up and filtering ServiceEndpointPipeline resources.
+
+<h4 class="pdoc-member-header" id="ServiceEndpointPipelineState-authPersonal">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointPipeline.ts#L148">property <b>authPersonal</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>authPersonal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#ServiceEndpointPipelineAuthPersonal'>ServiceEndpointPipelineAuthPersonal</a>&gt;;</code></pre>
+
+An `authPersonal` block as documented below. Allows connecting using a personal access token.
+
+<h4 class="pdoc-member-header" id="ServiceEndpointPipelineState-authorization">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointPipeline.ts#L149">property <b>authorization</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>authorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="ServiceEndpointPipelineState-description">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointPipeline.ts#L150">property <b>description</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="ServiceEndpointPipelineState-organizationName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointPipeline.ts#L154">property <b>organizationName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>organizationName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The organization name used for `Organization Url` and `Release API Url` fields.
+
+<h4 class="pdoc-member-header" id="ServiceEndpointPipelineState-projectId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointPipeline.ts#L158">property <b>projectId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The project ID or project name.
+
+<h4 class="pdoc-member-header" id="ServiceEndpointPipelineState-serviceEndpointName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/serviceEndpointPipeline.ts#L162">property <b>serviceEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceEndpointName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9123,7 +9651,7 @@ The configuration for authorization_type="ServiceAccount". This type uses the cr
 The Service Endpoint name.
 
 <h3 class="pdoc-module-header" id="UserArgs" data-link-title="UserArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/user.ts#L158">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/user.ts#L158">
         interface <strong>UserArgs</strong>
     </a>
 </h3>
@@ -9133,7 +9661,7 @@ The Service Endpoint name.
 The set of arguments for constructing a User resource.
 
 <h4 class="pdoc-member-header" id="UserArgs-accountLicenseType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/user.ts#L162">property <b>accountLicenseType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/user.ts#L162">property <b>accountLicenseType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountLicenseType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9141,7 +9669,7 @@ The set of arguments for constructing a User resource.
 Type of Account License. Valid values: `advanced`, `earlyAdopter`, `express`, `none`, `professional`, or `stakeholder`. Defaults to `express`. In addition the value `basic` is allowed which is an alias for `express` and reflects the name of the `express` license used in the Azure DevOps web interface.
 
 <h4 class="pdoc-member-header" id="UserArgs-licensingSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/user.ts#L166">property <b>licensingSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/user.ts#L166">property <b>licensingSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licensingSource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9149,7 +9677,7 @@ Type of Account License. Valid values: `advanced`, `earlyAdopter`, `express`, `n
 The source of the licensing (e.g. Account. MSDN etc.) Valid values: `account` (Default), `auto`, `msdn`, `none`, `profile`, `trail`
 
 <h4 class="pdoc-member-header" id="UserArgs-origin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/user.ts#L170">property <b>origin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/user.ts#L170">property <b>origin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>origin?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9157,7 +9685,7 @@ The source of the licensing (e.g. Account. MSDN etc.) Valid values: `account` (D
 The type of source provider for the origin identifier.
 
 <h4 class="pdoc-member-header" id="UserArgs-originId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/user.ts#L174">property <b>originId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/user.ts#L174">property <b>originId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>originId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9165,7 +9693,7 @@ The type of source provider for the origin identifier.
 The unique identifier from the system of origin. Typically a sid, object id or Guid. e.g. Used for member of other tenant on Azure Active Directory.
 
 <h4 class="pdoc-member-header" id="UserArgs-principalName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/user.ts#L178">property <b>principalName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/user.ts#L178">property <b>principalName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principalName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9173,7 +9701,7 @@ The unique identifier from the system of origin. Typically a sid, object id or G
 The principal name is the PrincipalName of a graph member from the source provider. Usually, e-mail address.
 
 <h3 class="pdoc-module-header" id="UserState" data-link-title="UserState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/user.ts#L128">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/user.ts#L128">
         interface <strong>UserState</strong>
     </a>
 </h3>
@@ -9183,7 +9711,7 @@ The principal name is the PrincipalName of a graph member from the source provid
 Input properties used for looking up and filtering User resources.
 
 <h4 class="pdoc-member-header" id="UserState-accountLicenseType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/user.ts#L132">property <b>accountLicenseType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/user.ts#L132">property <b>accountLicenseType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountLicenseType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9191,7 +9719,7 @@ Input properties used for looking up and filtering User resources.
 Type of Account License. Valid values: `advanced`, `earlyAdopter`, `express`, `none`, `professional`, or `stakeholder`. Defaults to `express`. In addition the value `basic` is allowed which is an alias for `express` and reflects the name of the `express` license used in the Azure DevOps web interface.
 
 <h4 class="pdoc-member-header" id="UserState-descriptor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/user.ts#L136">property <b>descriptor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/user.ts#L136">property <b>descriptor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>descriptor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9199,7 +9727,7 @@ Type of Account License. Valid values: `advanced`, `earlyAdopter`, `express`, `n
 The descriptor is the primary way to reference the graph subject while the system is running. This field will uniquely identify the user graph subject.
 
 <h4 class="pdoc-member-header" id="UserState-licensingSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/user.ts#L140">property <b>licensingSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/user.ts#L140">property <b>licensingSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licensingSource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9207,7 +9735,7 @@ The descriptor is the primary way to reference the graph subject while the syste
 The source of the licensing (e.g. Account. MSDN etc.) Valid values: `account` (Default), `auto`, `msdn`, `none`, `profile`, `trail`
 
 <h4 class="pdoc-member-header" id="UserState-origin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/user.ts#L144">property <b>origin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/user.ts#L144">property <b>origin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>origin?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9215,7 +9743,7 @@ The source of the licensing (e.g. Account. MSDN etc.) Valid values: `account` (D
 The type of source provider for the origin identifier.
 
 <h4 class="pdoc-member-header" id="UserState-originId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/user.ts#L148">property <b>originId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/user.ts#L148">property <b>originId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>originId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9223,7 +9751,7 @@ The type of source provider for the origin identifier.
 The unique identifier from the system of origin. Typically a sid, object id or Guid. e.g. Used for member of other tenant on Azure Active Directory.
 
 <h4 class="pdoc-member-header" id="UserState-principalName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/user.ts#L152">property <b>principalName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/user.ts#L152">property <b>principalName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principalName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9231,7 +9759,7 @@ The unique identifier from the system of origin. Typically a sid, object id or G
 The principal name is the PrincipalName of a graph member from the source provider. Usually, e-mail address.
 
 <h3 class="pdoc-module-header" id="VariableGroupArgs" data-link-title="VariableGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/variableGroup.ts#L186">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/variableGroup.ts#L186">
         interface <strong>VariableGroupArgs</strong>
     </a>
 </h3>
@@ -9241,7 +9769,7 @@ The principal name is the PrincipalName of a graph member from the source provid
 The set of arguments for constructing a VariableGroup resource.
 
 <h4 class="pdoc-member-header" id="VariableGroupArgs-allowAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/variableGroup.ts#L190">property <b>allowAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/variableGroup.ts#L190">property <b>allowAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -9249,7 +9777,7 @@ The set of arguments for constructing a VariableGroup resource.
 Boolean that indicate if this variable group is shared by all pipelines of this project.
 
 <h4 class="pdoc-member-header" id="VariableGroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/variableGroup.ts#L194">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/variableGroup.ts#L194">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9257,12 +9785,12 @@ Boolean that indicate if this variable group is shared by all pipelines of this 
 The description of the Variable Group.
 
 <h4 class="pdoc-member-header" id="VariableGroupArgs-keyVault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/variableGroup.ts#L195">property <b>keyVault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/variableGroup.ts#L195">property <b>keyVault</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVault?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#VariableGroupKeyVault'>VariableGroupKeyVault</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="VariableGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/variableGroup.ts#L199">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/variableGroup.ts#L199">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9270,7 +9798,7 @@ The description of the Variable Group.
 The name of the Variable Group.
 
 <h4 class="pdoc-member-header" id="VariableGroupArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/variableGroup.ts#L203">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/variableGroup.ts#L203">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9278,7 +9806,7 @@ The name of the Variable Group.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="VariableGroupArgs-variables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/variableGroup.ts#L207">property <b>variables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/variableGroup.ts#L207">property <b>variables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>variables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#VariableGroupVariable'>VariableGroupVariable</a>&gt;[]&gt;;</code></pre>
@@ -9286,7 +9814,7 @@ The project ID or project name.
 One or more `variable` blocks as documented below.
 
 <h3 class="pdoc-module-header" id="VariableGroupState" data-link-title="VariableGroupState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/variableGroup.ts#L159">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/variableGroup.ts#L159">
         interface <strong>VariableGroupState</strong>
     </a>
 </h3>
@@ -9296,7 +9824,7 @@ One or more `variable` blocks as documented below.
 Input properties used for looking up and filtering VariableGroup resources.
 
 <h4 class="pdoc-member-header" id="VariableGroupState-allowAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/variableGroup.ts#L163">property <b>allowAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/variableGroup.ts#L163">property <b>allowAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -9304,7 +9832,7 @@ Input properties used for looking up and filtering VariableGroup resources.
 Boolean that indicate if this variable group is shared by all pipelines of this project.
 
 <h4 class="pdoc-member-header" id="VariableGroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/variableGroup.ts#L167">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/variableGroup.ts#L167">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9312,12 +9840,12 @@ Boolean that indicate if this variable group is shared by all pipelines of this 
 The description of the Variable Group.
 
 <h4 class="pdoc-member-header" id="VariableGroupState-keyVault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/variableGroup.ts#L168">property <b>keyVault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/variableGroup.ts#L168">property <b>keyVault</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVault?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#VariableGroupKeyVault'>VariableGroupKeyVault</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="VariableGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/variableGroup.ts#L172">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/variableGroup.ts#L172">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9325,7 +9853,7 @@ The description of the Variable Group.
 The name of the Variable Group.
 
 <h4 class="pdoc-member-header" id="VariableGroupState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/variableGroup.ts#L176">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/variableGroup.ts#L176">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9333,7 +9861,7 @@ The name of the Variable Group.
 The project ID or project name.
 
 <h4 class="pdoc-member-header" id="VariableGroupState-variables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/variableGroup.ts#L180">property <b>variables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/variableGroup.ts#L180">property <b>variables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>variables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#VariableGroupVariable'>VariableGroupVariable</a>&gt;[]&gt;;</code></pre>
@@ -9341,7 +9869,7 @@ The project ID or project name.
 One or more `variable` blocks as documented below.
 
 <h3 class="pdoc-module-header" id="WorkItemQueryPermissionsArgs" data-link-title="WorkItemQueryPermissionsArgs">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/workItemQueryPermissions.ts#L237">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/workItemQueryPermissions.ts#L237">
         interface <strong>WorkItemQueryPermissionsArgs</strong>
     </a>
 </h3>
@@ -9351,7 +9879,7 @@ One or more `variable` blocks as documented below.
 The set of arguments for constructing a WorkItemQueryPermissions resource.
 
 <h4 class="pdoc-member-header" id="WorkItemQueryPermissionsArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/workItemQueryPermissions.ts#L241">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/workItemQueryPermissions.ts#L241">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9359,7 +9887,7 @@ The set of arguments for constructing a WorkItemQueryPermissions resource.
 Path to a query or folder beneath `Shared Queries`
 
 <h4 class="pdoc-member-header" id="WorkItemQueryPermissionsArgs-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/workItemQueryPermissions.ts#L245">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/workItemQueryPermissions.ts#L245">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -9367,7 +9895,7 @@ Path to a query or folder beneath `Shared Queries`
 the permissions to assign. The following permissions are available
 
 <h4 class="pdoc-member-header" id="WorkItemQueryPermissionsArgs-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/workItemQueryPermissions.ts#L249">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/workItemQueryPermissions.ts#L249">property <b>principal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9375,7 +9903,7 @@ the permissions to assign. The following permissions are available
 The **group** principal to assign the permissions.
 
 <h4 class="pdoc-member-header" id="WorkItemQueryPermissionsArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/workItemQueryPermissions.ts#L253">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/workItemQueryPermissions.ts#L253">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9383,7 +9911,7 @@ The **group** principal to assign the permissions.
 The ID of the project to assign the permissions.
 
 <h4 class="pdoc-member-header" id="WorkItemQueryPermissionsArgs-replace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/workItemQueryPermissions.ts#L257">property <b>replace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/workItemQueryPermissions.ts#L257">property <b>replace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -9391,7 +9919,7 @@ The ID of the project to assign the permissions.
 Replace (`true`) or merge (`false`) the permissions. Default: `true`
 
 <h3 class="pdoc-module-header" id="WorkItemQueryPermissionsState" data-link-title="WorkItemQueryPermissionsState">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/workItemQueryPermissions.ts#L211">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/workItemQueryPermissions.ts#L211">
         interface <strong>WorkItemQueryPermissionsState</strong>
     </a>
 </h3>
@@ -9401,7 +9929,7 @@ Replace (`true`) or merge (`false`) the permissions. Default: `true`
 Input properties used for looking up and filtering WorkItemQueryPermissions resources.
 
 <h4 class="pdoc-member-header" id="WorkItemQueryPermissionsState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/workItemQueryPermissions.ts#L215">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/workItemQueryPermissions.ts#L215">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9409,7 +9937,7 @@ Input properties used for looking up and filtering WorkItemQueryPermissions reso
 Path to a query or folder beneath `Shared Queries`
 
 <h4 class="pdoc-member-header" id="WorkItemQueryPermissionsState-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/workItemQueryPermissions.ts#L219">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/workItemQueryPermissions.ts#L219">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -9417,7 +9945,7 @@ Path to a query or folder beneath `Shared Queries`
 the permissions to assign. The following permissions are available
 
 <h4 class="pdoc-member-header" id="WorkItemQueryPermissionsState-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/workItemQueryPermissions.ts#L223">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/workItemQueryPermissions.ts#L223">property <b>principal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9425,7 +9953,7 @@ the permissions to assign. The following permissions are available
 The **group** principal to assign the permissions.
 
 <h4 class="pdoc-member-header" id="WorkItemQueryPermissionsState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/workItemQueryPermissions.ts#L227">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/workItemQueryPermissions.ts#L227">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -9433,7 +9961,7 @@ The **group** principal to assign the permissions.
 The ID of the project to assign the permissions.
 
 <h4 class="pdoc-member-header" id="WorkItemQueryPermissionsState-replace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/workItemQueryPermissions.ts#L231">property <b>replace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/workItemQueryPermissions.ts#L231">property <b>replace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>

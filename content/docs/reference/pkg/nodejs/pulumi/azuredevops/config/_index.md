@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/azuredevops | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/azuredevops package."
-git_sha: "5a2704baa4eadd2446006775047639ffb3cd5575"
+git_sha: "8f499c00158ea0335e120f29e31b3f2cfa1e56f5"
 block_external_search_index: true
 ---
 
@@ -28,7 +28,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="orgServiceUrl" data-link-title="orgServiceUrl">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/config/vars.ts#L12">
         let <strong>orgServiceUrl</strong>
     </a>
 </h3>
@@ -38,7 +38,7 @@ block_external_search_index: true
 The url of the Azure DevOps instance which should be used.
 
 <h3 class="pdoc-module-header" id="personalAccessToken" data-link-title="personalAccessToken">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/8f499c00158ea0335e120f29e31b3f2cfa1e56f5/sdk/nodejs/config/vars.ts#L16">
         let <strong>personalAccessToken</strong>
     </a>
 </h3>

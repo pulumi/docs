@@ -253,7 +253,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><a class="reference external" href="https://docs.microsoft.com/en-us/rest/api/azure/devops/policy/configurations/create?view=azure-devops-rest-5.1">Azure DevOps Service REST API 5.1 - Policy Configurations</a></p></li>
 </ul>
 <p>Azure DevOps Branch Policies can be imported using the project ID and policy configuration ID</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuredevops:index/branchPolicyAutoReviewers:BranchPolicyAutoReviewers p aa4a9756-8a86-4588-86d7-b3ee2d88b033/60
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuredevops:index/branchPolicyAutoReviewers:BranchPolicyAutoReviewers p <span class="m">00000000</span>-0000-0000-0000-000000000000/0
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -402,7 +402,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><a class="reference external" href="https://docs.microsoft.com/en-us/rest/api/azure/devops/policy/configurations/create?view=azure-devops-rest-5.1">Azure DevOps Service REST API 5.1 - Policy Configurations</a></p></li>
 </ul>
 <p>Azure DevOps Branch Policies can be imported using the project ID and policy configuration ID</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuredevops:index/branchPolicyBuildValidation:BranchPolicyBuildValidation p aa4a9756-8a86-4588-86d7-b3ee2d88b033/60
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuredevops:index/branchPolicyBuildValidation:BranchPolicyBuildValidation p <span class="m">00000000</span>-0000-0000-0000-000000000000/0
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -672,7 +672,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><a class="reference external" href="https://docs.microsoft.com/en-us/rest/api/azure/devops/policy/configurations/create?view=azure-devops-rest-5.1">Azure DevOps Service REST API 5.1 - Policy Configurations</a></p></li>
 </ul>
 <p>Azure DevOps Branch Policies can be imported using the project ID and policy configuration ID</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuredevops:index/branchPolicyMinReviewers:BranchPolicyMinReviewers p aa4a9756-8a86-4588-86d7-b3ee2d88b033/60
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuredevops:index/branchPolicyMinReviewers:BranchPolicyMinReviewers p <span class="m">00000000</span>-0000-0000-0000-000000000000/0
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1108,6 +1108,161 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="py method">
 <dt id="pulumi_azuredevops.BuildDefinition.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuredevops.BuildDefinition.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_azuredevops.BuildDefinitionPermissions">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuredevops.</code><code class="sig-name descname">BuildDefinitionPermissions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">build_definition_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permissions</span><span class="p">:</span> <span class="n">Union[Mapping[str, Union[str, Awaitable[str], Output[T]]], Awaitable[Mapping[str, Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">principal</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replace</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuredevops.BuildDefinitionPermissions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages permissions for a Build Definition</p>
+<blockquote>
+<div><p><strong>Note</strong> Permissions can be assigned to group principals and not to single user principals.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azuredevops</span> <span class="k">as</span> <span class="nn">azuredevops</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="n">azuredevops</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">work_item_template</span><span class="o">=</span><span class="s2">&quot;Agile&quot;</span><span class="p">,</span>
+    <span class="n">version_control</span><span class="o">=</span><span class="s2">&quot;Git&quot;</span><span class="p">,</span>
+    <span class="n">visibility</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Managed by Terraform&quot;</span><span class="p">)</span>
+<span class="n">project_readers</span> <span class="o">=</span> <span class="n">project</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="nb">id</span><span class="p">:</span> <span class="n">azuredevops</span><span class="o">.</span><span class="n">get_group</span><span class="p">(</span><span class="n">project_id</span><span class="o">=</span><span class="nb">id</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Readers&quot;</span><span class="p">))</span>
+<span class="n">repository</span> <span class="o">=</span> <span class="n">azuredevops</span><span class="o">.</span><span class="n">Git</span><span class="p">(</span><span class="s2">&quot;repository&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">project</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">initialization</span><span class="o">=</span><span class="n">azuredevops</span><span class="o">.</span><span class="n">GitInitializationArgs</span><span class="p">(</span>
+        <span class="n">init_type</span><span class="o">=</span><span class="s2">&quot;Clean&quot;</span><span class="p">,</span>
+    <span class="p">))</span>
+<span class="n">build</span> <span class="o">=</span> <span class="n">azuredevops</span><span class="o">.</span><span class="n">BuildDefinition</span><span class="p">(</span><span class="s2">&quot;build&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">project</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">path</span><span class="o">=</span><span class="s2">&quot;\ExampleFolder&quot;</span><span class="p">,</span>
+    <span class="n">ci_trigger</span><span class="o">=</span><span class="n">azuredevops</span><span class="o">.</span><span class="n">BuildDefinitionCiTriggerArgs</span><span class="p">(</span>
+        <span class="n">use_yaml</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="n">repository</span><span class="o">=</span><span class="n">azuredevops</span><span class="o">.</span><span class="n">BuildDefinitionRepositoryArgs</span><span class="p">(</span>
+        <span class="n">repo_type</span><span class="o">=</span><span class="s2">&quot;TfsGit&quot;</span><span class="p">,</span>
+        <span class="n">repo_id</span><span class="o">=</span><span class="n">repository</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="n">branch_name</span><span class="o">=</span><span class="n">repository</span><span class="o">.</span><span class="n">default_branch</span><span class="p">,</span>
+        <span class="n">yml_path</span><span class="o">=</span><span class="s2">&quot;azure-pipelines.yml&quot;</span><span class="p">,</span>
+    <span class="p">))</span>
+<span class="n">permissions</span> <span class="o">=</span> <span class="n">azuredevops</span><span class="o">.</span><span class="n">BuildDefinitionPermissions</span><span class="p">(</span><span class="s2">&quot;permissions&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">project</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">principal</span><span class="o">=</span><span class="n">project_readers</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">build_definition_id</span><span class="o">=</span><span class="n">build</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">permissions</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;ViewBuilds&quot;</span><span class="p">:</span> <span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;EditBuildQuality&quot;</span><span class="p">:</span> <span class="s2">&quot;Deny&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;DeleteBuilds&quot;</span><span class="p">:</span> <span class="s2">&quot;Deny&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;StopBuilds&quot;</span><span class="p">:</span> <span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/rest/api/azure/devops/security/?view=azure-devops-rest-5.1">Azure DevOps Service REST API 5.1 - Security</a></p></li>
+</ul>
+<ul class="simple">
+<li><p><strong>Project &amp; Team</strong>: vso.security_manage - Grants the ability to read, write, and manage security permissions.</p></li>
+</ul>
+<p>The resource does not support import.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>build_definition_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the build definition to assign the permissions.</p></li>
+<li><p><strong>pulumi.Input</strong><strong>[</strong><strong>str</strong><strong>]</strong><strong>]</strong><strong>] </strong><strong>permissions</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – the permissions to assign. The following permissions are available.</p></li>
+<li><p><strong>principal</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <strong>group</strong> principal to assign the permissions.</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project to assign the permissions.</p></li>
+<li><p><strong>replace</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Replace (<code class="docutils literal notranslate"><span class="pre">true</span></code>) or merge (<code class="docutils literal notranslate"><span class="pre">false</span></code>) the permissions. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pulumi_azuredevops.BuildDefinitionPermissions.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">build_definition_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permissions</span><span class="p">:</span> <span class="n">Union[Mapping[str, Union[str, Awaitable[str], Output[T]]], Awaitable[Mapping[str, Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">principal</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replace</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_azuredevops.build_definition_permissions.BuildDefinitionPermissions<a class="headerlink" href="#pulumi_azuredevops.BuildDefinitionPermissions.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing BuildDefinitionPermissions resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>build_definition_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the build definition to assign the permissions.</p></li>
+<li><p><strong>pulumi.Input</strong><strong>[</strong><strong>str</strong><strong>]</strong><strong>]</strong><strong>] </strong><strong>permissions</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – the permissions to assign. The following permissions are available.</p></li>
+<li><p><strong>principal</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <strong>group</strong> principal to assign the permissions.</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project to assign the permissions.</p></li>
+<li><p><strong>replace</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Replace (<code class="docutils literal notranslate"><span class="pre">true</span></code>) or merge (<code class="docutils literal notranslate"><span class="pre">false</span></code>) the permissions. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuredevops.BuildDefinitionPermissions.build_definition_id">
+<em class="property">property </em><code class="sig-name descname">build_definition_id</code><a class="headerlink" href="#pulumi_azuredevops.BuildDefinitionPermissions.build_definition_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id of the build definition to assign the permissions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuredevops.BuildDefinitionPermissions.permissions">
+<em class="property">property </em><code class="sig-name descname">permissions</code><a class="headerlink" href="#pulumi_azuredevops.BuildDefinitionPermissions.permissions" title="Permalink to this definition">¶</a></dt>
+<dd><p>the permissions to assign. The following permissions are available.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuredevops.BuildDefinitionPermissions.principal">
+<em class="property">property </em><code class="sig-name descname">principal</code><a class="headerlink" href="#pulumi_azuredevops.BuildDefinitionPermissions.principal" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <strong>group</strong> principal to assign the permissions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuredevops.BuildDefinitionPermissions.project_id">
+<em class="property">property </em><code class="sig-name descname">project_id</code><a class="headerlink" href="#pulumi_azuredevops.BuildDefinitionPermissions.project_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project to assign the permissions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuredevops.BuildDefinitionPermissions.replace">
+<em class="property">property </em><code class="sig-name descname">replace</code><a class="headerlink" href="#pulumi_azuredevops.BuildDefinitionPermissions.replace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replace (<code class="docutils literal notranslate"><span class="pre">true</span></code>) or merge (<code class="docutils literal notranslate"><span class="pre">false</span></code>) the permissions. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuredevops.BuildDefinitionPermissions.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuredevops.BuildDefinitionPermissions.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuredevops.BuildDefinitionPermissions.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuredevops.BuildDefinitionPermissions.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -2379,7 +2534,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><a class="reference external" href="https://docs.microsoft.com/en-us/rest/api/azure/devops/distributedtask/pools?view=azure-devops-rest-5.1">Azure DevOps Service REST API 5.1 - Agent Pools</a></p></li>
 </ul>
 <p>Azure DevOps Agent Pools can be imported using the agent pool ID, e.g.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuredevops:index/pool:Pool azuredevops_agent_pool.pool <span class="m">42</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuredevops:index/pool:Pool pool <span class="m">42</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -2642,7 +2797,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>Project &amp; Team</strong>: Read, Write, &amp; Manage</p></li>
 </ul>
 <p>Azure DevOps feature settings can be imported using the project id, e.g.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuredevops:index/projectFeatures:ProjectFeatures project_id 2785562e-8f45-4534-a10e-b9ca1666b17e
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuredevops:index/projectFeatures:ProjectFeatures project_id <span class="m">00000000</span>-0000-0000-0000-000000000000
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -2929,7 +3084,7 @@ the <code class="docutils literal notranslate"><span class="pre">ResourceAuthori
 <li><p><a class="reference external" href="https://docs.microsoft.com/en-us/rest/api/azure/devops/distributedtask/queues?view=azure-devops-rest-5.1">Azure DevOps Service REST API 5.1 - Agent Queues</a></p></li>
 </ul>
 <p>Azure DevOps Agent Pools can be imported using the project ID and agent queue ID, e.g.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuredevops:index/queue:Queue q 44cbf614-4dfd-4032-9fae-87b0da3bec30/1381
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuredevops:index/queue:Queue q <span class="m">00000000</span>-0000-0000-0000-000000000000/0
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -3330,7 +3485,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><a class="reference external" href="https://docs.microsoft.com/en-us/rest/api/containerregistry/">Azure Container Registry REST API</a></p></li>
 </ul>
 <p>Azure DevOps Service Endpoint Azure Container Registry can be imported using <strong>projectID/serviceEndpointID</strong> or <strong>projectName/serviceEndpointID</strong></p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuredevops:index/serviceEndpointAzureEcr:ServiceEndpointAzureEcr azuredevops_serviceendpoint_azurecr.serviceendpoint <span class="m">00000000</span>-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuredevops:index/serviceEndpointAzureEcr:ServiceEndpointAzureEcr serviceendpoint <span class="m">00000000</span>-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -3505,7 +3660,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><a class="reference external" href="https://docs.microsoft.com/en-us/rest/api/azure/devops/serviceendpoint/endpoints?view=azure-devops-rest-5.1">Azure DevOps Service REST API 5.1 - Service End points</a></p></li>
 </ul>
 <p>Azure DevOps Service Endpoint Azure Resource Manage can be imported using <strong>projectID/serviceEndpointID</strong> or <strong>projectName/serviceEndpointID</strong></p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuredevops:index/serviceEndpointAzureRM:ServiceEndpointAzureRM azuredevops_serviceendpoint_azurerm.serviceendpoint <span class="m">00000000</span>-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuredevops:index/serviceEndpointAzureRM:ServiceEndpointAzureRM serviceendpoint <span class="m">00000000</span>-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -3657,7 +3812,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><a class="reference external" href="https://docs.microsoft.com/en-us/rest/api/azure/devops/serviceendpoint/endpoints?view=azure-devops-rest-5.1">Azure DevOps Service REST API 5.1 - Agent Pools</a></p></li>
 </ul>
 <p>Azure DevOps Service Endpoint Bitbucket can be imported using <strong>projectID/serviceEndpointID</strong> or <strong>projectName/serviceEndpointID</strong></p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuredevops:index/serviceEndpointBitBucket:ServiceEndpointBitBucket azuredevops_serviceendpoint_bitbucket.serviceendpoint <span class="m">00000000</span>-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuredevops:index/serviceEndpointBitBucket:ServiceEndpointBitBucket serviceendpoint <span class="m">00000000</span>-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -3795,7 +3950,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><a class="reference external" href="https://docs.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints?view=azure-devops&amp;tabs=yaml#sep-docreg">Docker Registry Service Connection</a></p></li>
 </ul>
 <p>Azure DevOps Service Endpoint Docker Registry can be imported using <strong>projectID/serviceEndpointID</strong> or <strong>projectName/serviceEndpointID</strong></p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuredevops:index/serviceEndpointDockerRegistry:ServiceEndpointDockerRegistry azuredevops_serviceendpoint_dockerregistry.serviceendpoint <span class="m">00000000</span>-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuredevops:index/serviceEndpointDockerRegistry:ServiceEndpointDockerRegistry serviceendpoint <span class="m">00000000</span>-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -3974,7 +4129,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><a class="reference external" href="https://docs.microsoft.com/en-us/rest/api/azure/devops/serviceendpoint/endpoints?view=azure-devops-rest-5.1">Azure DevOps Service REST API 5.1 - Service Endpoints</a></p></li>
 </ul>
 <p>Azure DevOps Service Endpoint GitHub can be imported using <strong>projectID/serviceEndpointID</strong> or <strong>projectName/serviceEndpointID</strong></p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuredevops:index/serviceEndpointGitHub:ServiceEndpointGitHub azuredevops_serviceendpoint_github.serviceendpoint <span class="m">00000000</span>-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuredevops:index/serviceEndpointGitHub:ServiceEndpointGitHub serviceendpoint <span class="m">00000000</span>-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -4079,7 +4234,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><a class="reference external" href="https://docs.microsoft.com/en-us/rest/api/azure/devops/serviceendpoint/endpoints?view=azure-devops-rest-5.1">Azure DevOps Service REST API 5.1 - Endpoints</a></p></li>
 </ul>
 <p>Azure DevOps Service Endpoint Kubernetes can be imported using <strong>projectID/serviceEndpointID</strong> or <strong>projectName/serviceEndpointID</strong></p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuredevops:index/serviceEndpointKubernetes:ServiceEndpointKubernetes azuredevops_serviceendpoint_kubernetes.serviceendpoint <span class="m">00000000</span>-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuredevops:index/serviceEndpointKubernetes:ServiceEndpointKubernetes serviceendpoint <span class="m">00000000</span>-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -4183,6 +4338,128 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="py method">
 <dt id="pulumi_azuredevops.ServiceEndpointKubernetes.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuredevops.ServiceEndpointKubernetes.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_azuredevops.ServiceEndpointPipeline">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuredevops.</code><code class="sig-name descname">ServiceEndpointPipeline</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auth_personal</span><span class="p">:</span> <span class="n">Union[ServiceEndpointPipelineAuthPersonalArgs, Mapping[str, Any], Awaitable[Union[ServiceEndpointPipelineAuthPersonalArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorization</span><span class="p">:</span> <span class="n">Union[Mapping[str, Union[str, Awaitable[str], Output[T]]], Awaitable[Mapping[str, Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">organization_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_endpoint_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuredevops.ServiceEndpointPipeline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a Azure DevOps Service Connection service endpoint within Azure DevOps. Allows to run downstream pipelines, monitoring their execution, collecting and consolidating artefacts produced in the delegate pipelines (yaml block <code class="docutils literal notranslate"><span class="pre">task:</span> <span class="pre">RunPipelines&#64;1</span></code>). More details on Marketplace page: <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=CSE-DevOps.RunPipelines">RunPipelines</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azuredevops</span> <span class="k">as</span> <span class="nn">azuredevops</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="n">azuredevops</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+    <span class="n">visibility</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">,</span>
+    <span class="n">version_control</span><span class="o">=</span><span class="s2">&quot;Git&quot;</span><span class="p">,</span>
+    <span class="n">work_item_template</span><span class="o">=</span><span class="s2">&quot;Agile&quot;</span><span class="p">)</span>
+<span class="n">serviceendpoint</span> <span class="o">=</span> <span class="n">azuredevops</span><span class="o">.</span><span class="n">ServiceEndpointPipeline</span><span class="p">(</span><span class="s2">&quot;serviceendpoint&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">project</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">service_endpoint_name</span><span class="o">=</span><span class="s2">&quot;Sample Pipeline Runner&quot;</span><span class="p">,</span>
+    <span class="n">organization_name</span><span class="o">=</span><span class="s2">&quot;MyOrganization&quot;</span><span class="p">,</span>
+    <span class="n">auth_personal</span><span class="o">=</span><span class="n">azuredevops</span><span class="o">.</span><span class="n">ServiceEndpointPipelineAuthPersonalArgs</span><span class="p">(</span>
+        <span class="n">personal_access_token</span><span class="o">=</span><span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Managed by Terraform&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/rest/api/azure/devops/serviceendpoint/endpoints?view=azure-devops-rest-5.1">Azure DevOps Service REST API 5.1 - Agent Pools</a></p></li>
+</ul>
+<p>Azure DevOps Service Endpoint can be imported using the <code class="docutils literal notranslate"><span class="pre">project</span> <span class="pre">id</span></code>, <code class="docutils literal notranslate"><span class="pre">service</span> <span class="pre">connection</span> <span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import azuredevops:index/serviceEndpointPipeline:ServiceEndpointPipeline serviceendpoint projectID/00000000-0000-0000-0000-000000000000
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>auth_personal</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceEndpointPipelineAuthPersonalArgs'</em><em>]</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">auth_personal</span></code> block as documented below. Allows connecting using a personal access token.</p></li>
+<li><p><strong>organization_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The organization name used for <code class="docutils literal notranslate"><span class="pre">Organization</span> <span class="pre">Url</span></code> and <code class="docutils literal notranslate"><span class="pre">Release</span> <span class="pre">API</span> <span class="pre">Url</span></code> fields.</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID or project name.</p></li>
+<li><p><strong>service_endpoint_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Service Endpoint name.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pulumi_azuredevops.ServiceEndpointPipeline.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auth_personal</span><span class="p">:</span> <span class="n">Union[ServiceEndpointPipelineAuthPersonalArgs, Mapping[str, Any], Awaitable[Union[ServiceEndpointPipelineAuthPersonalArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorization</span><span class="p">:</span> <span class="n">Union[Mapping[str, Union[str, Awaitable[str], Output[T]]], Awaitable[Mapping[str, Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">organization_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_endpoint_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_azuredevops.service_endpoint_pipeline.ServiceEndpointPipeline<a class="headerlink" href="#pulumi_azuredevops.ServiceEndpointPipeline.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ServiceEndpointPipeline resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>auth_personal</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceEndpointPipelineAuthPersonalArgs'</em><em>]</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">auth_personal</span></code> block as documented below. Allows connecting using a personal access token.</p></li>
+<li><p><strong>organization_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The organization name used for <code class="docutils literal notranslate"><span class="pre">Organization</span> <span class="pre">Url</span></code> and <code class="docutils literal notranslate"><span class="pre">Release</span> <span class="pre">API</span> <span class="pre">Url</span></code> fields.</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID or project name.</p></li>
+<li><p><strong>service_endpoint_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Service Endpoint name.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuredevops.ServiceEndpointPipeline.auth_personal">
+<em class="property">property </em><code class="sig-name descname">auth_personal</code><a class="headerlink" href="#pulumi_azuredevops.ServiceEndpointPipeline.auth_personal" title="Permalink to this definition">¶</a></dt>
+<dd><p>An <code class="docutils literal notranslate"><span class="pre">auth_personal</span></code> block as documented below. Allows connecting using a personal access token.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuredevops.ServiceEndpointPipeline.organization_name">
+<em class="property">property </em><code class="sig-name descname">organization_name</code><a class="headerlink" href="#pulumi_azuredevops.ServiceEndpointPipeline.organization_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The organization name used for <code class="docutils literal notranslate"><span class="pre">Organization</span> <span class="pre">Url</span></code> and <code class="docutils literal notranslate"><span class="pre">Release</span> <span class="pre">API</span> <span class="pre">Url</span></code> fields.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuredevops.ServiceEndpointPipeline.project_id">
+<em class="property">property </em><code class="sig-name descname">project_id</code><a class="headerlink" href="#pulumi_azuredevops.ServiceEndpointPipeline.project_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The project ID or project name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuredevops.ServiceEndpointPipeline.service_endpoint_name">
+<em class="property">property </em><code class="sig-name descname">service_endpoint_name</code><a class="headerlink" href="#pulumi_azuredevops.ServiceEndpointPipeline.service_endpoint_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Service Endpoint name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuredevops.ServiceEndpointPipeline.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuredevops.ServiceEndpointPipeline.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azuredevops.ServiceEndpointPipeline.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuredevops.ServiceEndpointPipeline.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

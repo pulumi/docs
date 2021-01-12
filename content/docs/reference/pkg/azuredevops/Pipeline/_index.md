@@ -23,7 +23,7 @@ Explore the resources and functions of the Pipeline module in the Azure DevOps p
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azuredevops` Terraform Provider](https://github.com/microsoft/terraform-provider-azuredevops).</dd>
 	<dt>Version</dt>
-	<dd>1.1.0</dd>
+	<dd>1.1.1</dd>
 </dl>
 
 

@@ -1643,7 +1643,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the source repository. Used if the `init_type` is `Import`. Valid values: `Git`. Defaults to `Git`.
+    <dd>{{% md %}}Type of the source repository. Used if the `init_type` is `Import`. Valid values: `Git`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1679,7 +1679,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the source repository. Used if the `init_type` is `Import`. Valid values: `Git`. Defaults to `Git`.
+    <dd>{{% md %}}Type of the source repository. Used if the `init_type` is `Import`. Valid values: `Git`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1715,7 +1715,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the source repository. Used if the `init_type` is `Import`. Valid values: `Git`. Defaults to `Git`.
+    <dd>{{% md %}}Type of the source repository. Used if the `init_type` is `Import`. Valid values: `Git`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1751,7 +1751,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the source repository. Used if the `init_type` is `Import`. Valid values: `Git`. Defaults to `Git`.
+    <dd>{{% md %}}Type of the source repository. Used if the `init_type` is `Import`. Valid values: `Git`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
