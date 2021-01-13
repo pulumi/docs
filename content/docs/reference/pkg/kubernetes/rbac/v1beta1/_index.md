@@ -28,7 +28,7 @@ Explore the resources and functions of the rbac/v1beta1 module in the Kubernetes
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.7.5</dd>
+	<dd>2.7.6</dd>
 </dl>
 
 

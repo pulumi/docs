@@ -3,7 +3,7 @@ title: "Module yaml"
 title_tag: "Module yaml | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "yaml"
 meta_desc: "Explore members of the yaml module in the @pulumi/kubernetes package."
-git_sha: "ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9"
+git_sha: "f01f284c88884e5d9c32cb08b9ee2a464af4a384"
 block_external_search_index: true
 ---
 
@@ -33,21 +33,21 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="CollectionComponentResource" data-link-title="CollectionComponentResource">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L26">
         Resource <strong>CollectionComponentResource</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>CollectionComponentResource</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 <h4 class="pdoc-member-header" id="CollectionComponentResource-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L28"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L28"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span><span class='kd'>new</span> CollectionComponentResource(resourceType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, config: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="CollectionComponentResource-getCustomResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2382">method <b>getCustomResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2382">method <b>getCustomResource</b></a>
 </h4>
 
 
@@ -63,7 +63,7 @@ For example:
 <pre class="highlight"><code><span class='kd'>public </span>getCustomResource&lt;T&gt;(groupVersionKind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;T&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="CollectionComponentResource-getData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L26">method <b>getData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L26">method <b>getData</b></a>
 </h4>
 
 
@@ -74,14 +74,14 @@ Retrieves the data produces by [initialize].  The data is immediately available 
 derived class's constructor after the `super(...)` call to `ComponentResource`.
 
 <h4 class="pdoc-member-header" id="CollectionComponentResource-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L26">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L26">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CollectionComponentResource-getResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L42">method <b>getResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L42">method <b>getResource</b></a>
 </h4>
 
 
@@ -154,7 +154,7 @@ For example:
 <pre class="highlight"><code>+ 386 additional overloads</code></pre>
 
 <h4 class="pdoc-member-header" id="CollectionComponentResource-getResourceProperty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L458">method <b>getResourceProperty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L458">method <b>getResourceProperty</b></a>
 </h4>
 
 
@@ -227,7 +227,7 @@ For example:
 <pre class="highlight"><code>+ 1892 additional overloads</code></pre>
 
 <h4 class="pdoc-member-header" id="CollectionComponentResource-initialize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L26">method <b>initialize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L26">method <b>initialize</b></a>
 </h4>
 
 
@@ -239,7 +239,7 @@ automatically when constructed.  The data will be available immediately for subc
 constructors to use.  To access the data use `.getData`.
 
 <h4 class="pdoc-member-header" id="CollectionComponentResource-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L26">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L26">method <b>isInstance</b></a>
 </h4>
 
 
@@ -250,7 +250,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CollectionComponentResource-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L26">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L26">method <b>registerOutputs</b></a>
 </h4>
 
 
@@ -265,17 +265,17 @@ done creating child resources.  This is not strictly necessary as this will auto
 called after the `initialize` method completes.
 
 <h4 class="pdoc-member-header" id="CollectionComponentResource-ready">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L28">property <b>ready</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L28">property <b>ready</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ready: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CollectionComponentResource-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L27">property <b>resources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L27">property <b>resources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CollectionComponentResource-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L26">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L26">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -287,7 +287,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ConfigFile" data-link-title="ConfigFile">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2560">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2560">
         class <strong>ConfigFile</strong>
     </a>
 </h3>
@@ -341,7 +341,7 @@ const example = new k8s.yaml.ConfigFile("example", {
 ```
 
 <h4 class="pdoc-member-header" id="ConfigFile-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2560"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2560"> <b>constructor</b></a>
 </h4>
 
 
@@ -355,7 +355,7 @@ Create a ConfigFile resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ConfigFile-getCustomResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2382">method <b>getCustomResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2382">method <b>getCustomResource</b></a>
 </h4>
 
 
@@ -371,7 +371,7 @@ For example:
 <pre class="highlight"><code><span class='kd'>public </span>getCustomResource&lt;T&gt;(groupVersionKind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;T&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="ConfigFile-getData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2560">method <b>getData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2560">method <b>getData</b></a>
 </h4>
 
 
@@ -382,14 +382,14 @@ Retrieves the data produces by [initialize].  The data is immediately available 
 derived class's constructor after the `super(...)` call to `ComponentResource`.
 
 <h4 class="pdoc-member-header" id="ConfigFile-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2560">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2560">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ConfigFile-getResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L42">method <b>getResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L42">method <b>getResource</b></a>
 </h4>
 
 
@@ -462,7 +462,7 @@ For example:
 <pre class="highlight"><code>+ 386 additional overloads</code></pre>
 
 <h4 class="pdoc-member-header" id="ConfigFile-getResourceProperty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L458">method <b>getResourceProperty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L458">method <b>getResourceProperty</b></a>
 </h4>
 
 
@@ -535,7 +535,7 @@ For example:
 <pre class="highlight"><code>+ 1892 additional overloads</code></pre>
 
 <h4 class="pdoc-member-header" id="ConfigFile-initialize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2560">method <b>initialize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2560">method <b>initialize</b></a>
 </h4>
 
 
@@ -547,7 +547,7 @@ automatically when constructed.  The data will be available immediately for subc
 constructors to use.  To access the data use `.getData`.
 
 <h4 class="pdoc-member-header" id="ConfigFile-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2560">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2560">method <b>isInstance</b></a>
 </h4>
 
 
@@ -558,7 +558,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ConfigFile-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2560">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2560">method <b>registerOutputs</b></a>
 </h4>
 
 
@@ -573,17 +573,17 @@ done creating child resources.  This is not strictly necessary as this will auto
 called after the `initialize` method completes.
 
 <h4 class="pdoc-member-header" id="ConfigFile-ready">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L28">property <b>ready</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L28">property <b>ready</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ready: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigFile-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L27">property <b>resources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L27">property <b>resources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigFile-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2560">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2560">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -592,7 +592,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ConfigFileOpts" data-link-title="ConfigFileOpts">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2631">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2631">
         interface <strong>ConfigFileOpts</strong>
     </a>
 </h3>
@@ -602,7 +602,7 @@ deployments.
 The set of arguments for constructing a ConfigFile resource.
 
 <h4 class="pdoc-member-header" id="ConfigFileOpts-file">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2633">property <b>file</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2633">property <b>file</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>file?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -610,7 +610,7 @@ The set of arguments for constructing a ConfigFile resource.
 Path or a URL that uniquely identifies a file.
 
 <h4 class="pdoc-member-header" id="ConfigFileOpts-resourcePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2642">property <b>resourcePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2642">property <b>resourcePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourcePrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -619,7 +619,7 @@ An optional prefix for the auto-generated resource names.
 Example: A resource created with resourcePrefix="foo" would produce a resource named "foo-resourceName".
 
 <h4 class="pdoc-member-header" id="ConfigFileOpts-transformations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2636">property <b>transformations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2636">property <b>transformations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transformations?: (o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>[];</code></pre>
@@ -627,7 +627,7 @@ Example: A resource created with resourcePrefix="foo" would produce a resource n
 A set of transformations to apply to Kubernetes resource definitions before registering with engine.
 
 <h3 class="pdoc-module-header" id="ConfigGroup" data-link-title="ConfigGroup">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2499">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2499">
         class <strong>ConfigGroup</strong>
     </a>
 </h3>
@@ -734,7 +734,7 @@ const example = new k8s.yaml.ConfigGroup("example", {
 ```
 
 <h4 class="pdoc-member-header" id="ConfigGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2499"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2499"> <b>constructor</b></a>
 </h4>
 
 
@@ -748,7 +748,7 @@ Create a ConfigGroup resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ConfigGroup-getCustomResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2382">method <b>getCustomResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2382">method <b>getCustomResource</b></a>
 </h4>
 
 
@@ -764,7 +764,7 @@ For example:
 <pre class="highlight"><code><span class='kd'>public </span>getCustomResource&lt;T&gt;(groupVersionKind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;T&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="ConfigGroup-getData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2499">method <b>getData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2499">method <b>getData</b></a>
 </h4>
 
 
@@ -775,14 +775,14 @@ Retrieves the data produces by [initialize].  The data is immediately available 
 derived class's constructor after the `super(...)` call to `ComponentResource`.
 
 <h4 class="pdoc-member-header" id="ConfigGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2499">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2499">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ConfigGroup-getResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L42">method <b>getResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L42">method <b>getResource</b></a>
 </h4>
 
 
@@ -855,7 +855,7 @@ For example:
 <pre class="highlight"><code>+ 386 additional overloads</code></pre>
 
 <h4 class="pdoc-member-header" id="ConfigGroup-getResourceProperty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L458">method <b>getResourceProperty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L458">method <b>getResourceProperty</b></a>
 </h4>
 
 
@@ -928,7 +928,7 @@ For example:
 <pre class="highlight"><code>+ 1892 additional overloads</code></pre>
 
 <h4 class="pdoc-member-header" id="ConfigGroup-initialize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2499">method <b>initialize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2499">method <b>initialize</b></a>
 </h4>
 
 
@@ -940,7 +940,7 @@ automatically when constructed.  The data will be available immediately for subc
 constructors to use.  To access the data use `.getData`.
 
 <h4 class="pdoc-member-header" id="ConfigGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2499">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2499">method <b>isInstance</b></a>
 </h4>
 
 
@@ -951,7 +951,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ConfigGroup-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2499">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2499">method <b>registerOutputs</b></a>
 </h4>
 
 
@@ -966,17 +966,17 @@ done creating child resources.  This is not strictly necessary as this will auto
 called after the `initialize` method completes.
 
 <h4 class="pdoc-member-header" id="ConfigGroup-ready">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L28">property <b>ready</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L28">property <b>ready</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ready: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigGroup-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L27">property <b>resources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L27">property <b>resources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2499">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2499">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -985,7 +985,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ConfigGroupOpts" data-link-title="ConfigGroupOpts">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2608">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2608">
         interface <strong>ConfigGroupOpts</strong>
     </a>
 </h3>
@@ -995,7 +995,7 @@ deployments.
 The set of arguments for constructing a ConfigGroup resource.
 
 <h4 class="pdoc-member-header" id="ConfigGroupOpts-files">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2610">property <b>files</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2610">property <b>files</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>files?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1003,7 +1003,7 @@ The set of arguments for constructing a ConfigGroup resource.
 Set of paths or a URLs that uniquely identify files.
 
 <h4 class="pdoc-member-header" id="ConfigGroupOpts-objs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2616">property <b>objs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2616">property <b>objs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>objs?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[] | <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>;</code></pre>
@@ -1011,7 +1011,7 @@ Set of paths or a URLs that uniquely identify files.
 JavaScript objects representing Kubernetes resources.
 
 <h4 class="pdoc-member-header" id="ConfigGroupOpts-resourcePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2625">property <b>resourcePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2625">property <b>resourcePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourcePrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1020,7 +1020,7 @@ An optional prefix for the auto-generated resource names.
 Example: A resource created with resourcePrefix="foo" would produce a resource named "foo-resourceName".
 
 <h4 class="pdoc-member-header" id="ConfigGroupOpts-transformations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2619">property <b>transformations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2619">property <b>transformations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transformations?: (o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>[];</code></pre>
@@ -1028,7 +1028,7 @@ Example: A resource created with resourcePrefix="foo" would produce a resource n
 A set of transformations to apply to Kubernetes resource definitions before registering with engine.
 
 <h4 class="pdoc-member-header" id="ConfigGroupOpts-yaml">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2613">property <b>yaml</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2613">property <b>yaml</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>yaml?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1036,7 +1036,7 @@ A set of transformations to apply to Kubernetes resource definitions before regi
 YAML text containing Kubernetes resource definitions.
 
 <h3 class="pdoc-module-header" id="ConfigOpts" data-link-title="ConfigOpts">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2648">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2648">
         interface <strong>ConfigOpts</strong>
     </a>
 </h3>
@@ -1046,7 +1046,7 @@ YAML text containing Kubernetes resource definitions.
 The set of arguments common to the ConfigFile and ConfigGroup resources.
 
 <h4 class="pdoc-member-header" id="ConfigOpts-objs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2650">property <b>objs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2650">property <b>objs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>objs: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[]&gt;;</code></pre>
@@ -1054,7 +1054,7 @@ The set of arguments common to the ConfigFile and ConfigGroup resources.
 JavaScript objects representing Kubernetes resources.
 
 <h4 class="pdoc-member-header" id="ConfigOpts-resourcePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2659">property <b>resourcePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2659">property <b>resourcePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourcePrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1063,7 +1063,7 @@ An optional prefix for the auto-generated resource names.
 Example: A resource created with resourcePrefix="foo" would produce a resource named "foo-resourceName".
 
 <h4 class="pdoc-member-header" id="ConfigOpts-transformations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2653">property <b>transformations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/yaml/yaml.ts#L2653">property <b>transformations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transformations?: (o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>[];</code></pre>

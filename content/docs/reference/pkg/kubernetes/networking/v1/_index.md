@@ -26,7 +26,7 @@ Explore the resources and functions of the networking/v1 module in the Kubernete
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.7.5</dd>
+	<dd>2.7.6</dd>
 </dl>
 
 
