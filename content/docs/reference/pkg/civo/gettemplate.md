@@ -47,7 +47,6 @@ meta_desc: "Explore the GetTemplate function of the Civo package, including exam
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -55,29 +54,26 @@ The following arguments are supported:
             title="Optional">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettemplatefilter">List&lt;Get<wbr>Template<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Filter the results.
 The `filter` block is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sorts_csharp">
 <a href="#sorts_csharp" style="color: inherit; text-decoration: inherit;">Sorts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettemplatesort">List&lt;Get<wbr>Template<wbr>Sort<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Sort the results.
 The `sort` block is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -86,29 +82,26 @@ The `sort` block is documented below.
             title="Optional">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettemplatefilter">[]Get<wbr>Template<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Filter the results.
 The `filter` block is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sorts_go">
 <a href="#sorts_go" style="color: inherit; text-decoration: inherit;">Sorts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettemplatesort">[]Get<wbr>Template<wbr>Sort</a></span>
     </dt>
     <dd>{{% md %}}Sort the results.
 The `sort` block is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -117,29 +110,26 @@ The `sort` block is documented below.
             title="Optional">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettemplatefilter">Get<wbr>Template<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}Filter the results.
 The `filter` block is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sorts_nodejs">
 <a href="#sorts_nodejs" style="color: inherit; text-decoration: inherit;">sorts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettemplatesort">Get<wbr>Template<wbr>Sort[]</a></span>
     </dt>
     <dd>{{% md %}}Sort the results.
 The `sort` block is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -148,32 +138,26 @@ The `sort` block is documented below.
             title="Optional">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettemplatefilter">Sequence[Get<wbr>Template<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Filter the results.
 The `filter` block is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sorts_python">
 <a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettemplatesort">Sequence[Get<wbr>Template<wbr>Sort<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sort the results.
 The `sort` block is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -184,7 +168,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -192,46 +175,41 @@ The following output properties are available:
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="templates_csharp">
 <a href="#templates_csharp" style="color: inherit; text-decoration: inherit;">Templates</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettemplatetemplate">List&lt;Get<wbr>Template<wbr>Template&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettemplatefilter">List&lt;Get<wbr>Template<wbr>Filter&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="sorts_csharp">
 <a href="#sorts_csharp" style="color: inherit; text-decoration: inherit;">Sorts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettemplatesort">List&lt;Get<wbr>Template<wbr>Sort&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -240,46 +218,41 @@ The following output properties are available:
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="templates_go">
 <a href="#templates_go" style="color: inherit; text-decoration: inherit;">Templates</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettemplatetemplate">[]Get<wbr>Template<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettemplatefilter">[]Get<wbr>Template<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="sorts_go">
 <a href="#sorts_go" style="color: inherit; text-decoration: inherit;">Sorts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettemplatesort">[]Get<wbr>Template<wbr>Sort</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -288,46 +261,41 @@ The following output properties are available:
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="templates_nodejs">
 <a href="#templates_nodejs" style="color: inherit; text-decoration: inherit;">templates</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettemplatetemplate">Get<wbr>Template<wbr>Template[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettemplatefilter">Get<wbr>Template<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="sorts_nodejs">
 <a href="#sorts_nodejs" style="color: inherit; text-decoration: inherit;">sorts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettemplatesort">Get<wbr>Template<wbr>Sort[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -336,49 +304,41 @@ The following output properties are available:
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="templates_python">
 <a href="#templates_python" style="color: inherit; text-decoration: inherit;">templates</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettemplatetemplate">Sequence[Get<wbr>Template<wbr>Template]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettemplatefilter">Sequence[Get<wbr>Template<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="sorts_python">
 <a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettemplatesort">Sequence[Get<wbr>Template<wbr>Sort]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -400,7 +360,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -408,29 +367,26 @@ The following output properties are available:
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter the sizes by this key. This may be one of `code`,
 `name`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Only retrieves the template which keys has value that matches
 one of the values provided here.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -439,29 +395,26 @@ one of the values provided here.
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter the sizes by this key. This may be one of `code`,
 `name`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Only retrieves the template which keys has value that matches
 one of the values provided here.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -470,29 +423,26 @@ one of the values provided here.
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter the sizes by this key. This may be one of `code`,
 `name`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Only retrieves the template which keys has value that matches
 one of the values provided here.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -501,32 +451,26 @@ one of the values provided here.
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Filter the sizes by this key. This may be one of `code`,
 `name`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Only retrieves the template which keys has value that matches
 one of the values provided here.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="gettemplatesort">Get<wbr>Template<wbr>Sort</h4>
 {{% choosable language nodejs %}}
@@ -542,7 +486,6 @@ one of the values provided here.
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -550,28 +493,25 @@ one of the values provided here.
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sort the sizes by this key. This may be one of `code`, 
 `name`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="direction_csharp">
 <a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sort direction. This may be either `asc` or `desc`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -580,28 +520,25 @@ one of the values provided here.
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sort the sizes by this key. This may be one of `code`, 
 `name`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="direction_go">
 <a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sort direction. This may be either `asc` or `desc`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -610,28 +547,25 @@ one of the values provided here.
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sort the sizes by this key. This may be one of `code`, 
 `name`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="direction_nodejs">
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sort direction. This may be either `asc` or `desc`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -640,31 +574,25 @@ one of the values provided here.
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sort the sizes by this key. This may be one of `code`, 
 `name`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="direction_python">
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The sort direction. This may be either `asc` or `desc`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="gettemplatetemplate">Get<wbr>Template<wbr>Template</h4>
 {{% choosable language nodejs %}}
@@ -680,7 +608,6 @@ one of the values provided here.
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -688,105 +615,95 @@ one of the values provided here.
             title="Required">
         <span id="cloudconfig_csharp">
 <a href="#cloudconfig_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Commonly referred to as 'user-data', this is a customisation script that is run after
 the instance is first booted.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unqiue, alphanumerical, short, human readable code for the template.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="defaultusername_csharp">
 <a href="#defaultusername_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default username to suggest that the user creates
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A multi-line description of the template, in Markdown format
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the template
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="imageid_csharp">
 <a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Image ID of any default template or the ID of another template.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short human readable name for the template
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="shortdescription_csharp">
 <a href="#shortdescription_csharp" style="color: inherit; text-decoration: inherit;">Short<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one line description of the template
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volumeid_csharp">
 <a href="#volumeid_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a bootable volume, either owned by you or global.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -795,105 +712,95 @@ the instance is first booted.
             title="Required">
         <span id="cloudconfig_go">
 <a href="#cloudconfig_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Commonly referred to as 'user-data', this is a customisation script that is run after
 the instance is first booted.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unqiue, alphanumerical, short, human readable code for the template.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="defaultusername_go">
 <a href="#defaultusername_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default username to suggest that the user creates
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A multi-line description of the template, in Markdown format
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the template
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="imageid_go">
 <a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Image ID of any default template or the ID of another template.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short human readable name for the template
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="shortdescription_go">
 <a href="#shortdescription_go" style="color: inherit; text-decoration: inherit;">Short<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one line description of the template
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volumeid_go">
 <a href="#volumeid_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a bootable volume, either owned by you or global.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -902,105 +809,95 @@ the instance is first booted.
             title="Required">
         <span id="cloudconfig_nodejs">
 <a href="#cloudconfig_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Commonly referred to as 'user-data', this is a customisation script that is run after
 the instance is first booted.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unqiue, alphanumerical, short, human readable code for the template.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="defaultusername_nodejs">
 <a href="#defaultusername_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default username to suggest that the user creates
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A multi-line description of the template, in Markdown format
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the template
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="imageid_nodejs">
 <a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Image ID of any default template or the ID of another template.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short human readable name for the template
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="shortdescription_nodejs">
 <a href="#shortdescription_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one line description of the template
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volumeid_nodejs">
 <a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a bootable volume, either owned by you or global.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1009,108 +906,95 @@ the instance is first booted.
             title="Required">
         <span id="cloud_config_python">
 <a href="#cloud_config_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Commonly referred to as 'user-data', this is a customisation script that is run after
 the instance is first booted.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unqiue, alphanumerical, short, human readable code for the template.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="default_username_python">
 <a href="#default_username_python" style="color: inherit; text-decoration: inherit;">default_<wbr>username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default username to suggest that the user creates
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A multi-line description of the template, in Markdown format
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the template
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="image_id_python">
 <a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Image ID of any default template or the ID of another template.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A short human readable name for the template
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="short_description_python">
 <a href="#short_description_python" style="color: inherit; text-decoration: inherit;">short_<wbr>description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A one line description of the template
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volume_id_python">
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of a bootable volume, either owned by you or global.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

@@ -92,6 +92,10 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="n">main</span> <span class="o">=</span> <span class="n">civo</span><span class="o">.</span><span class="n">DnsDomainName</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Domains can be imported using the <code class="docutils literal notranslate"><span class="pre">domain</span> <span class="pre">name</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import civo:index/dnsDomainName:DnsDomainName main mydomain.com
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -182,10 +186,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
     <span class="n">value</span><span class="o">=</span><span class="n">civo_instance</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;public_ip&quot;</span><span class="p">],</span>
     <span class="n">ttl</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span>
-    <span class="n">opts</span><span class="o">=</span><span class="n">ResourceOptions</span><span class="p">(</span><span class="n">depends_on</span><span class="o">=</span><span class="p">[</span>
+    <span class="n">opts</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">ResourceOptions</span><span class="p">(</span><span class="n">depends_on</span><span class="o">=</span><span class="p">[</span>
             <span class="n">civo_dns_domain_name</span><span class="p">[</span><span class="s2">&quot;main&quot;</span><span class="p">],</span>
             <span class="n">civo_instance</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">],</span>
         <span class="p">]))</span>
+</pre></div>
+</div>
+<p>Domains can be imported using the <code class="docutils literal notranslate"><span class="pre">id_domain:id_domain_record</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import civo:index/dnsDomainRecord:DnsDomainRecord www a3cd6832-9577-4017-afd7-17d239fc0bf0:c9a39d14-ee1b-4870-8fb0-a2d4f465e822
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -330,6 +338,10 @@ modify, and delete Firewalls.</p>
 <span class="n">www</span> <span class="o">=</span> <span class="n">civo</span><span class="o">.</span><span class="n">Firewall</span><span class="p">(</span><span class="s2">&quot;www&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Firewalls can be imported using the firewall <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import civo:index/firewall:Firewall www b8ecd2ab-2267-4a5e-8692-cbf1d32583e3
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -414,6 +426,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 This can be used to create, modify, and delete Firewalls Rules.
 This resource don’t have an update option because the backend don’t have the
 support for that, so in this case we use ForceNew for all object in the resource.</p>
+<p>Firewalls can be imported using the firewall <code class="docutils literal notranslate"><span class="pre">firewall_id:firewall_rule_id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import civo:index/firewallRule:FirewallRule http b8ecd2ab-2267-4a5e-8692-cbf1d32583e3:4b0022ee-00b2-4f81-a40d-b4f8728923a7
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1164,6 +1180,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_civo.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">firewall_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hostname</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">initial_user</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notes</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_ip_required</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reverse_dns</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">script</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sshkey_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_civo.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Civo Instance resource. This can be used to create,
 modify, and delete Instances.</p>
+<p>Instances can be imported using the instance <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import civo:index/instance:Instance myintance 18bd98ad-1b6e-4f87-b48f-e690b4fd7413
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1388,15 +1408,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_civo.KubernetesCluster">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_civo.</code><code class="sig-name descname">KubernetesCluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">applications</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kubernetes_version</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">num_target_nodes</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_nodes_size</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_civo.KubernetesCluster" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a KubernetesCluster resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] applications: A comma separated list of applications to install. Spaces within application names are fine, but shouldn’t be either side of the comma. If you want to remove a default installed application, prefix it with a ‘-‘, e.g. -traefik
-:param pulumi.Input[str] kubernetes_version: The version of k3s to install (The default is currently the latest available).
-:param pulumi.Input[str] name: A name for the Kubernetes cluster.
-:param pulumi.Input[int] num_target_nodes: The number of instances to create (The default at the time of writing is 3).
-:param pulumi.Input[str] tags: A space separated list of tags, to be used freely as required.
-:param pulumi.Input[str] target_nodes_size: The size of each node (The default is currently g2.small)</p>
+<dd><p>Then the Kubernetes cluster can be imported using the cluster’s <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import civo:index/kubernetesCluster:KubernetesCluster my-cluster 1b8b2100-0e9f-4e8f-ad78-9eb578c2a0af
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>applications</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A comma separated list of applications to install. Spaces within application names are fine, but shouldn’t be either side of the comma. If you want to remove a default installed application, prefix it with a ‘-‘, e.g. -traefik</p></li>
+<li><p><strong>kubernetes_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of k3s to install (The default is currently the latest available).</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name for the Kubernetes cluster.</p></li>
+<li><p><strong>num_target_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of instances to create (The default at the time of writing is 3).</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A space separated list of tags, to be used freely as required.</p></li>
+<li><p><strong>target_nodes_size</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The size of each node (The default is currently g2.small)</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt id="pulumi_civo.KubernetesCluster.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_endpoint</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">applications</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">built_at</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">created_at</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_entry</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">installed_applications</span><span class="p">:</span> <span class="n">Union[Sequence[Union[KubernetesClusterInstalledApplicationArgs, Mapping[str, Any], Awaitable[Union[KubernetesClusterInstalledApplicationArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[KubernetesClusterInstalledApplicationArgs, Mapping[str, Any], Awaitable[Union[KubernetesClusterInstalledApplicationArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instances</span><span class="p">:</span> <span class="n">Union[Sequence[Union[KubernetesClusterInstanceArgs, Mapping[str, Any], Awaitable[Union[KubernetesClusterInstanceArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[KubernetesClusterInstanceArgs, Mapping[str, Any], Awaitable[Union[KubernetesClusterInstanceArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kubeconfig</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kubernetes_version</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">master_ip</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">num_target_nodes</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ready</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_nodes_size</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_civo.kubernetes_cluster.KubernetesCluster<a class="headerlink" href="#pulumi_civo.KubernetesCluster.get" title="Permalink to this definition">¶</a></dt>
@@ -1755,6 +1784,10 @@ modify, and delete Networks.</p>
 <span class="n">custom_net</span> <span class="o">=</span> <span class="n">civo</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;customNet&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;test_network&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Firewalls can be imported using the firewall <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import civo:index/network:Network custom_net b8ecd2ab-2267-4a5e-8692-cbf1d32583e3
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1914,6 +1947,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="kn">import</span> <span class="nn">pulumi_civo</span> <span class="k">as</span> <span class="nn">civo</span>
 
 <span class="n">myinstance_backup</span> <span class="o">=</span> <span class="n">civo</span><span class="o">.</span><span class="n">Snapshot</span><span class="p">(</span><span class="s2">&quot;myinstance-backup&quot;</span><span class="p">,</span> <span class="n">instance_id</span><span class="o">=</span><span class="n">civo_instance</span><span class="p">[</span><span class="s2">&quot;myinstance&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Instance Snapshots can be imported using the <code class="docutils literal notranslate"><span class="pre">snapshot</span> <span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import civo:index/snapshot:Snapshot myinstance-backup 4cc87851-e1d0-4270-822a-b36d28c7a77f
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -2093,6 +2130,10 @@ can be referenced in your instance configuration via their ID.</p>
 <span class="n">my_user</span> <span class="o">=</span> <span class="n">civo</span><span class="o">.</span><span class="n">SshKey</span><span class="p">(</span><span class="s2">&quot;my-user&quot;</span><span class="p">,</span> <span class="n">public_key</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;~/.ssh/id_rsa.pub&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
+<p>SSH Keys can be imported using the <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">key</span> <span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import civo:index/sshKey:SshKey mykey 87ca2ee4-57d3-4420-b9b6-411b0b4b2a0e
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2186,6 +2227,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_civo.</code><code class="sig-name descname">Template</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_config</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">code</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_username</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">short_description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_civo.Template" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Civo Template resource.
 This can be used to create, modify, and delete Templates.</p>
+<p>Template can be imported using the template <code class="docutils literal notranslate"><span class="pre">code</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import civo:index/template:Template my-custom-template my-template-code
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2349,6 +2394,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">db</span> <span class="o">=</span> <span class="n">civo</span><span class="o">.</span><span class="n">Volume</span><span class="p">(</span><span class="s2">&quot;db&quot;</span><span class="p">,</span>
     <span class="n">bootable</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">size_gb</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Volumes can be imported using the <code class="docutils literal notranslate"><span class="pre">volume</span> <span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import civo:index/volume:Volume db 506f78a4-e098-11e5-ad9f-000f53306ae1
 </pre></div>
 </div>
 <dl class="field-list simple">

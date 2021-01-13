@@ -18,7 +18,7 @@ meta_desc: "Explore the LoadBalancer resource of the Civo package, including exa
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/civo/#LoadBalancer">LoadBalancer</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/civo/#LoadBalancerArgs">LoadBalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/civo/#LoadBalancer">LoadBalancer</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/civo/#LoadBalancerArgs">LoadBalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -26,11 +26,11 @@ meta_desc: "Explore the LoadBalancer resource of the Civo package, including exa
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#LoadBalancer">NewLoadBalancer</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#LoadBalancerArgs">LoadBalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#LoadBalancer">LoadBalancer</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#LoadBalancer">NewLoadBalancer</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#LoadBalancerArgs">LoadBalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#LoadBalancer">LoadBalancer</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo.LoadBalancer.html">LoadBalancer</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo.LoadBalancerArgs.html">LoadBalancerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo.LoadBalancer.html">LoadBalancer</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo.LoadBalancerArgs.html">LoadBalancerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -41,7 +41,7 @@ meta_desc: "Explore the LoadBalancer resource of the Civo package, including exa
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -110,7 +110,7 @@ meta_desc: "Explore the LoadBalancer resource of the Civo package, including exa
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -149,7 +149,7 @@ meta_desc: "Explore the LoadBalancer resource of the Civo package, including exa
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -190,7 +190,6 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -198,141 +197,128 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="backends_csharp">
 <a href="#backends_csharp" style="color: inherit; text-decoration: inherit;">Backends</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerbackend">List&lt;Load<wbr>Balancer<wbr>Backend<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}a list of backend instances, each containing an instance_id, protocol (http or https) and port
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="failtimeout_csharp">
 <a href="#failtimeout_csharp" style="color: inherit; text-decoration: inherit;">Fail<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}how long to wait in seconds before determining a backend has failed, defaults to 30
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the hostname to receive traffic for, e.g. www.example.com (optional: sets hostname to loadbalancer-uuid.civo.com if
 blank)
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="maxconns_csharp">
 <a href="#maxconns_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Conns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}how many concurrent connections can each backend handle, defaults to 10
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="maxrequestsize_csharp">
 <a href="#maxrequestsize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Request<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}the size in megabytes of the maximum request content that will be accepted, defaults to 20
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="policy_csharp">
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}one of: least_conn (sends new requests to the least busy server), random (sends new requests to a random backend),
 round_robin (sends new requests to the next backend in order), ip_hash (sends requests from a given IP address to the
 same backend), default is random
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}you can listen on any port, the default is 80 to match the default protocol of http,if not you must specify it here
 (commonly 80 for HTTP or 443 for HTTPS)
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}either http or https. If you specify https then you must also provide the next two fields, the default is http
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="healthcheckpath_csharp">
 <a href="#healthcheckpath_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}what URL should be used on the backends to determine if it's OK (2xx/3xx status), defaults to /
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ignoreinvalidbackendtls_csharp">
 <a href="#ignoreinvalidbackendtls_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Invalid<wbr>Backend<wbr>Tls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}should self-signed/invalid certificates be ignored from the backend servers, defaults to true
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tlscertificate_csharp">
 <a href="#tlscertificate_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Certificate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS certificate in Base64-encoded PEM format
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tlskey_csharp">
 <a href="#tlskey_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS private key in Base64-encoded PEM format
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -341,141 +327,128 @@ same backend), default is random
             title="Required">
         <span id="backends_go">
 <a href="#backends_go" style="color: inherit; text-decoration: inherit;">Backends</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerbackend">[]Load<wbr>Balancer<wbr>Backend</a></span>
     </dt>
     <dd>{{% md %}}a list of backend instances, each containing an instance_id, protocol (http or https) and port
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="failtimeout_go">
 <a href="#failtimeout_go" style="color: inherit; text-decoration: inherit;">Fail<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}how long to wait in seconds before determining a backend has failed, defaults to 30
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the hostname to receive traffic for, e.g. www.example.com (optional: sets hostname to loadbalancer-uuid.civo.com if
 blank)
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="maxconns_go">
 <a href="#maxconns_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Conns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}how many concurrent connections can each backend handle, defaults to 10
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="maxrequestsize_go">
 <a href="#maxrequestsize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Request<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}the size in megabytes of the maximum request content that will be accepted, defaults to 20
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="policy_go">
 <a href="#policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}one of: least_conn (sends new requests to the least busy server), random (sends new requests to a random backend),
 round_robin (sends new requests to the next backend in order), ip_hash (sends requests from a given IP address to the
 same backend), default is random
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}you can listen on any port, the default is 80 to match the default protocol of http,if not you must specify it here
 (commonly 80 for HTTP or 443 for HTTPS)
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}either http or https. If you specify https then you must also provide the next two fields, the default is http
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="healthcheckpath_go">
 <a href="#healthcheckpath_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}what URL should be used on the backends to determine if it's OK (2xx/3xx status), defaults to /
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ignoreinvalidbackendtls_go">
 <a href="#ignoreinvalidbackendtls_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Invalid<wbr>Backend<wbr>Tls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}should self-signed/invalid certificates be ignored from the backend servers, defaults to true
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tlscertificate_go">
 <a href="#tlscertificate_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Certificate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS certificate in Base64-encoded PEM format
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tlskey_go">
 <a href="#tlskey_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS private key in Base64-encoded PEM format
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -484,141 +457,128 @@ same backend), default is random
             title="Required">
         <span id="backends_nodejs">
 <a href="#backends_nodejs" style="color: inherit; text-decoration: inherit;">backends</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerbackend">Load<wbr>Balancer<wbr>Backend[]</a></span>
     </dt>
     <dd>{{% md %}}a list of backend instances, each containing an instance_id, protocol (http or https) and port
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="failtimeout_nodejs">
 <a href="#failtimeout_nodejs" style="color: inherit; text-decoration: inherit;">fail<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}how long to wait in seconds before determining a backend has failed, defaults to 30
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the hostname to receive traffic for, e.g. www.example.com (optional: sets hostname to loadbalancer-uuid.civo.com if
 blank)
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="maxconns_nodejs">
 <a href="#maxconns_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Conns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}how many concurrent connections can each backend handle, defaults to 10
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="maxrequestsize_nodejs">
 <a href="#maxrequestsize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Request<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}the size in megabytes of the maximum request content that will be accepted, defaults to 20
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="policy_nodejs">
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}one of: least_conn (sends new requests to the least busy server), random (sends new requests to a random backend),
 round_robin (sends new requests to the next backend in order), ip_hash (sends requests from a given IP address to the
 same backend), default is random
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}you can listen on any port, the default is 80 to match the default protocol of http,if not you must specify it here
 (commonly 80 for HTTP or 443 for HTTPS)
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}either http or https. If you specify https then you must also provide the next two fields, the default is http
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="healthcheckpath_nodejs">
 <a href="#healthcheckpath_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}what URL should be used on the backends to determine if it's OK (2xx/3xx status), defaults to /
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ignoreinvalidbackendtls_nodejs">
 <a href="#ignoreinvalidbackendtls_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Invalid<wbr>Backend<wbr>Tls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}should self-signed/invalid certificates be ignored from the backend servers, defaults to true
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tlscertificate_nodejs">
 <a href="#tlscertificate_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Certificate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS certificate in Base64-encoded PEM format
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tlskey_nodejs">
 <a href="#tlskey_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS private key in Base64-encoded PEM format
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -627,150 +587,133 @@ same backend), default is random
             title="Required">
         <span id="backends_python">
 <a href="#backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerbackend">Sequence[Load<wbr>Balancer<wbr>Backend<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}a list of backend instances, each containing an instance_id, protocol (http or https) and port
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="fail_timeout_python">
 <a href="#fail_timeout_python" style="color: inherit; text-decoration: inherit;">fail_<wbr>timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}how long to wait in seconds before determining a backend has failed, defaults to 30
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hostname_python">
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the hostname to receive traffic for, e.g. www.example.com (optional: sets hostname to loadbalancer-uuid.civo.com if
 blank)
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="max_conns_python">
 <a href="#max_conns_python" style="color: inherit; text-decoration: inherit;">max_<wbr>conns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}how many concurrent connections can each backend handle, defaults to 10
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="max_request_size_python">
 <a href="#max_request_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>request_<wbr>size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}the size in megabytes of the maximum request content that will be accepted, defaults to 20
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="policy_python">
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}one of: least_conn (sends new requests to the least busy server), random (sends new requests to a random backend),
 round_robin (sends new requests to the next backend in order), ip_hash (sends requests from a given IP address to the
 same backend), default is random
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}you can listen on any port, the default is 80 to match the default protocol of http,if not you must specify it here
 (commonly 80 for HTTP or 443 for HTTPS)
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}either http or https. If you specify https then you must also provide the next two fields, the default is http
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="health_check_path_python">
 <a href="#health_check_path_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}what URL should be used on the backends to determine if it's OK (2xx/3xx status), defaults to /
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ignore_invalid_backend_tls_python">
 <a href="#ignore_invalid_backend_tls_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>invalid_<wbr>backend_<wbr>tls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}should self-signed/invalid certificates be ignored from the backend servers, defaults to true
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tls_certificate_python">
 <a href="#tls_certificate_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>certificate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS certificate in Base64-encoded PEM format
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tls_key_python">
 <a href="#tls_key_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS private key in Base64-encoded PEM format
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the LoadBalancer resource produces the following output properties:
-
 
 
 
@@ -781,15 +724,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -798,15 +739,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -815,15 +754,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -832,18 +769,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -853,7 +785,7 @@ Get an existing LoadBalancer resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/civo/#LoadBalancerState">LoadBalancerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/civo/#LoadBalancer">LoadBalancer</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/civo/#LoadBalancerState">LoadBalancerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/civo/#LoadBalancer">LoadBalancer</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -862,11 +794,11 @@ Get an existing LoadBalancer resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLoadBalancer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#LoadBalancerState">LoadBalancerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#LoadBalancer">LoadBalancer</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLoadBalancer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#LoadBalancerState">LoadBalancerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#LoadBalancer">LoadBalancer</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo.LoadBalancer.html">LoadBalancer</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo..LoadBalancerState.html">LoadBalancerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo.LoadBalancer.html">LoadBalancer</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo..LoadBalancerState.html">LoadBalancerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -968,7 +900,6 @@ Get an existing LoadBalancer resource's state with the given name, ID, and optio
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -976,141 +907,128 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_backends_csharp">
 <a href="#state_backends_csharp" style="color: inherit; text-decoration: inherit;">Backends</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerbackend">List&lt;Load<wbr>Balancer<wbr>Backend<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}a list of backend instances, each containing an instance_id, protocol (http or https) and port
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_failtimeout_csharp">
 <a href="#state_failtimeout_csharp" style="color: inherit; text-decoration: inherit;">Fail<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}how long to wait in seconds before determining a backend has failed, defaults to 30
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckpath_csharp">
 <a href="#state_healthcheckpath_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}what URL should be used on the backends to determine if it's OK (2xx/3xx status), defaults to /
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hostname_csharp">
 <a href="#state_hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the hostname to receive traffic for, e.g. www.example.com (optional: sets hostname to loadbalancer-uuid.civo.com if
 blank)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ignoreinvalidbackendtls_csharp">
 <a href="#state_ignoreinvalidbackendtls_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Invalid<wbr>Backend<wbr>Tls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}should self-signed/invalid certificates be ignored from the backend servers, defaults to true
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maxconns_csharp">
 <a href="#state_maxconns_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Conns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}how many concurrent connections can each backend handle, defaults to 10
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maxrequestsize_csharp">
 <a href="#state_maxrequestsize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Request<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}the size in megabytes of the maximum request content that will be accepted, defaults to 20
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policy_csharp">
 <a href="#state_policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}one of: least_conn (sends new requests to the least busy server), random (sends new requests to a random backend),
 round_robin (sends new requests to the next backend in order), ip_hash (sends requests from a given IP address to the
 same backend), default is random
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_port_csharp">
 <a href="#state_port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}you can listen on any port, the default is 80 to match the default protocol of http,if not you must specify it here
 (commonly 80 for HTTP or 443 for HTTPS)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_protocol_csharp">
 <a href="#state_protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}either http or https. If you specify https then you must also provide the next two fields, the default is http
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tlscertificate_csharp">
 <a href="#state_tlscertificate_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Certificate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS certificate in Base64-encoded PEM format
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tlskey_csharp">
 <a href="#state_tlskey_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS private key in Base64-encoded PEM format
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1119,141 +1037,128 @@ same backend), default is random
             title="Optional">
         <span id="state_backends_go">
 <a href="#state_backends_go" style="color: inherit; text-decoration: inherit;">Backends</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerbackend">[]Load<wbr>Balancer<wbr>Backend</a></span>
     </dt>
     <dd>{{% md %}}a list of backend instances, each containing an instance_id, protocol (http or https) and port
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_failtimeout_go">
 <a href="#state_failtimeout_go" style="color: inherit; text-decoration: inherit;">Fail<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}how long to wait in seconds before determining a backend has failed, defaults to 30
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckpath_go">
 <a href="#state_healthcheckpath_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}what URL should be used on the backends to determine if it's OK (2xx/3xx status), defaults to /
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hostname_go">
 <a href="#state_hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the hostname to receive traffic for, e.g. www.example.com (optional: sets hostname to loadbalancer-uuid.civo.com if
 blank)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ignoreinvalidbackendtls_go">
 <a href="#state_ignoreinvalidbackendtls_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Invalid<wbr>Backend<wbr>Tls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}should self-signed/invalid certificates be ignored from the backend servers, defaults to true
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maxconns_go">
 <a href="#state_maxconns_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Conns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}how many concurrent connections can each backend handle, defaults to 10
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maxrequestsize_go">
 <a href="#state_maxrequestsize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Request<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}the size in megabytes of the maximum request content that will be accepted, defaults to 20
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policy_go">
 <a href="#state_policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}one of: least_conn (sends new requests to the least busy server), random (sends new requests to a random backend),
 round_robin (sends new requests to the next backend in order), ip_hash (sends requests from a given IP address to the
 same backend), default is random
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_port_go">
 <a href="#state_port_go" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}you can listen on any port, the default is 80 to match the default protocol of http,if not you must specify it here
 (commonly 80 for HTTP or 443 for HTTPS)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_protocol_go">
 <a href="#state_protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}either http or https. If you specify https then you must also provide the next two fields, the default is http
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tlscertificate_go">
 <a href="#state_tlscertificate_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Certificate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS certificate in Base64-encoded PEM format
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tlskey_go">
 <a href="#state_tlskey_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS private key in Base64-encoded PEM format
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1262,141 +1167,128 @@ same backend), default is random
             title="Optional">
         <span id="state_backends_nodejs">
 <a href="#state_backends_nodejs" style="color: inherit; text-decoration: inherit;">backends</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerbackend">Load<wbr>Balancer<wbr>Backend[]</a></span>
     </dt>
     <dd>{{% md %}}a list of backend instances, each containing an instance_id, protocol (http or https) and port
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_failtimeout_nodejs">
 <a href="#state_failtimeout_nodejs" style="color: inherit; text-decoration: inherit;">fail<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}how long to wait in seconds before determining a backend has failed, defaults to 30
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckpath_nodejs">
 <a href="#state_healthcheckpath_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}what URL should be used on the backends to determine if it's OK (2xx/3xx status), defaults to /
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hostname_nodejs">
 <a href="#state_hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the hostname to receive traffic for, e.g. www.example.com (optional: sets hostname to loadbalancer-uuid.civo.com if
 blank)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ignoreinvalidbackendtls_nodejs">
 <a href="#state_ignoreinvalidbackendtls_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Invalid<wbr>Backend<wbr>Tls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}should self-signed/invalid certificates be ignored from the backend servers, defaults to true
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maxconns_nodejs">
 <a href="#state_maxconns_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Conns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}how many concurrent connections can each backend handle, defaults to 10
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maxrequestsize_nodejs">
 <a href="#state_maxrequestsize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Request<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}the size in megabytes of the maximum request content that will be accepted, defaults to 20
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policy_nodejs">
 <a href="#state_policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}one of: least_conn (sends new requests to the least busy server), random (sends new requests to a random backend),
 round_robin (sends new requests to the next backend in order), ip_hash (sends requests from a given IP address to the
 same backend), default is random
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_port_nodejs">
 <a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}you can listen on any port, the default is 80 to match the default protocol of http,if not you must specify it here
 (commonly 80 for HTTP or 443 for HTTPS)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_protocol_nodejs">
 <a href="#state_protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}either http or https. If you specify https then you must also provide the next two fields, the default is http
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tlscertificate_nodejs">
 <a href="#state_tlscertificate_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Certificate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS certificate in Base64-encoded PEM format
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tlskey_nodejs">
 <a href="#state_tlskey_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS private key in Base64-encoded PEM format
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1405,138 +1297,126 @@ same backend), default is random
             title="Optional">
         <span id="state_backends_python">
 <a href="#state_backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerbackend">Sequence[Load<wbr>Balancer<wbr>Backend<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}a list of backend instances, each containing an instance_id, protocol (http or https) and port
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fail_timeout_python">
 <a href="#state_fail_timeout_python" style="color: inherit; text-decoration: inherit;">fail_<wbr>timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}how long to wait in seconds before determining a backend has failed, defaults to 30
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_health_check_path_python">
 <a href="#state_health_check_path_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}what URL should be used on the backends to determine if it's OK (2xx/3xx status), defaults to /
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hostname_python">
 <a href="#state_hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the hostname to receive traffic for, e.g. www.example.com (optional: sets hostname to loadbalancer-uuid.civo.com if
 blank)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ignore_invalid_backend_tls_python">
 <a href="#state_ignore_invalid_backend_tls_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>invalid_<wbr>backend_<wbr>tls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}should self-signed/invalid certificates be ignored from the backend servers, defaults to true
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_max_conns_python">
 <a href="#state_max_conns_python" style="color: inherit; text-decoration: inherit;">max_<wbr>conns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}how many concurrent connections can each backend handle, defaults to 10
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_max_request_size_python">
 <a href="#state_max_request_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>request_<wbr>size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}the size in megabytes of the maximum request content that will be accepted, defaults to 20
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policy_python">
 <a href="#state_policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}one of: least_conn (sends new requests to the least busy server), random (sends new requests to a random backend),
 round_robin (sends new requests to the next backend in order), ip_hash (sends requests from a given IP address to the
 same backend), default is random
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_port_python">
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}you can listen on any port, the default is 80 to match the default protocol of http,if not you must specify it here
 (commonly 80 for HTTP or 443 for HTTPS)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_protocol_python">
 <a href="#state_protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}either http or https. If you specify https then you must also provide the next two fields, the default is http
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tls_certificate_python">
 <a href="#state_tls_certificate_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>certificate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS certificate in Base64-encoded PEM format
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tls_key_python">
 <a href="#state_tls_key_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}if your protocol is https then you should send the TLS private key in Base64-encoded PEM format
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1545,11 +1425,8 @@ same backend), default is random
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="loadbalancerbackend">Load<wbr>Balancer<wbr>Backend</h4>
@@ -1560,11 +1437,10 @@ same backend), default is random
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#LoadBalancerBackendArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#LoadBalancerBackendOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo.Inputs.LoadBalancerBackendArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo.Outputs.LoadBalancerBackend.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1574,35 +1450,31 @@ same backend), default is random
             title="Required">
         <span id="instanceid_csharp">
 <a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1611,35 +1483,31 @@ same backend), default is random
             title="Required">
         <span id="instanceid_go">
 <a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1648,35 +1516,31 @@ same backend), default is random
             title="Required">
         <span id="instanceid_nodejs">
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1685,41 +1549,31 @@ same backend), default is random
             title="Required">
         <span id="instance_id_python">
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>
