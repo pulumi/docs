@@ -1,7 +1,7 @@
 ---
 title: "Automation API: Supercharged Cloud Tooling"
 date: 2021-01-14
-meta_desc: "Pulumi's Automation API enables you to build cloud toos to increase developer productivity."
+meta_desc: "Pulumi's Automation API enables you to build cloud tools to increase developer productivity."
 meta_image: automation_api_v2.png
 authors:
     - sophia-parafina
