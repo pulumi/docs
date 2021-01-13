@@ -152,7 +152,7 @@ test_policy = f5bigip.ltm.Policy("test-policy",
             pool=mypool.name,
         )],
     )],
-    opts=ResourceOptions(depends_on=[mypool]))
+    opts=pulumi.ResourceOptions(depends_on=[mypool]))
 ```
 
 {{% /example %}}
