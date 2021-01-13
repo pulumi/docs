@@ -220,7 +220,7 @@ default_read_write_splitting_connection = alicloud.rds.ReadWriteSplittingConnect
     instance_id=default_instance.id,
     connection_prefix="t-con-123",
     distribution_type="Standard",
-    opts=ResourceOptions(depends_on=[default_read_only_instance]))
+    opts=pulumi.ResourceOptions(depends_on=[default_read_only_instance]))
 ```
 
 {{% /example %}}

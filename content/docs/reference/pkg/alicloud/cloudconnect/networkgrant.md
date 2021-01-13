@@ -138,14 +138,14 @@ cen_account = pulumi.providers.Alicloud("cenAccount",
     region="cn-hangzhou",
     access_key="xxxxxx",
     secret_key="xxxxxx")
-cen = alicloud.cen.Instance("cen", opts=ResourceOptions(provider=alicloud["cen_account"]))
+cen = alicloud.cen.Instance("cen", opts=pulumi.ResourceOptions(provider=alicloud["cen_account"]))
 ccn = alicloud.cloudconnect.Network("ccn", is_default=True,
-opts=ResourceOptions(provider=alicloud["ccn_account"]))
+opts=pulumi.ResourceOptions(provider=alicloud["ccn_account"]))
 default = alicloud.cloudconnect.NetworkGrant("default",
     ccn_id=ccn.id,
     cen_id=cen.id,
     cen_uid="xxxxxx",
-    opts=ResourceOptions(depends_on=[
+    opts=pulumi.ResourceOptions(depends_on=[
             ccn,
             cen,
         ]))

@@ -133,7 +133,7 @@ default_vbr_health_check = alicloud.cen.VbrHealthCheck("defaultVbrHealthCheck",
     vbr_instance_region_id="cn-hangzhou",
     health_check_interval=2,
     healthy_threshold=8,
-    opts=ResourceOptions(depends_on=[default_instance_attachment]))
+    opts=pulumi.ResourceOptions(depends_on=[default_instance_attachment]))
 ```
 
 {{% /example %}}

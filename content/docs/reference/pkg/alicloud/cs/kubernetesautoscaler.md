@@ -260,7 +260,7 @@ default_kubernetes_autoscaler = alicloud.cs.KubernetesAutoscaler("defaultKuberne
     utilization=var["utilization"],
     cool_down_duration=var["cool_down_duration"],
     defer_scale_in_duration=var["defer_scale_in_duration"],
-    opts=ResourceOptions(depends_on=[
+    opts=pulumi.ResourceOptions(depends_on=[
             alicloud_ess_scaling_group["defalut"],
             default_scaling_configuration,
         ]))

@@ -293,9 +293,9 @@ default_instance = alicloud.cen.Instance("defaultInstance")
 vpc00_region = pulumi.providers.Alicloud("vpc00Region", region="cn-hangzhou")
 vpc01_region = pulumi.providers.Alicloud("vpc01Region", region="cn-shanghai")
 vpc00 = alicloud.vpc.Network("vpc00", cidr_block="172.16.0.0/12",
-opts=ResourceOptions(provider=alicloud["vpc00_region"]))
+opts=pulumi.ResourceOptions(provider=alicloud["vpc00_region"]))
 vpc01 = alicloud.vpc.Network("vpc01", cidr_block="172.16.0.0/12",
-opts=ResourceOptions(provider=alicloud["vpc01_region"]))
+opts=pulumi.ResourceOptions(provider=alicloud["vpc01_region"]))
 default00 = alicloud.cen.InstanceAttachment("default00",
     instance_id=default_instance.id,
     child_instance_id=vpc00.id,
@@ -334,7 +334,7 @@ default_route_map = alicloud.cen.RouteMap("defaultRouteMap",
     operate_community_sets=["65501:1"],
     preference=20,
     prepend_as_paths=["65501"],
-    opts=ResourceOptions(depends_on=[
+    opts=pulumi.ResourceOptions(depends_on=[
             default00,
             default01,
         ]))
