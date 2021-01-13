@@ -124,10 +124,10 @@ example_private_key = tls.PrivateKey("examplePrivateKey", algorithm="RSA")
 example_cert_request = tls.CertRequest("exampleCertRequest",
     key_algorithm=example_private_key.algorithm,
     private_key_pem=example_private_key.private_key_pem,
-    subjects=[{
-        "commonName": "",
-        "organization": "Terraform Test",
-    }])
+    subjects=[tls.CertRequestSubjectArgs(
+        common_name="",
+        organization="Terraform Test",
+    )])
 example_origin_ca_certificate = cloudflare.OriginCaCertificate("exampleOriginCaCertificate",
     csr=example_cert_request.cert_request_pem,
     hostnames=["example.com"],
