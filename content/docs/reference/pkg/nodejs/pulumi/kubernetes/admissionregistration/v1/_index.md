@@ -3,7 +3,7 @@ title: "Module admissionregistration/v1"
 title_tag: "Module admissionregistration/v1 | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "v1"
 meta_desc: "Explore members of the v1 module in the @pulumi/kubernetes package."
-git_sha: "ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9"
+git_sha: "f01f284c88884e5d9c32cb08b9ee2a464af4a384"
 block_external_search_index: true
 ---
 
@@ -35,7 +35,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="MutatingWebhookConfiguration" data-link-title="MutatingWebhookConfiguration">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L11">
         Resource <strong>MutatingWebhookConfiguration</strong>
     </a>
 </h3>
@@ -45,7 +45,7 @@ block_external_search_index: true
 MutatingWebhookConfiguration describes the configuration of and admission webhook that accept or reject and may change the object.
 
 <h4 class="pdoc-member-header" id="MutatingWebhookConfiguration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L53"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L53"> <b>constructor</b></a>
 </h4>
 
 
@@ -59,7 +59,7 @@ Create a MutatingWebhookConfiguration resource with the given unique name, argum
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="MutatingWebhookConfiguration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L20">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L20">method <b>get</b></a>
 </h4>
 
 
@@ -70,14 +70,14 @@ Get an existing MutatingWebhookConfiguration resource's state with the given nam
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="MutatingWebhookConfiguration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L11">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L11">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="MutatingWebhookConfiguration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L31">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L31">method <b>isInstance</b></a>
 </h4>
 
 
@@ -88,7 +88,7 @@ Returns true if the given object is an instance of MutatingWebhookConfiguration.
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="MutatingWebhookConfiguration-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L41">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L41">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"admissionregistration.k8s.io/v1"</span>&gt;;</code></pre>
@@ -96,7 +96,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="MutatingWebhookConfiguration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L11">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L11">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -105,7 +105,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="MutatingWebhookConfiguration-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L45">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L45">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"MutatingWebhookConfiguration"</span>&gt;;</code></pre>
@@ -113,7 +113,7 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="MutatingWebhookConfiguration-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L49">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L49">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
@@ -121,7 +121,7 @@ Kind is a string value representing the REST resource this object represents. Se
 Standard object metadata; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata.
 
 <h4 class="pdoc-member-header" id="MutatingWebhookConfiguration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L11">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -130,7 +130,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="MutatingWebhookConfiguration-webhooks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L53">property <b>webhooks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L53">property <b>webhooks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>webhooks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#MutatingWebhook'>MutatingWebhook</a>[]&gt;;</code></pre>
@@ -138,7 +138,7 @@ deployments.
 Webhooks is a list of webhooks and the affected resources and operations.
 
 <h3 class="pdoc-module-header" id="MutatingWebhookConfigurationList" data-link-title="MutatingWebhookConfigurationList">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L11">
         Resource <strong>MutatingWebhookConfigurationList</strong>
     </a>
 </h3>
@@ -148,7 +148,7 @@ Webhooks is a list of webhooks and the affected resources and operations.
 MutatingWebhookConfigurationList is a list of MutatingWebhookConfiguration.
 
 <h4 class="pdoc-member-header" id="MutatingWebhookConfigurationList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L53"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L53"> <b>constructor</b></a>
 </h4>
 
 
@@ -162,7 +162,7 @@ Create a MutatingWebhookConfigurationList resource with the given unique name, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="MutatingWebhookConfigurationList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L20">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L20">method <b>get</b></a>
 </h4>
 
 
@@ -173,14 +173,14 @@ Get an existing MutatingWebhookConfigurationList resource's state with the given
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="MutatingWebhookConfigurationList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L11">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L11">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="MutatingWebhookConfigurationList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L31">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L31">method <b>isInstance</b></a>
 </h4>
 
 
@@ -191,7 +191,7 @@ Returns true if the given object is an instance of MutatingWebhookConfigurationL
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="MutatingWebhookConfigurationList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L41">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L41">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"admissionregistration.k8s.io/v1"</span>&gt;;</code></pre>
@@ -199,7 +199,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="MutatingWebhookConfigurationList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L11">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L11">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -208,7 +208,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="MutatingWebhookConfigurationList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L45">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L45">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#MutatingWebhookConfiguration'>MutatingWebhookConfiguration</a>[]&gt;;</code></pre>
@@ -216,7 +216,7 @@ deployments and may be missing (undefined) during planning phases.
 List of MutatingWebhookConfiguration.
 
 <h4 class="pdoc-member-header" id="MutatingWebhookConfigurationList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L49">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L49">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"MutatingWebhookConfigurationList"</span>&gt;;</code></pre>
@@ -224,7 +224,7 @@ List of MutatingWebhookConfiguration.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="MutatingWebhookConfigurationList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L53">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L53">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>ListMeta</a>&gt;;</code></pre>
@@ -232,7 +232,7 @@ Kind is a string value representing the REST resource this object represents. Se
 Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="MutatingWebhookConfigurationList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L11">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -241,7 +241,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ValidatingWebhookConfiguration" data-link-title="ValidatingWebhookConfiguration">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L11">
         Resource <strong>ValidatingWebhookConfiguration</strong>
     </a>
 </h3>
@@ -251,7 +251,7 @@ deployments.
 ValidatingWebhookConfiguration describes the configuration of and admission webhook that accept or reject and object without changing it.
 
 <h4 class="pdoc-member-header" id="ValidatingWebhookConfiguration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L53"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L53"> <b>constructor</b></a>
 </h4>
 
 
@@ -265,7 +265,7 @@ Create a ValidatingWebhookConfiguration resource with the given unique name, arg
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ValidatingWebhookConfiguration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L20">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L20">method <b>get</b></a>
 </h4>
 
 
@@ -276,14 +276,14 @@ Get an existing ValidatingWebhookConfiguration resource's state with the given n
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ValidatingWebhookConfiguration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L11">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L11">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ValidatingWebhookConfiguration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L31">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L31">method <b>isInstance</b></a>
 </h4>
 
 
@@ -294,7 +294,7 @@ Returns true if the given object is an instance of ValidatingWebhookConfiguratio
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ValidatingWebhookConfiguration-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L41">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L41">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"admissionregistration.k8s.io/v1"</span>&gt;;</code></pre>
@@ -302,7 +302,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="ValidatingWebhookConfiguration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L11">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L11">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -311,7 +311,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ValidatingWebhookConfiguration-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L45">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L45">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ValidatingWebhookConfiguration"</span>&gt;;</code></pre>
@@ -319,7 +319,7 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="ValidatingWebhookConfiguration-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L49">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L49">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
@@ -327,7 +327,7 @@ Kind is a string value representing the REST resource this object represents. Se
 Standard object metadata; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata.
 
 <h4 class="pdoc-member-header" id="ValidatingWebhookConfiguration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L11">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -336,7 +336,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ValidatingWebhookConfiguration-webhooks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L53">property <b>webhooks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L53">property <b>webhooks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>webhooks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ValidatingWebhook'>ValidatingWebhook</a>[]&gt;;</code></pre>
@@ -344,7 +344,7 @@ deployments.
 Webhooks is a list of webhooks and the affected resources and operations.
 
 <h3 class="pdoc-module-header" id="ValidatingWebhookConfigurationList" data-link-title="ValidatingWebhookConfigurationList">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L11">
         Resource <strong>ValidatingWebhookConfigurationList</strong>
     </a>
 </h3>
@@ -354,7 +354,7 @@ Webhooks is a list of webhooks and the affected resources and operations.
 ValidatingWebhookConfigurationList is a list of ValidatingWebhookConfiguration.
 
 <h4 class="pdoc-member-header" id="ValidatingWebhookConfigurationList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L53"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L53"> <b>constructor</b></a>
 </h4>
 
 
@@ -368,7 +368,7 @@ Create a ValidatingWebhookConfigurationList resource with the given unique name,
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ValidatingWebhookConfigurationList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L20">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L20">method <b>get</b></a>
 </h4>
 
 
@@ -379,14 +379,14 @@ Get an existing ValidatingWebhookConfigurationList resource's state with the giv
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ValidatingWebhookConfigurationList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L11">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L11">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ValidatingWebhookConfigurationList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L31">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L31">method <b>isInstance</b></a>
 </h4>
 
 
@@ -397,7 +397,7 @@ Returns true if the given object is an instance of ValidatingWebhookConfiguratio
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ValidatingWebhookConfigurationList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L41">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L41">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"admissionregistration.k8s.io/v1"</span>&gt;;</code></pre>
@@ -405,7 +405,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="ValidatingWebhookConfigurationList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L11">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L11">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -414,7 +414,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ValidatingWebhookConfigurationList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L45">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L45">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ValidatingWebhookConfiguration'>ValidatingWebhookConfiguration</a>[]&gt;;</code></pre>
@@ -422,7 +422,7 @@ deployments and may be missing (undefined) during planning phases.
 List of ValidatingWebhookConfiguration.
 
 <h4 class="pdoc-member-header" id="ValidatingWebhookConfigurationList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L49">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L49">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ValidatingWebhookConfigurationList"</span>&gt;;</code></pre>
@@ -430,7 +430,7 @@ List of ValidatingWebhookConfiguration.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="ValidatingWebhookConfigurationList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L53">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L53">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>ListMeta</a>&gt;;</code></pre>
@@ -438,7 +438,7 @@ Kind is a string value representing the REST resource this object represents. Se
 Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="ValidatingWebhookConfigurationList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L11">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -450,7 +450,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="MutatingWebhookConfigurationArgs" data-link-title="MutatingWebhookConfigurationArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L91">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L91">
         interface <strong>MutatingWebhookConfigurationArgs</strong>
     </a>
 </h3>
@@ -460,7 +460,7 @@ deployments.
 The set of arguments for constructing a MutatingWebhookConfiguration resource.
 
 <h4 class="pdoc-member-header" id="MutatingWebhookConfigurationArgs-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L95">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L95">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"admissionregistration.k8s.io/v1"</span>&gt;;</code></pre>
@@ -468,7 +468,7 @@ The set of arguments for constructing a MutatingWebhookConfiguration resource.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="MutatingWebhookConfigurationArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L99">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L99">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"MutatingWebhookConfiguration"</span>&gt;;</code></pre>
@@ -476,7 +476,7 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="MutatingWebhookConfigurationArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L103">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L103">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
@@ -484,7 +484,7 @@ Kind is a string value representing the REST resource this object represents. Se
 Standard object metadata; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata.
 
 <h4 class="pdoc-member-header" id="MutatingWebhookConfigurationArgs-webhooks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L107">property <b>webhooks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfiguration.ts#L107">property <b>webhooks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>webhooks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#MutatingWebhook'>MutatingWebhook</a>&gt;[]&gt;;</code></pre>
@@ -492,7 +492,7 @@ Standard object metadata; More info: https://git.k8s.io/community/contributors/d
 Webhooks is a list of webhooks and the affected resources and operations.
 
 <h3 class="pdoc-module-header" id="MutatingWebhookConfigurationListArgs" data-link-title="MutatingWebhookConfigurationListArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L92">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L92">
         interface <strong>MutatingWebhookConfigurationListArgs</strong>
     </a>
 </h3>
@@ -502,7 +502,7 @@ Webhooks is a list of webhooks and the affected resources and operations.
 The set of arguments for constructing a MutatingWebhookConfigurationList resource.
 
 <h4 class="pdoc-member-header" id="MutatingWebhookConfigurationListArgs-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L96">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L96">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"admissionregistration.k8s.io/v1"</span>&gt;;</code></pre>
@@ -510,7 +510,7 @@ The set of arguments for constructing a MutatingWebhookConfigurationList resourc
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="MutatingWebhookConfigurationListArgs-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L100">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L100">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#MutatingWebhookConfiguration'>MutatingWebhookConfiguration</a>&gt;[]&gt;;</code></pre>
@@ -518,7 +518,7 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 List of MutatingWebhookConfiguration.
 
 <h4 class="pdoc-member-header" id="MutatingWebhookConfigurationListArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L104">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L104">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"MutatingWebhookConfigurationList"</span>&gt;;</code></pre>
@@ -526,7 +526,7 @@ List of MutatingWebhookConfiguration.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="MutatingWebhookConfigurationListArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L108">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/mutatingWebhookConfigurationList.ts#L108">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ListMeta'>ListMeta</a>&gt;;</code></pre>
@@ -534,7 +534,7 @@ Kind is a string value representing the REST resource this object represents. Se
 Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h3 class="pdoc-module-header" id="ValidatingWebhookConfigurationArgs" data-link-title="ValidatingWebhookConfigurationArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L91">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L91">
         interface <strong>ValidatingWebhookConfigurationArgs</strong>
     </a>
 </h3>
@@ -544,7 +544,7 @@ Standard list metadata. More info: https://git.k8s.io/community/contributors/dev
 The set of arguments for constructing a ValidatingWebhookConfiguration resource.
 
 <h4 class="pdoc-member-header" id="ValidatingWebhookConfigurationArgs-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L95">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L95">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"admissionregistration.k8s.io/v1"</span>&gt;;</code></pre>
@@ -552,7 +552,7 @@ The set of arguments for constructing a ValidatingWebhookConfiguration resource.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="ValidatingWebhookConfigurationArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L99">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L99">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"ValidatingWebhookConfiguration"</span>&gt;;</code></pre>
@@ -560,7 +560,7 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="ValidatingWebhookConfigurationArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L103">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L103">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
@@ -568,7 +568,7 @@ Kind is a string value representing the REST resource this object represents. Se
 Standard object metadata; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata.
 
 <h4 class="pdoc-member-header" id="ValidatingWebhookConfigurationArgs-webhooks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L107">property <b>webhooks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfiguration.ts#L107">property <b>webhooks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>webhooks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ValidatingWebhook'>ValidatingWebhook</a>&gt;[]&gt;;</code></pre>
@@ -576,7 +576,7 @@ Standard object metadata; More info: https://git.k8s.io/community/contributors/d
 Webhooks is a list of webhooks and the affected resources and operations.
 
 <h3 class="pdoc-module-header" id="ValidatingWebhookConfigurationListArgs" data-link-title="ValidatingWebhookConfigurationListArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L92">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L92">
         interface <strong>ValidatingWebhookConfigurationListArgs</strong>
     </a>
 </h3>
@@ -586,7 +586,7 @@ Webhooks is a list of webhooks and the affected resources and operations.
 The set of arguments for constructing a ValidatingWebhookConfigurationList resource.
 
 <h4 class="pdoc-member-header" id="ValidatingWebhookConfigurationListArgs-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L96">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L96">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"admissionregistration.k8s.io/v1"</span>&gt;;</code></pre>
@@ -594,7 +594,7 @@ The set of arguments for constructing a ValidatingWebhookConfigurationList resou
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="ValidatingWebhookConfigurationListArgs-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L100">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L100">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ValidatingWebhookConfiguration'>ValidatingWebhookConfiguration</a>&gt;[]&gt;;</code></pre>
@@ -602,7 +602,7 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 List of ValidatingWebhookConfiguration.
 
 <h4 class="pdoc-member-header" id="ValidatingWebhookConfigurationListArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L104">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L104">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"ValidatingWebhookConfigurationList"</span>&gt;;</code></pre>
@@ -610,7 +610,7 @@ List of ValidatingWebhookConfiguration.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="ValidatingWebhookConfigurationListArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L108">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/admissionregistration/v1/validatingWebhookConfigurationList.ts#L108">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ListMeta'>ListMeta</a>&gt;;</code></pre>

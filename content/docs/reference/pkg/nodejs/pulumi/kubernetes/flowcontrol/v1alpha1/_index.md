@@ -3,7 +3,7 @@ title: "Module flowcontrol/v1alpha1"
 title_tag: "Module flowcontrol/v1alpha1 | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "v1alpha1"
 meta_desc: "Explore members of the v1alpha1 module in the @pulumi/kubernetes package."
-git_sha: "ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9"
+git_sha: "f01f284c88884e5d9c32cb08b9ee2a464af4a384"
 block_external_search_index: true
 ---
 
@@ -35,7 +35,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="FlowSchema" data-link-title="FlowSchema">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L11">
         Resource <strong>FlowSchema</strong>
     </a>
 </h3>
@@ -45,7 +45,7 @@ block_external_search_index: true
 FlowSchema defines the schema of a group of flows. Note that a flow is made up of a set of inbound API requests with similar attributes and is identified by a pair of strings: the name of the FlowSchema and a "flow distinguisher".
 
 <h4 class="pdoc-member-header" id="FlowSchema-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L57"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L57"> <b>constructor</b></a>
 </h4>
 
 
@@ -59,7 +59,7 @@ Create a FlowSchema resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="FlowSchema-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L20">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L20">method <b>get</b></a>
 </h4>
 
 
@@ -70,14 +70,14 @@ Get an existing FlowSchema resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="FlowSchema-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L11">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L11">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FlowSchema-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L31">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L31">method <b>isInstance</b></a>
 </h4>
 
 
@@ -88,7 +88,7 @@ Returns true if the given object is an instance of FlowSchema.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="FlowSchema-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L41">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L41">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"flowcontrol.apiserver.k8s.io/v1alpha1"</span>&gt;;</code></pre>
@@ -96,7 +96,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="FlowSchema-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L11">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L11">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -105,7 +105,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="FlowSchema-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L45">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L45">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"FlowSchema"</span>&gt;;</code></pre>
@@ -113,7 +113,7 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="FlowSchema-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L49">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L49">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
@@ -121,7 +121,7 @@ Kind is a string value representing the REST resource this object represents. Se
 `metadata` is the standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="FlowSchema-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L53">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L53">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#FlowSchemaSpec'>FlowSchemaSpec</a>&gt;;</code></pre>
@@ -129,7 +129,7 @@ Kind is a string value representing the REST resource this object represents. Se
 `spec` is the specification of the desired behavior of a FlowSchema. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 
 <h4 class="pdoc-member-header" id="FlowSchema-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L57">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L57">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#FlowSchemaStatus'>FlowSchemaStatus</a>&gt;;</code></pre>
@@ -137,7 +137,7 @@ Kind is a string value representing the REST resource this object represents. Se
 `status` is the current status of a FlowSchema. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 
 <h4 class="pdoc-member-header" id="FlowSchema-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L11">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -146,7 +146,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="FlowSchemaList" data-link-title="FlowSchemaList">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L11">
         Resource <strong>FlowSchemaList</strong>
     </a>
 </h3>
@@ -156,7 +156,7 @@ deployments.
 FlowSchemaList is a list of FlowSchema objects.
 
 <h4 class="pdoc-member-header" id="FlowSchemaList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L53"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L53"> <b>constructor</b></a>
 </h4>
 
 
@@ -170,7 +170,7 @@ Create a FlowSchemaList resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="FlowSchemaList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L20">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L20">method <b>get</b></a>
 </h4>
 
 
@@ -181,14 +181,14 @@ Get an existing FlowSchemaList resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="FlowSchemaList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L11">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L11">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FlowSchemaList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L31">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L31">method <b>isInstance</b></a>
 </h4>
 
 
@@ -199,7 +199,7 @@ Returns true if the given object is an instance of FlowSchemaList.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="FlowSchemaList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L41">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L41">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"flowcontrol.apiserver.k8s.io/v1alpha1"</span>&gt;;</code></pre>
@@ -207,7 +207,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="FlowSchemaList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L11">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L11">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -216,7 +216,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="FlowSchemaList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L45">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L45">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#FlowSchema'>FlowSchema</a>[]&gt;;</code></pre>
@@ -224,7 +224,7 @@ deployments and may be missing (undefined) during planning phases.
 `items` is a list of FlowSchemas.
 
 <h4 class="pdoc-member-header" id="FlowSchemaList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L49">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L49">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"FlowSchemaList"</span>&gt;;</code></pre>
@@ -232,7 +232,7 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="FlowSchemaList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L53">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L53">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>ListMeta</a>&gt;;</code></pre>
@@ -240,7 +240,7 @@ Kind is a string value representing the REST resource this object represents. Se
 `metadata` is the standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="FlowSchemaList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L11">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -249,7 +249,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="PriorityLevelConfiguration" data-link-title="PriorityLevelConfiguration">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L11">
         Resource <strong>PriorityLevelConfiguration</strong>
     </a>
 </h3>
@@ -259,7 +259,7 @@ deployments.
 PriorityLevelConfiguration represents the configuration of a priority level.
 
 <h4 class="pdoc-member-header" id="PriorityLevelConfiguration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L57"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L57"> <b>constructor</b></a>
 </h4>
 
 
@@ -273,7 +273,7 @@ Create a PriorityLevelConfiguration resource with the given unique name, argumen
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PriorityLevelConfiguration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L20">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L20">method <b>get</b></a>
 </h4>
 
 
@@ -284,14 +284,14 @@ Get an existing PriorityLevelConfiguration resource's state with the given name,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PriorityLevelConfiguration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L11">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L11">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PriorityLevelConfiguration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L31">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L31">method <b>isInstance</b></a>
 </h4>
 
 
@@ -302,7 +302,7 @@ Returns true if the given object is an instance of PriorityLevelConfiguration.  
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PriorityLevelConfiguration-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L41">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L41">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"flowcontrol.apiserver.k8s.io/v1alpha1"</span>&gt;;</code></pre>
@@ -310,7 +310,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="PriorityLevelConfiguration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L11">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L11">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -319,7 +319,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PriorityLevelConfiguration-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L45">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L45">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PriorityLevelConfiguration"</span>&gt;;</code></pre>
@@ -327,7 +327,7 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="PriorityLevelConfiguration-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L49">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L49">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
@@ -335,7 +335,7 @@ Kind is a string value representing the REST resource this object represents. Se
 `metadata` is the standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="PriorityLevelConfiguration-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L53">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L53">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PriorityLevelConfigurationSpec'>PriorityLevelConfigurationSpec</a>&gt;;</code></pre>
@@ -343,7 +343,7 @@ Kind is a string value representing the REST resource this object represents. Se
 `spec` is the specification of the desired behavior of a "request-priority". More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 
 <h4 class="pdoc-member-header" id="PriorityLevelConfiguration-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L57">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L57">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PriorityLevelConfigurationStatus'>PriorityLevelConfigurationStatus</a>&gt;;</code></pre>
@@ -351,7 +351,7 @@ Kind is a string value representing the REST resource this object represents. Se
 `status` is the current status of a "request-priority". More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 
 <h4 class="pdoc-member-header" id="PriorityLevelConfiguration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L11">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -360,7 +360,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="PriorityLevelConfigurationList" data-link-title="PriorityLevelConfigurationList">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L11">
         Resource <strong>PriorityLevelConfigurationList</strong>
     </a>
 </h3>
@@ -370,7 +370,7 @@ deployments.
 PriorityLevelConfigurationList is a list of PriorityLevelConfiguration objects.
 
 <h4 class="pdoc-member-header" id="PriorityLevelConfigurationList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L53"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L53"> <b>constructor</b></a>
 </h4>
 
 
@@ -384,7 +384,7 @@ Create a PriorityLevelConfigurationList resource with the given unique name, arg
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PriorityLevelConfigurationList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L20">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L20">method <b>get</b></a>
 </h4>
 
 
@@ -395,14 +395,14 @@ Get an existing PriorityLevelConfigurationList resource's state with the given n
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PriorityLevelConfigurationList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L11">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L11">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PriorityLevelConfigurationList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L31">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L31">method <b>isInstance</b></a>
 </h4>
 
 
@@ -413,7 +413,7 @@ Returns true if the given object is an instance of PriorityLevelConfigurationLis
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PriorityLevelConfigurationList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L41">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L41">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"flowcontrol.apiserver.k8s.io/v1alpha1"</span>&gt;;</code></pre>
@@ -421,7 +421,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="PriorityLevelConfigurationList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L11">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L11">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -430,7 +430,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PriorityLevelConfigurationList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L45">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L45">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PriorityLevelConfiguration'>PriorityLevelConfiguration</a>[]&gt;;</code></pre>
@@ -438,7 +438,7 @@ deployments and may be missing (undefined) during planning phases.
 `items` is a list of request-priorities.
 
 <h4 class="pdoc-member-header" id="PriorityLevelConfigurationList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L49">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L49">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PriorityLevelConfigurationList"</span>&gt;;</code></pre>
@@ -446,7 +446,7 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="PriorityLevelConfigurationList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L53">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L53">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>ListMeta</a>&gt;;</code></pre>
@@ -454,7 +454,7 @@ Kind is a string value representing the REST resource this object represents. Se
 `metadata` is the standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="PriorityLevelConfigurationList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L11">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -466,7 +466,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="FlowSchemaArgs" data-link-title="FlowSchemaArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L97">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L97">
         interface <strong>FlowSchemaArgs</strong>
     </a>
 </h3>
@@ -476,7 +476,7 @@ deployments.
 The set of arguments for constructing a FlowSchema resource.
 
 <h4 class="pdoc-member-header" id="FlowSchemaArgs-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L101">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L101">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"flowcontrol.apiserver.k8s.io/v1alpha1"</span>&gt;;</code></pre>
@@ -484,7 +484,7 @@ The set of arguments for constructing a FlowSchema resource.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="FlowSchemaArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L105">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L105">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"FlowSchema"</span>&gt;;</code></pre>
@@ -492,7 +492,7 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="FlowSchemaArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L109">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L109">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
@@ -500,7 +500,7 @@ Kind is a string value representing the REST resource this object represents. Se
 `metadata` is the standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="FlowSchemaArgs-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L113">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchema.ts#L113">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#FlowSchemaSpec'>FlowSchemaSpec</a>&gt;;</code></pre>
@@ -508,7 +508,7 @@ Kind is a string value representing the REST resource this object represents. Se
 `spec` is the specification of the desired behavior of a FlowSchema. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 
 <h3 class="pdoc-module-header" id="FlowSchemaListArgs" data-link-title="FlowSchemaListArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L92">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L92">
         interface <strong>FlowSchemaListArgs</strong>
     </a>
 </h3>
@@ -518,7 +518,7 @@ Kind is a string value representing the REST resource this object represents. Se
 The set of arguments for constructing a FlowSchemaList resource.
 
 <h4 class="pdoc-member-header" id="FlowSchemaListArgs-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L96">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L96">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"flowcontrol.apiserver.k8s.io/v1alpha1"</span>&gt;;</code></pre>
@@ -526,7 +526,7 @@ The set of arguments for constructing a FlowSchemaList resource.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="FlowSchemaListArgs-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L100">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L100">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#FlowSchema'>FlowSchema</a>&gt;[]&gt;;</code></pre>
@@ -534,7 +534,7 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 `items` is a list of FlowSchemas.
 
 <h4 class="pdoc-member-header" id="FlowSchemaListArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L104">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L104">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"FlowSchemaList"</span>&gt;;</code></pre>
@@ -542,7 +542,7 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="FlowSchemaListArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L108">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/flowSchemaList.ts#L108">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ListMeta'>ListMeta</a>&gt;;</code></pre>
@@ -550,7 +550,7 @@ Kind is a string value representing the REST resource this object represents. Se
 `metadata` is the standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h3 class="pdoc-module-header" id="PriorityLevelConfigurationArgs" data-link-title="PriorityLevelConfigurationArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L97">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L97">
         interface <strong>PriorityLevelConfigurationArgs</strong>
     </a>
 </h3>
@@ -560,7 +560,7 @@ Kind is a string value representing the REST resource this object represents. Se
 The set of arguments for constructing a PriorityLevelConfiguration resource.
 
 <h4 class="pdoc-member-header" id="PriorityLevelConfigurationArgs-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L101">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L101">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"flowcontrol.apiserver.k8s.io/v1alpha1"</span>&gt;;</code></pre>
@@ -568,7 +568,7 @@ The set of arguments for constructing a PriorityLevelConfiguration resource.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="PriorityLevelConfigurationArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L105">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L105">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"PriorityLevelConfiguration"</span>&gt;;</code></pre>
@@ -576,7 +576,7 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="PriorityLevelConfigurationArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L109">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L109">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
@@ -584,7 +584,7 @@ Kind is a string value representing the REST resource this object represents. Se
 `metadata` is the standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="PriorityLevelConfigurationArgs-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L113">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfiguration.ts#L113">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PriorityLevelConfigurationSpec'>PriorityLevelConfigurationSpec</a>&gt;;</code></pre>
@@ -592,7 +592,7 @@ Kind is a string value representing the REST resource this object represents. Se
 `spec` is the specification of the desired behavior of a "request-priority". More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 
 <h3 class="pdoc-module-header" id="PriorityLevelConfigurationListArgs" data-link-title="PriorityLevelConfigurationListArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L92">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L92">
         interface <strong>PriorityLevelConfigurationListArgs</strong>
     </a>
 </h3>
@@ -602,7 +602,7 @@ Kind is a string value representing the REST resource this object represents. Se
 The set of arguments for constructing a PriorityLevelConfigurationList resource.
 
 <h4 class="pdoc-member-header" id="PriorityLevelConfigurationListArgs-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L96">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L96">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"flowcontrol.apiserver.k8s.io/v1alpha1"</span>&gt;;</code></pre>
@@ -610,7 +610,7 @@ The set of arguments for constructing a PriorityLevelConfigurationList resource.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="PriorityLevelConfigurationListArgs-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L100">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L100">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PriorityLevelConfiguration'>PriorityLevelConfiguration</a>&gt;[]&gt;;</code></pre>
@@ -618,7 +618,7 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 `items` is a list of request-priorities.
 
 <h4 class="pdoc-member-header" id="PriorityLevelConfigurationListArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L104">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L104">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"PriorityLevelConfigurationList"</span>&gt;;</code></pre>
@@ -626,7 +626,7 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="PriorityLevelConfigurationListArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L108">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/flowcontrol/v1alpha1/priorityLevelConfigurationList.ts#L108">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ListMeta'>ListMeta</a>&gt;;</code></pre>

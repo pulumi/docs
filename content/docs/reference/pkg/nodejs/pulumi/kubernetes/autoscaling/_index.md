@@ -3,7 +3,7 @@ title: "Module autoscaling"
 title_tag: "Module autoscaling | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "autoscaling"
 meta_desc: "Explore members of the autoscaling module in the @pulumi/kubernetes package."
-git_sha: "ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9"
+git_sha: "f01f284c88884e5d9c32cb08b9ee2a464af4a384"
 block_external_search_index: true
 ---
 
