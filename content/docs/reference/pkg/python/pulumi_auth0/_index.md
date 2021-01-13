@@ -909,7 +909,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">syntax</span><span class="o">=</span><span class="s2">&quot;liquid&quot;</span><span class="p">,</span>
     <span class="n">url_lifetime_in_seconds</span><span class="o">=</span><span class="mi">3600</span><span class="p">,</span>
     <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">opts</span><span class="o">=</span><span class="n">ResourceOptions</span><span class="p">(</span><span class="n">depends_on</span><span class="o">=</span><span class="p">[</span><span class="n">my_email_provider</span><span class="p">]))</span>
+    <span class="n">opts</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">ResourceOptions</span><span class="p">(</span><span class="n">depends_on</span><span class="o">=</span><span class="p">[</span><span class="n">my_email_provider</span><span class="p">]))</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
