@@ -199,7 +199,7 @@ const shovelTest = new rabbitmq.Shovel("shovelTest", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rabbitmq/#Shovel">Shovel</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rabbitmq/#ShovelArgs">ShovelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rabbitmq/#Shovel">Shovel</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rabbitmq/#ShovelArgs">ShovelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -207,11 +207,11 @@ const shovelTest = new rabbitmq.Shovel("shovelTest", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq/?tab=doc#Shovel">NewShovel</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq/?tab=doc#ShovelArgs">ShovelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq/?tab=doc#Shovel">Shovel</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq/?tab=doc#Shovel">NewShovel</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq/?tab=doc#ShovelArgs">ShovelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq/?tab=doc#Shovel">Shovel</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.RabbitMQ/Pulumi.RabbitMQ.Shovel.html">Shovel</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.RabbitMQ/Pulumi.RabbitMQ.ShovelArgs.html">ShovelArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.RabbitMQ/Pulumi.RabbitMQ.Shovel.html">Shovel</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.RabbitMQ/Pulumi.RabbitMQ.ShovelArgs.html">ShovelArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -222,7 +222,7 @@ const shovelTest = new rabbitmq.Shovel("shovelTest", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -291,7 +291,7 @@ const shovelTest = new rabbitmq.Shovel("shovelTest", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -330,7 +330,7 @@ const shovelTest = new rabbitmq.Shovel("shovelTest", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -371,7 +371,6 @@ The Shovel resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -379,39 +378,35 @@ The Shovel resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="info_csharp">
 <a href="#info_csharp" style="color: inherit; text-decoration: inherit;">Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shovelinfo">Pulumi.<wbr>Rabbit<wbr>MQ.<wbr>Inputs.<wbr>Shovel<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings of the shovel. The structure is
 described below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vhost_csharp">
 <a href="#vhost_csharp" style="color: inherit; text-decoration: inherit;">Vhost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shovel name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -420,39 +415,35 @@ described below.
             title="Required">
         <span id="info_go">
 <a href="#info_go" style="color: inherit; text-decoration: inherit;">Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shovelinfo">Shovel<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The settings of the shovel. The structure is
 described below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vhost_go">
 <a href="#vhost_go" style="color: inherit; text-decoration: inherit;">Vhost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shovel name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -461,39 +452,35 @@ described below.
             title="Required">
         <span id="info_nodejs">
 <a href="#info_nodejs" style="color: inherit; text-decoration: inherit;">info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shovelinfo">Shovel<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The settings of the shovel. The structure is
 described below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vhost_nodejs">
 <a href="#vhost_nodejs" style="color: inherit; text-decoration: inherit;">vhost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shovel name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -502,48 +489,40 @@ described below.
             title="Required">
         <span id="info_python">
 <a href="#info_python" style="color: inherit; text-decoration: inherit;">info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shovelinfo">Shovel<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings of the shovel. The structure is
 described below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vhost_python">
 <a href="#vhost_python" style="color: inherit; text-decoration: inherit;">vhost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shovel name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Shovel resource produces the following output properties:
-
 
 
 
@@ -554,15 +533,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -571,15 +548,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -588,15 +563,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -605,18 +578,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -626,7 +594,7 @@ Get an existing Shovel resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rabbitmq/#ShovelState">ShovelState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rabbitmq/#Shovel">Shovel</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rabbitmq/#ShovelState">ShovelState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rabbitmq/#Shovel">Shovel</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -635,11 +603,11 @@ Get an existing Shovel resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetShovel<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq/?tab=doc#ShovelState">ShovelState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq/?tab=doc#Shovel">Shovel</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetShovel<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq/?tab=doc#ShovelState">ShovelState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq/?tab=doc#Shovel">Shovel</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.RabbitMQ/Pulumi.RabbitMQ.Shovel.html">Shovel</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.RabbitMQ/Pulumi.RabbitMQ..ShovelState.html">ShovelState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.RabbitMQ/Pulumi.RabbitMQ.Shovel.html">Shovel</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.RabbitMQ/Pulumi.RabbitMQ..ShovelState.html">ShovelState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -741,7 +709,6 @@ Get an existing Shovel resource's state with the given name, ID, and optional ex
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -749,39 +716,35 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_info_csharp">
 <a href="#state_info_csharp" style="color: inherit; text-decoration: inherit;">Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shovelinfo">Pulumi.<wbr>Rabbit<wbr>MQ.<wbr>Inputs.<wbr>Shovel<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings of the shovel. The structure is
 described below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shovel name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vhost_csharp">
 <a href="#state_vhost_csharp" style="color: inherit; text-decoration: inherit;">Vhost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -790,39 +753,35 @@ described below.
             title="Optional">
         <span id="state_info_go">
 <a href="#state_info_go" style="color: inherit; text-decoration: inherit;">Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shovelinfo">Shovel<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The settings of the shovel. The structure is
 described below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shovel name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vhost_go">
 <a href="#state_vhost_go" style="color: inherit; text-decoration: inherit;">Vhost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -831,39 +790,35 @@ described below.
             title="Optional">
         <span id="state_info_nodejs">
 <a href="#state_info_nodejs" style="color: inherit; text-decoration: inherit;">info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shovelinfo">Shovel<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The settings of the shovel. The structure is
 described below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shovel name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vhost_nodejs">
 <a href="#state_vhost_nodejs" style="color: inherit; text-decoration: inherit;">vhost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -872,36 +827,33 @@ described below.
             title="Optional">
         <span id="state_info_python">
 <a href="#state_info_python" style="color: inherit; text-decoration: inherit;">info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shovelinfo">Shovel<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings of the shovel. The structure is
 described below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shovel name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vhost_python">
 <a href="#state_vhost_python" style="color: inherit; text-decoration: inherit;">vhost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -910,11 +862,8 @@ described below.
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="shovelinfo">Shovel<wbr>Info</h4>
@@ -925,11 +874,10 @@ described below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq/?tab=doc#ShovelInfoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq/?tab=doc#ShovelInfoOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.RabbitMQ/Pulumi.RabbitMQ.Inputs.ShovelInfoArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.RabbitMQ/Pulumi.RabbitMQ.Outputs.ShovelInfo.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -939,157 +887,143 @@ described below.
             title="Required">
         <span id="destinationuri_csharp">
 <a href="#destinationuri_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amqp uri for the destination .
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sourceuri_csharp">
 <a href="#sourceuri_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amqp uri for the source.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ackmode_csharp">
 <a href="#ackmode_csharp" style="color: inherit; text-decoration: inherit;">Ack<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines how the shovel should acknowledge messages.
 Defaults to `on-confirm`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="addforwardheaders_csharp">
 <a href="#addforwardheaders_csharp" style="color: inherit; text-decoration: inherit;">Add<wbr>Forward<wbr>Headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to amqp shovel headers.
 Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deleteafter_csharp">
 <a href="#deleteafter_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>After</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines when (if ever) the shovel should delete itself .
 Defaults to `never`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationexchange_csharp">
 <a href="#destinationexchange_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Exchange</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The exchange to which messages should be published.
 Either this or destination_queue must be specified but not both.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationexchangekey_csharp">
 <a href="#destinationexchangekey_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Exchange<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The routing key when using destination_exchange.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationqueue_csharp">
 <a href="#destinationqueue_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Queue</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The queue to which messages should be published.
 Either this or destination_exchange must be specified but not both.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefetchcount_csharp">
 <a href="#prefetchcount_csharp" style="color: inherit; text-decoration: inherit;">Prefetch<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of unacknowledged messages copied over a shovel at any one time.
 Defaults to `1000`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="reconnectdelay_csharp">
 <a href="#reconnectdelay_csharp" style="color: inherit; text-decoration: inherit;">Reconnect<wbr>Delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration in seconds to reconnect to a broker after disconnected.
 Defaults to `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceexchange_csharp">
 <a href="#sourceexchange_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Exchange</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The exchange from which to consume.
 Either this or source_queue must be specified but not both.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceexchangekey_csharp">
 <a href="#sourceexchangekey_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Exchange<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The routing key when using source_exchange.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcequeue_csharp">
 <a href="#sourcequeue_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Queue</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The queue from which to consume.
 Either this or source_exchange must be specified but not both.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1098,157 +1032,143 @@ Either this or source_exchange must be specified but not both.
             title="Required">
         <span id="destinationuri_go">
 <a href="#destinationuri_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amqp uri for the destination .
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sourceuri_go">
 <a href="#sourceuri_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amqp uri for the source.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ackmode_go">
 <a href="#ackmode_go" style="color: inherit; text-decoration: inherit;">Ack<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines how the shovel should acknowledge messages.
 Defaults to `on-confirm`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="addforwardheaders_go">
 <a href="#addforwardheaders_go" style="color: inherit; text-decoration: inherit;">Add<wbr>Forward<wbr>Headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to amqp shovel headers.
 Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deleteafter_go">
 <a href="#deleteafter_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>After</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines when (if ever) the shovel should delete itself .
 Defaults to `never`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationexchange_go">
 <a href="#destinationexchange_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Exchange</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The exchange to which messages should be published.
 Either this or destination_queue must be specified but not both.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationexchangekey_go">
 <a href="#destinationexchangekey_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Exchange<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The routing key when using destination_exchange.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationqueue_go">
 <a href="#destinationqueue_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Queue</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The queue to which messages should be published.
 Either this or destination_exchange must be specified but not both.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefetchcount_go">
 <a href="#prefetchcount_go" style="color: inherit; text-decoration: inherit;">Prefetch<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of unacknowledged messages copied over a shovel at any one time.
 Defaults to `1000`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="reconnectdelay_go">
 <a href="#reconnectdelay_go" style="color: inherit; text-decoration: inherit;">Reconnect<wbr>Delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration in seconds to reconnect to a broker after disconnected.
 Defaults to `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceexchange_go">
 <a href="#sourceexchange_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Exchange</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The exchange from which to consume.
 Either this or source_queue must be specified but not both.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceexchangekey_go">
 <a href="#sourceexchangekey_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Exchange<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The routing key when using source_exchange.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcequeue_go">
 <a href="#sourcequeue_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Queue</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The queue from which to consume.
 Either this or source_exchange must be specified but not both.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1257,157 +1177,143 @@ Either this or source_exchange must be specified but not both.
             title="Required">
         <span id="destinationuri_nodejs">
 <a href="#destinationuri_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amqp uri for the destination .
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sourceuri_nodejs">
 <a href="#sourceuri_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amqp uri for the source.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ackmode_nodejs">
 <a href="#ackmode_nodejs" style="color: inherit; text-decoration: inherit;">ack<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines how the shovel should acknowledge messages.
 Defaults to `on-confirm`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="addforwardheaders_nodejs">
 <a href="#addforwardheaders_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>Forward<wbr>Headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to amqp shovel headers.
 Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deleteafter_nodejs">
 <a href="#deleteafter_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>After</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines when (if ever) the shovel should delete itself .
 Defaults to `never`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationexchange_nodejs">
 <a href="#destinationexchange_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Exchange</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The exchange to which messages should be published.
 Either this or destination_queue must be specified but not both.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationexchangekey_nodejs">
 <a href="#destinationexchangekey_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Exchange<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The routing key when using destination_exchange.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationqueue_nodejs">
 <a href="#destinationqueue_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Queue</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The queue to which messages should be published.
 Either this or destination_exchange must be specified but not both.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefetchcount_nodejs">
 <a href="#prefetchcount_nodejs" style="color: inherit; text-decoration: inherit;">prefetch<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of unacknowledged messages copied over a shovel at any one time.
 Defaults to `1000`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="reconnectdelay_nodejs">
 <a href="#reconnectdelay_nodejs" style="color: inherit; text-decoration: inherit;">reconnect<wbr>Delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The duration in seconds to reconnect to a broker after disconnected.
 Defaults to `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceexchange_nodejs">
 <a href="#sourceexchange_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Exchange</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The exchange from which to consume.
 Either this or source_queue must be specified but not both.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceexchangekey_nodejs">
 <a href="#sourceexchangekey_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Exchange<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The routing key when using source_exchange.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcequeue_nodejs">
 <a href="#sourcequeue_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Queue</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The queue from which to consume.
 Either this or source_exchange must be specified but not both.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1416,165 +1322,143 @@ Either this or source_exchange must be specified but not both.
             title="Required">
         <span id="destination_uri_python">
 <a href="#destination_uri_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amqp uri for the destination .
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="source_uri_python">
 <a href="#source_uri_python" style="color: inherit; text-decoration: inherit;">source_<wbr>uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amqp uri for the source.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ack_mode_python">
 <a href="#ack_mode_python" style="color: inherit; text-decoration: inherit;">ack_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines how the shovel should acknowledge messages.
 Defaults to `on-confirm`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="add_forward_headers_python">
 <a href="#add_forward_headers_python" style="color: inherit; text-decoration: inherit;">add_<wbr>forward_<wbr>headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to amqp shovel headers.
 Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="delete_after_python">
 <a href="#delete_after_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>after</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines when (if ever) the shovel should delete itself .
 Defaults to `never`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destination_exchange_python">
 <a href="#destination_exchange_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>exchange</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The exchange to which messages should be published.
 Either this or destination_queue must be specified but not both.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destination_exchange_key_python">
 <a href="#destination_exchange_key_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>exchange_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The routing key when using destination_exchange.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destination_queue_python">
 <a href="#destination_queue_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>queue</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The queue to which messages should be published.
 Either this or destination_exchange must be specified but not both.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefetch_count_python">
 <a href="#prefetch_count_python" style="color: inherit; text-decoration: inherit;">prefetch_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of unacknowledged messages copied over a shovel at any one time.
 Defaults to `1000`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="reconnect_delay_python">
 <a href="#reconnect_delay_python" style="color: inherit; text-decoration: inherit;">reconnect_<wbr>delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration in seconds to reconnect to a broker after disconnected.
 Defaults to `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_exchange_python">
 <a href="#source_exchange_python" style="color: inherit; text-decoration: inherit;">source_<wbr>exchange</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The exchange from which to consume.
 Either this or source_queue must be specified but not both.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_exchange_key_python">
 <a href="#source_exchange_key_python" style="color: inherit; text-decoration: inherit;">source_<wbr>exchange_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The routing key when using source_exchange.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_queue_python">
 <a href="#source_queue_python" style="color: inherit; text-decoration: inherit;">source_<wbr>queue</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The queue from which to consume.
 Either this or source_exchange must be specified but not both.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 ## Import
 
 

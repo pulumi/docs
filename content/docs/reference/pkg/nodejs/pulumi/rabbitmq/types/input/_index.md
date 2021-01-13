@@ -3,7 +3,7 @@ title: "Module types/input"
 title_tag: "Module types/input | Package @pulumi/rabbitmq | Node.js SDK"
 linktitle: "input"
 meta_desc: "Explore members of the input module in the @pulumi/rabbitmq package."
-git_sha: "dbb3ec30655f767ca0721cbca77ff09981cb2a74"
+git_sha: "872811eaf6823e1df5c2f3815e281dc60c813367"
 block_external_search_index: true
 ---
 
@@ -33,14 +33,14 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="ExchangeSettings" data-link-title="ExchangeSettings">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L7">
         interface <strong>ExchangeSettings</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ExchangeSettings</span></code></pre>
 <h4 class="pdoc-member-header" id="ExchangeSettings-arguments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L11">property <b>arguments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L11">property <b>arguments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arguments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -48,7 +48,7 @@ block_external_search_index: true
 Additional key/value settings for the exchange.
 
 <h4 class="pdoc-member-header" id="ExchangeSettings-autoDelete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L16">property <b>autoDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L16">property <b>autoDelete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoDelete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -57,7 +57,7 @@ Whether the exchange will self-delete when all
 queues have finished using it.
 
 <h4 class="pdoc-member-header" id="ExchangeSettings-durable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L21">property <b>durable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L21">property <b>durable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>durable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -66,7 +66,7 @@ Whether the exchange survives server restarts.
 Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="ExchangeSettings-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L25">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L25">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -74,71 +74,71 @@ Defaults to `false`.
 The type of exchange.
 
 <h3 class="pdoc-module-header" id="FederationUpstreamDefinition" data-link-title="FederationUpstreamDefinition">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L28">
         interface <strong>FederationUpstreamDefinition</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>FederationUpstreamDefinition</span></code></pre>
 <h4 class="pdoc-member-header" id="FederationUpstreamDefinition-ackMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L29">property <b>ackMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L29">property <b>ackMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ackMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FederationUpstreamDefinition-exchange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L30">property <b>exchange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L30">property <b>exchange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>exchange?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FederationUpstreamDefinition-expires">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L31">property <b>expires</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L31">property <b>expires</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expires?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FederationUpstreamDefinition-maxHops">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L32">property <b>maxHops</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L32">property <b>maxHops</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxHops?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FederationUpstreamDefinition-messageTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L33">property <b>messageTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L33">property <b>messageTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FederationUpstreamDefinition-prefetchCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L34">property <b>prefetchCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L34">property <b>prefetchCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prefetchCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FederationUpstreamDefinition-queue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L35">property <b>queue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L35">property <b>queue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>queue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FederationUpstreamDefinition-reconnectDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L36">property <b>reconnectDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L36">property <b>reconnectDelay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reconnectDelay?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FederationUpstreamDefinition-trustUserId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L37">property <b>trustUserId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L37">property <b>trustUserId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>trustUserId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FederationUpstreamDefinition-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L38">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L38">property <b>uri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="PermissionsPermissions" data-link-title="PermissionsPermissions">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L41">
         interface <strong>PermissionsPermissions</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PermissionsPermissions</span></code></pre>
 <h4 class="pdoc-member-header" id="PermissionsPermissions-configure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L45">property <b>configure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L45">property <b>configure</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configure: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -146,7 +146,7 @@ The type of exchange.
 The "configure" ACL.
 
 <h4 class="pdoc-member-header" id="PermissionsPermissions-read">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L49">property <b>read</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L49">property <b>read</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>read: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -154,7 +154,7 @@ The "configure" ACL.
 The "read" ACL.
 
 <h4 class="pdoc-member-header" id="PermissionsPermissions-write">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L53">property <b>write</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L53">property <b>write</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>write: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -162,14 +162,14 @@ The "read" ACL.
 The "write" ACL.
 
 <h3 class="pdoc-module-header" id="PolicyPolicy" data-link-title="PolicyPolicy">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L56">
         interface <strong>PolicyPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PolicyPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="PolicyPolicy-applyTo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L60">property <b>applyTo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L60">property <b>applyTo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applyTo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -177,7 +177,7 @@ The "write" ACL.
 Can either be "exchanges", "queues", or "all".
 
 <h4 class="pdoc-member-header" id="PolicyPolicy-definition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L65">property <b>definition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L65">property <b>definition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>definition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -186,7 +186,7 @@ Key/value pairs of the policy definition. See the
 RabbitMQ documentation for definition references and examples.
 
 <h4 class="pdoc-member-header" id="PolicyPolicy-pattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L69">property <b>pattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L69">property <b>pattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pattern: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -194,7 +194,7 @@ RabbitMQ documentation for definition references and examples.
 A pattern to match an exchange or queue name.
 
 <h4 class="pdoc-member-header" id="PolicyPolicy-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L73">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L73">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -202,14 +202,14 @@ A pattern to match an exchange or queue name.
 The policy with the greater priority is applied first.
 
 <h3 class="pdoc-module-header" id="QueueSettings" data-link-title="QueueSettings">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L76">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L76">
         interface <strong>QueueSettings</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>QueueSettings</span></code></pre>
 <h4 class="pdoc-member-header" id="QueueSettings-arguments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L82">property <b>arguments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L82">property <b>arguments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arguments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -219,7 +219,7 @@ All values will be sent to RabbitMQ as a string. If you require non-string
 values, use `argumentsJson`.
 
 <h4 class="pdoc-member-header" id="QueueSettings-argumentsJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L88">property <b>argumentsJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L88">property <b>argumentsJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>argumentsJson?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -229,7 +229,7 @@ settings for the queue. This is useful for when the arguments contain
 non-string values.
 
 <h4 class="pdoc-member-header" id="QueueSettings-autoDelete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L93">property <b>autoDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L93">property <b>autoDelete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoDelete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -238,7 +238,7 @@ Whether the queue will self-delete when all
 consumers have unsubscribed.
 
 <h4 class="pdoc-member-header" id="QueueSettings-durable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L98">property <b>durable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L98">property <b>durable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>durable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -247,14 +247,14 @@ Whether the queue survives server restarts.
 Defaults to `false`.
 
 <h3 class="pdoc-module-header" id="ShovelInfo" data-link-title="ShovelInfo">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L101">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L101">
         interface <strong>ShovelInfo</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ShovelInfo</span></code></pre>
 <h4 class="pdoc-member-header" id="ShovelInfo-ackMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L106">property <b>ackMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L106">property <b>ackMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ackMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -263,7 +263,7 @@ Determines how the shovel should acknowledge messages.
 Defaults to `on-confirm`.
 
 <h4 class="pdoc-member-header" id="ShovelInfo-addForwardHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L111">property <b>addForwardHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L111">property <b>addForwardHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addForwardHeaders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -272,7 +272,7 @@ Whether to amqp shovel headers.
 Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="ShovelInfo-deleteAfter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L116">property <b>deleteAfter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L116">property <b>deleteAfter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deleteAfter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -281,7 +281,7 @@ Determines when (if ever) the shovel should delete itself .
 Defaults to `never`.
 
 <h4 class="pdoc-member-header" id="ShovelInfo-destinationExchange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L121">property <b>destinationExchange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L121">property <b>destinationExchange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationExchange?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -290,7 +290,7 @@ The exchange to which messages should be published.
 Either this or destinationQueue must be specified but not both.
 
 <h4 class="pdoc-member-header" id="ShovelInfo-destinationExchangeKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L125">property <b>destinationExchangeKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L125">property <b>destinationExchangeKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationExchangeKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -298,7 +298,7 @@ Either this or destinationQueue must be specified but not both.
 The routing key when using destination_exchange.
 
 <h4 class="pdoc-member-header" id="ShovelInfo-destinationQueue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L130">property <b>destinationQueue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L130">property <b>destinationQueue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationQueue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -307,7 +307,7 @@ The queue to which messages should be published.
 Either this or destinationExchange must be specified but not both.
 
 <h4 class="pdoc-member-header" id="ShovelInfo-destinationUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L134">property <b>destinationUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L134">property <b>destinationUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -315,7 +315,7 @@ Either this or destinationExchange must be specified but not both.
 The amqp uri for the destination .
 
 <h4 class="pdoc-member-header" id="ShovelInfo-prefetchCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L139">property <b>prefetchCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L139">property <b>prefetchCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prefetchCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -324,7 +324,7 @@ The maximum number of unacknowledged messages copied over a shovel at any one ti
 Defaults to `1000`.
 
 <h4 class="pdoc-member-header" id="ShovelInfo-reconnectDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L144">property <b>reconnectDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L144">property <b>reconnectDelay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reconnectDelay?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -333,7 +333,7 @@ The duration in seconds to reconnect to a broker after disconnected.
 Defaults to `1`.
 
 <h4 class="pdoc-member-header" id="ShovelInfo-sourceExchange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L149">property <b>sourceExchange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L149">property <b>sourceExchange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceExchange?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -342,7 +342,7 @@ The exchange from which to consume.
 Either this or sourceQueue must be specified but not both.
 
 <h4 class="pdoc-member-header" id="ShovelInfo-sourceExchangeKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L153">property <b>sourceExchangeKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L153">property <b>sourceExchangeKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceExchangeKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -350,7 +350,7 @@ Either this or sourceQueue must be specified but not both.
 The routing key when using source_exchange.
 
 <h4 class="pdoc-member-header" id="ShovelInfo-sourceQueue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L158">property <b>sourceQueue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L158">property <b>sourceQueue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceQueue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -359,7 +359,7 @@ The queue from which to consume.
 Either this or sourceExchange must be specified but not both.
 
 <h4 class="pdoc-member-header" id="ShovelInfo-sourceUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L162">property <b>sourceUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L162">property <b>sourceUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -367,14 +367,14 @@ Either this or sourceExchange must be specified but not both.
 The amqp uri for the source.
 
 <h3 class="pdoc-module-header" id="TopicPermissionsPermission" data-link-title="TopicPermissionsPermission">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L165">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L165">
         interface <strong>TopicPermissionsPermission</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TopicPermissionsPermission</span></code></pre>
 <h4 class="pdoc-member-header" id="TopicPermissionsPermission-exchange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L169">property <b>exchange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L169">property <b>exchange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>exchange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -382,7 +382,7 @@ The amqp uri for the source.
 The exchange to set the permissions for.
 
 <h4 class="pdoc-member-header" id="TopicPermissionsPermission-read">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L173">property <b>read</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L173">property <b>read</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>read: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -390,7 +390,7 @@ The exchange to set the permissions for.
 The "read" ACL.
 
 <h4 class="pdoc-member-header" id="TopicPermissionsPermission-write">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/types/input.ts#L177">property <b>write</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/872811eaf6823e1df5c2f3815e281dc60c813367/sdk/nodejs/types/input.ts#L177">property <b>write</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>write: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
