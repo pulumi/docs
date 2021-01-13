@@ -18,7 +18,7 @@ meta_desc: "Explore the ServiceSlack resource of the GitLab package, including e
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#ServiceSlack">ServiceSlack</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#ServiceSlackArgs">ServiceSlackArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#ServiceSlack">ServiceSlack</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#ServiceSlackArgs">ServiceSlackArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -26,11 +26,11 @@ meta_desc: "Explore the ServiceSlack resource of the GitLab package, including e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#ServiceSlack">NewServiceSlack</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#ServiceSlackArgs">ServiceSlackArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#ServiceSlack">ServiceSlack</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#ServiceSlack">NewServiceSlack</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#ServiceSlackArgs">ServiceSlackArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#ServiceSlack">ServiceSlack</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.ServiceSlack.html">ServiceSlack</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.ServiceSlackArgs.html">ServiceSlackArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.ServiceSlack.html">ServiceSlack</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.ServiceSlackArgs.html">ServiceSlackArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -41,7 +41,7 @@ meta_desc: "Explore the ServiceSlack resource of the GitLab package, including e
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -110,7 +110,7 @@ meta_desc: "Explore the ServiceSlack resource of the GitLab package, including e
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -149,7 +149,7 @@ meta_desc: "Explore the ServiceSlack resource of the GitLab package, including e
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -190,7 +190,6 @@ The ServiceSlack resource accepts the following [input]({{< relref "/docs/intro/
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -198,258 +197,234 @@ The ServiceSlack resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project you want to activate integration on.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="webhook_csharp">
 <a href="#webhook_csharp" style="color: inherit; text-decoration: inherit;">Webhook</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Webhook URL (ex.: https://hooks.slack.com/services/...)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="branchestobenotified_csharp">
 <a href="#branchestobenotified_csharp" style="color: inherit; text-decoration: inherit;">Branches<wbr>To<wbr>Be<wbr>Notified</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Branches to send notifications for. Valid options are "all", "default", "protected", and "default_and_protected".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="confidentialissuechannel_csharp">
 <a href="#confidentialissuechannel_csharp" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Issue<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive confidential issue events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="confidentialissuesevents_csharp">
 <a href="#confidentialissuesevents_csharp" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Issues<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for confidential issues events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="confidentialnoteevents_csharp">
 <a href="#confidentialnoteevents_csharp" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Note<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for confidential note events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="issuechannel_csharp">
 <a href="#issuechannel_csharp" style="color: inherit; text-decoration: inherit;">Issue<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive issue events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="issuesevents_csharp">
 <a href="#issuesevents_csharp" style="color: inherit; text-decoration: inherit;">Issues<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for issues events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mergerequestchannel_csharp">
 <a href="#mergerequestchannel_csharp" style="color: inherit; text-decoration: inherit;">Merge<wbr>Request<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive merge request events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mergerequestsevents_csharp">
 <a href="#mergerequestsevents_csharp" style="color: inherit; text-decoration: inherit;">Merge<wbr>Requests<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for merge requests events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notechannel_csharp">
 <a href="#notechannel_csharp" style="color: inherit; text-decoration: inherit;">Note<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive note events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="noteevents_csharp">
 <a href="#noteevents_csharp" style="color: inherit; text-decoration: inherit;">Note<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for note events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notifyonlybrokenpipelines_csharp">
 <a href="#notifyonlybrokenpipelines_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Only<wbr>Broken<wbr>Pipelines</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Send notifications for broken pipelines.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="notifyonlydefaultbranch_csharp">
 <a href="#notifyonlydefaultbranch_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Only<wbr>Default<wbr>Branch</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}DEPRECATED: This parameter has been replaced with `branches_to_be_notified`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;branches_to_be_notified&#39; argument instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pipelinechannel_csharp">
 <a href="#pipelinechannel_csharp" style="color: inherit; text-decoration: inherit;">Pipeline<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive pipeline events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pipelineevents_csharp">
 <a href="#pipelineevents_csharp" style="color: inherit; text-decoration: inherit;">Pipeline<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for pipeline events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pushchannel_csharp">
 <a href="#pushchannel_csharp" style="color: inherit; text-decoration: inherit;">Push<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive push events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pushevents_csharp">
 <a href="#pushevents_csharp" style="color: inherit; text-decoration: inherit;">Push<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for push events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tagpushchannel_csharp">
 <a href="#tagpushchannel_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Push<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive tag push events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tagpushevents_csharp">
 <a href="#tagpushevents_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Push<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for tag push events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username to use.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="wikipagechannel_csharp">
 <a href="#wikipagechannel_csharp" style="color: inherit; text-decoration: inherit;">Wiki<wbr>Page<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive wiki page events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="wikipageevents_csharp">
 <a href="#wikipageevents_csharp" style="color: inherit; text-decoration: inherit;">Wiki<wbr>Page<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for wiki page events.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -458,258 +433,234 @@ The ServiceSlack resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project you want to activate integration on.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="webhook_go">
 <a href="#webhook_go" style="color: inherit; text-decoration: inherit;">Webhook</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Webhook URL (ex.: https://hooks.slack.com/services/...)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="branchestobenotified_go">
 <a href="#branchestobenotified_go" style="color: inherit; text-decoration: inherit;">Branches<wbr>To<wbr>Be<wbr>Notified</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Branches to send notifications for. Valid options are "all", "default", "protected", and "default_and_protected".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="confidentialissuechannel_go">
 <a href="#confidentialissuechannel_go" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Issue<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive confidential issue events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="confidentialissuesevents_go">
 <a href="#confidentialissuesevents_go" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Issues<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for confidential issues events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="confidentialnoteevents_go">
 <a href="#confidentialnoteevents_go" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Note<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for confidential note events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="issuechannel_go">
 <a href="#issuechannel_go" style="color: inherit; text-decoration: inherit;">Issue<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive issue events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="issuesevents_go">
 <a href="#issuesevents_go" style="color: inherit; text-decoration: inherit;">Issues<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for issues events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mergerequestchannel_go">
 <a href="#mergerequestchannel_go" style="color: inherit; text-decoration: inherit;">Merge<wbr>Request<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive merge request events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mergerequestsevents_go">
 <a href="#mergerequestsevents_go" style="color: inherit; text-decoration: inherit;">Merge<wbr>Requests<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for merge requests events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notechannel_go">
 <a href="#notechannel_go" style="color: inherit; text-decoration: inherit;">Note<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive note events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="noteevents_go">
 <a href="#noteevents_go" style="color: inherit; text-decoration: inherit;">Note<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for note events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notifyonlybrokenpipelines_go">
 <a href="#notifyonlybrokenpipelines_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Only<wbr>Broken<wbr>Pipelines</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Send notifications for broken pipelines.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="notifyonlydefaultbranch_go">
 <a href="#notifyonlydefaultbranch_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Only<wbr>Default<wbr>Branch</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}DEPRECATED: This parameter has been replaced with `branches_to_be_notified`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;branches_to_be_notified&#39; argument instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pipelinechannel_go">
 <a href="#pipelinechannel_go" style="color: inherit; text-decoration: inherit;">Pipeline<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive pipeline events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pipelineevents_go">
 <a href="#pipelineevents_go" style="color: inherit; text-decoration: inherit;">Pipeline<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for pipeline events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pushchannel_go">
 <a href="#pushchannel_go" style="color: inherit; text-decoration: inherit;">Push<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive push events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pushevents_go">
 <a href="#pushevents_go" style="color: inherit; text-decoration: inherit;">Push<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for push events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tagpushchannel_go">
 <a href="#tagpushchannel_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Push<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive tag push events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tagpushevents_go">
 <a href="#tagpushevents_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Push<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for tag push events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username to use.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="wikipagechannel_go">
 <a href="#wikipagechannel_go" style="color: inherit; text-decoration: inherit;">Wiki<wbr>Page<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive wiki page events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="wikipageevents_go">
 <a href="#wikipageevents_go" style="color: inherit; text-decoration: inherit;">Wiki<wbr>Page<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for wiki page events.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -718,258 +669,234 @@ The ServiceSlack resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project you want to activate integration on.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="webhook_nodejs">
 <a href="#webhook_nodejs" style="color: inherit; text-decoration: inherit;">webhook</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Webhook URL (ex.: https://hooks.slack.com/services/...)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="branchestobenotified_nodejs">
 <a href="#branchestobenotified_nodejs" style="color: inherit; text-decoration: inherit;">branches<wbr>To<wbr>Be<wbr>Notified</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Branches to send notifications for. Valid options are "all", "default", "protected", and "default_and_protected".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="confidentialissuechannel_nodejs">
 <a href="#confidentialissuechannel_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Issue<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive confidential issue events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="confidentialissuesevents_nodejs">
 <a href="#confidentialissuesevents_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Issues<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable notifications for confidential issues events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="confidentialnoteevents_nodejs">
 <a href="#confidentialnoteevents_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Note<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable notifications for confidential note events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="issuechannel_nodejs">
 <a href="#issuechannel_nodejs" style="color: inherit; text-decoration: inherit;">issue<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive issue events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="issuesevents_nodejs">
 <a href="#issuesevents_nodejs" style="color: inherit; text-decoration: inherit;">issues<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable notifications for issues events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mergerequestchannel_nodejs">
 <a href="#mergerequestchannel_nodejs" style="color: inherit; text-decoration: inherit;">merge<wbr>Request<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive merge request events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mergerequestsevents_nodejs">
 <a href="#mergerequestsevents_nodejs" style="color: inherit; text-decoration: inherit;">merge<wbr>Requests<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable notifications for merge requests events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notechannel_nodejs">
 <a href="#notechannel_nodejs" style="color: inherit; text-decoration: inherit;">note<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive note events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="noteevents_nodejs">
 <a href="#noteevents_nodejs" style="color: inherit; text-decoration: inherit;">note<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable notifications for note events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notifyonlybrokenpipelines_nodejs">
 <a href="#notifyonlybrokenpipelines_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Only<wbr>Broken<wbr>Pipelines</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Send notifications for broken pipelines.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="notifyonlydefaultbranch_nodejs">
 <a href="#notifyonlydefaultbranch_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Only<wbr>Default<wbr>Branch</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}DEPRECATED: This parameter has been replaced with `branches_to_be_notified`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;branches_to_be_notified&#39; argument instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pipelinechannel_nodejs">
 <a href="#pipelinechannel_nodejs" style="color: inherit; text-decoration: inherit;">pipeline<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive pipeline events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pipelineevents_nodejs">
 <a href="#pipelineevents_nodejs" style="color: inherit; text-decoration: inherit;">pipeline<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable notifications for pipeline events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pushchannel_nodejs">
 <a href="#pushchannel_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive push events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pushevents_nodejs">
 <a href="#pushevents_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable notifications for push events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tagpushchannel_nodejs">
 <a href="#tagpushchannel_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Push<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive tag push events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tagpushevents_nodejs">
 <a href="#tagpushevents_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Push<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable notifications for tag push events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username to use.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="wikipagechannel_nodejs">
 <a href="#wikipagechannel_nodejs" style="color: inherit; text-decoration: inherit;">wiki<wbr>Page<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive wiki page events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="wikipageevents_nodejs">
 <a href="#wikipageevents_nodejs" style="color: inherit; text-decoration: inherit;">wiki<wbr>Page<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable notifications for wiki page events.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -978,267 +905,239 @@ The ServiceSlack resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the project you want to activate integration on.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="webhook_python">
 <a href="#webhook_python" style="color: inherit; text-decoration: inherit;">webhook</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Webhook URL (ex.: https://hooks.slack.com/services/...)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="branches_to_be_notified_python">
 <a href="#branches_to_be_notified_python" style="color: inherit; text-decoration: inherit;">branches_<wbr>to_<wbr>be_<wbr>notified</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Branches to send notifications for. Valid options are "all", "default", "protected", and "default_and_protected".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="confidential_issue_channel_python">
 <a href="#confidential_issue_channel_python" style="color: inherit; text-decoration: inherit;">confidential_<wbr>issue_<wbr>channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive confidential issue events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="confidential_issues_events_python">
 <a href="#confidential_issues_events_python" style="color: inherit; text-decoration: inherit;">confidential_<wbr>issues_<wbr>events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for confidential issues events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="confidential_note_events_python">
 <a href="#confidential_note_events_python" style="color: inherit; text-decoration: inherit;">confidential_<wbr>note_<wbr>events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for confidential note events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="issue_channel_python">
 <a href="#issue_channel_python" style="color: inherit; text-decoration: inherit;">issue_<wbr>channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive issue events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="issues_events_python">
 <a href="#issues_events_python" style="color: inherit; text-decoration: inherit;">issues_<wbr>events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for issues events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="merge_request_channel_python">
 <a href="#merge_request_channel_python" style="color: inherit; text-decoration: inherit;">merge_<wbr>request_<wbr>channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive merge request events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="merge_requests_events_python">
 <a href="#merge_requests_events_python" style="color: inherit; text-decoration: inherit;">merge_<wbr>requests_<wbr>events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for merge requests events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="note_channel_python">
 <a href="#note_channel_python" style="color: inherit; text-decoration: inherit;">note_<wbr>channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive note events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="note_events_python">
 <a href="#note_events_python" style="color: inherit; text-decoration: inherit;">note_<wbr>events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for note events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notify_only_broken_pipelines_python">
 <a href="#notify_only_broken_pipelines_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>only_<wbr>broken_<wbr>pipelines</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Send notifications for broken pipelines.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="notify_only_default_branch_python">
 <a href="#notify_only_default_branch_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>only_<wbr>default_<wbr>branch</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}DEPRECATED: This parameter has been replaced with `branches_to_be_notified`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;branches_to_be_notified&#39; argument instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pipeline_channel_python">
 <a href="#pipeline_channel_python" style="color: inherit; text-decoration: inherit;">pipeline_<wbr>channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive pipeline events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pipeline_events_python">
 <a href="#pipeline_events_python" style="color: inherit; text-decoration: inherit;">pipeline_<wbr>events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for pipeline events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="push_channel_python">
 <a href="#push_channel_python" style="color: inherit; text-decoration: inherit;">push_<wbr>channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive push events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="push_events_python">
 <a href="#push_events_python" style="color: inherit; text-decoration: inherit;">push_<wbr>events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for push events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tag_push_channel_python">
 <a href="#tag_push_channel_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>push_<wbr>channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive tag push events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tag_push_events_python">
 <a href="#tag_push_events_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>push_<wbr>events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for tag push events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username to use.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="wiki_page_channel_python">
 <a href="#wiki_page_channel_python" style="color: inherit; text-decoration: inherit;">wiki_<wbr>page_<wbr>channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive wiki page events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="wiki_page_events_python">
 <a href="#wiki_page_events_python" style="color: inherit; text-decoration: inherit;">wiki_<wbr>page_<wbr>events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for wiki page events.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the ServiceSlack resource produces the following output properties:
-
 
 
 
@@ -1249,25 +1148,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="jobevents_csharp">
 <a href="#jobevents_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1276,25 +1172,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="jobevents_go">
 <a href="#jobevents_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1303,25 +1196,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="jobevents_nodejs">
 <a href="#jobevents_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1330,28 +1220,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="job_events_python">
 <a href="#job_events_python" style="color: inherit; text-decoration: inherit;">job_<wbr>events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1361,7 +1245,7 @@ Get an existing ServiceSlack resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#ServiceSlackState">ServiceSlackState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#ServiceSlack">ServiceSlack</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#ServiceSlackState">ServiceSlackState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#ServiceSlack">ServiceSlack</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1370,11 +1254,11 @@ Get an existing ServiceSlack resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServiceSlack<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#ServiceSlackState">ServiceSlackState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#ServiceSlack">ServiceSlack</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServiceSlack<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#ServiceSlackState">ServiceSlackState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#ServiceSlack">ServiceSlack</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.ServiceSlack.html">ServiceSlack</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab..ServiceSlackState.html">ServiceSlackState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.ServiceSlack.html">ServiceSlack</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab..ServiceSlackState.html">ServiceSlackState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1476,7 +1360,6 @@ Get an existing ServiceSlack resource's state with the given name, ID, and optio
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1484,268 +1367,243 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_branchestobenotified_csharp">
 <a href="#state_branchestobenotified_csharp" style="color: inherit; text-decoration: inherit;">Branches<wbr>To<wbr>Be<wbr>Notified</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Branches to send notifications for. Valid options are "all", "default", "protected", and "default_and_protected".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_confidentialissuechannel_csharp">
 <a href="#state_confidentialissuechannel_csharp" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Issue<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive confidential issue events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_confidentialissuesevents_csharp">
 <a href="#state_confidentialissuesevents_csharp" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Issues<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for confidential issues events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_confidentialnoteevents_csharp">
 <a href="#state_confidentialnoteevents_csharp" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Note<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for confidential note events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_issuechannel_csharp">
 <a href="#state_issuechannel_csharp" style="color: inherit; text-decoration: inherit;">Issue<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive issue events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_issuesevents_csharp">
 <a href="#state_issuesevents_csharp" style="color: inherit; text-decoration: inherit;">Issues<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for issues events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_jobevents_csharp">
 <a href="#state_jobevents_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mergerequestchannel_csharp">
 <a href="#state_mergerequestchannel_csharp" style="color: inherit; text-decoration: inherit;">Merge<wbr>Request<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive merge request events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mergerequestsevents_csharp">
 <a href="#state_mergerequestsevents_csharp" style="color: inherit; text-decoration: inherit;">Merge<wbr>Requests<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for merge requests events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_notechannel_csharp">
 <a href="#state_notechannel_csharp" style="color: inherit; text-decoration: inherit;">Note<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive note events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_noteevents_csharp">
 <a href="#state_noteevents_csharp" style="color: inherit; text-decoration: inherit;">Note<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for note events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_notifyonlybrokenpipelines_csharp">
 <a href="#state_notifyonlybrokenpipelines_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Only<wbr>Broken<wbr>Pipelines</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Send notifications for broken pipelines.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_notifyonlydefaultbranch_csharp">
 <a href="#state_notifyonlydefaultbranch_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Only<wbr>Default<wbr>Branch</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}DEPRECATED: This parameter has been replaced with `branches_to_be_notified`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;branches_to_be_notified&#39; argument instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pipelinechannel_csharp">
 <a href="#state_pipelinechannel_csharp" style="color: inherit; text-decoration: inherit;">Pipeline<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive pipeline events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pipelineevents_csharp">
 <a href="#state_pipelineevents_csharp" style="color: inherit; text-decoration: inherit;">Pipeline<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for pipeline events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project you want to activate integration on.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pushchannel_csharp">
 <a href="#state_pushchannel_csharp" style="color: inherit; text-decoration: inherit;">Push<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive push events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pushevents_csharp">
 <a href="#state_pushevents_csharp" style="color: inherit; text-decoration: inherit;">Push<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for push events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tagpushchannel_csharp">
 <a href="#state_tagpushchannel_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Push<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive tag push events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tagpushevents_csharp">
 <a href="#state_tagpushevents_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Push<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for tag push events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_username_csharp">
 <a href="#state_username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username to use.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_webhook_csharp">
 <a href="#state_webhook_csharp" style="color: inherit; text-decoration: inherit;">Webhook</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Webhook URL (ex.: https://hooks.slack.com/services/...)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_wikipagechannel_csharp">
 <a href="#state_wikipagechannel_csharp" style="color: inherit; text-decoration: inherit;">Wiki<wbr>Page<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive wiki page events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_wikipageevents_csharp">
 <a href="#state_wikipageevents_csharp" style="color: inherit; text-decoration: inherit;">Wiki<wbr>Page<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for wiki page events.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1754,268 +1612,243 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_branchestobenotified_go">
 <a href="#state_branchestobenotified_go" style="color: inherit; text-decoration: inherit;">Branches<wbr>To<wbr>Be<wbr>Notified</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Branches to send notifications for. Valid options are "all", "default", "protected", and "default_and_protected".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_confidentialissuechannel_go">
 <a href="#state_confidentialissuechannel_go" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Issue<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive confidential issue events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_confidentialissuesevents_go">
 <a href="#state_confidentialissuesevents_go" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Issues<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for confidential issues events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_confidentialnoteevents_go">
 <a href="#state_confidentialnoteevents_go" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Note<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for confidential note events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_issuechannel_go">
 <a href="#state_issuechannel_go" style="color: inherit; text-decoration: inherit;">Issue<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive issue events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_issuesevents_go">
 <a href="#state_issuesevents_go" style="color: inherit; text-decoration: inherit;">Issues<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for issues events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_jobevents_go">
 <a href="#state_jobevents_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mergerequestchannel_go">
 <a href="#state_mergerequestchannel_go" style="color: inherit; text-decoration: inherit;">Merge<wbr>Request<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive merge request events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mergerequestsevents_go">
 <a href="#state_mergerequestsevents_go" style="color: inherit; text-decoration: inherit;">Merge<wbr>Requests<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for merge requests events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_notechannel_go">
 <a href="#state_notechannel_go" style="color: inherit; text-decoration: inherit;">Note<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive note events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_noteevents_go">
 <a href="#state_noteevents_go" style="color: inherit; text-decoration: inherit;">Note<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for note events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_notifyonlybrokenpipelines_go">
 <a href="#state_notifyonlybrokenpipelines_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Only<wbr>Broken<wbr>Pipelines</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Send notifications for broken pipelines.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_notifyonlydefaultbranch_go">
 <a href="#state_notifyonlydefaultbranch_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Only<wbr>Default<wbr>Branch</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}DEPRECATED: This parameter has been replaced with `branches_to_be_notified`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;branches_to_be_notified&#39; argument instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pipelinechannel_go">
 <a href="#state_pipelinechannel_go" style="color: inherit; text-decoration: inherit;">Pipeline<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive pipeline events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pipelineevents_go">
 <a href="#state_pipelineevents_go" style="color: inherit; text-decoration: inherit;">Pipeline<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for pipeline events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project you want to activate integration on.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pushchannel_go">
 <a href="#state_pushchannel_go" style="color: inherit; text-decoration: inherit;">Push<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive push events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pushevents_go">
 <a href="#state_pushevents_go" style="color: inherit; text-decoration: inherit;">Push<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for push events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tagpushchannel_go">
 <a href="#state_tagpushchannel_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Push<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive tag push events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tagpushevents_go">
 <a href="#state_tagpushevents_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Push<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for tag push events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_username_go">
 <a href="#state_username_go" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username to use.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_webhook_go">
 <a href="#state_webhook_go" style="color: inherit; text-decoration: inherit;">Webhook</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Webhook URL (ex.: https://hooks.slack.com/services/...)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_wikipagechannel_go">
 <a href="#state_wikipagechannel_go" style="color: inherit; text-decoration: inherit;">Wiki<wbr>Page<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive wiki page events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_wikipageevents_go">
 <a href="#state_wikipageevents_go" style="color: inherit; text-decoration: inherit;">Wiki<wbr>Page<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for wiki page events.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2024,268 +1857,243 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_branchestobenotified_nodejs">
 <a href="#state_branchestobenotified_nodejs" style="color: inherit; text-decoration: inherit;">branches<wbr>To<wbr>Be<wbr>Notified</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Branches to send notifications for. Valid options are "all", "default", "protected", and "default_and_protected".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_confidentialissuechannel_nodejs">
 <a href="#state_confidentialissuechannel_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Issue<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive confidential issue events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_confidentialissuesevents_nodejs">
 <a href="#state_confidentialissuesevents_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Issues<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable notifications for confidential issues events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_confidentialnoteevents_nodejs">
 <a href="#state_confidentialnoteevents_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Note<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable notifications for confidential note events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_issuechannel_nodejs">
 <a href="#state_issuechannel_nodejs" style="color: inherit; text-decoration: inherit;">issue<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive issue events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_issuesevents_nodejs">
 <a href="#state_issuesevents_nodejs" style="color: inherit; text-decoration: inherit;">issues<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable notifications for issues events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_jobevents_nodejs">
 <a href="#state_jobevents_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mergerequestchannel_nodejs">
 <a href="#state_mergerequestchannel_nodejs" style="color: inherit; text-decoration: inherit;">merge<wbr>Request<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive merge request events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mergerequestsevents_nodejs">
 <a href="#state_mergerequestsevents_nodejs" style="color: inherit; text-decoration: inherit;">merge<wbr>Requests<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable notifications for merge requests events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_notechannel_nodejs">
 <a href="#state_notechannel_nodejs" style="color: inherit; text-decoration: inherit;">note<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive note events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_noteevents_nodejs">
 <a href="#state_noteevents_nodejs" style="color: inherit; text-decoration: inherit;">note<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable notifications for note events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_notifyonlybrokenpipelines_nodejs">
 <a href="#state_notifyonlybrokenpipelines_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Only<wbr>Broken<wbr>Pipelines</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Send notifications for broken pipelines.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_notifyonlydefaultbranch_nodejs">
 <a href="#state_notifyonlydefaultbranch_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Only<wbr>Default<wbr>Branch</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}DEPRECATED: This parameter has been replaced with `branches_to_be_notified`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;branches_to_be_notified&#39; argument instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pipelinechannel_nodejs">
 <a href="#state_pipelinechannel_nodejs" style="color: inherit; text-decoration: inherit;">pipeline<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive pipeline events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pipelineevents_nodejs">
 <a href="#state_pipelineevents_nodejs" style="color: inherit; text-decoration: inherit;">pipeline<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable notifications for pipeline events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project you want to activate integration on.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pushchannel_nodejs">
 <a href="#state_pushchannel_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive push events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pushevents_nodejs">
 <a href="#state_pushevents_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable notifications for push events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tagpushchannel_nodejs">
 <a href="#state_tagpushchannel_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Push<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive tag push events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tagpushevents_nodejs">
 <a href="#state_tagpushevents_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Push<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable notifications for tag push events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_username_nodejs">
 <a href="#state_username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username to use.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_webhook_nodejs">
 <a href="#state_webhook_nodejs" style="color: inherit; text-decoration: inherit;">webhook</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Webhook URL (ex.: https://hooks.slack.com/services/...)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_wikipagechannel_nodejs">
 <a href="#state_wikipagechannel_nodejs" style="color: inherit; text-decoration: inherit;">wiki<wbr>Page<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive wiki page events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_wikipageevents_nodejs">
 <a href="#state_wikipageevents_nodejs" style="color: inherit; text-decoration: inherit;">wiki<wbr>Page<wbr>Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable notifications for wiki page events.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2294,273 +2102,243 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_branches_to_be_notified_python">
 <a href="#state_branches_to_be_notified_python" style="color: inherit; text-decoration: inherit;">branches_<wbr>to_<wbr>be_<wbr>notified</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Branches to send notifications for. Valid options are "all", "default", "protected", and "default_and_protected".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_confidential_issue_channel_python">
 <a href="#state_confidential_issue_channel_python" style="color: inherit; text-decoration: inherit;">confidential_<wbr>issue_<wbr>channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive confidential issue events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_confidential_issues_events_python">
 <a href="#state_confidential_issues_events_python" style="color: inherit; text-decoration: inherit;">confidential_<wbr>issues_<wbr>events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for confidential issues events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_confidential_note_events_python">
 <a href="#state_confidential_note_events_python" style="color: inherit; text-decoration: inherit;">confidential_<wbr>note_<wbr>events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for confidential note events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_issue_channel_python">
 <a href="#state_issue_channel_python" style="color: inherit; text-decoration: inherit;">issue_<wbr>channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive issue events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_issues_events_python">
 <a href="#state_issues_events_python" style="color: inherit; text-decoration: inherit;">issues_<wbr>events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for issues events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_job_events_python">
 <a href="#state_job_events_python" style="color: inherit; text-decoration: inherit;">job_<wbr>events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_merge_request_channel_python">
 <a href="#state_merge_request_channel_python" style="color: inherit; text-decoration: inherit;">merge_<wbr>request_<wbr>channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive merge request events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_merge_requests_events_python">
 <a href="#state_merge_requests_events_python" style="color: inherit; text-decoration: inherit;">merge_<wbr>requests_<wbr>events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for merge requests events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_note_channel_python">
 <a href="#state_note_channel_python" style="color: inherit; text-decoration: inherit;">note_<wbr>channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive note events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_note_events_python">
 <a href="#state_note_events_python" style="color: inherit; text-decoration: inherit;">note_<wbr>events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for note events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_notify_only_broken_pipelines_python">
 <a href="#state_notify_only_broken_pipelines_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>only_<wbr>broken_<wbr>pipelines</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Send notifications for broken pipelines.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_notify_only_default_branch_python">
 <a href="#state_notify_only_default_branch_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>only_<wbr>default_<wbr>branch</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}DEPRECATED: This parameter has been replaced with `branches_to_be_notified`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;branches_to_be_notified&#39; argument instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pipeline_channel_python">
 <a href="#state_pipeline_channel_python" style="color: inherit; text-decoration: inherit;">pipeline_<wbr>channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive pipeline events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pipeline_events_python">
 <a href="#state_pipeline_events_python" style="color: inherit; text-decoration: inherit;">pipeline_<wbr>events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for pipeline events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the project you want to activate integration on.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_push_channel_python">
 <a href="#state_push_channel_python" style="color: inherit; text-decoration: inherit;">push_<wbr>channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive push events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_push_events_python">
 <a href="#state_push_events_python" style="color: inherit; text-decoration: inherit;">push_<wbr>events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for push events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tag_push_channel_python">
 <a href="#state_tag_push_channel_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>push_<wbr>channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive tag push events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tag_push_events_python">
 <a href="#state_tag_push_events_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>push_<wbr>events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for tag push events.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_username_python">
 <a href="#state_username_python" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username to use.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_webhook_python">
 <a href="#state_webhook_python" style="color: inherit; text-decoration: inherit;">webhook</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Webhook URL (ex.: https://hooks.slack.com/services/...)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_wiki_page_channel_python">
 <a href="#state_wiki_page_channel_python" style="color: inherit; text-decoration: inherit;">wiki_<wbr>page_<wbr>channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the channel to receive wiki page events notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_wiki_page_events_python">
 <a href="#state_wiki_page_events_python" style="color: inherit; text-decoration: inherit;">wiki_<wbr>page_<wbr>events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for wiki page events.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
 
 
 

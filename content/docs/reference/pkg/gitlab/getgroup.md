@@ -125,7 +125,6 @@ const foo = pulumi.output(gitlab.getGroup({
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -133,27 +132,24 @@ The following arguments are supported:
             title="Optional">
         <span id="fullpath_csharp">
 <a href="#fullpath_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full path of the group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupid_csharp">
 <a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -162,27 +158,24 @@ The following arguments are supported:
             title="Optional">
         <span id="fullpath_go">
 <a href="#fullpath_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full path of the group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupid_go">
 <a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -191,27 +184,24 @@ The following arguments are supported:
             title="Optional">
         <span id="fullpath_nodejs">
 <a href="#fullpath_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full path of the group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupid_nodejs">
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -220,30 +210,24 @@ The following arguments are supported:
             title="Optional">
         <span id="full_path_python">
 <a href="#full_path_python" style="color: inherit; text-decoration: inherit;">full_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full path of the group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="group_id_python">
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -254,7 +238,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -262,147 +245,133 @@ The following output properties are available:
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="fullname_csharp">
 <a href="#fullname_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full name of the group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="fullpath_csharp">
 <a href="#fullpath_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full path of the group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="groupid_csharp">
 <a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lfsenabled_csharp">
 <a href="#lfsenabled_csharp" style="color: inherit; text-decoration: inherit;">Lfs<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, is LFS enabled for projects in this group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="parentid_csharp">
 <a href="#parentid_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Integer, ID of the parent group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="requestaccessenabled_csharp">
 <a href="#requestaccessenabled_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Access<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, is request for access enabled to the group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="runnerstoken_csharp">
 <a href="#runnerstoken_csharp" style="color: inherit; text-decoration: inherit;">Runners<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The group level registration token to use during runner setup.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="visibilitylevel_csharp">
 <a href="#visibilitylevel_csharp" style="color: inherit; text-decoration: inherit;">Visibility<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Visibility level of the group. Possible values are `private`, `internal`, `public`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="weburl_csharp">
 <a href="#weburl_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Web URL of the group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -411,147 +380,133 @@ The following output properties are available:
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="fullname_go">
 <a href="#fullname_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full name of the group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="fullpath_go">
 <a href="#fullpath_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full path of the group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="groupid_go">
 <a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lfsenabled_go">
 <a href="#lfsenabled_go" style="color: inherit; text-decoration: inherit;">Lfs<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, is LFS enabled for projects in this group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="parentid_go">
 <a href="#parentid_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Integer, ID of the parent group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="requestaccessenabled_go">
 <a href="#requestaccessenabled_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Access<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, is request for access enabled to the group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="runnerstoken_go">
 <a href="#runnerstoken_go" style="color: inherit; text-decoration: inherit;">Runners<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The group level registration token to use during runner setup.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="visibilitylevel_go">
 <a href="#visibilitylevel_go" style="color: inherit; text-decoration: inherit;">Visibility<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Visibility level of the group. Possible values are `private`, `internal`, `public`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="weburl_go">
 <a href="#weburl_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Web URL of the group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -560,147 +515,133 @@ The following output properties are available:
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="fullname_nodejs">
 <a href="#fullname_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full name of the group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="fullpath_nodejs">
 <a href="#fullpath_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full path of the group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="groupid_nodejs">
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lfsenabled_nodejs">
 <a href="#lfsenabled_nodejs" style="color: inherit; text-decoration: inherit;">lfs<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean, is LFS enabled for projects in this group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="parentid_nodejs">
 <a href="#parentid_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Integer, ID of the parent group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="requestaccessenabled_nodejs">
 <a href="#requestaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Access<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean, is request for access enabled to the group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="runnerstoken_nodejs">
 <a href="#runnerstoken_nodejs" style="color: inherit; text-decoration: inherit;">runners<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The group level registration token to use during runner setup.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="visibilitylevel_nodejs">
 <a href="#visibilitylevel_nodejs" style="color: inherit; text-decoration: inherit;">visibility<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Visibility level of the group. Possible values are `private`, `internal`, `public`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="weburl_nodejs">
 <a href="#weburl_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Web URL of the group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -709,150 +650,133 @@ The following output properties are available:
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="full_name_python">
 <a href="#full_name_python" style="color: inherit; text-decoration: inherit;">full_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full name of the group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="full_path_python">
 <a href="#full_path_python" style="color: inherit; text-decoration: inherit;">full_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full path of the group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="group_id_python">
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lfs_enabled_python">
 <a href="#lfs_enabled_python" style="color: inherit; text-decoration: inherit;">lfs_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, is LFS enabled for projects in this group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of this group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="parent_id_python">
 <a href="#parent_id_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Integer, ID of the parent group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path of the group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="request_access_enabled_python">
 <a href="#request_access_enabled_python" style="color: inherit; text-decoration: inherit;">request_<wbr>access_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, is request for access enabled to the group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="runners_token_python">
 <a href="#runners_token_python" style="color: inherit; text-decoration: inherit;">runners_<wbr>token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The group level registration token to use during runner setup.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="visibility_level_python">
 <a href="#visibility_level_python" style="color: inherit; text-decoration: inherit;">visibility_<wbr>level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Visibility level of the group. Possible values are `private`, `internal`, `public`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="web_url_python">
 <a href="#web_url_python" style="color: inherit; text-decoration: inherit;">web_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Web URL of the group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

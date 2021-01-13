@@ -125,7 +125,6 @@ const example = pulumi.output(gitlab.getUser({
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -133,38 +132,34 @@ The following arguments are supported:
             title="Optional">
         <span id="email_csharp">
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The e-mail address of the user. (Requires administrator privileges)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userid_csharp">
 <a href="#userid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the user.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of the user.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -173,38 +168,34 @@ The following arguments are supported:
             title="Optional">
         <span id="email_go">
 <a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The e-mail address of the user. (Requires administrator privileges)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userid_go">
 <a href="#userid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the user.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of the user.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -213,38 +204,34 @@ The following arguments are supported:
             title="Optional">
         <span id="email_nodejs">
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The e-mail address of the user. (Requires administrator privileges)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userid_nodejs">
 <a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the user.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of the user.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -253,41 +240,34 @@ The following arguments are supported:
             title="Optional">
         <span id="email_python">
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The e-mail address of the user. (Requires administrator privileges)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="user_id_python">
 <a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the user.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username of the user.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -298,7 +278,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -306,301 +285,273 @@ The following output properties are available:
             title="">
         <span id="avatarurl_csharp">
 <a href="#avatarurl_csharp" style="color: inherit; text-decoration: inherit;">Avatar<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The avatar URL of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="bio_csharp">
 <a href="#bio_csharp" style="color: inherit; text-decoration: inherit;">Bio</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bio of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="cancreategroup_csharp">
 <a href="#cancreategroup_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Create<wbr>Group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the user can create groups.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="cancreateproject_csharp">
 <a href="#cancreateproject_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Create<wbr>Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the user can create projects.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="colorschemeid_csharp">
 <a href="#colorschemeid_csharp" style="color: inherit; text-decoration: inherit;">Color<wbr>Scheme<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}User's color scheme ID.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the user was created at.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="currentsigninat_csharp">
 <a href="#currentsigninat_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Sign<wbr>In<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current user's sign-in date.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="email_csharp">
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The e-mail address of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="externuid_csharp">
 <a href="#externuid_csharp" style="color: inherit; text-decoration: inherit;">Extern<wbr>Uid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external UID of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="external_csharp">
 <a href="#external_csharp" style="color: inherit; text-decoration: inherit;">External</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the user is external.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="isadmin_csharp">
 <a href="#isadmin_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Admin</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the user is an admin.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastsigninat_csharp">
 <a href="#lastsigninat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Sign<wbr>In<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last user's sign-in date.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="linkedin_csharp">
 <a href="#linkedin_csharp" style="color: inherit; text-decoration: inherit;">Linkedin</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Linkedin profile of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="organization_csharp">
 <a href="#organization_csharp" style="color: inherit; text-decoration: inherit;">Organization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="projectslimit_csharp">
 <a href="#projectslimit_csharp" style="color: inherit; text-decoration: inherit;">Projects<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of projects the user can create.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="skype_csharp">
 <a href="#skype_csharp" style="color: inherit; text-decoration: inherit;">Skype</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Skype username of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the user is active or blocked.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="themeid_csharp">
 <a href="#themeid_csharp" style="color: inherit; text-decoration: inherit;">Theme<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}User's theme ID.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="twitter_csharp">
 <a href="#twitter_csharp" style="color: inherit; text-decoration: inherit;">Twitter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Twitter username of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="twofactorenabled_csharp">
 <a href="#twofactorenabled_csharp" style="color: inherit; text-decoration: inherit;">Two<wbr>Factor<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether user's two factor auth is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="userid_csharp">
 <a href="#userid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="userprovider_csharp">
 <a href="#userprovider_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Provider</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UID provider of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="websiteurl_csharp">
 <a href="#websiteurl_csharp" style="color: inherit; text-decoration: inherit;">Website<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User's website URL.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -609,301 +560,273 @@ The following output properties are available:
             title="">
         <span id="avatarurl_go">
 <a href="#avatarurl_go" style="color: inherit; text-decoration: inherit;">Avatar<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The avatar URL of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="bio_go">
 <a href="#bio_go" style="color: inherit; text-decoration: inherit;">Bio</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bio of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="cancreategroup_go">
 <a href="#cancreategroup_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Create<wbr>Group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the user can create groups.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="cancreateproject_go">
 <a href="#cancreateproject_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Create<wbr>Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the user can create projects.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="colorschemeid_go">
 <a href="#colorschemeid_go" style="color: inherit; text-decoration: inherit;">Color<wbr>Scheme<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}User's color scheme ID.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the user was created at.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="currentsigninat_go">
 <a href="#currentsigninat_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Sign<wbr>In<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current user's sign-in date.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="email_go">
 <a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The e-mail address of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="externuid_go">
 <a href="#externuid_go" style="color: inherit; text-decoration: inherit;">Extern<wbr>Uid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external UID of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="external_go">
 <a href="#external_go" style="color: inherit; text-decoration: inherit;">External</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the user is external.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="isadmin_go">
 <a href="#isadmin_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Admin</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the user is an admin.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastsigninat_go">
 <a href="#lastsigninat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Sign<wbr>In<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last user's sign-in date.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="linkedin_go">
 <a href="#linkedin_go" style="color: inherit; text-decoration: inherit;">Linkedin</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Linkedin profile of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="organization_go">
 <a href="#organization_go" style="color: inherit; text-decoration: inherit;">Organization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="projectslimit_go">
 <a href="#projectslimit_go" style="color: inherit; text-decoration: inherit;">Projects<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of projects the user can create.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="skype_go">
 <a href="#skype_go" style="color: inherit; text-decoration: inherit;">Skype</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Skype username of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the user is active or blocked.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="themeid_go">
 <a href="#themeid_go" style="color: inherit; text-decoration: inherit;">Theme<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}User's theme ID.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="twitter_go">
 <a href="#twitter_go" style="color: inherit; text-decoration: inherit;">Twitter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Twitter username of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="twofactorenabled_go">
 <a href="#twofactorenabled_go" style="color: inherit; text-decoration: inherit;">Two<wbr>Factor<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether user's two factor auth is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="userid_go">
 <a href="#userid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="userprovider_go">
 <a href="#userprovider_go" style="color: inherit; text-decoration: inherit;">User<wbr>Provider</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UID provider of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="websiteurl_go">
 <a href="#websiteurl_go" style="color: inherit; text-decoration: inherit;">Website<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User's website URL.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -912,301 +835,273 @@ The following output properties are available:
             title="">
         <span id="avatarurl_nodejs">
 <a href="#avatarurl_nodejs" style="color: inherit; text-decoration: inherit;">avatar<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The avatar URL of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="bio_nodejs">
 <a href="#bio_nodejs" style="color: inherit; text-decoration: inherit;">bio</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bio of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="cancreategroup_nodejs">
 <a href="#cancreategroup_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Create<wbr>Group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the user can create groups.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="cancreateproject_nodejs">
 <a href="#cancreateproject_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Create<wbr>Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the user can create projects.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="colorschemeid_nodejs">
 <a href="#colorschemeid_nodejs" style="color: inherit; text-decoration: inherit;">color<wbr>Scheme<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}User's color scheme ID.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the user was created at.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="currentsigninat_nodejs">
 <a href="#currentsigninat_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Sign<wbr>In<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current user's sign-in date.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="email_nodejs">
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The e-mail address of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="externuid_nodejs">
 <a href="#externuid_nodejs" style="color: inherit; text-decoration: inherit;">extern<wbr>Uid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external UID of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="external_nodejs">
 <a href="#external_nodejs" style="color: inherit; text-decoration: inherit;">external</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the user is external.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="isadmin_nodejs">
 <a href="#isadmin_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Admin</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the user is an admin.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastsigninat_nodejs">
 <a href="#lastsigninat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Sign<wbr>In<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last user's sign-in date.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="linkedin_nodejs">
 <a href="#linkedin_nodejs" style="color: inherit; text-decoration: inherit;">linkedin</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Linkedin profile of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="organization_nodejs">
 <a href="#organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="projectslimit_nodejs">
 <a href="#projectslimit_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of projects the user can create.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="skype_nodejs">
 <a href="#skype_nodejs" style="color: inherit; text-decoration: inherit;">skype</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Skype username of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the user is active or blocked.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="themeid_nodejs">
 <a href="#themeid_nodejs" style="color: inherit; text-decoration: inherit;">theme<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}User's theme ID.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="twitter_nodejs">
 <a href="#twitter_nodejs" style="color: inherit; text-decoration: inherit;">twitter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Twitter username of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="twofactorenabled_nodejs">
 <a href="#twofactorenabled_nodejs" style="color: inherit; text-decoration: inherit;">two<wbr>Factor<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether user's two factor auth is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="userid_nodejs">
 <a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="userprovider_nodejs">
 <a href="#userprovider_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Provider</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UID provider of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="websiteurl_nodejs">
 <a href="#websiteurl_nodejs" style="color: inherit; text-decoration: inherit;">website<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User's website URL.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1215,304 +1110,273 @@ The following output properties are available:
             title="">
         <span id="avatar_url_python">
 <a href="#avatar_url_python" style="color: inherit; text-decoration: inherit;">avatar_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The avatar URL of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="bio_python">
 <a href="#bio_python" style="color: inherit; text-decoration: inherit;">bio</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bio of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="can_create_group_python">
 <a href="#can_create_group_python" style="color: inherit; text-decoration: inherit;">can_<wbr>create_<wbr>group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the user can create groups.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="can_create_project_python">
 <a href="#can_create_project_python" style="color: inherit; text-decoration: inherit;">can_<wbr>create_<wbr>project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the user can create projects.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="color_scheme_id_python">
 <a href="#color_scheme_id_python" style="color: inherit; text-decoration: inherit;">color_<wbr>scheme_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}User's color scheme ID.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date the user was created at.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="current_sign_in_at_python">
 <a href="#current_sign_in_at_python" style="color: inherit; text-decoration: inherit;">current_<wbr>sign_<wbr>in_<wbr>at</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Current user's sign-in date.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="email_python">
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The e-mail address of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="extern_uid_python">
 <a href="#extern_uid_python" style="color: inherit; text-decoration: inherit;">extern_<wbr>uid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The external UID of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="external_python">
 <a href="#external_python" style="color: inherit; text-decoration: inherit;">external</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the user is external.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="is_admin_python">
 <a href="#is_admin_python" style="color: inherit; text-decoration: inherit;">is_<wbr>admin</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the user is an admin.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="last_sign_in_at_python">
 <a href="#last_sign_in_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>sign_<wbr>in_<wbr>at</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last user's sign-in date.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="linkedin_python">
 <a href="#linkedin_python" style="color: inherit; text-decoration: inherit;">linkedin</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Linkedin profile of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="organization_python">
 <a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The organization of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="projects_limit_python">
 <a href="#projects_limit_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of projects the user can create.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="skype_python">
 <a href="#skype_python" style="color: inherit; text-decoration: inherit;">skype</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Skype username of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether the user is active or blocked.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="theme_id_python">
 <a href="#theme_id_python" style="color: inherit; text-decoration: inherit;">theme_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}User's theme ID.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="twitter_python">
 <a href="#twitter_python" style="color: inherit; text-decoration: inherit;">twitter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Twitter username of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="two_factor_enabled_python">
 <a href="#two_factor_enabled_python" style="color: inherit; text-decoration: inherit;">two_<wbr>factor_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether user's two factor auth is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="user_id_python">
 <a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="user_provider_python">
 <a href="#user_provider_python" style="color: inherit; text-decoration: inherit;">user_<wbr>provider</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UID provider of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username of the user.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="website_url_python">
 <a href="#website_url_python" style="color: inherit; text-decoration: inherit;">website_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User's website URL.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
