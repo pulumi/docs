@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/datadog | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/datadog package."
-git_sha: "ef998ae6bdcf52cb29e9c5575a47a2c4fe3181af"
+git_sha: "1178ac02c525d7fcd31e7632670c3e7603675405"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="apiKey" data-link-title="apiKey">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/ef998ae6bdcf52cb29e9c5575a47a2c4fe3181af/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/1178ac02c525d7fcd31e7632670c3e7603675405/sdk/nodejs/config/vars.ts#L12">
         let <strong>apiKey</strong>
     </a>
 </h3>
@@ -40,7 +40,7 @@ block_external_search_index: true
 (Required unless validate is false) Datadog API key. This can also be set via the DD_API_KEY environment variable.
 
 <h3 class="pdoc-module-header" id="apiUrl" data-link-title="apiUrl">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/ef998ae6bdcf52cb29e9c5575a47a2c4fe3181af/sdk/nodejs/config/vars.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/1178ac02c525d7fcd31e7632670c3e7603675405/sdk/nodejs/config/vars.ts#L18">
         let <strong>apiUrl</strong>
     </a>
 </h3>
@@ -52,7 +52,7 @@ The API Url. This can be also be set via the DD_HOST environment variable. Note 
 if you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
 
 <h3 class="pdoc-module-header" id="appKey" data-link-title="appKey">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/ef998ae6bdcf52cb29e9c5575a47a2c4fe3181af/sdk/nodejs/config/vars.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/1178ac02c525d7fcd31e7632670c3e7603675405/sdk/nodejs/config/vars.ts#L22">
         let <strong>appKey</strong>
     </a>
 </h3>
@@ -62,7 +62,7 @@ if you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
 (Required unless validate is false) Datadog APP key. This can also be set via the DD_APP_KEY environment variable.
 
 <h3 class="pdoc-module-header" id="validate" data-link-title="validate">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/ef998ae6bdcf52cb29e9c5575a47a2c4fe3181af/sdk/nodejs/config/vars.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/1178ac02c525d7fcd31e7632670c3e7603675405/sdk/nodejs/config/vars.ts#L27">
         let <strong>validate</strong>
     </a>
 </h3>
