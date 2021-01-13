@@ -88,7 +88,7 @@ selfip1 = f5bigip.net.SelfIp("selfip1",
     ip="11.1.1.1/24",
     vlan="/Common/internal",
     traffic_group="traffic-group-1",
-    opts=ResourceOptions(depends_on=[bigip_net_vlan["vlan1"]]))
+    opts=pulumi.ResourceOptions(depends_on=[bigip_net_vlan["vlan1"]]))
 ```
 
 {{% /example %}}
