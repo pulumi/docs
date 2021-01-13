@@ -3,7 +3,7 @@ title: "Module types/input"
 title_tag: "Module types/input | Package @pulumi/postgresql | Node.js SDK"
 linktitle: "input"
 meta_desc: "Explore members of the input module in the @pulumi/postgresql package."
-git_sha: "ccb555e8732b260c96a45668785e8df3c3b76bcd"
+git_sha: "56acfa815307606471ca368cae79045366e5602d"
 block_external_search_index: true
 ---
 
@@ -28,31 +28,31 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="ProviderClientcert" data-link-title="ProviderClientcert">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/ccb555e8732b260c96a45668785e8df3c3b76bcd/sdk/nodejs/types/input.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/56acfa815307606471ca368cae79045366e5602d/sdk/nodejs/types/input.ts#L7">
         interface <strong>ProviderClientcert</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ProviderClientcert</span></code></pre>
 <h4 class="pdoc-member-header" id="ProviderClientcert-cert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/ccb555e8732b260c96a45668785e8df3c3b76bcd/sdk/nodejs/types/input.ts#L8">property <b>cert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/56acfa815307606471ca368cae79045366e5602d/sdk/nodejs/types/input.ts#L8">property <b>cert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cert: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderClientcert-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/ccb555e8732b260c96a45668785e8df3c3b76bcd/sdk/nodejs/types/input.ts#L9">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/56acfa815307606471ca368cae79045366e5602d/sdk/nodejs/types/input.ts#L9">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="SchemaPolicy" data-link-title="SchemaPolicy">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/ccb555e8732b260c96a45668785e8df3c3b76bcd/sdk/nodejs/types/input.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/56acfa815307606471ca368cae79045366e5602d/sdk/nodejs/types/input.ts#L12">
         interface <strong>SchemaPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SchemaPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="SchemaPolicy-create">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/ccb555e8732b260c96a45668785e8df3c3b76bcd/sdk/nodejs/types/input.ts#L16">property <b>create</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/56acfa815307606471ca368cae79045366e5602d/sdk/nodejs/types/input.ts#L16">property <b>create</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>create?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -60,7 +60,7 @@ block_external_search_index: true
 Should the specified ROLE have CREATE privileges to the specified SCHEMA.
 
 <h4 class="pdoc-member-header" id="SchemaPolicy-createWithGrant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/ccb555e8732b260c96a45668785e8df3c3b76bcd/sdk/nodejs/types/input.ts#L20">property <b>createWithGrant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/56acfa815307606471ca368cae79045366e5602d/sdk/nodejs/types/input.ts#L20">property <b>createWithGrant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createWithGrant?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -68,7 +68,7 @@ Should the specified ROLE have CREATE privileges to the specified SCHEMA.
 Should the specified ROLE have CREATE privileges to the specified SCHEMA and the ability to GRANT the CREATE privilege to other ROLEs.
 
 <h4 class="pdoc-member-header" id="SchemaPolicy-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/ccb555e8732b260c96a45668785e8df3c3b76bcd/sdk/nodejs/types/input.ts#L24">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/56acfa815307606471ca368cae79045366e5602d/sdk/nodejs/types/input.ts#L24">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -76,7 +76,7 @@ Should the specified ROLE have CREATE privileges to the specified SCHEMA and the
 The ROLE who is receiving the policy.  If this value is empty or not specified it implies the policy is referring to the [`PUBLIC` role](https://www.postgresql.org/docs/current/static/sql-grant.html).
 
 <h4 class="pdoc-member-header" id="SchemaPolicy-usage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/ccb555e8732b260c96a45668785e8df3c3b76bcd/sdk/nodejs/types/input.ts#L28">property <b>usage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/56acfa815307606471ca368cae79045366e5602d/sdk/nodejs/types/input.ts#L28">property <b>usage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -84,7 +84,7 @@ The ROLE who is receiving the policy.  If this value is empty or not specified i
 Should the specified ROLE have USAGE privileges to the specified SCHEMA.
 
 <h4 class="pdoc-member-header" id="SchemaPolicy-usageWithGrant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/ccb555e8732b260c96a45668785e8df3c3b76bcd/sdk/nodejs/types/input.ts#L32">property <b>usageWithGrant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/56acfa815307606471ca368cae79045366e5602d/sdk/nodejs/types/input.ts#L32">property <b>usageWithGrant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usageWithGrant?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
