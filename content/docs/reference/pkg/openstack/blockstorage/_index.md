@@ -38,7 +38,7 @@ Explore the resources and functions of the blockstorage module in the Open Stack
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
 	<dt>Version</dt>
-	<dd>2.10.1</dd>
+	<dd>2.10.2</dd>
 </dl>
 
 
