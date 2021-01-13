@@ -26,7 +26,7 @@ meta_desc: "Explore the PreparedQuery resource of the Consul package, including 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#PreparedQuery">PreparedQuery</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#PreparedQueryArgs">PreparedQueryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#PreparedQuery">PreparedQuery</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#PreparedQueryArgs">PreparedQueryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -34,11 +34,11 @@ meta_desc: "Explore the PreparedQuery resource of the Consul package, including 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#PreparedQuery">NewPreparedQuery</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#PreparedQueryArgs">PreparedQueryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#PreparedQuery">PreparedQuery</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#PreparedQuery">NewPreparedQuery</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#PreparedQueryArgs">PreparedQueryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#PreparedQuery">PreparedQuery</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.PreparedQuery.html">PreparedQuery</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.PreparedQueryArgs.html">PreparedQueryArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.PreparedQuery.html">PreparedQuery</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.PreparedQueryArgs.html">PreparedQueryArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -49,7 +49,7 @@ meta_desc: "Explore the PreparedQuery resource of the Consul package, including 
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -118,7 +118,7 @@ meta_desc: "Explore the PreparedQuery resource of the Consul package, including 
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -157,7 +157,7 @@ meta_desc: "Explore the PreparedQuery resource of the Consul package, including 
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -198,7 +198,6 @@ The PreparedQuery resource accepts the following [input]({{< relref "/docs/intro
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -206,68 +205,63 @@ The PreparedQuery resource accepts the following [input]({{< relref "/docs/intro
             title="Required">
         <span id="service_csharp">
 <a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service to query.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connect_csharp">
 <a href="#connect_csharp" style="color: inherit; text-decoration: inherit;">Connect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true` the prepared query will return connect
 proxy services for a queried service.  Conditions such as `tags` in the
 prepared query will be matched against the proxy service. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datacenter_csharp">
 <a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dns_csharp">
 <a href="#dns_csharp" style="color: inherit; text-decoration: inherit;">Dns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for controlling the DNS response details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="failover_csharp">
 <a href="#failover_csharp" style="color: inherit; text-decoration: inherit;">Failover</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preparedqueryfailover">Prepared<wbr>Query<wbr>Failover<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options for controlling behavior when no healthy
 nodes are available in the local DC.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ignorecheckids_csharp">
 <a href="#ignorecheckids_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Check<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies a list of check IDs that should be
 ignored when filtering unhealthy instances. This is mostly useful in an
@@ -276,39 +270,36 @@ unreliable. Being able to ignore it in centrally-defined queries can be
 simpler than de-registering the check as an interim solution until the check
 can be fixed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the prepared query. Used to identify
 the prepared query during requests. Can be specified as an empty string
 to configure the query as a catch-all.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="near_csharp">
 <a href="#near_csharp" style="color: inherit; text-decoration: inherit;">Near</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allows specifying the name of a node to sort results
 near using Consul's distance sorting and network coordinates. The magic
 `_agent` value can be used to always sort nearest the node servicing the
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nodemeta_csharp">
 <a href="#nodemeta_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -316,24 +307,22 @@ request.
 will be used for filtering the query results to nodes with the given metadata
 values present.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onlypassing_csharp">
 <a href="#onlypassing_csharp" style="color: inherit; text-decoration: inherit;">Only<wbr>Passing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the prepared query will only
 return nodes with passing health checks in the result.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servicemeta_csharp">
 <a href="#servicemeta_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -341,14 +330,13 @@ return nodes with passing health checks in the result.
 that will be used for filtering the query results to services with the given
 metadata values present.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="session_csharp">
 <a href="#session_csharp" style="color: inherit; text-decoration: inherit;">Session</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Consul session to tie this query's
 lifetime to.  This is an advanced parameter that should not be used without a
@@ -356,59 +344,53 @@ complete understanding of Consul sessions and the implications of their use
 (it is recommended to leave this blank in nearly all cases).  If this
 parameter is omitted the query will not expire.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storedtoken_csharp">
 <a href="#storedtoken_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to store with the prepared
 query. This token will be used by default whenever the query is executed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of required and/or disallowed tags.  If a tag is
 in this list it must be present.  If the tag is preceded with a "!" then it is
 disallowed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="template_csharp">
 <a href="#template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preparedquerytemplate">Prepared<wbr>Query<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Query templating options. This is used to make a
 single prepared query respond to many different requests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to use when saving the prepared query.
 This overrides the token that the agent provides by default.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -417,68 +399,63 @@ This overrides the token that the agent provides by default.
             title="Required">
         <span id="service_go">
 <a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service to query.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connect_go">
 <a href="#connect_go" style="color: inherit; text-decoration: inherit;">Connect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true` the prepared query will return connect
 proxy services for a queried service.  Conditions such as `tags` in the
 prepared query will be matched against the proxy service. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datacenter_go">
 <a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dns_go">
 <a href="#dns_go" style="color: inherit; text-decoration: inherit;">Dns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns</a></span>
     </dt>
     <dd>{{% md %}}Settings for controlling the DNS response details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="failover_go">
 <a href="#failover_go" style="color: inherit; text-decoration: inherit;">Failover</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preparedqueryfailover">Prepared<wbr>Query<wbr>Failover</a></span>
     </dt>
     <dd>{{% md %}}Options for controlling behavior when no healthy
 nodes are available in the local DC.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ignorecheckids_go">
 <a href="#ignorecheckids_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Check<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies a list of check IDs that should be
 ignored when filtering unhealthy instances. This is mostly useful in an
@@ -487,39 +464,36 @@ unreliable. Being able to ignore it in centrally-defined queries can be
 simpler than de-registering the check as an interim solution until the check
 can be fixed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the prepared query. Used to identify
 the prepared query during requests. Can be specified as an empty string
 to configure the query as a catch-all.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="near_go">
 <a href="#near_go" style="color: inherit; text-decoration: inherit;">Near</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allows specifying the name of a node to sort results
 near using Consul's distance sorting and network coordinates. The magic
 `_agent` value can be used to always sort nearest the node servicing the
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nodemeta_go">
 <a href="#nodemeta_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -527,24 +501,22 @@ request.
 will be used for filtering the query results to nodes with the given metadata
 values present.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onlypassing_go">
 <a href="#onlypassing_go" style="color: inherit; text-decoration: inherit;">Only<wbr>Passing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the prepared query will only
 return nodes with passing health checks in the result.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servicemeta_go">
 <a href="#servicemeta_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -552,14 +524,13 @@ return nodes with passing health checks in the result.
 that will be used for filtering the query results to services with the given
 metadata values present.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="session_go">
 <a href="#session_go" style="color: inherit; text-decoration: inherit;">Session</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Consul session to tie this query's
 lifetime to.  This is an advanced parameter that should not be used without a
@@ -567,59 +538,53 @@ complete understanding of Consul sessions and the implications of their use
 (it is recommended to leave this blank in nearly all cases).  If this
 parameter is omitted the query will not expire.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storedtoken_go">
 <a href="#storedtoken_go" style="color: inherit; text-decoration: inherit;">Stored<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to store with the prepared
 query. This token will be used by default whenever the query is executed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of required and/or disallowed tags.  If a tag is
 in this list it must be present.  If the tag is preceded with a "!" then it is
 disallowed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="template_go">
 <a href="#template_go" style="color: inherit; text-decoration: inherit;">Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preparedquerytemplate">Prepared<wbr>Query<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Query templating options. This is used to make a
 single prepared query respond to many different requests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to use when saving the prepared query.
 This overrides the token that the agent provides by default.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -628,68 +593,63 @@ This overrides the token that the agent provides by default.
             title="Required">
         <span id="service_nodejs">
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service to query.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connect_nodejs">
 <a href="#connect_nodejs" style="color: inherit; text-decoration: inherit;">connect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true` the prepared query will return connect
 proxy services for a queried service.  Conditions such as `tags` in the
 prepared query will be matched against the proxy service. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datacenter_nodejs">
 <a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dns_nodejs">
 <a href="#dns_nodejs" style="color: inherit; text-decoration: inherit;">dns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns</a></span>
     </dt>
     <dd>{{% md %}}Settings for controlling the DNS response details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="failover_nodejs">
 <a href="#failover_nodejs" style="color: inherit; text-decoration: inherit;">failover</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preparedqueryfailover">Prepared<wbr>Query<wbr>Failover</a></span>
     </dt>
     <dd>{{% md %}}Options for controlling behavior when no healthy
 nodes are available in the local DC.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ignorecheckids_nodejs">
 <a href="#ignorecheckids_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Check<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of check IDs that should be
 ignored when filtering unhealthy instances. This is mostly useful in an
@@ -698,39 +658,36 @@ unreliable. Being able to ignore it in centrally-defined queries can be
 simpler than de-registering the check as an interim solution until the check
 can be fixed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the prepared query. Used to identify
 the prepared query during requests. Can be specified as an empty string
 to configure the query as a catch-all.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="near_nodejs">
 <a href="#near_nodejs" style="color: inherit; text-decoration: inherit;">near</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allows specifying the name of a node to sort results
 near using Consul's distance sorting and network coordinates. The magic
 `_agent` value can be used to always sort nearest the node servicing the
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nodemeta_nodejs">
 <a href="#nodemeta_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -738,24 +695,22 @@ request.
 will be used for filtering the query results to nodes with the given metadata
 values present.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onlypassing_nodejs">
 <a href="#onlypassing_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Passing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, the prepared query will only
 return nodes with passing health checks in the result.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servicemeta_nodejs">
 <a href="#servicemeta_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -763,14 +718,13 @@ return nodes with passing health checks in the result.
 that will be used for filtering the query results to services with the given
 metadata values present.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="session_nodejs">
 <a href="#session_nodejs" style="color: inherit; text-decoration: inherit;">session</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Consul session to tie this query's
 lifetime to.  This is an advanced parameter that should not be used without a
@@ -778,59 +732,53 @@ complete understanding of Consul sessions and the implications of their use
 (it is recommended to leave this blank in nearly all cases).  If this
 parameter is omitted the query will not expire.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storedtoken_nodejs">
 <a href="#storedtoken_nodejs" style="color: inherit; text-decoration: inherit;">stored<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to store with the prepared
 query. This token will be used by default whenever the query is executed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of required and/or disallowed tags.  If a tag is
 in this list it must be present.  If the tag is preceded with a "!" then it is
 disallowed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="template_nodejs">
 <a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preparedquerytemplate">Prepared<wbr>Query<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Query templating options. This is used to make a
 single prepared query respond to many different requests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to use when saving the prepared query.
 This overrides the token that the agent provides by default.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -839,68 +787,63 @@ This overrides the token that the agent provides by default.
             title="Required">
         <span id="service_python">
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the service to query.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connect_python">
 <a href="#connect_python" style="color: inherit; text-decoration: inherit;">connect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true` the prepared query will return connect
 proxy services for a queried service.  Conditions such as `tags` in the
 prepared query will be matched against the proxy service. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datacenter_python">
 <a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dns_python">
 <a href="#dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for controlling the DNS response details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="failover_python">
 <a href="#failover_python" style="color: inherit; text-decoration: inherit;">failover</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preparedqueryfailover">Prepared<wbr>Query<wbr>Failover<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options for controlling behavior when no healthy
 nodes are available in the local DC.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ignore_check_ids_python">
 <a href="#ignore_check_ids_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>check_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of check IDs that should be
 ignored when filtering unhealthy instances. This is mostly useful in an
@@ -909,39 +852,36 @@ unreliable. Being able to ignore it in centrally-defined queries can be
 simpler than de-registering the check as an interim solution until the check
 can be fixed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the prepared query. Used to identify
 the prepared query during requests. Can be specified as an empty string
 to configure the query as a catch-all.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="near_python">
 <a href="#near_python" style="color: inherit; text-decoration: inherit;">near</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Allows specifying the name of a node to sort results
 near using Consul's distance sorting and network coordinates. The magic
 `_agent` value can be used to always sort nearest the node servicing the
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="node_meta_python">
 <a href="#node_meta_python" style="color: inherit; text-decoration: inherit;">node_<wbr>meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
@@ -949,24 +889,22 @@ request.
 will be used for filtering the query results to nodes with the given metadata
 values present.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="only_passing_python">
 <a href="#only_passing_python" style="color: inherit; text-decoration: inherit;">only_<wbr>passing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the prepared query will only
 return nodes with passing health checks in the result.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="service_meta_python">
 <a href="#service_meta_python" style="color: inherit; text-decoration: inherit;">service_<wbr>meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
@@ -974,14 +912,13 @@ return nodes with passing health checks in the result.
 that will be used for filtering the query results to services with the given
 metadata values present.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="session_python">
 <a href="#session_python" style="color: inherit; text-decoration: inherit;">session</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Consul session to tie this query's
 lifetime to.  This is an advanced parameter that should not be used without a
@@ -989,68 +926,58 @@ complete understanding of Consul sessions and the implications of their use
 (it is recommended to leave this blank in nearly all cases).  If this
 parameter is omitted the query will not expire.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stored_token_python">
 <a href="#stored_token_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ACL token to store with the prepared
 query. This token will be used by default whenever the query is executed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of required and/or disallowed tags.  If a tag is
 in this list it must be present.  If the tag is preceded with a "!" then it is
 disallowed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="template_python">
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preparedquerytemplate">Prepared<wbr>Query<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Query templating options. This is used to make a
 single prepared query respond to many different requests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ACL token to use when saving the prepared query.
 This overrides the token that the agent provides by default.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the PreparedQuery resource produces the following output properties:
-
 
 
 
@@ -1061,15 +988,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1078,15 +1003,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1095,15 +1018,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1112,18 +1033,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1133,7 +1049,7 @@ Get an existing PreparedQuery resource's state with the given name, ID, and opti
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#PreparedQueryState">PreparedQueryState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#PreparedQuery">PreparedQuery</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#PreparedQueryState">PreparedQueryState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#PreparedQuery">PreparedQuery</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1142,11 +1058,11 @@ Get an existing PreparedQuery resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPreparedQuery<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#PreparedQueryState">PreparedQueryState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#PreparedQuery">PreparedQuery</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPreparedQuery<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#PreparedQueryState">PreparedQueryState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#PreparedQuery">PreparedQuery</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.PreparedQuery.html">PreparedQuery</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..PreparedQueryState.html">PreparedQueryState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.PreparedQuery.html">PreparedQuery</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..PreparedQueryState.html">PreparedQueryState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1248,7 +1164,6 @@ Get an existing PreparedQuery resource's state with the given name, ID, and opti
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1256,57 +1171,53 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_connect_csharp">
 <a href="#state_connect_csharp" style="color: inherit; text-decoration: inherit;">Connect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true` the prepared query will return connect
 proxy services for a queried service.  Conditions such as `tags` in the
 prepared query will be matched against the proxy service. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_csharp">
 <a href="#state_datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_dns_csharp">
 <a href="#state_dns_csharp" style="color: inherit; text-decoration: inherit;">Dns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for controlling the DNS response details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_failover_csharp">
 <a href="#state_failover_csharp" style="color: inherit; text-decoration: inherit;">Failover</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preparedqueryfailover">Prepared<wbr>Query<wbr>Failover<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options for controlling behavior when no healthy
 nodes are available in the local DC.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ignorecheckids_csharp">
 <a href="#state_ignorecheckids_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Check<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies a list of check IDs that should be
 ignored when filtering unhealthy instances. This is mostly useful in an
@@ -1315,39 +1226,36 @@ unreliable. Being able to ignore it in centrally-defined queries can be
 simpler than de-registering the check as an interim solution until the check
 can be fixed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the prepared query. Used to identify
 the prepared query during requests. Can be specified as an empty string
 to configure the query as a catch-all.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_near_csharp">
 <a href="#state_near_csharp" style="color: inherit; text-decoration: inherit;">Near</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allows specifying the name of a node to sort results
 near using Consul's distance sorting and network coordinates. The magic
 `_agent` value can be used to always sort nearest the node servicing the
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nodemeta_csharp">
 <a href="#state_nodemeta_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1355,35 +1263,32 @@ request.
 will be used for filtering the query results to nodes with the given metadata
 values present.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_onlypassing_csharp">
 <a href="#state_onlypassing_csharp" style="color: inherit; text-decoration: inherit;">Only<wbr>Passing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the prepared query will only
 return nodes with passing health checks in the result.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_service_csharp">
 <a href="#state_service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service to query.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_servicemeta_csharp">
 <a href="#state_servicemeta_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1391,14 +1296,13 @@ return nodes with passing health checks in the result.
 that will be used for filtering the query results to services with the given
 metadata values present.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_session_csharp">
 <a href="#state_session_csharp" style="color: inherit; text-decoration: inherit;">Session</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Consul session to tie this query's
 lifetime to.  This is an advanced parameter that should not be used without a
@@ -1406,59 +1310,53 @@ complete understanding of Consul sessions and the implications of their use
 (it is recommended to leave this blank in nearly all cases).  If this
 parameter is omitted the query will not expire.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_storedtoken_csharp">
 <a href="#state_storedtoken_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to store with the prepared
 query. This token will be used by default whenever the query is executed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of required and/or disallowed tags.  If a tag is
 in this list it must be present.  If the tag is preceded with a "!" then it is
 disallowed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_template_csharp">
 <a href="#state_template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preparedquerytemplate">Prepared<wbr>Query<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Query templating options. This is used to make a
 single prepared query respond to many different requests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_csharp">
 <a href="#state_token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to use when saving the prepared query.
 This overrides the token that the agent provides by default.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1467,57 +1365,53 @@ This overrides the token that the agent provides by default.
             title="Optional">
         <span id="state_connect_go">
 <a href="#state_connect_go" style="color: inherit; text-decoration: inherit;">Connect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true` the prepared query will return connect
 proxy services for a queried service.  Conditions such as `tags` in the
 prepared query will be matched against the proxy service. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_go">
 <a href="#state_datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_dns_go">
 <a href="#state_dns_go" style="color: inherit; text-decoration: inherit;">Dns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns</a></span>
     </dt>
     <dd>{{% md %}}Settings for controlling the DNS response details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_failover_go">
 <a href="#state_failover_go" style="color: inherit; text-decoration: inherit;">Failover</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preparedqueryfailover">Prepared<wbr>Query<wbr>Failover</a></span>
     </dt>
     <dd>{{% md %}}Options for controlling behavior when no healthy
 nodes are available in the local DC.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ignorecheckids_go">
 <a href="#state_ignorecheckids_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Check<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies a list of check IDs that should be
 ignored when filtering unhealthy instances. This is mostly useful in an
@@ -1526,39 +1420,36 @@ unreliable. Being able to ignore it in centrally-defined queries can be
 simpler than de-registering the check as an interim solution until the check
 can be fixed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the prepared query. Used to identify
 the prepared query during requests. Can be specified as an empty string
 to configure the query as a catch-all.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_near_go">
 <a href="#state_near_go" style="color: inherit; text-decoration: inherit;">Near</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allows specifying the name of a node to sort results
 near using Consul's distance sorting and network coordinates. The magic
 `_agent` value can be used to always sort nearest the node servicing the
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nodemeta_go">
 <a href="#state_nodemeta_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1566,35 +1457,32 @@ request.
 will be used for filtering the query results to nodes with the given metadata
 values present.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_onlypassing_go">
 <a href="#state_onlypassing_go" style="color: inherit; text-decoration: inherit;">Only<wbr>Passing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the prepared query will only
 return nodes with passing health checks in the result.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_service_go">
 <a href="#state_service_go" style="color: inherit; text-decoration: inherit;">Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service to query.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_servicemeta_go">
 <a href="#state_servicemeta_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1602,14 +1490,13 @@ return nodes with passing health checks in the result.
 that will be used for filtering the query results to services with the given
 metadata values present.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_session_go">
 <a href="#state_session_go" style="color: inherit; text-decoration: inherit;">Session</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Consul session to tie this query's
 lifetime to.  This is an advanced parameter that should not be used without a
@@ -1617,59 +1504,53 @@ complete understanding of Consul sessions and the implications of their use
 (it is recommended to leave this blank in nearly all cases).  If this
 parameter is omitted the query will not expire.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_storedtoken_go">
 <a href="#state_storedtoken_go" style="color: inherit; text-decoration: inherit;">Stored<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to store with the prepared
 query. This token will be used by default whenever the query is executed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of required and/or disallowed tags.  If a tag is
 in this list it must be present.  If the tag is preceded with a "!" then it is
 disallowed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_template_go">
 <a href="#state_template_go" style="color: inherit; text-decoration: inherit;">Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preparedquerytemplate">Prepared<wbr>Query<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Query templating options. This is used to make a
 single prepared query respond to many different requests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_go">
 <a href="#state_token_go" style="color: inherit; text-decoration: inherit;">Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to use when saving the prepared query.
 This overrides the token that the agent provides by default.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1678,57 +1559,53 @@ This overrides the token that the agent provides by default.
             title="Optional">
         <span id="state_connect_nodejs">
 <a href="#state_connect_nodejs" style="color: inherit; text-decoration: inherit;">connect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true` the prepared query will return connect
 proxy services for a queried service.  Conditions such as `tags` in the
 prepared query will be matched against the proxy service. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_nodejs">
 <a href="#state_datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_dns_nodejs">
 <a href="#state_dns_nodejs" style="color: inherit; text-decoration: inherit;">dns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns</a></span>
     </dt>
     <dd>{{% md %}}Settings for controlling the DNS response details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_failover_nodejs">
 <a href="#state_failover_nodejs" style="color: inherit; text-decoration: inherit;">failover</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preparedqueryfailover">Prepared<wbr>Query<wbr>Failover</a></span>
     </dt>
     <dd>{{% md %}}Options for controlling behavior when no healthy
 nodes are available in the local DC.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ignorecheckids_nodejs">
 <a href="#state_ignorecheckids_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Check<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of check IDs that should be
 ignored when filtering unhealthy instances. This is mostly useful in an
@@ -1737,39 +1614,36 @@ unreliable. Being able to ignore it in centrally-defined queries can be
 simpler than de-registering the check as an interim solution until the check
 can be fixed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the prepared query. Used to identify
 the prepared query during requests. Can be specified as an empty string
 to configure the query as a catch-all.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_near_nodejs">
 <a href="#state_near_nodejs" style="color: inherit; text-decoration: inherit;">near</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allows specifying the name of a node to sort results
 near using Consul's distance sorting and network coordinates. The magic
 `_agent` value can be used to always sort nearest the node servicing the
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nodemeta_nodejs">
 <a href="#state_nodemeta_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1777,35 +1651,32 @@ request.
 will be used for filtering the query results to nodes with the given metadata
 values present.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_onlypassing_nodejs">
 <a href="#state_onlypassing_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Passing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, the prepared query will only
 return nodes with passing health checks in the result.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_service_nodejs">
 <a href="#state_service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service to query.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_servicemeta_nodejs">
 <a href="#state_servicemeta_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1813,14 +1684,13 @@ return nodes with passing health checks in the result.
 that will be used for filtering the query results to services with the given
 metadata values present.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_session_nodejs">
 <a href="#state_session_nodejs" style="color: inherit; text-decoration: inherit;">session</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Consul session to tie this query's
 lifetime to.  This is an advanced parameter that should not be used without a
@@ -1828,59 +1698,53 @@ complete understanding of Consul sessions and the implications of their use
 (it is recommended to leave this blank in nearly all cases).  If this
 parameter is omitted the query will not expire.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_storedtoken_nodejs">
 <a href="#state_storedtoken_nodejs" style="color: inherit; text-decoration: inherit;">stored<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to store with the prepared
 query. This token will be used by default whenever the query is executed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of required and/or disallowed tags.  If a tag is
 in this list it must be present.  If the tag is preceded with a "!" then it is
 disallowed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_template_nodejs">
 <a href="#state_template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preparedquerytemplate">Prepared<wbr>Query<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Query templating options. This is used to make a
 single prepared query respond to many different requests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_nodejs">
 <a href="#state_token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to use when saving the prepared query.
 This overrides the token that the agent provides by default.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1889,57 +1753,53 @@ This overrides the token that the agent provides by default.
             title="Optional">
         <span id="state_connect_python">
 <a href="#state_connect_python" style="color: inherit; text-decoration: inherit;">connect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true` the prepared query will return connect
 proxy services for a queried service.  Conditions such as `tags` in the
 prepared query will be matched against the proxy service. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_python">
 <a href="#state_datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_dns_python">
 <a href="#state_dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for controlling the DNS response details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_failover_python">
 <a href="#state_failover_python" style="color: inherit; text-decoration: inherit;">failover</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preparedqueryfailover">Prepared<wbr>Query<wbr>Failover<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options for controlling behavior when no healthy
 nodes are available in the local DC.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ignore_check_ids_python">
 <a href="#state_ignore_check_ids_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>check_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of check IDs that should be
 ignored when filtering unhealthy instances. This is mostly useful in an
@@ -1948,39 +1808,36 @@ unreliable. Being able to ignore it in centrally-defined queries can be
 simpler than de-registering the check as an interim solution until the check
 can be fixed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the prepared query. Used to identify
 the prepared query during requests. Can be specified as an empty string
 to configure the query as a catch-all.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_near_python">
 <a href="#state_near_python" style="color: inherit; text-decoration: inherit;">near</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Allows specifying the name of a node to sort results
 near using Consul's distance sorting and network coordinates. The magic
 `_agent` value can be used to always sort nearest the node servicing the
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_node_meta_python">
 <a href="#state_node_meta_python" style="color: inherit; text-decoration: inherit;">node_<wbr>meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
@@ -1988,35 +1845,32 @@ request.
 will be used for filtering the query results to nodes with the given metadata
 values present.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_only_passing_python">
 <a href="#state_only_passing_python" style="color: inherit; text-decoration: inherit;">only_<wbr>passing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the prepared query will only
 return nodes with passing health checks in the result.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_service_python">
 <a href="#state_service_python" style="color: inherit; text-decoration: inherit;">service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the service to query.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_service_meta_python">
 <a href="#state_service_meta_python" style="color: inherit; text-decoration: inherit;">service_<wbr>meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
@@ -2024,14 +1878,13 @@ return nodes with passing health checks in the result.
 that will be used for filtering the query results to services with the given
 metadata values present.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_session_python">
 <a href="#state_session_python" style="color: inherit; text-decoration: inherit;">session</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Consul session to tie this query's
 lifetime to.  This is an advanced parameter that should not be used without a
@@ -2039,56 +1892,51 @@ complete understanding of Consul sessions and the implications of their use
 (it is recommended to leave this blank in nearly all cases).  If this
 parameter is omitted the query will not expire.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_stored_token_python">
 <a href="#state_stored_token_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ACL token to store with the prepared
 query. This token will be used by default whenever the query is executed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of required and/or disallowed tags.  If a tag is
 in this list it must be present.  If the tag is preceded with a "!" then it is
 disallowed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_template_python">
 <a href="#state_template_python" style="color: inherit; text-decoration: inherit;">template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preparedquerytemplate">Prepared<wbr>Query<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Query templating options. This is used to make a
 single prepared query respond to many different requests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_python">
 <a href="#state_token_python" style="color: inherit; text-decoration: inherit;">token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ACL token to use when saving the prepared query.
 This overrides the token that the agent provides by default.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -2097,11 +1945,8 @@ This overrides the token that the agent provides by default.
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="preparedquerydns">Prepared<wbr>Query<wbr>Dns</h4>
@@ -2112,11 +1957,10 @@ This overrides the token that the agent provides by default.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#PreparedQueryDnsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#PreparedQueryDnsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.Inputs.PreparedQueryDnsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.Outputs.PreparedQueryDns.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2126,16 +1970,14 @@ This overrides the token that the agent provides by default.
             title="Optional">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TTL to send when returning DNS results.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2144,16 +1986,14 @@ This overrides the token that the agent provides by default.
             title="Optional">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TTL to send when returning DNS results.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2162,16 +2002,14 @@ This overrides the token that the agent provides by default.
             title="Optional">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TTL to send when returning DNS results.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2180,19 +2018,14 @@ This overrides the token that the agent provides by default.
             title="Optional">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The TTL to send when returning DNS results.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preparedqueryfailover">Prepared<wbr>Query<wbr>Failover</h4>
 {{% choosable language nodejs %}}
@@ -2202,11 +2035,10 @@ This overrides the token that the agent provides by default.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#PreparedQueryFailoverArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#PreparedQueryFailoverOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.Inputs.PreparedQueryFailoverArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.Outputs.PreparedQueryFailover.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2216,28 +2048,25 @@ This overrides the token that the agent provides by default.
             title="Optional">
         <span id="datacenters_csharp">
 <a href="#datacenters_csharp" style="color: inherit; text-decoration: inherit;">Datacenters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Remote datacenters to return results from.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nearestn_csharp">
 <a href="#nearestn_csharp" style="color: inherit; text-decoration: inherit;">Nearest<wbr>N</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Return results from this many datacenters,
 sorted in ascending order of estimated RTT.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2246,28 +2075,25 @@ sorted in ascending order of estimated RTT.
             title="Optional">
         <span id="datacenters_go">
 <a href="#datacenters_go" style="color: inherit; text-decoration: inherit;">Datacenters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Remote datacenters to return results from.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nearestn_go">
 <a href="#nearestn_go" style="color: inherit; text-decoration: inherit;">Nearest<wbr>N</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Return results from this many datacenters,
 sorted in ascending order of estimated RTT.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2276,28 +2102,25 @@ sorted in ascending order of estimated RTT.
             title="Optional">
         <span id="datacenters_nodejs">
 <a href="#datacenters_nodejs" style="color: inherit; text-decoration: inherit;">datacenters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Remote datacenters to return results from.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nearestn_nodejs">
 <a href="#nearestn_nodejs" style="color: inherit; text-decoration: inherit;">nearest<wbr>N</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Return results from this many datacenters,
 sorted in ascending order of estimated RTT.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2306,31 +2129,25 @@ sorted in ascending order of estimated RTT.
             title="Optional">
         <span id="datacenters_python">
 <a href="#datacenters_python" style="color: inherit; text-decoration: inherit;">datacenters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Remote datacenters to return results from.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nearest_n_python">
 <a href="#nearest_n_python" style="color: inherit; text-decoration: inherit;">nearest_<wbr>n</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Return results from this many datacenters,
 sorted in ascending order of estimated RTT.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preparedquerytemplate">Prepared<wbr>Query<wbr>Template</h4>
 {{% choosable language nodejs %}}
@@ -2340,11 +2157,10 @@ sorted in ascending order of estimated RTT.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#PreparedQueryTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#PreparedQueryTemplateOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.Inputs.PreparedQueryTemplateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.Outputs.PreparedQueryTemplate.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2354,29 +2170,26 @@ sorted in ascending order of estimated RTT.
             title="Required">
         <span id="regexp_csharp">
 <a href="#regexp_csharp" style="color: inherit; text-decoration: inherit;">Regexp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The regular expression to match with. When using
 `name_prefix_match`, this regex is applied against the query name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of template matching to perform. Currently
 only `name_prefix_match` is supported.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2385,29 +2198,26 @@ only `name_prefix_match` is supported.
             title="Required">
         <span id="regexp_go">
 <a href="#regexp_go" style="color: inherit; text-decoration: inherit;">Regexp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The regular expression to match with. When using
 `name_prefix_match`, this regex is applied against the query name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of template matching to perform. Currently
 only `name_prefix_match` is supported.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2416,29 +2226,26 @@ only `name_prefix_match` is supported.
             title="Required">
         <span id="regexp_nodejs">
 <a href="#regexp_nodejs" style="color: inherit; text-decoration: inherit;">regexp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The regular expression to match with. When using
 `name_prefix_match`, this regex is applied against the query name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of template matching to perform. Currently
 only `name_prefix_match` is supported.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2447,37 +2254,26 @@ only `name_prefix_match` is supported.
             title="Required">
         <span id="regexp_python">
 <a href="#regexp_python" style="color: inherit; text-decoration: inherit;">regexp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The regular expression to match with. When using
 `name_prefix_match`, this regex is applied against the query name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of template matching to perform. Currently
 only `name_prefix_match` is supported.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>
