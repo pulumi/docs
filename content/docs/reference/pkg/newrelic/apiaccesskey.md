@@ -11,12 +11,12 @@ meta_desc: "Explore the ApiAccessKey resource of the New Relic package, includin
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Use this resource to programmatically create and manage the following types of keys:
-- [Personal API keys](https://docs.newrelic.co.jp/docs/apis/get-started/intro-apis/types-new-relic-api-keys#personal-api-key)
+- [User API keys](https://docs.newrelic.co/docs/apis/get-started/intro-apis/types-new-relic-api-keys#user-api-key)
 - License (or ingest) keys, including:
-    - General [license key](https://docs.newrelic.co.jp/docs/accounts/install-new-relic/account-setup/license-key) used for APM
-    - [Browser license key](https://docs.newrelic.co.jp/docs/browser/new-relic-browser/configuration/copy-browser-monitoring-license-key-app-id)
+    - General [license key](https://docs.newrelic.co/docs/accounts/install-new-relic/account-setup/license-key) used for APM
+    - [Browser license key](https://docs.newrelic.co/docs/browser/new-relic-browser/configuration/copy-browser-monitoring-license-key-app-id)
 
-Please visit the New Relic article ['Use NerdGraph to manage license keys and personal API keys'](https://docs.newrelic.co.jp/docs/apis/nerdgraph/examples/use-nerdgraph-manage-license-keys-personal-api-keys)
+Please visit the New Relic article ['Use NerdGraph to manage license keys and User API keys'](https://docs.newrelic.com/docs/apis/nerdgraph/examples/use-nerdgraph-manage-license-keys-user-keys)
 for more information.
 
 > **IMPORTANT!**

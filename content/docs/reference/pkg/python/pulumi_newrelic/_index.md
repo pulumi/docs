@@ -938,15 +938,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.</code><code class="sig-name descname">ApiAccessKey</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ingest_type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notes</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_id</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.ApiAccessKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this resource to programmatically create and manage the following types of keys:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://docs.newrelic.co.jp/docs/apis/get-started/intro-apis/types-new-relic-api-keys#personal-api-key">Personal API keys</a></p></li>
+<li><p><a class="reference external" href="https://docs.newrelic.co/docs/apis/get-started/intro-apis/types-new-relic-api-keys#user-api-key">User API keys</a></p></li>
 <li><p>License (or ingest) keys, including:</p>
 <ul>
-<li><p>General <a class="reference external" href="https://docs.newrelic.co.jp/docs/accounts/install-new-relic/account-setup/license-key">license key</a> used for APM</p></li>
-<li><p><a class="reference external" href="https://docs.newrelic.co.jp/docs/browser/new-relic-browser/configuration/copy-browser-monitoring-license-key-app-id">Browser license key</a></p></li>
+<li><p>General <a class="reference external" href="https://docs.newrelic.co/docs/accounts/install-new-relic/account-setup/license-key">license key</a> used for APM</p></li>
+<li><p><a class="reference external" href="https://docs.newrelic.co/docs/browser/new-relic-browser/configuration/copy-browser-monitoring-license-key-app-id">Browser license key</a></p></li>
 </ul>
 </li>
 </ul>
-<p>Please visit the New Relic article <a class="reference external" href="https://docs.newrelic.co.jp/docs/apis/nerdgraph/examples/use-nerdgraph-manage-license-keys-personal-api-keys">‘Use NerdGraph to manage license keys and personal API keys’</a>
+<p>Please visit the New Relic article <a class="reference external" href="https://docs.newrelic.com/docs/apis/nerdgraph/examples/use-nerdgraph-manage-license-keys-user-keys">‘Use NerdGraph to manage license keys and User API keys’</a>
 for more information.</p>
 <blockquote>
 <div><p><strong>IMPORTANT!</strong>
@@ -2459,37 +2459,6 @@ required.</p>
 <dt id="pulumi_newrelic.get_entity">
 <code class="sig-prename descclassname">pulumi_newrelic.</code><code class="sig-name descname">get_entity</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">domain</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tag</span><span class="p">:</span> <span class="n">Union[GetEntityTagArgs, Mapping[str, Any], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_newrelic.get_entity.AwaitableGetEntityResult<a class="headerlink" href="#pulumi_newrelic.get_entity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a specific entity in New Relic One that already exists.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
-<span class="kn">import</span> <span class="nn">pulumi_newrelic</span> <span class="k">as</span> <span class="nn">newrelic</span>
-
-<span class="n">app</span> <span class="o">=</span> <span class="n">newrelic</span><span class="o">.</span><span class="n">get_entity</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my-app&quot;</span><span class="p">,</span>
-    <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;APM&quot;</span><span class="p">,</span>
-    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;APPLICATION&quot;</span><span class="p">,</span>
-    <span class="n">tag</span><span class="o">=</span><span class="n">newrelic</span><span class="o">.</span><span class="n">GetEntityTagArgs</span><span class="p">(</span>
-        <span class="n">key</span><span class="o">=</span><span class="s2">&quot;my-tag&quot;</span><span class="p">,</span>
-        <span class="n">value</span><span class="o">=</span><span class="s2">&quot;my-tag-value&quot;</span><span class="p">,</span>
-    <span class="p">))</span>
-<span class="n">foo_alert_policy</span> <span class="o">=</span> <span class="n">newrelic</span><span class="o">.</span><span class="n">AlertPolicy</span><span class="p">(</span><span class="s2">&quot;fooAlertPolicy&quot;</span><span class="p">)</span>
-<span class="n">foo_nrql_alert_condition</span> <span class="o">=</span> <span class="n">newrelic</span><span class="o">.</span><span class="n">NrqlAlertCondition</span><span class="p">(</span><span class="s2">&quot;fooNrqlAlertCondition&quot;</span><span class="p">,</span>
-    <span class="n">policy_id</span><span class="o">=</span><span class="n">foo_alert_policy</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;static&quot;</span><span class="p">,</span>
-    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Alert when transactions are taking too long&quot;</span><span class="p">,</span>
-    <span class="n">runbook_url</span><span class="o">=</span><span class="s2">&quot;https://www.example.com&quot;</span><span class="p">,</span>
-    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">value_function</span><span class="o">=</span><span class="s2">&quot;single_value&quot;</span><span class="p">,</span>
-    <span class="n">violation_time_limit_seconds</span><span class="o">=</span><span class="mi">3600</span><span class="p">,</span>
-    <span class="n">nrql</span><span class="o">=</span><span class="n">newrelic</span><span class="o">.</span><span class="n">NrqlAlertConditionNrqlArgs</span><span class="p">(</span>
-        <span class="n">query</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;SELECT average(duration) FROM Transaction where appName = &#39;</span><span class="si">{</span><span class="n">app</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">,</span>
-        <span class="n">evaluation_offset</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
-    <span class="p">),</span>
-    <span class="n">critical</span><span class="o">=</span><span class="n">newrelic</span><span class="o">.</span><span class="n">NrqlAlertConditionCriticalArgs</span><span class="p">(</span>
-        <span class="n">operator</span><span class="o">=</span><span class="s2">&quot;above&quot;</span><span class="p">,</span>
-        <span class="n">threshold</span><span class="o">=</span><span class="mf">5.5</span><span class="p">,</span>
-        <span class="n">threshold_duration</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
-        <span class="n">threshold_occurrences</span><span class="o">=</span><span class="s2">&quot;ALL&quot;</span><span class="p">,</span>
-    <span class="p">))</span>
-</pre></div>
-</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
