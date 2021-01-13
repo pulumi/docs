@@ -4364,10 +4364,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">example_cert_request</span> <span class="o">=</span> <span class="n">tls</span><span class="o">.</span><span class="n">CertRequest</span><span class="p">(</span><span class="s2">&quot;exampleCertRequest&quot;</span><span class="p">,</span>
     <span class="n">key_algorithm</span><span class="o">=</span><span class="n">example_private_key</span><span class="o">.</span><span class="n">algorithm</span><span class="p">,</span>
     <span class="n">private_key_pem</span><span class="o">=</span><span class="n">example_private_key</span><span class="o">.</span><span class="n">private_key_pem</span><span class="p">,</span>
-    <span class="n">subjects</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;commonName&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;organization&quot;</span><span class="p">:</span> <span class="s2">&quot;Terraform Test&quot;</span><span class="p">,</span>
-    <span class="p">}])</span>
+    <span class="n">subjects</span><span class="o">=</span><span class="p">[</span><span class="n">tls</span><span class="o">.</span><span class="n">CertRequestSubjectArgs</span><span class="p">(</span>
+        <span class="n">common_name</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="n">organization</span><span class="o">=</span><span class="s2">&quot;Terraform Test&quot;</span><span class="p">,</span>
+    <span class="p">)])</span>
 <span class="n">example_origin_ca_certificate</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">OriginCaCertificate</span><span class="p">(</span><span class="s2">&quot;exampleOriginCaCertificate&quot;</span><span class="p">,</span>
     <span class="n">csr</span><span class="o">=</span><span class="n">example_cert_request</span><span class="o">.</span><span class="n">cert_request_pem</span><span class="p">,</span>
     <span class="n">hostnames</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;example.com&quot;</span><span class="p">],</span>
@@ -6769,10 +6769,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">allow_cloudflare_ingress</span> <span class="o">=</span> <span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Firewall</span><span class="p">(</span><span class="s2">&quot;allowCloudflareIngress&quot;</span><span class="p">,</span>
     <span class="n">network</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
     <span class="n">source_ranges</span><span class="o">=</span><span class="n">cloudflare</span><span class="o">.</span><span class="n">ipv4_cidr_blocks</span><span class="p">,</span>
-    <span class="n">allows</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;ports&quot;</span><span class="p">:</span> <span class="s2">&quot;443&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
-    <span class="p">}])</span>
+    <span class="n">allows</span><span class="o">=</span><span class="p">[</span><span class="n">gcp</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">FirewallAllowArgs</span><span class="p">(</span>
+        <span class="n">ports</span><span class="o">=</span><span class="s2">&quot;443&quot;</span><span class="p">,</span>
+        <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
+    <span class="p">)])</span>
 </pre></div>
 </div>
 </dd></dl>
