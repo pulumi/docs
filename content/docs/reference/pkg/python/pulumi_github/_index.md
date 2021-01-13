@@ -3742,7 +3742,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">username</span><span class="o">=</span><span class="s2">&quot;example-username&quot;</span><span class="p">)</span>
 <span class="n">invitee</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">providers</span><span class="o">.</span><span class="n">Github</span><span class="p">(</span><span class="s2">&quot;invitee&quot;</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;invitee_token&quot;</span><span class="p">])</span>
 <span class="n">example_user_invitation_accepter</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">UserInvitationAccepter</span><span class="p">(</span><span class="s2">&quot;exampleUserInvitationAccepter&quot;</span><span class="p">,</span> <span class="n">invitation_id</span><span class="o">=</span><span class="n">example_repository_collaborator</span><span class="o">.</span><span class="n">invitation_id</span><span class="p">,</span>
-<span class="n">opts</span><span class="o">=</span><span class="n">ResourceOptions</span><span class="p">(</span><span class="n">provider</span><span class="o">=</span><span class="s2">&quot;github.invitee&quot;</span><span class="p">))</span>
+<span class="n">opts</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">ResourceOptions</span><span class="p">(</span><span class="n">provider</span><span class="o">=</span><span class="s2">&quot;github.invitee&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
