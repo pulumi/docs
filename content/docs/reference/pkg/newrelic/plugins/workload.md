@@ -12,9 +12,9 @@ meta_desc: "Documentation for the newrelic.plugins.Workload resource with exampl
 
 Use this resource to create, update, and delete a New Relic One workload.
 
-A New Relic Personal API key is required to provision this resource.  Set the `api_key`
+A New Relic User API key is required to provision this resource.  Set the `api_key`
 attribute in the `provider` block or the `NEW_RELIC_API_KEY` environment
-variable with your Personal API key.
+variable with your User API key.
 
 {{% examples %}}
 ## Example Usage
