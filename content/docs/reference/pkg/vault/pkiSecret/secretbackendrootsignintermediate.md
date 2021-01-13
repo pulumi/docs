@@ -92,7 +92,7 @@ root = vault.pki_secret.SecretBackendRootSignIntermediate("root",
     exclude_cn_from_sans=True,
     ou="My OU",
     organization="My organization",
-    opts=ResourceOptions(depends_on=["vault_pki_secret_backend_intermediate_cert_request.intermediate"]))
+    opts=pulumi.ResourceOptions(depends_on=["vault_pki_secret_backend_intermediate_cert_request.intermediate"]))
 ```
 
 {{% /example %}}
