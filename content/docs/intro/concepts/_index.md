@@ -15,13 +15,13 @@ Instead of YAML or a domain-specific language (DSL), Pulumi leverages existing p
 
 > If this is your first time using Pulumi, you likely want to begin with [the Getting Started guide]({{< relref "/docs/get-started" >}}) for your cloud of choice. It will walk you through an [AWS]({{< relref "/docs/get-started/aws" >}}), [Azure]({{< relref "/docs/get-started/azure" >}}), [GCP]({{< relref "/docs/get-started/gcp" >}}), or [Kubernetes]({{< relref "/docs/get-started/kubernetes" >}}) deployment from start to finish.
 
-## Programming Model Overview {#programmingmodel}
+## Pulumi Overview {#overview}
 
-This diagram illustrates the structure and major components of the Pulumi programming model.
+This diagram illustrates the structure and major components of Pulumi.
 
 ![Pulumi programming model diagram.](/images/docs/pulumi-programming-model-diagram.svg)
 
-*Programs* use existing programming languages to define how your infrastructure should be deployed. After writing a program, you run the Pulumi CLI command `up`, which executes the program and determines the desired infrastructure state for all resources declared.
+*Programs* use existing [programming languages]({{< relref "/docs/intro/languages/" >}}) to define how your cloud infrastructure should be deployed. After writing a program, you run the [Pulumi CLI]({{< relref "/docs/reference/cli/)" >}}) command `pulumi up`, which executes the program and determines the desired infrastructure state for all resources declared.
 
 *Resources* represent a type of infrastructure that you declare in your program. Resources have properties that correspond to the desired state of your infrastructure and can be used as *inputs and outputs* that represent dependencies between resources.
 
