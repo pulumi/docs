@@ -21,7 +21,7 @@ This diagram illustrates the structure and major components of Pulumi.
 
 ![Pulumi programming model diagram.](/images/docs/pulumi-programming-model-diagram.svg)
 
-*Programs* use existing [programming languages]({{< relref "/docs/intro/languages/" >}}) to define how your cloud infrastructure should be deployed. After writing a program, you run the [Pulumi CLI]({{< relref "/docs/reference/cli/)" >}}) command `pulumi up`, which executes the program and determines the desired infrastructure state for all resources declared.
+*Programs* use existing [programming languages]({{< relref "/docs/intro/languages" >}}) to define how your cloud infrastructure should be deployed. After writing a program, you run the [Pulumi CLI]({{< relref "/docs/reference/cli" >}}) command `pulumi up`, which executes the program and determines the desired infrastructure state for all resources declared.
 
 *Resources* represent a type of infrastructure that you declare in your program. Resources have properties that correspond to the desired state of your infrastructure and can be used as *inputs and outputs* that represent dependencies between resources.
 
