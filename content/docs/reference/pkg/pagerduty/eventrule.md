@@ -449,7 +449,7 @@ third = pagerduty.EventRule("third",
             "homer",
         ],
     ]),
-    opts=ResourceOptions(depends_on=[pagerduty_event_rule["two"]]))
+    opts=pulumi.ResourceOptions(depends_on=[pagerduty_event_rule["two"]]))
 ```
 
 {{% /example %}}
