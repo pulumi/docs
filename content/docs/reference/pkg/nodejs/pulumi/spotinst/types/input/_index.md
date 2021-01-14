@@ -3,7 +3,7 @@ title: "Module types/input"
 title_tag: "Module types/input | Package @pulumi/spotinst | Node.js SDK"
 linktitle: "input"
 meta_desc: "Explore members of the input module in the @pulumi/spotinst package."
-git_sha: "aabf5943c9156643ed7e379271a64b959212b710"
+git_sha: "7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe"
 block_external_search_index: true
 ---
 
@@ -250,14 +250,14 @@ block_external_search_index: true
 
 <h2 id="aws" data-link-title="aws">namespace <strong>aws</strong></h2>
 <h3 class="pdoc-module-header" id="BeanstalkDeploymentPreferences" data-link-title="BeanstalkDeploymentPreferences">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L40">
         interface <strong>BeanstalkDeploymentPreferences</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BeanstalkDeploymentPreferences</span></code></pre>
 <h4 class="pdoc-member-header" id="BeanstalkDeploymentPreferences-automaticRoll">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L44">property <b>automaticRoll</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L44">property <b>automaticRoll</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automaticRoll?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -265,7 +265,7 @@ block_external_search_index: true
 Should roll perform automatically
 
 <h4 class="pdoc-member-header" id="BeanstalkDeploymentPreferences-batchSizePercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L48">property <b>batchSizePercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L48">property <b>batchSizePercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>batchSizePercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -273,7 +273,7 @@ Should roll perform automatically
 Percent size of each batch
 
 <h4 class="pdoc-member-header" id="BeanstalkDeploymentPreferences-gracePeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L52">property <b>gracePeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L52">property <b>gracePeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gracePeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -281,7 +281,7 @@ Percent size of each batch
 Amount of time to wait between batches
 
 <h4 class="pdoc-member-header" id="BeanstalkDeploymentPreferences-strategies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L56">property <b>strategies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L56">property <b>strategies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>strategies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BeanstalkDeploymentPreferencesStrategy'>BeanstalkDeploymentPreferencesStrategy</a>&gt;[]&gt;;</code></pre>
@@ -289,14 +289,14 @@ Amount of time to wait between batches
 Strategy parameters
 
 <h3 class="pdoc-module-header" id="BeanstalkDeploymentPreferencesStrategy" data-link-title="BeanstalkDeploymentPreferencesStrategy">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L59">
         interface <strong>BeanstalkDeploymentPreferencesStrategy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BeanstalkDeploymentPreferencesStrategy</span></code></pre>
 <h4 class="pdoc-member-header" id="BeanstalkDeploymentPreferencesStrategy-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L63">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L63">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>action?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -304,7 +304,7 @@ Strategy parameters
 Action to take
 
 <h4 class="pdoc-member-header" id="BeanstalkDeploymentPreferencesStrategy-shouldDrainInstances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L67">property <b>shouldDrainInstances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L67">property <b>shouldDrainInstances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shouldDrainInstances?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -312,14 +312,14 @@ Action to take
 Bool value if to wait to drain instance
 
 <h3 class="pdoc-module-header" id="BeanstalkManagedActions" data-link-title="BeanstalkManagedActions">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L70">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L70">
         interface <strong>BeanstalkManagedActions</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BeanstalkManagedActions</span></code></pre>
 <h4 class="pdoc-member-header" id="BeanstalkManagedActions-platformUpdate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L74">property <b>platformUpdate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L74">property <b>platformUpdate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platformUpdate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BeanstalkManagedActionsPlatformUpdate'>BeanstalkManagedActionsPlatformUpdate</a>&gt;;</code></pre>
@@ -327,14 +327,14 @@ Bool value if to wait to drain instance
 Platform Update parameters
 
 <h3 class="pdoc-module-header" id="BeanstalkManagedActionsPlatformUpdate" data-link-title="BeanstalkManagedActionsPlatformUpdate">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L77">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L77">
         interface <strong>BeanstalkManagedActionsPlatformUpdate</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BeanstalkManagedActionsPlatformUpdate</span></code></pre>
 <h4 class="pdoc-member-header" id="BeanstalkManagedActionsPlatformUpdate-performAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L81">property <b>performAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L81">property <b>performAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>performAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -342,7 +342,7 @@ Platform Update parameters
 Actions to perform (options: timeWindow, never)
 
 <h4 class="pdoc-member-header" id="BeanstalkManagedActionsPlatformUpdate-timeWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L85">property <b>timeWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L85">property <b>timeWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -350,7 +350,7 @@ Actions to perform (options: timeWindow, never)
 Time Window for when action occurs ex. Mon:23:50-Tue:00:20
 
 <h4 class="pdoc-member-header" id="BeanstalkManagedActionsPlatformUpdate-updateLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L89">property <b>updateLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L89">property <b>updateLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updateLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -358,24 +358,24 @@ Time Window for when action occurs ex. Mon:23:50-Tue:00:20
 - Level to update
 
 <h3 class="pdoc-module-header" id="BeanstalkScheduledTask" data-link-title="BeanstalkScheduledTask">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L92">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L92">
         interface <strong>BeanstalkScheduledTask</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BeanstalkScheduledTask</span></code></pre>
 <h4 class="pdoc-member-header" id="BeanstalkScheduledTask-adjustment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L93">property <b>adjustment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L93">property <b>adjustment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adjustment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BeanstalkScheduledTask-adjustmentPercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L94">property <b>adjustmentPercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L94">property <b>adjustmentPercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adjustmentPercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BeanstalkScheduledTask-batchSizePercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L98">property <b>batchSizePercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L98">property <b>batchSizePercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>batchSizePercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -383,17 +383,17 @@ Time Window for when action occurs ex. Mon:23:50-Tue:00:20
 Percent size of each batch
 
 <h4 class="pdoc-member-header" id="BeanstalkScheduledTask-cronExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L99">property <b>cronExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L99">property <b>cronExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cronExpression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BeanstalkScheduledTask-frequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L100">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L100">property <b>frequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BeanstalkScheduledTask-gracePeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L104">property <b>gracePeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L104">property <b>gracePeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gracePeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -401,128 +401,128 @@ Percent size of each batch
 Amount of time to wait between batches
 
 <h4 class="pdoc-member-header" id="BeanstalkScheduledTask-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L105">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L105">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BeanstalkScheduledTask-maxCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L106">property <b>maxCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L106">property <b>maxCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BeanstalkScheduledTask-minCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L107">property <b>minCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L107">property <b>minCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BeanstalkScheduledTask-scaleMaxCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L108">property <b>scaleMaxCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L108">property <b>scaleMaxCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scaleMaxCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BeanstalkScheduledTask-scaleMinCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L109">property <b>scaleMinCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L109">property <b>scaleMinCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scaleMinCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BeanstalkScheduledTask-scaleTargetCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L110">property <b>scaleTargetCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L110">property <b>scaleTargetCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scaleTargetCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BeanstalkScheduledTask-startTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L111">property <b>startTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L111">property <b>startTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BeanstalkScheduledTask-targetCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L112">property <b>targetCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L112">property <b>targetCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BeanstalkScheduledTask-taskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L113">property <b>taskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L113">property <b>taskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupEbsBlockDevice" data-link-title="ElastigroupEbsBlockDevice">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L116">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L116">
         interface <strong>ElastigroupEbsBlockDevice</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupEbsBlockDevice</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupEbsBlockDevice-deleteOnTermination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L117">property <b>deleteOnTermination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L117">property <b>deleteOnTermination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deleteOnTermination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupEbsBlockDevice-deviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L118">property <b>deviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L118">property <b>deviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deviceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupEbsBlockDevice-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L119">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L119">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupEbsBlockDevice-iops">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L120">property <b>iops</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L120">property <b>iops</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iops?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupEbsBlockDevice-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L121">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L121">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupEbsBlockDevice-snapshotId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L122">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L122">property <b>snapshotId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupEbsBlockDevice-throughput">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L123">property <b>throughput</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L123">property <b>throughput</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>throughput?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupEbsBlockDevice-volumeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L124">property <b>volumeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L124">property <b>volumeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupEbsBlockDevice-volumeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L125">property <b>volumeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L125">property <b>volumeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupEphemeralBlockDevice" data-link-title="ElastigroupEphemeralBlockDevice">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L128">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L128">
         interface <strong>ElastigroupEphemeralBlockDevice</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupEphemeralBlockDevice</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupEphemeralBlockDevice-deviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L129">property <b>deviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L129">property <b>deviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deviceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupEphemeralBlockDevice-virtualName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L130">property <b>virtualName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L130">property <b>virtualName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>virtualName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupInstanceTypesWeight" data-link-title="ElastigroupInstanceTypesWeight">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L133">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L133">
         interface <strong>ElastigroupInstanceTypesWeight</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupInstanceTypesWeight</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupInstanceTypesWeight-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L137">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L137">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -530,7 +530,7 @@ Amount of time to wait between batches
 Name of instance type (String).
 
 <h4 class="pdoc-member-header" id="ElastigroupInstanceTypesWeight-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L141">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L141">property <b>weight</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>weight: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -538,92 +538,92 @@ Name of instance type (String).
 Weight per instance type (Integer).
 
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationBeanstalk" data-link-title="ElastigroupIntegrationBeanstalk">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L144">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L144">
         interface <strong>ElastigroupIntegrationBeanstalk</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationBeanstalk</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationBeanstalk-deploymentPreferences">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L145">property <b>deploymentPreferences</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L145">property <b>deploymentPreferences</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentPreferences?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupIntegrationBeanstalkDeploymentPreferences'>ElastigroupIntegrationBeanstalkDeploymentPreferences</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationBeanstalk-environmentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L146">property <b>environmentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L146">property <b>environmentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>environmentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationBeanstalk-managedActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L147">property <b>managedActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L147">property <b>managedActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>managedActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupIntegrationBeanstalkManagedActions'>ElastigroupIntegrationBeanstalkManagedActions</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationBeanstalkDeploymentPreferences" data-link-title="ElastigroupIntegrationBeanstalkDeploymentPreferences">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L150">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L150">
         interface <strong>ElastigroupIntegrationBeanstalkDeploymentPreferences</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationBeanstalkDeploymentPreferences</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationBeanstalkDeploymentPreferences-automaticRoll">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L151">property <b>automaticRoll</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L151">property <b>automaticRoll</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automaticRoll?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationBeanstalkDeploymentPreferences-batchSizePercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L152">property <b>batchSizePercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L152">property <b>batchSizePercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>batchSizePercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationBeanstalkDeploymentPreferences-gracePeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L153">property <b>gracePeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L153">property <b>gracePeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gracePeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationBeanstalkDeploymentPreferences-strategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L154">property <b>strategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L154">property <b>strategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>strategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupIntegrationBeanstalkDeploymentPreferencesStrategy'>ElastigroupIntegrationBeanstalkDeploymentPreferencesStrategy</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationBeanstalkDeploymentPreferencesStrategy" data-link-title="ElastigroupIntegrationBeanstalkDeploymentPreferencesStrategy">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L157">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L157">
         interface <strong>ElastigroupIntegrationBeanstalkDeploymentPreferencesStrategy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationBeanstalkDeploymentPreferencesStrategy</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationBeanstalkDeploymentPreferencesStrategy-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L158">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L158">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>action?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationBeanstalkDeploymentPreferencesStrategy-shouldDrainInstances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L159">property <b>shouldDrainInstances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L159">property <b>shouldDrainInstances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shouldDrainInstances?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationBeanstalkManagedActions" data-link-title="ElastigroupIntegrationBeanstalkManagedActions">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L162">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L162">
         interface <strong>ElastigroupIntegrationBeanstalkManagedActions</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationBeanstalkManagedActions</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationBeanstalkManagedActions-platformUpdate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L163">property <b>platformUpdate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L163">property <b>platformUpdate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platformUpdate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupIntegrationBeanstalkManagedActionsPlatformUpdate'>ElastigroupIntegrationBeanstalkManagedActionsPlatformUpdate</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationBeanstalkManagedActionsPlatformUpdate" data-link-title="ElastigroupIntegrationBeanstalkManagedActionsPlatformUpdate">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L166">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L166">
         interface <strong>ElastigroupIntegrationBeanstalkManagedActionsPlatformUpdate</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationBeanstalkManagedActionsPlatformUpdate</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationBeanstalkManagedActionsPlatformUpdate-performAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L170">property <b>performAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L170">property <b>performAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>performAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -631,579 +631,579 @@ Weight per instance type (Integer).
 In the event of a fallback to On-Demand instances, select the time period to revert back to Spot. Supported Arguments – always (default), timeWindow, never. For timeWindow or never to be valid the group must have availabilityOriented OR persistence defined.
 
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationBeanstalkManagedActionsPlatformUpdate-timeWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L171">property <b>timeWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L171">property <b>timeWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationBeanstalkManagedActionsPlatformUpdate-updateLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L172">property <b>updateLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L172">property <b>updateLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updateLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationCodedeploy" data-link-title="ElastigroupIntegrationCodedeploy">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L175">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L175">
         interface <strong>ElastigroupIntegrationCodedeploy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationCodedeploy</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationCodedeploy-cleanupOnFailure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L176">property <b>cleanupOnFailure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L176">property <b>cleanupOnFailure</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cleanupOnFailure: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationCodedeploy-deploymentGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L177">property <b>deploymentGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L177">property <b>deploymentGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupIntegrationCodedeployDeploymentGroup'>ElastigroupIntegrationCodedeployDeploymentGroup</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationCodedeploy-terminateInstanceOnFailure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L178">property <b>terminateInstanceOnFailure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L178">property <b>terminateInstanceOnFailure</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>terminateInstanceOnFailure: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationCodedeployDeploymentGroup" data-link-title="ElastigroupIntegrationCodedeployDeploymentGroup">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L181">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L181">
         interface <strong>ElastigroupIntegrationCodedeployDeploymentGroup</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationCodedeployDeploymentGroup</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationCodedeployDeploymentGroup-applicationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L182">property <b>applicationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L182">property <b>applicationName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationCodedeployDeploymentGroup-deploymentGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L183">property <b>deploymentGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L183">property <b>deploymentGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationDockerSwarm" data-link-title="ElastigroupIntegrationDockerSwarm">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L186">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L186">
         interface <strong>ElastigroupIntegrationDockerSwarm</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationDockerSwarm</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationDockerSwarm-autoscaleCooldown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L187">property <b>autoscaleCooldown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L187">property <b>autoscaleCooldown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleCooldown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationDockerSwarm-autoscaleDown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L188">property <b>autoscaleDown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L188">property <b>autoscaleDown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleDown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupIntegrationDockerSwarmAutoscaleDown'>ElastigroupIntegrationDockerSwarmAutoscaleDown</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationDockerSwarm-autoscaleHeadroom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L189">property <b>autoscaleHeadroom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L189">property <b>autoscaleHeadroom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleHeadroom?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupIntegrationDockerSwarmAutoscaleHeadroom'>ElastigroupIntegrationDockerSwarmAutoscaleHeadroom</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationDockerSwarm-autoscaleIsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L190">property <b>autoscaleIsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L190">property <b>autoscaleIsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleIsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationDockerSwarm-masterHost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L191">property <b>masterHost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L191">property <b>masterHost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterHost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationDockerSwarm-masterPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L192">property <b>masterPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L192">property <b>masterPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationDockerSwarmAutoscaleDown" data-link-title="ElastigroupIntegrationDockerSwarmAutoscaleDown">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L195">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L195">
         interface <strong>ElastigroupIntegrationDockerSwarmAutoscaleDown</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationDockerSwarmAutoscaleDown</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationDockerSwarmAutoscaleDown-evaluationPeriods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L196">property <b>evaluationPeriods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L196">property <b>evaluationPeriods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluationPeriods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationDockerSwarmAutoscaleDown-maxScaleDownPercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L197">property <b>maxScaleDownPercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L197">property <b>maxScaleDownPercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxScaleDownPercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationDockerSwarmAutoscaleHeadroom" data-link-title="ElastigroupIntegrationDockerSwarmAutoscaleHeadroom">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L200">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L200">
         interface <strong>ElastigroupIntegrationDockerSwarmAutoscaleHeadroom</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationDockerSwarmAutoscaleHeadroom</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationDockerSwarmAutoscaleHeadroom-cpuPerUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L201">property <b>cpuPerUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L201">property <b>cpuPerUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cpuPerUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationDockerSwarmAutoscaleHeadroom-memoryPerUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L202">property <b>memoryPerUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L202">property <b>memoryPerUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memoryPerUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationDockerSwarmAutoscaleHeadroom-numOfUnits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L203">property <b>numOfUnits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L203">property <b>numOfUnits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numOfUnits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationEcs" data-link-title="ElastigroupIntegrationEcs">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L206">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L206">
         interface <strong>ElastigroupIntegrationEcs</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationEcs</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationEcs-autoscaleAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L207">property <b>autoscaleAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L207">property <b>autoscaleAttributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupIntegrationEcsAutoscaleAttribute'>ElastigroupIntegrationEcsAutoscaleAttribute</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationEcs-autoscaleCooldown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L208">property <b>autoscaleCooldown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L208">property <b>autoscaleCooldown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleCooldown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationEcs-autoscaleDown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L209">property <b>autoscaleDown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L209">property <b>autoscaleDown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleDown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupIntegrationEcsAutoscaleDown'>ElastigroupIntegrationEcsAutoscaleDown</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationEcs-autoscaleHeadroom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L210">property <b>autoscaleHeadroom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L210">property <b>autoscaleHeadroom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleHeadroom?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupIntegrationEcsAutoscaleHeadroom'>ElastigroupIntegrationEcsAutoscaleHeadroom</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationEcs-autoscaleIsAutoConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L211">property <b>autoscaleIsAutoConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L211">property <b>autoscaleIsAutoConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleIsAutoConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationEcs-autoscaleIsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L212">property <b>autoscaleIsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L212">property <b>autoscaleIsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleIsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationEcs-autoscaleScaleDownNonServiceTasks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L213">property <b>autoscaleScaleDownNonServiceTasks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L213">property <b>autoscaleScaleDownNonServiceTasks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleScaleDownNonServiceTasks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationEcs-batch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L214">property <b>batch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L214">property <b>batch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>batch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupIntegrationEcsBatch'>ElastigroupIntegrationEcsBatch</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationEcs-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L215">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L215">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationEcsAutoscaleAttribute" data-link-title="ElastigroupIntegrationEcsAutoscaleAttribute">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L218">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L218">
         interface <strong>ElastigroupIntegrationEcsAutoscaleAttribute</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationEcsAutoscaleAttribute</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationEcsAutoscaleAttribute-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L219">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L219">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationEcsAutoscaleAttribute-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L220">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L220">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationEcsAutoscaleDown" data-link-title="ElastigroupIntegrationEcsAutoscaleDown">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L223">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L223">
         interface <strong>ElastigroupIntegrationEcsAutoscaleDown</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationEcsAutoscaleDown</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationEcsAutoscaleDown-evaluationPeriods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L224">property <b>evaluationPeriods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L224">property <b>evaluationPeriods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluationPeriods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationEcsAutoscaleDown-maxScaleDownPercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L225">property <b>maxScaleDownPercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L225">property <b>maxScaleDownPercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxScaleDownPercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationEcsAutoscaleHeadroom" data-link-title="ElastigroupIntegrationEcsAutoscaleHeadroom">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L228">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L228">
         interface <strong>ElastigroupIntegrationEcsAutoscaleHeadroom</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationEcsAutoscaleHeadroom</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationEcsAutoscaleHeadroom-cpuPerUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L229">property <b>cpuPerUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L229">property <b>cpuPerUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cpuPerUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationEcsAutoscaleHeadroom-memoryPerUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L230">property <b>memoryPerUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L230">property <b>memoryPerUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memoryPerUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationEcsAutoscaleHeadroom-numOfUnits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L231">property <b>numOfUnits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L231">property <b>numOfUnits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numOfUnits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationEcsBatch" data-link-title="ElastigroupIntegrationEcsBatch">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L234">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L234">
         interface <strong>ElastigroupIntegrationEcsBatch</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationEcsBatch</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationEcsBatch-jobQueueNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L235">property <b>jobQueueNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L235">property <b>jobQueueNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jobQueueNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationGitlab" data-link-title="ElastigroupIntegrationGitlab">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L238">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L238">
         interface <strong>ElastigroupIntegrationGitlab</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationGitlab</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGitlab-runner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L239">property <b>runner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L239">property <b>runner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupIntegrationGitlabRunner'>ElastigroupIntegrationGitlabRunner</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationGitlabRunner" data-link-title="ElastigroupIntegrationGitlabRunner">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L242">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L242">
         interface <strong>ElastigroupIntegrationGitlabRunner</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationGitlabRunner</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGitlabRunner-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L243">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L243">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationKubernetes" data-link-title="ElastigroupIntegrationKubernetes">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L246">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L246">
         interface <strong>ElastigroupIntegrationKubernetes</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationKubernetes</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationKubernetes-apiServer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L247">property <b>apiServer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L247">property <b>apiServer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiServer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationKubernetes-autoscaleCooldown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L248">property <b>autoscaleCooldown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L248">property <b>autoscaleCooldown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleCooldown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationKubernetes-autoscaleDown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L249">property <b>autoscaleDown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L249">property <b>autoscaleDown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleDown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupIntegrationKubernetesAutoscaleDown'>ElastigroupIntegrationKubernetesAutoscaleDown</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationKubernetes-autoscaleHeadroom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L250">property <b>autoscaleHeadroom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L250">property <b>autoscaleHeadroom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleHeadroom?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupIntegrationKubernetesAutoscaleHeadroom'>ElastigroupIntegrationKubernetesAutoscaleHeadroom</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationKubernetes-autoscaleIsAutoConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L251">property <b>autoscaleIsAutoConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L251">property <b>autoscaleIsAutoConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleIsAutoConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationKubernetes-autoscaleIsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L252">property <b>autoscaleIsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L252">property <b>autoscaleIsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleIsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationKubernetes-autoscaleLabels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L253">property <b>autoscaleLabels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L253">property <b>autoscaleLabels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleLabels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupIntegrationKubernetesAutoscaleLabel'>ElastigroupIntegrationKubernetesAutoscaleLabel</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationKubernetes-clusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L254">property <b>clusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L254">property <b>clusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationKubernetes-integrationMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L255">property <b>integrationMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L255">property <b>integrationMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationKubernetes-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L256">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L256">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationKubernetesAutoscaleDown" data-link-title="ElastigroupIntegrationKubernetesAutoscaleDown">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L259">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L259">
         interface <strong>ElastigroupIntegrationKubernetesAutoscaleDown</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationKubernetesAutoscaleDown</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationKubernetesAutoscaleDown-evaluationPeriods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L260">property <b>evaluationPeriods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L260">property <b>evaluationPeriods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluationPeriods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationKubernetesAutoscaleHeadroom" data-link-title="ElastigroupIntegrationKubernetesAutoscaleHeadroom">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L263">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L263">
         interface <strong>ElastigroupIntegrationKubernetesAutoscaleHeadroom</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationKubernetesAutoscaleHeadroom</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationKubernetesAutoscaleHeadroom-cpuPerUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L264">property <b>cpuPerUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L264">property <b>cpuPerUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cpuPerUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationKubernetesAutoscaleHeadroom-memoryPerUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L265">property <b>memoryPerUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L265">property <b>memoryPerUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memoryPerUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationKubernetesAutoscaleHeadroom-numOfUnits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L266">property <b>numOfUnits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L266">property <b>numOfUnits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numOfUnits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationKubernetesAutoscaleLabel" data-link-title="ElastigroupIntegrationKubernetesAutoscaleLabel">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L269">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L269">
         interface <strong>ElastigroupIntegrationKubernetesAutoscaleLabel</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationKubernetesAutoscaleLabel</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationKubernetesAutoscaleLabel-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L270">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L270">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationKubernetesAutoscaleLabel-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L271">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L271">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationMesosphere" data-link-title="ElastigroupIntegrationMesosphere">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L274">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L274">
         interface <strong>ElastigroupIntegrationMesosphere</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationMesosphere</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationMesosphere-apiServer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L275">property <b>apiServer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L275">property <b>apiServer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiServer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationMultaiRuntime" data-link-title="ElastigroupIntegrationMultaiRuntime">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L278">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L278">
         interface <strong>ElastigroupIntegrationMultaiRuntime</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationMultaiRuntime</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationMultaiRuntime-deploymentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L279">property <b>deploymentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L279">property <b>deploymentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationNomad" data-link-title="ElastigroupIntegrationNomad">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L282">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L282">
         interface <strong>ElastigroupIntegrationNomad</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationNomad</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationNomad-aclToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L283">property <b>aclToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L283">property <b>aclToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationNomad-autoscaleConstraints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L284">property <b>autoscaleConstraints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L284">property <b>autoscaleConstraints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleConstraints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupIntegrationNomadAutoscaleConstraint'>ElastigroupIntegrationNomadAutoscaleConstraint</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationNomad-autoscaleCooldown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L285">property <b>autoscaleCooldown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L285">property <b>autoscaleCooldown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleCooldown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationNomad-autoscaleDown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L286">property <b>autoscaleDown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L286">property <b>autoscaleDown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleDown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupIntegrationNomadAutoscaleDown'>ElastigroupIntegrationNomadAutoscaleDown</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationNomad-autoscaleHeadroom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L287">property <b>autoscaleHeadroom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L287">property <b>autoscaleHeadroom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleHeadroom?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupIntegrationNomadAutoscaleHeadroom'>ElastigroupIntegrationNomadAutoscaleHeadroom</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationNomad-autoscaleIsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L288">property <b>autoscaleIsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L288">property <b>autoscaleIsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleIsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationNomad-masterHost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L289">property <b>masterHost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L289">property <b>masterHost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterHost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationNomad-masterPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L290">property <b>masterPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L290">property <b>masterPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationNomadAutoscaleConstraint" data-link-title="ElastigroupIntegrationNomadAutoscaleConstraint">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L293">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L293">
         interface <strong>ElastigroupIntegrationNomadAutoscaleConstraint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationNomadAutoscaleConstraint</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationNomadAutoscaleConstraint-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L294">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L294">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationNomadAutoscaleConstraint-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L295">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L295">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationNomadAutoscaleDown" data-link-title="ElastigroupIntegrationNomadAutoscaleDown">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L298">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L298">
         interface <strong>ElastigroupIntegrationNomadAutoscaleDown</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationNomadAutoscaleDown</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationNomadAutoscaleDown-evaluationPeriods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L299">property <b>evaluationPeriods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L299">property <b>evaluationPeriods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluationPeriods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationNomadAutoscaleHeadroom" data-link-title="ElastigroupIntegrationNomadAutoscaleHeadroom">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L302">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L302">
         interface <strong>ElastigroupIntegrationNomadAutoscaleHeadroom</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationNomadAutoscaleHeadroom</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationNomadAutoscaleHeadroom-cpuPerUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L303">property <b>cpuPerUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L303">property <b>cpuPerUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cpuPerUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationNomadAutoscaleHeadroom-memoryPerUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L304">property <b>memoryPerUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L304">property <b>memoryPerUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memoryPerUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationNomadAutoscaleHeadroom-numOfUnits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L305">property <b>numOfUnits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L305">property <b>numOfUnits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numOfUnits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationRancher" data-link-title="ElastigroupIntegrationRancher">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L308">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L308">
         interface <strong>ElastigroupIntegrationRancher</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationRancher</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationRancher-accessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L309">property <b>accessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L309">property <b>accessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationRancher-masterHost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L310">property <b>masterHost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L310">property <b>masterHost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterHost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationRancher-secretKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L311">property <b>secretKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L311">property <b>secretKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationRancher-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L312">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L312">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationRoute53" data-link-title="ElastigroupIntegrationRoute53">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L315">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L315">
         interface <strong>ElastigroupIntegrationRoute53</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationRoute53</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationRoute53-domains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L316">property <b>domains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L316">property <b>domains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domains: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupIntegrationRoute53Domain'>ElastigroupIntegrationRoute53Domain</a>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationRoute53Domain" data-link-title="ElastigroupIntegrationRoute53Domain">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L319">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L319">
         interface <strong>ElastigroupIntegrationRoute53Domain</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationRoute53Domain</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationRoute53Domain-hostedZoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L320">property <b>hostedZoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L320">property <b>hostedZoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostedZoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationRoute53Domain-recordSetType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L321">property <b>recordSetType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L321">property <b>recordSetType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recordSetType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationRoute53Domain-recordSets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L322">property <b>recordSets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L322">property <b>recordSets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recordSets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupIntegrationRoute53DomainRecordSet'>ElastigroupIntegrationRoute53DomainRecordSet</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationRoute53Domain-spotinstAcctId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L323">property <b>spotinstAcctId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L323">property <b>spotinstAcctId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spotinstAcctId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationRoute53DomainRecordSet" data-link-title="ElastigroupIntegrationRoute53DomainRecordSet">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L326">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L326">
         interface <strong>ElastigroupIntegrationRoute53DomainRecordSet</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationRoute53DomainRecordSet</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationRoute53DomainRecordSet-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L330">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L330">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1211,24 +1211,24 @@ In the event of a fallback to On-Demand instances, select the time period to rev
 The group name.
 
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationRoute53DomainRecordSet-usePublicDns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L331">property <b>usePublicDns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L331">property <b>usePublicDns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usePublicDns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationRoute53DomainRecordSet-usePublicIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L332">property <b>usePublicIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L332">property <b>usePublicIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usePublicIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupMetadataOptions" data-link-title="ElastigroupMetadataOptions">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L335">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L335">
         interface <strong>ElastigroupMetadataOptions</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupMetadataOptions</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupMetadataOptions-httpPutResponseHopLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L339">property <b>httpPutResponseHopLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L339">property <b>httpPutResponseHopLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpPutResponseHopLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1236,7 +1236,7 @@ The group name.
 The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel. Valid values: Integers from `1` to `64`.
 
 <h4 class="pdoc-member-header" id="ElastigroupMetadataOptions-httpTokens">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L343">property <b>httpTokens</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L343">property <b>httpTokens</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpTokens: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1244,46 +1244,46 @@ The desired HTTP PUT response hop limit for instance metadata requests. The larg
 The state of token usage for your instance metadata requests. Valid values: `optional` or `required`.
 
 <h3 class="pdoc-module-header" id="ElastigroupMultaiTargetSet" data-link-title="ElastigroupMultaiTargetSet">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L346">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L346">
         interface <strong>ElastigroupMultaiTargetSet</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupMultaiTargetSet</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupMultaiTargetSet-balancerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L347">property <b>balancerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L347">property <b>balancerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>balancerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupMultaiTargetSet-targetSetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L348">property <b>targetSetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L348">property <b>targetSetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetSetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupNetworkInterface" data-link-title="ElastigroupNetworkInterface">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L351">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L351">
         interface <strong>ElastigroupNetworkInterface</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupNetworkInterface</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupNetworkInterface-associateIpv6Address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L352">property <b>associateIpv6Address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L352">property <b>associateIpv6Address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>associateIpv6Address?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupNetworkInterface-associatePublicIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L353">property <b>associatePublicIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L353">property <b>associatePublicIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>associatePublicIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupNetworkInterface-deleteOnTermination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L354">property <b>deleteOnTermination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L354">property <b>deleteOnTermination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deleteOnTermination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupNetworkInterface-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L358">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L358">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1291,34 +1291,34 @@ The state of token usage for your instance metadata requests. Valid values: `opt
 The group description.
 
 <h4 class="pdoc-member-header" id="ElastigroupNetworkInterface-deviceIndex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L359">property <b>deviceIndex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L359">property <b>deviceIndex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deviceIndex: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupNetworkInterface-networkInterfaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L360">property <b>networkInterfaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L360">property <b>networkInterfaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkInterfaceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupNetworkInterface-privateIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L361">property <b>privateIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L361">property <b>privateIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupNetworkInterface-secondaryPrivateIpAddressCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L362">property <b>secondaryPrivateIpAddressCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L362">property <b>secondaryPrivateIpAddressCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondaryPrivateIpAddressCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupRevertToSpot" data-link-title="ElastigroupRevertToSpot">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L365">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L365">
         interface <strong>ElastigroupRevertToSpot</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupRevertToSpot</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupRevertToSpot-performAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L369">property <b>performAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L369">property <b>performAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>performAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1326,7 +1326,7 @@ The group description.
 In the event of a fallback to On-Demand instances, select the time period to revert back to Spot. Supported Arguments – always (default), timeWindow, never. For timeWindow or never to be valid the group must have availabilityOriented OR persistence defined.
 
 <h4 class="pdoc-member-header" id="ElastigroupRevertToSpot-timeWindows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L373">property <b>timeWindows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L373">property <b>timeWindows</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeWindows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1334,121 +1334,121 @@ In the event of a fallback to On-Demand instances, select the time period to rev
 Specify a list of time windows for to execute revertToSpot strategy. Time window format: `ddd:hh:mm-ddd:hh:mm`. Example: `Mon:03:00-Wed:02:30`
 
 <h3 class="pdoc-module-header" id="ElastigroupScalingDownPolicy" data-link-title="ElastigroupScalingDownPolicy">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L376">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L376">
         interface <strong>ElastigroupScalingDownPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupScalingDownPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-actionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L377">property <b>actionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L377">property <b>actionType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actionType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-adjustment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L378">property <b>adjustment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L378">property <b>adjustment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adjustment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-cooldown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L379">property <b>cooldown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L379">property <b>cooldown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cooldown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L380">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L380">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupScalingDownPolicyDimension'>ElastigroupScalingDownPolicyDimension</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-evaluationPeriods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L381">property <b>evaluationPeriods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L381">property <b>evaluationPeriods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluationPeriods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L382">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L382">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-maxTargetCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L383">property <b>maxTargetCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L383">property <b>maxTargetCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxTargetCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-maximum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L384">property <b>maximum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L384">property <b>maximum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maximum?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-metricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L385">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L385">property <b>metricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-minTargetCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L386">property <b>minTargetCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L386">property <b>minTargetCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minTargetCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-minimum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L387">property <b>minimum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L387">property <b>minimum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minimum?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L388">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L388">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-operator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L389">property <b>operator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L389">property <b>operator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L390">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L390">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L391">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L391">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L392">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L392">property <b>source</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L393">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L393">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L394">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L394">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>target?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-threshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L395">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L395">property <b>threshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L396">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L396">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupScalingDownPolicyDimension" data-link-title="ElastigroupScalingDownPolicyDimension">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L399">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L399">
         interface <strong>ElastigroupScalingDownPolicyDimension</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupScalingDownPolicyDimension</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicyDimension-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L403">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L403">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1456,19 +1456,19 @@ Specify a list of time windows for to execute revertToSpot strategy. Time window
 The group name.
 
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicyDimension-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L404">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L404">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupScalingStrategy" data-link-title="ElastigroupScalingStrategy">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L407">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L407">
         interface <strong>ElastigroupScalingStrategy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupScalingStrategy</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingStrategy-terminateAtEndOfBillingHour">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L411">property <b>terminateAtEndOfBillingHour</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L411">property <b>terminateAtEndOfBillingHour</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>terminateAtEndOfBillingHour?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1476,7 +1476,7 @@ The group name.
 Specify whether to terminate instances at the end of each billing hour.
 
 <h4 class="pdoc-member-header" id="ElastigroupScalingStrategy-terminationPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L415">property <b>terminationPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L415">property <b>terminationPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>terminationPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1484,76 +1484,76 @@ Specify whether to terminate instances at the end of each billing hour.
 - Determines whether to terminate the newest instances when performing a scaling action. Valid values: `"default"`, `"newestInstance"`.
 
 <h3 class="pdoc-module-header" id="ElastigroupScalingTargetPolicy" data-link-title="ElastigroupScalingTargetPolicy">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L418">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L418">
         interface <strong>ElastigroupScalingTargetPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupScalingTargetPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingTargetPolicy-cooldown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L419">property <b>cooldown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L419">property <b>cooldown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cooldown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingTargetPolicy-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L420">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L420">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupScalingTargetPolicyDimension'>ElastigroupScalingTargetPolicyDimension</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingTargetPolicy-maxCapacityPerScale">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L421">property <b>maxCapacityPerScale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L421">property <b>maxCapacityPerScale</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxCapacityPerScale?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingTargetPolicy-metricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L422">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L422">property <b>metricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingTargetPolicy-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L423">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L423">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingTargetPolicy-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L424">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L424">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingTargetPolicy-predictiveMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L425">property <b>predictiveMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L425">property <b>predictiveMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>predictiveMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingTargetPolicy-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L426">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L426">property <b>source</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingTargetPolicy-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L427">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L427">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingTargetPolicy-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L428">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L428">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>target: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingTargetPolicy-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L429">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L429">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupScalingTargetPolicyDimension" data-link-title="ElastigroupScalingTargetPolicyDimension">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L432">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L432">
         interface <strong>ElastigroupScalingTargetPolicyDimension</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupScalingTargetPolicyDimension</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingTargetPolicyDimension-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L436">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L436">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1561,126 +1561,126 @@ Specify whether to terminate instances at the end of each billing hour.
 The group name.
 
 <h4 class="pdoc-member-header" id="ElastigroupScalingTargetPolicyDimension-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L437">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L437">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupScalingUpPolicy" data-link-title="ElastigroupScalingUpPolicy">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L440">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L440">
         interface <strong>ElastigroupScalingUpPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupScalingUpPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-actionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L441">property <b>actionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L441">property <b>actionType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actionType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-adjustment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L442">property <b>adjustment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L442">property <b>adjustment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adjustment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-cooldown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L443">property <b>cooldown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L443">property <b>cooldown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cooldown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L444">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L444">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupScalingUpPolicyDimension'>ElastigroupScalingUpPolicyDimension</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-evaluationPeriods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L445">property <b>evaluationPeriods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L445">property <b>evaluationPeriods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluationPeriods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L446">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L446">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-maxTargetCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L447">property <b>maxTargetCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L447">property <b>maxTargetCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxTargetCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-maximum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L448">property <b>maximum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L448">property <b>maximum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maximum?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-metricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L449">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L449">property <b>metricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-minTargetCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L450">property <b>minTargetCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L450">property <b>minTargetCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minTargetCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-minimum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L451">property <b>minimum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L451">property <b>minimum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minimum?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L452">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L452">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-operator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L453">property <b>operator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L453">property <b>operator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L454">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L454">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L455">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L455">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L456">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L456">property <b>source</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L457">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L457">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L458">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L458">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>target?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-threshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L459">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L459">property <b>threshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L460">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L460">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupScalingUpPolicyDimension" data-link-title="ElastigroupScalingUpPolicyDimension">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L463">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L463">
         interface <strong>ElastigroupScalingUpPolicyDimension</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupScalingUpPolicyDimension</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicyDimension-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L467">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L467">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1688,101 +1688,101 @@ The group name.
 The group name.
 
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicyDimension-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L468">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L468">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupScheduledTask" data-link-title="ElastigroupScheduledTask">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L471">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L471">
         interface <strong>ElastigroupScheduledTask</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupScheduledTask</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScheduledTask-adjustment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L472">property <b>adjustment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L472">property <b>adjustment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adjustment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScheduledTask-adjustmentPercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L473">property <b>adjustmentPercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L473">property <b>adjustmentPercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adjustmentPercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScheduledTask-batchSizePercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L474">property <b>batchSizePercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L474">property <b>batchSizePercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>batchSizePercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScheduledTask-cronExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L475">property <b>cronExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L475">property <b>cronExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cronExpression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScheduledTask-frequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L476">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L476">property <b>frequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScheduledTask-gracePeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L477">property <b>gracePeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L477">property <b>gracePeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gracePeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScheduledTask-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L478">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L478">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScheduledTask-maxCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L479">property <b>maxCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L479">property <b>maxCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScheduledTask-minCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L480">property <b>minCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L480">property <b>minCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScheduledTask-scaleMaxCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L481">property <b>scaleMaxCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L481">property <b>scaleMaxCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scaleMaxCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScheduledTask-scaleMinCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L482">property <b>scaleMinCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L482">property <b>scaleMinCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scaleMinCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScheduledTask-scaleTargetCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L483">property <b>scaleTargetCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L483">property <b>scaleTargetCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scaleTargetCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScheduledTask-startTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L484">property <b>startTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L484">property <b>startTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScheduledTask-targetCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L485">property <b>targetCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L485">property <b>targetCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScheduledTask-taskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L486">property <b>taskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L486">property <b>taskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupSignal" data-link-title="ElastigroupSignal">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L489">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L489">
         interface <strong>ElastigroupSignal</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupSignal</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupSignal-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L493">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L493">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1790,100 +1790,100 @@ The group name.
 The group name.
 
 <h4 class="pdoc-member-header" id="ElastigroupSignal-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L494">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L494">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupStatefulDeallocation" data-link-title="ElastigroupStatefulDeallocation">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L497">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L497">
         interface <strong>ElastigroupStatefulDeallocation</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupStatefulDeallocation</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupStatefulDeallocation-shouldDeleteImages">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L498">property <b>shouldDeleteImages</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L498">property <b>shouldDeleteImages</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shouldDeleteImages?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupStatefulDeallocation-shouldDeleteNetworkInterfaces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L499">property <b>shouldDeleteNetworkInterfaces</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L499">property <b>shouldDeleteNetworkInterfaces</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shouldDeleteNetworkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupStatefulDeallocation-shouldDeleteSnapshots">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L500">property <b>shouldDeleteSnapshots</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L500">property <b>shouldDeleteSnapshots</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shouldDeleteSnapshots?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupStatefulDeallocation-shouldDeleteVolumes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L501">property <b>shouldDeleteVolumes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L501">property <b>shouldDeleteVolumes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shouldDeleteVolumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupTag" data-link-title="ElastigroupTag">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L504">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L504">
         interface <strong>ElastigroupTag</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupTag</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupTag-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L505">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L505">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupTag-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L506">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L506">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupUpdatePolicy" data-link-title="ElastigroupUpdatePolicy">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L509">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L509">
         interface <strong>ElastigroupUpdatePolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupUpdatePolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupUpdatePolicy-autoApplyTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L510">property <b>autoApplyTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L510">property <b>autoApplyTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoApplyTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupUpdatePolicy-rollConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L511">property <b>rollConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L511">property <b>rollConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rollConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupUpdatePolicyRollConfig'>ElastigroupUpdatePolicyRollConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupUpdatePolicy-shouldResumeStateful">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L512">property <b>shouldResumeStateful</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L512">property <b>shouldResumeStateful</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shouldResumeStateful: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupUpdatePolicy-shouldRoll">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L513">property <b>shouldRoll</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L513">property <b>shouldRoll</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shouldRoll: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupUpdatePolicyRollConfig" data-link-title="ElastigroupUpdatePolicyRollConfig">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L516">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L516">
         interface <strong>ElastigroupUpdatePolicyRollConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupUpdatePolicyRollConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupUpdatePolicyRollConfig-batchSizePercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L517">property <b>batchSizePercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L517">property <b>batchSizePercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>batchSizePercentage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupUpdatePolicyRollConfig-gracePeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L518">property <b>gracePeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L518">property <b>gracePeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gracePeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupUpdatePolicyRollConfig-healthCheckType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L522">property <b>healthCheckType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L522">property <b>healthCheckType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1891,66 +1891,66 @@ The group name.
 The service that will perform health checks for the instance. Valid values: `"ELB"`, `"HCS"`, `"TARGET_GROUP"`, `"MLB"`, `"EC2"`, `"MULTAI_TARGET_SET"`, `"MLB_RUNTIME"`, `"K8S_NODE"`, `"NOMAD_NODE"`, `"ECS_CLUSTER_INSTANCE"`.
 
 <h4 class="pdoc-member-header" id="ElastigroupUpdatePolicyRollConfig-strategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L523">property <b>strategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L523">property <b>strategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>strategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupUpdatePolicyRollConfigStrategy'>ElastigroupUpdatePolicyRollConfigStrategy</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupUpdatePolicyRollConfig-waitForRollPercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L524">property <b>waitForRollPercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L524">property <b>waitForRollPercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitForRollPercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupUpdatePolicyRollConfig-waitForRollTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L525">property <b>waitForRollTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L525">property <b>waitForRollTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitForRollTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupUpdatePolicyRollConfigStrategy" data-link-title="ElastigroupUpdatePolicyRollConfigStrategy">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L528">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L528">
         interface <strong>ElastigroupUpdatePolicyRollConfigStrategy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupUpdatePolicyRollConfigStrategy</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupUpdatePolicyRollConfigStrategy-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L529">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L529">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupUpdatePolicyRollConfigStrategy-batchMinHealthyPercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L530">property <b>batchMinHealthyPercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L530">property <b>batchMinHealthyPercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>batchMinHealthyPercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupUpdatePolicyRollConfigStrategy-onFailure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L531">property <b>onFailure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L531">property <b>onFailure</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>onFailure?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupUpdatePolicyRollConfigStrategyOnFailure'>ElastigroupUpdatePolicyRollConfigStrategyOnFailure</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupUpdatePolicyRollConfigStrategy-shouldDrainInstances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L532">property <b>shouldDrainInstances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L532">property <b>shouldDrainInstances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shouldDrainInstances?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupUpdatePolicyRollConfigStrategyOnFailure" data-link-title="ElastigroupUpdatePolicyRollConfigStrategyOnFailure">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L535">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L535">
         interface <strong>ElastigroupUpdatePolicyRollConfigStrategyOnFailure</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupUpdatePolicyRollConfigStrategyOnFailure</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupUpdatePolicyRollConfigStrategyOnFailure-actionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L536">property <b>actionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L536">property <b>actionType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actionType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupUpdatePolicyRollConfigStrategyOnFailure-batchNum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L537">property <b>batchNum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L537">property <b>batchNum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>batchNum?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupUpdatePolicyRollConfigStrategyOnFailure-drainingTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L541">property <b>drainingTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L541">property <b>drainingTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>drainingTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1958,63 +1958,63 @@ The service that will perform health checks for the instance. Valid values: `"EL
 The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.
 
 <h4 class="pdoc-member-header" id="ElastigroupUpdatePolicyRollConfigStrategyOnFailure-shouldDecrementTargetCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L542">property <b>shouldDecrementTargetCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L542">property <b>shouldDecrementTargetCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shouldDecrementTargetCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupUpdatePolicyRollConfigStrategyOnFailure-shouldHandleAllBatches">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L543">property <b>shouldHandleAllBatches</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L543">property <b>shouldHandleAllBatches</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shouldHandleAllBatches?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ManagedInstanceIntegrationRoute53" data-link-title="ManagedInstanceIntegrationRoute53">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L546">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L546">
         interface <strong>ManagedInstanceIntegrationRoute53</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ManagedInstanceIntegrationRoute53</span></code></pre>
 <h4 class="pdoc-member-header" id="ManagedInstanceIntegrationRoute53-domains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L547">property <b>domains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L547">property <b>domains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domains: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ManagedInstanceIntegrationRoute53Domain'>ManagedInstanceIntegrationRoute53Domain</a>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ManagedInstanceIntegrationRoute53Domain" data-link-title="ManagedInstanceIntegrationRoute53Domain">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L550">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L550">
         interface <strong>ManagedInstanceIntegrationRoute53Domain</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ManagedInstanceIntegrationRoute53Domain</span></code></pre>
 <h4 class="pdoc-member-header" id="ManagedInstanceIntegrationRoute53Domain-hostedZoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L551">property <b>hostedZoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L551">property <b>hostedZoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostedZoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedInstanceIntegrationRoute53Domain-recordSetType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L552">property <b>recordSetType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L552">property <b>recordSetType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recordSetType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedInstanceIntegrationRoute53Domain-recordSets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L553">property <b>recordSets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L553">property <b>recordSets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recordSets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ManagedInstanceIntegrationRoute53DomainRecordSet'>ManagedInstanceIntegrationRoute53DomainRecordSet</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedInstanceIntegrationRoute53Domain-spotinstAcctId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L554">property <b>spotinstAcctId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L554">property <b>spotinstAcctId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spotinstAcctId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ManagedInstanceIntegrationRoute53DomainRecordSet" data-link-title="ManagedInstanceIntegrationRoute53DomainRecordSet">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L557">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L557">
         interface <strong>ManagedInstanceIntegrationRoute53DomainRecordSet</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ManagedInstanceIntegrationRoute53DomainRecordSet</span></code></pre>
 <h4 class="pdoc-member-header" id="ManagedInstanceIntegrationRoute53DomainRecordSet-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L561">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L561">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2022,44 +2022,44 @@ The time in seconds, the instance is allowed to run while detached from the ELB.
 The ManagedInstance name.
 
 <h4 class="pdoc-member-header" id="ManagedInstanceIntegrationRoute53DomainRecordSet-usePublicDns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L562">property <b>usePublicDns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L562">property <b>usePublicDns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usePublicDns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedInstanceIntegrationRoute53DomainRecordSet-usePublicIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L563">property <b>usePublicIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L563">property <b>usePublicIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usePublicIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ManagedInstanceLoadBalancer" data-link-title="ManagedInstanceLoadBalancer">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L566">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L566">
         interface <strong>ManagedInstanceLoadBalancer</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ManagedInstanceLoadBalancer</span></code></pre>
 <h4 class="pdoc-member-header" id="ManagedInstanceLoadBalancer-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L567">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L567">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedInstanceLoadBalancer-autoWeight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L568">property <b>autoWeight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L568">property <b>autoWeight</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoWeight?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedInstanceLoadBalancer-azAwareness">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L569">property <b>azAwareness</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L569">property <b>azAwareness</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azAwareness?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedInstanceLoadBalancer-balancerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L570">property <b>balancerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L570">property <b>balancerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>balancerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedInstanceLoadBalancer-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L574">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L574">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2067,46 +2067,46 @@ The ManagedInstance name.
 The ManagedInstance name.
 
 <h4 class="pdoc-member-header" id="ManagedInstanceLoadBalancer-targetSetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L575">property <b>targetSetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L575">property <b>targetSetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetSetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedInstanceLoadBalancer-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L576">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L576">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ManagedInstanceNetworkInterface" data-link-title="ManagedInstanceNetworkInterface">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L579">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L579">
         interface <strong>ManagedInstanceNetworkInterface</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ManagedInstanceNetworkInterface</span></code></pre>
 <h4 class="pdoc-member-header" id="ManagedInstanceNetworkInterface-associateIpv6Address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L580">property <b>associateIpv6Address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L580">property <b>associateIpv6Address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>associateIpv6Address?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedInstanceNetworkInterface-associatePublicIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L581">property <b>associatePublicIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L581">property <b>associatePublicIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>associatePublicIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedInstanceNetworkInterface-deviceIndex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L582">property <b>deviceIndex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L582">property <b>deviceIndex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deviceIndex: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ManagedInstanceRevertToSpot" data-link-title="ManagedInstanceRevertToSpot">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L585">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L585">
         interface <strong>ManagedInstanceRevertToSpot</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ManagedInstanceRevertToSpot</span></code></pre>
 <h4 class="pdoc-member-header" id="ManagedInstanceRevertToSpot-performAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L590">property <b>performAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L590">property <b>performAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>performAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2115,46 +2115,46 @@ Valid values: `"always"`, `"never"`, `"timeWindow"`.
 Default `"never"`.
 
 <h3 class="pdoc-module-header" id="ManagedInstanceScheduledTask" data-link-title="ManagedInstanceScheduledTask">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L593">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L593">
         interface <strong>ManagedInstanceScheduledTask</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ManagedInstanceScheduledTask</span></code></pre>
 <h4 class="pdoc-member-header" id="ManagedInstanceScheduledTask-cronExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L594">property <b>cronExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L594">property <b>cronExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cronExpression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedInstanceScheduledTask-frequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L595">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L595">property <b>frequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedInstanceScheduledTask-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L596">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L596">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedInstanceScheduledTask-startTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L597">property <b>startTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L597">property <b>startTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedInstanceScheduledTask-taskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L598">property <b>taskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L598">property <b>taskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ManagedInstanceTag" data-link-title="ManagedInstanceTag">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L601">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L601">
         interface <strong>ManagedInstanceTag</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ManagedInstanceTag</span></code></pre>
 <h4 class="pdoc-member-header" id="ManagedInstanceTag-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L605">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L605">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2162,7 +2162,7 @@ Default `"never"`.
 Tag's key.
 
 <h4 class="pdoc-member-header" id="ManagedInstanceTag-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L609">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L609">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2170,19 +2170,19 @@ Tag's key.
 Tag's name.
 
 <h3 class="pdoc-module-header" id="MrScalarApplication" data-link-title="MrScalarApplication">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L612">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L612">
         interface <strong>MrScalarApplication</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>MrScalarApplication</span></code></pre>
 <h4 class="pdoc-member-header" id="MrScalarApplication-args">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L613">property <b>args</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L613">property <b>args</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>args?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarApplication-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L617">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L617">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2190,100 +2190,100 @@ Tag's name.
 The MrScaler name.
 
 <h4 class="pdoc-member-header" id="MrScalarApplication-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L618">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L618">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="MrScalarBootstrapActionsFile" data-link-title="MrScalarBootstrapActionsFile">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L621">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L621">
         interface <strong>MrScalarBootstrapActionsFile</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>MrScalarBootstrapActionsFile</span></code></pre>
 <h4 class="pdoc-member-header" id="MrScalarBootstrapActionsFile-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L622">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L622">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarBootstrapActionsFile-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L623">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L623">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="MrScalarConfigurationsFile" data-link-title="MrScalarConfigurationsFile">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L626">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L626">
         interface <strong>MrScalarConfigurationsFile</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>MrScalarConfigurationsFile</span></code></pre>
 <h4 class="pdoc-member-header" id="MrScalarConfigurationsFile-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L627">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L627">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarConfigurationsFile-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L628">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L628">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="MrScalarCoreEbsBlockDevice" data-link-title="MrScalarCoreEbsBlockDevice">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L631">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L631">
         interface <strong>MrScalarCoreEbsBlockDevice</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>MrScalarCoreEbsBlockDevice</span></code></pre>
 <h4 class="pdoc-member-header" id="MrScalarCoreEbsBlockDevice-iops">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L632">property <b>iops</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L632">property <b>iops</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iops?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarCoreEbsBlockDevice-sizeInGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L633">property <b>sizeInGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L633">property <b>sizeInGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sizeInGb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarCoreEbsBlockDevice-volumeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L634">property <b>volumeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L634">property <b>volumeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarCoreEbsBlockDevice-volumesPerInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L635">property <b>volumesPerInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L635">property <b>volumesPerInstance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumesPerInstance?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="MrScalarCoreScalingDownPolicy" data-link-title="MrScalarCoreScalingDownPolicy">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L638">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L638">
         interface <strong>MrScalarCoreScalingDownPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>MrScalarCoreScalingDownPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingDownPolicy-actionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L639">property <b>actionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L639">property <b>actionType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actionType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingDownPolicy-adjustment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L640">property <b>adjustment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L640">property <b>adjustment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adjustment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingDownPolicy-cooldown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L641">property <b>cooldown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L641">property <b>cooldown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cooldown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingDownPolicy-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L642">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L642">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingDownPolicy-evaluationPeriods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L646">property <b>evaluationPeriods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L646">property <b>evaluationPeriods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluationPeriods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2291,17 +2291,17 @@ The MrScaler name.
 The number of periods over which data is compared to the specified threshold.
 
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingDownPolicy-maxTargetCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L647">property <b>maxTargetCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L647">property <b>maxTargetCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxTargetCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingDownPolicy-maximum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L648">property <b>maximum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L648">property <b>maximum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maximum?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingDownPolicy-metricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L652">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L652">property <b>metricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2309,17 +2309,17 @@ The number of periods over which data is compared to the specified threshold.
 The name of the metric in CloudWatch which the statement will be based on.
 
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingDownPolicy-minTargetCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L653">property <b>minTargetCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L653">property <b>minTargetCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minTargetCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingDownPolicy-minimum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L654">property <b>minimum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L654">property <b>minimum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minimum?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingDownPolicy-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L658">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L658">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2327,7 +2327,7 @@ The name of the metric in CloudWatch which the statement will be based on.
 Must contain the value: `AWS/ElasticMapReduce`.
 
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingDownPolicy-operator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L662">property <b>operator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L662">property <b>operator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2335,7 +2335,7 @@ Must contain the value: `AWS/ElasticMapReduce`.
 The operator to use in order to determine if the policy is applicable. Valid values: `gt` | `gte` | `lt` | `lte`
 
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingDownPolicy-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L666">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L666">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2343,12 +2343,12 @@ The operator to use in order to determine if the policy is applicable. Valid val
 The time window in seconds over which the statistic is applied.
 
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingDownPolicy-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L667">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L667">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingDownPolicy-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L671">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L671">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2356,12 +2356,12 @@ The time window in seconds over which the statistic is applied.
 The aggregation method of the given metric. Valid Values: `average` | `sum` | `sampleCount` | `maximum` | `minimum`
 
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingDownPolicy-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L672">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L672">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>target?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingDownPolicy-threshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L676">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L676">property <b>threshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2369,7 +2369,7 @@ The aggregation method of the given metric. Valid Values: `average` | `sum` | `s
 The value that the specified statistic is compared to.
 
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingDownPolicy-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L680">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L680">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2377,34 +2377,34 @@ The value that the specified statistic is compared to.
 The unit for a given metric. Valid Values: `seconds` | `microseconds` | `milliseconds` | `bytes` | `kilobytes` | `megabytes` | `gigabytes` | `terabytes` | `bits` | `kilobits` | `megabits` | `gigabits` | `terabits` | `percent` | `count` | `bytes/second` | `kilobytes/second` | `megabytes/second` | `gigabytes/second` | `terabytes/second` | `bits/second` | `kilobits/second` | `megabits/second` | `gigabits/second` | `terabits/second` | `count/second` | `none`
 
 <h3 class="pdoc-module-header" id="MrScalarCoreScalingUpPolicy" data-link-title="MrScalarCoreScalingUpPolicy">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L683">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L683">
         interface <strong>MrScalarCoreScalingUpPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>MrScalarCoreScalingUpPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingUpPolicy-actionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L684">property <b>actionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L684">property <b>actionType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actionType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingUpPolicy-adjustment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L685">property <b>adjustment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L685">property <b>adjustment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adjustment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingUpPolicy-cooldown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L686">property <b>cooldown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L686">property <b>cooldown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cooldown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingUpPolicy-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L687">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L687">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingUpPolicy-evaluationPeriods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L691">property <b>evaluationPeriods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L691">property <b>evaluationPeriods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluationPeriods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2412,17 +2412,17 @@ The unit for a given metric. Valid Values: `seconds` | `microseconds` | `millise
 The number of periods over which data is compared to the specified threshold.
 
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingUpPolicy-maxTargetCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L692">property <b>maxTargetCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L692">property <b>maxTargetCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxTargetCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingUpPolicy-maximum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L693">property <b>maximum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L693">property <b>maximum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maximum?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingUpPolicy-metricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L697">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L697">property <b>metricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2430,17 +2430,17 @@ The number of periods over which data is compared to the specified threshold.
 The name of the metric in CloudWatch which the statement will be based on.
 
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingUpPolicy-minTargetCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L698">property <b>minTargetCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L698">property <b>minTargetCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minTargetCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingUpPolicy-minimum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L699">property <b>minimum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L699">property <b>minimum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minimum?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingUpPolicy-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L703">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L703">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2448,7 +2448,7 @@ The name of the metric in CloudWatch which the statement will be based on.
 Must contain the value: `AWS/ElasticMapReduce`.
 
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingUpPolicy-operator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L707">property <b>operator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L707">property <b>operator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2456,7 +2456,7 @@ Must contain the value: `AWS/ElasticMapReduce`.
 The operator to use in order to determine if the policy is applicable. Valid values: `gt` | `gte` | `lt` | `lte`
 
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingUpPolicy-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L711">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L711">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2464,12 +2464,12 @@ The operator to use in order to determine if the policy is applicable. Valid val
 The time window in seconds over which the statistic is applied.
 
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingUpPolicy-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L712">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L712">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingUpPolicy-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L716">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L716">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2477,12 +2477,12 @@ The time window in seconds over which the statistic is applied.
 The aggregation method of the given metric. Valid Values: `average` | `sum` | `sampleCount` | `maximum` | `minimum`
 
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingUpPolicy-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L717">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L717">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>target?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingUpPolicy-threshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L721">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L721">property <b>threshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2490,7 +2490,7 @@ The aggregation method of the given metric. Valid Values: `average` | `sum` | `s
 The value that the specified statistic is compared to.
 
 <h4 class="pdoc-member-header" id="MrScalarCoreScalingUpPolicy-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L725">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L725">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2498,198 +2498,198 @@ The value that the specified statistic is compared to.
 The unit for a given metric. Valid Values: `seconds` | `microseconds` | `milliseconds` | `bytes` | `kilobytes` | `megabytes` | `gigabytes` | `terabytes` | `bits` | `kilobits` | `megabits` | `gigabits` | `terabits` | `percent` | `count` | `bytes/second` | `kilobytes/second` | `megabytes/second` | `gigabytes/second` | `terabytes/second` | `bits/second` | `kilobits/second` | `megabits/second` | `gigabits/second` | `terabits/second` | `count/second` | `none`
 
 <h3 class="pdoc-module-header" id="MrScalarInstanceWeight" data-link-title="MrScalarInstanceWeight">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L728">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L728">
         interface <strong>MrScalarInstanceWeight</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>MrScalarInstanceWeight</span></code></pre>
 <h4 class="pdoc-member-header" id="MrScalarInstanceWeight-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L729">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L729">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarInstanceWeight-weightedCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L730">property <b>weightedCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L730">property <b>weightedCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>weightedCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="MrScalarMasterEbsBlockDevice" data-link-title="MrScalarMasterEbsBlockDevice">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L733">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L733">
         interface <strong>MrScalarMasterEbsBlockDevice</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>MrScalarMasterEbsBlockDevice</span></code></pre>
 <h4 class="pdoc-member-header" id="MrScalarMasterEbsBlockDevice-iops">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L734">property <b>iops</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L734">property <b>iops</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iops?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarMasterEbsBlockDevice-sizeInGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L735">property <b>sizeInGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L735">property <b>sizeInGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sizeInGb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarMasterEbsBlockDevice-volumeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L736">property <b>volumeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L736">property <b>volumeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarMasterEbsBlockDevice-volumesPerInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L737">property <b>volumesPerInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L737">property <b>volumesPerInstance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumesPerInstance?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="MrScalarProvisioningTimeout" data-link-title="MrScalarProvisioningTimeout">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L740">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L740">
         interface <strong>MrScalarProvisioningTimeout</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>MrScalarProvisioningTimeout</span></code></pre>
 <h4 class="pdoc-member-header" id="MrScalarProvisioningTimeout-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L741">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L741">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarProvisioningTimeout-timeoutAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L742">property <b>timeoutAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L742">property <b>timeoutAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeoutAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="MrScalarScheduledTask" data-link-title="MrScalarScheduledTask">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L745">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L745">
         interface <strong>MrScalarScheduledTask</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>MrScalarScheduledTask</span></code></pre>
 <h4 class="pdoc-member-header" id="MrScalarScheduledTask-cron">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L746">property <b>cron</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L746">property <b>cron</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cron: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarScheduledTask-desiredCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L747">property <b>desiredCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L747">property <b>desiredCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>desiredCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarScheduledTask-instanceGroupType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L748">property <b>instanceGroupType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L748">property <b>instanceGroupType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceGroupType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarScheduledTask-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L749">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L749">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarScheduledTask-maxCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L750">property <b>maxCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L750">property <b>maxCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarScheduledTask-minCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L751">property <b>minCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L751">property <b>minCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarScheduledTask-taskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L752">property <b>taskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L752">property <b>taskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="MrScalarStepsFile" data-link-title="MrScalarStepsFile">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L755">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L755">
         interface <strong>MrScalarStepsFile</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>MrScalarStepsFile</span></code></pre>
 <h4 class="pdoc-member-header" id="MrScalarStepsFile-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L756">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L756">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarStepsFile-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L757">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L757">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="MrScalarTag" data-link-title="MrScalarTag">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L760">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L760">
         interface <strong>MrScalarTag</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>MrScalarTag</span></code></pre>
 <h4 class="pdoc-member-header" id="MrScalarTag-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L761">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L761">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarTag-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L762">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L762">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="MrScalarTaskEbsBlockDevice" data-link-title="MrScalarTaskEbsBlockDevice">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L765">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L765">
         interface <strong>MrScalarTaskEbsBlockDevice</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>MrScalarTaskEbsBlockDevice</span></code></pre>
 <h4 class="pdoc-member-header" id="MrScalarTaskEbsBlockDevice-iops">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L766">property <b>iops</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L766">property <b>iops</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iops?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarTaskEbsBlockDevice-sizeInGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L767">property <b>sizeInGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L767">property <b>sizeInGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sizeInGb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarTaskEbsBlockDevice-volumeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L768">property <b>volumeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L768">property <b>volumeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarTaskEbsBlockDevice-volumesPerInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L769">property <b>volumesPerInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L769">property <b>volumesPerInstance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumesPerInstance?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="MrScalarTaskScalingDownPolicy" data-link-title="MrScalarTaskScalingDownPolicy">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L772">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L772">
         interface <strong>MrScalarTaskScalingDownPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>MrScalarTaskScalingDownPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingDownPolicy-actionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L773">property <b>actionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L773">property <b>actionType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actionType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingDownPolicy-adjustment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L774">property <b>adjustment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L774">property <b>adjustment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adjustment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingDownPolicy-cooldown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L775">property <b>cooldown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L775">property <b>cooldown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cooldown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingDownPolicy-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L776">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L776">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingDownPolicy-evaluationPeriods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L780">property <b>evaluationPeriods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L780">property <b>evaluationPeriods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluationPeriods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2697,17 +2697,17 @@ The unit for a given metric. Valid Values: `seconds` | `microseconds` | `millise
 The number of periods over which data is compared to the specified threshold.
 
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingDownPolicy-maxTargetCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L781">property <b>maxTargetCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L781">property <b>maxTargetCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxTargetCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingDownPolicy-maximum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L782">property <b>maximum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L782">property <b>maximum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maximum?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingDownPolicy-metricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L786">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L786">property <b>metricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2715,17 +2715,17 @@ The number of periods over which data is compared to the specified threshold.
 The name of the metric in CloudWatch which the statement will be based on.
 
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingDownPolicy-minTargetCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L787">property <b>minTargetCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L787">property <b>minTargetCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minTargetCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingDownPolicy-minimum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L788">property <b>minimum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L788">property <b>minimum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minimum?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingDownPolicy-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L792">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L792">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2733,7 +2733,7 @@ The name of the metric in CloudWatch which the statement will be based on.
 Must contain the value: `AWS/ElasticMapReduce`.
 
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingDownPolicy-operator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L796">property <b>operator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L796">property <b>operator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2741,7 +2741,7 @@ Must contain the value: `AWS/ElasticMapReduce`.
 The operator to use in order to determine if the policy is applicable. Valid values: `gt` | `gte` | `lt` | `lte`
 
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingDownPolicy-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L800">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L800">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2749,12 +2749,12 @@ The operator to use in order to determine if the policy is applicable. Valid val
 The time window in seconds over which the statistic is applied.
 
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingDownPolicy-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L801">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L801">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingDownPolicy-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L805">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L805">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2762,12 +2762,12 @@ The time window in seconds over which the statistic is applied.
 The aggregation method of the given metric. Valid Values: `average` | `sum` | `sampleCount` | `maximum` | `minimum`
 
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingDownPolicy-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L806">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L806">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>target?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingDownPolicy-threshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L810">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L810">property <b>threshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2775,7 +2775,7 @@ The aggregation method of the given metric. Valid Values: `average` | `sum` | `s
 The value that the specified statistic is compared to.
 
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingDownPolicy-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L814">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L814">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2783,34 +2783,34 @@ The value that the specified statistic is compared to.
 The unit for a given metric. Valid Values: `seconds` | `microseconds` | `milliseconds` | `bytes` | `kilobytes` | `megabytes` | `gigabytes` | `terabytes` | `bits` | `kilobits` | `megabits` | `gigabits` | `terabits` | `percent` | `count` | `bytes/second` | `kilobytes/second` | `megabytes/second` | `gigabytes/second` | `terabytes/second` | `bits/second` | `kilobits/second` | `megabits/second` | `gigabits/second` | `terabits/second` | `count/second` | `none`
 
 <h3 class="pdoc-module-header" id="MrScalarTaskScalingUpPolicy" data-link-title="MrScalarTaskScalingUpPolicy">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L817">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L817">
         interface <strong>MrScalarTaskScalingUpPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>MrScalarTaskScalingUpPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingUpPolicy-actionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L818">property <b>actionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L818">property <b>actionType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actionType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingUpPolicy-adjustment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L819">property <b>adjustment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L819">property <b>adjustment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adjustment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingUpPolicy-cooldown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L820">property <b>cooldown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L820">property <b>cooldown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cooldown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingUpPolicy-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L821">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L821">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingUpPolicy-evaluationPeriods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L825">property <b>evaluationPeriods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L825">property <b>evaluationPeriods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluationPeriods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2818,17 +2818,17 @@ The unit for a given metric. Valid Values: `seconds` | `microseconds` | `millise
 The number of periods over which data is compared to the specified threshold.
 
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingUpPolicy-maxTargetCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L826">property <b>maxTargetCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L826">property <b>maxTargetCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxTargetCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingUpPolicy-maximum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L827">property <b>maximum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L827">property <b>maximum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maximum?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingUpPolicy-metricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L831">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L831">property <b>metricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2836,17 +2836,17 @@ The number of periods over which data is compared to the specified threshold.
 The name of the metric in CloudWatch which the statement will be based on.
 
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingUpPolicy-minTargetCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L832">property <b>minTargetCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L832">property <b>minTargetCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minTargetCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingUpPolicy-minimum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L833">property <b>minimum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L833">property <b>minimum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minimum?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingUpPolicy-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L837">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L837">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2854,7 +2854,7 @@ The name of the metric in CloudWatch which the statement will be based on.
 Must contain the value: `AWS/ElasticMapReduce`.
 
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingUpPolicy-operator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L841">property <b>operator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L841">property <b>operator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2862,7 +2862,7 @@ Must contain the value: `AWS/ElasticMapReduce`.
 The operator to use in order to determine if the policy is applicable. Valid values: `gt` | `gte` | `lt` | `lte`
 
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingUpPolicy-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L845">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L845">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2870,12 +2870,12 @@ The operator to use in order to determine if the policy is applicable. Valid val
 The time window in seconds over which the statistic is applied.
 
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingUpPolicy-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L846">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L846">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingUpPolicy-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L850">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L850">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2883,12 +2883,12 @@ The time window in seconds over which the statistic is applied.
 The aggregation method of the given metric. Valid Values: `average` | `sum` | `sampleCount` | `maximum` | `minimum`
 
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingUpPolicy-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L851">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L851">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>target?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingUpPolicy-threshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L855">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L855">property <b>threshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2896,7 +2896,7 @@ The aggregation method of the given metric. Valid Values: `average` | `sum` | `s
 The value that the specified statistic is compared to.
 
 <h4 class="pdoc-member-header" id="MrScalarTaskScalingUpPolicy-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L859">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L859">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2904,26 +2904,26 @@ The value that the specified statistic is compared to.
 The unit for a given metric. Valid Values: `seconds` | `microseconds` | `milliseconds` | `bytes` | `kilobytes` | `megabytes` | `gigabytes` | `terabytes` | `bits` | `kilobits` | `megabits` | `gigabits` | `terabits` | `percent` | `count` | `bytes/second` | `kilobytes/second` | `megabytes/second` | `gigabytes/second` | `terabytes/second` | `bits/second` | `kilobits/second` | `megabits/second` | `gigabits/second` | `terabits/second` | `count/second` | `none`
 
 <h3 class="pdoc-module-header" id="MrScalarTerminationPolicy" data-link-title="MrScalarTerminationPolicy">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L862">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L862">
         interface <strong>MrScalarTerminationPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>MrScalarTerminationPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="MrScalarTerminationPolicy-statements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L863">property <b>statements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L863">property <b>statements</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statements: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MrScalarTerminationPolicyStatement'>MrScalarTerminationPolicyStatement</a>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="MrScalarTerminationPolicyStatement" data-link-title="MrScalarTerminationPolicyStatement">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L866">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L866">
         interface <strong>MrScalarTerminationPolicyStatement</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>MrScalarTerminationPolicyStatement</span></code></pre>
 <h4 class="pdoc-member-header" id="MrScalarTerminationPolicyStatement-evaluationPeriods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L870">property <b>evaluationPeriods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L870">property <b>evaluationPeriods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluationPeriods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2931,7 +2931,7 @@ The unit for a given metric. Valid Values: `seconds` | `microseconds` | `millise
 The number of periods over which data is compared to the specified threshold.
 
 <h4 class="pdoc-member-header" id="MrScalarTerminationPolicyStatement-metricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L874">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L874">property <b>metricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2939,7 +2939,7 @@ The number of periods over which data is compared to the specified threshold.
 The name of the metric in CloudWatch which the statement will be based on.
 
 <h4 class="pdoc-member-header" id="MrScalarTerminationPolicyStatement-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L878">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L878">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2947,7 +2947,7 @@ The name of the metric in CloudWatch which the statement will be based on.
 Must contain the value: `AWS/ElasticMapReduce`.
 
 <h4 class="pdoc-member-header" id="MrScalarTerminationPolicyStatement-operator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L882">property <b>operator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L882">property <b>operator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2955,7 +2955,7 @@ Must contain the value: `AWS/ElasticMapReduce`.
 The operator to use in order to determine if the policy is applicable. Valid values: `gt` | `gte` | `lt` | `lte`
 
 <h4 class="pdoc-member-header" id="MrScalarTerminationPolicyStatement-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L886">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L886">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2963,7 +2963,7 @@ The operator to use in order to determine if the policy is applicable. Valid val
 The time window in seconds over which the statistic is applied.
 
 <h4 class="pdoc-member-header" id="MrScalarTerminationPolicyStatement-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L890">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L890">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2971,7 +2971,7 @@ The time window in seconds over which the statistic is applied.
 The aggregation method of the given metric. Valid Values: `average` | `sum` | `sampleCount` | `maximum` | `minimum`
 
 <h4 class="pdoc-member-header" id="MrScalarTerminationPolicyStatement-threshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L894">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L894">property <b>threshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2979,7 +2979,7 @@ The aggregation method of the given metric. Valid Values: `average` | `sum` | `s
 The value that the specified statistic is compared to.
 
 <h4 class="pdoc-member-header" id="MrScalarTerminationPolicyStatement-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L898">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L898">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2987,117 +2987,117 @@ The value that the specified statistic is compared to.
 The unit for a given metric. Valid Values: `seconds` | `microseconds` | `milliseconds` | `bytes` | `kilobytes` | `megabytes` | `gigabytes` | `terabytes` | `bits` | `kilobits` | `megabits` | `gigabits` | `terabits` | `percent` | `count` | `bytes/second` | `kilobytes/second` | `megabytes/second` | `gigabytes/second` | `terabytes/second` | `bits/second` | `kilobits/second` | `megabits/second` | `gigabits/second` | `terabits/second` | `count/second` | `none`
 
 <h3 class="pdoc-module-header" id="OceanAutoscaler" data-link-title="OceanAutoscaler">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L901">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L901">
         interface <strong>OceanAutoscaler</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanAutoscaler</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanAutoscaler-autoHeadroomPercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L902">property <b>autoHeadroomPercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L902">property <b>autoHeadroomPercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoHeadroomPercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanAutoscaler-autoscaleCooldown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L903">property <b>autoscaleCooldown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L903">property <b>autoscaleCooldown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleCooldown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanAutoscaler-autoscaleDown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L904">property <b>autoscaleDown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L904">property <b>autoscaleDown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleDown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OceanAutoscalerAutoscaleDown'>OceanAutoscalerAutoscaleDown</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanAutoscaler-autoscaleHeadroom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L905">property <b>autoscaleHeadroom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L905">property <b>autoscaleHeadroom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleHeadroom?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OceanAutoscalerAutoscaleHeadroom'>OceanAutoscalerAutoscaleHeadroom</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanAutoscaler-autoscaleIsAutoConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L906">property <b>autoscaleIsAutoConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L906">property <b>autoscaleIsAutoConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleIsAutoConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanAutoscaler-autoscaleIsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L907">property <b>autoscaleIsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L907">property <b>autoscaleIsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleIsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanAutoscaler-resourceLimits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L908">property <b>resourceLimits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L908">property <b>resourceLimits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceLimits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OceanAutoscalerResourceLimits'>OceanAutoscalerResourceLimits</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OceanAutoscalerAutoscaleDown" data-link-title="OceanAutoscalerAutoscaleDown">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L911">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L911">
         interface <strong>OceanAutoscalerAutoscaleDown</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanAutoscalerAutoscaleDown</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanAutoscalerAutoscaleDown-evaluationPeriods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L912">property <b>evaluationPeriods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L912">property <b>evaluationPeriods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluationPeriods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanAutoscalerAutoscaleDown-maxScaleDownPercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L913">property <b>maxScaleDownPercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L913">property <b>maxScaleDownPercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxScaleDownPercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OceanAutoscalerAutoscaleHeadroom" data-link-title="OceanAutoscalerAutoscaleHeadroom">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L916">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L916">
         interface <strong>OceanAutoscalerAutoscaleHeadroom</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanAutoscalerAutoscaleHeadroom</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanAutoscalerAutoscaleHeadroom-cpuPerUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L917">property <b>cpuPerUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L917">property <b>cpuPerUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cpuPerUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanAutoscalerAutoscaleHeadroom-gpuPerUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L918">property <b>gpuPerUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L918">property <b>gpuPerUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gpuPerUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanAutoscalerAutoscaleHeadroom-memoryPerUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L919">property <b>memoryPerUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L919">property <b>memoryPerUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memoryPerUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanAutoscalerAutoscaleHeadroom-numOfUnits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L920">property <b>numOfUnits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L920">property <b>numOfUnits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numOfUnits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OceanAutoscalerResourceLimits" data-link-title="OceanAutoscalerResourceLimits">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L923">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L923">
         interface <strong>OceanAutoscalerResourceLimits</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanAutoscalerResourceLimits</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanAutoscalerResourceLimits-maxMemoryGib">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L924">property <b>maxMemoryGib</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L924">property <b>maxMemoryGib</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxMemoryGib?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanAutoscalerResourceLimits-maxVcpu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L925">property <b>maxVcpu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L925">property <b>maxVcpu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxVcpu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OceanLaunchSpecAutoscaleHeadroom" data-link-title="OceanLaunchSpecAutoscaleHeadroom">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L928">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L928">
         interface <strong>OceanLaunchSpecAutoscaleHeadroom</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanLaunchSpecAutoscaleHeadroom</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanLaunchSpecAutoscaleHeadroom-cpuPerUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L932">property <b>cpuPerUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L932">property <b>cpuPerUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cpuPerUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3105,7 +3105,7 @@ The unit for a given metric. Valid Values: `seconds` | `microseconds` | `millise
 Optionally configure the number of CPUs to allocate for each headroom unit. CPUs are denoted in millicores, where 1000 millicores = 1 vCPU.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecAutoscaleHeadroom-gpuPerUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L936">property <b>gpuPerUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L936">property <b>gpuPerUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gpuPerUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3113,7 +3113,7 @@ Optionally configure the number of CPUs to allocate for each headroom unit. CPUs
 Optionally configure the number of GPUS to allocate for each headroom unit.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecAutoscaleHeadroom-memoryPerUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L940">property <b>memoryPerUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L940">property <b>memoryPerUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memoryPerUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3121,7 +3121,7 @@ Optionally configure the number of GPUS to allocate for each headroom unit.
 Optionally configure the amount of memory (MiB) to allocate for each headroom unit.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecAutoscaleHeadroom-numOfUnits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L944">property <b>numOfUnits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L944">property <b>numOfUnits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numOfUnits: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3129,14 +3129,14 @@ Optionally configure the amount of memory (MiB) to allocate for each headroom un
 The number of units to retain as headroom, where each unit has the defined headroom CPU, memory and GPU.
 
 <h3 class="pdoc-module-header" id="OceanLaunchSpecBlockDeviceMapping" data-link-title="OceanLaunchSpecBlockDeviceMapping">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L947">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L947">
         interface <strong>OceanLaunchSpecBlockDeviceMapping</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanLaunchSpecBlockDeviceMapping</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMapping-deviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L951">property <b>deviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L951">property <b>deviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deviceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3144,7 +3144,7 @@ The number of units to retain as headroom, where each unit has the defined headr
 String. Set device name. (Example: "/dev/xvda1").
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMapping-ebs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L955">property <b>ebs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L955">property <b>ebs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ebs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OceanLaunchSpecBlockDeviceMappingEbs'>OceanLaunchSpecBlockDeviceMappingEbs</a>&gt;;</code></pre>
@@ -3152,7 +3152,7 @@ String. Set device name. (Example: "/dev/xvda1").
 Object. Set Elastic Block Store properties .
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMapping-noDevice">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L959">property <b>noDevice</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L959">property <b>noDevice</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>noDevice?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3160,19 +3160,19 @@ Object. Set Elastic Block Store properties .
 String. suppresses the specified device included in the block device mapping of the AMI.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMapping-virtualName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L960">property <b>virtualName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L960">property <b>virtualName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>virtualName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OceanLaunchSpecBlockDeviceMappingEbs" data-link-title="OceanLaunchSpecBlockDeviceMappingEbs">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L963">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L963">
         interface <strong>OceanLaunchSpecBlockDeviceMappingEbs</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanLaunchSpecBlockDeviceMappingEbs</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMappingEbs-deleteOnTermination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L967">property <b>deleteOnTermination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L967">property <b>deleteOnTermination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deleteOnTermination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3180,7 +3180,7 @@ String. suppresses the specified device included in the block device mapping of 
 Boolean. Flag to delete the EBS on instance termination.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMappingEbs-dynamicVolumeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L971">property <b>dynamicVolumeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L971">property <b>dynamicVolumeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dynamicVolumeSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSize'>OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSize</a>&gt;;</code></pre>
@@ -3188,7 +3188,7 @@ Boolean. Flag to delete the EBS on instance termination.
 Object. Set dynamic volume size properties. When using this object, you cannot use volumeSize. You must use one or the other.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMappingEbs-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L975">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L975">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3196,7 +3196,7 @@ Object. Set dynamic volume size properties. When using this object, you cannot u
 Boolean. Enables [EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html) on the volume.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMappingEbs-iops">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L979">property <b>iops</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L979">property <b>iops</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iops?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3204,7 +3204,7 @@ Boolean. Enables [EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/User
 Int. The number of I/O operations per second (IOPS) that the volume supports.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMappingEbs-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L983">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L983">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3212,7 +3212,7 @@ Int. The number of I/O operations per second (IOPS) that the volume supports.
 String. Identifier (key ID, key alias, ID ARN, or alias ARN) for a customer managed CMK under which the EBS volume is encrypted.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMappingEbs-snapshotId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L987">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L987">property <b>snapshotId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3220,7 +3220,7 @@ String. Identifier (key ID, key alias, ID ARN, or alias ARN) for a customer mana
 (Optional) String. The Snapshot ID to mount by.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMappingEbs-throughput">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L991">property <b>throughput</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L991">property <b>throughput</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>throughput?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3228,7 +3228,7 @@ String. Identifier (key ID, key alias, ID ARN, or alias ARN) for a customer mana
 The amount of data transferred to or from a storage device per second, you can use this param just in a case that `volumeType` = gp3.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMappingEbs-volumeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L995">property <b>volumeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L995">property <b>volumeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3236,7 +3236,7 @@ The amount of data transferred to or from a storage device per second, you can u
 Int. The size, in GB of the volume.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMappingEbs-volumeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L999">property <b>volumeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L999">property <b>volumeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3244,14 +3244,14 @@ Int. The size, in GB of the volume.
 String. The type of the volume (example: "gp2").
 
 <h3 class="pdoc-module-header" id="OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSize" data-link-title="OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSize">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1002">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1002">
         interface <strong>OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSize</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSize</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSize-baseSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1006">property <b>baseSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1006">property <b>baseSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>baseSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3259,7 +3259,7 @@ String. The type of the volume (example: "gp2").
 Int. Initial size for volume. (Example: 50)
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSize-resource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1010">property <b>resource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1010">property <b>resource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3267,7 +3267,7 @@ Int. Initial size for volume. (Example: 50)
 String. Resource type to increase volume size dynamically by. (valid values: "CPU")
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSize-sizePerResourceUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1014">property <b>sizePerResourceUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1014">property <b>sizePerResourceUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sizePerResourceUnit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3275,14 +3275,14 @@ String. Resource type to increase volume size dynamically by. (valid values: "CP
 Int. Additional size (in GB) per resource unit. (Example: baseSize= 50, sizePerResourceUnit=20, and instance with 2 CPU is launched - its total disk size will be: 90GB)
 
 <h3 class="pdoc-module-header" id="OceanLaunchSpecElasticIpPool" data-link-title="OceanLaunchSpecElasticIpPool">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1017">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1017">
         interface <strong>OceanLaunchSpecElasticIpPool</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanLaunchSpecElasticIpPool</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanLaunchSpecElasticIpPool-tagSelector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1021">property <b>tagSelector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1021">property <b>tagSelector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tagSelector?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OceanLaunchSpecElasticIpPoolTagSelector'>OceanLaunchSpecElasticIpPoolTagSelector</a>&gt;;</code></pre>
@@ -3290,14 +3290,14 @@ Int. Additional size (in GB) per resource unit. (Example: baseSize= 50, sizePerR
 Key-value object, which defines an Elastic IP from the customer pool. Can be null.
 
 <h3 class="pdoc-module-header" id="OceanLaunchSpecElasticIpPoolTagSelector" data-link-title="OceanLaunchSpecElasticIpPoolTagSelector">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1024">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1024">
         interface <strong>OceanLaunchSpecElasticIpPoolTagSelector</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanLaunchSpecElasticIpPoolTagSelector</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanLaunchSpecElasticIpPoolTagSelector-tagKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1028">property <b>tagKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1028">property <b>tagKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tagKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3305,7 +3305,7 @@ Key-value object, which defines an Elastic IP from the customer pool. Can be nul
 Elastic IP tag key. The launch spec will consider all elastic IPs tagged with this tag as a part of the elastic IP pool to use.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecElasticIpPoolTagSelector-tagValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1032">property <b>tagValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1032">property <b>tagValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tagValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3313,14 +3313,14 @@ Elastic IP tag key. The launch spec will consider all elastic IPs tagged with th
 Elastic IP tag value. Can be null.
 
 <h3 class="pdoc-module-header" id="OceanLaunchSpecLabel" data-link-title="OceanLaunchSpecLabel">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1035">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1035">
         interface <strong>OceanLaunchSpecLabel</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanLaunchSpecLabel</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanLaunchSpecLabel-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1039">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1039">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3328,7 +3328,7 @@ Elastic IP tag value. Can be null.
 The tag key.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecLabel-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1043">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1043">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3336,14 +3336,14 @@ The tag key.
 The tag value.
 
 <h3 class="pdoc-module-header" id="OceanLaunchSpecResourceLimit" data-link-title="OceanLaunchSpecResourceLimit">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1046">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1046">
         interface <strong>OceanLaunchSpecResourceLimit</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanLaunchSpecResourceLimit</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanLaunchSpecResourceLimit-maxInstanceCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1050">property <b>maxInstanceCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1050">property <b>maxInstanceCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxInstanceCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3351,14 +3351,14 @@ The tag value.
 set a maximum number of instances per launch specification. Can be null. If set, value must be greater than or equal to 0.
 
 <h3 class="pdoc-module-header" id="OceanLaunchSpecStrategy" data-link-title="OceanLaunchSpecStrategy">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1053">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1053">
         interface <strong>OceanLaunchSpecStrategy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanLaunchSpecStrategy</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanLaunchSpecStrategy-spotPercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1057">property <b>spotPercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1057">property <b>spotPercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spotPercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3366,14 +3366,14 @@ set a maximum number of instances per launch specification. Can be null. If set,
 (Optional; if not using `spotPercentege` under `ocean strategy`) When set, Ocean will proactively try to maintain as close as possible to the percentage of Spot instances out of all the Launch Spec instances.
 
 <h3 class="pdoc-module-header" id="OceanLaunchSpecTag" data-link-title="OceanLaunchSpecTag">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1060">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1060">
         interface <strong>OceanLaunchSpecTag</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanLaunchSpecTag</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanLaunchSpecTag-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1064">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1064">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3381,7 +3381,7 @@ set a maximum number of instances per launch specification. Can be null. If set,
 The tag key.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecTag-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1068">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1068">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3389,14 +3389,14 @@ The tag key.
 The tag value.
 
 <h3 class="pdoc-module-header" id="OceanLaunchSpecTaint" data-link-title="OceanLaunchSpecTaint">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1071">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1071">
         interface <strong>OceanLaunchSpecTaint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanLaunchSpecTaint</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanLaunchSpecTaint-effect">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1075">property <b>effect</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1075">property <b>effect</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>effect: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3404,7 +3404,7 @@ The tag value.
 The effect of the taint. Valid values: `"NoSchedule"`, `"PreferNoSchedule"`, `"NoExecute"`.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecTaint-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1079">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1079">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3412,7 +3412,7 @@ The effect of the taint. Valid values: `"NoSchedule"`, `"PreferNoSchedule"`, `"N
 The tag key.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecTaint-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1083">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1083">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3420,14 +3420,14 @@ The tag key.
 The tag value.
 
 <h3 class="pdoc-module-header" id="OceanLoadBalancer" data-link-title="OceanLoadBalancer">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1086">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1086">
         interface <strong>OceanLoadBalancer</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanLoadBalancer</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanLoadBalancer-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1090">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1090">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3435,7 +3435,7 @@ The tag value.
 Required if type is set to TARGET_GROUP
 
 <h4 class="pdoc-member-header" id="OceanLoadBalancer-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1094">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1094">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3443,7 +3443,7 @@ Required if type is set to TARGET_GROUP
 Required if type is set to CLASSIC
 
 <h4 class="pdoc-member-header" id="OceanLoadBalancer-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1098">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1098">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3451,70 +3451,70 @@ Required if type is set to CLASSIC
 Can be set to CLASSIC or TARGET_GROUP
 
 <h3 class="pdoc-module-header" id="OceanScheduledTask" data-link-title="OceanScheduledTask">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1101">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1101">
         interface <strong>OceanScheduledTask</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanScheduledTask</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanScheduledTask-shutdownHours">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1102">property <b>shutdownHours</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1102">property <b>shutdownHours</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shutdownHours?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OceanScheduledTaskShutdownHours'>OceanScheduledTaskShutdownHours</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanScheduledTask-tasks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1103">property <b>tasks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1103">property <b>tasks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tasks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OceanScheduledTaskTask'>OceanScheduledTaskTask</a>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OceanScheduledTaskShutdownHours" data-link-title="OceanScheduledTaskShutdownHours">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1106">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1106">
         interface <strong>OceanScheduledTaskShutdownHours</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanScheduledTaskShutdownHours</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanScheduledTaskShutdownHours-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1107">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1107">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanScheduledTaskShutdownHours-timeWindows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1108">property <b>timeWindows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1108">property <b>timeWindows</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeWindows: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OceanScheduledTaskTask" data-link-title="OceanScheduledTaskTask">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1111">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1111">
         interface <strong>OceanScheduledTaskTask</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanScheduledTaskTask</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanScheduledTaskTask-cronExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1112">property <b>cronExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1112">property <b>cronExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cronExpression: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanScheduledTaskTask-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1113">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1113">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanScheduledTaskTask-taskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1114">property <b>taskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1114">property <b>taskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OceanTag" data-link-title="OceanTag">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1117">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1117">
         interface <strong>OceanTag</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanTag</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanTag-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1121">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1121">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3522,7 +3522,7 @@ Can be set to CLASSIC or TARGET_GROUP
 The tag key.
 
 <h4 class="pdoc-member-header" id="OceanTag-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1125">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1125">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3530,43 +3530,43 @@ The tag key.
 The tag value.
 
 <h3 class="pdoc-module-header" id="OceanUpdatePolicy" data-link-title="OceanUpdatePolicy">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1128">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1128">
         interface <strong>OceanUpdatePolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanUpdatePolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanUpdatePolicy-rollConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1129">property <b>rollConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1129">property <b>rollConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rollConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OceanUpdatePolicyRollConfig'>OceanUpdatePolicyRollConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanUpdatePolicy-shouldRoll">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1130">property <b>shouldRoll</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1130">property <b>shouldRoll</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shouldRoll: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OceanUpdatePolicyRollConfig" data-link-title="OceanUpdatePolicyRollConfig">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1133">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1133">
         interface <strong>OceanUpdatePolicyRollConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanUpdatePolicyRollConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanUpdatePolicyRollConfig-batchSizePercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1134">property <b>batchSizePercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1134">property <b>batchSizePercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>batchSizePercentage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="SuspensionSuspension" data-link-title="SuspensionSuspension">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1137">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1137">
         interface <strong>SuspensionSuspension</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SuspensionSuspension</span></code></pre>
 <h4 class="pdoc-member-header" id="SuspensionSuspension-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1141">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1141">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3575,58 +3575,58 @@ The name of process to suspend. Valid values: `"AUTO_HEALING" , "OUT_OF_STRATEGY
 
 <h2 id="azure" data-link-title="azure">namespace <strong>azure</strong></h2>
 <h3 class="pdoc-module-header" id="ElastigroupHealthCheck" data-link-title="ElastigroupHealthCheck">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1146">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1146">
         interface <strong>ElastigroupHealthCheck</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupHealthCheck</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupHealthCheck-autoHealing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1147">property <b>autoHealing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1147">property <b>autoHealing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoHealing?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupHealthCheck-gracePeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1148">property <b>gracePeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1148">property <b>gracePeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gracePeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupHealthCheck-healthCheckType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1149">property <b>healthCheckType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1149">property <b>healthCheckType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupImage" data-link-title="ElastigroupImage">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1152">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1152">
         interface <strong>ElastigroupImage</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupImage</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupImage-customs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1153">property <b>customs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1153">property <b>customs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupImageCustom'>ElastigroupImageCustom</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupImage-marketplaces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1154">property <b>marketplaces</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1154">property <b>marketplaces</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>marketplaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupImageMarketplace'>ElastigroupImageMarketplace</a>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupImageCustom" data-link-title="ElastigroupImageCustom">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1157">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1157">
         interface <strong>ElastigroupImageCustom</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupImageCustom</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupImageCustom-imageName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1158">property <b>imageName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1158">property <b>imageName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupImageCustom-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1162">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1162">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3634,109 +3634,109 @@ The name of process to suspend. Valid values: `"AUTO_HEALING" , "OUT_OF_STRATEGY
 The Resource Group that the user-assigned managed identity resides in.
 
 <h3 class="pdoc-module-header" id="ElastigroupImageMarketplace" data-link-title="ElastigroupImageMarketplace">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1165">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1165">
         interface <strong>ElastigroupImageMarketplace</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupImageMarketplace</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupImageMarketplace-offer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1166">property <b>offer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1166">property <b>offer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>offer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupImageMarketplace-publisher">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1167">property <b>publisher</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1167">property <b>publisher</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publisher: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupImageMarketplace-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1168">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1168">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationKubernetes" data-link-title="ElastigroupIntegrationKubernetes">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1171">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1171">
         interface <strong>ElastigroupIntegrationKubernetes</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationKubernetes</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationKubernetes-clusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1172">property <b>clusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1172">property <b>clusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationMultaiRuntime" data-link-title="ElastigroupIntegrationMultaiRuntime">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1175">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1175">
         interface <strong>ElastigroupIntegrationMultaiRuntime</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationMultaiRuntime</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationMultaiRuntime-deploymentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1176">property <b>deploymentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1176">property <b>deploymentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupLoadBalancer" data-link-title="ElastigroupLoadBalancer">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1179">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1179">
         interface <strong>ElastigroupLoadBalancer</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupLoadBalancer</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupLoadBalancer-autoWeight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1180">property <b>autoWeight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1180">property <b>autoWeight</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoWeight?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupLoadBalancer-balancerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1181">property <b>balancerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1181">property <b>balancerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>balancerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupLoadBalancer-targetSetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1182">property <b>targetSetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1182">property <b>targetSetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetSetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupLoadBalancer-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1183">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1183">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupLogin" data-link-title="ElastigroupLogin">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1186">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1186">
         interface <strong>ElastigroupLogin</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupLogin</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupLogin-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1187">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1187">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupLogin-sshPublicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1188">property <b>sshPublicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1188">property <b>sshPublicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sshPublicKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupLogin-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1189">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1189">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupManagedServiceIdentity" data-link-title="ElastigroupManagedServiceIdentity">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1192">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1192">
         interface <strong>ElastigroupManagedServiceIdentity</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupManagedServiceIdentity</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupManagedServiceIdentity-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1196">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1196">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3744,7 +3744,7 @@ The Resource Group that the user-assigned managed identity resides in.
 The name of the managed identity.
 
 <h4 class="pdoc-member-header" id="ElastigroupManagedServiceIdentity-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1200">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1200">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3752,24 +3752,24 @@ The name of the managed identity.
 The Resource Group that the user-assigned managed identity resides in.
 
 <h3 class="pdoc-module-header" id="ElastigroupNetwork" data-link-title="ElastigroupNetwork">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1203">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1203">
         interface <strong>ElastigroupNetwork</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupNetwork</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupNetwork-additionalIpConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1204">property <b>additionalIpConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1204">property <b>additionalIpConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalIpConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupNetworkAdditionalIpConfig'>ElastigroupNetworkAdditionalIpConfig</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupNetwork-assignPublicIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1205">property <b>assignPublicIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1205">property <b>assignPublicIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assignPublicIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupNetwork-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1209">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1209">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3777,24 +3777,24 @@ The Resource Group that the user-assigned managed identity resides in.
 The Resource Group that the user-assigned managed identity resides in.
 
 <h4 class="pdoc-member-header" id="ElastigroupNetwork-subnetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1210">property <b>subnetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1210">property <b>subnetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupNetwork-virtualNetworkName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1211">property <b>virtualNetworkName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1211">property <b>virtualNetworkName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>virtualNetworkName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupNetworkAdditionalIpConfig" data-link-title="ElastigroupNetworkAdditionalIpConfig">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1214">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1214">
         interface <strong>ElastigroupNetworkAdditionalIpConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupNetworkAdditionalIpConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupNetworkAdditionalIpConfig-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1218">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1218">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3802,116 +3802,116 @@ The Resource Group that the user-assigned managed identity resides in.
 The name of the managed identity.
 
 <h4 class="pdoc-member-header" id="ElastigroupNetworkAdditionalIpConfig-privateIpVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1219">property <b>privateIpVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1219">property <b>privateIpVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateIpVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupScalingDownPolicy" data-link-title="ElastigroupScalingDownPolicy">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1222">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1222">
         interface <strong>ElastigroupScalingDownPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupScalingDownPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-actionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1223">property <b>actionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1223">property <b>actionType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actionType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-adjustment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1224">property <b>adjustment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1224">property <b>adjustment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adjustment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-cooldown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1225">property <b>cooldown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1225">property <b>cooldown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cooldown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1226">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1226">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupScalingDownPolicyDimension'>ElastigroupScalingDownPolicyDimension</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-evaluationPeriods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1227">property <b>evaluationPeriods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1227">property <b>evaluationPeriods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluationPeriods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-maxTargetCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1228">property <b>maxTargetCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1228">property <b>maxTargetCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxTargetCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-maximum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1229">property <b>maximum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1229">property <b>maximum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maximum?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-metricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1230">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1230">property <b>metricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-minTargetCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1231">property <b>minTargetCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1231">property <b>minTargetCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minTargetCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-minimum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1232">property <b>minimum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1232">property <b>minimum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minimum?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1233">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1233">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-operator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1234">property <b>operator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1234">property <b>operator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1235">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1235">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1236">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1236">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1237">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1237">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1238">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1238">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>target?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-threshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1239">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1239">property <b>threshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1240">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1240">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupScalingDownPolicyDimension" data-link-title="ElastigroupScalingDownPolicyDimension">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1243">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1243">
         interface <strong>ElastigroupScalingDownPolicyDimension</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupScalingDownPolicyDimension</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicyDimension-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1247">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1247">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3919,116 +3919,116 @@ The name of the managed identity.
 The name of the managed identity.
 
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicyDimension-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1248">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1248">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupScalingUpPolicy" data-link-title="ElastigroupScalingUpPolicy">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1251">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1251">
         interface <strong>ElastigroupScalingUpPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupScalingUpPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-actionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1252">property <b>actionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1252">property <b>actionType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actionType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-adjustment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1253">property <b>adjustment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1253">property <b>adjustment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adjustment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-cooldown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1254">property <b>cooldown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1254">property <b>cooldown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cooldown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1255">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1255">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupScalingUpPolicyDimension'>ElastigroupScalingUpPolicyDimension</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-evaluationPeriods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1256">property <b>evaluationPeriods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1256">property <b>evaluationPeriods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluationPeriods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-maxTargetCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1257">property <b>maxTargetCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1257">property <b>maxTargetCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxTargetCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-maximum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1258">property <b>maximum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1258">property <b>maximum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maximum?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-metricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1259">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1259">property <b>metricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-minTargetCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1260">property <b>minTargetCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1260">property <b>minTargetCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minTargetCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-minimum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1261">property <b>minimum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1261">property <b>minimum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minimum?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1262">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1262">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-operator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1263">property <b>operator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1263">property <b>operator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1264">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1264">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1265">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1265">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1266">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1266">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1267">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1267">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>target?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-threshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1268">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1268">property <b>threshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1269">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1269">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupScalingUpPolicyDimension" data-link-title="ElastigroupScalingUpPolicyDimension">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1272">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1272">
         interface <strong>ElastigroupScalingUpPolicyDimension</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupScalingUpPolicyDimension</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicyDimension-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1276">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1276">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4036,76 +4036,76 @@ The name of the managed identity.
 The name of the managed identity.
 
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicyDimension-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1277">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1277">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupScheduledTask" data-link-title="ElastigroupScheduledTask">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1280">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1280">
         interface <strong>ElastigroupScheduledTask</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupScheduledTask</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScheduledTask-adjustment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1281">property <b>adjustment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1281">property <b>adjustment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adjustment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScheduledTask-adjustmentPercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1282">property <b>adjustmentPercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1282">property <b>adjustmentPercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adjustmentPercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScheduledTask-batchSizePercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1283">property <b>batchSizePercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1283">property <b>batchSizePercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>batchSizePercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScheduledTask-cronExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1284">property <b>cronExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1284">property <b>cronExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cronExpression: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScheduledTask-gracePeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1285">property <b>gracePeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1285">property <b>gracePeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gracePeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScheduledTask-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1286">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1286">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScheduledTask-scaleMaxCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1287">property <b>scaleMaxCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1287">property <b>scaleMaxCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scaleMaxCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScheduledTask-scaleMinCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1288">property <b>scaleMinCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1288">property <b>scaleMinCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scaleMinCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScheduledTask-scaleTargetCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1289">property <b>scaleTargetCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1289">property <b>scaleTargetCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scaleTargetCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScheduledTask-taskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1290">property <b>taskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1290">property <b>taskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupStrategy" data-link-title="ElastigroupStrategy">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1293">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1293">
         interface <strong>ElastigroupStrategy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupStrategy</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupStrategy-drainingTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1297">property <b>drainingTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1297">property <b>drainingTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>drainingTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4113,7 +4113,7 @@ The name of the managed identity.
 Time (seconds) to allow the instance to be drained from incoming TCP connections and detached from MLB before terminating it during a scale-down operation.
 
 <h4 class="pdoc-member-header" id="ElastigroupStrategy-lowPriorityPercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1301">property <b>lowPriorityPercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1301">property <b>lowPriorityPercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lowPriorityPercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4121,7 +4121,7 @@ Time (seconds) to allow the instance to be drained from incoming TCP connections
 Percentage of Low Priority instances to maintain. Required if `odCount` is not specified.
 
 <h4 class="pdoc-member-header" id="ElastigroupStrategy-odCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1305">property <b>odCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1305">property <b>odCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>odCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4129,142 +4129,142 @@ Percentage of Low Priority instances to maintain. Required if `odCount` is not s
 Number of On-Demand instances to maintain. Required if lowPriorityPercentage is not specified.
 
 <h3 class="pdoc-module-header" id="ElastigroupUpdatePolicy" data-link-title="ElastigroupUpdatePolicy">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1308">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1308">
         interface <strong>ElastigroupUpdatePolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupUpdatePolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupUpdatePolicy-rollConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1309">property <b>rollConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1309">property <b>rollConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rollConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupUpdatePolicyRollConfig'>ElastigroupUpdatePolicyRollConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupUpdatePolicy-shouldRoll">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1310">property <b>shouldRoll</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1310">property <b>shouldRoll</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shouldRoll: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupUpdatePolicyRollConfig" data-link-title="ElastigroupUpdatePolicyRollConfig">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1313">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1313">
         interface <strong>ElastigroupUpdatePolicyRollConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupUpdatePolicyRollConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupUpdatePolicyRollConfig-batchSizePercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1314">property <b>batchSizePercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1314">property <b>batchSizePercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>batchSizePercentage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupUpdatePolicyRollConfig-gracePeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1315">property <b>gracePeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1315">property <b>gracePeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gracePeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupUpdatePolicyRollConfig-healthCheckType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1316">property <b>healthCheckType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1316">property <b>healthCheckType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h2 id="ecs" data-link-title="ecs">namespace <strong>ecs</strong></h2>
 <h3 class="pdoc-module-header" id="OceanAutoscaler" data-link-title="OceanAutoscaler">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1321">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1321">
         interface <strong>OceanAutoscaler</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanAutoscaler</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanAutoscaler-cooldown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1322">property <b>cooldown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1322">property <b>cooldown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cooldown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanAutoscaler-down">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1323">property <b>down</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1323">property <b>down</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>down?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OceanAutoscalerDown'>OceanAutoscalerDown</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanAutoscaler-headroom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1324">property <b>headroom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1324">property <b>headroom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>headroom?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OceanAutoscalerHeadroom'>OceanAutoscalerHeadroom</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanAutoscaler-isAutoConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1325">property <b>isAutoConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1325">property <b>isAutoConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isAutoConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanAutoscaler-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1326">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1326">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanAutoscaler-resourceLimits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1327">property <b>resourceLimits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1327">property <b>resourceLimits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceLimits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OceanAutoscalerResourceLimits'>OceanAutoscalerResourceLimits</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OceanAutoscalerDown" data-link-title="OceanAutoscalerDown">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1330">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1330">
         interface <strong>OceanAutoscalerDown</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanAutoscalerDown</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanAutoscalerDown-maxScaleDownPercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1331">property <b>maxScaleDownPercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1331">property <b>maxScaleDownPercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxScaleDownPercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OceanAutoscalerHeadroom" data-link-title="OceanAutoscalerHeadroom">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1334">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1334">
         interface <strong>OceanAutoscalerHeadroom</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanAutoscalerHeadroom</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanAutoscalerHeadroom-cpuPerUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1335">property <b>cpuPerUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1335">property <b>cpuPerUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cpuPerUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanAutoscalerHeadroom-memoryPerUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1336">property <b>memoryPerUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1336">property <b>memoryPerUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memoryPerUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanAutoscalerHeadroom-numOfUnits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1337">property <b>numOfUnits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1337">property <b>numOfUnits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numOfUnits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OceanAutoscalerResourceLimits" data-link-title="OceanAutoscalerResourceLimits">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1340">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1340">
         interface <strong>OceanAutoscalerResourceLimits</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanAutoscalerResourceLimits</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanAutoscalerResourceLimits-maxMemoryGib">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1341">property <b>maxMemoryGib</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1341">property <b>maxMemoryGib</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxMemoryGib?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanAutoscalerResourceLimits-maxVcpu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1342">property <b>maxVcpu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1342">property <b>maxVcpu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxVcpu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OceanBlockDeviceMapping" data-link-title="OceanBlockDeviceMapping">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1345">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1345">
         interface <strong>OceanBlockDeviceMapping</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanBlockDeviceMapping</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanBlockDeviceMapping-deviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1349">property <b>deviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1349">property <b>deviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deviceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4272,7 +4272,7 @@ Number of On-Demand instances to maintain. Required if lowPriorityPercentage is 
 String. Set device name. Example: `/dev/xvda1`.
 
 <h4 class="pdoc-member-header" id="OceanBlockDeviceMapping-ebs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1353">property <b>ebs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1353">property <b>ebs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ebs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OceanBlockDeviceMappingEbs'>OceanBlockDeviceMappingEbs</a>&gt;;</code></pre>
@@ -4280,7 +4280,7 @@ String. Set device name. Example: `/dev/xvda1`.
 Object. Set Elastic Block Store properties.
 
 <h4 class="pdoc-member-header" id="OceanBlockDeviceMapping-noDevice">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1357">property <b>noDevice</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1357">property <b>noDevice</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>noDevice?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4288,19 +4288,19 @@ Object. Set Elastic Block Store properties.
 String. Suppresses the specified device included in the block device mapping of the AMI.
 
 <h4 class="pdoc-member-header" id="OceanBlockDeviceMapping-virtualName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1358">property <b>virtualName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1358">property <b>virtualName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>virtualName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OceanBlockDeviceMappingEbs" data-link-title="OceanBlockDeviceMappingEbs">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1361">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1361">
         interface <strong>OceanBlockDeviceMappingEbs</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanBlockDeviceMappingEbs</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanBlockDeviceMappingEbs-deleteOnTermination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1365">property <b>deleteOnTermination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1365">property <b>deleteOnTermination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deleteOnTermination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4308,7 +4308,7 @@ String. Suppresses the specified device included in the block device mapping of 
 Boolean. Toggles EBS deletion upon instance termination.
 
 <h4 class="pdoc-member-header" id="OceanBlockDeviceMappingEbs-dynamicVolumeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1369">property <b>dynamicVolumeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1369">property <b>dynamicVolumeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dynamicVolumeSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OceanBlockDeviceMappingEbsDynamicVolumeSize'>OceanBlockDeviceMappingEbsDynamicVolumeSize</a>&gt;;</code></pre>
@@ -4316,7 +4316,7 @@ Boolean. Toggles EBS deletion upon instance termination.
 Object. Set dynamic volume size properties. When using this object, you cannot use volumeSize. You must use one or the other.
 
 <h4 class="pdoc-member-header" id="OceanBlockDeviceMappingEbs-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1373">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1373">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4324,7 +4324,7 @@ Object. Set dynamic volume size properties. When using this object, you cannot u
 Boolean. Enables [EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html) on the volume.
 
 <h4 class="pdoc-member-header" id="OceanBlockDeviceMappingEbs-iops">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1377">property <b>iops</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1377">property <b>iops</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iops?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4332,7 +4332,7 @@ Boolean. Enables [EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/User
 Int. The number of I/O operations per second (IOPS) that the volume supports.
 
 <h4 class="pdoc-member-header" id="OceanBlockDeviceMappingEbs-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1381">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1381">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4340,7 +4340,7 @@ Int. The number of I/O operations per second (IOPS) that the volume supports.
 String. Identifier (key ID, key alias, ID ARN, or alias ARN) for a customer managed CMK under which the EBS volume is encrypted.
 
 <h4 class="pdoc-member-header" id="OceanBlockDeviceMappingEbs-snapshotId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1385">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1385">property <b>snapshotId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4348,7 +4348,7 @@ String. Identifier (key ID, key alias, ID ARN, or alias ARN) for a customer mana
 (Optional) String. The snapshot ID to mount by.
 
 <h4 class="pdoc-member-header" id="OceanBlockDeviceMappingEbs-throughput">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1389">property <b>throughput</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1389">property <b>throughput</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>throughput?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4356,7 +4356,7 @@ String. Identifier (key ID, key alias, ID ARN, or alias ARN) for a customer mana
 The amount of data transferred to or from a storage device per second, you can use this param just in a case that `volumeType` = gp3.
 
 <h4 class="pdoc-member-header" id="OceanBlockDeviceMappingEbs-volumeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1393">property <b>volumeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1393">property <b>volumeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4364,7 +4364,7 @@ The amount of data transferred to or from a storage device per second, you can u
 Int. The size (in GB) of the volume.
 
 <h4 class="pdoc-member-header" id="OceanBlockDeviceMappingEbs-volumeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1397">property <b>volumeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1397">property <b>volumeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4372,14 +4372,14 @@ Int. The size (in GB) of the volume.
 String. The type of the volume. Example: `gp2`.
 
 <h3 class="pdoc-module-header" id="OceanBlockDeviceMappingEbsDynamicVolumeSize" data-link-title="OceanBlockDeviceMappingEbsDynamicVolumeSize">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1400">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1400">
         interface <strong>OceanBlockDeviceMappingEbsDynamicVolumeSize</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanBlockDeviceMappingEbsDynamicVolumeSize</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanBlockDeviceMappingEbsDynamicVolumeSize-baseSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1404">property <b>baseSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1404">property <b>baseSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>baseSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4387,7 +4387,7 @@ String. The type of the volume. Example: `gp2`.
 Int. Initial size for volume. Example: `50`.
 
 <h4 class="pdoc-member-header" id="OceanBlockDeviceMappingEbsDynamicVolumeSize-resource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1408">property <b>resource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1408">property <b>resource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4395,7 +4395,7 @@ Int. Initial size for volume. Example: `50`.
 String. Resource type to increase volume size dynamically by. Valid values: `CPU`.
 
 <h4 class="pdoc-member-header" id="OceanBlockDeviceMappingEbsDynamicVolumeSize-sizePerResourceUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1412">property <b>sizePerResourceUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1412">property <b>sizePerResourceUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sizePerResourceUnit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4403,14 +4403,14 @@ String. Resource type to increase volume size dynamically by. Valid values: `CPU
 Int. Additional size (in GB) per resource unit. Example: When the `baseSize=50`, `sizePerResourceUnit=20`, and instance with two CPUs is launched, its total disk size will be: 90GB.
 
 <h3 class="pdoc-module-header" id="OceanLaunchSpecAttribute" data-link-title="OceanLaunchSpecAttribute">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1415">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1415">
         interface <strong>OceanLaunchSpecAttribute</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanLaunchSpecAttribute</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanLaunchSpecAttribute-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1419">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1419">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4418,7 +4418,7 @@ Int. Additional size (in GB) per resource unit. Example: When the `baseSize=50`,
 The label key.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecAttribute-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1423">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1423">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4426,14 +4426,14 @@ The label key.
 The label value.
 
 <h3 class="pdoc-module-header" id="OceanLaunchSpecAutoscaleHeadroom" data-link-title="OceanLaunchSpecAutoscaleHeadroom">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1426">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1426">
         interface <strong>OceanLaunchSpecAutoscaleHeadroom</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanLaunchSpecAutoscaleHeadroom</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanLaunchSpecAutoscaleHeadroom-cpuPerUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1430">property <b>cpuPerUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1430">property <b>cpuPerUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cpuPerUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4441,7 +4441,7 @@ The label value.
 Optionally configure the number of CPUs to allocate for each headroom unit. CPUs are denoted in CPU units, where 1024 units = 1 vCPU.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecAutoscaleHeadroom-memoryPerUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1434">property <b>memoryPerUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1434">property <b>memoryPerUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memoryPerUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4449,7 +4449,7 @@ Optionally configure the number of CPUs to allocate for each headroom unit. CPUs
 Optionally configure the amount of memory (MiB) to allocate for each headroom unit.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecAutoscaleHeadroom-numOfUnits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1438">property <b>numOfUnits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1438">property <b>numOfUnits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numOfUnits: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4457,14 +4457,14 @@ Optionally configure the amount of memory (MiB) to allocate for each headroom un
 The number of units to retain as headroom, where each unit has the defined headroom CPU and memory.
 
 <h3 class="pdoc-module-header" id="OceanLaunchSpecBlockDeviceMapping" data-link-title="OceanLaunchSpecBlockDeviceMapping">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1441">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1441">
         interface <strong>OceanLaunchSpecBlockDeviceMapping</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanLaunchSpecBlockDeviceMapping</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMapping-deviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1445">property <b>deviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1445">property <b>deviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deviceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4472,7 +4472,7 @@ The number of units to retain as headroom, where each unit has the defined headr
 String. Set device name. (Example: "/dev/xvda1").
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMapping-ebs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1449">property <b>ebs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1449">property <b>ebs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ebs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OceanLaunchSpecBlockDeviceMappingEbs'>OceanLaunchSpecBlockDeviceMappingEbs</a>&gt;;</code></pre>
@@ -4480,7 +4480,7 @@ String. Set device name. (Example: "/dev/xvda1").
 Object. Set Elastic Block Store properties .
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMapping-noDevice">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1453">property <b>noDevice</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1453">property <b>noDevice</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>noDevice?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4488,19 +4488,19 @@ Object. Set Elastic Block Store properties .
 String. suppresses the specified device included in the block device mapping of the AMI.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMapping-virtualName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1454">property <b>virtualName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1454">property <b>virtualName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>virtualName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OceanLaunchSpecBlockDeviceMappingEbs" data-link-title="OceanLaunchSpecBlockDeviceMappingEbs">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1457">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1457">
         interface <strong>OceanLaunchSpecBlockDeviceMappingEbs</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanLaunchSpecBlockDeviceMappingEbs</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMappingEbs-deleteOnTermination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1461">property <b>deleteOnTermination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1461">property <b>deleteOnTermination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deleteOnTermination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4508,7 +4508,7 @@ String. suppresses the specified device included in the block device mapping of 
 Boolean. Flag to delete the EBS on instance termination.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMappingEbs-dynamicVolumeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1465">property <b>dynamicVolumeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1465">property <b>dynamicVolumeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dynamicVolumeSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSize'>OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSize</a>&gt;;</code></pre>
@@ -4516,7 +4516,7 @@ Boolean. Flag to delete the EBS on instance termination.
 Object. Set dynamic volume size properties. When using this object, you cannot use volumeSize. You must use one or the other.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMappingEbs-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1469">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1469">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4524,7 +4524,7 @@ Object. Set dynamic volume size properties. When using this object, you cannot u
 Boolean. Enables [EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html) on the volume.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMappingEbs-iops">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1473">property <b>iops</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1473">property <b>iops</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iops?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4532,7 +4532,7 @@ Boolean. Enables [EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/User
 Int. The number of I/O operations per second (IOPS) that the volume supports.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMappingEbs-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1477">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1477">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4540,7 +4540,7 @@ Int. The number of I/O operations per second (IOPS) that the volume supports.
 String. Identifier (key ID, key alias, ID ARN, or alias ARN) for a customer managed CMK under which the EBS volume is encrypted.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMappingEbs-snapshotId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1481">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1481">property <b>snapshotId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4548,7 +4548,7 @@ String. Identifier (key ID, key alias, ID ARN, or alias ARN) for a customer mana
 (Optional) String. The Snapshot ID to mount by.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMappingEbs-throughput">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1485">property <b>throughput</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1485">property <b>throughput</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>throughput?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4556,7 +4556,7 @@ String. Identifier (key ID, key alias, ID ARN, or alias ARN) for a customer mana
 The amount of data transferred to or from a storage device per second, you can use this param just in a case that `volumeType` = gp3.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMappingEbs-volumeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1489">property <b>volumeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1489">property <b>volumeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4564,7 +4564,7 @@ The amount of data transferred to or from a storage device per second, you can u
 Int. The size, in GB of the volume.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMappingEbs-volumeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1493">property <b>volumeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1493">property <b>volumeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4572,14 +4572,14 @@ Int. The size, in GB of the volume.
 String. The type of the volume (example: "gp2").
 
 <h3 class="pdoc-module-header" id="OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSize" data-link-title="OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSize">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1496">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1496">
         interface <strong>OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSize</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSize</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSize-baseSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1500">property <b>baseSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1500">property <b>baseSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>baseSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4587,7 +4587,7 @@ String. The type of the volume (example: "gp2").
 Int. Initial size for volume. (Example: 50)
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSize-resource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1504">property <b>resource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1504">property <b>resource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4595,7 +4595,7 @@ Int. Initial size for volume. (Example: 50)
 String. Resource type to increase volume size dynamically by. (valid values: "CPU")
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSize-sizePerResourceUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1508">property <b>sizePerResourceUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1508">property <b>sizePerResourceUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sizePerResourceUnit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4603,14 +4603,14 @@ String. Resource type to increase volume size dynamically by. (valid values: "CP
 Int. Additional size (in GB) per resource unit. (Example: baseSize= 50, sizePerResourceUnit=20, and instance with 2 CPU is launched - its total disk size will be: 90GB)
 
 <h3 class="pdoc-module-header" id="OceanLaunchSpecTag" data-link-title="OceanLaunchSpecTag">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1511">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1511">
         interface <strong>OceanLaunchSpecTag</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanLaunchSpecTag</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanLaunchSpecTag-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1515">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1515">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4618,7 +4618,7 @@ Int. Additional size (in GB) per resource unit. (Example: baseSize= 50, sizePerR
 The label key.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecTag-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1519">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1519">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4626,14 +4626,14 @@ The label key.
 The label value.
 
 <h3 class="pdoc-module-header" id="OceanOptimizeImages" data-link-title="OceanOptimizeImages">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1522">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1522">
         interface <strong>OceanOptimizeImages</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanOptimizeImages</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanOptimizeImages-performAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1526">property <b>performAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1526">property <b>performAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>performAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4641,7 +4641,7 @@ The label value.
 String. Valid values: "always" "never" "timeWindow".
 
 <h4 class="pdoc-member-header" id="OceanOptimizeImages-shouldOptimizeEcsAmi">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1530">property <b>shouldOptimizeEcsAmi</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1530">property <b>shouldOptimizeEcsAmi</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shouldOptimizeEcsAmi: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4649,7 +4649,7 @@ String. Valid values: "always" "never" "timeWindow".
 Boolean. Enable auto image (AMI) update for the ECS container instances. The auto update applies for ECS-Optimized AMIs.
 
 <h4 class="pdoc-member-header" id="OceanOptimizeImages-timeWindows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1534">property <b>timeWindows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1534">property <b>timeWindows</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeWindows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4657,36 +4657,36 @@ Boolean. Enable auto image (AMI) update for the ECS container instances. The aut
 Array of strings. Set time windows for image update, at least one time window. Each string is in the format of ddd:hh:mm-ddd:hh:mm ddd. Time windows should not overlap.
 
 <h3 class="pdoc-module-header" id="OceanScheduledTask" data-link-title="OceanScheduledTask">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1537">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1537">
         interface <strong>OceanScheduledTask</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanScheduledTask</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanScheduledTask-shutdownHours">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1538">property <b>shutdownHours</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1538">property <b>shutdownHours</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shutdownHours?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OceanScheduledTaskShutdownHours'>OceanScheduledTaskShutdownHours</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanScheduledTask-tasks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1539">property <b>tasks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1539">property <b>tasks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tasks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OceanScheduledTaskTask'>OceanScheduledTaskTask</a>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OceanScheduledTaskShutdownHours" data-link-title="OceanScheduledTaskShutdownHours">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1542">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1542">
         interface <strong>OceanScheduledTaskShutdownHours</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanScheduledTaskShutdownHours</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanScheduledTaskShutdownHours-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1543">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1543">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanScheduledTaskShutdownHours-timeWindows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1547">property <b>timeWindows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1547">property <b>timeWindows</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeWindows: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4694,36 +4694,36 @@ Array of strings. Set time windows for image update, at least one time window. E
 Array of strings. Set time windows for image update, at least one time window. Each string is in the format of ddd:hh:mm-ddd:hh:mm ddd. Time windows should not overlap.
 
 <h3 class="pdoc-module-header" id="OceanScheduledTaskTask" data-link-title="OceanScheduledTaskTask">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1550">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1550">
         interface <strong>OceanScheduledTaskTask</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanScheduledTaskTask</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanScheduledTaskTask-cronExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1551">property <b>cronExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1551">property <b>cronExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cronExpression: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanScheduledTaskTask-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1552">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1552">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanScheduledTaskTask-taskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1553">property <b>taskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1553">property <b>taskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OceanTag" data-link-title="OceanTag">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1556">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1556">
         interface <strong>OceanTag</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanTag</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanTag-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1560">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1560">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4731,7 +4731,7 @@ Array of strings. Set time windows for image update, at least one time window. E
 The tag key.
 
 <h4 class="pdoc-member-header" id="OceanTag-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1564">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1564">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4739,71 +4739,71 @@ The tag key.
 The tag value.
 
 <h3 class="pdoc-module-header" id="OceanUpdatePolicy" data-link-title="OceanUpdatePolicy">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1567">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1567">
         interface <strong>OceanUpdatePolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanUpdatePolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanUpdatePolicy-rollConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1568">property <b>rollConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1568">property <b>rollConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rollConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OceanUpdatePolicyRollConfig'>OceanUpdatePolicyRollConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanUpdatePolicy-shouldRoll">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1569">property <b>shouldRoll</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1569">property <b>shouldRoll</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shouldRoll: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OceanUpdatePolicyRollConfig" data-link-title="OceanUpdatePolicyRollConfig">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1572">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1572">
         interface <strong>OceanUpdatePolicyRollConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanUpdatePolicyRollConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanUpdatePolicyRollConfig-batchSizePercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1573">property <b>batchSizePercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1573">property <b>batchSizePercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>batchSizePercentage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h2 id="gcp" data-link-title="gcp">namespace <strong>gcp</strong></h2>
 <h3 class="pdoc-module-header" id="ElastigroupBackendService" data-link-title="ElastigroupBackendService">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1578">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1578">
         interface <strong>ElastigroupBackendService</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupBackendService</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupBackendService-locationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1579">property <b>locationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1579">property <b>locationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupBackendService-namedPorts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1580">property <b>namedPorts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1580">property <b>namedPorts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namedPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupBackendServiceNamedPort'>ElastigroupBackendServiceNamedPort</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupBackendService-scheme">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1581">property <b>scheme</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1581">property <b>scheme</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheme?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupBackendService-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1582">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1582">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupBackendServiceNamedPort" data-link-title="ElastigroupBackendServiceNamedPort">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1585">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1585">
         interface <strong>ElastigroupBackendServiceNamedPort</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupBackendServiceNamedPort</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupBackendServiceNamedPort-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1589">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1589">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4811,105 +4811,105 @@ The tag value.
 The group name.
 
 <h4 class="pdoc-member-header" id="ElastigroupBackendServiceNamedPort-ports">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1590">property <b>ports</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1590">property <b>ports</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ports: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupDisk" data-link-title="ElastigroupDisk">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1593">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1593">
         interface <strong>ElastigroupDisk</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupDisk</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupDisk-autoDelete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1594">property <b>autoDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1594">property <b>autoDelete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoDelete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupDisk-boot">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1595">property <b>boot</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1595">property <b>boot</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>boot?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupDisk-deviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1596">property <b>deviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1596">property <b>deviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deviceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupDisk-initializeParams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1597">property <b>initializeParams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1597">property <b>initializeParams</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>initializeParams?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupDiskInitializeParam'>ElastigroupDiskInitializeParam</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupDisk-interface">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1598">property <b>interface</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1598">property <b>interface</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>interface?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupDisk-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1599">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1599">property <b>mode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupDisk-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1600">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1600">property <b>source</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupDisk-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1601">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1601">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupDiskInitializeParam" data-link-title="ElastigroupDiskInitializeParam">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1604">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1604">
         interface <strong>ElastigroupDiskInitializeParam</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupDiskInitializeParam</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupDiskInitializeParam-diskSizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1605">property <b>diskSizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1605">property <b>diskSizeGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskSizeGb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupDiskInitializeParam-diskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1606">property <b>diskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1606">property <b>diskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupDiskInitializeParam-sourceImage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1607">property <b>sourceImage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1607">property <b>sourceImage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceImage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupGpu" data-link-title="ElastigroupGpu">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1610">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1610">
         interface <strong>ElastigroupGpu</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupGpu</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupGpu-count">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1611">property <b>count</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1611">property <b>count</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>count: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupGpu-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1612">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1612">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupInstanceTypesCustom" data-link-title="ElastigroupInstanceTypesCustom">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1615">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1615">
         interface <strong>ElastigroupInstanceTypesCustom</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupInstanceTypesCustom</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupInstanceTypesCustom-memoryGib">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1619">property <b>memoryGib</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1619">property <b>memoryGib</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memoryGib: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4917,122 +4917,122 @@ The group name.
 The memory (in GiB) in the custom instance types. GCP has a number of limitations on accepted memory values.For more information, see the GCP documentation (here.)[https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#specifications]
 
 <h4 class="pdoc-member-header" id="ElastigroupInstanceTypesCustom-vcpu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1620">property <b>vcpu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1620">property <b>vcpu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vcpu: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationDockerSwarm" data-link-title="ElastigroupIntegrationDockerSwarm">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1623">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1623">
         interface <strong>ElastigroupIntegrationDockerSwarm</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationDockerSwarm</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationDockerSwarm-masterHost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1624">property <b>masterHost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1624">property <b>masterHost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterHost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationDockerSwarm-masterPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1625">property <b>masterPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1625">property <b>masterPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationGke" data-link-title="ElastigroupIntegrationGke">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1628">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1628">
         interface <strong>ElastigroupIntegrationGke</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationGke</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGke-autoUpdate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1629">property <b>autoUpdate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1629">property <b>autoUpdate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoUpdate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGke-autoscaleCooldown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1630">property <b>autoscaleCooldown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1630">property <b>autoscaleCooldown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleCooldown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGke-autoscaleDown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1631">property <b>autoscaleDown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1631">property <b>autoscaleDown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleDown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupIntegrationGkeAutoscaleDown'>ElastigroupIntegrationGkeAutoscaleDown</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGke-autoscaleHeadroom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1632">property <b>autoscaleHeadroom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1632">property <b>autoscaleHeadroom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleHeadroom?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupIntegrationGkeAutoscaleHeadroom'>ElastigroupIntegrationGkeAutoscaleHeadroom</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGke-autoscaleIsAutoConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1633">property <b>autoscaleIsAutoConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1633">property <b>autoscaleIsAutoConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleIsAutoConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGke-autoscaleIsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1634">property <b>autoscaleIsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1634">property <b>autoscaleIsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleIsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGke-autoscaleLabels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1635">property <b>autoscaleLabels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1635">property <b>autoscaleLabels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleLabels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupIntegrationGkeAutoscaleLabel'>ElastigroupIntegrationGkeAutoscaleLabel</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGke-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1636">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1636">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGke-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1637">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1637">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationGkeAutoscaleDown" data-link-title="ElastigroupIntegrationGkeAutoscaleDown">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1640">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1640">
         interface <strong>ElastigroupIntegrationGkeAutoscaleDown</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationGkeAutoscaleDown</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGkeAutoscaleDown-evaluationPeriods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1641">property <b>evaluationPeriods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1641">property <b>evaluationPeriods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluationPeriods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationGkeAutoscaleHeadroom" data-link-title="ElastigroupIntegrationGkeAutoscaleHeadroom">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1644">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1644">
         interface <strong>ElastigroupIntegrationGkeAutoscaleHeadroom</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationGkeAutoscaleHeadroom</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGkeAutoscaleHeadroom-cpuPerUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1645">property <b>cpuPerUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1645">property <b>cpuPerUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cpuPerUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGkeAutoscaleHeadroom-memoryPerUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1646">property <b>memoryPerUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1646">property <b>memoryPerUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memoryPerUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGkeAutoscaleHeadroom-numOfUnits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1647">property <b>numOfUnits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1647">property <b>numOfUnits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numOfUnits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationGkeAutoscaleLabel" data-link-title="ElastigroupIntegrationGkeAutoscaleLabel">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1650">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1650">
         interface <strong>ElastigroupIntegrationGkeAutoscaleLabel</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationGkeAutoscaleLabel</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGkeAutoscaleLabel-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1654">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1654">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5040,7 +5040,7 @@ The memory (in GiB) in the custom instance types. GCP has a number of limitation
 Labels key.
 
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGkeAutoscaleLabel-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1658">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1658">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5048,14 +5048,14 @@ Labels key.
 Labels value.
 
 <h3 class="pdoc-module-header" id="ElastigroupLabel" data-link-title="ElastigroupLabel">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1661">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1661">
         interface <strong>ElastigroupLabel</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupLabel</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupLabel-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1665">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1665">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5063,7 +5063,7 @@ Labels value.
 Labels key.
 
 <h4 class="pdoc-member-header" id="ElastigroupLabel-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1669">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1669">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5071,14 +5071,14 @@ Labels key.
 Labels value.
 
 <h3 class="pdoc-module-header" id="ElastigroupMetadata" data-link-title="ElastigroupMetadata">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1672">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1672">
         interface <strong>ElastigroupMetadata</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupMetadata</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupMetadata-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1676">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1676">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5086,7 +5086,7 @@ Labels value.
 Labels key.
 
 <h4 class="pdoc-member-header" id="ElastigroupMetadata-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1680">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1680">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5094,36 +5094,36 @@ Labels key.
 Labels value.
 
 <h3 class="pdoc-module-header" id="ElastigroupNetworkInterface" data-link-title="ElastigroupNetworkInterface">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1683">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1683">
         interface <strong>ElastigroupNetworkInterface</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupNetworkInterface</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupNetworkInterface-accessConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1684">property <b>accessConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1684">property <b>accessConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupNetworkInterfaceAccessConfig'>ElastigroupNetworkInterfaceAccessConfig</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupNetworkInterface-aliasIpRanges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1685">property <b>aliasIpRanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1685">property <b>aliasIpRanges</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliasIpRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupNetworkInterfaceAliasIpRange'>ElastigroupNetworkInterfaceAliasIpRange</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupNetworkInterface-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1686">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1686">property <b>network</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>network: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupNetworkInterfaceAccessConfig" data-link-title="ElastigroupNetworkInterfaceAccessConfig">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1689">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1689">
         interface <strong>ElastigroupNetworkInterfaceAccessConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupNetworkInterfaceAccessConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupNetworkInterfaceAccessConfig-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1693">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1693">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5131,113 +5131,113 @@ Labels value.
 The group name.
 
 <h4 class="pdoc-member-header" id="ElastigroupNetworkInterfaceAccessConfig-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1694">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1694">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupNetworkInterfaceAliasIpRange" data-link-title="ElastigroupNetworkInterfaceAliasIpRange">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1697">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1697">
         interface <strong>ElastigroupNetworkInterfaceAliasIpRange</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupNetworkInterfaceAliasIpRange</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupNetworkInterfaceAliasIpRange-ipCidrRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1698">property <b>ipCidrRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1698">property <b>ipCidrRange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipCidrRange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupNetworkInterfaceAliasIpRange-subnetworkRangeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1699">property <b>subnetworkRangeName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1699">property <b>subnetworkRangeName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetworkRangeName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupScalingDownPolicy" data-link-title="ElastigroupScalingDownPolicy">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1702">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1702">
         interface <strong>ElastigroupScalingDownPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupScalingDownPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-actionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1703">property <b>actionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1703">property <b>actionType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actionType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-adjustment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1704">property <b>adjustment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1704">property <b>adjustment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adjustment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-cooldown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1705">property <b>cooldown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1705">property <b>cooldown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cooldown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1706">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1706">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupScalingDownPolicyDimension'>ElastigroupScalingDownPolicyDimension</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-evaluationPeriods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1707">property <b>evaluationPeriods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1707">property <b>evaluationPeriods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluationPeriods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-metricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1708">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1708">property <b>metricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1709">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1709">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-operator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1710">property <b>operator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1710">property <b>operator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1711">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1711">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1712">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1712">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1713">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1713">property <b>source</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1714">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1714">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-threshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1715">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1715">property <b>threshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1716">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1716">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupScalingDownPolicyDimension" data-link-title="ElastigroupScalingDownPolicyDimension">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1719">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1719">
         interface <strong>ElastigroupScalingDownPolicyDimension</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupScalingDownPolicyDimension</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicyDimension-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1723">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1723">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5245,7 +5245,7 @@ The group name.
 The group name.
 
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicyDimension-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1727">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1727">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5253,91 +5253,91 @@ The group name.
 Labels value.
 
 <h3 class="pdoc-module-header" id="ElastigroupScalingUpPolicy" data-link-title="ElastigroupScalingUpPolicy">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1730">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1730">
         interface <strong>ElastigroupScalingUpPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupScalingUpPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-actionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1731">property <b>actionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1731">property <b>actionType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actionType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-adjustment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1732">property <b>adjustment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1732">property <b>adjustment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adjustment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-cooldown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1733">property <b>cooldown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1733">property <b>cooldown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cooldown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1734">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1734">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupScalingUpPolicyDimension'>ElastigroupScalingUpPolicyDimension</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-evaluationPeriods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1735">property <b>evaluationPeriods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1735">property <b>evaluationPeriods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluationPeriods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-metricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1736">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1736">property <b>metricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1737">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1737">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-operator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1738">property <b>operator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1738">property <b>operator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1739">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1739">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1740">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1740">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1741">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1741">property <b>source</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1742">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1742">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-threshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1743">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1743">property <b>threshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1744">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1744">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupScalingUpPolicyDimension" data-link-title="ElastigroupScalingUpPolicyDimension">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1747">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1747">
         interface <strong>ElastigroupScalingUpPolicyDimension</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupScalingUpPolicyDimension</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicyDimension-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1751">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1751">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5345,7 +5345,7 @@ Labels value.
 The group name.
 
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicyDimension-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1755">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1755">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5353,51 +5353,51 @@ The group name.
 Labels value.
 
 <h3 class="pdoc-module-header" id="ElastigroupScheduledTask" data-link-title="ElastigroupScheduledTask">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1758">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1758">
         interface <strong>ElastigroupScheduledTask</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupScheduledTask</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScheduledTask-cronExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1759">property <b>cronExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1759">property <b>cronExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cronExpression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScheduledTask-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1760">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1760">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScheduledTask-maxCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1761">property <b>maxCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1761">property <b>maxCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScheduledTask-minCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1762">property <b>minCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1762">property <b>minCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScheduledTask-targetCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1763">property <b>targetCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1763">property <b>targetCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScheduledTask-taskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1764">property <b>taskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1764">property <b>taskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupSubnet" data-link-title="ElastigroupSubnet">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1767">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1767">
         interface <strong>ElastigroupSubnet</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupSubnet</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupSubnet-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1771">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1771">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5405,7 +5405,7 @@ Labels value.
 The region for the group of subnets.
 
 <h4 class="pdoc-member-header" id="ElastigroupSubnet-subnetNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1775">property <b>subnetNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1775">property <b>subnetNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5414,213 +5414,213 @@ The names of the subnets in the region.
 
 <h2 id="gke" data-link-title="gke">namespace <strong>gke</strong></h2>
 <h3 class="pdoc-module-header" id="ElastigroupBackendService" data-link-title="ElastigroupBackendService">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1780">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1780">
         interface <strong>ElastigroupBackendService</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupBackendService</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupBackendService-locationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1781">property <b>locationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1781">property <b>locationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupBackendService-namedPorts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1782">property <b>namedPorts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1782">property <b>namedPorts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namedPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupBackendServiceNamedPort'>ElastigroupBackendServiceNamedPort</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupBackendService-scheme">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1783">property <b>scheme</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1783">property <b>scheme</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheme?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupBackendService-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1784">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1784">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupBackendServiceNamedPort" data-link-title="ElastigroupBackendServiceNamedPort">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1787">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1787">
         interface <strong>ElastigroupBackendServiceNamedPort</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupBackendServiceNamedPort</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupBackendServiceNamedPort-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1788">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1788">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupBackendServiceNamedPort-ports">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1789">property <b>ports</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1789">property <b>ports</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ports: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupDisk" data-link-title="ElastigroupDisk">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1792">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1792">
         interface <strong>ElastigroupDisk</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupDisk</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupDisk-autoDelete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1793">property <b>autoDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1793">property <b>autoDelete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoDelete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupDisk-boot">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1794">property <b>boot</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1794">property <b>boot</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>boot?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupDisk-deviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1795">property <b>deviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1795">property <b>deviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deviceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupDisk-initializeParams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1796">property <b>initializeParams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1796">property <b>initializeParams</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>initializeParams?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupDiskInitializeParam'>ElastigroupDiskInitializeParam</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupDisk-interface">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1797">property <b>interface</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1797">property <b>interface</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>interface?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupDisk-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1798">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1798">property <b>mode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupDisk-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1799">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1799">property <b>source</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupDisk-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1800">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1800">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupDiskInitializeParam" data-link-title="ElastigroupDiskInitializeParam">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1803">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1803">
         interface <strong>ElastigroupDiskInitializeParam</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupDiskInitializeParam</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupDiskInitializeParam-diskSizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1804">property <b>diskSizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1804">property <b>diskSizeGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskSizeGb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupDiskInitializeParam-diskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1805">property <b>diskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1805">property <b>diskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupDiskInitializeParam-sourceImage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1806">property <b>sourceImage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1806">property <b>sourceImage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceImage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupGpu" data-link-title="ElastigroupGpu">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1809">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1809">
         interface <strong>ElastigroupGpu</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupGpu</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupGpu-count">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1810">property <b>count</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1810">property <b>count</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>count: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupGpu-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1811">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1811">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupInstanceTypesCustom" data-link-title="ElastigroupInstanceTypesCustom">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1814">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1814">
         interface <strong>ElastigroupInstanceTypesCustom</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupInstanceTypesCustom</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupInstanceTypesCustom-memoryGib">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1815">property <b>memoryGib</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1815">property <b>memoryGib</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memoryGib: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupInstanceTypesCustom-vcpu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1816">property <b>vcpu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1816">property <b>vcpu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vcpu: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationDockerSwarm" data-link-title="ElastigroupIntegrationDockerSwarm">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1819">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1819">
         interface <strong>ElastigroupIntegrationDockerSwarm</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationDockerSwarm</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationDockerSwarm-masterHost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1820">property <b>masterHost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1820">property <b>masterHost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterHost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationDockerSwarm-masterPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1821">property <b>masterPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1821">property <b>masterPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationGke" data-link-title="ElastigroupIntegrationGke">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1824">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1824">
         interface <strong>ElastigroupIntegrationGke</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationGke</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGke-autoUpdate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1825">property <b>autoUpdate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1825">property <b>autoUpdate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoUpdate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGke-autoscaleCooldown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1826">property <b>autoscaleCooldown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1826">property <b>autoscaleCooldown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleCooldown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGke-autoscaleDown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1827">property <b>autoscaleDown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1827">property <b>autoscaleDown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleDown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupIntegrationGkeAutoscaleDown'>ElastigroupIntegrationGkeAutoscaleDown</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGke-autoscaleHeadroom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1828">property <b>autoscaleHeadroom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1828">property <b>autoscaleHeadroom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleHeadroom?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupIntegrationGkeAutoscaleHeadroom'>ElastigroupIntegrationGkeAutoscaleHeadroom</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGke-autoscaleIsAutoConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1829">property <b>autoscaleIsAutoConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1829">property <b>autoscaleIsAutoConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleIsAutoConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGke-autoscaleIsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1830">property <b>autoscaleIsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1830">property <b>autoscaleIsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleIsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGke-autoscaleLabels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1831">property <b>autoscaleLabels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1831">property <b>autoscaleLabels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleLabels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupIntegrationGkeAutoscaleLabel'>ElastigroupIntegrationGkeAutoscaleLabel</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGke-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1835">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1835">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5628,451 +5628,451 @@ The names of the subnets in the region.
 The name of the GKE cluster you wish to import.
 
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGke-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1836">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1836">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationGkeAutoscaleDown" data-link-title="ElastigroupIntegrationGkeAutoscaleDown">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1839">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1839">
         interface <strong>ElastigroupIntegrationGkeAutoscaleDown</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationGkeAutoscaleDown</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGkeAutoscaleDown-evaluationPeriods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1840">property <b>evaluationPeriods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1840">property <b>evaluationPeriods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluationPeriods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationGkeAutoscaleHeadroom" data-link-title="ElastigroupIntegrationGkeAutoscaleHeadroom">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1843">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1843">
         interface <strong>ElastigroupIntegrationGkeAutoscaleHeadroom</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationGkeAutoscaleHeadroom</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGkeAutoscaleHeadroom-cpuPerUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1844">property <b>cpuPerUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1844">property <b>cpuPerUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cpuPerUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGkeAutoscaleHeadroom-memoryPerUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1845">property <b>memoryPerUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1845">property <b>memoryPerUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memoryPerUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGkeAutoscaleHeadroom-numOfUnits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1846">property <b>numOfUnits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1846">property <b>numOfUnits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numOfUnits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupIntegrationGkeAutoscaleLabel" data-link-title="ElastigroupIntegrationGkeAutoscaleLabel">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1849">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1849">
         interface <strong>ElastigroupIntegrationGkeAutoscaleLabel</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupIntegrationGkeAutoscaleLabel</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGkeAutoscaleLabel-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1850">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1850">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupIntegrationGkeAutoscaleLabel-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1851">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1851">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupLabel" data-link-title="ElastigroupLabel">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1854">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1854">
         interface <strong>ElastigroupLabel</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupLabel</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupLabel-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1855">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1855">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupLabel-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1856">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1856">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupMetadata" data-link-title="ElastigroupMetadata">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1859">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1859">
         interface <strong>ElastigroupMetadata</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupMetadata</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupMetadata-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1860">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1860">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupMetadata-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1861">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1861">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupNetworkInterface" data-link-title="ElastigroupNetworkInterface">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1864">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1864">
         interface <strong>ElastigroupNetworkInterface</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupNetworkInterface</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupNetworkInterface-accessConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1865">property <b>accessConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1865">property <b>accessConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupNetworkInterfaceAccessConfig'>ElastigroupNetworkInterfaceAccessConfig</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupNetworkInterface-aliasIpRanges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1866">property <b>aliasIpRanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1866">property <b>aliasIpRanges</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliasIpRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupNetworkInterfaceAliasIpRange'>ElastigroupNetworkInterfaceAliasIpRange</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupNetworkInterface-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1867">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1867">property <b>network</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>network: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupNetworkInterfaceAccessConfig" data-link-title="ElastigroupNetworkInterfaceAccessConfig">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1870">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1870">
         interface <strong>ElastigroupNetworkInterfaceAccessConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupNetworkInterfaceAccessConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupNetworkInterfaceAccessConfig-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1871">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1871">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupNetworkInterfaceAccessConfig-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1872">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1872">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupNetworkInterfaceAliasIpRange" data-link-title="ElastigroupNetworkInterfaceAliasIpRange">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1875">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1875">
         interface <strong>ElastigroupNetworkInterfaceAliasIpRange</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupNetworkInterfaceAliasIpRange</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupNetworkInterfaceAliasIpRange-ipCidrRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1876">property <b>ipCidrRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1876">property <b>ipCidrRange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipCidrRange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupNetworkInterfaceAliasIpRange-subnetworkRangeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1877">property <b>subnetworkRangeName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1877">property <b>subnetworkRangeName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetworkRangeName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupScalingDownPolicy" data-link-title="ElastigroupScalingDownPolicy">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1880">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1880">
         interface <strong>ElastigroupScalingDownPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupScalingDownPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-actionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1881">property <b>actionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1881">property <b>actionType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actionType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-adjustment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1882">property <b>adjustment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1882">property <b>adjustment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adjustment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-cooldown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1883">property <b>cooldown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1883">property <b>cooldown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cooldown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1884">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1884">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupScalingDownPolicyDimension'>ElastigroupScalingDownPolicyDimension</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-evaluationPeriods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1885">property <b>evaluationPeriods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1885">property <b>evaluationPeriods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluationPeriods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-metricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1886">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1886">property <b>metricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1887">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1887">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-operator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1888">property <b>operator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1888">property <b>operator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1889">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1889">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1890">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1890">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1891">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1891">property <b>source</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1892">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1892">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-threshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1893">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1893">property <b>threshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicy-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1894">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1894">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupScalingDownPolicyDimension" data-link-title="ElastigroupScalingDownPolicyDimension">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1897">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1897">
         interface <strong>ElastigroupScalingDownPolicyDimension</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupScalingDownPolicyDimension</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicyDimension-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1898">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1898">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingDownPolicyDimension-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1899">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1899">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupScalingUpPolicy" data-link-title="ElastigroupScalingUpPolicy">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1902">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1902">
         interface <strong>ElastigroupScalingUpPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupScalingUpPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-actionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1903">property <b>actionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1903">property <b>actionType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actionType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-adjustment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1904">property <b>adjustment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1904">property <b>adjustment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adjustment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-cooldown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1905">property <b>cooldown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1905">property <b>cooldown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cooldown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1906">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1906">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElastigroupScalingUpPolicyDimension'>ElastigroupScalingUpPolicyDimension</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-evaluationPeriods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1907">property <b>evaluationPeriods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1907">property <b>evaluationPeriods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluationPeriods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-metricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1908">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1908">property <b>metricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1909">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1909">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-operator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1910">property <b>operator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1910">property <b>operator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1911">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1911">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1912">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1912">property <b>policyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1913">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1913">property <b>source</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1914">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1914">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-threshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1915">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1915">property <b>threshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicy-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1916">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1916">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ElastigroupScalingUpPolicyDimension" data-link-title="ElastigroupScalingUpPolicyDimension">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1919">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1919">
         interface <strong>ElastigroupScalingUpPolicyDimension</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElastigroupScalingUpPolicyDimension</span></code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicyDimension-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1920">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1920">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupScalingUpPolicyDimension-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1921">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1921">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OceanImportAutoscaler" data-link-title="OceanImportAutoscaler">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1924">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1924">
         interface <strong>OceanImportAutoscaler</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanImportAutoscaler</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanImportAutoscaler-autoHeadroomPercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1925">property <b>autoHeadroomPercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1925">property <b>autoHeadroomPercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoHeadroomPercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanImportAutoscaler-cooldown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1926">property <b>cooldown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1926">property <b>cooldown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cooldown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanImportAutoscaler-down">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1927">property <b>down</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1927">property <b>down</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>down?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OceanImportAutoscalerDown'>OceanImportAutoscalerDown</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanImportAutoscaler-headroom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1928">property <b>headroom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1928">property <b>headroom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>headroom?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OceanImportAutoscalerHeadroom'>OceanImportAutoscalerHeadroom</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanImportAutoscaler-isAutoConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1929">property <b>isAutoConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1929">property <b>isAutoConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isAutoConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanImportAutoscaler-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1930">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1930">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanImportAutoscaler-resourceLimits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1931">property <b>resourceLimits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1931">property <b>resourceLimits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceLimits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OceanImportAutoscalerResourceLimits'>OceanImportAutoscalerResourceLimits</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OceanImportAutoscalerDown" data-link-title="OceanImportAutoscalerDown">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1934">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1934">
         interface <strong>OceanImportAutoscalerDown</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanImportAutoscalerDown</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanImportAutoscalerDown-evaluationPeriods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1935">property <b>evaluationPeriods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1935">property <b>evaluationPeriods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluationPeriods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanImportAutoscalerDown-maxScaleDownPercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1936">property <b>maxScaleDownPercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1936">property <b>maxScaleDownPercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxScaleDownPercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OceanImportAutoscalerHeadroom" data-link-title="OceanImportAutoscalerHeadroom">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1939">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1939">
         interface <strong>OceanImportAutoscalerHeadroom</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanImportAutoscalerHeadroom</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanImportAutoscalerHeadroom-cpuPerUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1940">property <b>cpuPerUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1940">property <b>cpuPerUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cpuPerUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanImportAutoscalerHeadroom-gpuPerUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1941">property <b>gpuPerUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1941">property <b>gpuPerUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gpuPerUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanImportAutoscalerHeadroom-memoryPerUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1942">property <b>memoryPerUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1942">property <b>memoryPerUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memoryPerUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanImportAutoscalerHeadroom-numOfUnits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1943">property <b>numOfUnits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1943">property <b>numOfUnits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numOfUnits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OceanImportAutoscalerResourceLimits" data-link-title="OceanImportAutoscalerResourceLimits">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1946">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1946">
         interface <strong>OceanImportAutoscalerResourceLimits</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanImportAutoscalerResourceLimits</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanImportAutoscalerResourceLimits-maxMemoryGib">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1947">property <b>maxMemoryGib</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1947">property <b>maxMemoryGib</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxMemoryGib?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanImportAutoscalerResourceLimits-maxVcpu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1948">property <b>maxVcpu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1948">property <b>maxVcpu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxVcpu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OceanImportBackendService" data-link-title="OceanImportBackendService">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1951">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1951">
         interface <strong>OceanImportBackendService</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanImportBackendService</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanImportBackendService-locationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1955">property <b>locationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1955">property <b>locationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6080,12 +6080,12 @@ The name of the GKE cluster you wish to import.
 Sets which location the backend services will be active. Valid values: `regional`, `global`.
 
 <h4 class="pdoc-member-header" id="OceanImportBackendService-namedPorts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1956">property <b>namedPorts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1956">property <b>namedPorts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namedPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OceanImportBackendServiceNamedPort'>OceanImportBackendServiceNamedPort</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanImportBackendService-scheme">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1960">property <b>scheme</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1960">property <b>scheme</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheme?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6093,7 +6093,7 @@ Sets which location the backend services will be active. Valid values: `regional
 Use when `locationType` is `regional`. Set the traffic for the backend service to either between the instances in the vpc or to traffic from the internet. Valid values: `INTERNAL`, `EXTERNAL`.
 
 <h4 class="pdoc-member-header" id="OceanImportBackendService-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1964">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1964">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6101,19 +6101,19 @@ Use when `locationType` is `regional`. Set the traffic for the backend service t
 The name of the backend service.
 
 <h3 class="pdoc-module-header" id="OceanImportBackendServiceNamedPort" data-link-title="OceanImportBackendServiceNamedPort">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1967">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1967">
         interface <strong>OceanImportBackendServiceNamedPort</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanImportBackendServiceNamedPort</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanImportBackendServiceNamedPort-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1968">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1968">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanImportBackendServiceNamedPort-ports">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1972">property <b>ports</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1972">property <b>ports</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ports: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6121,75 +6121,75 @@ The name of the backend service.
 A list of ports.
 
 <h3 class="pdoc-module-header" id="OceanImportScheduledTask" data-link-title="OceanImportScheduledTask">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1975">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1975">
         interface <strong>OceanImportScheduledTask</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanImportScheduledTask</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanImportScheduledTask-shutdownHours">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1976">property <b>shutdownHours</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1976">property <b>shutdownHours</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shutdownHours?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OceanImportScheduledTaskShutdownHours'>OceanImportScheduledTaskShutdownHours</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanImportScheduledTask-tasks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1977">property <b>tasks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1977">property <b>tasks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tasks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OceanImportScheduledTaskTask'>OceanImportScheduledTaskTask</a>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OceanImportScheduledTaskShutdownHours" data-link-title="OceanImportScheduledTaskShutdownHours">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1980">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1980">
         interface <strong>OceanImportScheduledTaskShutdownHours</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanImportScheduledTaskShutdownHours</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanImportScheduledTaskShutdownHours-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1981">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1981">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanImportScheduledTaskShutdownHours-timeWindows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1982">property <b>timeWindows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1982">property <b>timeWindows</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeWindows: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OceanImportScheduledTaskTask" data-link-title="OceanImportScheduledTaskTask">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1985">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1985">
         interface <strong>OceanImportScheduledTaskTask</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanImportScheduledTaskTask</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanImportScheduledTaskTask-batchSizePercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1986">property <b>batchSizePercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1986">property <b>batchSizePercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>batchSizePercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanImportScheduledTaskTask-cronExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1987">property <b>cronExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1987">property <b>cronExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cronExpression: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanImportScheduledTaskTask-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1988">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1988">property <b>isEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanImportScheduledTaskTask-taskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1989">property <b>taskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1989">property <b>taskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OceanLaunchSpecAutoscaleHeadroom" data-link-title="OceanLaunchSpecAutoscaleHeadroom">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1992">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1992">
         interface <strong>OceanLaunchSpecAutoscaleHeadroom</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanLaunchSpecAutoscaleHeadroom</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanLaunchSpecAutoscaleHeadroom-cpuPerUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L1996">property <b>cpuPerUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L1996">property <b>cpuPerUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cpuPerUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6197,7 +6197,7 @@ A list of ports.
 Optionally configure the number of CPUs to allocate for each headroom unit. CPUs are denoted in millicores, where 1000 millicores = 1 vCPU.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecAutoscaleHeadroom-gpuPerUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2000">property <b>gpuPerUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2000">property <b>gpuPerUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gpuPerUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6205,7 +6205,7 @@ Optionally configure the number of CPUs to allocate for each headroom unit. CPUs
 Optionally configure the number of GPUS to allocate for each headroom unit.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecAutoscaleHeadroom-memoryPerUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2004">property <b>memoryPerUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2004">property <b>memoryPerUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memoryPerUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6213,7 +6213,7 @@ Optionally configure the number of GPUS to allocate for each headroom unit.
 Optionally configure the amount of memory (MB) to allocate for each headroom unit.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecAutoscaleHeadroom-numOfUnits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2008">property <b>numOfUnits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2008">property <b>numOfUnits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numOfUnits: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6221,240 +6221,240 @@ Optionally configure the amount of memory (MB) to allocate for each headroom uni
 The number of units to retain as headroom, where each unit has the defined headroom CPU, memory and GPU.
 
 <h3 class="pdoc-module-header" id="OceanLaunchSpecLabel" data-link-title="OceanLaunchSpecLabel">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2011">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2011">
         interface <strong>OceanLaunchSpecLabel</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanLaunchSpecLabel</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanLaunchSpecLabel-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2012">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2012">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanLaunchSpecLabel-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2013">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2013">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OceanLaunchSpecMetadata" data-link-title="OceanLaunchSpecMetadata">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2016">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2016">
         interface <strong>OceanLaunchSpecMetadata</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanLaunchSpecMetadata</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanLaunchSpecMetadata-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2017">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2017">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanLaunchSpecMetadata-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2018">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2018">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OceanLaunchSpecTaint" data-link-title="OceanLaunchSpecTaint">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2021">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2021">
         interface <strong>OceanLaunchSpecTaint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OceanLaunchSpecTaint</span></code></pre>
 <h4 class="pdoc-member-header" id="OceanLaunchSpecTaint-effect">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2022">property <b>effect</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2022">property <b>effect</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>effect: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanLaunchSpecTaint-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2023">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2023">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanLaunchSpecTaint-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2024">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2024">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h2 id="multai" data-link-title="multai">namespace <strong>multai</strong></h2>
 <h3 class="pdoc-module-header" id="BalancerConnectionTimeouts" data-link-title="BalancerConnectionTimeouts">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2029">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2029">
         interface <strong>BalancerConnectionTimeouts</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BalancerConnectionTimeouts</span></code></pre>
 <h4 class="pdoc-member-header" id="BalancerConnectionTimeouts-draining">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2030">property <b>draining</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2030">property <b>draining</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>draining?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BalancerConnectionTimeouts-idle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2031">property <b>idle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2031">property <b>idle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>idle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="BalancerTag" data-link-title="BalancerTag">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2034">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2034">
         interface <strong>BalancerTag</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BalancerTag</span></code></pre>
 <h4 class="pdoc-member-header" id="BalancerTag-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2035">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2035">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BalancerTag-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2036">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2036">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ListenerTag" data-link-title="ListenerTag">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2039">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2039">
         interface <strong>ListenerTag</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ListenerTag</span></code></pre>
 <h4 class="pdoc-member-header" id="ListenerTag-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2040">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2040">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ListenerTag-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2041">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2041">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ListenerTlsConfig" data-link-title="ListenerTlsConfig">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2044">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2044">
         interface <strong>ListenerTlsConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ListenerTlsConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="ListenerTlsConfig-certificateIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2045">property <b>certificateIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2045">property <b>certificateIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ListenerTlsConfig-cipherSuites">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2046">property <b>cipherSuites</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2046">property <b>cipherSuites</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cipherSuites: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ListenerTlsConfig-maxVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2047">property <b>maxVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2047">property <b>maxVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ListenerTlsConfig-minVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2048">property <b>minVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2048">property <b>minVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ListenerTlsConfig-preferServerCipherSuites">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2049">property <b>preferServerCipherSuites</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2049">property <b>preferServerCipherSuites</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferServerCipherSuites: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ListenerTlsConfig-sessionTicketsDisabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2050">property <b>sessionTicketsDisabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2050">property <b>sessionTicketsDisabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sessionTicketsDisabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="RoutingRuleTag" data-link-title="RoutingRuleTag">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2053">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2053">
         interface <strong>RoutingRuleTag</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>RoutingRuleTag</span></code></pre>
 <h4 class="pdoc-member-header" id="RoutingRuleTag-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2054">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2054">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RoutingRuleTag-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2055">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2055">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="TargetSetHealthCheck" data-link-title="TargetSetHealthCheck">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2058">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2058">
         interface <strong>TargetSetHealthCheck</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TargetSetHealthCheck</span></code></pre>
 <h4 class="pdoc-member-header" id="TargetSetHealthCheck-healthyThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2059">property <b>healthyThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2059">property <b>healthyThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthyThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetSetHealthCheck-interval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2060">property <b>interval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2060">property <b>interval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>interval: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetSetHealthCheck-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2061">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2061">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetSetHealthCheck-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2062">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2062">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetSetHealthCheck-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2063">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2063">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetSetHealthCheck-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2064">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2064">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetSetHealthCheck-unhealthyThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2065">property <b>unhealthyThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2065">property <b>unhealthyThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unhealthyThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="TargetSetTag" data-link-title="TargetSetTag">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2068">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2068">
         interface <strong>TargetSetTag</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TargetSetTag</span></code></pre>
 <h4 class="pdoc-member-header" id="TargetSetTag-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2069">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2069">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetSetTag-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2070">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2070">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="TargetTag" data-link-title="TargetTag">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2073">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2073">
         interface <strong>TargetTag</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TargetTag</span></code></pre>
 <h4 class="pdoc-member-header" id="TargetTag-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2074">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2074">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TargetTag-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L2075">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L2075">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6463,19 +6463,19 @@ The number of units to retain as headroom, where each unit has the defined headr
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="HealthCheckCheck" data-link-title="HealthCheckCheck">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L7">
         interface <strong>HealthCheckCheck</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>HealthCheckCheck</span></code></pre>
 <h4 class="pdoc-member-header" id="HealthCheckCheck-endPoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L8">property <b>endPoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L8">property <b>endPoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endPoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="HealthCheckCheck-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L12">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L12">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6483,7 +6483,7 @@ The number of units to retain as headroom, where each unit has the defined headr
 The destination for the request.
 
 <h4 class="pdoc-member-header" id="HealthCheckCheck-healthy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L16">property <b>healthy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L16">property <b>healthy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6491,7 +6491,7 @@ The destination for the request.
 The number of consecutive successful health checks that must occur before declaring an instance healthy.
 
 <h4 class="pdoc-member-header" id="HealthCheckCheck-interval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L20">property <b>interval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L20">property <b>interval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>interval: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6499,7 +6499,7 @@ The number of consecutive successful health checks that must occur before declar
 The amount of time (in seconds) between each health check (minimum: 10).
 
 <h4 class="pdoc-member-header" id="HealthCheckCheck-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L24">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L24">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6507,7 +6507,7 @@ The amount of time (in seconds) between each health check (minimum: 10).
 The port of the Spotinst HCS (default: 80).
 
 <h4 class="pdoc-member-header" id="HealthCheckCheck-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L28">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L28">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6515,12 +6515,12 @@ The port of the Spotinst HCS (default: 80).
 The protocol to use to connect with the instance. Valid values: http, https.
 
 <h4 class="pdoc-member-header" id="HealthCheckCheck-timeOut">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L29">property <b>timeOut</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L29">property <b>timeOut</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeOut?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="HealthCheckCheck-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L33">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L33">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6528,7 +6528,7 @@ The protocol to use to connect with the instance. Valid values: http, https.
 the amount of time (in seconds) to wait when receiving a response from the health check.
 
 <h4 class="pdoc-member-header" id="HealthCheckCheck-unhealthy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/types/input.ts#L37">property <b>unhealthy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/7a4d87d5e24ae15950fb71a5bc0d4c3fb24caabe/sdk/nodejs/types/input.ts#L37">property <b>unhealthy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unhealthy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
