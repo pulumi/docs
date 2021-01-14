@@ -110,7 +110,7 @@ example_repository_collaborator = github.RepositoryCollaborator("exampleReposito
     username="example-username")
 invitee = pulumi.providers.Github("invitee", token=var["invitee_token"])
 example_user_invitation_accepter = github.UserInvitationAccepter("exampleUserInvitationAccepter", invitation_id=example_repository_collaborator.invitation_id,
-opts=ResourceOptions(provider="github.invitee"))
+opts=pulumi.ResourceOptions(provider="github.invitee"))
 ```
 
 {{% /example %}}
