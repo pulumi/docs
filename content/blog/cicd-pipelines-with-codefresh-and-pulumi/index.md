@@ -5,6 +5,7 @@ meta_desc: "Build Kubernetes applications and provision infrastructure with Pulu
 meta_image: codefresh.png
 authors:
     - sophia-parafina
+    - kostis-kapelonis
 tags:
     - CI/CD
     - Codefresh
