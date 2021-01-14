@@ -230,9 +230,9 @@ if name is None:
 fra = pulumi.providers.Alicloud("fra", region="eu-central-1")
 sh = pulumi.providers.Alicloud("sh", region="cn-shanghai")
 vpc1 = alicloud.vpc.Network("vpc1", cidr_block="192.168.0.0/16",
-opts=ResourceOptions(provider=alicloud["fra"]))
+opts=pulumi.ResourceOptions(provider=alicloud["fra"]))
 vpc2 = alicloud.vpc.Network("vpc2", cidr_block="172.16.0.0/12",
-opts=ResourceOptions(provider=alicloud["sh"]))
+opts=pulumi.ResourceOptions(provider=alicloud["sh"]))
 cen = alicloud.cen.Instance("cen", description="tf-testAccCenBandwidthLimitConfigDescription")
 bwp = alicloud.cen.BandwidthPackage("bwp",
     bandwidth=5,
@@ -260,7 +260,7 @@ foo = alicloud.cen.BandwidthLimit("foo",
         "cn-shanghai",
     ],
     bandwidth_limit=4,
-    opts=ResourceOptions(depends_on=[
+    opts=pulumi.ResourceOptions(depends_on=[
             bwp_attach,
             vpc_attach1,
             vpc_attach2,

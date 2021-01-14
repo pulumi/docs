@@ -139,7 +139,7 @@ default_instance_attachment = alicloud.cen.InstanceAttachment("defaultInstanceAt
     child_instance_id=default_network.id,
     child_instance_type="VPC",
     child_instance_region_id="cn-hangzhou",
-    opts=ResourceOptions(depends_on=[
+    opts=pulumi.ResourceOptions(depends_on=[
             default_instance,
             default_network,
         ]))
@@ -148,7 +148,7 @@ default_private_zone = alicloud.cen.PrivateZone("defaultPrivateZone",
     cen_id=default_instance.id,
     host_region_id="cn-hangzhou",
     host_vpc_id=default_network.id,
-    opts=ResourceOptions(depends_on=[default_instance_attachment]))
+    opts=pulumi.ResourceOptions(depends_on=[default_instance_attachment]))
 ```
 
 {{% /example %}}
