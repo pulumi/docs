@@ -213,6 +213,16 @@ The DatabaseUser resource accepts the following [input]({{< relref "/docs/intro/
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="roles_csharp">
+<a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#databaseuserrole">List&lt;Database<wbr>User<wbr>Role<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of user’s roles and the databases / collections on which the roles apply. A role allows the user to perform particular actions on the specified database. A role on the admin database can include privileges that apply to the other databases as well. See Roles below for more details.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
 </span>
@@ -272,16 +282,6 @@ Accepted values include:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="roles_csharp">
-<a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseuserrole">List&lt;Database<wbr>User<wbr>Role<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}List of user’s roles and the databases / collections on which the roles apply. A role allows the user to perform particular actions on the specified database. A role on the admin database can include privileges that apply to the other databases as well. See Roles below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="scopes_csharp">
 <a href="#scopes_csharp" style="color: inherit; text-decoration: inherit;">Scopes</a>
 </span>
@@ -314,6 +314,16 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="roles_go">
+<a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#databaseuserrole">[]Database<wbr>User<wbr>Role</a></span>
+    </dt>
+    <dd>{{% md %}}List of user’s roles and the databases / collections on which the roles apply. A role allows the user to perform particular actions on the specified database. A role on the admin database can include privileges that apply to the other databases as well. See Roles below for more details.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -376,16 +386,6 @@ Accepted values include:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="roles_go">
-<a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseuserrole">[]Database<wbr>User<wbr>Role</a></span>
-    </dt>
-    <dd>{{% md %}}List of user’s roles and the databases / collections on which the roles apply. A role allows the user to perform particular actions on the specified database. A role on the admin database can include privileges that apply to the other databases as well. See Roles below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="scopes_go">
 <a href="#scopes_go" style="color: inherit; text-decoration: inherit;">Scopes</a>
 </span>
@@ -418,6 +418,16 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="roles_nodejs">
+<a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#databaseuserrole">Database<wbr>User<wbr>Role[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of user’s roles and the databases / collections on which the roles apply. A role allows the user to perform particular actions on the specified database. A role on the admin database can include privileges that apply to the other databases as well. See Roles below for more details.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -480,16 +490,6 @@ Accepted values include:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="roles_nodejs">
-<a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseuserrole">Database<wbr>User<wbr>Role[]</a></span>
-    </dt>
-    <dd>{{% md %}}List of user’s roles and the databases / collections on which the roles apply. A role allows the user to perform particular actions on the specified database. A role on the admin database can include privileges that apply to the other databases as well. See Roles below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="scopes_nodejs">
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
@@ -522,6 +522,16 @@ Accepted values include:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="roles_python">
+<a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#databaseuserrole">Sequence[Database<wbr>User<wbr>Role<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of user’s roles and the databases / collections on which the roles apply. A role allows the user to perform particular actions on the specified database. A role on the admin database can include privileges that apply to the other databases as well. See Roles below for more details.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -582,16 +592,6 @@ Accepted values include:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="roles_python">
-<a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseuserrole">Sequence[Database<wbr>User<wbr>Role<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}List of user’s roles and the databases / collections on which the roles apply. A role allows the user to perform particular actions on the specified database. A role on the admin database can include privileges that apply to the other databases as well. See Roles below for more details.
-{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scopes_python">

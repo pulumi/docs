@@ -161,7 +161,7 @@ test_cloud_provider_snapshot_restore_job = mongodbatlas.CloudProviderSnapshotRes
         target_cluster_name="MyCluster",
         target_project_id="5cf5a45a9ccf6400e60981b6",
     ),
-    opts=ResourceOptions(depends_on=["mongodbatlas_cloud_provider_snapshot.test"]))
+    opts=pulumi.ResourceOptions(depends_on=["mongodbatlas_cloud_provider_snapshot.test"]))
 ```
 
 {{% /example %}}
