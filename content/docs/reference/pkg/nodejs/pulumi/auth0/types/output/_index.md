@@ -3,7 +3,7 @@ title: "Module types/output"
 title_tag: "Module types/output | Package @pulumi/auth0 | Node.js SDK"
 linktitle: "output"
 meta_desc: "Explore members of the output module in the @pulumi/auth0 package."
-git_sha: "523ebca2d32110923151f647d03cae9fc274953b"
+git_sha: "1719620f59c02a0ddcba3cc97c837418776cbae6"
 block_external_search_index: true
 ---
 
@@ -62,14 +62,14 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="ClientAddons" data-link-title="ClientAddons">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L7">
         interface <strong>ClientAddons</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ClientAddons</span></code></pre>
 <h4 class="pdoc-member-header" id="ClientAddons-aws">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L11">property <b>aws</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L11">property <b>aws</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aws?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -77,7 +77,7 @@ block_external_search_index: true
 String
 
 <h4 class="pdoc-member-header" id="ClientAddons-azureBlob">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L15">property <b>azureBlob</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L15">property <b>azureBlob</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureBlob?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -85,7 +85,7 @@ String
 String
 
 <h4 class="pdoc-member-header" id="ClientAddons-azureSb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L19">property <b>azureSb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L19">property <b>azureSb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureSb?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -93,7 +93,7 @@ String
 String
 
 <h4 class="pdoc-member-header" id="ClientAddons-box">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L23">property <b>box</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L23">property <b>box</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>box?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -101,7 +101,7 @@ String
 String
 
 <h4 class="pdoc-member-header" id="ClientAddons-cloudbees">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L27">property <b>cloudbees</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L27">property <b>cloudbees</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudbees?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -109,7 +109,7 @@ String
 String
 
 <h4 class="pdoc-member-header" id="ClientAddons-concur">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L31">property <b>concur</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L31">property <b>concur</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>concur?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -117,7 +117,7 @@ String
 String
 
 <h4 class="pdoc-member-header" id="ClientAddons-dropbox">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L35">property <b>dropbox</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L35">property <b>dropbox</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dropbox?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -125,7 +125,7 @@ String
 String
 
 <h4 class="pdoc-member-header" id="ClientAddons-echosign">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L39">property <b>echosign</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L39">property <b>echosign</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>echosign?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -133,7 +133,7 @@ String
 String
 
 <h4 class="pdoc-member-header" id="ClientAddons-egnyte">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L43">property <b>egnyte</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L43">property <b>egnyte</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>egnyte?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -141,7 +141,7 @@ String
 String
 
 <h4 class="pdoc-member-header" id="ClientAddons-firebase">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L47">property <b>firebase</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L47">property <b>firebase</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firebase?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -149,7 +149,7 @@ String
 String
 
 <h4 class="pdoc-member-header" id="ClientAddons-layer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L51">property <b>layer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L51">property <b>layer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>layer?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -157,7 +157,7 @@ String
 String
 
 <h4 class="pdoc-member-header" id="ClientAddons-mscrm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L55">property <b>mscrm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L55">property <b>mscrm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mscrm?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -165,7 +165,7 @@ String
 String
 
 <h4 class="pdoc-member-header" id="ClientAddons-newrelic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L59">property <b>newrelic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L59">property <b>newrelic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>newrelic?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -173,7 +173,7 @@ String
 String
 
 <h4 class="pdoc-member-header" id="ClientAddons-office365">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L63">property <b>office365</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L63">property <b>office365</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>office365?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -181,7 +181,7 @@ String
 String
 
 <h4 class="pdoc-member-header" id="ClientAddons-rms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L67">property <b>rms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L67">property <b>rms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rms?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -189,7 +189,7 @@ String
 String
 
 <h4 class="pdoc-member-header" id="ClientAddons-salesforce">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L71">property <b>salesforce</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L71">property <b>salesforce</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>salesforce?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -197,7 +197,7 @@ String
 String
 
 <h4 class="pdoc-member-header" id="ClientAddons-salesforceApi">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L75">property <b>salesforceApi</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L75">property <b>salesforceApi</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>salesforceApi?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -205,7 +205,7 @@ String
 String
 
 <h4 class="pdoc-member-header" id="ClientAddons-salesforceSandboxApi">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L79">property <b>salesforceSandboxApi</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L79">property <b>salesforceSandboxApi</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>salesforceSandboxApi?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -213,7 +213,7 @@ String
 String
 
 <h4 class="pdoc-member-header" id="ClientAddons-samlp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L83">property <b>samlp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L83">property <b>samlp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>samlp?: <a href='/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#ClientAddonsSamlp'>outputs.ClientAddonsSamlp</a>;</code></pre>
@@ -221,7 +221,7 @@ String
 List(Resource). Configuration settings for a SAML add-on. For details, see SAML.
 
 <h4 class="pdoc-member-header" id="ClientAddons-sapApi">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L87">property <b>sapApi</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L87">property <b>sapApi</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sapApi?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -229,7 +229,7 @@ List(Resource). Configuration settings for a SAML add-on. For details, see SAML.
 String
 
 <h4 class="pdoc-member-header" id="ClientAddons-sentry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L91">property <b>sentry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L91">property <b>sentry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sentry?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -237,7 +237,7 @@ String
 String
 
 <h4 class="pdoc-member-header" id="ClientAddons-sharepoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L95">property <b>sharepoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L95">property <b>sharepoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharepoint?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -245,7 +245,7 @@ String
 String
 
 <h4 class="pdoc-member-header" id="ClientAddons-slack">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L99">property <b>slack</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L99">property <b>slack</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slack?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -253,7 +253,7 @@ String
 String
 
 <h4 class="pdoc-member-header" id="ClientAddons-springcm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L103">property <b>springcm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L103">property <b>springcm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>springcm?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -261,7 +261,7 @@ String
 String
 
 <h4 class="pdoc-member-header" id="ClientAddons-wams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L107">property <b>wams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L107">property <b>wams</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>wams?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -269,7 +269,7 @@ String
 String
 
 <h4 class="pdoc-member-header" id="ClientAddons-wsfed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L111">property <b>wsfed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L111">property <b>wsfed</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>wsfed?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -277,7 +277,7 @@ String
 String
 
 <h4 class="pdoc-member-header" id="ClientAddons-zendesk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L115">property <b>zendesk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L115">property <b>zendesk</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zendesk?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -285,7 +285,7 @@ String
 String
 
 <h4 class="pdoc-member-header" id="ClientAddons-zoom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L119">property <b>zoom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L119">property <b>zoom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoom?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -293,14 +293,14 @@ String
 String
 
 <h3 class="pdoc-module-header" id="ClientAddonsSamlp" data-link-title="ClientAddonsSamlp">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L122">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L122">
         interface <strong>ClientAddonsSamlp</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ClientAddonsSamlp</span></code></pre>
 <h4 class="pdoc-member-header" id="ClientAddonsSamlp-audience">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L126">property <b>audience</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L126">property <b>audience</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>audience?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -308,7 +308,7 @@ String
 String. Audience of the SAML Assertion. Default will be the Issuer on SAMLRequest.
 
 <h4 class="pdoc-member-header" id="ClientAddonsSamlp-authnContextClassRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L130">property <b>authnContextClassRef</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L130">property <b>authnContextClassRef</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authnContextClassRef?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -316,7 +316,7 @@ String. Audience of the SAML Assertion. Default will be the Issuer on SAMLReques
 String. Class reference of the authentication context.
 
 <h4 class="pdoc-member-header" id="ClientAddonsSamlp-binding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L134">property <b>binding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L134">property <b>binding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>binding?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -324,7 +324,7 @@ String. Class reference of the authentication context.
 String. Protocol binding used for SAML logout responses.
 
 <h4 class="pdoc-member-header" id="ClientAddonsSamlp-createUpnClaim">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L138">property <b>createUpnClaim</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L138">property <b>createUpnClaim</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createUpnClaim?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -332,7 +332,7 @@ String. Protocol binding used for SAML logout responses.
 Boolean, (Default=true) Indicates whether or not a UPN claim should be created.
 
 <h4 class="pdoc-member-header" id="ClientAddonsSamlp-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L142">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L142">property <b>destination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destination?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -340,7 +340,7 @@ Boolean, (Default=true) Indicates whether or not a UPN claim should be created.
 String. Destination of the SAML Response. If not specified, it will be AssertionConsumerUrlof SAMLRequest or Callback URL if there was no SAMLRequest.
 
 <h4 class="pdoc-member-header" id="ClientAddonsSamlp-digestAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L146">property <b>digestAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L146">property <b>digestAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>digestAlgorithm?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -348,7 +348,7 @@ String. Destination of the SAML Response. If not specified, it will be Assertion
 String, (Default=`sha1`). Algorithm used to calculate the digest of the SAML Assertion or response. Options include `defaultsha1` and `sha256`.
 
 <h4 class="pdoc-member-header" id="ClientAddonsSamlp-includeAttributeNameFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L150">property <b>includeAttributeNameFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L150">property <b>includeAttributeNameFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includeAttributeNameFormat?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -356,7 +356,7 @@ String, (Default=`sha1`). Algorithm used to calculate the digest of the SAML Ass
 Boolean,(Default=true). Indicates whether or not we should infer the NameFormat based on the attribute name. If set to false, the attribute NameFormat is not set in the assertion.
 
 <h4 class="pdoc-member-header" id="ClientAddonsSamlp-lifetimeInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L154">property <b>lifetimeInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L154">property <b>lifetimeInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lifetimeInSeconds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -364,7 +364,7 @@ Boolean,(Default=true). Indicates whether or not we should infer the NameFormat 
 Integer, (Default=3600). Number of seconds during which the token is valid.
 
 <h4 class="pdoc-member-header" id="ClientAddonsSamlp-logout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L158">property <b>logout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L158">property <b>logout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logout?: <a href='/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#ClientAddonsSamlpLogout'>outputs.ClientAddonsSamlpLogout</a>;</code></pre>
@@ -372,7 +372,7 @@ Integer, (Default=3600). Number of seconds during which the token is valid.
 Map(Resource). Configuration settings for logout. For details, see Logout.
 
 <h4 class="pdoc-member-header" id="ClientAddonsSamlp-mapIdentities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L162">property <b>mapIdentities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L162">property <b>mapIdentities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mapIdentities?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -380,7 +380,7 @@ Map(Resource). Configuration settings for logout. For details, see Logout.
 Boolean, (Default=true). Indicates whether or not to add additional identity information in the token, such as the provider used and the access_token, if available.
 
 <h4 class="pdoc-member-header" id="ClientAddonsSamlp-mapUnknownClaimsAsIs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L166">property <b>mapUnknownClaimsAsIs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L166">property <b>mapUnknownClaimsAsIs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mapUnknownClaimsAsIs?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -388,7 +388,7 @@ Boolean, (Default=true). Indicates whether or not to add additional identity inf
 Boolean, (Default=false). Indicates whether or not to add a prefix of `http://schema.auth0.com` to any claims that are not mapped to the common profile when passed through in the output assertion.
 
 <h4 class="pdoc-member-header" id="ClientAddonsSamlp-mappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L170">property <b>mappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L170">property <b>mappings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mappings?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -396,7 +396,7 @@ Boolean, (Default=false). Indicates whether or not to add a prefix of `http://sc
 Map(String). Mappings between the Auth0 user profile property name (`name`) and the output attributes on the SAML attribute in the assertion (`value`).
 
 <h4 class="pdoc-member-header" id="ClientAddonsSamlp-nameIdentifierFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L174">property <b>nameIdentifierFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L174">property <b>nameIdentifierFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameIdentifierFormat?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -404,7 +404,7 @@ Map(String). Mappings between the Auth0 user profile property name (`name`) and 
 String, (Default=`urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified`). Format of the name identifier.
 
 <h4 class="pdoc-member-header" id="ClientAddonsSamlp-nameIdentifierProbes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L178">property <b>nameIdentifierProbes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L178">property <b>nameIdentifierProbes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameIdentifierProbes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -412,7 +412,7 @@ String, (Default=`urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified`). Forma
 List(String). Attributes that can be used for Subject/NameID. Auth0 will try each of the attributes of this array in order and use the first value it finds.
 
 <h4 class="pdoc-member-header" id="ClientAddonsSamlp-passthroughClaimsWithNoMapping">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L182">property <b>passthroughClaimsWithNoMapping</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L182">property <b>passthroughClaimsWithNoMapping</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passthroughClaimsWithNoMapping?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -420,7 +420,7 @@ List(String). Attributes that can be used for Subject/NameID. Auth0 will try eac
 Boolean, (Default=true). Indicates whether or not to passthrough claims that are not mapped to the common profile in the output assertion.
 
 <h4 class="pdoc-member-header" id="ClientAddonsSamlp-recipient">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L186">property <b>recipient</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L186">property <b>recipient</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recipient?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -428,7 +428,7 @@ Boolean, (Default=true). Indicates whether or not to passthrough claims that are
 String. Recipient of the SAML Assertion (SubjectConfirmationData). Default is AssertionConsumerUrl on SAMLRequest or Callback URL if no SAMLRequest was sent.
 
 <h4 class="pdoc-member-header" id="ClientAddonsSamlp-signResponse">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L190">property <b>signResponse</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L190">property <b>signResponse</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signResponse?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -436,7 +436,7 @@ String. Recipient of the SAML Assertion (SubjectConfirmationData). Default is As
 Boolean. Indicates whether or not the SAML Response should be signed instead of the SAML Assertion.
 
 <h4 class="pdoc-member-header" id="ClientAddonsSamlp-signatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L194">property <b>signatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L194">property <b>signatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signatureAlgorithm?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -444,7 +444,7 @@ Boolean. Indicates whether or not the SAML Response should be signed instead of 
 String, (Default=`rsa-sha1`). Algorithm used to sign the SAML Assertion or response. Options include `rsa-sha1` and `rsa-sha256`.
 
 <h4 class="pdoc-member-header" id="ClientAddonsSamlp-typedAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L198">property <b>typedAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L198">property <b>typedAttributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>typedAttributes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -452,14 +452,14 @@ String, (Default=`rsa-sha1`). Algorithm used to sign the SAML Assertion or respo
 Boolean, (Default=true). Indicates whether or not we should infer the `xs:type` of the element. Types include `xs:string`, `xs:boolean`, `xs:double`, and `xs:anyType`. When set to false, all `xs:type` are `xs:anyType`.
 
 <h3 class="pdoc-module-header" id="ClientAddonsSamlpLogout" data-link-title="ClientAddonsSamlpLogout">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L201">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L201">
         interface <strong>ClientAddonsSamlpLogout</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ClientAddonsSamlpLogout</span></code></pre>
 <h4 class="pdoc-member-header" id="ClientAddonsSamlpLogout-callback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L205">property <b>callback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L205">property <b>callback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>callback?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -467,7 +467,7 @@ Boolean, (Default=true). Indicates whether or not we should infer the `xs:type` 
 String. Service provider's Single Logout Service URL, to which Auth0 will send logout requests and responses.
 
 <h4 class="pdoc-member-header" id="ClientAddonsSamlpLogout-sloEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L209">property <b>sloEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L209">property <b>sloEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sloEnabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -475,14 +475,14 @@ String. Service provider's Single Logout Service URL, to which Auth0 will send l
 Boolean. Indicates whether or not Auth0 should notify service providers of session termination.
 
 <h3 class="pdoc-module-header" id="ClientJwtConfiguration" data-link-title="ClientJwtConfiguration">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L212">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L212">
         interface <strong>ClientJwtConfiguration</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ClientJwtConfiguration</span></code></pre>
 <h4 class="pdoc-member-header" id="ClientJwtConfiguration-alg">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L216">property <b>alg</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L216">property <b>alg</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alg?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -490,7 +490,7 @@ Boolean. Indicates whether or not Auth0 should notify service providers of sessi
 String. Algorithm used to sign JWTs.
 
 <h4 class="pdoc-member-header" id="ClientJwtConfiguration-lifetimeInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L220">property <b>lifetimeInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L220">property <b>lifetimeInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lifetimeInSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -498,7 +498,7 @@ String. Algorithm used to sign JWTs.
 Integer. Number of seconds during which the JWT will be valid.
 
 <h4 class="pdoc-member-header" id="ClientJwtConfiguration-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L224">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L224">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -506,7 +506,7 @@ Integer. Number of seconds during which the JWT will be valid.
 Map(String). Permissions (scopes) included in JWTs.
 
 <h4 class="pdoc-member-header" id="ClientJwtConfiguration-secretEncoded">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L228">property <b>secretEncoded</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L228">property <b>secretEncoded</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretEncoded: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -514,14 +514,14 @@ Map(String). Permissions (scopes) included in JWTs.
 Boolean. Indicates whether or not the client secret is base64 encoded.
 
 <h3 class="pdoc-module-header" id="ClientMobile" data-link-title="ClientMobile">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L231">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L231">
         interface <strong>ClientMobile</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ClientMobile</span></code></pre>
 <h4 class="pdoc-member-header" id="ClientMobile-android">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L235">property <b>android</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L235">property <b>android</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>android?: <a href='/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#ClientMobileAndroid'>outputs.ClientMobileAndroid</a>;</code></pre>
@@ -529,7 +529,7 @@ Boolean. Indicates whether or not the client secret is base64 encoded.
 List(Resource). Configuration settings for Android native apps. For details, see Android.
 
 <h4 class="pdoc-member-header" id="ClientMobile-ios">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L239">property <b>ios</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L239">property <b>ios</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ios?: <a href='/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#ClientMobileIos'>outputs.ClientMobileIos</a>;</code></pre>
@@ -537,14 +537,14 @@ List(Resource). Configuration settings for Android native apps. For details, see
 List(Resource). Configuration settings for i0S native apps. For details, see iOS.
 
 <h3 class="pdoc-module-header" id="ClientMobileAndroid" data-link-title="ClientMobileAndroid">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L242">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L242">
         interface <strong>ClientMobileAndroid</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ClientMobileAndroid</span></code></pre>
 <h4 class="pdoc-member-header" id="ClientMobileAndroid-appPackageName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L246">property <b>appPackageName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L246">property <b>appPackageName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appPackageName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -552,7 +552,7 @@ List(Resource). Configuration settings for i0S native apps. For details, see iOS
 String
 
 <h4 class="pdoc-member-header" id="ClientMobileAndroid-sha256CertFingerprints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L250">property <b>sha256CertFingerprints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L250">property <b>sha256CertFingerprints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sha256CertFingerprints?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -560,14 +560,14 @@ String
 List(String)
 
 <h3 class="pdoc-module-header" id="ClientMobileIos" data-link-title="ClientMobileIos">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L253">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L253">
         interface <strong>ClientMobileIos</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ClientMobileIos</span></code></pre>
 <h4 class="pdoc-member-header" id="ClientMobileIos-appBundleIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L257">property <b>appBundleIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L257">property <b>appBundleIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appBundleIdentifier?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -575,7 +575,7 @@ List(String)
 String
 
 <h4 class="pdoc-member-header" id="ClientMobileIos-teamId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L261">property <b>teamId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L261">property <b>teamId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>teamId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -583,41 +583,41 @@ String
 String
 
 <h3 class="pdoc-module-header" id="ClientRefreshToken" data-link-title="ClientRefreshToken">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L264">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L264">
         interface <strong>ClientRefreshToken</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ClientRefreshToken</span></code></pre>
 <h4 class="pdoc-member-header" id="ClientRefreshToken-expirationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L265">property <b>expirationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L265">property <b>expirationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expirationType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ClientRefreshToken-leeway">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L266">property <b>leeway</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L266">property <b>leeway</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>leeway?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ClientRefreshToken-rotationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L267">property <b>rotationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L267">property <b>rotationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rotationType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ClientRefreshToken-tokenLifetime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L268">property <b>tokenLifetime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L268">property <b>tokenLifetime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenLifetime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ConnectionOptions" data-link-title="ConnectionOptions">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L271">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L271">
         interface <strong>ConnectionOptions</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ConnectionOptions</span></code></pre>
 <h4 class="pdoc-member-header" id="ConnectionOptions-adfsServer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L275">property <b>adfsServer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L275">property <b>adfsServer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adfsServer?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -625,7 +625,7 @@ String
 ADFS Metadata source.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-allowedAudiences">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L279">property <b>allowedAudiences</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L279">property <b>allowedAudiences</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedAudiences?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -633,12 +633,12 @@ ADFS Metadata source.
 List of allowed audiences.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-apiEnableUsers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L280">property <b>apiEnableUsers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L280">property <b>apiEnableUsers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiEnableUsers?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="ConnectionOptions-appDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L286">property <b>appDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L286">property <b>appDomain</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -650,7 +650,7 @@ use domain instead
 Azure AD domain name.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L290">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L290">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -658,12 +658,12 @@ Azure AD domain name.
 Azure AD app ID.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-authorizationEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L291">property <b>authorizationEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L291">property <b>authorizationEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizationEndpoint?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ConnectionOptions-bruteForceProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L295">property <b>bruteForceProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L295">property <b>bruteForceProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bruteForceProtection?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -671,7 +671,7 @@ Azure AD app ID.
 Indicates whether or not to enable brute force protection, which will limit the number of signups and failed logins from a suspicious IP address.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L299">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L299">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -679,7 +679,7 @@ Indicates whether or not to enable brute force protection, which will limit the 
 OIDC provider client ID.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L303">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L303">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -687,7 +687,7 @@ OIDC provider client ID.
 OIDC provider client secret.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-communityBaseUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L307">property <b>communityBaseUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L307">property <b>communityBaseUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>communityBaseUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -695,7 +695,7 @@ OIDC provider client secret.
 String.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-configuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L311">property <b>configuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L311">property <b>configuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configuration?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -703,7 +703,7 @@ String.
 A case-sensitive map of key value pairs used as configuration variables for the `customScript`.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-customScripts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L315">property <b>customScripts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L315">property <b>customScripts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customScripts?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -711,7 +711,7 @@ A case-sensitive map of key value pairs used as configuration variables for the 
 Custom database action scripts. For more information, read [Custom Database Action Script Templates](https://auth0.com/docs/connections/database/custom-db/templates).
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-debug">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L319">property <b>debug</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L319">property <b>debug</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>debug?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -719,7 +719,7 @@ Custom database action scripts. For more information, read [Custom Database Acti
 (Boolean) When enabled additional debugging information will be generated.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-digestAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L323">property <b>digestAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L323">property <b>digestAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>digestAlgorithm?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -727,12 +727,12 @@ Custom database action scripts. For more information, read [Custom Database Acti
 Sign Request Algorithm Digest
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-disableCache">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L324">property <b>disableCache</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L324">property <b>disableCache</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableCache?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="ConnectionOptions-disableSignup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L328">property <b>disableSignup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L328">property <b>disableSignup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableSignup?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -740,7 +740,7 @@ Sign Request Algorithm Digest
 Boolean. Indicates whether or not to allow user sign-ups to your application.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-discoveryUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L332">property <b>discoveryUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L332">property <b>discoveryUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>discoveryUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -748,12 +748,12 @@ Boolean. Indicates whether or not to allow user sign-ups to your application.
 OpenID discovery URL. E.g. `https://auth.example.com/.well-known/openid-configuration`.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L333">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L333">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ConnectionOptions-domainAliases">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L337">property <b>domainAliases</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L337">property <b>domainAliases</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainAliases?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -761,12 +761,12 @@ OpenID discovery URL. E.g. `https://auth.example.com/.well-known/openid-configur
 List of the domains that can be authenticated using the Identity Provider. Only needed for Identifier First authentication flows.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-enabledDatabaseCustomization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L338">property <b>enabledDatabaseCustomization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L338">property <b>enabledDatabaseCustomization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabledDatabaseCustomization?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="ConnectionOptions-fieldsMap">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L342">property <b>fieldsMap</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L342">property <b>fieldsMap</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fieldsMap?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -774,7 +774,7 @@ List of the domains that can be authenticated using the Identity Provider. Only 
 SAML Attributes mapping. If you're configuring a SAML enterprise connection for a non-standard PingFederate Server, you must update the attribute mappings.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-from">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L346">property <b>from</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L346">property <b>from</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>from?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -782,22 +782,22 @@ SAML Attributes mapping. If you're configuring a SAML enterprise connection for 
 SMS number for the sender. Used when SMS Source is From.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-iconUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L347">property <b>iconUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L347">property <b>iconUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iconUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ConnectionOptions-identityApi">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L348">property <b>identityApi</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L348">property <b>identityApi</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identityApi?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ConnectionOptions-idpInitiated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L349">property <b>idpInitiated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L349">property <b>idpInitiated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>idpInitiated?: <a href='/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#ConnectionOptionsIdpInitiated'>outputs.ConnectionOptionsIdpInitiated</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ConnectionOptions-importMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L353">property <b>importMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L353">property <b>importMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>importMode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -805,12 +805,12 @@ SMS number for the sender. Used when SMS Source is From.
 Indicates whether or not you have a legacy user store and want to gradually migrate those users to the Auth0 user store. [Learn more](https://auth0.com/docs/users/guides/configure-automatic-migration).
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-ips">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L354">property <b>ips</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L354">property <b>ips</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ips?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="ConnectionOptions-issuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L358">property <b>issuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L358">property <b>issuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuer?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -818,12 +818,12 @@ Indicates whether or not you have a legacy user store and want to gradually migr
 Issuer URL. E.g. `https://auth.example.com`
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-jwksUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L359">property <b>jwksUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L359">property <b>jwksUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jwksUri?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ConnectionOptions-keyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L363">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L363">property <b>keyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -831,7 +831,7 @@ Issuer URL. E.g. `https://auth.example.com`
 Key ID.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-maxGroupsToRetrieve">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L367">property <b>maxGroupsToRetrieve</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L367">property <b>maxGroupsToRetrieve</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxGroupsToRetrieve?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -839,7 +839,7 @@ Key ID.
 Maximum number of groups to retrieve.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-messagingServiceSid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L371">property <b>messagingServiceSid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L371">property <b>messagingServiceSid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messagingServiceSid?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -847,7 +847,7 @@ Maximum number of groups to retrieve.
 SID for Copilot. Used when SMS Source is Copilot.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L375">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L375">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -855,7 +855,7 @@ SID for Copilot. Used when SMS Source is Copilot.
 Name of the connection.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-passwordComplexityOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L379">property <b>passwordComplexityOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L379">property <b>passwordComplexityOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordComplexityOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#ConnectionOptionsPasswordComplexityOptions'>outputs.ConnectionOptionsPasswordComplexityOptions</a>;</code></pre>
@@ -863,7 +863,7 @@ Name of the connection.
 Configuration settings for password complexity. For details, see Password Complexity Options.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-passwordDictionary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L383">property <b>passwordDictionary</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L383">property <b>passwordDictionary</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordDictionary?: <a href='/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#ConnectionOptionsPasswordDictionary'>outputs.ConnectionOptionsPasswordDictionary</a>;</code></pre>
@@ -871,7 +871,7 @@ Configuration settings for password complexity. For details, see Password Comple
 Configuration settings for the password dictionary check, which does not allow passwords that are part of the password dictionary. For details, see Password Dictionary.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-passwordHistories">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L387">property <b>passwordHistories</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L387">property <b>passwordHistories</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordHistories: <a href='#ConnectionOptionsPasswordHistory'>ConnectionOptionsPasswordHistory</a>[];</code></pre>
@@ -879,7 +879,7 @@ Configuration settings for the password dictionary check, which does not allow p
 Configuration settings for the password history that is maintained for each user to prevent the reuse of passwords. For details, see Password History.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-passwordNoPersonalInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L391">property <b>passwordNoPersonalInfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L391">property <b>passwordNoPersonalInfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordNoPersonalInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#ConnectionOptionsPasswordNoPersonalInfo'>outputs.ConnectionOptionsPasswordNoPersonalInfo</a>;</code></pre>
@@ -887,7 +887,7 @@ Configuration settings for the password history that is maintained for each user
 Configuration settings for the password personal info check, which does not allow passwords that contain any part of the user's personal data, including user's name, username, nickname, user_metadata.name, user_metadata.first, user_metadata.last, user's email, or first part of the user's email. For details, see Password No Personal Info.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-passwordPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L395">property <b>passwordPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L395">property <b>passwordPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordPolicy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -895,7 +895,7 @@ Configuration settings for the password personal info check, which does not allo
 Indicates level of password strength to enforce during authentication. A strong password policy will make it difficult, if not improbable, for someone to guess a password through either manual or automated means. Options include `none`, `low`, `fair`, `good`, `excellent`.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-protocolBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L399">property <b>protocolBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L399">property <b>protocolBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocolBinding?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -903,7 +903,7 @@ Indicates level of password strength to enforce during authentication. A strong 
 The SAML Response Binding - how the SAML token is received by Auth0 from IdP. Two possible values are `urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect` (default) and `urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST`
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-requestTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L403">property <b>requestTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L403">property <b>requestTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestTemplate?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -911,7 +911,7 @@ The SAML Response Binding - how the SAML token is received by Auth0 from IdP. Tw
 Template that formats the SAML request
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-requiresUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L407">property <b>requiresUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L407">property <b>requiresUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requiresUsername?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -919,7 +919,7 @@ Template that formats the SAML request
 Indicates whether or not the user is required to provide a username in addition to an email address.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L411">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L411">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -927,12 +927,12 @@ Indicates whether or not the user is required to provide a username in addition 
 Scopes required by the connection. The value must be a list, for example `["openid", "profile", "email"]`.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-scripts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L412">property <b>scripts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L412">property <b>scripts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scripts?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="ConnectionOptions-signInEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L416">property <b>signInEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L416">property <b>signInEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signInEndpoint?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -940,7 +940,7 @@ Scopes required by the connection. The value must be a list, for example `["open
 SAML single login URL for the connection.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-signOutEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L420">property <b>signOutEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L420">property <b>signOutEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signOutEndpoint?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -948,7 +948,7 @@ SAML single login URL for the connection.
 SAML single logout URL for the connection.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-signSamlRequest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L424">property <b>signSamlRequest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L424">property <b>signSamlRequest</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signSamlRequest?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -956,7 +956,7 @@ SAML single logout URL for the connection.
 (Boolean) When enabled, the SAML authentication request will be signed.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-signatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L428">property <b>signatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L428">property <b>signatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signatureAlgorithm?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -964,7 +964,7 @@ SAML single logout URL for the connection.
 Sign Request Algorithm
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-signingCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L432">property <b>signingCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L432">property <b>signingCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signingCert?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -972,7 +972,7 @@ Sign Request Algorithm
 The X.509 signing certificate (encoded in PEM or CER) you retrieved from the IdP, Base64-encoded
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-strategyVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L436">property <b>strategyVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L436">property <b>strategyVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>strategyVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -980,12 +980,12 @@ The X.509 signing certificate (encoded in PEM or CER) you retrieved from the IdP
 Version 1 is deprecated, use version 2.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-subject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L437">property <b>subject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L437">property <b>subject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subject?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ConnectionOptions-syntax">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L441">property <b>syntax</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L441">property <b>syntax</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>syntax?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -993,7 +993,7 @@ Version 1 is deprecated, use version 2.
 Syntax of the SMS. Options include `markdown` and `liquid`.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-teamId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L445">property <b>teamId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L445">property <b>teamId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>teamId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1001,7 +1001,7 @@ Syntax of the SMS. Options include `markdown` and `liquid`.
 Team ID.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-template">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L449">property <b>template</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L449">property <b>template</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>template?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1009,17 +1009,17 @@ Team ID.
 Template for the SMS. You can use `@@password@@` as a placeholder for the password value.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-tenantDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L450">property <b>tenantDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L450">property <b>tenantDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantDomain?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ConnectionOptions-tokenEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L451">property <b>tokenEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L451">property <b>tokenEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenEndpoint?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ConnectionOptions-totp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L455">property <b>totp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L455">property <b>totp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>totp?: <a href='/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#ConnectionOptionsTotp'>outputs.ConnectionOptionsTotp</a>;</code></pre>
@@ -1027,7 +1027,7 @@ Template for the SMS. You can use `@@password@@` as a placeholder for the passwo
 Configuration options for one-time passwords. For details, see TOTP.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-twilioSid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L459">property <b>twilioSid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L459">property <b>twilioSid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>twilioSid?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1035,7 +1035,7 @@ Configuration options for one-time passwords. For details, see TOTP.
 SID for your Twilio account.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-twilioToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L463">property <b>twilioToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L463">property <b>twilioToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>twilioToken?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1043,7 +1043,7 @@ SID for your Twilio account.
 AuthToken for your Twilio account.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L467">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L467">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1051,22 +1051,22 @@ AuthToken for your Twilio account.
 Value can be `backChannel` or `frontChannel`.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-useCertAuth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L468">property <b>useCertAuth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L468">property <b>useCertAuth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useCertAuth?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="ConnectionOptions-useKerberos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L469">property <b>useKerberos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L469">property <b>useKerberos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useKerberos?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="ConnectionOptions-useWsfed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L470">property <b>useWsfed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L470">property <b>useWsfed</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useWsfed?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="ConnectionOptions-userIdAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L474">property <b>userIdAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L474">property <b>userIdAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userIdAttribute?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1074,12 +1074,12 @@ Value can be `backChannel` or `frontChannel`.
 Attribute in the SAML token that will be mapped to the userId property in Auth0.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-userinfoEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L475">property <b>userinfoEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L475">property <b>userinfoEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userinfoEndpoint?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ConnectionOptions-validation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L479">property <b>validation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L479">property <b>validation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validation?: <a href='/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#ConnectionOptionsValidation'>outputs.ConnectionOptionsValidation</a>;</code></pre>
@@ -1087,7 +1087,7 @@ Attribute in the SAML token that will be mapped to the userId property in Auth0.
 Validation of the minimum and maximum values allowed for a user to have as username. For details, see Validation.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-waadCommonEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L483">property <b>waadCommonEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L483">property <b>waadCommonEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waadCommonEndpoint?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -1095,24 +1095,24 @@ Validation of the minimum and maximum values allowed for a user to have as usern
 Indicates whether or not to use the common endpoint rather than the default endpoint. Typically enabled if you're using this for a multi-tenant application in Azure AD.
 
 <h4 class="pdoc-member-header" id="ConnectionOptions-waadProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L484">property <b>waadProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L484">property <b>waadProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waadProtocol?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ConnectionOptionsIdpInitiated" data-link-title="ConnectionOptionsIdpInitiated">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L487">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L487">
         interface <strong>ConnectionOptionsIdpInitiated</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ConnectionOptionsIdpInitiated</span></code></pre>
 <h4 class="pdoc-member-header" id="ConnectionOptionsIdpInitiated-clientAuthorizeQuery">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L488">property <b>clientAuthorizeQuery</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L488">property <b>clientAuthorizeQuery</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientAuthorizeQuery?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ConnectionOptionsIdpInitiated-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L492">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L492">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1120,19 +1120,19 @@ Indicates whether or not to use the common endpoint rather than the default endp
 Facebook client ID.
 
 <h4 class="pdoc-member-header" id="ConnectionOptionsIdpInitiated-clientProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L493">property <b>clientProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L493">property <b>clientProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientProtocol?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ConnectionOptionsPasswordComplexityOptions" data-link-title="ConnectionOptionsPasswordComplexityOptions">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L496">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L496">
         interface <strong>ConnectionOptionsPasswordComplexityOptions</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ConnectionOptionsPasswordComplexityOptions</span></code></pre>
 <h4 class="pdoc-member-header" id="ConnectionOptionsPasswordComplexityOptions-minLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L500">property <b>minLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L500">property <b>minLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minLength?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1140,14 +1140,14 @@ Facebook client ID.
 Minimum number of characters allowed in passwords.
 
 <h3 class="pdoc-module-header" id="ConnectionOptionsPasswordDictionary" data-link-title="ConnectionOptionsPasswordDictionary">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L503">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L503">
         interface <strong>ConnectionOptionsPasswordDictionary</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ConnectionOptionsPasswordDictionary</span></code></pre>
 <h4 class="pdoc-member-header" id="ConnectionOptionsPasswordDictionary-dictionaries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L507">property <b>dictionaries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L507">property <b>dictionaries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dictionaries?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1155,7 +1155,7 @@ Minimum number of characters allowed in passwords.
 Customized contents of the password dictionary. By default, the password dictionary contains a list of the [10,000 most common passwords](https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/10k-most-common.txt); your customized content is used in addition to the default password dictionary. Matching is not case-sensitive.
 
 <h4 class="pdoc-member-header" id="ConnectionOptionsPasswordDictionary-enable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L511">property <b>enable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L511">property <b>enable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enable?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -1163,14 +1163,14 @@ Customized contents of the password dictionary. By default, the password diction
 Indicates whether password history is enabled for the connection. When enabled, any existing users in this connection will be unaffected; the system will maintain their password history going forward.
 
 <h3 class="pdoc-module-header" id="ConnectionOptionsPasswordHistory" data-link-title="ConnectionOptionsPasswordHistory">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L514">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L514">
         interface <strong>ConnectionOptionsPasswordHistory</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ConnectionOptionsPasswordHistory</span></code></pre>
 <h4 class="pdoc-member-header" id="ConnectionOptionsPasswordHistory-enable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L518">property <b>enable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L518">property <b>enable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enable?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -1178,7 +1178,7 @@ Indicates whether password history is enabled for the connection. When enabled, 
 Indicates whether password history is enabled for the connection. When enabled, any existing users in this connection will be unaffected; the system will maintain their password history going forward.
 
 <h4 class="pdoc-member-header" id="ConnectionOptionsPasswordHistory-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L522">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L522">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1186,14 +1186,14 @@ Indicates whether password history is enabled for the connection. When enabled, 
 Indicates the number of passwords to keep in history with a maximum of 24.
 
 <h3 class="pdoc-module-header" id="ConnectionOptionsPasswordNoPersonalInfo" data-link-title="ConnectionOptionsPasswordNoPersonalInfo">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L525">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L525">
         interface <strong>ConnectionOptionsPasswordNoPersonalInfo</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ConnectionOptionsPasswordNoPersonalInfo</span></code></pre>
 <h4 class="pdoc-member-header" id="ConnectionOptionsPasswordNoPersonalInfo-enable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L529">property <b>enable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L529">property <b>enable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enable?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -1201,14 +1201,14 @@ Indicates the number of passwords to keep in history with a maximum of 24.
 Indicates whether the password personal info check is enabled for this connection.
 
 <h3 class="pdoc-module-header" id="ConnectionOptionsTotp" data-link-title="ConnectionOptionsTotp">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L532">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L532">
         interface <strong>ConnectionOptionsTotp</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ConnectionOptionsTotp</span></code></pre>
 <h4 class="pdoc-member-header" id="ConnectionOptionsTotp-length">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L536">property <b>length</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L536">property <b>length</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>length?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1216,7 +1216,7 @@ Indicates whether the password personal info check is enabled for this connectio
 Integer. Length of the one-time password.
 
 <h4 class="pdoc-member-header" id="ConnectionOptionsTotp-timeStep">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L540">property <b>timeStep</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L540">property <b>timeStep</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeStep?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1224,14 +1224,14 @@ Integer. Length of the one-time password.
 Integer. Seconds between allowed generation of new passwords.
 
 <h3 class="pdoc-module-header" id="ConnectionOptionsValidation" data-link-title="ConnectionOptionsValidation">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L543">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L543">
         interface <strong>ConnectionOptionsValidation</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ConnectionOptionsValidation</span></code></pre>
 <h4 class="pdoc-member-header" id="ConnectionOptionsValidation-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L547">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L547">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#ConnectionOptionsValidationUsername'>outputs.ConnectionOptionsValidationUsername</a>;</code></pre>
@@ -1239,31 +1239,31 @@ Integer. Seconds between allowed generation of new passwords.
 Specifies the `min` and `max` values of username length. `min` and `max` are integers.
 
 <h3 class="pdoc-module-header" id="ConnectionOptionsValidationUsername" data-link-title="ConnectionOptionsValidationUsername">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L550">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L550">
         interface <strong>ConnectionOptionsValidationUsername</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ConnectionOptionsValidationUsername</span></code></pre>
 <h4 class="pdoc-member-header" id="ConnectionOptionsValidationUsername-max">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L551">property <b>max</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L551">property <b>max</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>max?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ConnectionOptionsValidationUsername-min">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L552">property <b>min</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L552">property <b>min</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>min?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="CustomDomainVerification" data-link-title="CustomDomainVerification">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L555">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L555">
         interface <strong>CustomDomainVerification</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>CustomDomainVerification</span></code></pre>
 <h4 class="pdoc-member-header" id="CustomDomainVerification-methods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L559">property <b>methods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L559">property <b>methods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>methods: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[];</code></pre>
@@ -1271,14 +1271,14 @@ Specifies the `min` and `max` values of username length. `min` and `max` are int
 List(Map). Verification methods for the domain.
 
 <h3 class="pdoc-module-header" id="EmailCredentials" data-link-title="EmailCredentials">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L562">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L562">
         interface <strong>EmailCredentials</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>EmailCredentials</span></code></pre>
 <h4 class="pdoc-member-header" id="EmailCredentials-accessKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L566">property <b>accessKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L566">property <b>accessKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessKeyId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1286,7 +1286,7 @@ List(Map). Verification methods for the domain.
 String, Case-sensitive. AWS Access Key ID. Used only for AWS.
 
 <h4 class="pdoc-member-header" id="EmailCredentials-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L570">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L570">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiKey?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1294,7 +1294,7 @@ String, Case-sensitive. AWS Access Key ID. Used only for AWS.
 String, Case-sensitive. API Key for your email service. Will always be encrypted in our database.
 
 <h4 class="pdoc-member-header" id="EmailCredentials-apiUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L574">property <b>apiUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L574">property <b>apiUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiUser?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1302,12 +1302,12 @@ String, Case-sensitive. API Key for your email service. Will always be encrypted
 String. API User for your email service.
 
 <h4 class="pdoc-member-header" id="EmailCredentials-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L575">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L575">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="EmailCredentials-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L579">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L579">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1315,7 +1315,7 @@ String. API User for your email service.
 String. Default region. Used only for AWS, Mailgun, and SparkPost.
 
 <h4 class="pdoc-member-header" id="EmailCredentials-secretAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L583">property <b>secretAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L583">property <b>secretAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretAccessKey?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1323,7 +1323,7 @@ String. Default region. Used only for AWS, Mailgun, and SparkPost.
 String, Case-sensitive. AWS Secret Key. Will always be encrypted in our database. Used only for AWS.
 
 <h4 class="pdoc-member-header" id="EmailCredentials-smtpHost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L587">property <b>smtpHost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L587">property <b>smtpHost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>smtpHost?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1331,7 +1331,7 @@ String, Case-sensitive. AWS Secret Key. Will always be encrypted in our database
 String. Hostname or IP address of your SMTP server. Used only for SMTP.
 
 <h4 class="pdoc-member-header" id="EmailCredentials-smtpPass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L591">property <b>smtpPass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L591">property <b>smtpPass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>smtpPass?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1339,7 +1339,7 @@ String. Hostname or IP address of your SMTP server. Used only for SMTP.
 String, Case-sensitive. SMTP password. Used only for SMTP.
 
 <h4 class="pdoc-member-header" id="EmailCredentials-smtpPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L595">property <b>smtpPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L595">property <b>smtpPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>smtpPort?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1347,7 +1347,7 @@ String, Case-sensitive. SMTP password. Used only for SMTP.
 Integer. Port used by your SMTP server. Please avoid using port 25 if possible because many providers have limitations on this port. Used only for SMTP.
 
 <h4 class="pdoc-member-header" id="EmailCredentials-smtpUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L599">property <b>smtpUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L599">property <b>smtpUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>smtpUser?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1355,482 +1355,482 @@ Integer. Port used by your SMTP server. Please avoid using port 25 if possible b
 String. SMTP username. Used only for SMTP.
 
 <h3 class="pdoc-module-header" id="GlobalClientAddons" data-link-title="GlobalClientAddons">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L602">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L602">
         interface <strong>GlobalClientAddons</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GlobalClientAddons</span></code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddons-aws">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L603">property <b>aws</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L603">property <b>aws</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aws?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddons-azureBlob">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L604">property <b>azureBlob</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L604">property <b>azureBlob</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureBlob?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddons-azureSb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L605">property <b>azureSb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L605">property <b>azureSb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureSb?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddons-box">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L606">property <b>box</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L606">property <b>box</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>box?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddons-cloudbees">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L607">property <b>cloudbees</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L607">property <b>cloudbees</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudbees?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddons-concur">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L608">property <b>concur</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L608">property <b>concur</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>concur?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddons-dropbox">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L609">property <b>dropbox</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L609">property <b>dropbox</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dropbox?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddons-echosign">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L610">property <b>echosign</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L610">property <b>echosign</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>echosign?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddons-egnyte">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L611">property <b>egnyte</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L611">property <b>egnyte</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>egnyte?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddons-firebase">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L612">property <b>firebase</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L612">property <b>firebase</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firebase?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddons-layer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L613">property <b>layer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L613">property <b>layer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>layer?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddons-mscrm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L614">property <b>mscrm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L614">property <b>mscrm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mscrm?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddons-newrelic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L615">property <b>newrelic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L615">property <b>newrelic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>newrelic?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddons-office365">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L616">property <b>office365</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L616">property <b>office365</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>office365?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddons-rms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L617">property <b>rms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L617">property <b>rms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rms?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddons-salesforce">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L618">property <b>salesforce</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L618">property <b>salesforce</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>salesforce?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddons-salesforceApi">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L619">property <b>salesforceApi</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L619">property <b>salesforceApi</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>salesforceApi?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddons-salesforceSandboxApi">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L620">property <b>salesforceSandboxApi</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L620">property <b>salesforceSandboxApi</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>salesforceSandboxApi?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddons-samlp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L621">property <b>samlp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L621">property <b>samlp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>samlp?: <a href='/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#GlobalClientAddonsSamlp'>outputs.GlobalClientAddonsSamlp</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddons-sapApi">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L622">property <b>sapApi</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L622">property <b>sapApi</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sapApi?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddons-sentry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L623">property <b>sentry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L623">property <b>sentry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sentry?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddons-sharepoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L624">property <b>sharepoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L624">property <b>sharepoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharepoint?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddons-slack">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L625">property <b>slack</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L625">property <b>slack</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slack?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddons-springcm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L626">property <b>springcm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L626">property <b>springcm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>springcm?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddons-wams">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L627">property <b>wams</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L627">property <b>wams</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>wams?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddons-wsfed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L628">property <b>wsfed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L628">property <b>wsfed</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>wsfed?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddons-zendesk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L629">property <b>zendesk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L629">property <b>zendesk</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zendesk?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddons-zoom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L630">property <b>zoom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L630">property <b>zoom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoom?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h3 class="pdoc-module-header" id="GlobalClientAddonsSamlp" data-link-title="GlobalClientAddonsSamlp">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L633">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L633">
         interface <strong>GlobalClientAddonsSamlp</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GlobalClientAddonsSamlp</span></code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddonsSamlp-audience">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L634">property <b>audience</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L634">property <b>audience</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>audience?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddonsSamlp-authnContextClassRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L635">property <b>authnContextClassRef</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L635">property <b>authnContextClassRef</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authnContextClassRef?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddonsSamlp-binding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L636">property <b>binding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L636">property <b>binding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>binding?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddonsSamlp-createUpnClaim">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L637">property <b>createUpnClaim</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L637">property <b>createUpnClaim</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createUpnClaim?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddonsSamlp-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L638">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L638">property <b>destination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destination?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddonsSamlp-digestAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L639">property <b>digestAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L639">property <b>digestAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>digestAlgorithm?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddonsSamlp-includeAttributeNameFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L640">property <b>includeAttributeNameFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L640">property <b>includeAttributeNameFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includeAttributeNameFormat?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddonsSamlp-lifetimeInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L641">property <b>lifetimeInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L641">property <b>lifetimeInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lifetimeInSeconds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddonsSamlp-logout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L642">property <b>logout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L642">property <b>logout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logout?: <a href='/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#GlobalClientAddonsSamlpLogout'>outputs.GlobalClientAddonsSamlpLogout</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddonsSamlp-mapIdentities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L643">property <b>mapIdentities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L643">property <b>mapIdentities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mapIdentities?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddonsSamlp-mapUnknownClaimsAsIs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L644">property <b>mapUnknownClaimsAsIs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L644">property <b>mapUnknownClaimsAsIs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mapUnknownClaimsAsIs?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddonsSamlp-mappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L645">property <b>mappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L645">property <b>mappings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mappings?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddonsSamlp-nameIdentifierFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L646">property <b>nameIdentifierFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L646">property <b>nameIdentifierFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameIdentifierFormat?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddonsSamlp-nameIdentifierProbes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L647">property <b>nameIdentifierProbes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L647">property <b>nameIdentifierProbes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameIdentifierProbes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddonsSamlp-passthroughClaimsWithNoMapping">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L648">property <b>passthroughClaimsWithNoMapping</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L648">property <b>passthroughClaimsWithNoMapping</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passthroughClaimsWithNoMapping?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddonsSamlp-recipient">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L649">property <b>recipient</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L649">property <b>recipient</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recipient?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddonsSamlp-signResponse">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L650">property <b>signResponse</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L650">property <b>signResponse</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signResponse?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddonsSamlp-signatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L651">property <b>signatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L651">property <b>signatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signatureAlgorithm?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddonsSamlp-typedAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L652">property <b>typedAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L652">property <b>typedAttributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>typedAttributes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h3 class="pdoc-module-header" id="GlobalClientAddonsSamlpLogout" data-link-title="GlobalClientAddonsSamlpLogout">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L655">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L655">
         interface <strong>GlobalClientAddonsSamlpLogout</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GlobalClientAddonsSamlpLogout</span></code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddonsSamlpLogout-callback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L656">property <b>callback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L656">property <b>callback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>callback?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientAddonsSamlpLogout-sloEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L657">property <b>sloEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L657">property <b>sloEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sloEnabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h3 class="pdoc-module-header" id="GlobalClientJwtConfiguration" data-link-title="GlobalClientJwtConfiguration">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L660">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L660">
         interface <strong>GlobalClientJwtConfiguration</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GlobalClientJwtConfiguration</span></code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientJwtConfiguration-alg">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L661">property <b>alg</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L661">property <b>alg</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alg?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientJwtConfiguration-lifetimeInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L662">property <b>lifetimeInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L662">property <b>lifetimeInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lifetimeInSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientJwtConfiguration-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L663">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L663">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientJwtConfiguration-secretEncoded">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L664">property <b>secretEncoded</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L664">property <b>secretEncoded</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretEncoded: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GlobalClientMobile" data-link-title="GlobalClientMobile">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L667">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L667">
         interface <strong>GlobalClientMobile</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GlobalClientMobile</span></code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientMobile-android">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L668">property <b>android</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L668">property <b>android</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>android?: <a href='/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#GlobalClientMobileAndroid'>outputs.GlobalClientMobileAndroid</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientMobile-ios">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L669">property <b>ios</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L669">property <b>ios</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ios?: <a href='/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#GlobalClientMobileIos'>outputs.GlobalClientMobileIos</a>;</code></pre>
 <h3 class="pdoc-module-header" id="GlobalClientMobileAndroid" data-link-title="GlobalClientMobileAndroid">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L672">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L672">
         interface <strong>GlobalClientMobileAndroid</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GlobalClientMobileAndroid</span></code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientMobileAndroid-appPackageName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L673">property <b>appPackageName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L673">property <b>appPackageName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appPackageName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientMobileAndroid-sha256CertFingerprints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L674">property <b>sha256CertFingerprints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L674">property <b>sha256CertFingerprints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sha256CertFingerprints?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h3 class="pdoc-module-header" id="GlobalClientMobileIos" data-link-title="GlobalClientMobileIos">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L677">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L677">
         interface <strong>GlobalClientMobileIos</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GlobalClientMobileIos</span></code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientMobileIos-appBundleIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L678">property <b>appBundleIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L678">property <b>appBundleIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appBundleIdentifier?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientMobileIos-teamId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L679">property <b>teamId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L679">property <b>teamId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>teamId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GlobalClientRefreshToken" data-link-title="GlobalClientRefreshToken">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L682">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L682">
         interface <strong>GlobalClientRefreshToken</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GlobalClientRefreshToken</span></code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientRefreshToken-expirationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L683">property <b>expirationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L683">property <b>expirationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expirationType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientRefreshToken-leeway">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L684">property <b>leeway</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L684">property <b>leeway</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>leeway?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientRefreshToken-rotationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L685">property <b>rotationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L685">property <b>rotationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rotationType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GlobalClientRefreshToken-tokenLifetime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L686">property <b>tokenLifetime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L686">property <b>tokenLifetime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenLifetime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="LogStreamSink" data-link-title="LogStreamSink">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L689">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L689">
         interface <strong>LogStreamSink</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>LogStreamSink</span></code></pre>
 <h4 class="pdoc-member-header" id="LogStreamSink-awsAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L690">property <b>awsAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L690">property <b>awsAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>awsAccountId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="LogStreamSink-awsPartnerEventSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L691">property <b>awsPartnerEventSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L691">property <b>awsPartnerEventSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>awsPartnerEventSource: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="LogStreamSink-awsRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L692">property <b>awsRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L692">property <b>awsRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>awsRegion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="LogStreamSink-azurePartnerTopic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L693">property <b>azurePartnerTopic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L693">property <b>azurePartnerTopic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azurePartnerTopic: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="LogStreamSink-azureRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L694">property <b>azureRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L694">property <b>azureRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureRegion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="LogStreamSink-azureResourceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L695">property <b>azureResourceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L695">property <b>azureResourceGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureResourceGroup?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="LogStreamSink-azureSubscriptionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L696">property <b>azureSubscriptionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L696">property <b>azureSubscriptionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureSubscriptionId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="LogStreamSink-datadogApiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L697">property <b>datadogApiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L697">property <b>datadogApiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datadogApiKey?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="LogStreamSink-datadogRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L698">property <b>datadogRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L698">property <b>datadogRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datadogRegion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="LogStreamSink-httpAuthorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L699">property <b>httpAuthorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L699">property <b>httpAuthorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpAuthorization?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="LogStreamSink-httpContentFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L700">property <b>httpContentFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L700">property <b>httpContentFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpContentFormat?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="LogStreamSink-httpContentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L701">property <b>httpContentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L701">property <b>httpContentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpContentType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="LogStreamSink-httpCustomHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L702">property <b>httpCustomHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L702">property <b>httpCustomHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpCustomHeaders?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="LogStreamSink-httpEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L703">property <b>httpEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L703">property <b>httpEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpEndpoint?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="LogStreamSink-splunkDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L704">property <b>splunkDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L704">property <b>splunkDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>splunkDomain?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="LogStreamSink-splunkPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L705">property <b>splunkPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L705">property <b>splunkPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>splunkPort?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="LogStreamSink-splunkSecure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L706">property <b>splunkSecure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L706">property <b>splunkSecure</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>splunkSecure?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="LogStreamSink-splunkToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L707">property <b>splunkToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L707">property <b>splunkToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>splunkToken?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ResourceServerScope" data-link-title="ResourceServerScope">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L710">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L710">
         interface <strong>ResourceServerScope</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ResourceServerScope</span></code></pre>
 <h4 class="pdoc-member-header" id="ResourceServerScope-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L714">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L714">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1838,7 +1838,7 @@ String. SMTP username. Used only for SMTP.
 String. Description of the permission (scope).
 
 <h4 class="pdoc-member-header" id="ResourceServerScope-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L718">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L718">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1846,14 +1846,14 @@ String. Description of the permission (scope).
 String. Name of the permission (scope). Examples include `read:appointments` or `delete:appointments`.
 
 <h3 class="pdoc-module-header" id="RolePermission" data-link-title="RolePermission">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L721">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L721">
         interface <strong>RolePermission</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>RolePermission</span></code></pre>
 <h4 class="pdoc-member-header" id="RolePermission-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L725">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L725">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1861,7 +1861,7 @@ String. Name of the permission (scope). Examples include `read:appointments` or 
 String. Name of the permission (scope).
 
 <h4 class="pdoc-member-header" id="RolePermission-resourceServerIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L729">property <b>resourceServerIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L729">property <b>resourceServerIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceServerIdentifier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1869,14 +1869,14 @@ String. Name of the permission (scope).
 String. Unique identifier for the resource server.
 
 <h3 class="pdoc-module-header" id="TenantChangePassword" data-link-title="TenantChangePassword">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L732">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L732">
         interface <strong>TenantChangePassword</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TenantChangePassword</span></code></pre>
 <h4 class="pdoc-member-header" id="TenantChangePassword-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L736">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L736">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1884,7 +1884,7 @@ String. Unique identifier for the resource server.
 Boolean. Indicates whether or not to use the custom change password page.
 
 <h4 class="pdoc-member-header" id="TenantChangePassword-html">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L740">property <b>html</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L740">property <b>html</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>html: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1892,14 +1892,14 @@ Boolean. Indicates whether or not to use the custom change password page.
 String, HTML format with supported Liquid syntax. Customized content of the change password page.
 
 <h3 class="pdoc-module-header" id="TenantErrorPage" data-link-title="TenantErrorPage">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L743">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L743">
         interface <strong>TenantErrorPage</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TenantErrorPage</span></code></pre>
 <h4 class="pdoc-member-header" id="TenantErrorPage-html">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L747">property <b>html</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L747">property <b>html</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>html: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1907,7 +1907,7 @@ String, HTML format with supported Liquid syntax. Customized content of the chan
 String, HTML format with supported Liquid syntax. Customized content of the error page.
 
 <h4 class="pdoc-member-header" id="TenantErrorPage-showLogLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L751">property <b>showLogLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L751">property <b>showLogLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>showLogLink: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1915,7 +1915,7 @@ String, HTML format with supported Liquid syntax. Customized content of the erro
 Boolean. Indicates whether or not to show the link to logs as part of the default error page.
 
 <h4 class="pdoc-member-header" id="TenantErrorPage-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L755">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L755">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1923,14 +1923,14 @@ Boolean. Indicates whether or not to show the link to logs as part of the defaul
 String. URL to redirect to when an error occurs rather than showing the default error page.
 
 <h3 class="pdoc-module-header" id="TenantFlags" data-link-title="TenantFlags">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L758">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L758">
         interface <strong>TenantFlags</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TenantFlags</span></code></pre>
 <h4 class="pdoc-member-header" id="TenantFlags-changePwdFlowV1">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L762">property <b>changePwdFlowV1</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L762">property <b>changePwdFlowV1</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>changePwdFlowV1: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1938,7 +1938,7 @@ String. URL to redirect to when an error occurs rather than showing the default 
 Boolean. Indicates whether or not to use the older v1 change password flow. Not recommended except for backward compatibility.
 
 <h4 class="pdoc-member-header" id="TenantFlags-disableClickjackProtectionHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L766">property <b>disableClickjackProtectionHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L766">property <b>disableClickjackProtectionHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableClickjackProtectionHeaders: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1946,7 +1946,7 @@ Boolean. Indicates whether or not to use the older v1 change password flow. Not 
 Boolean. Indicated whether or not classic Universal Login prompts include additional security headers to prevent clickjacking.
 
 <h4 class="pdoc-member-header" id="TenantFlags-enableApisSection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L770">property <b>enableApisSection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L770">property <b>enableApisSection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableApisSection: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1954,7 +1954,7 @@ Boolean. Indicated whether or not classic Universal Login prompts include additi
 Boolean. Indicates whether or not the APIs section is enabled for the tenant.
 
 <h4 class="pdoc-member-header" id="TenantFlags-enableClientConnections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L774">property <b>enableClientConnections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L774">property <b>enableClientConnections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableClientConnections: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1962,7 +1962,7 @@ Boolean. Indicates whether or not the APIs section is enabled for the tenant.
 Boolean. Indicates whether or not all current connections should be enabled when a new client is created.
 
 <h4 class="pdoc-member-header" id="TenantFlags-enableCustomDomainInEmails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L778">property <b>enableCustomDomainInEmails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L778">property <b>enableCustomDomainInEmails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableCustomDomainInEmails: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1970,7 +1970,7 @@ Boolean. Indicates whether or not all current connections should be enabled when
 Boolean. Indicates whether or not the tenant allows custom domains in emails.
 
 <h4 class="pdoc-member-header" id="TenantFlags-enableDynamicClientRegistration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L782">property <b>enableDynamicClientRegistration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L782">property <b>enableDynamicClientRegistration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDynamicClientRegistration: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1978,7 +1978,7 @@ Boolean. Indicates whether or not the tenant allows custom domains in emails.
 Boolean. Indicates whether or not the tenant allows dynamic client registration.
 
 <h4 class="pdoc-member-header" id="TenantFlags-enableLegacyLogsSearchV2">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L786">property <b>enableLegacyLogsSearchV2</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L786">property <b>enableLegacyLogsSearchV2</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableLegacyLogsSearchV2: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1986,7 +1986,7 @@ Boolean. Indicates whether or not the tenant allows dynamic client registration.
 Boolean. Indicates whether or not to use the older v2 legacy logs search.
 
 <h4 class="pdoc-member-header" id="TenantFlags-enablePipeline2">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L790">property <b>enablePipeline2</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L790">property <b>enablePipeline2</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enablePipeline2: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1994,7 +1994,7 @@ Boolean. Indicates whether or not to use the older v2 legacy logs search.
 Boolean. Indicates whether or not advanced API Authorization scenarios are enabled.
 
 <h4 class="pdoc-member-header" id="TenantFlags-enablePublicSignupUserExistsError">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L794">property <b>enablePublicSignupUserExistsError</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L794">property <b>enablePublicSignupUserExistsError</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enablePublicSignupUserExistsError: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2002,7 +2002,7 @@ Boolean. Indicates whether or not advanced API Authorization scenarios are enabl
 Boolean. Indicates whether or not the public sign up process shows a userExists error if the user already exists.
 
 <h4 class="pdoc-member-header" id="TenantFlags-universalLogin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L798">property <b>universalLogin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L798">property <b>universalLogin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>universalLogin: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2010,19 +2010,19 @@ Boolean. Indicates whether or not the public sign up process shows a userExists 
 Boolean. Indicates whether or not the tenant uses universal login.
 
 <h4 class="pdoc-member-header" id="TenantFlags-useScopeDescriptionsForConsent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L799">property <b>useScopeDescriptionsForConsent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L799">property <b>useScopeDescriptionsForConsent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useScopeDescriptionsForConsent: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="TenantGuardianMfaPage" data-link-title="TenantGuardianMfaPage">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L802">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L802">
         interface <strong>TenantGuardianMfaPage</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TenantGuardianMfaPage</span></code></pre>
 <h4 class="pdoc-member-header" id="TenantGuardianMfaPage-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L806">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L806">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2030,7 +2030,7 @@ Boolean. Indicates whether or not the tenant uses universal login.
 Boolean. Indicates whether or not to use the custom Guardian page.
 
 <h4 class="pdoc-member-header" id="TenantGuardianMfaPage-html">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L810">property <b>html</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L810">property <b>html</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>html: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2038,14 +2038,14 @@ Boolean. Indicates whether or not to use the custom Guardian page.
 String, HTML format with supported Liquid syntax. Customized content of the Guardian page.
 
 <h3 class="pdoc-module-header" id="TenantUniversalLogin" data-link-title="TenantUniversalLogin">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L813">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L813">
         interface <strong>TenantUniversalLogin</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TenantUniversalLogin</span></code></pre>
 <h4 class="pdoc-member-header" id="TenantUniversalLogin-colors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L817">property <b>colors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L817">property <b>colors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>colors?: <a href='/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#TenantUniversalLoginColors'>outputs.TenantUniversalLoginColors</a>;</code></pre>
@@ -2053,14 +2053,14 @@ String, HTML format with supported Liquid syntax. Customized content of the Guar
 List(Resource). Configuration settings for Universal Login colors. See Universal Login - Colors.
 
 <h3 class="pdoc-module-header" id="TenantUniversalLoginColors" data-link-title="TenantUniversalLoginColors">
-    <a href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L820">
+    <a href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L820">
         interface <strong>TenantUniversalLoginColors</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TenantUniversalLoginColors</span></code></pre>
 <h4 class="pdoc-member-header" id="TenantUniversalLoginColors-pageBackground">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L824">property <b>pageBackground</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L824">property <b>pageBackground</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pageBackground: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2068,7 +2068,7 @@ List(Resource). Configuration settings for Universal Login colors. See Universal
 String, Hexadecimal. Background color of login pages.
 
 <h4 class="pdoc-member-header" id="TenantUniversalLoginColors-primary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/523ebca2d32110923151f647d03cae9fc274953b/sdk/nodejs/types/output.ts#L828">property <b>primary</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-auth0/blob/1719620f59c02a0ddcba3cc97c837418776cbae6/sdk/nodejs/types/output.ts#L828">property <b>primary</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primary: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
