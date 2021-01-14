@@ -362,6 +362,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_mongodbatlas.AwaitableGetCloudProviderAccessResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">AwaitableGetCloudProviderAccessResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">aws_iam_roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.AwaitableGetCloudProviderAccessResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_mongodbatlas.AwaitableGetCloudProviderSnapshotBackupPolicyResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">AwaitableGetCloudProviderSnapshotBackupPolicyResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">next_snapshot</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reference_hour_of_day</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reference_minute_of_hour</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">restore_window_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_snapshots</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.AwaitableGetCloudProviderSnapshotBackupPolicyResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -457,6 +462,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_mongodbatlas.AwaitableGetPrivateLinkEndpointResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">AwaitableGetPrivateLinkEndpointResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">endpoint_service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">error_message</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interface_endpoints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_endpoints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_link_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_link_service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_link_service_resource_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.AwaitableGetPrivateLinkEndpointResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_mongodbatlas.AwaitableGetPrivateLinkEndpointServiceResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">AwaitableGetPrivateLinkEndpointServiceResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">connection_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delete_requested</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint_service_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">error_message</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interface_endpoint_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_endpoint_connection_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_endpoint_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_endpoint_resource_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_link_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.AwaitableGetPrivateLinkEndpointServiceResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_mongodbatlas.AwaitableGetProjectIpAccessListResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">AwaitableGetProjectIpAccessListResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">aws_security_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">comment</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.AwaitableGetProjectIpAccessListResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_mongodbatlas.AwaitableGetProjectIpWhitelistResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">AwaitableGetProjectIpWhitelistResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">aws_security_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">comment</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.AwaitableGetProjectIpWhitelistResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -480,6 +500,161 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_mongodbatlas.AwaitableGetTeamsResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">AwaitableGetTeamsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">team_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">usernames</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.AwaitableGetTeamsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_mongodbatlas.AwaitableGetThirdPartyIntegrationResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">AwaitableGetThirdPartyIntegrationResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">channel_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">flow_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">license_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">read_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">routing_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">team_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">write_token</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.AwaitableGetThirdPartyIntegrationResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_mongodbatlas.AwaitableGetThirdPartyIntegrationsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">AwaitableGetThirdPartyIntegrationsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">results</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.AwaitableGetThirdPartyIntegrationsResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_mongodbatlas.CloudProviderAccess">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">CloudProviderAccess</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_assumed_role_arn</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.CloudProviderAccess" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Cloud Provider Access resource can be imported using project ID and the provider name and mongodbatlas role id, in the format <code class="docutils literal notranslate"><span class="pre">project_id</span></code>-<code class="docutils literal notranslate"><span class="pre">provider_name</span></code>-<code class="docutils literal notranslate"><span class="pre">role_id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import mongodbatlas:index/cloudProviderAccess:CloudProviderAccess my_role 1112222b3bf99403840e8934-AWS-5fc17d476f7a33224f5b224e
+
+See <span class="sb">`</span>MongoDB Atlas API &lt;https://docs.atlas.mongodb.com/reference/api/cloud-provider-access-create-one-role/&gt;<span class="sb">`</span>_ Documentation <span class="k">for</span> more information.
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>iam_assumed_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <ul>
+<li><p>ARN of the IAM Role that Atlas assumes when accessing resources in your AWS account. This value is required after the creation (register of the role) as part of <a class="reference external" href="https://docs.atlas.mongodb.com/security/set-up-unified-aws-access/#set-up-unified-aws-access">Set Up Unified AWS Access</a>.</p></li>
+</ul>
+</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique ID for the project to get all Cloud Provider Access</p></li>
+<li><p><strong>provider_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cloud provider for which to create a new role. Currently only AWS is supported.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.CloudProviderAccess.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">atlas_assumed_role_external_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">atlas_aws_account_arn</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorized_date</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">created_date</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">feature_usages</span><span class="p">:</span> <span class="n">Union[Sequence[Union[CloudProviderAccessFeatureUsageArgs, Mapping[str, Any], Awaitable[Union[CloudProviderAccessFeatureUsageArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[CloudProviderAccessFeatureUsageArgs, Mapping[str, Any], Awaitable[Union[CloudProviderAccessFeatureUsageArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_assumed_role_arn</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_mongodbatlas.cloud_provider_access.CloudProviderAccess<a class="headerlink" href="#pulumi_mongodbatlas.CloudProviderAccess.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing CloudProviderAccess resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>atlas_assumed_role_external_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique external ID Atlas uses when assuming the IAM role in your AWS account.</p></li>
+<li><p><strong>atlas_aws_account_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ARN associated with the Atlas AWS account used to assume IAM roles in your AWS account.</p></li>
+<li><p><strong>authorized_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Date on which this role was authorized.</p></li>
+<li><p><strong>created_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Date on which this role was created.</p></li>
+<li><p><strong>feature_usages</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'CloudProviderAccessFeatureUsageArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Atlas features this AWS IAM role is linked to.</p></li>
+<li><p><strong>iam_assumed_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <ul>
+<li><p>ARN of the IAM Role that Atlas assumes when accessing resources in your AWS account. This value is required after the creation (register of the role) as part of <a class="reference external" href="https://docs.atlas.mongodb.com/security/set-up-unified-aws-access/#set-up-unified-aws-access">Set Up Unified AWS Access</a>.</p></li>
+</ul>
+</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique ID for the project to get all Cloud Provider Access</p></li>
+<li><p><strong>provider_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cloud provider for which to create a new role. Currently only AWS is supported.</p></li>
+<li><p><strong>role_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique ID of this role.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.CloudProviderAccess.atlas_assumed_role_external_id">
+<em class="property">property </em><code class="sig-name descname">atlas_assumed_role_external_id</code><a class="headerlink" href="#pulumi_mongodbatlas.CloudProviderAccess.atlas_assumed_role_external_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unique external ID Atlas uses when assuming the IAM role in your AWS account.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.CloudProviderAccess.atlas_aws_account_arn">
+<em class="property">property </em><code class="sig-name descname">atlas_aws_account_arn</code><a class="headerlink" href="#pulumi_mongodbatlas.CloudProviderAccess.atlas_aws_account_arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>ARN associated with the Atlas AWS account used to assume IAM roles in your AWS account.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.CloudProviderAccess.authorized_date">
+<em class="property">property </em><code class="sig-name descname">authorized_date</code><a class="headerlink" href="#pulumi_mongodbatlas.CloudProviderAccess.authorized_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>Date on which this role was authorized.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.CloudProviderAccess.created_date">
+<em class="property">property </em><code class="sig-name descname">created_date</code><a class="headerlink" href="#pulumi_mongodbatlas.CloudProviderAccess.created_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>Date on which this role was created.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.CloudProviderAccess.feature_usages">
+<em class="property">property </em><code class="sig-name descname">feature_usages</code><a class="headerlink" href="#pulumi_mongodbatlas.CloudProviderAccess.feature_usages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Atlas features this AWS IAM role is linked to.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.CloudProviderAccess.iam_assumed_role_arn">
+<em class="property">property </em><code class="sig-name descname">iam_assumed_role_arn</code><a class="headerlink" href="#pulumi_mongodbatlas.CloudProviderAccess.iam_assumed_role_arn" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li><p>ARN of the IAM Role that Atlas assumes when accessing resources in your AWS account. This value is required after the creation (register of the role) as part of <a class="reference external" href="https://docs.atlas.mongodb.com/security/set-up-unified-aws-access/#set-up-unified-aws-access">Set Up Unified AWS Access</a>.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.CloudProviderAccess.project_id">
+<em class="property">property </em><code class="sig-name descname">project_id</code><a class="headerlink" href="#pulumi_mongodbatlas.CloudProviderAccess.project_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unique ID for the project to get all Cloud Provider Access</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.CloudProviderAccess.provider_name">
+<em class="property">property </em><code class="sig-name descname">provider_name</code><a class="headerlink" href="#pulumi_mongodbatlas.CloudProviderAccess.provider_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The cloud provider for which to create a new role. Currently only AWS is supported.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.CloudProviderAccess.role_id">
+<em class="property">property </em><code class="sig-name descname">role_id</code><a class="headerlink" href="#pulumi_mongodbatlas.CloudProviderAccess.role_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unique ID of this role.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.CloudProviderAccess.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.CloudProviderAccess.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.CloudProviderAccess.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.CloudProviderAccess.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
 
 <dl class="py class">
 <dt id="pulumi_mongodbatlas.CloudProviderSnapshot">
@@ -879,7 +1054,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="n">target_cluster_name</span><span class="o">=</span><span class="s2">&quot;MyCluster&quot;</span><span class="p">,</span>
         <span class="n">target_project_id</span><span class="o">=</span><span class="s2">&quot;5cf5a45a9ccf6400e60981b6&quot;</span><span class="p">,</span>
     <span class="p">),</span>
-    <span class="n">opts</span><span class="o">=</span><span class="n">ResourceOptions</span><span class="p">(</span><span class="n">depends_on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;mongodbatlas_cloud_provider_snapshot.test&quot;</span><span class="p">]))</span>
+    <span class="n">opts</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">ResourceOptions</span><span class="p">(</span><span class="n">depends_on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;mongodbatlas_cloud_provider_snapshot.test&quot;</span><span class="p">]))</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
@@ -1081,18 +1256,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <span class="n">cluster_test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;cluster-test&quot;</span><span class="p">,</span>
     <span class="n">auto_scaling_disk_gb_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">cluster_type</span><span class="o">=</span><span class="s2">&quot;REPLICASET&quot;</span><span class="p">,</span>
     <span class="n">disk_size_gb</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
     <span class="n">mongo_db_major_version</span><span class="o">=</span><span class="s2">&quot;4.2&quot;</span><span class="p">,</span>
-    <span class="n">num_shards</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR-PROJECT-ID&gt;&quot;</span><span class="p">,</span>
     <span class="n">provider_backup_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">provider_disk_iops</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
     <span class="n">provider_encrypt_ebs_volume</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">provider_instance_size_name</span><span class="o">=</span><span class="s2">&quot;M40&quot;</span><span class="p">,</span>
     <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
-    <span class="n">provider_region_name</span><span class="o">=</span><span class="s2">&quot;US_EAST_1&quot;</span><span class="p">,</span>
     <span class="n">provider_volume_type</span><span class="o">=</span><span class="s2">&quot;STANDARD&quot;</span><span class="p">,</span>
-    <span class="n">replication_factor</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">replication_specs</span><span class="o">=</span><span class="p">[</span><span class="n">mongodbatlas</span><span class="o">.</span><span class="n">ClusterReplicationSpecArgs</span><span class="p">(</span>
+        <span class="n">num_shards</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">regions_configs</span><span class="o">=</span><span class="p">[</span><span class="n">mongodbatlas</span><span class="o">.</span><span class="n">ClusterReplicationSpecRegionsConfigArgs</span><span class="p">(</span>
+            <span class="n">electable_nodes</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+            <span class="n">priority</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span>
+            <span class="n">read_only_nodes</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+            <span class="n">region_name</span><span class="o">=</span><span class="s2">&quot;US_EAST_1&quot;</span><span class="p">,</span>
+        <span class="p">)],</span>
+    <span class="p">)])</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
@@ -1100,15 +1282,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
     <span class="n">auto_scaling_disk_gb_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">cluster_type</span><span class="o">=</span><span class="s2">&quot;REPLICASET&quot;</span><span class="p">,</span>
     <span class="n">mongo_db_major_version</span><span class="o">=</span><span class="s2">&quot;4.2&quot;</span><span class="p">,</span>
-    <span class="n">num_shards</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR-PROJECT-ID&gt;&quot;</span><span class="p">,</span>
     <span class="n">provider_backup_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">provider_disk_type_name</span><span class="o">=</span><span class="s2">&quot;P6&quot;</span><span class="p">,</span>
     <span class="n">provider_instance_size_name</span><span class="o">=</span><span class="s2">&quot;M30&quot;</span><span class="p">,</span>
     <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AZURE&quot;</span><span class="p">,</span>
-    <span class="n">provider_region_name</span><span class="o">=</span><span class="s2">&quot;US_EAST_2&quot;</span><span class="p">,</span>
-    <span class="n">replication_factor</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">replication_specs</span><span class="o">=</span><span class="p">[</span><span class="n">mongodbatlas</span><span class="o">.</span><span class="n">ClusterReplicationSpecArgs</span><span class="p">(</span>
+        <span class="n">num_shards</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">regions_configs</span><span class="o">=</span><span class="p">[</span><span class="n">mongodbatlas</span><span class="o">.</span><span class="n">ClusterReplicationSpecRegionsConfigArgs</span><span class="p">(</span>
+            <span class="n">electable_nodes</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+            <span class="n">priority</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span>
+            <span class="n">read_only_nodes</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+            <span class="n">region_name</span><span class="o">=</span><span class="s2">&quot;US_EAST_1&quot;</span><span class="p">,</span>
+        <span class="p">)],</span>
+    <span class="p">)])</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
@@ -1116,15 +1305,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
     <span class="n">auto_scaling_disk_gb_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">cluster_type</span><span class="o">=</span><span class="s2">&quot;REPLICASET&quot;</span><span class="p">,</span>
     <span class="n">disk_size_gb</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span>
     <span class="n">mongo_db_major_version</span><span class="o">=</span><span class="s2">&quot;4.2&quot;</span><span class="p">,</span>
-    <span class="n">num_shards</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR-PROJECT-ID&gt;&quot;</span><span class="p">,</span>
     <span class="n">provider_backup_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">provider_instance_size_name</span><span class="o">=</span><span class="s2">&quot;M30&quot;</span><span class="p">,</span>
     <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;GCP&quot;</span><span class="p">,</span>
-    <span class="n">provider_region_name</span><span class="o">=</span><span class="s2">&quot;US_EAST_4&quot;</span><span class="p">,</span>
-    <span class="n">replication_factor</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">replication_specs</span><span class="o">=</span><span class="p">[</span><span class="n">mongodbatlas</span><span class="o">.</span><span class="n">ClusterReplicationSpecArgs</span><span class="p">(</span>
+        <span class="n">num_shards</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">regions_configs</span><span class="o">=</span><span class="p">[</span><span class="n">mongodbatlas</span><span class="o">.</span><span class="n">ClusterReplicationSpecRegionsConfigArgs</span><span class="p">(</span>
+            <span class="n">electable_nodes</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+            <span class="n">priority</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span>
+            <span class="n">read_only_nodes</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+            <span class="n">region_name</span><span class="o">=</span><span class="s2">&quot;US_EAST_1&quot;</span><span class="p">,</span>
+        <span class="p">)],</span>
+    <span class="p">)])</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
@@ -1285,7 +1481,7 @@ See detailed information <span class="k">for</span> arguments and attributes<spa
 <li><p><strong>provider_backup_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Flag indicating if the cluster uses Cloud Backup for backups.</p></li>
 <li><p><strong>provider_disk_iops</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected <code class="docutils literal notranslate"><span class="pre">provider_instance_size_name</span></code> and <code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code>.</p></li>
 <li><p><strong>provider_disk_type_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Azure disk type of the server’s root volume. If omitted, Atlas uses the default disk type for the selected providerSettings.instanceSizeName.  Example disk types and associated storage sizes: P4 - 32GB, P6 - 64GB, P10 - 128GB, P15 - 256GB, P20 - 512GB, P30 - 1024GB, P40 - 2048GB, P50 - 4095GB.  More information and the most update to date disk types/storage sizes can be located at <a class="reference external" href="https://docs.atlas.mongodb.com/reference/api/clusters-create-one/">https://docs.atlas.mongodb.com/reference/api/clusters-create-one/</a>.</p></li>
-<li><p><strong>provider_encrypt_ebs_volume</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the cluster.  <strong>Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default</strong>.</p></li>
+<li><p><strong>provider_encrypt_ebs_volume</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The default value is true.  Flag that indicates whether the Amazon EBS encryption feature encrypts the host’s root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. <strong>Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.</strong>.</p></li>
 <li><p><strong>provider_instance_size_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See <a class="reference external" href="https://docs.atlas.mongodb.com/reference/api/clusters-create-one/">Create a Cluster</a> <code class="docutils literal notranslate"><span class="pre">providerSettings.instanceSizeName</span></code> for valid values and default resources. 
 <strong>Note</strong> free tier (M0) creation is not supported by the Atlas API and hence not supported by this provider.)</p></li>
 <li><p><strong>provider_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud service provider on which the servers are provisioned.</p></li>
@@ -1375,7 +1571,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>provider_backup_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Flag indicating if the cluster uses Cloud Backup for backups.</p></li>
 <li><p><strong>provider_disk_iops</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected <code class="docutils literal notranslate"><span class="pre">provider_instance_size_name</span></code> and <code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code>.</p></li>
 <li><p><strong>provider_disk_type_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Azure disk type of the server’s root volume. If omitted, Atlas uses the default disk type for the selected providerSettings.instanceSizeName.  Example disk types and associated storage sizes: P4 - 32GB, P6 - 64GB, P10 - 128GB, P15 - 256GB, P20 - 512GB, P30 - 1024GB, P40 - 2048GB, P50 - 4095GB.  More information and the most update to date disk types/storage sizes can be located at <a class="reference external" href="https://docs.atlas.mongodb.com/reference/api/clusters-create-one/">https://docs.atlas.mongodb.com/reference/api/clusters-create-one/</a>.</p></li>
-<li><p><strong>provider_encrypt_ebs_volume</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the cluster.  <strong>Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default</strong>.</p></li>
+<li><p><strong>provider_encrypt_ebs_volume</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The default value is true.  Flag that indicates whether the Amazon EBS encryption feature encrypts the host’s root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. <strong>Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.</strong>.</p></li>
 <li><p><strong>provider_instance_size_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See <a class="reference external" href="https://docs.atlas.mongodb.com/reference/api/clusters-create-one/">Create a Cluster</a> <code class="docutils literal notranslate"><span class="pre">providerSettings.instanceSizeName</span></code> for valid values and default resources. 
 <strong>Note</strong> free tier (M0) creation is not supported by the Atlas API and hence not supported by this provider.)</p>
 </p></li>
@@ -1580,7 +1776,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 <dl class="py method">
 <dt id="pulumi_mongodbatlas.Cluster.provider_encrypt_ebs_volume">
 <em class="property">property </em><code class="sig-name descname">provider_encrypt_ebs_volume</code><a class="headerlink" href="#pulumi_mongodbatlas.Cluster.provider_encrypt_ebs_volume" title="Permalink to this definition">¶</a></dt>
-<dd><p>If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the cluster.  <strong>Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default</strong>.</p>
+<dd><p>The default value is true.  Flag that indicates whether the Amazon EBS encryption feature encrypts the host’s root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. <strong>Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.</strong>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2224,6 +2420,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_mongodbatlas.GetCloudProviderAccessResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">GetCloudProviderAccessResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">aws_iam_roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.GetCloudProviderAccessResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getCloudProviderAccess.</p>
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetCloudProviderAccessResult.aws_iam_roles">
+<em class="property">property </em><code class="sig-name descname">aws_iam_roles</code><a class="headerlink" href="#pulumi_mongodbatlas.GetCloudProviderAccessResult.aws_iam_roles" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list where each represents a Cloud Provider Access Role.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetCloudProviderAccessResult.id">
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#pulumi_mongodbatlas.GetCloudProviderAccessResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_mongodbatlas.GetCloudProviderSnapshotBackupPolicyResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">GetCloudProviderSnapshotBackupPolicyResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">next_snapshot</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reference_hour_of_day</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reference_minute_of_hour</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">restore_window_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_snapshots</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.GetCloudProviderSnapshotBackupPolicyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCloudProviderSnapshotBackupPolicy.</p>
@@ -2649,7 +2863,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py method">
 <dt id="pulumi_mongodbatlas.GetClusterResult.replication_factor">
 <em class="property">property </em><code class="sig-name descname">replication_factor</code><a class="headerlink" href="#pulumi_mongodbatlas.GetClusterResult.replication_factor" title="Permalink to this definition">¶</a></dt>
-<dd><p>Number of replica set members. Each member keeps a copy of your databases, providing high availability and data redundancy. The possible values are 3, 5, or 7. The default value is 3.</p>
+<dd><p>(Deprecated) Number of replica set members. Each member keeps a copy of your databases, providing high availability and data redundancy. The possible values are 3, 5, or 7. The default value is 3.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3163,6 +3377,134 @@ Returns one of the following values:</p>
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_mongodbatlas.GetPrivateLinkEndpointResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">GetPrivateLinkEndpointResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">endpoint_service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">error_message</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interface_endpoints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_endpoints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_link_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_link_service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_link_service_resource_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.GetPrivateLinkEndpointResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getPrivateLinkEndpoint.</p>
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetPrivateLinkEndpointResult.endpoint_service_name">
+<em class="property">property </em><code class="sig-name descname">endpoint_service_name</code><a class="headerlink" href="#pulumi_mongodbatlas.GetPrivateLinkEndpointResult.endpoint_service_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the PrivateLink endpoint service in AWS. Returns null while the endpoint service is being created.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetPrivateLinkEndpointResult.error_message">
+<em class="property">property </em><code class="sig-name descname">error_message</code><a class="headerlink" href="#pulumi_mongodbatlas.GetPrivateLinkEndpointResult.error_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Error message pertaining to the AWS PrivateLink connection. Returns null if there are no errors.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetPrivateLinkEndpointResult.id">
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#pulumi_mongodbatlas.GetPrivateLinkEndpointResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetPrivateLinkEndpointResult.interface_endpoints">
+<em class="property">property </em><code class="sig-name descname">interface_endpoints</code><a class="headerlink" href="#pulumi_mongodbatlas.GetPrivateLinkEndpointResult.interface_endpoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unique identifiers of the interface endpoints in your VPC that you added to the AWS PrivateLink connection.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetPrivateLinkEndpointResult.private_endpoints">
+<em class="property">property </em><code class="sig-name descname">private_endpoints</code><a class="headerlink" href="#pulumi_mongodbatlas.GetPrivateLinkEndpointResult.private_endpoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>All private endpoints that you have added to this Azure Private Link Service.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetPrivateLinkEndpointResult.private_link_service_name">
+<em class="property">property </em><code class="sig-name descname">private_link_service_name</code><a class="headerlink" href="#pulumi_mongodbatlas.GetPrivateLinkEndpointResult.private_link_service_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the Azure Private Link Service that Atlas manages.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetPrivateLinkEndpointResult.private_link_service_resource_id">
+<em class="property">property </em><code class="sig-name descname">private_link_service_resource_id</code><a class="headerlink" href="#pulumi_mongodbatlas.GetPrivateLinkEndpointResult.private_link_service_resource_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resource ID of the Azure Private Link Service that Atlas manages.
+Returns one of the following values:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetPrivateLinkEndpointResult.status">
+<em class="property">property </em><code class="sig-name descname">status</code><a class="headerlink" href="#pulumi_mongodbatlas.GetPrivateLinkEndpointResult.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Status of the AWS PrivateLink connection.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_mongodbatlas.GetPrivateLinkEndpointServiceResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">GetPrivateLinkEndpointServiceResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">connection_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delete_requested</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint_service_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">error_message</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interface_endpoint_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_endpoint_connection_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_endpoint_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_endpoint_resource_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_link_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.GetPrivateLinkEndpointServiceResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getPrivateLinkEndpointService.</p>
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetPrivateLinkEndpointServiceResult.connection_status">
+<em class="property">property </em><code class="sig-name descname">connection_status</code><a class="headerlink" href="#pulumi_mongodbatlas.GetPrivateLinkEndpointServiceResult.connection_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Status of the interface endpoint.
+Returns one of the following values:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetPrivateLinkEndpointServiceResult.delete_requested">
+<em class="property">property </em><code class="sig-name descname">delete_requested</code><a class="headerlink" href="#pulumi_mongodbatlas.GetPrivateLinkEndpointServiceResult.delete_requested" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates if Atlas received a request to remove the interface endpoint from the private endpoint connection.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetPrivateLinkEndpointServiceResult.error_message">
+<em class="property">property </em><code class="sig-name descname">error_message</code><a class="headerlink" href="#pulumi_mongodbatlas.GetPrivateLinkEndpointServiceResult.error_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Error message pertaining to the interface endpoint. Returns null if there are no errors.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetPrivateLinkEndpointServiceResult.id">
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#pulumi_mongodbatlas.GetPrivateLinkEndpointServiceResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetPrivateLinkEndpointServiceResult.interface_endpoint_id">
+<em class="property">property </em><code class="sig-name descname">interface_endpoint_id</code><a class="headerlink" href="#pulumi_mongodbatlas.GetPrivateLinkEndpointServiceResult.interface_endpoint_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unique identifier of the interface endpoint.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetPrivateLinkEndpointServiceResult.private_endpoint_connection_name">
+<em class="property">property </em><code class="sig-name descname">private_endpoint_connection_name</code><a class="headerlink" href="#pulumi_mongodbatlas.GetPrivateLinkEndpointServiceResult.private_endpoint_connection_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the connection for this private endpoint that Atlas generates.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetPrivateLinkEndpointServiceResult.private_endpoint_ip_address">
+<em class="property">property </em><code class="sig-name descname">private_endpoint_ip_address</code><a class="headerlink" href="#pulumi_mongodbatlas.GetPrivateLinkEndpointServiceResult.private_endpoint_ip_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Private IP address of the private endpoint network interface.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetPrivateLinkEndpointServiceResult.private_endpoint_resource_id">
+<em class="property">property </em><code class="sig-name descname">private_endpoint_resource_id</code><a class="headerlink" href="#pulumi_mongodbatlas.GetPrivateLinkEndpointServiceResult.private_endpoint_resource_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unique identifier of the private endpoint.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_mongodbatlas.GetProjectIpAccessListResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">GetProjectIpAccessListResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">aws_security_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">comment</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.GetProjectIpAccessListResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getProjectIpAccessList.</p>
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetProjectIpAccessListResult.comment">
+<em class="property">property </em><code class="sig-name descname">comment</code><a class="headerlink" href="#pulumi_mongodbatlas.GetProjectIpAccessListResult.comment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Comment to add to the access list entry.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetProjectIpAccessListResult.id">
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#pulumi_mongodbatlas.GetProjectIpAccessListResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_mongodbatlas.GetProjectIpWhitelistResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">GetProjectIpWhitelistResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">aws_security_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">comment</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.GetProjectIpWhitelistResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getProjectIpWhitelist.</p>
@@ -3266,6 +3608,141 @@ The following are valid roles:</p></li>
 <dt id="pulumi_mongodbatlas.GetTeamsResult.id">
 <em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#pulumi_mongodbatlas.GetTeamsResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_mongodbatlas.GetThirdPartyIntegrationResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">GetThirdPartyIntegrationResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">channel_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">flow_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">license_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">read_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">routing_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">team_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">write_token</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.GetThirdPartyIntegrationResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getThirdPartyIntegration.</p>
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetThirdPartyIntegrationResult.account_id">
+<em class="property">property </em><code class="sig-name descname">account_id</code><a class="headerlink" href="#pulumi_mongodbatlas.GetThirdPartyIntegrationResult.account_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unique identifier of your New Relic account.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetThirdPartyIntegrationResult.api_key">
+<em class="property">property </em><code class="sig-name descname">api_key</code><a class="headerlink" href="#pulumi_mongodbatlas.GetThirdPartyIntegrationResult.api_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Your API Key.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetThirdPartyIntegrationResult.api_token">
+<em class="property">property </em><code class="sig-name descname">api_token</code><a class="headerlink" href="#pulumi_mongodbatlas.GetThirdPartyIntegrationResult.api_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Your API Token.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetThirdPartyIntegrationResult.flow_name">
+<em class="property">property </em><code class="sig-name descname">flow_name</code><a class="headerlink" href="#pulumi_mongodbatlas.GetThirdPartyIntegrationResult.flow_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Your Flowdock Flow name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetThirdPartyIntegrationResult.id">
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#pulumi_mongodbatlas.GetThirdPartyIntegrationResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetThirdPartyIntegrationResult.license_key">
+<em class="property">property </em><code class="sig-name descname">license_key</code><a class="headerlink" href="#pulumi_mongodbatlas.GetThirdPartyIntegrationResult.license_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Your License Key.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetThirdPartyIntegrationResult.org_name">
+<em class="property">property </em><code class="sig-name descname">org_name</code><a class="headerlink" href="#pulumi_mongodbatlas.GetThirdPartyIntegrationResult.org_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Your Flowdock organization name.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">WEBHOOK</span></code></p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetThirdPartyIntegrationResult.read_token">
+<em class="property">property </em><code class="sig-name descname">read_token</code><a class="headerlink" href="#pulumi_mongodbatlas.GetThirdPartyIntegrationResult.read_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Your Insights Query Key.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">OPS_GENIE</span></code></p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetThirdPartyIntegrationResult.region">
+<em class="property">property </em><code class="sig-name descname">region</code><a class="headerlink" href="#pulumi_mongodbatlas.GetThirdPartyIntegrationResult.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates which API URL to use, either US or EU. Opsgenie will use US by default.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">VICTOR_OPS</span></code></p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetThirdPartyIntegrationResult.routing_key">
+<em class="property">property </em><code class="sig-name descname">routing_key</code><a class="headerlink" href="#pulumi_mongodbatlas.GetThirdPartyIntegrationResult.routing_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>An optional field for your Routing Key.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">FLOWDOCK</span></code></p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetThirdPartyIntegrationResult.secret">
+<em class="property">property </em><code class="sig-name descname">secret</code><a class="headerlink" href="#pulumi_mongodbatlas.GetThirdPartyIntegrationResult.secret" title="Permalink to this definition">¶</a></dt>
+<dd><p>An optional field for your webhook secret.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetThirdPartyIntegrationResult.service_key">
+<em class="property">property </em><code class="sig-name descname">service_key</code><a class="headerlink" href="#pulumi_mongodbatlas.GetThirdPartyIntegrationResult.service_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Your Service Key.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">DATADOG</span></code></p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetThirdPartyIntegrationResult.type">
+<em class="property">property </em><code class="sig-name descname">type</code><a class="headerlink" href="#pulumi_mongodbatlas.GetThirdPartyIntegrationResult.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Property equal to its own integration type</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetThirdPartyIntegrationResult.url">
+<em class="property">property </em><code class="sig-name descname">url</code><a class="headerlink" href="#pulumi_mongodbatlas.GetThirdPartyIntegrationResult.url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Your webhook URL.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetThirdPartyIntegrationResult.write_token">
+<em class="property">property </em><code class="sig-name descname">write_token</code><a class="headerlink" href="#pulumi_mongodbatlas.GetThirdPartyIntegrationResult.write_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Your Insights Insert Key.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_mongodbatlas.GetThirdPartyIntegrationsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">GetThirdPartyIntegrationsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">results</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.GetThirdPartyIntegrationsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getThirdPartyIntegrations.</p>
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetThirdPartyIntegrationsResult.id">
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#pulumi_mongodbatlas.GetThirdPartyIntegrationsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetThirdPartyIntegrationsResult.project_id">
+<em class="property">property </em><code class="sig-name descname">project_id</code><a class="headerlink" href="#pulumi_mongodbatlas.GetThirdPartyIntegrationsResult.project_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Required) ID of the Atlas project the Third-Party Service Integration belongs to.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.GetThirdPartyIntegrationsResult.results">
+<em class="property">property </em><code class="sig-name descname">results</code><a class="headerlink" href="#pulumi_mongodbatlas.GetThirdPartyIntegrationsResult.results" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list where each represents a Third-Party service integration.</p>
 </dd></dl>
 
 </dd></dl>
@@ -3423,7 +3900,7 @@ properties used to qualify the lookup.</p>
 <em class="property">property </em><code class="sig-name descname">project_id</code><a class="headerlink" href="#pulumi_mongodbatlas.GlobalClusterConfig.project_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The unique ID for the project to create the database user.</p>
 <ul class="simple">
-<li><p><a href="#id23"><span class="problematic" id="id24">`</span></a>cluster_name - (Required) The name of the Global Cluster.</p></li>
+<li><p><a href="#id25"><span class="problematic" id="id26">`</span></a>cluster_name - (Required) The name of the Global Cluster.</p></li>
 </ul>
 </dd></dl>
 
@@ -4094,6 +4571,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_mongodbatlas.PrivateEndpoint">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">PrivateEndpoint</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.PrivateEndpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">PrivateEndpoint</span></code> provides a Private Endpoint resource. This represents a Private Endpoint Connection that can be created in an Atlas project.</p>
+<dl class="simple">
+<dt>!&gt; <strong>WARNING:</strong> This resource is deprecated and will be removed in the next major version</dt><dd><p>Please transition to privatelink_endpoint as soon as possible. [PrivateLink Endpoints] (<a class="reference external" href="https://docs.atlas.mongodb.com/reference/api/private-endpoints/">https://docs.atlas.mongodb.com/reference/api/private-endpoints/</a>)</p>
+</dd>
+</dl>
 <blockquote>
 <div><p><strong>IMPORTANT:</strong>You must have one of the following roles to successfully handle the resource:</p>
 <ul class="simple">
@@ -4304,6 +4785,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_mongodbatlas.PrivateEndpointInterfaceLink">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">PrivateEndpointInterfaceLink</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interface_endpoint_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_link_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.PrivateEndpointInterfaceLink" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">PrivateEndpointInterfaceLink</span></code> provides a Private Endpoint Interface Link resource. This represents a Private Endpoint Interface Link, which adds one interface endpoint to a private endpoint connection in an Atlas project.</p>
+<dl class="simple">
+<dt>!&gt; <strong>WARNING:</strong> This resource is deprecated and will be removed in the next major version</dt><dd><p>Please transition to privatelink_endpoint_service as soon as possible. [PrivateLink Endpoints] (<a class="reference external" href="https://docs.atlas.mongodb.com/reference/api/private-endpoints-endpoint-create-one/">https://docs.atlas.mongodb.com/reference/api/private-endpoints-endpoint-create-one/</a>)</p>
+</dd>
+</dl>
 <blockquote>
 <div><p><strong>IMPORTANT:</strong>You must have one of the following roles to successfully handle the resource:</p>
 <ul class="simple">
@@ -4547,6 +5032,359 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_mongodbatlas.PrivateLinkEndpoint">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">PrivateLinkEndpoint</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.PrivateLinkEndpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">PrivateLinkEndpoint</span></code> provides a Private Endpoint resource. This represents a Private Endpoint Service that can be created in an Atlas project.</p>
+<blockquote>
+<div><p><strong>IMPORTANT:</strong>You must have one of the following roles to successfully handle the resource:</p>
+<ul class="simple">
+<li><p>Organization Owner</p></li>
+<li><p>Project Owner</p></li>
+</ul>
+<p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find group_id in the official documentation.</p>
+<p><strong>NOTE:</strong> A network container is created for a private endpoint to reside in if one does not yet exist in the project.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">PrivateLinkEndpoint</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AWS/AZURE&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-east-1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Private Endpoint Service can be imported using project ID and username, in the format <code class="docutils literal notranslate"><span class="pre">{project_id}-{private_link_id}-{provider_name}</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import mongodbatlas:index/privateLinkEndpoint:PrivateLinkEndpoint <span class="nb">test</span> 1112222b3bf99403840e8934-3242342343112-AWS
+
+See detailed information <span class="k">for</span> arguments and attributes<span class="se">\ </span><span class="sb">`</span>MongoDB API Private Endpoint Service &lt;https://docs.atlas.mongodb.com/reference/api/private-endpoints-service-create-one//&gt;<span class="sb">`</span>_
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required   Unique identifier for the project.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud provider region in which you want to create the private endpoint connection.
+Accepted values are: <a class="reference external" href="https://docs.atlas.mongodb.com/reference/amazon-aws/#amazon-aws">AWS regions</a> and <a class="reference external" href="https://docs.atlas.mongodb.com/reference/microsoft-azure/#microsoft-azure">AZURE regions</a></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.PrivateLinkEndpoint.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint_service_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">error_message</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interface_endpoints</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_endpoints</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_link_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_link_service_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_link_service_resource_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_mongodbatlas.private_link_endpoint.PrivateLinkEndpoint<a class="headerlink" href="#pulumi_mongodbatlas.PrivateLinkEndpoint.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing PrivateLinkEndpoint resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>endpoint_service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the PrivateLink endpoint service in AWS. Returns null while the endpoint service is being created.</p></li>
+<li><p><strong>error_message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Error message pertaining to the AWS PrivateLink connection. Returns null if there are no errors.</p></li>
+<li><p><strong>interface_endpoints</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – Unique identifiers of the interface endpoints in your VPC that you added to the AWS PrivateLink connection.</p></li>
+<li><p><strong>private_endpoints</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – All private endpoints that you have added to this Azure Private Link Service.</p></li>
+<li><p><strong>private_link_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the AWS PrivateLink connection.</p></li>
+<li><p><strong>private_link_service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the Azure Private Link Service that Atlas manages.</p></li>
+<li><p><strong>private_link_service_resource_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resource ID of the Azure Private Link Service that Atlas manages.
+Returns one of the following values:</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required   Unique identifier for the project.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Cloud provider region in which you want to create the private endpoint connection.
+Accepted values are: <a class="reference external" href="https://docs.atlas.mongodb.com/reference/amazon-aws/#amazon-aws">AWS regions</a> and <a class="reference external" href="https://docs.atlas.mongodb.com/reference/microsoft-azure/#microsoft-azure">AZURE regions</a></p>
+</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Status of the Private Link Service.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.PrivateLinkEndpoint.endpoint_service_name">
+<em class="property">property </em><code class="sig-name descname">endpoint_service_name</code><a class="headerlink" href="#pulumi_mongodbatlas.PrivateLinkEndpoint.endpoint_service_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the PrivateLink endpoint service in AWS. Returns null while the endpoint service is being created.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.PrivateLinkEndpoint.error_message">
+<em class="property">property </em><code class="sig-name descname">error_message</code><a class="headerlink" href="#pulumi_mongodbatlas.PrivateLinkEndpoint.error_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Error message pertaining to the AWS PrivateLink connection. Returns null if there are no errors.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.PrivateLinkEndpoint.interface_endpoints">
+<em class="property">property </em><code class="sig-name descname">interface_endpoints</code><a class="headerlink" href="#pulumi_mongodbatlas.PrivateLinkEndpoint.interface_endpoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unique identifiers of the interface endpoints in your VPC that you added to the AWS PrivateLink connection.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.PrivateLinkEndpoint.private_endpoints">
+<em class="property">property </em><code class="sig-name descname">private_endpoints</code><a class="headerlink" href="#pulumi_mongodbatlas.PrivateLinkEndpoint.private_endpoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>All private endpoints that you have added to this Azure Private Link Service.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.PrivateLinkEndpoint.private_link_id">
+<em class="property">property </em><code class="sig-name descname">private_link_id</code><a class="headerlink" href="#pulumi_mongodbatlas.PrivateLinkEndpoint.private_link_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unique identifier of the AWS PrivateLink connection.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.PrivateLinkEndpoint.private_link_service_name">
+<em class="property">property </em><code class="sig-name descname">private_link_service_name</code><a class="headerlink" href="#pulumi_mongodbatlas.PrivateLinkEndpoint.private_link_service_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the Azure Private Link Service that Atlas manages.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.PrivateLinkEndpoint.private_link_service_resource_id">
+<em class="property">property </em><code class="sig-name descname">private_link_service_resource_id</code><a class="headerlink" href="#pulumi_mongodbatlas.PrivateLinkEndpoint.private_link_service_resource_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resource ID of the Azure Private Link Service that Atlas manages.
+Returns one of the following values:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.PrivateLinkEndpoint.project_id">
+<em class="property">property </em><code class="sig-name descname">project_id</code><a class="headerlink" href="#pulumi_mongodbatlas.PrivateLinkEndpoint.project_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required        Unique identifier for the project.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.PrivateLinkEndpoint.region">
+<em class="property">property </em><code class="sig-name descname">region</code><a class="headerlink" href="#pulumi_mongodbatlas.PrivateLinkEndpoint.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cloud provider region in which you want to create the private endpoint connection.
+Accepted values are: <a class="reference external" href="https://docs.atlas.mongodb.com/reference/amazon-aws/#amazon-aws">AWS regions</a> and <a class="reference external" href="https://docs.atlas.mongodb.com/reference/microsoft-azure/#microsoft-azure">AZURE regions</a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.PrivateLinkEndpoint.status">
+<em class="property">property </em><code class="sig-name descname">status</code><a class="headerlink" href="#pulumi_mongodbatlas.PrivateLinkEndpoint.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Status of the Private Link Service.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.PrivateLinkEndpoint.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.PrivateLinkEndpoint.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.PrivateLinkEndpoint.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.PrivateLinkEndpoint.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_mongodbatlas.PrivateLinkEndpointService">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">PrivateLinkEndpointService</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint_service_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_endpoint_ip_address</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_link_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.PrivateLinkEndpointService" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">PrivateLinkEndpointService</span></code> provides a Private Endpoint Interface Link resource. This represents a Private Endpoint Interface Link, which adds one interface endpoint to a private endpoint connection in an Atlas project.</p>
+<blockquote>
+<div><p><strong>IMPORTANT:</strong>You must have one of the following roles to successfully handle the resource:</p>
+<ul class="simple">
+<li><p>Organization Owner</p></li>
+<li><p>Project Owner</p></li>
+</ul>
+<p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find group_id in the official documentation.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test_private_link_endpoint</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">PrivateLinkEndpoint</span><span class="p">(</span><span class="s2">&quot;testPrivateLinkEndpoint&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT_ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-east-1&quot;</span><span class="p">)</span>
+<span class="n">ptfe_service</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">VpcEndpoint</span><span class="p">(</span><span class="s2">&quot;ptfeService&quot;</span><span class="p">,</span>
+    <span class="n">security_group_ids</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;sg-3f238186&quot;</span><span class="p">],</span>
+    <span class="n">service_name</span><span class="o">=</span><span class="n">test_private_link_endpoint</span><span class="o">.</span><span class="n">endpoint_service_name</span><span class="p">,</span>
+    <span class="n">subnet_ids</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;subnet-de0406d2&quot;</span><span class="p">],</span>
+    <span class="n">vpc_endpoint_type</span><span class="o">=</span><span class="s2">&quot;Interface&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="s2">&quot;vpc-7fc0a543&quot;</span><span class="p">)</span>
+<span class="n">test_private_link_endpoint_service</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">PrivateLinkEndpointService</span><span class="p">(</span><span class="s2">&quot;testPrivateLinkEndpointService&quot;</span><span class="p">,</span>
+    <span class="n">endpoint_service_id</span><span class="o">=</span><span class="n">ptfe_service</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">private_link_id</span><span class="o">=</span><span class="n">test_private_link_endpoint</span><span class="o">.</span><span class="n">private_link_id</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">test_private_link_endpoint</span><span class="o">.</span><span class="n">project_id</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Private Endpoint Link Connection can be imported using project ID and username, in the format <code class="docutils literal notranslate"><span class="pre">{project_id}--{private_link_id}--{endpoint_service_id}--{provider_name}</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import mongodbatlas:index/privateLinkEndpointService:PrivateLinkEndpointService <span class="nb">test</span> 1112222b3bf99403840e8934--vpce-4242342343--3242342343112--AWS
+
+See detailed information <span class="k">for</span> arguments and attributes<span class="se">\ </span><span class="sb">`</span>MongoDB API Private Endpoint Link Connection &lt;https://docs.atlas.mongodb.com/reference/api/private-endpoints-endpoint-create-one/&gt;<span class="sb">`</span>_
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>endpoint_service_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the interface endpoint you created in your VPC with the <code class="docutils literal notranslate"><span class="pre">AWS</span></code> or <code class="docutils literal notranslate"><span class="pre">AZURE</span></code> resource.</p></li>
+<li><p><strong>private_endpoint_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Private IP address of the private endpoint network interface you created in your Azure VNet. Only for <code class="docutils literal notranslate"><span class="pre">AZURE</span></code>.</p></li>
+<li><p><strong>private_link_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the <code class="docutils literal notranslate"><span class="pre">AWS</span></code> or <code class="docutils literal notranslate"><span class="pre">AZURE</span></code> PrivateLink connection which is created by <code class="docutils literal notranslate"><span class="pre">PrivateLinkEndpoint</span></code> resource.</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier for the project.</p></li>
+<li><p><strong>provider_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud provider for which you want to create a private endpoint. Atlas accepts <code class="docutils literal notranslate"><span class="pre">AWS</span></code> or <code class="docutils literal notranslate"><span class="pre">AZURE</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.PrivateLinkEndpointService.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_status</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delete_requested</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint_service_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">error_message</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interface_endpoint_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_endpoint_connection_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_endpoint_ip_address</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_endpoint_resource_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_link_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_mongodbatlas.private_link_endpoint_service.PrivateLinkEndpointService<a class="headerlink" href="#pulumi_mongodbatlas.PrivateLinkEndpointService.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing PrivateLinkEndpointService resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>connection_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Status of the interface endpoint.
+Returns one of the following values:</p></li>
+<li><p><strong>delete_requested</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if Atlas received a request to remove the interface endpoint from the private endpoint connection.</p></li>
+<li><p><strong>endpoint_service_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the interface endpoint you created in your VPC with the <code class="docutils literal notranslate"><span class="pre">AWS</span></code> or <code class="docutils literal notranslate"><span class="pre">AZURE</span></code> resource.</p></li>
+<li><p><strong>error_message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Error message pertaining to the interface endpoint. Returns null if there are no errors.</p></li>
+<li><p><strong>interface_endpoint_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the interface endpoint.</p></li>
+<li><p><strong>private_endpoint_connection_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the connection for this private endpoint that Atlas generates.</p></li>
+<li><p><strong>private_endpoint_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Private IP address of the private endpoint network interface you created in your Azure VNet. Only for <code class="docutils literal notranslate"><span class="pre">AZURE</span></code>.</p></li>
+<li><p><strong>private_endpoint_resource_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the private endpoint.</p></li>
+<li><p><strong>private_link_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the <code class="docutils literal notranslate"><span class="pre">AWS</span></code> or <code class="docutils literal notranslate"><span class="pre">AZURE</span></code> PrivateLink connection which is created by <code class="docutils literal notranslate"><span class="pre">PrivateLinkEndpoint</span></code> resource.</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier for the project.</p></li>
+<li><p><strong>provider_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud provider for which you want to create a private endpoint. Atlas accepts <code class="docutils literal notranslate"><span class="pre">AWS</span></code> or <code class="docutils literal notranslate"><span class="pre">AZURE</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.PrivateLinkEndpointService.connection_status">
+<em class="property">property </em><code class="sig-name descname">connection_status</code><a class="headerlink" href="#pulumi_mongodbatlas.PrivateLinkEndpointService.connection_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Status of the interface endpoint.
+Returns one of the following values:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.PrivateLinkEndpointService.delete_requested">
+<em class="property">property </em><code class="sig-name descname">delete_requested</code><a class="headerlink" href="#pulumi_mongodbatlas.PrivateLinkEndpointService.delete_requested" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates if Atlas received a request to remove the interface endpoint from the private endpoint connection.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.PrivateLinkEndpointService.endpoint_service_id">
+<em class="property">property </em><code class="sig-name descname">endpoint_service_id</code><a class="headerlink" href="#pulumi_mongodbatlas.PrivateLinkEndpointService.endpoint_service_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unique identifier of the interface endpoint you created in your VPC with the <code class="docutils literal notranslate"><span class="pre">AWS</span></code> or <code class="docutils literal notranslate"><span class="pre">AZURE</span></code> resource.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.PrivateLinkEndpointService.error_message">
+<em class="property">property </em><code class="sig-name descname">error_message</code><a class="headerlink" href="#pulumi_mongodbatlas.PrivateLinkEndpointService.error_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Error message pertaining to the interface endpoint. Returns null if there are no errors.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.PrivateLinkEndpointService.interface_endpoint_id">
+<em class="property">property </em><code class="sig-name descname">interface_endpoint_id</code><a class="headerlink" href="#pulumi_mongodbatlas.PrivateLinkEndpointService.interface_endpoint_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unique identifier of the interface endpoint.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.PrivateLinkEndpointService.private_endpoint_connection_name">
+<em class="property">property </em><code class="sig-name descname">private_endpoint_connection_name</code><a class="headerlink" href="#pulumi_mongodbatlas.PrivateLinkEndpointService.private_endpoint_connection_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the connection for this private endpoint that Atlas generates.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.PrivateLinkEndpointService.private_endpoint_ip_address">
+<em class="property">property </em><code class="sig-name descname">private_endpoint_ip_address</code><a class="headerlink" href="#pulumi_mongodbatlas.PrivateLinkEndpointService.private_endpoint_ip_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Private IP address of the private endpoint network interface you created in your Azure VNet. Only for <code class="docutils literal notranslate"><span class="pre">AZURE</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.PrivateLinkEndpointService.private_endpoint_resource_id">
+<em class="property">property </em><code class="sig-name descname">private_endpoint_resource_id</code><a class="headerlink" href="#pulumi_mongodbatlas.PrivateLinkEndpointService.private_endpoint_resource_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unique identifier of the private endpoint.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.PrivateLinkEndpointService.private_link_id">
+<em class="property">property </em><code class="sig-name descname">private_link_id</code><a class="headerlink" href="#pulumi_mongodbatlas.PrivateLinkEndpointService.private_link_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unique identifier of the <code class="docutils literal notranslate"><span class="pre">AWS</span></code> or <code class="docutils literal notranslate"><span class="pre">AZURE</span></code> PrivateLink connection which is created by <code class="docutils literal notranslate"><span class="pre">PrivateLinkEndpoint</span></code> resource.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.PrivateLinkEndpointService.project_id">
+<em class="property">property </em><code class="sig-name descname">project_id</code><a class="headerlink" href="#pulumi_mongodbatlas.PrivateLinkEndpointService.project_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unique identifier for the project.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.PrivateLinkEndpointService.provider_name">
+<em class="property">property </em><code class="sig-name descname">provider_name</code><a class="headerlink" href="#pulumi_mongodbatlas.PrivateLinkEndpointService.provider_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cloud provider for which you want to create a private endpoint. Atlas accepts <code class="docutils literal notranslate"><span class="pre">AWS</span></code> or <code class="docutils literal notranslate"><span class="pre">AZURE</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.PrivateLinkEndpointService.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.PrivateLinkEndpointService.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.PrivateLinkEndpointService.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.PrivateLinkEndpointService.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_mongodbatlas.Project">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">Project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">teams</span><span class="p">:</span> <span class="n">Union[Sequence[Union[ProjectTeamArgs, Mapping[str, Any], Awaitable[Union[ProjectTeamArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[ProjectTeamArgs, Mapping[str, Any], Awaitable[Union[ProjectTeamArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.Project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Project must be imported using project ID, e.g.</p>
@@ -4648,11 +5486,174 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_mongodbatlas.ProjectIpAccessList">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">ProjectIpAccessList</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">aws_security_group</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_block</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">comment</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.ProjectIpAccessList" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">ProjectIpAccessList</span></code> provides an IP Access List entry resource. The access list grants access from IPs, CIDRs or AWS Security Groups (if VPC Peering is enabled) to clusters within the Project.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
+<p><strong>IMPORTANT:</strong>
+When you remove an entry from the access list, existing connections from the removed address(es) may remain open for a variable amount of time. How much time passes before Atlas closes the connection depends on several factors, including how the connection was established, the particular behavior of the application or driver using the address, and the connection protocol (e.g., TCP or UDP). This is particularly important to consider when changing an existing IP address or CIDR block as they cannot be updated via the Provider (comments can however), hence a change will force the destruction and recreation of entries.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">ProjectIpAccessList</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;1.2.3.4/32&quot;</span><span class="p">,</span>
+    <span class="n">comment</span><span class="o">=</span><span class="s2">&quot;cidr block for tf acc testing&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">ProjectIpAccessList</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">comment</span><span class="o">=</span><span class="s2">&quot;ip address for tf acc testing&quot;</span><span class="p">,</span>
+    <span class="n">ip_address</span><span class="o">=</span><span class="s2">&quot;2.3.4.5&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test_network_container</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">NetworkContainer</span><span class="p">(</span><span class="s2">&quot;testNetworkContainer&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">atlas_cidr_block</span><span class="o">=</span><span class="s2">&quot;192.168.208.0/21&quot;</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+    <span class="n">region_name</span><span class="o">=</span><span class="s2">&quot;US_EAST_1&quot;</span><span class="p">)</span>
+<span class="n">test_network_peering</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">NetworkPeering</span><span class="p">(</span><span class="s2">&quot;testNetworkPeering&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">container_id</span><span class="o">=</span><span class="n">test_network_container</span><span class="o">.</span><span class="n">container_id</span><span class="p">,</span>
+    <span class="n">accepter_region_name</span><span class="o">=</span><span class="s2">&quot;us-east-1&quot;</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
+    <span class="n">route_table_cidr_block</span><span class="o">=</span><span class="s2">&quot;172.31.0.0/16&quot;</span><span class="p">,</span>
+    <span class="n">vpc_id</span><span class="o">=</span><span class="s2">&quot;vpc-0d93d6f69f1578bd8&quot;</span><span class="p">,</span>
+    <span class="n">aws_account_id</span><span class="o">=</span><span class="s2">&quot;232589400519&quot;</span><span class="p">)</span>
+<span class="n">test_project_ip_access_list</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">ProjectIpAccessList</span><span class="p">(</span><span class="s2">&quot;testProjectIpAccessList&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">aws_security_group</span><span class="o">=</span><span class="s2">&quot;sg-0026348ec11780bd1&quot;</span><span class="p">,</span>
+    <span class="n">comment</span><span class="o">=</span><span class="s2">&quot;TestAcc for awsSecurityGroup&quot;</span><span class="p">,</span>
+    <span class="n">opts</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">ResourceOptions</span><span class="p">(</span><span class="n">depends_on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;mongodbatlas_network_peering.test&quot;</span><span class="p">]))</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p><strong>IMPORTANT:</strong> In order to use AWS Security Group(s) VPC Peering must be enabled like above example.</p>
+</div></blockquote>
+<p>IP Access List entries can be imported using the <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">cidr_block</span></code> or <code class="docutils literal notranslate"><span class="pre">ip_address</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import mongodbatlas:index/projectIpAccessList:ProjectIpAccessList <span class="nb">test</span> 5d0f1f74cf09a29120e123cd-10.242.88.0/21
+
+For more information see<span class="se">\ </span><span class="sb">`</span>MongoDB Atlas API Reference. &lt;https://docs.atlas.mongodb.com/reference/api/access-lists/&gt;<span class="sb">`</span>_
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>aws_security_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the AWS security group to add to the access list. Your access list entry can include only one <code class="docutils literal notranslate"><span class="pre">awsSecurityGroup</span></code>, one <code class="docutils literal notranslate"><span class="pre">cidrBlock</span></code>, or one <code class="docutils literal notranslate"><span class="pre">ipAddress</span></code>.</p></li>
+<li><p><strong>cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Range of IP addresses in CIDR notation to be added to the access list. Your access list entry can include only one <code class="docutils literal notranslate"><span class="pre">awsSecurityGroup</span></code>, one <code class="docutils literal notranslate"><span class="pre">cidrBlock</span></code>, or one <code class="docutils literal notranslate"><span class="pre">ipAddress</span></code>.</p></li>
+<li><p><strong>comment</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Comment to add to the access list entry.</p></li>
+<li><p><strong>ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Single IP address to be added to the access list. Mutually exclusive with <code class="docutils literal notranslate"><span class="pre">awsSecurityGroup</span></code> and <code class="docutils literal notranslate"><span class="pre">cidrBlock</span></code>.</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier for the project to which you want to add one or more access list entries.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.ProjectIpAccessList.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">aws_security_group</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_block</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">comment</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_mongodbatlas.project_ip_access_list.ProjectIpAccessList<a class="headerlink" href="#pulumi_mongodbatlas.ProjectIpAccessList.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ProjectIpAccessList resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>aws_security_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the AWS security group to add to the access list. Your access list entry can include only one <code class="docutils literal notranslate"><span class="pre">awsSecurityGroup</span></code>, one <code class="docutils literal notranslate"><span class="pre">cidrBlock</span></code>, or one <code class="docutils literal notranslate"><span class="pre">ipAddress</span></code>.</p></li>
+<li><p><strong>cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Range of IP addresses in CIDR notation to be added to the access list. Your access list entry can include only one <code class="docutils literal notranslate"><span class="pre">awsSecurityGroup</span></code>, one <code class="docutils literal notranslate"><span class="pre">cidrBlock</span></code>, or one <code class="docutils literal notranslate"><span class="pre">ipAddress</span></code>.</p></li>
+<li><p><strong>comment</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Comment to add to the access list entry.</p></li>
+<li><p><strong>ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Single IP address to be added to the access list. Mutually exclusive with <code class="docutils literal notranslate"><span class="pre">awsSecurityGroup</span></code> and <code class="docutils literal notranslate"><span class="pre">cidrBlock</span></code>.</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier for the project to which you want to add one or more access list entries.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.ProjectIpAccessList.aws_security_group">
+<em class="property">property </em><code class="sig-name descname">aws_security_group</code><a class="headerlink" href="#pulumi_mongodbatlas.ProjectIpAccessList.aws_security_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unique identifier of the AWS security group to add to the access list. Your access list entry can include only one <code class="docutils literal notranslate"><span class="pre">awsSecurityGroup</span></code>, one <code class="docutils literal notranslate"><span class="pre">cidrBlock</span></code>, or one <code class="docutils literal notranslate"><span class="pre">ipAddress</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.ProjectIpAccessList.cidr_block">
+<em class="property">property </em><code class="sig-name descname">cidr_block</code><a class="headerlink" href="#pulumi_mongodbatlas.ProjectIpAccessList.cidr_block" title="Permalink to this definition">¶</a></dt>
+<dd><p>Range of IP addresses in CIDR notation to be added to the access list. Your access list entry can include only one <code class="docutils literal notranslate"><span class="pre">awsSecurityGroup</span></code>, one <code class="docutils literal notranslate"><span class="pre">cidrBlock</span></code>, or one <code class="docutils literal notranslate"><span class="pre">ipAddress</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.ProjectIpAccessList.comment">
+<em class="property">property </em><code class="sig-name descname">comment</code><a class="headerlink" href="#pulumi_mongodbatlas.ProjectIpAccessList.comment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Comment to add to the access list entry.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.ProjectIpAccessList.ip_address">
+<em class="property">property </em><code class="sig-name descname">ip_address</code><a class="headerlink" href="#pulumi_mongodbatlas.ProjectIpAccessList.ip_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Single IP address to be added to the access list. Mutually exclusive with <code class="docutils literal notranslate"><span class="pre">awsSecurityGroup</span></code> and <code class="docutils literal notranslate"><span class="pre">cidrBlock</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.ProjectIpAccessList.project_id">
+<em class="property">property </em><code class="sig-name descname">project_id</code><a class="headerlink" href="#pulumi_mongodbatlas.ProjectIpAccessList.project_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unique identifier for the project to which you want to add one or more access list entries.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.ProjectIpAccessList.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.ProjectIpAccessList.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.ProjectIpAccessList.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.ProjectIpAccessList.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_mongodbatlas.ProjectIpWhitelist">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">ProjectIpWhitelist</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">aws_security_group</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_block</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">comment</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.ProjectIpWhitelist" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ProjectIpWhitelist</span></code> provides an IP Whitelist entry resource. The whitelist grants access from IPs, CIDRs or AWS Security Groups (if VPC Peering is enabled) to clusters within the Project.</p>
 <blockquote>
-<div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
+<div><p><strong>IMPORTANT:</strong>
+Recently we have made changes to modernize the terminology we use in Atlas. The term “Whitelist” has been deprecated in favor of “Access List”.  The Project IP whitelist resource has been deprecated and will be disabled in June 2021.  Please move to using the <a class="reference external" href="https://tf-registry.herokuapp.com/providers/mongodb/mongodbatlas/latest/docs/resources/project_ip_access_list">Project IP Access List</a> resource before June 2021.</p>
+<p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.ß</p>
 <p><strong>IMPORTANT:</strong>
 When you remove an entry from the whitelist, existing connections from the removed address(es) may remain open for a variable amount of time. How much time passes before Atlas closes the connection depends on several factors, including how the connection was established, the particular behavior of the application or driver using the address, and the connection protocol (e.g., TCP or UDP). This is particularly important to consider when changing an existing IP address or CIDR block as they cannot be updated via the Provider (comments can however), hence a change will force the destruction and recreation of entries.</p>
 </div></blockquote>
@@ -4694,7 +5695,7 @@ When you remove an entry from the whitelist, existing connections from the remov
     <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">,</span>
     <span class="n">aws_security_group</span><span class="o">=</span><span class="s2">&quot;sg-0026348ec11780bd1&quot;</span><span class="p">,</span>
     <span class="n">comment</span><span class="o">=</span><span class="s2">&quot;TestAcc for awsSecurityGroup&quot;</span><span class="p">,</span>
-    <span class="n">opts</span><span class="o">=</span><span class="n">ResourceOptions</span><span class="p">(</span><span class="n">depends_on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;mongodbatlas_network_peering.test&quot;</span><span class="p">]))</span>
+    <span class="n">opts</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">ResourceOptions</span><span class="p">(</span><span class="n">depends_on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;mongodbatlas_network_peering.test&quot;</span><span class="p">]))</span>
 </pre></div>
 </div>
 <blockquote>
@@ -5044,6 +6045,329 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_mongodbatlas.ThirdPartyIntegration">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">ThirdPartyIntegration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_token</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">channel_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">flow_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">license_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">read_token</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">routing_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">team_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">write_token</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.ThirdPartyIntegration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Third-Party Integration Settings can be imported using project ID and the integration type, in the format <code class="docutils literal notranslate"><span class="pre">project_id</span></code>-<code class="docutils literal notranslate"><span class="pre">type</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import mongodbatlas:index/thirdPartyIntegration:ThirdPartyIntegration my_user 1112222b3bf99403840e8934-OPS_GENIE
+
+See <span class="sb">`</span>MongoDB Atlas API &lt;https://docs.atlas.mongodb.com/reference/api/third-party-integration-settings-create/&gt;<span class="sb">`</span>_ Documentation <span class="k">for</span> more information.
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of your New Relic account.</p></li>
+<li><p><strong>api_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your API Key.</p></li>
+<li><p><strong>api_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your API Token.</p></li>
+<li><p><strong>flow_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your Flowdock Flow name.</p></li>
+<li><p><strong>license_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your License Key.</p></li>
+<li><p><strong>org_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your Flowdock organization name.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `WEBHOOK`
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique ID for the project to get all Third-Party service integrations</p></li>
+<li><p><strong>read_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your Insights Query Key.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `OPS_GENIE`
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates which API URL to use, either US or EU. Opsgenie will use US by default.</p>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `VICTOR_OPS`
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>routing_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional field for your Routing Key.</p>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `FLOWDOCK`
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional field for your webhook secret.</p></li>
+<li><p><strong>service_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your Service Key.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `DATADOG`
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Third-Party Integration Settings type</p>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">PAGER_DUTY</span>
+<span class="o">*</span> <span class="n">DATADOG</span>
+<span class="o">*</span> <span class="n">NEW_RELIC</span>
+<span class="o">*</span> <span class="n">OPS_GENIE</span>
+<span class="o">*</span> <span class="n">VICTOR_OPS</span>
+<span class="o">*</span> <span class="n">FLOWDOCK</span>
+<span class="o">*</span> <span class="n">WEBHOOK</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your webhook URL.</p></li>
+<li><p><strong>write_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your Insights Insert Key.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.ThirdPartyIntegration.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_token</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">channel_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">flow_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">license_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">read_token</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">routing_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">team_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">write_token</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_mongodbatlas.third_party_integration.ThirdPartyIntegration<a class="headerlink" href="#pulumi_mongodbatlas.ThirdPartyIntegration.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ThirdPartyIntegration resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of your New Relic account.</p></li>
+<li><p><strong>api_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your API Key.</p></li>
+<li><p><strong>api_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your API Token.</p></li>
+<li><p><strong>flow_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your Flowdock Flow name.</p></li>
+<li><p><strong>license_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your License Key.</p></li>
+<li><p><strong>org_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your Flowdock organization name.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `WEBHOOK`
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique ID for the project to get all Third-Party service integrations</p></li>
+<li><p><strong>read_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your Insights Query Key.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `OPS_GENIE`
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates which API URL to use, either US or EU. Opsgenie will use US by default.</p>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `VICTOR_OPS`
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>routing_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional field for your Routing Key.</p>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `FLOWDOCK`
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional field for your webhook secret.</p></li>
+<li><p><strong>service_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your Service Key.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `DATADOG`
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Third-Party Integration Settings type</p>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">PAGER_DUTY</span>
+<span class="o">*</span> <span class="n">DATADOG</span>
+<span class="o">*</span> <span class="n">NEW_RELIC</span>
+<span class="o">*</span> <span class="n">OPS_GENIE</span>
+<span class="o">*</span> <span class="n">VICTOR_OPS</span>
+<span class="o">*</span> <span class="n">FLOWDOCK</span>
+<span class="o">*</span> <span class="n">WEBHOOK</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your webhook URL.</p></li>
+<li><p><strong>write_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your Insights Insert Key.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.ThirdPartyIntegration.account_id">
+<em class="property">property </em><code class="sig-name descname">account_id</code><a class="headerlink" href="#pulumi_mongodbatlas.ThirdPartyIntegration.account_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unique identifier of your New Relic account.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.ThirdPartyIntegration.api_key">
+<em class="property">property </em><code class="sig-name descname">api_key</code><a class="headerlink" href="#pulumi_mongodbatlas.ThirdPartyIntegration.api_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Your API Key.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.ThirdPartyIntegration.api_token">
+<em class="property">property </em><code class="sig-name descname">api_token</code><a class="headerlink" href="#pulumi_mongodbatlas.ThirdPartyIntegration.api_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Your API Token.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.ThirdPartyIntegration.flow_name">
+<em class="property">property </em><code class="sig-name descname">flow_name</code><a class="headerlink" href="#pulumi_mongodbatlas.ThirdPartyIntegration.flow_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Your Flowdock Flow name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.ThirdPartyIntegration.license_key">
+<em class="property">property </em><code class="sig-name descname">license_key</code><a class="headerlink" href="#pulumi_mongodbatlas.ThirdPartyIntegration.license_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Your License Key.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.ThirdPartyIntegration.org_name">
+<em class="property">property </em><code class="sig-name descname">org_name</code><a class="headerlink" href="#pulumi_mongodbatlas.ThirdPartyIntegration.org_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Your Flowdock organization name.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">WEBHOOK</span></code></p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.ThirdPartyIntegration.project_id">
+<em class="property">property </em><code class="sig-name descname">project_id</code><a class="headerlink" href="#pulumi_mongodbatlas.ThirdPartyIntegration.project_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unique ID for the project to get all Third-Party service integrations</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.ThirdPartyIntegration.read_token">
+<em class="property">property </em><code class="sig-name descname">read_token</code><a class="headerlink" href="#pulumi_mongodbatlas.ThirdPartyIntegration.read_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Your Insights Query Key.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">OPS_GENIE</span></code></p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.ThirdPartyIntegration.region">
+<em class="property">property </em><code class="sig-name descname">region</code><a class="headerlink" href="#pulumi_mongodbatlas.ThirdPartyIntegration.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates which API URL to use, either US or EU. Opsgenie will use US by default.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">VICTOR_OPS</span></code></p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.ThirdPartyIntegration.routing_key">
+<em class="property">property </em><code class="sig-name descname">routing_key</code><a class="headerlink" href="#pulumi_mongodbatlas.ThirdPartyIntegration.routing_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>An optional field for your Routing Key.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">FLOWDOCK</span></code></p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.ThirdPartyIntegration.secret">
+<em class="property">property </em><code class="sig-name descname">secret</code><a class="headerlink" href="#pulumi_mongodbatlas.ThirdPartyIntegration.secret" title="Permalink to this definition">¶</a></dt>
+<dd><p>An optional field for your webhook secret.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.ThirdPartyIntegration.service_key">
+<em class="property">property </em><code class="sig-name descname">service_key</code><a class="headerlink" href="#pulumi_mongodbatlas.ThirdPartyIntegration.service_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Your Service Key.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">DATADOG</span></code></p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.ThirdPartyIntegration.type">
+<em class="property">property </em><code class="sig-name descname">type</code><a class="headerlink" href="#pulumi_mongodbatlas.ThirdPartyIntegration.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Third-Party Integration Settings type</p>
+<ul class="simple">
+<li><p>PAGER_DUTY</p></li>
+<li><p>DATADOG</p></li>
+<li><p>NEW_RELIC</p></li>
+<li><p>OPS_GENIE</p></li>
+<li><p>VICTOR_OPS</p></li>
+<li><p>FLOWDOCK</p></li>
+<li><p>WEBHOOK</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.ThirdPartyIntegration.url">
+<em class="property">property </em><code class="sig-name descname">url</code><a class="headerlink" href="#pulumi_mongodbatlas.ThirdPartyIntegration.url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Your webhook URL.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.ThirdPartyIntegration.write_token">
+<em class="property">property </em><code class="sig-name descname">write_token</code><a class="headerlink" href="#pulumi_mongodbatlas.ThirdPartyIntegration.write_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Your Insights Insert Key.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.ThirdPartyIntegration.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.ThirdPartyIntegration.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_mongodbatlas.ThirdPartyIntegration.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.ThirdPartyIntegration.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_mongodbatlas.X509AuthenticationDatabaseUser">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">X509AuthenticationDatabaseUser</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">customer_x509_cas</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">months_until_expiration</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mongodbatlas.X509AuthenticationDatabaseUser" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">X509AuthenticationDatabaseUser</span></code> provides a X509 Authentication Database User resource. The X509AuthenticationDatabaseUser resource lets you manage MongoDB users who authenticate using X.509 certificates. You can manage these X.509 certificates or let Atlas do it for you.</p>
@@ -5334,6 +6658,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py function">
+<dt id="pulumi_mongodbatlas.get_cloud_provider_access">
+<code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_cloud_provider_access</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_mongodbatlas.get_cloud_provider_access.AwaitableGetCloudProviderAccessResult<a class="headerlink" href="#pulumi_mongodbatlas.get_cloud_provider_access" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">CloudProviderAccess</span></code> allows you to get the list of cloud provider access roles, currently only AWS is supported.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_mongodbatlas</span> <span class="k">as</span> <span class="nn">mongodbatlas</span>
+
+<span class="n">test_role</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">CloudProviderAccess</span><span class="p">(</span><span class="s2">&quot;testRole&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;PROJECT-ID&gt;&quot;</span><span class="p">,</span>
+    <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">)</span>
+<span class="nb">all</span> <span class="o">=</span> <span class="n">test_role</span><span class="o">.</span><span class="n">project_id</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">project_id</span><span class="p">:</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">get_cloud_provider_access</span><span class="p">(</span><span class="n">project_id</span><span class="o">=</span><span class="n">project_id</span><span class="p">))</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>project_id</strong> (<em>str</em>) – The unique ID for the project to get all Cloud Provider Access</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt id="pulumi_mongodbatlas.get_cloud_provider_snapshot">
 <code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_cloud_provider_snapshot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_mongodbatlas.get_cloud_provider_snapshot.AwaitableGetCloudProviderSnapshotResult<a class="headerlink" href="#pulumi_mongodbatlas.get_cloud_provider_snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">CloudProviderSnapshot</span></code> provides an Cloud Backup Snapshot datasource. Atlas Cloud Backup Snapshots provide localized backup storage using the native snapshot functionality of the cluster’s cloud service.</p>
@@ -5482,16 +6829,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">test_cluster</span> <span class="o">=</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;testCluster&quot;</span><span class="p">,</span>
     <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR-PROJECT-ID&gt;&quot;</span><span class="p">,</span>
     <span class="n">disk_size_gb</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
-    <span class="n">num_shards</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-    <span class="n">replication_factor</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">cluster_type</span><span class="o">=</span><span class="s2">&quot;REPLICASET&quot;</span><span class="p">,</span>
+    <span class="n">replication_specs</span><span class="o">=</span><span class="p">[</span><span class="n">mongodbatlas</span><span class="o">.</span><span class="n">ClusterReplicationSpecArgs</span><span class="p">(</span>
+        <span class="n">num_shards</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">regions_configs</span><span class="o">=</span><span class="p">[</span><span class="n">mongodbatlas</span><span class="o">.</span><span class="n">ClusterReplicationSpecRegionsConfigArgs</span><span class="p">(</span>
+            <span class="n">region_name</span><span class="o">=</span><span class="s2">&quot;US_EAST_1&quot;</span><span class="p">,</span>
+            <span class="n">electable_nodes</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+            <span class="n">priority</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span>
+            <span class="n">read_only_nodes</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="p">)],</span>
+    <span class="p">)],</span>
     <span class="n">provider_backup_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">auto_scaling_disk_gb_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">provider_name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">,</span>
     <span class="n">provider_disk_iops</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
     <span class="n">provider_volume_type</span><span class="o">=</span><span class="s2">&quot;STANDARD&quot;</span><span class="p">,</span>
     <span class="n">provider_encrypt_ebs_volume</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">provider_instance_size_name</span><span class="o">=</span><span class="s2">&quot;M40&quot;</span><span class="p">,</span>
-    <span class="n">provider_region_name</span><span class="o">=</span><span class="s2">&quot;US_EAST_1&quot;</span><span class="p">)</span>
+    <span class="n">provider_instance_size_name</span><span class="o">=</span><span class="s2">&quot;M40&quot;</span><span class="p">)</span>
 <span class="n">test_clusters</span> <span class="o">=</span> <span class="n">test_cluster</span><span class="o">.</span><span class="n">project_id</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">project_id</span><span class="p">:</span> <span class="n">mongodbatlas</span><span class="o">.</span><span class="n">get_clusters</span><span class="p">(</span><span class="n">project_id</span><span class="o">=</span><span class="n">project_id</span><span class="p">))</span>
 </pre></div>
 </div>
@@ -5777,6 +7131,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_mongodbatlas.get_private_endpoint">
 <code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_private_endpoint</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">private_link_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_mongodbatlas.get_private_endpoint.AwaitableGetPrivateEndpointResult<a class="headerlink" href="#pulumi_mongodbatlas.get_private_endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">PrivateEndpoint</span></code> describe a Private Endpoint. This represents a Private Endpoint Connection to retrieve details regarding a private endpoint by id in an Atlas project</p>
+<dl class="simple">
+<dt>!&gt; <strong>WARNING:</strong> This datasource is deprecated and will be removed in the next major version</dt><dd><p>Please transition to privatelink_endpoint as soon as possible. <a class="reference external" href="https://docs.atlas.mongodb.com/reference/api/private-endpoints-service-get-one/">PrivateLink Endpoints</a></p>
+</dd>
+</dl>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find group_id in the official documentation.</p>
 </div></blockquote>
@@ -5793,7 +7151,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_mongodbatlas.get_private_endpoint_interface_link">
 <code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_private_endpoint_interface_link</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">interface_endpoint_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_link_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_mongodbatlas.get_private_endpoint_interface_link.AwaitableGetPrivateEndpointInterfaceLinkResult<a class="headerlink" href="#pulumi_mongodbatlas.get_private_endpoint_interface_link" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">mongodbatlas_private_endpoint_link</span></code> describe a Private Endpoint Link. This represents a Private Endpoint Link Connection that wants to retrieve details in an Atlas project.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">PrivateEndpointInterfaceLink</span></code> describe a Private Endpoint Link. This represents a Private Endpoint Link Connection that wants to retrieve details in an Atlas project.</p>
+<dl class="simple">
+<dt>!&gt; <strong>WARNING:</strong> This datasource is deprecated and will be removed in the next major version</dt><dd><p>Please transition to privatelink_endpoint_service as soon as possible. <a class="reference external" href="https://docs.atlas.mongodb.com/reference/api/private-endpoints-endpoint-get-one/">PrivateLink Endpoint Service</a></p>
+</dd>
+</dl>
 <blockquote>
 <div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find group_id in the official documentation.</p>
 </div></blockquote>
@@ -5802,6 +7164,43 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>private_link_id</strong> (<em>str</em>) – Unique identifier of the AWS PrivateLink connection.</p></li>
 <li><p><strong>project_id</strong> (<em>str</em>) – Unique identifier for the project.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_mongodbatlas.get_private_link_endpoint">
+<code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_private_link_endpoint</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">private_link_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_mongodbatlas.get_private_link_endpoint.AwaitableGetPrivateLinkEndpointResult<a class="headerlink" href="#pulumi_mongodbatlas.get_private_link_endpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">PrivateLinkEndpoint</span></code> describe a Private Endpoint. This represents a Private Endpoint Connection to retrieve details regarding a private endpoint by id in an Atlas project</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find group_id in the official documentation.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>private_link_id</strong> (<em>str</em>) – Unique identifier of the private endpoint service that you want to retrieve.</p></li>
+<li><p><strong>project_id</strong> (<em>str</em>) – Unique identifier for the project.</p></li>
+<li><p><strong>provider_name</strong> (<em>str</em>) – Cloud provider for which you want to retrieve a private endpoint service. Atlas accepts <code class="docutils literal notranslate"><span class="pre">AWS</span></code> or <code class="docutils literal notranslate"><span class="pre">AZURE</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_mongodbatlas.get_private_link_endpoint_service">
+<code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_private_link_endpoint_service</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">endpoint_service_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_link_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_mongodbatlas.get_private_link_endpoint_service.AwaitableGetPrivateLinkEndpointServiceResult<a class="headerlink" href="#pulumi_mongodbatlas.get_private_link_endpoint_service" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">PrivateLinkEndpointService</span></code> describe a Private Endpoint Link. This represents a Private Endpoint Link Connection that wants to retrieve details in an Atlas project.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find group_id in the official documentation.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>endpoint_service_id</strong> (<em>str</em>) – Unique identifier of the private endpoint service for which you want to create a private endpoint service.</p></li>
+<li><p><strong>private_link_id</strong> (<em>str</em>) – Unique identifier of the <code class="docutils literal notranslate"><span class="pre">AWS</span></code> or <code class="docutils literal notranslate"><span class="pre">AZURE</span></code> PrivateLink connection.</p></li>
+<li><p><strong>project_id</strong> (<em>str</em>) – Unique identifier for the project.</p></li>
+<li><p><strong>provider_name</strong> (<em>str</em>) – Cloud provider for which you want to create a private endpoint. Atlas accepts <code class="docutils literal notranslate"><span class="pre">AWS</span></code> or <code class="docutils literal notranslate"><span class="pre">AZURE</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -5819,6 +7218,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – The unique ID for the project.</p></li>
 <li><p><strong>project_id</strong> (<em>str</em>) – The unique ID for the project.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_mongodbatlas.get_project_ip_access_list">
+<code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_project_ip_access_list</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">aws_security_group</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_block</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_mongodbatlas.get_project_ip_access_list.AwaitableGetProjectIpAccessListResult<a class="headerlink" href="#pulumi_mongodbatlas.get_project_ip_access_list" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">ProjectIpAccessList</span></code> describes an IP Access List entry resource. The access list grants access from IPs, CIDRs or AWS Security Groups (if VPC Peering is enabled) to clusters within the Project.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
+<p><strong>IMPORTANT:</strong>
+When you remove an entry from the access list, existing connections from the removed address(es) may remain open for a variable amount of time. How much time passes before Atlas closes the connection depends on several factors, including how the connection was established, the particular behavior of the application or driver using the address, and the connection protocol (e.g., TCP or UDP). This is particularly important to consider when changing an existing IP address or CIDR block as they cannot be updated via the Provider (comments can however), hence a change will force the destruction and recreation of entries.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>aws_security_group</strong> (<em>str</em>) – Unique identifier of the AWS security group to add to the access list.</p></li>
+<li><p><strong>cidr_block</strong> (<em>str</em>) – Range of IP addresses in CIDR notation to be added to the access list.</p></li>
+<li><p><strong>ip_address</strong> (<em>str</em>) – Single IP address to be added to the access list.</p></li>
+<li><p><strong>project_id</strong> (<em>str</em>) – Unique identifier for the project to which you want to add one or more access list entries.</p></li>
 </ul>
 </dd>
 </dl>
@@ -5884,6 +7304,47 @@ When you remove an entry from the whitelist, existing connections from the remov
 <dt id="pulumi_mongodbatlas.get_teams">
 <code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_teams</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">org_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">team_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_mongodbatlas.get_teams.AwaitableGetTeamsResult<a class="headerlink" href="#pulumi_mongodbatlas.get_teams" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing resource.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_mongodbatlas.get_third_party_integration">
+<code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_third_party_integration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_mongodbatlas.get_third_party_integration.AwaitableGetThirdPartyIntegrationResult<a class="headerlink" href="#pulumi_mongodbatlas.get_third_party_integration" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">ThirdPartyIntegration</span></code> describe a Third-Party Integration Settings for the given type.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>project_id</strong> (<em>str</em>) – The unique ID for the project to get all Third-Party service integrations</p></li>
+<li><p><strong>type</strong> (<em>str</em>) – Third-Party service integration type</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">PAGER_DUTY</span>
+<span class="o">*</span> <span class="n">DATADOG</span>
+<span class="o">*</span> <span class="n">NEW_RELIC</span>
+<span class="o">*</span> <span class="n">OPS_GENIE</span>
+<span class="o">*</span> <span class="n">VICTOR_OPS</span>
+<span class="o">*</span> <span class="n">FLOWDOCK</span>
+<span class="o">*</span> <span class="n">WEBHOOK</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_mongodbatlas.get_third_party_integrations">
+<code class="sig-prename descclassname">pulumi_mongodbatlas.</code><code class="sig-name descname">get_third_party_integrations</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_mongodbatlas.get_third_party_integrations.AwaitableGetThirdPartyIntegrationsResult<a class="headerlink" href="#pulumi_mongodbatlas.get_third_party_integrations" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">getThirdPartyIntegrations</span></code> describe all Third-Party Integration Settings. This represents two Third-Party services <code class="docutils literal notranslate"><span class="pre">PAGER_DUTY</span></code> and <code class="docutils literal notranslate"><span class="pre">FLOWDOCK</span></code>
+applied across the project.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Groups and projects are synonymous terms. You may find <code class="docutils literal notranslate"><span class="pre">groupId</span></code> in the official documentation.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>project_id</strong> (<em>str</em>) – The unique ID for the project to get all Third-Party service integrations</p>
+</dd>
+</dl>
 </dd></dl>
 
 </div>

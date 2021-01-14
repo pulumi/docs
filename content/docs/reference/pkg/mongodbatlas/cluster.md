@@ -39,18 +39,33 @@ class MyStack : Stack
         var cluster_test = new Mongodbatlas.Cluster("cluster-test", new Mongodbatlas.ClusterArgs
         {
             AutoScalingDiskGbEnabled = true,
+            ClusterType = "REPLICASET",
             DiskSizeGb = 100,
             MongoDbMajorVersion = "4.2",
-            NumShards = 1,
             ProjectId = "<YOUR-PROJECT-ID>",
             ProviderBackupEnabled = true,
             ProviderDiskIops = 300,
             ProviderEncryptEbsVolume = true,
             ProviderInstanceSizeName = "M40",
             ProviderName = "AWS",
-            ProviderRegionName = "US_EAST_1",
             ProviderVolumeType = "STANDARD",
-            ReplicationFactor = 3,
+            ReplicationSpecs = 
+            {
+                new Mongodbatlas.Inputs.ClusterReplicationSpecArgs
+                {
+                    NumShards = 1,
+                    RegionsConfigs = 
+                    {
+                        new Mongodbatlas.Inputs.ClusterReplicationSpecRegionsConfigArgs
+                        {
+                            ElectableNodes = 3,
+                            Priority = 7,
+                            ReadOnlyNodes = 0,
+                            RegionName = "US_EAST_1",
+                        },
+                    },
+                },
+            },
         });
     }
 
@@ -72,18 +87,29 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := mongodbatlas.NewCluster(ctx, "cluster_test", &mongodbatlas.ClusterArgs{
 			AutoScalingDiskGbEnabled: pulumi.Bool(true),
+			ClusterType:              pulumi.String("REPLICASET"),
 			DiskSizeGb:               pulumi.Float64(100),
 			MongoDbMajorVersion:      pulumi.String("4.2"),
-			NumShards:                pulumi.Int(1),
 			ProjectId:                pulumi.String("<YOUR-PROJECT-ID>"),
 			ProviderBackupEnabled:    pulumi.Bool(true),
 			ProviderDiskIops:         pulumi.Int(300),
 			ProviderEncryptEbsVolume: pulumi.Bool(true),
 			ProviderInstanceSizeName: pulumi.String("M40"),
 			ProviderName:             pulumi.String("AWS"),
-			ProviderRegionName:       pulumi.String("US_EAST_1"),
 			ProviderVolumeType:       pulumi.String("STANDARD"),
-			ReplicationFactor:        pulumi.Int(3),
+			ReplicationSpecs: mongodbatlas.ClusterReplicationSpecArray{
+				&mongodbatlas.ClusterReplicationSpecArgs{
+					NumShards: pulumi.Int(1),
+					RegionsConfigs: mongodbatlas.ClusterReplicationSpecRegionsConfigArray{
+						&mongodbatlas.ClusterReplicationSpecRegionsConfigArgs{
+							ElectableNodes: pulumi.Int(3),
+							Priority:       pulumi.Int(7),
+							ReadOnlyNodes:  pulumi.Int(0),
+							RegionName:     pulumi.String("US_EAST_1"),
+						},
+					},
+				},
+			},
 		})
 		if err != nil {
 			return err
@@ -102,18 +128,25 @@ import pulumi_mongodbatlas as mongodbatlas
 
 cluster_test = mongodbatlas.Cluster("cluster-test",
     auto_scaling_disk_gb_enabled=True,
+    cluster_type="REPLICASET",
     disk_size_gb=100,
     mongo_db_major_version="4.2",
-    num_shards=1,
     project_id="<YOUR-PROJECT-ID>",
     provider_backup_enabled=True,
     provider_disk_iops=300,
     provider_encrypt_ebs_volume=True,
     provider_instance_size_name="M40",
     provider_name="AWS",
-    provider_region_name="US_EAST_1",
     provider_volume_type="STANDARD",
-    replication_factor=3)
+    replication_specs=[mongodbatlas.ClusterReplicationSpecArgs(
+        num_shards=1,
+        regions_configs=[mongodbatlas.ClusterReplicationSpecRegionsConfigArgs(
+            electable_nodes=3,
+            priority=7,
+            read_only_nodes=0,
+            region_name="US_EAST_1",
+        )],
+    )])
 ```
 
 {{% /example %}}
@@ -126,9 +159,9 @@ import * as mongodbatlas from "@pulumi/mongodbatlas";
 
 const cluster_test = new mongodbatlas.Cluster("cluster-test", {
     autoScalingDiskGbEnabled: true,
+    clusterType: "REPLICASET",
     diskSizeGb: 100,
     mongoDbMajorVersion: "4.2",
-    numShards: 1,
     projectId: "<YOUR-PROJECT-ID>",
     providerBackupEnabled: true,
     providerDiskIops: 300,
@@ -136,9 +169,16 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
     providerInstanceSizeName: "M40",
     //Provider Settings "block"
     providerName: "AWS",
-    providerRegionName: "US_EAST_1",
     providerVolumeType: "STANDARD",
-    replicationFactor: 3,
+    replicationSpecs: [{
+        numShards: 1,
+        regionsConfigs: [{
+            electableNodes: 3,
+            priority: 7,
+            readOnlyNodes: 0,
+            regionName: "US_EAST_1",
+        }],
+    }],
 });
 ```
 
@@ -157,15 +197,30 @@ class MyStack : Stack
         var test = new Mongodbatlas.Cluster("test", new Mongodbatlas.ClusterArgs
         {
             AutoScalingDiskGbEnabled = true,
+            ClusterType = "REPLICASET",
             MongoDbMajorVersion = "4.2",
-            NumShards = 1,
             ProjectId = "<YOUR-PROJECT-ID>",
             ProviderBackupEnabled = true,
             ProviderDiskTypeName = "P6",
             ProviderInstanceSizeName = "M30",
             ProviderName = "AZURE",
-            ProviderRegionName = "US_EAST_2",
-            ReplicationFactor = 3,
+            ReplicationSpecs = 
+            {
+                new Mongodbatlas.Inputs.ClusterReplicationSpecArgs
+                {
+                    NumShards = 1,
+                    RegionsConfigs = 
+                    {
+                        new Mongodbatlas.Inputs.ClusterReplicationSpecRegionsConfigArgs
+                        {
+                            ElectableNodes = 3,
+                            Priority = 7,
+                            ReadOnlyNodes = 0,
+                            RegionName = "US_EAST_1",
+                        },
+                    },
+                },
+            },
         });
     }
 
@@ -187,15 +242,26 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := mongodbatlas.NewCluster(ctx, "test", &mongodbatlas.ClusterArgs{
 			AutoScalingDiskGbEnabled: pulumi.Bool(true),
+			ClusterType:              pulumi.String("REPLICASET"),
 			MongoDbMajorVersion:      pulumi.String("4.2"),
-			NumShards:                pulumi.Int(1),
 			ProjectId:                pulumi.String("<YOUR-PROJECT-ID>"),
 			ProviderBackupEnabled:    pulumi.Bool(true),
 			ProviderDiskTypeName:     pulumi.String("P6"),
 			ProviderInstanceSizeName: pulumi.String("M30"),
 			ProviderName:             pulumi.String("AZURE"),
-			ProviderRegionName:       pulumi.String("US_EAST_2"),
-			ReplicationFactor:        pulumi.Int(3),
+			ReplicationSpecs: mongodbatlas.ClusterReplicationSpecArray{
+				&mongodbatlas.ClusterReplicationSpecArgs{
+					NumShards: pulumi.Int(1),
+					RegionsConfigs: mongodbatlas.ClusterReplicationSpecRegionsConfigArray{
+						&mongodbatlas.ClusterReplicationSpecRegionsConfigArgs{
+							ElectableNodes: pulumi.Int(3),
+							Priority:       pulumi.Int(7),
+							ReadOnlyNodes:  pulumi.Int(0),
+							RegionName:     pulumi.String("US_EAST_1"),
+						},
+					},
+				},
+			},
 		})
 		if err != nil {
 			return err
@@ -214,15 +280,22 @@ import pulumi_mongodbatlas as mongodbatlas
 
 test = mongodbatlas.Cluster("test",
     auto_scaling_disk_gb_enabled=True,
+    cluster_type="REPLICASET",
     mongo_db_major_version="4.2",
-    num_shards=1,
     project_id="<YOUR-PROJECT-ID>",
     provider_backup_enabled=True,
     provider_disk_type_name="P6",
     provider_instance_size_name="M30",
     provider_name="AZURE",
-    provider_region_name="US_EAST_2",
-    replication_factor=3)
+    replication_specs=[mongodbatlas.ClusterReplicationSpecArgs(
+        num_shards=1,
+        regions_configs=[mongodbatlas.ClusterReplicationSpecRegionsConfigArgs(
+            electable_nodes=3,
+            priority=7,
+            read_only_nodes=0,
+            region_name="US_EAST_1",
+        )],
+    )])
 ```
 
 {{% /example %}}
@@ -235,16 +308,23 @@ import * as mongodbatlas from "@pulumi/mongodbatlas";
 
 const test = new mongodbatlas.Cluster("test", {
     autoScalingDiskGbEnabled: true,
+    clusterType: "REPLICASET",
     mongoDbMajorVersion: "4.2",
-    numShards: 1,
     projectId: "<YOUR-PROJECT-ID>",
     providerBackupEnabled: true,
     providerDiskTypeName: "P6",
     providerInstanceSizeName: "M30",
     //Provider Settings "block"
     providerName: "AZURE",
-    providerRegionName: "US_EAST_2",
-    replicationFactor: 3,
+    replicationSpecs: [{
+        numShards: 1,
+        regionsConfigs: [{
+            electableNodes: 3,
+            priority: 7,
+            readOnlyNodes: 0,
+            regionName: "US_EAST_1",
+        }],
+    }],
 });
 ```
 
@@ -263,15 +343,30 @@ class MyStack : Stack
         var test = new Mongodbatlas.Cluster("test", new Mongodbatlas.ClusterArgs
         {
             AutoScalingDiskGbEnabled = true,
+            ClusterType = "REPLICASET",
             DiskSizeGb = 40,
             MongoDbMajorVersion = "4.2",
-            NumShards = 1,
             ProjectId = "<YOUR-PROJECT-ID>",
             ProviderBackupEnabled = true,
             ProviderInstanceSizeName = "M30",
             ProviderName = "GCP",
-            ProviderRegionName = "US_EAST_4",
-            ReplicationFactor = 3,
+            ReplicationSpecs = 
+            {
+                new Mongodbatlas.Inputs.ClusterReplicationSpecArgs
+                {
+                    NumShards = 1,
+                    RegionsConfigs = 
+                    {
+                        new Mongodbatlas.Inputs.ClusterReplicationSpecRegionsConfigArgs
+                        {
+                            ElectableNodes = 3,
+                            Priority = 7,
+                            ReadOnlyNodes = 0,
+                            RegionName = "US_EAST_1",
+                        },
+                    },
+                },
+            },
         });
     }
 
@@ -293,15 +388,26 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := mongodbatlas.NewCluster(ctx, "test", &mongodbatlas.ClusterArgs{
 			AutoScalingDiskGbEnabled: pulumi.Bool(true),
+			ClusterType:              pulumi.String("REPLICASET"),
 			DiskSizeGb:               pulumi.Float64(40),
 			MongoDbMajorVersion:      pulumi.String("4.2"),
-			NumShards:                pulumi.Int(1),
 			ProjectId:                pulumi.String("<YOUR-PROJECT-ID>"),
 			ProviderBackupEnabled:    pulumi.Bool(true),
 			ProviderInstanceSizeName: pulumi.String("M30"),
 			ProviderName:             pulumi.String("GCP"),
-			ProviderRegionName:       pulumi.String("US_EAST_4"),
-			ReplicationFactor:        pulumi.Int(3),
+			ReplicationSpecs: mongodbatlas.ClusterReplicationSpecArray{
+				&mongodbatlas.ClusterReplicationSpecArgs{
+					NumShards: pulumi.Int(1),
+					RegionsConfigs: mongodbatlas.ClusterReplicationSpecRegionsConfigArray{
+						&mongodbatlas.ClusterReplicationSpecRegionsConfigArgs{
+							ElectableNodes: pulumi.Int(3),
+							Priority:       pulumi.Int(7),
+							ReadOnlyNodes:  pulumi.Int(0),
+							RegionName:     pulumi.String("US_EAST_1"),
+						},
+					},
+				},
+			},
 		})
 		if err != nil {
 			return err
@@ -320,15 +426,22 @@ import pulumi_mongodbatlas as mongodbatlas
 
 test = mongodbatlas.Cluster("test",
     auto_scaling_disk_gb_enabled=True,
+    cluster_type="REPLICASET",
     disk_size_gb=40,
     mongo_db_major_version="4.2",
-    num_shards=1,
     project_id="<YOUR-PROJECT-ID>",
     provider_backup_enabled=True,
     provider_instance_size_name="M30",
     provider_name="GCP",
-    provider_region_name="US_EAST_4",
-    replication_factor=3)
+    replication_specs=[mongodbatlas.ClusterReplicationSpecArgs(
+        num_shards=1,
+        regions_configs=[mongodbatlas.ClusterReplicationSpecRegionsConfigArgs(
+            electable_nodes=3,
+            priority=7,
+            read_only_nodes=0,
+            region_name="US_EAST_1",
+        )],
+    )])
 ```
 
 {{% /example %}}
@@ -341,16 +454,23 @@ import * as mongodbatlas from "@pulumi/mongodbatlas";
 
 const test = new mongodbatlas.Cluster("test", {
     autoScalingDiskGbEnabled: true,
+    clusterType: "REPLICASET",
     diskSizeGb: 40,
     mongoDbMajorVersion: "4.2",
-    numShards: 1,
     projectId: "<YOUR-PROJECT-ID>",
     providerBackupEnabled: true,
     providerInstanceSizeName: "M30",
     //Provider Settings "block"
     providerName: "GCP",
-    providerRegionName: "US_EAST_4",
-    replicationFactor: 3,
+    replicationSpecs: [{
+        numShards: 1,
+        regionsConfigs: [{
+            electableNodes: 3,
+            priority: 7,
+            readOnlyNodes: 0,
+            regionName: "US_EAST_1",
+        }],
+    }],
 });
 ```
 
@@ -1291,7 +1411,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the cluster.  **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.
+    <dd>{{% md %}}The default value is true.  Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1585,7 +1705,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the cluster.  **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.
+    <dd>{{% md %}}The default value is true.  Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1879,7 +1999,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the cluster.  **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.
+    <dd>{{% md %}}The default value is true.  Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2173,7 +2293,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the cluster.  **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.
+    <dd>{{% md %}}The default value is true.  Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3180,7 +3300,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the cluster.  **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.
+    <dd>{{% md %}}The default value is true.  Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3590,7 +3710,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the cluster.  **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.
+    <dd>{{% md %}}The default value is true.  Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4000,7 +4120,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the cluster.  **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.
+    <dd>{{% md %}}The default value is true.  Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4410,7 +4530,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled, the Amazon EBS encryption feature encrypts the server’s root volume for both data at rest within the volume and for data moving between the volume and the cluster.  **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.
+    <dd>{{% md %}}The default value is true.  Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
