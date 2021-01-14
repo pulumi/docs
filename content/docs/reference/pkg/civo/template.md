@@ -20,7 +20,7 @@ This can be used to create, modify, and delete Templates.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/civo/#Template">Template</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/civo/#TemplateArgs">TemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/civo/#Template">Template</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/civo/#TemplateArgs">TemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -28,11 +28,11 @@ This can be used to create, modify, and delete Templates.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#Template">NewTemplate</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#TemplateArgs">TemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#Template">Template</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#Template">NewTemplate</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#TemplateArgs">TemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#Template">Template</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo.Template.html">Template</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo.TemplateArgs.html">TemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo.Template.html">Template</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo.TemplateArgs.html">TemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -43,7 +43,7 @@ This can be used to create, modify, and delete Templates.
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -112,7 +112,7 @@ This can be used to create, modify, and delete Templates.
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -151,7 +151,7 @@ This can be used to create, modify, and delete Templates.
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -192,7 +192,6 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -200,20 +199,19 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is a unqiue, alphanumerical, short, human readable code for the template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudconfig_csharp">
 <a href="#cloudconfig_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Commonly referred to as 'user-data', this is a customisation script that is run after
 the instance is first booted. We recommend using cloud-config as it's a great distribution-agnostic
@@ -224,78 +222,70 @@ domain name of the instance and `$SSH_KEY` will be the content of the SSH public
 (this is technically optional, but you won't really be able to use instances without it -
 see our learn guide on templates for more information).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaultusername_csharp">
 <a href="#defaultusername_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default username to suggest that the user creates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A multi-line description of the template, in Markdown format
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="imageid_csharp">
 <a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the Image ID of any default template or the ID of another template
 either owned by you or global (optional; but must be specified if no volume_id is specified).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is a short human readable name for the template
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shortdescription_csharp">
 <a href="#shortdescription_csharp" style="color: inherit; text-decoration: inherit;">Short<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one line description of the template
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="volumeid_csharp">
 <a href="#volumeid_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the ID of a bootable volume, either owned by you or global
 (optional; but must be specified if no image_id is specified)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -304,20 +294,19 @@ either owned by you or global (optional; but must be specified if no volume_id i
             title="Required">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is a unqiue, alphanumerical, short, human readable code for the template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudconfig_go">
 <a href="#cloudconfig_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Commonly referred to as 'user-data', this is a customisation script that is run after
 the instance is first booted. We recommend using cloud-config as it's a great distribution-agnostic
@@ -328,78 +317,70 @@ domain name of the instance and `$SSH_KEY` will be the content of the SSH public
 (this is technically optional, but you won't really be able to use instances without it -
 see our learn guide on templates for more information).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaultusername_go">
 <a href="#defaultusername_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default username to suggest that the user creates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A multi-line description of the template, in Markdown format
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="imageid_go">
 <a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the Image ID of any default template or the ID of another template
 either owned by you or global (optional; but must be specified if no volume_id is specified).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is a short human readable name for the template
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shortdescription_go">
 <a href="#shortdescription_go" style="color: inherit; text-decoration: inherit;">Short<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one line description of the template
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="volumeid_go">
 <a href="#volumeid_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the ID of a bootable volume, either owned by you or global
 (optional; but must be specified if no image_id is specified)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -408,20 +389,19 @@ either owned by you or global (optional; but must be specified if no volume_id i
             title="Required">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is a unqiue, alphanumerical, short, human readable code for the template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudconfig_nodejs">
 <a href="#cloudconfig_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Commonly referred to as 'user-data', this is a customisation script that is run after
 the instance is first booted. We recommend using cloud-config as it's a great distribution-agnostic
@@ -432,78 +412,70 @@ domain name of the instance and `$SSH_KEY` will be the content of the SSH public
 (this is technically optional, but you won't really be able to use instances without it -
 see our learn guide on templates for more information).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaultusername_nodejs">
 <a href="#defaultusername_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default username to suggest that the user creates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A multi-line description of the template, in Markdown format
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="imageid_nodejs">
 <a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the Image ID of any default template or the ID of another template
 either owned by you or global (optional; but must be specified if no volume_id is specified).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is a short human readable name for the template
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shortdescription_nodejs">
 <a href="#shortdescription_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one line description of the template
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="volumeid_nodejs">
 <a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the ID of a bootable volume, either owned by you or global
 (optional; but must be specified if no image_id is specified)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -512,20 +484,19 @@ either owned by you or global (optional; but must be specified if no volume_id i
             title="Required">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is a unqiue, alphanumerical, short, human readable code for the template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloud_config_python">
 <a href="#cloud_config_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Commonly referred to as 'user-data', this is a customisation script that is run after
 the instance is first booted. We recommend using cloud-config as it's a great distribution-agnostic
@@ -536,87 +507,75 @@ domain name of the instance and `$SSH_KEY` will be the content of the SSH public
 (this is technically optional, but you won't really be able to use instances without it -
 see our learn guide on templates for more information).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="default_username_python">
 <a href="#default_username_python" style="color: inherit; text-decoration: inherit;">default_<wbr>username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default username to suggest that the user creates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A multi-line description of the template, in Markdown format
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="image_id_python">
 <a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is the Image ID of any default template or the ID of another template
 either owned by you or global (optional; but must be specified if no volume_id is specified).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is a short human readable name for the template
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="short_description_python">
 <a href="#short_description_python" style="color: inherit; text-decoration: inherit;">short_<wbr>description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A one line description of the template
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="volume_id_python">
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is the ID of a bootable volume, either owned by you or global
 (optional; but must be specified if no image_id is specified)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Template resource produces the following output properties:
-
 
 
 
@@ -627,15 +586,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -644,15 +601,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -661,15 +616,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -678,18 +631,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -699,7 +647,7 @@ Get an existing Template resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/civo/#TemplateState">TemplateState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/civo/#Template">Template</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/civo/#TemplateState">TemplateState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/civo/#Template">Template</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -708,11 +656,11 @@ Get an existing Template resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#TemplateState">TemplateState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#Template">Template</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#TemplateState">TemplateState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#Template">Template</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo.Template.html">Template</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo..TemplateState.html">TemplateState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo.Template.html">Template</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo..TemplateState.html">TemplateState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -814,7 +762,6 @@ Get an existing Template resource's state with the given name, ID, and optional 
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -822,9 +769,9 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_cloudconfig_csharp">
 <a href="#state_cloudconfig_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Commonly referred to as 'user-data', this is a customisation script that is run after
 the instance is first booted. We recommend using cloud-config as it's a great distribution-agnostic
@@ -835,89 +782,80 @@ domain name of the instance and `$SSH_KEY` will be the content of the SSH public
 (this is technically optional, but you won't really be able to use instances without it -
 see our learn guide on templates for more information).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_code_csharp">
 <a href="#state_code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is a unqiue, alphanumerical, short, human readable code for the template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_defaultusername_csharp">
 <a href="#state_defaultusername_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default username to suggest that the user creates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A multi-line description of the template, in Markdown format
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_imageid_csharp">
 <a href="#state_imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the Image ID of any default template or the ID of another template
 either owned by you or global (optional; but must be specified if no volume_id is specified).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is a short human readable name for the template
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_shortdescription_csharp">
 <a href="#state_shortdescription_csharp" style="color: inherit; text-decoration: inherit;">Short<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one line description of the template
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_volumeid_csharp">
 <a href="#state_volumeid_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the ID of a bootable volume, either owned by you or global
 (optional; but must be specified if no image_id is specified)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -926,9 +864,9 @@ either owned by you or global (optional; but must be specified if no volume_id i
             title="Optional">
         <span id="state_cloudconfig_go">
 <a href="#state_cloudconfig_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Commonly referred to as 'user-data', this is a customisation script that is run after
 the instance is first booted. We recommend using cloud-config as it's a great distribution-agnostic
@@ -939,89 +877,80 @@ domain name of the instance and `$SSH_KEY` will be the content of the SSH public
 (this is technically optional, but you won't really be able to use instances without it -
 see our learn guide on templates for more information).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_code_go">
 <a href="#state_code_go" style="color: inherit; text-decoration: inherit;">Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is a unqiue, alphanumerical, short, human readable code for the template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_defaultusername_go">
 <a href="#state_defaultusername_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default username to suggest that the user creates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A multi-line description of the template, in Markdown format
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_imageid_go">
 <a href="#state_imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the Image ID of any default template or the ID of another template
 either owned by you or global (optional; but must be specified if no volume_id is specified).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is a short human readable name for the template
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_shortdescription_go">
 <a href="#state_shortdescription_go" style="color: inherit; text-decoration: inherit;">Short<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one line description of the template
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_volumeid_go">
 <a href="#state_volumeid_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the ID of a bootable volume, either owned by you or global
 (optional; but must be specified if no image_id is specified)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1030,9 +959,9 @@ either owned by you or global (optional; but must be specified if no volume_id i
             title="Optional">
         <span id="state_cloudconfig_nodejs">
 <a href="#state_cloudconfig_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Commonly referred to as 'user-data', this is a customisation script that is run after
 the instance is first booted. We recommend using cloud-config as it's a great distribution-agnostic
@@ -1043,89 +972,80 @@ domain name of the instance and `$SSH_KEY` will be the content of the SSH public
 (this is technically optional, but you won't really be able to use instances without it -
 see our learn guide on templates for more information).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_code_nodejs">
 <a href="#state_code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is a unqiue, alphanumerical, short, human readable code for the template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_defaultusername_nodejs">
 <a href="#state_defaultusername_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default username to suggest that the user creates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A multi-line description of the template, in Markdown format
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_imageid_nodejs">
 <a href="#state_imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the Image ID of any default template or the ID of another template
 either owned by you or global (optional; but must be specified if no volume_id is specified).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is a short human readable name for the template
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_shortdescription_nodejs">
 <a href="#state_shortdescription_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one line description of the template
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_volumeid_nodejs">
 <a href="#state_volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the ID of a bootable volume, either owned by you or global
 (optional; but must be specified if no image_id is specified)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1134,9 +1054,9 @@ either owned by you or global (optional; but must be specified if no volume_id i
             title="Optional">
         <span id="state_cloud_config_python">
 <a href="#state_cloud_config_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Commonly referred to as 'user-data', this is a customisation script that is run after
 the instance is first booted. We recommend using cloud-config as it's a great distribution-agnostic
@@ -1147,86 +1067,78 @@ domain name of the instance and `$SSH_KEY` will be the content of the SSH public
 (this is technically optional, but you won't really be able to use instances without it -
 see our learn guide on templates for more information).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_code_python">
 <a href="#state_code_python" style="color: inherit; text-decoration: inherit;">code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is a unqiue, alphanumerical, short, human readable code for the template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_default_username_python">
 <a href="#state_default_username_python" style="color: inherit; text-decoration: inherit;">default_<wbr>username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default username to suggest that the user creates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A multi-line description of the template, in Markdown format
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_image_id_python">
 <a href="#state_image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is the Image ID of any default template or the ID of another template
 either owned by you or global (optional; but must be specified if no volume_id is specified).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is a short human readable name for the template
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_short_description_python">
 <a href="#state_short_description_python" style="color: inherit; text-decoration: inherit;">short_<wbr>description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A one line description of the template
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_volume_id_python">
 <a href="#state_volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is the ID of a bootable volume, either owned by you or global
 (optional; but must be specified if no image_id is specified)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1234,8 +1146,14 @@ either owned by you or global (optional; but must be specified if no volume_id i
 
 
 
+## Import
 
 
+Template can be imported using the template `code`, e.g.
+
+```sh
+ $ pulumi import civo:index/template:Template my-custom-template my-template-code
+```
 
 
 

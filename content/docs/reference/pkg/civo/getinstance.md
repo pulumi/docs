@@ -47,7 +47,6 @@ meta_desc: "Explore the GetInstance function of the Civo package, including exam
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -55,27 +54,24 @@ The following arguments are supported:
             title="Optional">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname of the Instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -84,27 +80,24 @@ The following arguments are supported:
             title="Optional">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname of the Instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -113,27 +106,24 @@ The following arguments are supported:
             title="Optional">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname of the Instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -142,30 +132,24 @@ The following arguments are supported:
             title="Optional">
         <span id="hostname_python">
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname of the Instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -176,7 +160,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -184,236 +167,214 @@ The following output properties are available:
             title="">
         <span id="cpucores_csharp">
 <a href="#cpucores_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cores</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Total cpu of the inatance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date of creation of the instance
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="diskgb_csharp">
 <a href="#diskgb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the disk.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="firewallid_csharp">
 <a href="#firewallid_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the firewall used.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="initialpassword_csharp">
 <a href="#initialpassword_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance initial password
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="initialuser_csharp">
 <a href="#initialuser_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>User</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the initial user created on the server.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="networkid_csharp">
 <a href="#networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This will be the ID of the network.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="notes_csharp">
 <a href="#notes_csharp" style="color: inherit; text-decoration: inherit;">Notes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notes of the instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="privateip_csharp">
 <a href="#privateip_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private ip.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="pseudoip_csharp">
 <a href="#pseudoip_csharp" style="color: inherit; text-decoration: inherit;">Pseudo<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Is the ip that is used to route the public ip from the internet to the instance using NAT
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="publicip_csharp">
 <a href="#publicip_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public ip.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rammb_csharp">
 <a href="#rammb_csharp" style="color: inherit; text-decoration: inherit;">Ram<wbr>Mb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Total ram of the instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="reversedns_csharp">
 <a href="#reversedns_csharp" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Dns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A fully qualified domain name.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="script_csharp">
 <a href="#script_csharp" style="color: inherit; text-decoration: inherit;">Script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the contents of a script uploaded
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the size.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="sshkeyid_csharp">
 <a href="#sshkeyid_csharp" style="color: inherit; text-decoration: inherit;">Sshkey<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID SSH.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the instance
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An optional list of tags
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="template_csharp">
 <a href="#template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the template to used to build the instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Instance hostname.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -422,236 +383,214 @@ The following output properties are available:
             title="">
         <span id="cpucores_go">
 <a href="#cpucores_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cores</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Total cpu of the inatance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date of creation of the instance
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="diskgb_go">
 <a href="#diskgb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the disk.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="firewallid_go">
 <a href="#firewallid_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the firewall used.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="initialpassword_go">
 <a href="#initialpassword_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance initial password
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="initialuser_go">
 <a href="#initialuser_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>User</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the initial user created on the server.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="networkid_go">
 <a href="#networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This will be the ID of the network.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="notes_go">
 <a href="#notes_go" style="color: inherit; text-decoration: inherit;">Notes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notes of the instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="privateip_go">
 <a href="#privateip_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private ip.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="pseudoip_go">
 <a href="#pseudoip_go" style="color: inherit; text-decoration: inherit;">Pseudo<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Is the ip that is used to route the public ip from the internet to the instance using NAT
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="publicip_go">
 <a href="#publicip_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public ip.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rammb_go">
 <a href="#rammb_go" style="color: inherit; text-decoration: inherit;">Ram<wbr>Mb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Total ram of the instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="reversedns_go">
 <a href="#reversedns_go" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Dns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A fully qualified domain name.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="script_go">
 <a href="#script_go" style="color: inherit; text-decoration: inherit;">Script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the contents of a script uploaded
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the size.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="sshkeyid_go">
 <a href="#sshkeyid_go" style="color: inherit; text-decoration: inherit;">Sshkey<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID SSH.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the instance
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An optional list of tags
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="template_go">
 <a href="#template_go" style="color: inherit; text-decoration: inherit;">Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the template to used to build the instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Instance hostname.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -660,236 +599,214 @@ The following output properties are available:
             title="">
         <span id="cpucores_nodejs">
 <a href="#cpucores_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Cores</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Total cpu of the inatance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date of creation of the instance
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="diskgb_nodejs">
 <a href="#diskgb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the disk.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="firewallid_nodejs">
 <a href="#firewallid_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the firewall used.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="initialpassword_nodejs">
 <a href="#initialpassword_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance initial password
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="initialuser_nodejs">
 <a href="#initialuser_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>User</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the initial user created on the server.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="networkid_nodejs">
 <a href="#networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This will be the ID of the network.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="notes_nodejs">
 <a href="#notes_nodejs" style="color: inherit; text-decoration: inherit;">notes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notes of the instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="privateip_nodejs">
 <a href="#privateip_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private ip.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="pseudoip_nodejs">
 <a href="#pseudoip_nodejs" style="color: inherit; text-decoration: inherit;">pseudo<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Is the ip that is used to route the public ip from the internet to the instance using NAT
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="publicip_nodejs">
 <a href="#publicip_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public ip.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rammb_nodejs">
 <a href="#rammb_nodejs" style="color: inherit; text-decoration: inherit;">ram<wbr>Mb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Total ram of the instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="reversedns_nodejs">
 <a href="#reversedns_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Dns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A fully qualified domain name.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="script_nodejs">
 <a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the contents of a script uploaded
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the size.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="sshkeyid_nodejs">
 <a href="#sshkeyid_nodejs" style="color: inherit; text-decoration: inherit;">sshkey<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID SSH.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the instance
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An optional list of tags
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="template_nodejs">
 <a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the template to used to build the instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Instance hostname.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -898,239 +815,214 @@ The following output properties are available:
             title="">
         <span id="cpu_cores_python">
 <a href="#cpu_cores_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>cores</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Total cpu of the inatance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date of creation of the instance
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="disk_gb_python">
 <a href="#disk_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the disk.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="firewall_id_python">
 <a href="#firewall_id_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the firewall used.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="initial_password_python">
 <a href="#initial_password_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance initial password
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="initial_user_python">
 <a href="#initial_user_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>user</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the initial user created on the server.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="network_id_python">
 <a href="#network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This will be the ID of the network.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="notes_python">
 <a href="#notes_python" style="color: inherit; text-decoration: inherit;">notes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The notes of the instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="private_ip_python">
 <a href="#private_ip_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private ip.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="pseudo_ip_python">
 <a href="#pseudo_ip_python" style="color: inherit; text-decoration: inherit;">pseudo_<wbr>ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Is the ip that is used to route the public ip from the internet to the instance using NAT
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="public_ip_python">
 <a href="#public_ip_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public ip.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ram_mb_python">
 <a href="#ram_mb_python" style="color: inherit; text-decoration: inherit;">ram_<wbr>mb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Total ram of the instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="reverse_dns_python">
 <a href="#reverse_dns_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>dns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A fully qualified domain name.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="script_python">
 <a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the contents of a script uploaded
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the size.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="sshkey_id_python">
 <a href="#sshkey_id_python" style="color: inherit; text-decoration: inherit;">sshkey_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID SSH.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the instance
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An optional list of tags
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="template_python">
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID for the template to used to build the instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="hostname_python">
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Instance hostname.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
