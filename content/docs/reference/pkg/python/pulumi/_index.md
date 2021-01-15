@@ -1011,6 +1011,23 @@ lists and dicts.  Nested objects of other types (including Resources) are not de
 </dd></dl>
 
 <dl class="py method">
+<dt id="pulumi.Output.unsecret">
+<em class="property">static </em><code class="sig-name descname">unsecret</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="p">:</span> <span class="n">pulumi.output.Output[~ T][T]</span></em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[~T][T]<a class="headerlink" href="#pulumi.Output.unsecret" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes an existing Output, deeply unwraps the nested values and returns a new Output without any secrets included</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>val</strong> (<a class="reference internal" href="#pulumi.Output" title="pulumi.Output"><em>Output</em></a><em>[</em><em>T</em><em>]</em>) – An Output to be converted to a non-Secret Output.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A deeply-unwrapped Output that is guaranteed to not contain any secret values.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#pulumi.Output" title="pulumi.Output">Output</a>[T]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pulumi.Output.secret">
 <em class="property">static </em><code class="sig-name descname">secret</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>T<span class="p">, </span>Awaitable<span class="p">[</span>T<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[~T][T]<a class="headerlink" href="#pulumi.Output.secret" title="Permalink to this definition">¶</a></dt>
 <dd><p>Takes an Input value and produces an Output value from it, deeply unwrapping nested Input values as necessary
