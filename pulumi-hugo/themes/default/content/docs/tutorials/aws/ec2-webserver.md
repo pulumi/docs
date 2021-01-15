@@ -558,4 +558,4 @@ In this tutorial, we showed you how to use Pulumi programs to create and manage 
 
 - [Containers on ECS Fargate]({{< relref "/docs/tutorials/aws/ecs-fargate" >}})
 - [API Gateways and Lambda]({{< relref "/docs/tutorials/aws/rest-api" >}})
-- [Serve a Static Webstie from S3]({{< relref "/docs/tutorials/aws/s3-website" >}})
+- [Serve a Static Website from S3]({{< relref "/docs/tutorials/aws/s3-website" >}})
