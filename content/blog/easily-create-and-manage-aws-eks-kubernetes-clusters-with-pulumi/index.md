@@ -14,9 +14,9 @@ tags:
 ---
 
 Provisioning, managing, and monitoring a Kubernetes cluster is
-no easy task. AWS now offers EKS to ease a lot of that burden -- but
+not easy. AWS now offers EKS to reduce that burden -- but
 it's still difficult to get up and running. Pulumi's infrastructure as
-code can help! We can now provision an entire EKS cluster with a
+code SDKs can help! We can provision an entire EKS cluster with a
 single CLI command, thanks to [the `@pulumi/eks`
 package](https://github.com/pulumi/pulumi-eks). Let's see how.
 <!--more-->
@@ -27,7 +27,7 @@ Updated December 2020 to include Python, .NET, and Go support.
 
 To get started, download the free and open source
 [Pulumi SDK]({{< relref "/docs/get-started/install" >}}), which includes
-the `pulumi` CLI we'll be using below. If you don't already
+the `pulumi` CLI we'll use below. If you don't
 have the AWS CLI installed and configured, [set that up too]({{< relref "/docs/intro/cloud-providers/aws/setup" >}}).
 You'll need AWS credentials to access your AWS account and
 provision resources.
@@ -44,8 +44,8 @@ provision your cluster:
 
     $ pulumi new https://github.com/pulumi/apps/eks
 
-Using this template will walk you through configuring a few settings
-such as the region you'd like to deploy into, the instance type, and
+This template will walk you through configuring a few settings
+such as the region to deploy, the instance type, and
 number of cluster nodes.
 
 The CLI will first show you a preview of the AWS and Kubernetes
@@ -198,7 +198,7 @@ func main() {
 You can extend or modify this program to change the details of the
 Amazon EKS cluster, or to install additional AWS or Kubernetes resources
 to associate with the cluster. For example, if applications running in
-the cluster need access to an Amazon S3 bucket, simply create a new
+the cluster need access to an Amazon S3 bucket, create a new
 `Bucket` resource:
 
 {{< chooser language "typescript,python,csharp,go" >}}
@@ -237,7 +237,7 @@ bucket, err := s3.NewBucket(ctx, "bucket", &s3.BucketArgs{})
 
 {{< /chooser >}}
 
-Or, to install some Kubernetes applications automatically into the
+Or, to install Kubernetes applications automatically into the
 Amazon EKS cluster (such as WordPress), add them using the Pulumi
 Kubernetes provider pointing at the newly provisioned EKS cluster:
 
