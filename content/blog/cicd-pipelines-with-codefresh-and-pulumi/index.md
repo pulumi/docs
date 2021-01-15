@@ -17,6 +17,10 @@ Delivering modern applications is complicated and requires the coordination of m
 
 Containerized applications deployed on Kubernetes are particularly susceptible to a misalignment between developers who frequently push changes and operators who want to maintain a stable architecture. Continuous Integration builds and tests software and delivers it as packages. Continuous Delivery or Deployment deploys applications on infrastructure. Let's take a look at how we can accomplish CI/CD for both applications and infrastructure.
 
+{{% notes type="info" %}}
+Join us for a [CI/CD with Kubernetes technical session](https://www.pulumi.com/resources/ci-cd-pipelines-for-kubernetes-apps-with-codefresh/) on January 21st.
+{{% /notes %}}
+
 <!--more-->
 
 ## CI/CD and Pipelines
@@ -29,13 +33,13 @@ A pipeline is the deployable unit path for CI/CD. A pipeline starts when code is
 
 Codefresh is a modern CI/CD platform specifically created for Kubernetes and containers. A pipeline in Codefresh is composed of a series of steps, where every step is a Docker container. This means that creating a pipeline is as easy as collecting your favorite Docker images from any public or private Registry. Integration with Pulumi is trivial as Pulumi is already offered in the form of a [public image](https://hub.docker.com/r/pulumi/pulumi).
 
-![Builds console](image1.png)
+![Builds console](image2.png)
 
 On the deployment front, Codefresh has native integration for Kubernetes, container registries, and Git providers. This means you can set up your cluster once in a central configuration and then make it available to all your pipelines by name. Codefresh is cloud-agnostic on all fronts. All major Git providers are supported, and deployment can happen on any compliant Kubernetes cluster.
 
 Every Codefresh account comes with a built-in graphical dashboard that allows you to inspect your Kubernetes cluster not only on the service/pod level but also on the application (i.e., Helm releases). This means that with Codefresh, you don’t need to use multiple unrelated applications to understand if your deployment was successful.
 
-![Accounts](image2.png)
+![Accounts](image1.png)
 
 A deployment that starts from a Git commit can be monitored with Codefresh from beginning to end, following all pipeline stages from application compilation/packaging to security scanning and infrastructure deployment.
 
