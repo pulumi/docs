@@ -1,10 +1,10 @@
 ---
-title: "Handling Secrets"
+title: "Secrets"
 meta_desc: This page provides an overview of how Pulumi manages sensitive configuration data.
 menu:
   intro:
     parent: concepts
-    weight: 8
+    weight: 7
 ---
 
 All resource input and output values are recorded as [`state`]({{< relref "/docs/intro/concepts/state" >}}), and are stored in the Pulumi Service, a file, or a pluggable provider that you choose. These raw values are usually just server names, configuration settings, and so on. In some cases, however, these values contain sensitive data, such as database passwords or service tokens.

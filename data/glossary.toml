@@ -121,7 +121,7 @@ link = "/docs/reference/pkg"
 [[entries]]
 term = "Runtime Code"
 description = "You can create libraries and components that allow the caller to pass in JavaScript callbacks to invoke at runtime."
-link = "/docs/intro/concepts/runtime-functions"
+link = "/docs/reference/runtime-functions"
 
 [[entries]]
 term = "SAML"

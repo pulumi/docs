@@ -4,7 +4,7 @@ meta_desc: An overview of how Pulumi programs can consume and use files.
 menu:
   intro:
     parent: concepts
-    weight: 11
+    weight: 8
 
 ---
 

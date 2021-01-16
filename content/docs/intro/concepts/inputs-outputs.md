@@ -4,7 +4,7 @@ meta_desc: An in depth look at Pulumi Inputs and Outputs and their usage.
 menu:
   intro:
     parent: concepts
-    weight: 3
+    weight: 5
 
 aliases: "/docs/reference/inputs-outputs/"
 

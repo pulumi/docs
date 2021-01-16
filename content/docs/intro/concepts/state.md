@@ -8,7 +8,7 @@ keywords:
 menu:
   intro:
     parent: concepts
-    weight: 5
+    weight: 3
 
 aliases: ["/docs/reference/state/"]
 ---

@@ -1,10 +1,10 @@
 ---
-title: "Configuring Stacks"
+title: "Configuration"
 meta_desc: This page provides an overview of how Pulumi manages cloud application configuration settings.
 menu:
   intro:
     parent: concepts
-    weight: 7
+    weight: 6
 
 aliases: ["/docs/reference/config/"]
 ---
@@ -38,7 +38,9 @@ The `pulumi config` CLI command can get, set, or list configuration key-value pa
 * `pulumi config get <key>` gets an existing configuration value with the key `<key>`.
 * `pulumi config` gets all configuration key-value pairs in the current stack (as JSON if `--json` is passed).
 
-> **Note:** When using the `config set` command, any existing values for `<key>` will be overridden without warning.
+{{% notes "info" %}}
+When using the `config set` command, any existing values for `<key>` will be overridden without warning.
+{{% /notes %}}
 
 For example, to set and then get the current AWS region in the `aws` package, you would run the following:
 

@@ -1,11 +1,11 @@
 ---
-title: "How Pulumi Deploys Infrastructure"
+title: "Pulumi Architecture"
 meta_desc: This page provides an overview of how Pulumi works and interacts with different
            Cloud Providers.
 menu:
   intro:
     parent: concepts
-    weight: 6
+    weight: 9
 
 aliases: ["/docs/reference/how/"]
 ---

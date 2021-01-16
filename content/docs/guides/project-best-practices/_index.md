@@ -2,11 +2,14 @@
 title: Organizing Projects and Stacks
 meta_desc: An overview of best practices when organization and structuring cloud projects and stacks.
 menu:
-  intro:
-    parent: concepts
-    weight: 9
+  userguides:
+    name: Organizing Projects and Stacks
+    weight: 8
 
-aliases: ["/docs/reference/organizing-stacks-projects/"]
+aliases: [
+  "/docs/reference/organizing-stacks-projects/",
+  "/docs/intro/concepts/organizing-stacks-projects/"
+]
 ---
 
 [Projects]({{< relref "/docs/intro/concepts/project" >}}) and [stacks]({{< relref "/docs/intro/concepts/stack" >}}) are intentionally flexible so that they can accommodate

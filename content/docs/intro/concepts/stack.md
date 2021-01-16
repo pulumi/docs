@@ -4,7 +4,7 @@ meta_desc: An in depth look at Pulumi Stacks and their usage.
 menu:
   intro:
     parent: concepts
-    weight: 4
+    weight: 2
 
 aliases: ["/docs/reference/stack/"]
 ---
@@ -80,6 +80,28 @@ To deploy your project to the currently selected stack, run `pulumi up`. The ope
 Your stack can distinguish between execution for `preview` versus for `update` by using [pulumi.runtime.isDryRun()]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi/runtime#isDryRun" >}}).
 {{% /notes %}}
 
+## Stack tags
+
+Stacks have associated metadata in the form of tags, with each tag consisting of a name and value. A set of built-in tags are automatically assigned and updated each time a stack is updated (such as `pulumi:project`, `pulumi:runtime`, `pulumi:description`, `gitHub:owner`, `gitHub:repo`, `vcs:owner`, `vcs:repo`, and `vcs:kind`). To view a stack's tags, run [`pulumi stack tag ls`]({{< relref "/docs/reference/cli/pulumi_stack_tag_ls" >}}).
+
+{{% notes "info" %}}
+Stack tags are only supported when logged into the [Pulumi Service backend]({{< relref "/docs/intro/concepts/state" >}}).
+{{% /notes %}}
+
+Custom tags can be assigned to a stack by running [`pulumi stack tag set <name> <value>`]({{< relref "/docs/reference/cli/pulumi_stack_tag_set" >}}) and can be used to customize the grouping of stacks in the [Pulumi Console](https://app.pulumi.com). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom tag named `environment` to each stack. For example, running `pulumi stack tag set environment production` assigns a custom `environment` tag with a value of `production` to the active stack. Once you've assigned an `environment` tag to each stack, you'll be able to group by `Tag: environment` in the Pulumi Console.
+
+As a best practice, custom tags should not be prefixed with `pulumi:`, `gitHub:`, or `vcs:` to avoid conflicting with built-in tags that are assigned and updated with fresh values each time a stack is updated.
+
+Tags can be deleted by running [`pulumi stack tag rm <name>`]({{< relref "/docs/reference/cli/pulumi_stack_tag_rm" >}}).
+
+## Delete a stack
+
+To delete a stack with no resources, run `pulumi stack rm`. Removing the stack will remove all stack history from pulumi.com and will delete the stack configuration file `Pulumi.<stack-name>.yaml`.
+
+If a stack still has resources associated with it, they must first be deleted via `pulumi destroy`. This command uses the latest configuration values, rather than the ones that were last used when the program was deployed.
+
+To force the deletion of a stack that still contains resources-potentially orphaning them-use `pulumi stack rm --force`.
+
 ## View stack resources
 
 To view details of the currently selected stack, run `pulumi stack` with no arguments. This displays the metadata, resources and output properties associated with the stack.
@@ -108,45 +130,127 @@ Use `pulumi stack select` to change stack; `pulumi stack ls` lists known ones
 
 ## Stack Outputs {#outputs}
 
-A stack can export values as stack outputs. These outputs are shown during an update, can be easily retrieved with the Pulumi CLI, and are displayed in the Pulumi Console. They can be used for important values like resource IDs and computed IP addresses and DNS names.
+A stack can export values as stack outputs. These outputs are shown during an update, can be easily retrieved with the Pulumi CLI, and are displayed in the Pulumi Console. They can be used for important values like resource IDs, computed IP addresses, and DNS names.
 
-Stack outputs can be viewed via `pulumi stack output` and are shown on the stack information page on app.pulumi.com.
+To export values from a stack, use the following definition in the top-level of the entrypoint for your project:
 
-### **JavaScript code**
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 
 ```javascript
-exports.publicDns = ...
-exports.publicIp  = ...
+exports.url = resource.url;
 ```
 
-### **CLI**
-
-```bash
-$ pulumi stack output
-Current stack outputs (2):
-    OUTPUT                                           VALUE
-    publicDns                                        ec2-18-218-85-197.us-east-2.compute.amazonaws.com
-    publicIp                                         18.218.85.197
-```
-
-The values of specific properties can also be retrieved directly, which is useful when writing scripts that use these output values.
-
-```bash
-$ pulumi stack output publicIp
-18.218.85.197
-```
-
-The right-hand side of a stack export can be a regular value, an Output, or a Promise (effectively, a Promise is the same as an Input). The actual values are resolved at the end of `pulumi up`.
-
-Stack exports are effectively JSON serialized, though quotes are removed when exporting strings.
-For example, this program:
+{{% /choosable %}}
+{{% choosable language typescript %}}
 
 ```typescript
+export let url = resource.url;
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+pulumi.export("url", resource.url)
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+ctx.Export("url", resource.Url)
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+public class MyStack : Stack
+{
+    public MyStack()
+    {
+        ...
+        this.Url = resource.Url;
+    }
+
+    // 'url' is the output name. By default, it would take the property name 'Url'.
+    [Output("url")] Output<string> Url { get; set; }
+}
+ ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+From the CLI, you can then use [`pulumi stack output url`]({{< relref "/docs/reference/cli/pulumi_stack_output" >}}) to get the value and incorporate into other scripts or tools.
+
+The value of a stack export can be a regular value, an [Output]({{< relref "/docs/intro/concepts/inputs-outputs" >}}), or a `Promise` (effectively, the same as an [Input]({{< relref "/docs/intro/concepts/inputs-outputs" >}})). The actual values are resolved after `pulumi up` completes.
+
+Stack exports are effectively JSON serialized, though quotes are removed when exporting strings.
+
+For example, the following statements:
+
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
+
+```javascript
+exports.x = "hello"
+exports.o = {num: 42}
+```
+
+{{% /choosable %}}
+{{% choosable language typescript %}}
+
+```typescript
+export let x = "hello";
+export let o = {num: 42};
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
 pulumi.export("x", "hello")
 pulumi.export("o", {'num': 42})
 ```
 
-produces the following stack outputs:
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+ctx.Export("x", pulumi.String("hello"))
+ctx.Export("o", pulumi.Map(map[string]pulumi.Input{
+    "num": pulumi.Int(42),
+}))
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+class MyStack : Stack
+{
+    [Output] public Output<string> x { get; set; }
+    [Output] public Output<ImmutableDictionary<string, int>> o { get; set; }
+
+    public MyStack()
+    {
+        this.x = Output.Create("hello");
+        this.o = Output.Create(
+            new Dictionary<string, int> { { "num", 42 } }
+                .ToImmutableDictionary());
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+produce the following stack outputs:
 
 ```bash
 $ pulumi stack output x
@@ -167,45 +271,11 @@ $ pulumi stack output --json
 }
 ```
 
-> Note: If you export an actual resource, it too will be JSON serialized. This usually isn’t what you want, especially because some resources are quite large. If you only want to export the resource’s ID or name, for example, just export those properties directly.
+{{% notes "info" %}}
+Note: If you export an actual resource, it too will be JSON serialized. This usually isn’t what you want, especially because some resources are quite large. For example, if you only want to export the resource’s ID or name, just export those properties directly.
+{{% /notes %}}
 
 Stack outputs respect secret annotations and are encrypted appropriately. If a stack contains any secret values, their plaintext values will not be shown by default. Instead, they will be displayed as [secret]({{< relref "" >}}) in the CLI. Pass `--show-secrets` to `pulumi stack output` to see the plaintext value.
-
-## Import and export a stack deployment
-
-A stack can be exported to see the raw data associated with the stack. This is useful when manual changes need to be applied to the stack due to changes made in the target cloud platform that Pulumi is not aware of. The modified stack can then be imported to set the current state of the stack to the new values.
-
-{{% notes "info"%}}
-This is a powerful capability that subverts the usual way that Pulumi manages resources and ensures immutable and repeatable infrastructure deployments. Importing an incorrect stack specification could lead to orphaning of cloud resources or the inability to make future updates to the stack. Use care when using the import and export capabilities.
-{{% /notes %}}
-
-```bash
-$ pulumi stack export --file stack.json
-
-$ pulumi stack import --file stack.json
-```
-
-## Delete a stack
-
-To delete a stack with no resources, run `pulumi stack rm`. Removing the stack will remove all stack history from pulumi.com and will delete the stack configuration file `Pulumi.<stack-name>.yaml`.
-
-If a stack still has resources associated with it, they must first be deleted via `pulumi destroy`. This command uses the latest configuration values, rather than the ones that were last used when the program was deployed.
-
-To force the deletion of a stack that still contains resources-potentially orphaning them-use `pulumi stack rm --force`.
-
-## Stack tags
-
-Stacks have associated metadata in the form of tags, with each tag consisting of a name and value. A set of built-in tags are automatically assigned and updated each time a stack is updated (such as `pulumi:project`, `pulumi:runtime`, `pulumi:description`, `gitHub:owner`, `gitHub:repo`, `vcs:owner`, `vcs:repo`, and `vcs:kind`). To view a stack's tags, run [`pulumi stack tag ls`]({{< relref "/docs/reference/cli/pulumi_stack_tag_ls" >}}).
-
-{{% notes "info" %}}
-Stack tags are only supported when logged into the [Pulumi Service backend]({{< relref "/docs/intro/concepts/state" >}}).
-{{% /notes %}}
-
-Custom tags can be assigned to a stack by running [`pulumi stack tag set <name> <value>`]({{< relref "/docs/reference/cli/pulumi_stack_tag_set" >}}) and can be used to customize the grouping of stacks in the [Pulumi Console](https://app.pulumi.com). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom tag named `environment` to each stack. For example, running `pulumi stack tag set environment production` assigns a custom `environment` tag with a value of `production` to the active stack. Once you've assigned an `environment` tag to each stack, you'll be able to group by `Tag: environment` in the Pulumi Console.
-
-As a best practice, custom tags should not be prefixed with `pulumi:`, `gitHub:`, or `vcs:` to avoid conflicting with built-in tags that are assigned and updated with fresh values each time a stack is updated.
-
-Tags can be deleted by running [`pulumi stack tag rm <name>`]({{< relref "/docs/reference/cli/pulumi_stack_tag_rm" >}}).
 
 ## Stack References {#stackreferences}
 
@@ -425,3 +495,17 @@ In the above example, you construct a stack reference to a specific stack in thi
 as your current stack (i.e. when deploying the "staging" stack of the above program, you reference the "staging" stack)
 from the infra project. Once you have that resource, you can fetch the `kubeConfig` output variable with the `getOutput`
 function. From that point onwards, Pulumi understands the inter-stack dependency for scenarios like cascading updates.
+
+## Import and export a stack deployment
+
+A stack can be exported to see the raw data associated with the stack. This is useful when manual changes need to be applied to the stack due to changes made in the target cloud platform that Pulumi is not aware of. The modified stack can then be imported to set the current state of the stack to the new values.
+
+{{% notes "warning"%}}
+This is a powerful capability that subverts the usual way that Pulumi manages resources and ensures immutable and repeatable infrastructure deployments. Importing an incorrect stack specification could lead to orphaning of cloud resources or the inability to make future updates to the stack. Use care when using the import and export capabilities.
+{{% /notes %}}
+
+```bash
+$ pulumi stack export --file stack.json
+
+$ pulumi stack import --file stack.json
+```

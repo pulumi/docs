@@ -4,7 +4,7 @@ meta_desc: An in depth look at Pulumi resources and their usage.
 menu:
   intro:
     parent: concepts
-    weight: 2
+    weight: 4
 ---
 
 Resources represent the fundamental components that make up your infrastructure, such as a compute instance, storage bucket, or database instance.
