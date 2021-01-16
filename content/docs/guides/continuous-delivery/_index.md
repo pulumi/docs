@@ -96,7 +96,7 @@ sensitive information. See [Managing Secrets with Pulumi]({{< relref "managing-s
 ### Managing Complex Environments
 
 Most real-world environments are complex. Perhaps you have a networking stack that's independent from your data
-and application stacks. Pulumi [supports "stack references"]({{< relref "/docs/intro/concepts/organizing-stacks-projects" >}}), which
+and application stacks. Pulumi [supports "stack references"]({{< relref "/docs/guides/organizing-projects-stacks" >}}), which
 permit one stack to depend upon another. This facilitates continuous delivery and integration at scale.
 
 ### Using Branches for Environments

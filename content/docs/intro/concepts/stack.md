@@ -279,7 +279,7 @@ Stack outputs respect secret annotations and are encrypted appropriately. If a s
 
 ## Stack References {#stackreferences}
 
-Stack references allow you to access the outputs of one stack from another stack. [Inter-Stack Dependencies]({{< relref "organizing-stacks-projects#inter-stack-dependencies" >}}) allow one stack to reference the outputs of another stack.
+Stack references allow you to access the outputs of one stack from another stack. Inter-Stack Dependencies allow one stack to reference the outputs of another stack.
 
 To reference values from another stack, create an instance of the `StackReference` type using the fully qualified name of the stack as an input, and then read exported stack outputs by their name:
 

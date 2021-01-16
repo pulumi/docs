@@ -330,7 +330,7 @@ Lastly, it's possible to use Pulumi stacks to actually break apart your cloud re
 independently deployable pieces. This allows teams to leverage features like RBAC. For instance, it's common for the
 DevOps team to manage the physical cloud resources like queues, topics, and buckets, while the development team
 authors and manages the serverless functions attached to them. For more information on this idea, see
-[Organizing Projects and Stacks]({{< relref "/docs/intro/concepts/organizing-stacks-projects" >}})
+[Organizing Projects and Stacks]({{< relref "/docs/guides/organizing-projects-stacks" >}})
 
 ## Easy Lambda Log Consumption
 
