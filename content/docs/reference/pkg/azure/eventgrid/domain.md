@@ -127,7 +127,7 @@ const exampleDomain = new azure.eventgrid.Domain("exampleDomain", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/eventgrid/#pulumi_azure.eventgrid.Domain">Domain</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">input_mapping_default_values</span><span class="p">:</span> <span class="nx">Optional[DomainInputMappingDefaultValuesArgs]</span> = None<span class="p">, </span><span class="nx">input_mapping_fields</span><span class="p">:</span> <span class="nx">Optional[DomainInputMappingFieldsArgs]</span> = None<span class="p">, </span><span class="nx">input_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/eventgrid/#pulumi_azure.eventgrid.Domain">Domain</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">inbound_ip_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainInboundIpRuleArgs]]</span> = None<span class="p">, </span><span class="nx">input_mapping_default_values</span><span class="p">:</span> <span class="nx">Optional[DomainInputMappingDefaultValuesArgs]</span> = None<span class="p">, </span><span class="nx">input_mapping_fields</span><span class="p">:</span> <span class="nx">Optional[DomainInputMappingFieldsArgs]</span> = None<span class="p">, </span><span class="nx">input_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -310,6 +310,16 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="inboundiprules_csharp">
+<a href="#inboundiprules_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Ip<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domaininboundiprule">List&lt;Domain<wbr>Inbound<wbr>Ip<wbr>Rule<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `inbound_ip_rule` blocks as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="inputmappingdefaultvalues_csharp">
 <a href="#inputmappingdefaultvalues_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Mapping<wbr>Default<wbr>Values</a>
 </span>
@@ -360,6 +370,16 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="publicnetworkaccessenabled_csharp">
+<a href="#publicnetworkaccessenabled_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not public network access is allowed for this server. Defaults to `true`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -383,6 +403,16 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the EventGrid Domain exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inboundiprules_go">
+<a href="#inboundiprules_go" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Ip<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domaininboundiprule">[]Domain<wbr>Inbound<wbr>Ip<wbr>Rule</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `inbound_ip_rule` blocks as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -436,6 +466,16 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="publicnetworkaccessenabled_go">
+<a href="#publicnetworkaccessenabled_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not public network access is allowed for this server. Defaults to `true`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -459,6 +499,16 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the EventGrid Domain exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inboundiprules_nodejs">
+<a href="#inboundiprules_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Ip<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domaininboundiprule">Domain<wbr>Inbound<wbr>Ip<wbr>Rule[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `inbound_ip_rule` blocks as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -512,6 +562,16 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="publicnetworkaccessenabled_nodejs">
+<a href="#publicnetworkaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether or not public network access is allowed for this server. Defaults to `true`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -535,6 +595,16 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the EventGrid Domain exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inbound_ip_rules_python">
+<a href="#inbound_ip_rules_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>ip_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domaininboundiprule">Sequence[Domain<wbr>Inbound<wbr>Ip<wbr>Rule<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `inbound_ip_rule` blocks as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -585,6 +655,16 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the EventGrid Domain resource. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="public_network_access_enabled_python">
+<a href="#public_network_access_enabled_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not public network access is allowed for this server. Defaults to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -799,7 +879,7 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input_mapping_default_values</span><span class="p">:</span> <span class="nx">Optional[DomainInputMappingDefaultValuesArgs]</span> = None<span class="p">, </span><span class="nx">input_mapping_fields</span><span class="p">:</span> <span class="nx">Optional[DomainInputMappingFieldsArgs]</span> = None<span class="p">, </span><span class="nx">input_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Domain</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inbound_ip_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainInboundIpRuleArgs]]</span> = None<span class="p">, </span><span class="nx">input_mapping_default_values</span><span class="p">:</span> <span class="nx">Optional[DomainInputMappingDefaultValuesArgs]</span> = None<span class="p">, </span><span class="nx">input_mapping_fields</span><span class="p">:</span> <span class="nx">Optional[DomainInputMappingFieldsArgs]</span> = None<span class="p">, </span><span class="nx">input_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Domain</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -924,6 +1004,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_inboundiprules_csharp">
+<a href="#state_inboundiprules_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Ip<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domaininboundiprule">List&lt;Domain<wbr>Inbound<wbr>Ip<wbr>Rule<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `inbound_ip_rule` blocks as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_inputmappingdefaultvalues_csharp">
 <a href="#state_inputmappingdefaultvalues_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Mapping<wbr>Default<wbr>Values</a>
 </span>
@@ -984,6 +1074,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_publicnetworkaccessenabled_csharp">
+<a href="#state_publicnetworkaccessenabled_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not public network access is allowed for this server. Defaults to `true`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -1027,6 +1127,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Endpoint associated with the EventGrid Domain.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_inboundiprules_go">
+<a href="#state_inboundiprules_go" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Ip<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domaininboundiprule">[]Domain<wbr>Inbound<wbr>Ip<wbr>Rule</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `inbound_ip_rule` blocks as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1090,6 +1200,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_publicnetworkaccessenabled_go">
+<a href="#state_publicnetworkaccessenabled_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not public network access is allowed for this server. Defaults to `true`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -1133,6 +1253,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Endpoint associated with the EventGrid Domain.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_inboundiprules_nodejs">
+<a href="#state_inboundiprules_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Ip<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domaininboundiprule">Domain<wbr>Inbound<wbr>Ip<wbr>Rule[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `inbound_ip_rule` blocks as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1196,6 +1326,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_publicnetworkaccessenabled_nodejs">
+<a href="#state_publicnetworkaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether or not public network access is allowed for this server. Defaults to `true`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -1239,6 +1379,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Endpoint associated with the EventGrid Domain.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_inbound_ip_rules_python">
+<a href="#state_inbound_ip_rules_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>ip_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domaininboundiprule">Sequence[Domain<wbr>Inbound<wbr>Ip<wbr>Rule<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `inbound_ip_rule` blocks as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1302,6 +1452,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_public_network_access_enabled_python">
+<a href="#state_public_network_access_enabled_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not public network access is allowed for this server. Defaults to `true`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
@@ -1341,6 +1501,124 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
+<h4 id="domaininboundiprule">Domain<wbr>Inbound<wbr>Ip<wbr>Rule</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DomainInboundIpRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DomainInboundIpRule">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#DomainInboundIpRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#DomainInboundIpRuleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Inputs.DomainInboundIpRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Outputs.DomainInboundIpRule.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ipmask_csharp">
+<a href="#ipmask_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ip mask (CIDR) to match on.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action to take when the rule is matched. Possible values are `Allow`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ipmask_go">
+<a href="#ipmask_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ip mask (CIDR) to match on.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action to take when the rule is matched. Possible values are `Allow`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ipmask_nodejs">
+<a href="#ipmask_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ip mask (CIDR) to match on.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action to take when the rule is matched. Possible values are `Allow`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ip_mask_python">
+<a href="#ip_mask_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ip mask (CIDR) to match on.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The action to take when the rule is matched. Possible values are `Allow`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="domaininputmappingdefaultvalues">Domain<wbr>Input<wbr>Mapping<wbr>Default<wbr>Values</h4>
 {{% choosable language nodejs %}}

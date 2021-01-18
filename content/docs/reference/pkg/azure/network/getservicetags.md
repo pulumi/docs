@@ -33,7 +33,7 @@ class MyStack : Stack
             Service = "AzureKeyVault",
             LocationFilter = "northeurope",
         }));
-        this.AddressPrefixes = data.Azurerm_service_tags.Example.Address_prefixes;
+        this.AddressPrefixes = example.Apply(example => example.AddressPrefixes);
     }
 
     [Output("addressPrefixes")]
@@ -55,7 +55,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := "northeurope"
-		_, err := network.GetServiceTags(ctx, &network.GetServiceTagsArgs{
+		example, err := network.GetServiceTags(ctx, &network.GetServiceTagsArgs{
 			Location:       "westcentralus",
 			Service:        "AzureKeyVault",
 			LocationFilter: &opt0,
@@ -63,7 +63,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		ctx.Export("addressPrefixes", data.Azurerm_service_tags.Example.Address_prefixes)
+		ctx.Export("addressPrefixes", example.AddressPrefixes)
 		return nil
 	})
 }
@@ -79,7 +79,7 @@ import pulumi_azure as azure
 example = azure.network.get_service_tags(location="westcentralus",
     service="AzureKeyVault",
     location_filter="northeurope")
-pulumi.export("addressPrefixes", data["azurerm_service_tags"]["example"]["address_prefixes"])
+pulumi.export("addressPrefixes", example.address_prefixes)
 ```
 
 {{% /example %}}
@@ -95,7 +95,7 @@ const example = azure.network.getServiceTags({
     service: "AzureKeyVault",
     locationFilter: "northeurope",
 });
-export const addressPrefixes = data.azurerm_service_tags.example.address_prefixes;
+export const addressPrefixes = example.then(example => example.addressPrefixes);
 ```
 
 {{% /example %}}

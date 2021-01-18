@@ -320,7 +320,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The `sku` to use for the Databricks Workspace. Possible values are `standard`, `premium`, or `trial`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The `sku` to use for the Databricks Workspace. Possible values are `standard`, `premium`, or `trial`. Changing this can force a new resource to be created in some circumstances.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -396,7 +396,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The `sku` to use for the Databricks Workspace. Possible values are `standard`, `premium`, or `trial`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The `sku` to use for the Databricks Workspace. Possible values are `standard`, `premium`, or `trial`. Changing this can force a new resource to be created in some circumstances.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -472,7 +472,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The `sku` to use for the Databricks Workspace. Possible values are `standard`, `premium`, or `trial`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The `sku` to use for the Databricks Workspace. Possible values are `standard`, `premium`, or `trial`. Changing this can force a new resource to be created in some circumstances.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -548,7 +548,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The `sku` to use for the Databricks Workspace. Possible values are `standard`, `premium`, or `trial`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The `sku` to use for the Databricks Workspace. Possible values are `standard`, `premium`, or `trial`. Changing this can force a new resource to be created in some circumstances.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -984,7 +984,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The `sku` to use for the Databricks Workspace. Possible values are `standard`, `premium`, or `trial`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The `sku` to use for the Databricks Workspace. Possible values are `standard`, `premium`, or `trial`. Changing this can force a new resource to be created in some circumstances.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1090,7 +1090,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The `sku` to use for the Databricks Workspace. Possible values are `standard`, `premium`, or `trial`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The `sku` to use for the Databricks Workspace. Possible values are `standard`, `premium`, or `trial`. Changing this can force a new resource to be created in some circumstances.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1196,7 +1196,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The `sku` to use for the Databricks Workspace. Possible values are `standard`, `premium`, or `trial`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The `sku` to use for the Databricks Workspace. Possible values are `standard`, `premium`, or `trial`. Changing this can force a new resource to be created in some circumstances.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1302,7 +1302,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The `sku` to use for the Databricks Workspace. Possible values are `standard`, `premium`, or `trial`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The `sku` to use for the Databricks Workspace. Possible values are `standard`, `premium`, or `trial`. Changing this can force a new resource to be created in some circumstances.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

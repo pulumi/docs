@@ -125,6 +125,190 @@ const exampleLinkedServiceSqlServer = new azure.datafactory.LinkedServiceSqlServ
 
 {{% /example %}}
 
+### With Password In Key Vault
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "northeurope",
+        });
+        var exampleKeyVault = new Azure.KeyVault.KeyVault("exampleKeyVault", new Azure.KeyVault.KeyVaultArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            TenantId = current.Apply(current => current.TenantId),
+            SkuName = "standard",
+        });
+        var exampleFactory = new Azure.DataFactory.Factory("exampleFactory", new Azure.DataFactory.FactoryArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var exampleLinkedServiceKeyVault = new Azure.DataFactory.LinkedServiceKeyVault("exampleLinkedServiceKeyVault", new Azure.DataFactory.LinkedServiceKeyVaultArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            DataFactoryName = exampleFactory.Name,
+            KeyVaultId = exampleKeyVault.Id,
+        });
+        var exampleLinkedServiceSqlServer = new Azure.DataFactory.LinkedServiceSqlServer("exampleLinkedServiceSqlServer", new Azure.DataFactory.LinkedServiceSqlServerArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            DataFactoryName = exampleFactory.Name,
+            ConnectionString = "Integrated Security=False;Data Source=test;Initial Catalog=test;User ID=test;",
+            KeyVaultPassword = new Azure.DataFactory.Inputs.LinkedServiceSqlServerKeyVaultPasswordArgs
+            {
+                LinkedServiceName = exampleLinkedServiceKeyVault.Name,
+                SecretName = "secret",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datafactory"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		current, err := core.GetClientConfig(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("northeurope"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleKeyVault, err := keyvault.NewKeyVault(ctx, "exampleKeyVault", &keyvault.KeyVaultArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			TenantId:          pulumi.String(current.TenantId),
+			SkuName:           pulumi.String("standard"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleFactory, err := datafactory.NewFactory(ctx, "exampleFactory", &datafactory.FactoryArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		exampleLinkedServiceKeyVault, err := datafactory.NewLinkedServiceKeyVault(ctx, "exampleLinkedServiceKeyVault", &datafactory.LinkedServiceKeyVaultArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			DataFactoryName:   exampleFactory.Name,
+			KeyVaultId:        exampleKeyVault.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = datafactory.NewLinkedServiceSqlServer(ctx, "exampleLinkedServiceSqlServer", &datafactory.LinkedServiceSqlServerArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			DataFactoryName:   exampleFactory.Name,
+			ConnectionString:  pulumi.String("Integrated Security=False;Data Source=test;Initial Catalog=test;User ID=test;"),
+			KeyVaultPassword: &datafactory.LinkedServiceSqlServerKeyVaultPasswordArgs{
+				LinkedServiceName: exampleLinkedServiceKeyVault.Name,
+				SecretName:        pulumi.String("secret"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+current = azure.core.get_client_config()
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="northeurope")
+example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    tenant_id=current.tenant_id,
+    sku_name="standard")
+example_factory = azure.datafactory.Factory("exampleFactory",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_linked_service_key_vault = azure.datafactory.LinkedServiceKeyVault("exampleLinkedServiceKeyVault",
+    resource_group_name=example_resource_group.name,
+    data_factory_name=example_factory.name,
+    key_vault_id=example_key_vault.id)
+example_linked_service_sql_server = azure.datafactory.LinkedServiceSqlServer("exampleLinkedServiceSqlServer",
+    resource_group_name=example_resource_group.name,
+    data_factory_name=example_factory.name,
+    connection_string="Integrated Security=False;Data Source=test;Initial Catalog=test;User ID=test;",
+    key_vault_password=azure.datafactory.LinkedServiceSqlServerKeyVaultPasswordArgs(
+        linked_service_name=example_linked_service_key_vault.name,
+        secret_name="secret",
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const current = azure.core.getClientConfig({});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "northeurope"});
+const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    tenantId: current.then(current => current.tenantId),
+    skuName: "standard",
+});
+const exampleFactory = new azure.datafactory.Factory("exampleFactory", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleLinkedServiceKeyVault = new azure.datafactory.LinkedServiceKeyVault("exampleLinkedServiceKeyVault", {
+    resourceGroupName: exampleResourceGroup.name,
+    dataFactoryName: exampleFactory.name,
+    keyVaultId: exampleKeyVault.id,
+});
+const exampleLinkedServiceSqlServer = new azure.datafactory.LinkedServiceSqlServer("exampleLinkedServiceSqlServer", {
+    resourceGroupName: exampleResourceGroup.name,
+    dataFactoryName: exampleFactory.name,
+    connectionString: "Integrated Security=False;Data Source=test;Initial Catalog=test;User ID=test;",
+    keyVaultPassword: {
+        linkedServiceName: exampleLinkedServiceKeyVault.name,
+        secretName: "secret",
+    },
+});
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 
@@ -137,7 +321,7 @@ const exampleLinkedServiceSqlServer = new azure.datafactory.LinkedServiceSqlServ
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/datafactory/#pulumi_azure.datafactory.LinkedServiceSqlServer">LinkedServiceSqlServer</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/datafactory/#pulumi_azure.datafactory.LinkedServiceSqlServer">LinkedServiceSqlServer</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_vault_password</span><span class="p">:</span> <span class="nx">Optional[LinkedServiceSqlServerKeyVaultPasswordArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -380,6 +564,16 @@ The LinkedServiceSqlServer resource accepts the following [input]({{< relref "/d
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="keyvaultpassword_csharp">
+<a href="#keyvaultpassword_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicesqlserverkeyvaultpassword">Linked<wbr>Service<wbr>Sql<wbr>Server<wbr>Key<wbr>Vault<wbr>Password<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_password` block as defined below. Use this argument to store SQL Server password in an existing Key Vault. It needs an existing Key Vault Data Factory Linked Service.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -473,6 +667,16 @@ The LinkedServiceSqlServer resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service SQL Server.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultpassword_go">
+<a href="#keyvaultpassword_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicesqlserverkeyvaultpassword">Linked<wbr>Service<wbr>Sql<wbr>Server<wbr>Key<wbr>Vault<wbr>Password</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_password` block as defined below. Use this argument to store SQL Server password in an existing Key Vault. It needs an existing Key Vault Data Factory Linked Service.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -572,6 +776,16 @@ The LinkedServiceSqlServer resource accepts the following [input]({{< relref "/d
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="keyvaultpassword_nodejs">
+<a href="#keyvaultpassword_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicesqlserverkeyvaultpassword">Linked<wbr>Service<wbr>Sql<wbr>Server<wbr>Key<wbr>Vault<wbr>Password</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_password` block as defined below. Use this argument to store SQL Server password in an existing Key Vault. It needs an existing Key Vault Data Factory Linked Service.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -665,6 +879,16 @@ The LinkedServiceSqlServer resource accepts the following [input]({{< relref "/d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service SQL Server.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_vault_password_python">
+<a href="#key_vault_password_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicesqlserverkeyvaultpassword">Linked<wbr>Service<wbr>Sql<wbr>Server<wbr>Key<wbr>Vault<wbr>Password<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_password` block as defined below. Use this argument to store SQL Server password in an existing Key Vault. It needs an existing Key Vault Data Factory Linked Service.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -769,7 +993,7 @@ Get an existing LinkedServiceSqlServer resource's state with the given name, ID,
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> LinkedServiceSqlServer</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_vault_password</span><span class="p">:</span> <span class="nx">Optional[LinkedServiceSqlServerKeyVaultPasswordArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> LinkedServiceSqlServer</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -944,6 +1168,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_keyvaultpassword_csharp">
+<a href="#state_keyvaultpassword_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicesqlserverkeyvaultpassword">Linked<wbr>Service<wbr>Sql<wbr>Server<wbr>Key<wbr>Vault<wbr>Password<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_password` block as defined below. Use this argument to store SQL Server password in an existing Key Vault. It needs an existing Key Vault Data Factory Linked Service.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -1037,6 +1271,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service SQL Server.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_keyvaultpassword_go">
+<a href="#state_keyvaultpassword_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicesqlserverkeyvaultpassword">Linked<wbr>Service<wbr>Sql<wbr>Server<wbr>Key<wbr>Vault<wbr>Password</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_password` block as defined below. Use this argument to store SQL Server password in an existing Key Vault. It needs an existing Key Vault Data Factory Linked Service.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1136,6 +1380,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_keyvaultpassword_nodejs">
+<a href="#state_keyvaultpassword_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicesqlserverkeyvaultpassword">Linked<wbr>Service<wbr>Sql<wbr>Server<wbr>Key<wbr>Vault<wbr>Password</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_password` block as defined below. Use this argument to store SQL Server password in an existing Key Vault. It needs an existing Key Vault Data Factory Linked Service.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1232,6 +1486,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_key_vault_password_python">
+<a href="#state_key_vault_password_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicesqlserverkeyvaultpassword">Linked<wbr>Service<wbr>Sql<wbr>Server<wbr>Key<wbr>Vault<wbr>Password<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_password` block as defined below. Use this argument to store SQL Server password in an existing Key Vault. It needs an existing Key Vault Data Factory Linked Service.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1267,6 +1531,128 @@ The following state arguments are supported:
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="linkedservicesqlserverkeyvaultpassword">Linked<wbr>Service<wbr>Sql<wbr>Server<wbr>Key<wbr>Vault<wbr>Password</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinkedServiceSqlServerKeyVaultPassword">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LinkedServiceSqlServerKeyVaultPassword">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datafactory?tab=doc#LinkedServiceSqlServerKeyVaultPasswordArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datafactory?tab=doc#LinkedServiceSqlServerKeyVaultPasswordOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DataFactory.Inputs.LinkedServiceSqlServerKeyVaultPasswordArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DataFactory.Outputs.LinkedServiceSqlServerKeyVaultPassword.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="linkedservicename_csharp">
+<a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of an existing Key Vault Data Factory Linked Service.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="secretname_csharp">
+<a href="#secretname_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the secret name in Azure Key Vault that stores SQL Server password.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="linkedservicename_go">
+<a href="#linkedservicename_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of an existing Key Vault Data Factory Linked Service.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="secretname_go">
+<a href="#secretname_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the secret name in Azure Key Vault that stores SQL Server password.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="linkedservicename_nodejs">
+<a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of an existing Key Vault Data Factory Linked Service.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="secretname_nodejs">
+<a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the secret name in Azure Key Vault that stores SQL Server password.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="linked_service_name_python">
+<a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of an existing Key Vault Data Factory Linked Service.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="secret_name_python">
+<a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the secret name in Azure Key Vault that stores SQL Server password.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 ## Import
 
 
