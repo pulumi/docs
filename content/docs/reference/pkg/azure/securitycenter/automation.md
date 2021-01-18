@@ -38,6 +38,22 @@ class MyStack : Stack
             Sku = "Standard",
             Capacity = 2,
         });
+        var exampleEventHub = new Azure.EventHub.EventHub("exampleEventHub", new Azure.EventHub.EventHubArgs
+        {
+            NamespaceName = exampleEventHubNamespace.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            PartitionCount = 2,
+            MessageRetention = 2,
+        });
+        var exampleAuthorizationRule = new Azure.EventHub.AuthorizationRule("exampleAuthorizationRule", new Azure.EventHub.AuthorizationRuleArgs
+        {
+            NamespaceName = exampleEventHubNamespace.Name,
+            EventhubName = exampleEventHub.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Listen = true,
+            Send = false,
+            Manage = false,
+        });
         var exampleAutomation = new Azure.SecurityCenter.Automation("exampleAutomation", new Azure.SecurityCenter.AutomationArgs
         {
             Location = exampleResourceGroup.Location,
@@ -47,8 +63,8 @@ class MyStack : Stack
                 new Azure.SecurityCenter.Inputs.AutomationActionArgs
                 {
                     Type = "EventHub",
-                    ResourceId = exampleEventHubNamespace.Id,
-                    ConnectionString = exampleEventHubNamespace.DefaultPrimaryConnectionString,
+                    ResourceId = exampleEventHub.Id,
+                    ConnectionString = exampleAuthorizationRule.PrimaryConnectionString,
                 },
             },
             Sources = 
@@ -120,14 +136,34 @@ func main() {
 		if err != nil {
 			return err
 		}
+		exampleEventHub, err := eventhub.NewEventHub(ctx, "exampleEventHub", &eventhub.EventHubArgs{
+			NamespaceName:     exampleEventHubNamespace.Name,
+			ResourceGroupName: exampleResourceGroup.Name,
+			PartitionCount:    pulumi.Int(2),
+			MessageRetention:  pulumi.Int(2),
+		})
+		if err != nil {
+			return err
+		}
+		exampleAuthorizationRule, err := eventhub.NewAuthorizationRule(ctx, "exampleAuthorizationRule", &eventhub.AuthorizationRuleArgs{
+			NamespaceName:     exampleEventHubNamespace.Name,
+			EventhubName:      exampleEventHub.Name,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Listen:            pulumi.Bool(true),
+			Send:              pulumi.Bool(false),
+			Manage:            pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
 		_, err = securitycenter.NewAutomation(ctx, "exampleAutomation", &securitycenter.AutomationArgs{
 			Location:          exampleResourceGroup.Location,
 			ResourceGroupName: exampleResourceGroup.Name,
 			Actions: securitycenter.AutomationActionArray{
 				&securitycenter.AutomationActionArgs{
 					Type:             pulumi.String("EventHub"),
-					ResourceId:       exampleEventHubNamespace.ID(),
-					ConnectionString: exampleEventHubNamespace.DefaultPrimaryConnectionString,
+					ResourceId:       exampleEventHub.ID(),
+					ConnectionString: exampleAuthorizationRule.PrimaryConnectionString,
 				},
 			},
 			Sources: securitycenter.AutomationSourceArray{
@@ -173,13 +209,25 @@ example_event_hub_namespace = azure.eventhub.EventHubNamespace("exampleEventHubN
     resource_group_name=example_resource_group.name,
     sku="Standard",
     capacity=2)
+example_event_hub = azure.eventhub.EventHub("exampleEventHub",
+    namespace_name=example_event_hub_namespace.name,
+    resource_group_name=example_resource_group.name,
+    partition_count=2,
+    message_retention=2)
+example_authorization_rule = azure.eventhub.AuthorizationRule("exampleAuthorizationRule",
+    namespace_name=example_event_hub_namespace.name,
+    eventhub_name=example_event_hub.name,
+    resource_group_name=example_resource_group.name,
+    listen=True,
+    send=False,
+    manage=False)
 example_automation = azure.securitycenter.Automation("exampleAutomation",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
     actions=[azure.securitycenter.AutomationActionArgs(
         type="EventHub",
-        resource_id=example_event_hub_namespace.id,
-        connection_string=example_event_hub_namespace.default_primary_connection_string,
+        resource_id=example_event_hub.id,
+        connection_string=example_authorization_rule.primary_connection_string,
     )],
     sources=[azure.securitycenter.AutomationSourceArgs(
         event_source="Alerts",
@@ -211,13 +259,27 @@ const exampleEventHubNamespace = new azure.eventhub.EventHubNamespace("exampleEv
     sku: "Standard",
     capacity: 2,
 });
+const exampleEventHub = new azure.eventhub.EventHub("exampleEventHub", {
+    namespaceName: exampleEventHubNamespace.name,
+    resourceGroupName: exampleResourceGroup.name,
+    partitionCount: 2,
+    messageRetention: 2,
+});
+const exampleAuthorizationRule = new azure.eventhub.AuthorizationRule("exampleAuthorizationRule", {
+    namespaceName: exampleEventHubNamespace.name,
+    eventhubName: exampleEventHub.name,
+    resourceGroupName: exampleResourceGroup.name,
+    listen: true,
+    send: false,
+    manage: false,
+});
 const exampleAutomation = new azure.securitycenter.Automation("exampleAutomation", {
     location: exampleResourceGroup.location,
     resourceGroupName: exampleResourceGroup.name,
     actions: [{
         type: "EventHub",
-        resourceId: exampleEventHubNamespace.id,
-        connectionString: exampleEventHubNamespace.defaultPrimaryConnectionString,
+        resourceId: exampleEventHub.id,
+        connectionString: exampleAuthorizationRule.primaryConnectionString,
     }],
     sources: [{
         eventSource: "Alerts",
@@ -1606,7 +1668,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of data that will trigger this automation. Must be one of `Alerts`, `Assessments` or `SubAssessments`. Note. assessments are also referred to as recommendations
+    <dd>{{% md %}}Type of data that will trigger this automation. Must be one of `Alerts`, `Assessments`, `SecureScoreControls`, `SecureScores` or `SubAssessments`. Note. assessments are also referred to as recommendations
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1632,7 +1694,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of data that will trigger this automation. Must be one of `Alerts`, `Assessments` or `SubAssessments`. Note. assessments are also referred to as recommendations
+    <dd>{{% md %}}Type of data that will trigger this automation. Must be one of `Alerts`, `Assessments`, `SecureScoreControls`, `SecureScores` or `SubAssessments`. Note. assessments are also referred to as recommendations
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1658,7 +1720,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of data that will trigger this automation. Must be one of `Alerts`, `Assessments` or `SubAssessments`. Note. assessments are also referred to as recommendations
+    <dd>{{% md %}}Type of data that will trigger this automation. Must be one of `Alerts`, `Assessments`, `SecureScoreControls`, `SecureScores` or `SubAssessments`. Note. assessments are also referred to as recommendations
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1684,7 +1746,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of data that will trigger this automation. Must be one of `Alerts`, `Assessments` or `SubAssessments`. Note. assessments are also referred to as recommendations
+    <dd>{{% md %}}Type of data that will trigger this automation. Must be one of `Alerts`, `Assessments`, `SecureScoreControls`, `SecureScores` or `SubAssessments`. Note. assessments are also referred to as recommendations
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

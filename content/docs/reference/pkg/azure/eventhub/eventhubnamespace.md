@@ -2219,6 +2219,16 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="trustedserviceaccessenabled_csharp">
+<a href="#trustedserviceaccessenabled_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Service<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether Trusted Microsoft Services are allowed to bypass firewall.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="virtualnetworkrules_csharp">
 <a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
 </span>
@@ -2252,6 +2262,16 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
         <span class="property-type"><a href="#eventhubnamespacenetworkrulesetsiprule">[]Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets<wbr>Ip<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_rule` blocks as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trustedserviceaccessenabled_go">
+<a href="#trustedserviceaccessenabled_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Service<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether Trusted Microsoft Services are allowed to bypass firewall.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2291,6 +2311,16 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="trustedserviceaccessenabled_nodejs">
+<a href="#trustedserviceaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Service<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether Trusted Microsoft Services are allowed to bypass firewall.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="virtualnetworkrules_nodejs">
 <a href="#virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
 </span>
@@ -2324,6 +2354,16 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
         <span class="property-type"><a href="#eventhubnamespacenetworkrulesetsiprule">Sequence[Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets<wbr>Ip<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_rule` blocks as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trusted_service_access_enabled_python">
+<a href="#trusted_service_access_enabled_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>service_<wbr>access_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether Trusted Microsoft Services are allowed to bypass firewall.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
