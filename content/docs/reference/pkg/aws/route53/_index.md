@@ -15,6 +15,7 @@ Explore the resources and functions of the route53 module in the AWS package.
     <li><a href="healthcheck" title="HealthCheck"><span class="symbol resource"></span>HealthCheck</a></li>
     <li><a href="querylog" title="QueryLog"><span class="symbol resource"></span>QueryLog</a></li>
     <li><a href="record" title="Record"><span class="symbol resource"></span>Record</a></li>
+    <li><a href="resolverdnssecconfig" title="ResolverDnsSecConfig"><span class="symbol resource"></span>ResolverDnsSecConfig</a></li>
     <li><a href="resolverendpoint" title="ResolverEndpoint"><span class="symbol resource"></span>ResolverEndpoint</a></li>
     <li><a href="resolverquerylogconfig" title="ResolverQueryLogConfig"><span class="symbol resource"></span>ResolverQueryLogConfig</a></li>
     <li><a href="resolverquerylogconfigassociation" title="ResolverQueryLogConfigAssociation"><span class="symbol resource"></span>ResolverQueryLogConfigAssociation</a></li>
@@ -43,7 +44,7 @@ Explore the resources and functions of the route53 module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.23.0</dd>
+	<dd>3.24.0</dd>
 </dl>
 
 

@@ -11,6 +11,7 @@ Explore the resources and functions of the cloudwatch module in the AWS package.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="compositealarm" title="CompositeAlarm"><span class="symbol resource"></span>CompositeAlarm</a></li>
     <li><a href="dashboard" title="Dashboard"><span class="symbol resource"></span>Dashboard</a></li>
     <li><a href="eventbus" title="EventBus"><span class="symbol resource"></span>EventBus</a></li>
     <li><a href="eventpermission" title="EventPermission"><span class="symbol resource"></span>EventPermission</a></li>
@@ -40,7 +41,7 @@ Explore the resources and functions of the cloudwatch module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.23.0</dd>
+	<dd>3.24.0</dd>
 </dl>
 
 

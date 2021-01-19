@@ -80,6 +80,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="glue/" title="glue"><span class="symbol module"></span>glue</a></li>
     <li><a href="guardduty/" title="guardduty"><span class="symbol module"></span>guardduty</a></li>
     <li><a href="iam/" title="iam"><span class="symbol module"></span>iam</a></li>
+    <li><a href="identitystore/" title="identitystore"><span class="symbol module"></span>identitystore</a></li>
     <li><a href="imagebuilder/" title="imagebuilder"><span class="symbol module"></span>imagebuilder</a></li>
     <li><a href="inspector/" title="inspector"><span class="symbol module"></span>inspector</a></li>
     <li><a href="iot/" title="iot"><span class="symbol module"></span>iot</a></li>
@@ -175,7 +176,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.23.0</dd>
+	<dd>3.24.0</dd>
 </dl>
 
 

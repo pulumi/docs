@@ -3738,7 +3738,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of seconds until a newly launched instance is configured and ready to use. Default behavior is to use the Auto Scaling Group's health check grace period.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minhealthypercentage_csharp">
@@ -3763,7 +3764,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of seconds until a newly launched instance is configured and ready to use. Default behavior is to use the Auto Scaling Group's health check grace period.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minhealthypercentage_go">
@@ -3788,7 +3790,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of seconds until a newly launched instance is configured and ready to use. Default behavior is to use the Auto Scaling Group's health check grace period.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minhealthypercentage_nodejs">
@@ -3813,7 +3816,8 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of seconds until a newly launched instance is configured and ready to use. Default behavior is to use the Auto Scaling Group's health check grace period.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="min_healthy_percentage_python">

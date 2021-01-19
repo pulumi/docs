@@ -3,7 +3,7 @@ title: "Module s3outposts"
 title_tag: "Module s3outposts | Package @pulumi/aws | Node.js SDK"
 linktitle: "s3outposts"
 meta_desc: "Explore members of the s3outposts module in the @pulumi/aws package."
-git_sha: "6c9e892c504e5708adb0347579e949dcb7a63d45"
+git_sha: "a9e42c93f0706bcf9d8cdca4801c68e27a01c41d"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Endpoint" data-link-title="Endpoint">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3outposts/endpoint.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/s3outposts/endpoint.ts#L32">
         Resource <strong>Endpoint</strong>
     </a>
 </h3>
@@ -61,7 +61,7 @@ S3 Outposts Endpoints can be imported using Amazon Resource Name (ARN), EC2 Secu
 ```
 
 <h4 class="pdoc-member-header" id="Endpoint-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3outposts/endpoint.ts#L87"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/s3outposts/endpoint.ts#L87"> <b>constructor</b></a>
 </h4>
 
 
@@ -75,7 +75,7 @@ Create a Endpoint resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Endpoint-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3outposts/endpoint.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/s3outposts/endpoint.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -86,14 +86,14 @@ Get an existing Endpoint resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Endpoint-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3outposts/endpoint.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/s3outposts/endpoint.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Endpoint-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3outposts/endpoint.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/s3outposts/endpoint.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -104,7 +104,7 @@ Returns true if the given object is an instance of Endpoint.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Endpoint-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3outposts/endpoint.ts#L63">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/s3outposts/endpoint.ts#L63">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -112,7 +112,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Amazon Resource Name (ARN) of the endpoint.
 
 <h4 class="pdoc-member-header" id="Endpoint-cidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3outposts/endpoint.ts#L67">property <b>cidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/s3outposts/endpoint.ts#L67">property <b>cidrBlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cidrBlock: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -120,7 +120,7 @@ Amazon Resource Name (ARN) of the endpoint.
 VPC CIDR block of the endpoint.
 
 <h4 class="pdoc-member-header" id="Endpoint-creationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3outposts/endpoint.ts#L71">property <b>creationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/s3outposts/endpoint.ts#L71">property <b>creationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>creationTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -128,7 +128,7 @@ VPC CIDR block of the endpoint.
 UTC creation time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
 
 <h4 class="pdoc-member-header" id="Endpoint-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3outposts/endpoint.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/s3outposts/endpoint.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -137,7 +137,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Endpoint-networkInterfaces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3outposts/endpoint.ts#L75">property <b>networkInterfaces</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/s3outposts/endpoint.ts#L75">property <b>networkInterfaces</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkInterfaces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EndpointNetworkInterface'>EndpointNetworkInterface</a>[]&gt;;</code></pre>
@@ -145,7 +145,7 @@ deployments and may be missing (undefined) during planning phases.
 Set of nested attributes for associated Elastic Network Interfaces (ENIs).
 
 <h4 class="pdoc-member-header" id="Endpoint-outpostId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3outposts/endpoint.ts#L79">property <b>outpostId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/s3outposts/endpoint.ts#L79">property <b>outpostId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>outpostId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -153,7 +153,7 @@ Set of nested attributes for associated Elastic Network Interfaces (ENIs).
 Identifier of the Outpost to contain this endpoint.
 
 <h4 class="pdoc-member-header" id="Endpoint-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3outposts/endpoint.ts#L83">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/s3outposts/endpoint.ts#L83">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -161,7 +161,7 @@ Identifier of the Outpost to contain this endpoint.
 Identifier of the EC2 Security Group.
 
 <h4 class="pdoc-member-header" id="Endpoint-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3outposts/endpoint.ts#L87">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/s3outposts/endpoint.ts#L87">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -169,7 +169,7 @@ Identifier of the EC2 Security Group.
 Identifier of the EC2 Subnet.
 
 <h4 class="pdoc-member-header" id="Endpoint-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3outposts/endpoint.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/s3outposts/endpoint.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -181,7 +181,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="EndpointArgs" data-link-title="EndpointArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3outposts/endpoint.ts#L175">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/s3outposts/endpoint.ts#L175">
         interface <strong>EndpointArgs</strong>
     </a>
 </h3>
@@ -191,7 +191,7 @@ deployments.
 The set of arguments for constructing a Endpoint resource.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-outpostId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3outposts/endpoint.ts#L179">property <b>outpostId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/s3outposts/endpoint.ts#L179">property <b>outpostId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outpostId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -199,7 +199,7 @@ The set of arguments for constructing a Endpoint resource.
 Identifier of the Outpost to contain this endpoint.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3outposts/endpoint.ts#L183">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/s3outposts/endpoint.ts#L183">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -207,7 +207,7 @@ Identifier of the Outpost to contain this endpoint.
 Identifier of the EC2 Security Group.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3outposts/endpoint.ts#L187">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/s3outposts/endpoint.ts#L187">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -215,7 +215,7 @@ Identifier of the EC2 Security Group.
 Identifier of the EC2 Subnet.
 
 <h3 class="pdoc-module-header" id="EndpointState" data-link-title="EndpointState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3outposts/endpoint.ts#L141">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/s3outposts/endpoint.ts#L141">
         interface <strong>EndpointState</strong>
     </a>
 </h3>
@@ -225,7 +225,7 @@ Identifier of the EC2 Subnet.
 Input properties used for looking up and filtering Endpoint resources.
 
 <h4 class="pdoc-member-header" id="EndpointState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3outposts/endpoint.ts#L145">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/s3outposts/endpoint.ts#L145">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -233,7 +233,7 @@ Input properties used for looking up and filtering Endpoint resources.
 Amazon Resource Name (ARN) of the endpoint.
 
 <h4 class="pdoc-member-header" id="EndpointState-cidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3outposts/endpoint.ts#L149">property <b>cidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/s3outposts/endpoint.ts#L149">property <b>cidrBlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidrBlock?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -241,7 +241,7 @@ Amazon Resource Name (ARN) of the endpoint.
 VPC CIDR block of the endpoint.
 
 <h4 class="pdoc-member-header" id="EndpointState-creationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3outposts/endpoint.ts#L153">property <b>creationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/s3outposts/endpoint.ts#L153">property <b>creationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creationTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -249,7 +249,7 @@ VPC CIDR block of the endpoint.
 UTC creation time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
 
 <h4 class="pdoc-member-header" id="EndpointState-networkInterfaces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3outposts/endpoint.ts#L157">property <b>networkInterfaces</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/s3outposts/endpoint.ts#L157">property <b>networkInterfaces</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointNetworkInterface'>EndpointNetworkInterface</a>&gt;[]&gt;;</code></pre>
@@ -257,7 +257,7 @@ UTC creation time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#sectio
 Set of nested attributes for associated Elastic Network Interfaces (ENIs).
 
 <h4 class="pdoc-member-header" id="EndpointState-outpostId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3outposts/endpoint.ts#L161">property <b>outpostId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/s3outposts/endpoint.ts#L161">property <b>outpostId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outpostId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -265,7 +265,7 @@ Set of nested attributes for associated Elastic Network Interfaces (ENIs).
 Identifier of the Outpost to contain this endpoint.
 
 <h4 class="pdoc-member-header" id="EndpointState-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3outposts/endpoint.ts#L165">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/s3outposts/endpoint.ts#L165">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -273,7 +273,7 @@ Identifier of the Outpost to contain this endpoint.
 Identifier of the EC2 Security Group.
 
 <h4 class="pdoc-member-header" id="EndpointState-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e892c504e5708adb0347579e949dcb7a63d45/sdk/nodejs/s3outposts/endpoint.ts#L169">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/s3outposts/endpoint.ts#L169">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
