@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/aiven | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/aiven package."
-git_sha: "afeb43fbe51ae0c73ae9b48a7815fc473040c45a"
+git_sha: "bac1f3fd60cd7d6e518806a0239bd6d0828ddf0f"
 block_external_search_index: true
 ---
 
