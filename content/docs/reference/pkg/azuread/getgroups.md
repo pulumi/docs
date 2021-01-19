@@ -114,7 +114,7 @@ const groups = pulumi.output(azuread.getGroups({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_groups(</span><span class="nx">names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">object_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetGroupsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_groups(</span><span class="nx">display_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">object_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetGroupsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -140,6 +140,15 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="displaynames_csharp">
+<a href="#displaynames_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="names_csharp">
 <a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
 </span>
@@ -147,7 +156,7 @@ The following arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The Display Names of the Azure AD Groups.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_names` and will be removed in v2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="objectids_csharp">
@@ -166,6 +175,15 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="displaynames_go">
+<a href="#displaynames_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="names_go">
 <a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
 </span>
@@ -173,7 +191,7 @@ The following arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The Display Names of the Azure AD Groups.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_names` and will be removed in v2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="objectids_go">
@@ -192,6 +210,15 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="displaynames_nodejs">
+<a href="#displaynames_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="names_nodejs">
 <a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
 </span>
@@ -199,7 +226,7 @@ The following arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Display Names of the Azure AD Groups.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_names` and will be removed in v2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="objectids_nodejs">
@@ -218,6 +245,15 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="display_names_python">
+<a href="#display_names_python" style="color: inherit; text-decoration: inherit;">display_<wbr>names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="names_python">
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span>
@@ -225,7 +261,7 @@ The following arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Display Names of the Azure AD Groups.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_names` and will be removed in v2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="object_ids_python">
@@ -253,6 +289,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="displaynames_csharp">
+<a href="#displaynames_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -261,8 +306,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="names_csharp">
 <a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
 </span>
@@ -270,7 +315,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The Display Names of the Azure AD Groups.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_names` and will be removed in v2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="objectids_csharp">
@@ -289,6 +334,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="displaynames_go">
+<a href="#displaynames_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -297,8 +351,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="names_go">
 <a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
 </span>
@@ -306,7 +360,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The Display Names of the Azure AD Groups.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_names` and will be removed in v2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="objectids_go">
@@ -325,6 +379,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="displaynames_nodejs">
+<a href="#displaynames_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -333,8 +396,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="names_nodejs">
 <a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
 </span>
@@ -342,7 +405,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Display Names of the Azure AD Groups.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_names` and will be removed in v2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="objectids_nodejs">
@@ -361,6 +424,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="display_names_python">
+<a href="#display_names_python" style="color: inherit; text-decoration: inherit;">display_<wbr>names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -369,8 +441,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="names_python">
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span>
@@ -378,7 +450,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Display Names of the Azure AD Groups.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_names` and will be removed in v2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="object_ids_python">

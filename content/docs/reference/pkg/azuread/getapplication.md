@@ -31,7 +31,7 @@ class MyStack : Stack
     {
         var example = Output.Create(AzureAD.GetApplication.InvokeAsync(new AzureAD.GetApplicationArgs
         {
-            Name = "My First AzureAD Application",
+            DisplayName = "My First AzureAD Application",
         }));
         this.AzureAdObjectId = example.Apply(example => example.Id);
     }
@@ -56,7 +56,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := "My First AzureAD Application"
 		example, err := azuread.LookupApplication(ctx, &azuread.LookupApplicationArgs{
-			Name: &opt0,
+			DisplayName: &opt0,
 		}, nil)
 		if err != nil {
 			return err
@@ -74,7 +74,7 @@ func main() {
 import pulumi
 import pulumi_azuread as azuread
 
-example = azuread.get_application(name="My First AzureAD Application")
+example = azuread.get_application(display_name="My First AzureAD Application")
 pulumi.export("azureAdObjectId", example.id)
 ```
 
@@ -87,7 +87,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azuread from "@pulumi/azuread";
 
 const example = azuread.getApplication({
-    name: "My First AzureAD Application",
+    displayName: "My First AzureAD Application",
 });
 export const azureAdObjectId = example.then(example => example.id);
 ```
@@ -108,7 +108,7 @@ export const azureAdObjectId = example.then(example => example.id);
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_application(</span><span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oauth2_permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetApplicationOauth2PermissionArgs]]</span> = None<span class="p">, </span><span class="nx">object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optional_claims</span><span class="p">:</span> <span class="nx">Optional[GetApplicationOptionalClaimsArgs]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetApplicationResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_application(</span><span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oauth2_permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetApplicationOauth2PermissionArgs]]</span> = None<span class="p">, </span><span class="nx">object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optional_claims</span><span class="p">:</span> <span class="nx">Optional[GetApplicationOptionalClaimsArgs]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetApplicationResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -146,14 +146,24 @@ The following arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="displayname_csharp">
+<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the display name of the Application within Azure Active Directory.
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Application within Azure Active Directory.
-{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the optional claim.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="oauth2permissions_csharp">
@@ -202,14 +212,24 @@ The following arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="displayname_go">
+<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the display name of the Application within Azure Active Directory.
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Application within Azure Active Directory.
-{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the optional claim.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="oauth2permissions_go">
@@ -258,14 +278,24 @@ The following arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="displayname_nodejs">
+<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the display name of the Application within Azure Active Directory.
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Application within Azure Active Directory.
-{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the optional claim.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="oauth2permissions_nodejs">
@@ -314,14 +344,24 @@ The following arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the display name of the Application within Azure Active Directory.
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Application within Azure Active Directory.
-{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the optional claim.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="oauth2_permissions_python">
@@ -399,6 +439,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="displayname_csharp">
+<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="groupmembershipclaims_csharp">
 <a href="#groupmembershipclaims_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Membership<wbr>Claims</a>
 </span>
@@ -446,8 +496,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The URL of the logout page.
 {{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -455,7 +505,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the optional claim.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="oauth2allowimplicitflow_csharp">
@@ -574,6 +624,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="displayname_go">
+<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="groupmembershipclaims_go">
 <a href="#groupmembershipclaims_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Membership<wbr>Claims</a>
 </span>
@@ -621,8 +681,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The URL of the logout page.
 {{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -630,7 +690,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the optional claim.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="oauth2allowimplicitflow_go">
@@ -749,6 +809,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="displayname_nodejs">
+<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="groupmembershipclaims_nodejs">
 <a href="#groupmembershipclaims_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Membership<wbr>Claims</a>
 </span>
@@ -796,8 +866,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The URL of the logout page.
 {{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -805,7 +875,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the optional claim.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="oauth2allowimplicitflow_nodejs">
@@ -924,6 +994,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="group_membership_claims_python">
 <a href="#group_membership_claims_python" style="color: inherit; text-decoration: inherit;">group_<wbr>membership_<wbr>claims</a>
 </span>
@@ -971,8 +1051,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The URL of the logout page.
 {{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -980,7 +1060,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the optional claim.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="oauth2_allow_implicit_flow_python">
@@ -1115,7 +1195,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
+    <dd>{{% md %}}Specifies the display name of the Application within Azure Active Directory.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1181,7 +1261,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
+    <dd>{{% md %}}Specifies the display name of the Application within Azure Active Directory.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1247,7 +1327,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
+    <dd>{{% md %}}Specifies the display name of the Application within Azure Active Directory.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1313,7 +1393,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
+    <dd>{{% md %}}Specifies the display name of the Application within Azure Active Directory.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1841,7 +1921,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Application within Azure Active Directory.
+    <dd>{{% md %}}The name of the optional claim.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1887,7 +1967,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Application within Azure Active Directory.
+    <dd>{{% md %}}The name of the optional claim.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1933,7 +2013,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Application within Azure Active Directory.
+    <dd>{{% md %}}The name of the optional claim.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1979,7 +2059,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Application within Azure Active Directory.
+    <dd>{{% md %}}The name of the optional claim.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2039,7 +2119,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Application within Azure Active Directory.
+    <dd>{{% md %}}The name of the optional claim.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2085,7 +2165,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Application within Azure Active Directory.
+    <dd>{{% md %}}The name of the optional claim.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2131,7 +2211,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Application within Azure Active Directory.
+    <dd>{{% md %}}The name of the optional claim.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2177,7 +2257,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Application within Azure Active Directory.
+    <dd>{{% md %}}The name of the optional claim.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

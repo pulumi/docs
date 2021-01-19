@@ -31,7 +31,7 @@ class MyStack : Stack
     {
         var example = Output.Create(AzureAD.GetGroup.InvokeAsync(new AzureAD.GetGroupArgs
         {
-            Name = "A-AD-Group",
+            DisplayName = "A-AD-Group",
         }));
     }
 
@@ -53,7 +53,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := "A-AD-Group"
 		_, err := azuread.LookupGroup(ctx, &azuread.LookupGroupArgs{
-			Name: &opt0,
+			DisplayName: &opt0,
 		}, nil)
 		if err != nil {
 			return err
@@ -70,7 +70,7 @@ func main() {
 import pulumi
 import pulumi_azuread as azuread
 
-example = azuread.get_group(name="A-AD-Group")
+example = azuread.get_group(display_name="A-AD-Group")
 ```
 
 {{% /example %}}
@@ -82,7 +82,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azuread from "@pulumi/azuread";
 
 const example = pulumi.output(azuread.getGroup({
-    name: "A-AD-Group",
+    displayName: "A-AD-Group",
 }, { async: true }));
 ```
 
@@ -102,7 +102,7 @@ const example = pulumi.output(azuread.getGroup({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_group(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetGroupResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_group(</span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetGroupResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -130,14 +130,23 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="displayname_csharp">
+<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The splay name of the Group within Azure Active Directory.
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Name of the AD Group we want to lookup.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in v2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="objectid_csharp">
@@ -146,7 +155,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Object ID of the AD Group within Azure Active Directory.
+    <dd>{{% md %}}Specifies the Object ID of the Group within Azure Active Directory.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -156,14 +165,23 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="displayname_go">
+<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The splay name of the Group within Azure Active Directory.
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Name of the AD Group we want to lookup.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in v2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="objectid_go">
@@ -172,7 +190,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Object ID of the AD Group within Azure Active Directory.
+    <dd>{{% md %}}Specifies the Object ID of the Group within Azure Active Directory.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -182,14 +200,23 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="displayname_nodejs">
+<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The splay name of the Group within Azure Active Directory.
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Name of the AD Group we want to lookup.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in v2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="objectid_nodejs">
@@ -198,7 +225,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Object ID of the AD Group within Azure Active Directory.
+    <dd>{{% md %}}Specifies the Object ID of the Group within Azure Active Directory.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -208,14 +235,23 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The splay name of the Group within Azure Active Directory.
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Name of the AD Group we want to lookup.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in v2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="object_id_python">
@@ -224,7 +260,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the Object ID of the AD Group within Azure Active Directory.
+    <dd>{{% md %}}Specifies the Object ID of the Group within Azure Active Directory.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -253,6 +289,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="displayname_csharp">
+<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Azure AD Group.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -271,16 +317,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Object IDs of the Azure AD Group members.
 {{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure AD Group.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in v2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="objectid_csharp">
@@ -318,6 +363,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="displayname_go">
+<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Azure AD Group.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -336,16 +391,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Object IDs of the Azure AD Group members.
 {{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure AD Group.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in v2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="objectid_go">
@@ -383,6 +437,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="displayname_nodejs">
+<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Azure AD Group.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -401,16 +465,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Object IDs of the Azure AD Group members.
 {{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure AD Group.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in v2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="objectid_nodejs">
@@ -448,6 +511,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the Azure AD Group.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -466,16 +539,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Object IDs of the Azure AD Group members.
 {{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure AD Group.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in v2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="object_id_python">
