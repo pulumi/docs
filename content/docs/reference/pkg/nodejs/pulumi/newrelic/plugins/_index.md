@@ -3,7 +3,7 @@ title: "Module plugins"
 title_tag: "Module plugins | Package @pulumi/newrelic | Node.js SDK"
 linktitle: "plugins"
 meta_desc: "Explore members of the plugins module in the @pulumi/newrelic package."
-git_sha: "e35cfffee4b841e5261f8ad57041cd4e481f124e"
+git_sha: "235ca87a183f6b0826317d0518b759e2fe0ec95f"
 block_external_search_index: true
 ---
 
@@ -45,7 +45,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AlertCondition" data-link-title="AlertCondition">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L62">
         Resource <strong>AlertCondition</strong>
     </a>
 </h3>
@@ -106,7 +106,7 @@ Alert conditions can be imported using the `id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="AlertCondition-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L133"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L133"> <b>constructor</b></a>
 </h4>
 
 
@@ -120,7 +120,7 @@ Create a AlertCondition resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AlertCondition-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L72">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L72">method <b>get</b></a>
 </h4>
 
 
@@ -131,14 +131,14 @@ Get an existing AlertCondition resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AlertCondition-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L62">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L62">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AlertCondition-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L83">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L83">method <b>isInstance</b></a>
 </h4>
 
 
@@ -149,7 +149,7 @@ Returns true if the given object is an instance of AlertCondition.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AlertCondition-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L93">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L93">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -157,7 +157,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Whether or not this condition is enabled.
 
 <h4 class="pdoc-member-header" id="AlertCondition-entities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L97">property <b>entities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L97">property <b>entities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>entities: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[]&gt;;</code></pre>
@@ -165,7 +165,7 @@ Whether or not this condition is enabled.
 The plugin component IDs to target.
 
 <h4 class="pdoc-member-header" id="AlertCondition-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L62">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L62">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -174,7 +174,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AlertCondition-metric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L101">property <b>metric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L101">property <b>metric</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metric: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -182,7 +182,7 @@ deployments and may be missing (undefined) during planning phases.
 The plugin metric to evaluate.
 
 <h4 class="pdoc-member-header" id="AlertCondition-metricDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L105">property <b>metricDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L105">property <b>metricDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metricDescription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -190,7 +190,7 @@ The plugin metric to evaluate.
 The metric description.
 
 <h4 class="pdoc-member-header" id="AlertCondition-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L109">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L109">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -198,7 +198,7 @@ The metric description.
 The title of the condition. Must be between 1 and 64 characters, inclusive.
 
 <h4 class="pdoc-member-header" id="AlertCondition-pluginGuid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L113">property <b>pluginGuid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L113">property <b>pluginGuid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pluginGuid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -206,7 +206,7 @@ The title of the condition. Must be between 1 and 64 characters, inclusive.
 The GUID of the plugin which produces the metric.
 
 <h4 class="pdoc-member-header" id="AlertCondition-pluginId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L117">property <b>pluginId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L117">property <b>pluginId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pluginId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -214,7 +214,7 @@ The GUID of the plugin which produces the metric.
 The ID of the installed plugin instance which produces the metric.
 
 <h4 class="pdoc-member-header" id="AlertCondition-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L121">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L121">property <b>policyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -222,7 +222,7 @@ The ID of the installed plugin instance which produces the metric.
 The ID of the policy where this condition should be used.
 
 <h4 class="pdoc-member-header" id="AlertCondition-runbookUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L125">property <b>runbookUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L125">property <b>runbookUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>runbookUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -230,7 +230,7 @@ The ID of the policy where this condition should be used.
 Runbook URL to display in notifications.
 
 <h4 class="pdoc-member-header" id="AlertCondition-terms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L129">property <b>terms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L129">property <b>terms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>terms: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#AlertConditionTerm'>AlertConditionTerm</a>[]&gt;;</code></pre>
@@ -238,7 +238,7 @@ Runbook URL to display in notifications.
 A list of terms for this condition. See Terms below for details.
 
 <h4 class="pdoc-member-header" id="AlertCondition-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L62">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L62">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -247,7 +247,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="AlertCondition-valueFunction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L133">property <b>valueFunction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L133">property <b>valueFunction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>valueFunction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -255,7 +255,7 @@ deployments.
 The value function to apply to the metric data.  One of `min`, `max`, `average`, `sampleSize`, `total`, or `percent`.
 
 <h3 class="pdoc-module-header" id="ApplicationSettings" data-link-title="ApplicationSettings">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/applicationSettings.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/applicationSettings.ts#L39">
         Resource <strong>ApplicationSettings</strong>
     </a>
 </h3>
@@ -294,7 +294,7 @@ Applications can be imported using notation `application_id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="ApplicationSettings-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/applicationSettings.ts#L82"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/applicationSettings.ts#L82"> <b>constructor</b></a>
 </h4>
 
 
@@ -308,7 +308,7 @@ Create a ApplicationSettings resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ApplicationSettings-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/applicationSettings.ts#L49">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/applicationSettings.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -319,14 +319,14 @@ Get an existing ApplicationSettings resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ApplicationSettings-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/applicationSettings.ts#L39">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/applicationSettings.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ApplicationSettings-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/applicationSettings.ts#L60">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/applicationSettings.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -337,7 +337,7 @@ Returns true if the given object is an instance of ApplicationSettings.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ApplicationSettings-appApdexThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/applicationSettings.ts#L70">property <b>appApdexThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/applicationSettings.ts#L70">property <b>appApdexThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>appApdexThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -345,7 +345,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The appex threshold for the New Relic application.
 
 <h4 class="pdoc-member-header" id="ApplicationSettings-enableRealUserMonitoring">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/applicationSettings.ts#L74">property <b>enableRealUserMonitoring</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/applicationSettings.ts#L74">property <b>enableRealUserMonitoring</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableRealUserMonitoring: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -353,7 +353,7 @@ The appex threshold for the New Relic application.
 Enable or disable real user monitoring for the New Relic application.
 
 <h4 class="pdoc-member-header" id="ApplicationSettings-endUserApdexThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/applicationSettings.ts#L78">property <b>endUserApdexThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/applicationSettings.ts#L78">property <b>endUserApdexThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endUserApdexThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -361,7 +361,7 @@ Enable or disable real user monitoring for the New Relic application.
 The user's apdex threshold for the New Relic application.
 
 <h4 class="pdoc-member-header" id="ApplicationSettings-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/applicationSettings.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/applicationSettings.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -370,7 +370,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ApplicationSettings-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/applicationSettings.ts#L82">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/applicationSettings.ts#L82">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -378,7 +378,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the application in New Relic APM.
 
 <h4 class="pdoc-member-header" id="ApplicationSettings-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/applicationSettings.ts#L39">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/applicationSettings.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -387,7 +387,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Workload" data-link-title="Workload">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L41">
         Resource <strong>Workload</strong>
     </a>
 </h3>
@@ -427,7 +427,7 @@ New Relic One workloads can be imported using a concatenated string of the forma
 ```
 
 <h4 class="pdoc-member-header" id="Workload-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L104"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L104"> <b>constructor</b></a>
 </h4>
 
 
@@ -441,7 +441,7 @@ Create a Workload resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Workload-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L51">method <b>get</b></a>
 </h4>
 
 
@@ -452,14 +452,14 @@ Get an existing Workload resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Workload-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L41">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L41">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Workload-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L62">method <b>isInstance</b></a>
 </h4>
 
 
@@ -470,7 +470,7 @@ Returns true if the given object is an instance of Workload.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Workload-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L72">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L72">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -478,7 +478,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The New Relic account ID where you want to create the workload.
 
 <h4 class="pdoc-member-header" id="Workload-compositeEntitySearchQuery">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L76">property <b>compositeEntitySearchQuery</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L76">property <b>compositeEntitySearchQuery</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>compositeEntitySearchQuery: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -486,7 +486,7 @@ The New Relic account ID where you want to create the workload.
 The composite query used to compose a dynamic workload.
 
 <h4 class="pdoc-member-header" id="Workload-entityGuids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L80">property <b>entityGuids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L80">property <b>entityGuids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>entityGuids: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -494,7 +494,7 @@ The composite query used to compose a dynamic workload.
 A list of entity GUIDs manually assigned to this workload.
 
 <h4 class="pdoc-member-header" id="Workload-entitySearchQueries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L84">property <b>entitySearchQueries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L84">property <b>entitySearchQueries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>entitySearchQueries: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#WorkloadEntitySearchQuery'>WorkloadEntitySearchQuery</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -502,7 +502,7 @@ A list of entity GUIDs manually assigned to this workload.
 A list of search queries that define a dynamic workload.  See Nested entitySearchQuery blocks below for details.
 
 <h4 class="pdoc-member-header" id="Workload-guid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L88">property <b>guid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L88">property <b>guid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>guid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -510,7 +510,7 @@ A list of search queries that define a dynamic workload.  See Nested entitySearc
 The unique entity identifier of the workload in New Relic.
 
 <h4 class="pdoc-member-header" id="Workload-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L41">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L41">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -519,7 +519,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Workload-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L92">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L92">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -527,7 +527,7 @@ deployments and may be missing (undefined) during planning phases.
 The workload's name.
 
 <h4 class="pdoc-member-header" id="Workload-permalink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L96">property <b>permalink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L96">property <b>permalink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>permalink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -535,7 +535,7 @@ The workload's name.
 The URL of the workload.
 
 <h4 class="pdoc-member-header" id="Workload-scopeAccountIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L100">property <b>scopeAccountIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L100">property <b>scopeAccountIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scopeAccountIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[]&gt;;</code></pre>
@@ -543,7 +543,7 @@ The URL of the workload.
 A list of account IDs that will be used to get entities from.
 
 <h4 class="pdoc-member-header" id="Workload-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L41">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L41">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -552,7 +552,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Workload-workloadId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L104">property <b>workloadId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L104">property <b>workloadId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workloadId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -562,7 +562,7 @@ The unique entity identifier of the workload.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getPlugin" data-link-title="getPlugin">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/getPlugin.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/getPlugin.ts#L40">
         Function <strong>getPlugin</strong>
     </a>
 </h3>
@@ -603,7 +603,7 @@ const fooAlertCondition = new newrelic.plugins.AlertCondition("fooAlertCondition
 ```
 
 <h3 class="pdoc-module-header" id="getPluginComponent" data-link-title="getPluginComponent">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/getPluginComponent.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/getPluginComponent.ts#L45">
         Function <strong>getPluginComponent</strong>
     </a>
 </h3>
@@ -651,7 +651,7 @@ const fooAlertCondition = new newrelic.plugins.AlertCondition("fooAlertCondition
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AlertConditionArgs" data-link-title="AlertConditionArgs">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L260">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L260">
         interface <strong>AlertConditionArgs</strong>
     </a>
 </h3>
@@ -661,7 +661,7 @@ const fooAlertCondition = new newrelic.plugins.AlertCondition("fooAlertCondition
 The set of arguments for constructing a AlertCondition resource.
 
 <h4 class="pdoc-member-header" id="AlertConditionArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L264">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L264">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -669,7 +669,7 @@ The set of arguments for constructing a AlertCondition resource.
 Whether or not this condition is enabled.
 
 <h4 class="pdoc-member-header" id="AlertConditionArgs-entities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L268">property <b>entities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L268">property <b>entities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entities: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
@@ -677,7 +677,7 @@ Whether or not this condition is enabled.
 The plugin component IDs to target.
 
 <h4 class="pdoc-member-header" id="AlertConditionArgs-metric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L272">property <b>metric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L272">property <b>metric</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metric: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -685,7 +685,7 @@ The plugin component IDs to target.
 The plugin metric to evaluate.
 
 <h4 class="pdoc-member-header" id="AlertConditionArgs-metricDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L276">property <b>metricDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L276">property <b>metricDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricDescription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -693,7 +693,7 @@ The plugin metric to evaluate.
 The metric description.
 
 <h4 class="pdoc-member-header" id="AlertConditionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L280">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L280">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -701,7 +701,7 @@ The metric description.
 The title of the condition. Must be between 1 and 64 characters, inclusive.
 
 <h4 class="pdoc-member-header" id="AlertConditionArgs-pluginGuid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L284">property <b>pluginGuid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L284">property <b>pluginGuid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pluginGuid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -709,7 +709,7 @@ The title of the condition. Must be between 1 and 64 characters, inclusive.
 The GUID of the plugin which produces the metric.
 
 <h4 class="pdoc-member-header" id="AlertConditionArgs-pluginId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L288">property <b>pluginId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L288">property <b>pluginId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pluginId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -717,7 +717,7 @@ The GUID of the plugin which produces the metric.
 The ID of the installed plugin instance which produces the metric.
 
 <h4 class="pdoc-member-header" id="AlertConditionArgs-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L292">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L292">property <b>policyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -725,7 +725,7 @@ The ID of the installed plugin instance which produces the metric.
 The ID of the policy where this condition should be used.
 
 <h4 class="pdoc-member-header" id="AlertConditionArgs-runbookUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L296">property <b>runbookUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L296">property <b>runbookUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runbookUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -733,7 +733,7 @@ The ID of the policy where this condition should be used.
 Runbook URL to display in notifications.
 
 <h4 class="pdoc-member-header" id="AlertConditionArgs-terms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L300">property <b>terms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L300">property <b>terms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>terms: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#AlertConditionTerm'>AlertConditionTerm</a>&gt;[]&gt;;</code></pre>
@@ -741,7 +741,7 @@ Runbook URL to display in notifications.
 A list of terms for this condition. See Terms below for details.
 
 <h4 class="pdoc-member-header" id="AlertConditionArgs-valueFunction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L304">property <b>valueFunction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L304">property <b>valueFunction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueFunction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -749,7 +749,7 @@ A list of terms for this condition. See Terms below for details.
 The value function to apply to the metric data.  One of `min`, `max`, `average`, `sampleSize`, `total`, or `percent`.
 
 <h3 class="pdoc-module-header" id="AlertConditionState" data-link-title="AlertConditionState">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L210">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L210">
         interface <strong>AlertConditionState</strong>
     </a>
 </h3>
@@ -759,7 +759,7 @@ The value function to apply to the metric data.  One of `min`, `max`, `average`,
 Input properties used for looking up and filtering AlertCondition resources.
 
 <h4 class="pdoc-member-header" id="AlertConditionState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L214">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L214">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -767,7 +767,7 @@ Input properties used for looking up and filtering AlertCondition resources.
 Whether or not this condition is enabled.
 
 <h4 class="pdoc-member-header" id="AlertConditionState-entities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L218">property <b>entities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L218">property <b>entities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
@@ -775,7 +775,7 @@ Whether or not this condition is enabled.
 The plugin component IDs to target.
 
 <h4 class="pdoc-member-header" id="AlertConditionState-metric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L222">property <b>metric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L222">property <b>metric</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metric?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -783,7 +783,7 @@ The plugin component IDs to target.
 The plugin metric to evaluate.
 
 <h4 class="pdoc-member-header" id="AlertConditionState-metricDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L226">property <b>metricDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L226">property <b>metricDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -791,7 +791,7 @@ The plugin metric to evaluate.
 The metric description.
 
 <h4 class="pdoc-member-header" id="AlertConditionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L230">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L230">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -799,7 +799,7 @@ The metric description.
 The title of the condition. Must be between 1 and 64 characters, inclusive.
 
 <h4 class="pdoc-member-header" id="AlertConditionState-pluginGuid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L234">property <b>pluginGuid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L234">property <b>pluginGuid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pluginGuid?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -807,7 +807,7 @@ The title of the condition. Must be between 1 and 64 characters, inclusive.
 The GUID of the plugin which produces the metric.
 
 <h4 class="pdoc-member-header" id="AlertConditionState-pluginId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L238">property <b>pluginId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L238">property <b>pluginId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pluginId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -815,7 +815,7 @@ The GUID of the plugin which produces the metric.
 The ID of the installed plugin instance which produces the metric.
 
 <h4 class="pdoc-member-header" id="AlertConditionState-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L242">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L242">property <b>policyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -823,7 +823,7 @@ The ID of the installed plugin instance which produces the metric.
 The ID of the policy where this condition should be used.
 
 <h4 class="pdoc-member-header" id="AlertConditionState-runbookUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L246">property <b>runbookUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L246">property <b>runbookUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runbookUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -831,7 +831,7 @@ The ID of the policy where this condition should be used.
 Runbook URL to display in notifications.
 
 <h4 class="pdoc-member-header" id="AlertConditionState-terms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L250">property <b>terms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L250">property <b>terms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>terms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#AlertConditionTerm'>AlertConditionTerm</a>&gt;[]&gt;;</code></pre>
@@ -839,7 +839,7 @@ Runbook URL to display in notifications.
 A list of terms for this condition. See Terms below for details.
 
 <h4 class="pdoc-member-header" id="AlertConditionState-valueFunction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/alertCondition.ts#L254">property <b>valueFunction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/alertCondition.ts#L254">property <b>valueFunction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueFunction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -847,7 +847,7 @@ A list of terms for this condition. See Terms below for details.
 The value function to apply to the metric data.  One of `min`, `max`, `average`, `sampleSize`, `total`, or `percent`.
 
 <h3 class="pdoc-module-header" id="ApplicationSettingsArgs" data-link-title="ApplicationSettingsArgs">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/applicationSettings.ts#L152">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/applicationSettings.ts#L152">
         interface <strong>ApplicationSettingsArgs</strong>
     </a>
 </h3>
@@ -857,7 +857,7 @@ The value function to apply to the metric data.  One of `min`, `max`, `average`,
 The set of arguments for constructing a ApplicationSettings resource.
 
 <h4 class="pdoc-member-header" id="ApplicationSettingsArgs-appApdexThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/applicationSettings.ts#L156">property <b>appApdexThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/applicationSettings.ts#L156">property <b>appApdexThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appApdexThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -865,7 +865,7 @@ The set of arguments for constructing a ApplicationSettings resource.
 The appex threshold for the New Relic application.
 
 <h4 class="pdoc-member-header" id="ApplicationSettingsArgs-enableRealUserMonitoring">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/applicationSettings.ts#L160">property <b>enableRealUserMonitoring</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/applicationSettings.ts#L160">property <b>enableRealUserMonitoring</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableRealUserMonitoring: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -873,7 +873,7 @@ The appex threshold for the New Relic application.
 Enable or disable real user monitoring for the New Relic application.
 
 <h4 class="pdoc-member-header" id="ApplicationSettingsArgs-endUserApdexThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/applicationSettings.ts#L164">property <b>endUserApdexThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/applicationSettings.ts#L164">property <b>endUserApdexThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endUserApdexThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -881,7 +881,7 @@ Enable or disable real user monitoring for the New Relic application.
 The user's apdex threshold for the New Relic application.
 
 <h4 class="pdoc-member-header" id="ApplicationSettingsArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/applicationSettings.ts#L168">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/applicationSettings.ts#L168">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -889,7 +889,7 @@ The user's apdex threshold for the New Relic application.
 The name of the application in New Relic APM.
 
 <h3 class="pdoc-module-header" id="ApplicationSettingsState" data-link-title="ApplicationSettingsState">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/applicationSettings.ts#L130">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/applicationSettings.ts#L130">
         interface <strong>ApplicationSettingsState</strong>
     </a>
 </h3>
@@ -899,7 +899,7 @@ The name of the application in New Relic APM.
 Input properties used for looking up and filtering ApplicationSettings resources.
 
 <h4 class="pdoc-member-header" id="ApplicationSettingsState-appApdexThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/applicationSettings.ts#L134">property <b>appApdexThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/applicationSettings.ts#L134">property <b>appApdexThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appApdexThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -907,7 +907,7 @@ Input properties used for looking up and filtering ApplicationSettings resources
 The appex threshold for the New Relic application.
 
 <h4 class="pdoc-member-header" id="ApplicationSettingsState-enableRealUserMonitoring">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/applicationSettings.ts#L138">property <b>enableRealUserMonitoring</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/applicationSettings.ts#L138">property <b>enableRealUserMonitoring</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableRealUserMonitoring?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -915,7 +915,7 @@ The appex threshold for the New Relic application.
 Enable or disable real user monitoring for the New Relic application.
 
 <h4 class="pdoc-member-header" id="ApplicationSettingsState-endUserApdexThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/applicationSettings.ts#L142">property <b>endUserApdexThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/applicationSettings.ts#L142">property <b>endUserApdexThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endUserApdexThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -923,7 +923,7 @@ Enable or disable real user monitoring for the New Relic application.
 The user's apdex threshold for the New Relic application.
 
 <h4 class="pdoc-member-header" id="ApplicationSettingsState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/applicationSettings.ts#L146">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/applicationSettings.ts#L146">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -931,7 +931,7 @@ The user's apdex threshold for the New Relic application.
 The name of the application in New Relic APM.
 
 <h3 class="pdoc-module-header" id="GetPluginArgs" data-link-title="GetPluginArgs">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/getPlugin.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/getPlugin.ts#L56">
         interface <strong>GetPluginArgs</strong>
     </a>
 </h3>
@@ -941,7 +941,7 @@ The name of the application in New Relic APM.
 A collection of arguments for invoking getPlugin.
 
 <h4 class="pdoc-member-header" id="GetPluginArgs-guid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/getPlugin.ts#L60">property <b>guid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/getPlugin.ts#L60">property <b>guid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>guid: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -949,7 +949,7 @@ A collection of arguments for invoking getPlugin.
 The GUID of the plugin in New Relic.
 
 <h3 class="pdoc-module-header" id="GetPluginComponentArgs" data-link-title="GetPluginComponentArgs">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/getPluginComponent.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/getPluginComponent.ts#L62">
         interface <strong>GetPluginComponentArgs</strong>
     </a>
 </h3>
@@ -959,7 +959,7 @@ The GUID of the plugin in New Relic.
 A collection of arguments for invoking getPluginComponent.
 
 <h4 class="pdoc-member-header" id="GetPluginComponentArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/getPluginComponent.ts#L66">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/getPluginComponent.ts#L66">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -967,7 +967,7 @@ A collection of arguments for invoking getPluginComponent.
 The name of the plugin component.
 
 <h4 class="pdoc-member-header" id="GetPluginComponentArgs-pluginId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/getPluginComponent.ts#L70">property <b>pluginId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/getPluginComponent.ts#L70">property <b>pluginId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pluginId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -975,7 +975,7 @@ The name of the plugin component.
 The ID of the plugin instance this component belongs to.
 
 <h3 class="pdoc-module-header" id="GetPluginComponentResult" data-link-title="GetPluginComponentResult">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/getPluginComponent.ts#L76">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/getPluginComponent.ts#L76">
         interface <strong>GetPluginComponentResult</strong>
     </a>
 </h3>
@@ -985,7 +985,7 @@ The ID of the plugin instance this component belongs to.
 A collection of values returned by getPluginComponent.
 
 <h4 class="pdoc-member-header" id="GetPluginComponentResult-healthStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/getPluginComponent.ts#L80">property <b>healthStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/getPluginComponent.ts#L80">property <b>healthStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthStatus: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -993,7 +993,7 @@ A collection of values returned by getPluginComponent.
 The health status of the plugin component.
 
 <h4 class="pdoc-member-header" id="GetPluginComponentResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/getPluginComponent.ts#L84">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/getPluginComponent.ts#L84">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1001,17 +1001,17 @@ The health status of the plugin component.
 The ID of the plugin component.
 
 <h4 class="pdoc-member-header" id="GetPluginComponentResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/getPluginComponent.ts#L85">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/getPluginComponent.ts#L85">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPluginComponentResult-pluginId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/getPluginComponent.ts#L86">property <b>pluginId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/getPluginComponent.ts#L86">property <b>pluginId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pluginId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetPluginResult" data-link-title="GetPluginResult">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/getPlugin.ts#L66">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/getPlugin.ts#L66">
         interface <strong>GetPluginResult</strong>
     </a>
 </h3>
@@ -1021,12 +1021,12 @@ The ID of the plugin component.
 A collection of values returned by getPlugin.
 
 <h4 class="pdoc-member-header" id="GetPluginResult-guid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/getPlugin.ts#L67">property <b>guid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/getPlugin.ts#L67">property <b>guid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>guid: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPluginResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/getPlugin.ts#L71">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/getPlugin.ts#L71">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1034,7 +1034,7 @@ A collection of values returned by getPlugin.
 The ID of the installed plugin instance.
 
 <h3 class="pdoc-module-header" id="WorkloadArgs" data-link-title="WorkloadArgs">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L195">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L195">
         interface <strong>WorkloadArgs</strong>
     </a>
 </h3>
@@ -1044,7 +1044,7 @@ The ID of the installed plugin instance.
 The set of arguments for constructing a Workload resource.
 
 <h4 class="pdoc-member-header" id="WorkloadArgs-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L199">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L199">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1052,7 +1052,7 @@ The set of arguments for constructing a Workload resource.
 The New Relic account ID where you want to create the workload.
 
 <h4 class="pdoc-member-header" id="WorkloadArgs-entityGuids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L203">property <b>entityGuids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L203">property <b>entityGuids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entityGuids?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1060,7 +1060,7 @@ The New Relic account ID where you want to create the workload.
 A list of entity GUIDs manually assigned to this workload.
 
 <h4 class="pdoc-member-header" id="WorkloadArgs-entitySearchQueries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L207">property <b>entitySearchQueries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L207">property <b>entitySearchQueries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entitySearchQueries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#WorkloadEntitySearchQuery'>WorkloadEntitySearchQuery</a>&gt;[]&gt;;</code></pre>
@@ -1068,7 +1068,7 @@ A list of entity GUIDs manually assigned to this workload.
 A list of search queries that define a dynamic workload.  See Nested entitySearchQuery blocks below for details.
 
 <h4 class="pdoc-member-header" id="WorkloadArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L211">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L211">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1076,7 +1076,7 @@ A list of search queries that define a dynamic workload.  See Nested entitySearc
 The workload's name.
 
 <h4 class="pdoc-member-header" id="WorkloadArgs-scopeAccountIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L215">property <b>scopeAccountIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L215">property <b>scopeAccountIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopeAccountIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
@@ -1084,7 +1084,7 @@ The workload's name.
 A list of account IDs that will be used to get entities from.
 
 <h3 class="pdoc-module-header" id="WorkloadState" data-link-title="WorkloadState">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L153">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L153">
         interface <strong>WorkloadState</strong>
     </a>
 </h3>
@@ -1094,7 +1094,7 @@ A list of account IDs that will be used to get entities from.
 Input properties used for looking up and filtering Workload resources.
 
 <h4 class="pdoc-member-header" id="WorkloadState-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L157">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L157">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1102,7 +1102,7 @@ Input properties used for looking up and filtering Workload resources.
 The New Relic account ID where you want to create the workload.
 
 <h4 class="pdoc-member-header" id="WorkloadState-compositeEntitySearchQuery">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L161">property <b>compositeEntitySearchQuery</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L161">property <b>compositeEntitySearchQuery</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>compositeEntitySearchQuery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1110,7 +1110,7 @@ The New Relic account ID where you want to create the workload.
 The composite query used to compose a dynamic workload.
 
 <h4 class="pdoc-member-header" id="WorkloadState-entityGuids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L165">property <b>entityGuids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L165">property <b>entityGuids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entityGuids?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1118,7 +1118,7 @@ The composite query used to compose a dynamic workload.
 A list of entity GUIDs manually assigned to this workload.
 
 <h4 class="pdoc-member-header" id="WorkloadState-entitySearchQueries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L169">property <b>entitySearchQueries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L169">property <b>entitySearchQueries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entitySearchQueries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#WorkloadEntitySearchQuery'>WorkloadEntitySearchQuery</a>&gt;[]&gt;;</code></pre>
@@ -1126,7 +1126,7 @@ A list of entity GUIDs manually assigned to this workload.
 A list of search queries that define a dynamic workload.  See Nested entitySearchQuery blocks below for details.
 
 <h4 class="pdoc-member-header" id="WorkloadState-guid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L173">property <b>guid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L173">property <b>guid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>guid?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1134,7 +1134,7 @@ A list of search queries that define a dynamic workload.  See Nested entitySearc
 The unique entity identifier of the workload in New Relic.
 
 <h4 class="pdoc-member-header" id="WorkloadState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L177">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L177">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1142,7 +1142,7 @@ The unique entity identifier of the workload in New Relic.
 The workload's name.
 
 <h4 class="pdoc-member-header" id="WorkloadState-permalink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L181">property <b>permalink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L181">property <b>permalink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permalink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1150,7 +1150,7 @@ The workload's name.
 The URL of the workload.
 
 <h4 class="pdoc-member-header" id="WorkloadState-scopeAccountIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L185">property <b>scopeAccountIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L185">property <b>scopeAccountIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopeAccountIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
@@ -1158,7 +1158,7 @@ The URL of the workload.
 A list of account IDs that will be used to get entities from.
 
 <h4 class="pdoc-member-header" id="WorkloadState-workloadId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/plugins/workload.ts#L189">property <b>workloadId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/plugins/workload.ts#L189">property <b>workloadId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workloadId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>

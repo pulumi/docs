@@ -3,7 +3,7 @@ title: "Module insights"
 title_tag: "Module insights | Package @pulumi/newrelic | Node.js SDK"
 linktitle: "insights"
 meta_desc: "Explore members of the insights module in the @pulumi/newrelic package."
-git_sha: "e35cfffee4b841e5261f8ad57041cd4e481f124e"
+git_sha: "235ca87a183f6b0826317d0518b759e2fe0ec95f"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Event" data-link-title="Event">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/insights/event.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/insights/event.ts#L56">
         Resource <strong>Event</strong>
     </a>
 </h3>
@@ -85,7 +85,7 @@ The `attribute` mapping supports the following arguments:
   * `type` - (Optional) Specify the type for the attribute value. This is useful when passing integer or float values to Insights. Allowed values are `string`, `int`, or `float`. Defaults to `string`.
 
 <h4 class="pdoc-member-header" id="Event-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/insights/event.ts#L87"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/insights/event.ts#L87"> <b>constructor</b></a>
 </h4>
 
 
@@ -99,7 +99,7 @@ Create a Event resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Event-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/insights/event.ts#L66">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/insights/event.ts#L66">method <b>get</b></a>
 </h4>
 
 
@@ -110,14 +110,14 @@ Get an existing Event resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Event-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/insights/event.ts#L56">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/insights/event.ts#L56">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Event-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/insights/event.ts#L77">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/insights/event.ts#L77">method <b>isInstance</b></a>
 </h4>
 
 
@@ -128,7 +128,7 @@ Returns true if the given object is an instance of Event.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Event-events">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/insights/event.ts#L87">property <b>events</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/insights/event.ts#L87">property <b>events</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>events: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#EventEvent'>EventEvent</a>[]&gt;;</code></pre>
@@ -136,7 +136,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 An event to insert into Insights. Multiple event blocks can be defined. See Events below for details.
 
 <h4 class="pdoc-member-header" id="Event-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/insights/event.ts#L56">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/insights/event.ts#L56">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -145,7 +145,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Event-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/insights/event.ts#L56">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/insights/event.ts#L56">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -157,7 +157,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="EventArgs" data-link-title="EventArgs">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/insights/event.ts#L133">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/insights/event.ts#L133">
         interface <strong>EventArgs</strong>
     </a>
 </h3>
@@ -167,7 +167,7 @@ deployments.
 The set of arguments for constructing a Event resource.
 
 <h4 class="pdoc-member-header" id="EventArgs-events">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/insights/event.ts#L137">property <b>events</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/insights/event.ts#L137">property <b>events</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>events: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#EventEvent'>EventEvent</a>&gt;[]&gt;;</code></pre>
@@ -175,7 +175,7 @@ The set of arguments for constructing a Event resource.
 An event to insert into Insights. Multiple event blocks can be defined. See Events below for details.
 
 <h3 class="pdoc-module-header" id="EventState" data-link-title="EventState">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/insights/event.ts#L123">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/insights/event.ts#L123">
         interface <strong>EventState</strong>
     </a>
 </h3>
@@ -185,7 +185,7 @@ An event to insert into Insights. Multiple event blocks can be defined. See Even
 Input properties used for looking up and filtering Event resources.
 
 <h4 class="pdoc-member-header" id="EventState-events">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/e35cfffee4b841e5261f8ad57041cd4e481f124e/sdk/nodejs/insights/event.ts#L127">property <b>events</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/235ca87a183f6b0826317d0518b759e2fe0ec95f/sdk/nodejs/insights/event.ts#L127">property <b>events</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>events?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#EventEvent'>EventEvent</a>&gt;[]&gt;;</code></pre>
