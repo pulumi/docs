@@ -11,6 +11,7 @@ Explore the resources and functions of the compute module in the Open Stack pack
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="aggregatev2" title="AggregateV2"><span class="symbol resource"></span>AggregateV2</a></li>
     <li><a href="flavor" title="Flavor"><span class="symbol resource"></span>Flavor</a></li>
     <li><a href="flavoraccess" title="FlavorAccess"><span class="symbol resource"></span>FlavorAccess</a></li>
     <li><a href="floatingip" title="FloatingIp"><span class="symbol resource"></span>FloatingIp</a></li>
@@ -26,8 +27,10 @@ Explore the resources and functions of the compute module in the Open Stack pack
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getaggregatev2" title="GetAggregateV2"><span class="symbol function"></span>GetAggregateV2</a></li>
     <li><a href="getavailabilityzones" title="GetAvailabilityZones"><span class="symbol function"></span>GetAvailabilityZones</a></li>
     <li><a href="getflavor" title="GetFlavor"><span class="symbol function"></span>GetFlavor</a></li>
+    <li><a href="gethypervisorv2" title="GetHypervisorV2"><span class="symbol function"></span>GetHypervisorV2</a></li>
     <li><a href="getinstancev2" title="GetInstanceV2"><span class="symbol function"></span>GetInstanceV2</a></li>
     <li><a href="getkeypair" title="GetKeypair"><span class="symbol function"></span>GetKeypair</a></li>
 </ul>
@@ -41,7 +44,7 @@ Explore the resources and functions of the compute module in the Open Stack pack
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
 	<dt>Version</dt>
-	<dd>2.10.2</dd>
+	<dd>2.11.0</dd>
 </dl>
 
 
