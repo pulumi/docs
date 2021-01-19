@@ -1,6 +1,6 @@
 ---
 title: FAQ
-meta_desc: A collection of Freduently Asked Questions (FAQ) about the Pulumi CLI and Cloud Services.
+meta_desc: A collection of Frequently Asked Questions (FAQ) about the Pulumi CLI and Cloud Services.
 menu:
   troubleshooting:
     weight: 2
