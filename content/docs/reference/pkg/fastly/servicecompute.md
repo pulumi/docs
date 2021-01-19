@@ -9903,6 +9903,15 @@ Default `200`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="authmethod_csharp">
+<a href="#authmethod_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="compressioncodec_csharp">
 <a href="#compressioncodec_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Codec</a>
 </span>
@@ -9910,6 +9919,35 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The codec used for compression of your logs. One of: gzip, snappy, lz4.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parselogkeyvals_csharp">
+<a href="#parselogkeyvals_csharp" style="color: inherit; text-decoration: inherit;">Parse<wbr>Log<wbr>Keyvals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestmaxbytes_csharp">
+<a href="#requestmaxbytes_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Max<wbr>Bytes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -9971,6 +10009,16 @@ Default `200`.
     </dt>
     <dd>{{% md %}}Whether to use TLS for secure logging. Can be either true or false.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_csharp">
+<a href="#user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The username for your Cloud Files account.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -10009,6 +10057,15 @@ Default `200`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="authmethod_go">
+<a href="#authmethod_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="compressioncodec_go">
 <a href="#compressioncodec_go" style="color: inherit; text-decoration: inherit;">Compression<wbr>Codec</a>
 </span>
@@ -10016,6 +10073,35 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The codec used for compression of your logs. One of: gzip, snappy, lz4.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parselogkeyvals_go">
+<a href="#parselogkeyvals_go" style="color: inherit; text-decoration: inherit;">Parse<wbr>Log<wbr>Keyvals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestmaxbytes_go">
+<a href="#requestmaxbytes_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Max<wbr>Bytes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -10077,6 +10163,16 @@ Default `200`.
     </dt>
     <dd>{{% md %}}Whether to use TLS for secure logging. Can be either true or false.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_go">
+<a href="#user_go" style="color: inherit; text-decoration: inherit;">User</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The username for your Cloud Files account.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -10115,6 +10211,15 @@ Default `200`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="authmethod_nodejs">
+<a href="#authmethod_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="compressioncodec_nodejs">
 <a href="#compressioncodec_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Codec</a>
 </span>
@@ -10122,6 +10227,35 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The codec used for compression of your logs. One of: gzip, snappy, lz4.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parselogkeyvals_nodejs">
+<a href="#parselogkeyvals_nodejs" style="color: inherit; text-decoration: inherit;">parse<wbr>Log<wbr>Keyvals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestmaxbytes_nodejs">
+<a href="#requestmaxbytes_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Max<wbr>Bytes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -10183,6 +10317,16 @@ Default `200`.
     </dt>
     <dd>{{% md %}}Whether to use TLS for secure logging. Can be either true or false.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_nodejs">
+<a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The username for your Cloud Files account.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -10221,6 +10365,15 @@ Default `200`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="auth_method_python">
+<a href="#auth_method_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="compression_codec_python">
 <a href="#compression_codec_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>codec</a>
 </span>
@@ -10228,6 +10381,35 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The codec used for compression of your logs. One of: gzip, snappy, lz4.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parse_log_keyvals_python">
+<a href="#parse_log_keyvals_python" style="color: inherit; text-decoration: inherit;">parse_<wbr>log_<wbr>keyvals</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="request_max_bytes_python">
+<a href="#request_max_bytes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>max_<wbr>bytes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -10288,6 +10470,16 @@ Default `200`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use TLS for secure logging. Can be either true or false.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_python">
+<a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
